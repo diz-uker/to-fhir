@@ -19,13 +19,13 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class TransactionBuilderTest {
+public class BundleBuilderTest {
   private static final FhirContext fhirContext = FhirContext.forR4();
 
   @Test
   void testBuildWithSingleEntry() {
     var fhirParser = fhirContext.newJsonParser().setPrettyPrint(true);
-    final var sut = new TransactionBuilder();
+    final var sut = new BundleBuilder();
 
     var patient = new Patient();
     patient.setId("test-patient");
@@ -42,7 +42,7 @@ public class TransactionBuilderTest {
   @Test
   void testBuildWithMultipleEntries() {
     var fhirParser = fhirContext.newJsonParser().setPrettyPrint(true);
-    final var sut = new TransactionBuilder();
+    final var sut = new BundleBuilder();
 
     var patient = new Patient();
     patient.setId("test-patient");
@@ -66,7 +66,7 @@ public class TransactionBuilderTest {
 
   @Test
   void testDefaultBundleType() {
-    var bundle = new TransactionBuilder().build();
+    var bundle = new BundleBuilder().build();
 
     assertEquals(BundleType.TRANSACTION, bundle.getType());
   }
@@ -74,7 +74,7 @@ public class TransactionBuilderTest {
   @ParameterizedTest
   @EnumSource(BundleType.class)
   void testWithDifferentBundleTypes(BundleType bundleType) {
-    var bundle = new TransactionBuilder().withType(bundleType).build();
+    var bundle = new BundleBuilder().withType(bundleType).build();
 
     assertEquals(bundleType, bundle.getType());
   }
@@ -85,8 +85,7 @@ public class TransactionBuilderTest {
     var patient = new Patient();
     patient.setId("test-patient");
 
-    var bundle =
-        new TransactionBuilder().withUpdateAsCreate(updateAsCreate).addEntry(patient).build();
+    var bundle = new BundleBuilder().withUpdateAsCreate(updateAsCreate).addEntry(patient).build();
 
     assertNotNull(bundle.getEntry());
     assertEquals(1, bundle.getEntry().size());
@@ -106,7 +105,7 @@ public class TransactionBuilderTest {
     patient.setId("patient-123");
 
     var bundle =
-        new TransactionBuilder()
+        new BundleBuilder()
             .withUseFirstEntryResourceIdAsBundleId(useFirstEntryId)
             .addEntry(patient)
             .build();
@@ -123,7 +122,7 @@ public class TransactionBuilderTest {
     var patient = new Patient();
     patient.setId("test-patient");
 
-    var bundle = new TransactionBuilder().addEntry(patient).build();
+    var bundle = new BundleBuilder().addEntry(patient).build();
 
     assertEquals(1, bundle.getEntry().size());
     assertEquals(patient, bundle.getEntry().get(0).getResource());
@@ -137,7 +136,7 @@ public class TransactionBuilderTest {
     var patient2 = new Patient();
     patient2.setId("patient-2");
 
-    var bundle = new TransactionBuilder().addEntry(patient1).addEntry(patient2).build();
+    var bundle = new BundleBuilder().addEntry(patient1).addEntry(patient2).build();
 
     assertEquals(2, bundle.getEntry().size());
     assertEquals(patient1, bundle.getEntry().get(0).getResource());
@@ -150,7 +149,7 @@ public class TransactionBuilderTest {
     patient.setId("test-patient");
 
     var bundle =
-        new TransactionBuilder()
+        new BundleBuilder()
             .withType(BundleType.BATCH)
             .withUpdateAsCreate(false)
             .withUseFirstEntryResourceIdAsBundleId(true)

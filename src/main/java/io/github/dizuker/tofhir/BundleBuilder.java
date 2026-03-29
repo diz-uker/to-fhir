@@ -7,15 +7,15 @@ import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.Bundle.HTTPVerb;
 import org.hl7.fhir.r4.model.Resource;
 
-/** Builder for creating FHIR transaction bundles. */
-public class TransactionBuilder {
+/** Builder for creating FHIR bundles. */
+public class BundleBuilder {
   private BundleType bundleType = BundleType.TRANSACTION;
   private boolean updateAsCreate = true;
   private List<Resource> resources = new ArrayList<>();
   private boolean useFirstEntryResourceIdAsBundleId = false;
 
-  /** Creates a new TransactionBuilder with the default type of TRANSACTION. */
-  public TransactionBuilder() {}
+  /** Creates a new BundleBuilder. */
+  public BundleBuilder() {}
 
   /**
    * Sets the bundle type.
@@ -23,7 +23,7 @@ public class TransactionBuilder {
    * @param bundleType the type of bundle to build
    * @return this builder instance for chaining
    */
-  public TransactionBuilder withType(BundleType bundleType) {
+  public BundleBuilder withType(BundleType bundleType) {
     this.bundleType = bundleType;
     return this;
   }
@@ -35,7 +35,7 @@ public class TransactionBuilder {
    * @param updateAsCreate true for update-as-create, false for conditional creates
    * @return this builder instance for chaining
    */
-  public TransactionBuilder withUpdateAsCreate(boolean updateAsCreate) {
+  public BundleBuilder withUpdateAsCreate(boolean updateAsCreate) {
     this.updateAsCreate = updateAsCreate;
     return this;
   }
@@ -47,7 +47,7 @@ public class TransactionBuilder {
    *     Bundle ID, false to not set a Bundle ID
    * @return this builder instance for chaining
    */
-  public TransactionBuilder withUseFirstEntryResourceIdAsBundleId(
+  public BundleBuilder withUseFirstEntryResourceIdAsBundleId(
       boolean useFirstEntryResourceIdAsBundleId) {
     this.useFirstEntryResourceIdAsBundleId = useFirstEntryResourceIdAsBundleId;
     return this;
@@ -59,7 +59,7 @@ public class TransactionBuilder {
    * @param resource the FHIR resource to add to the bundle
    * @return this builder instance for chaining
    */
-  public TransactionBuilder addEntry(Resource resource) {
+  public BundleBuilder addEntry(Resource resource) {
     this.resources.add(resource);
     return this;
   }
@@ -70,7 +70,7 @@ public class TransactionBuilder {
    * @param resources the list of FHIR resources to add to the bundle
    * @return this builder instance for chaining
    */
-  public TransactionBuilder addEntries(List<? extends Resource> resources) {
+  public BundleBuilder addEntries(List<? extends Resource> resources) {
     this.resources.addAll(resources);
     return this;
   }
