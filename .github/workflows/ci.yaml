@@ -47,16 +47,22 @@ jobs:
       - name: Run Test Coverage
         run: ./gradlew jacocoTestReport
 
+      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: libs
+          path: |
+            build/libs/
+
       - name: Publish to central
         if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
         run: |
-          ./gradlew publish
-          ./gradlew publishToMavenCentralPortal
+          ./gradlew :mappings:publish --no-configuration-cache
+          ./gradlew :mappings:publishToMavenCentralPortal --no-configuration-cache
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-          MIRACUM_SIGNING_KEY: ${{ secrets.MIRACUM_SIGNING_KEY }}
-          MIRACUM_SIGNING_KEY_PASSPHRASE: ${{ secrets.MIRACUM_SIGNING_KEY_PASSPHRASE }}
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          SIGNING_KEY_PASSPHRASE: ${{ secrets.SIGNING_KEY_PASSPHRASE }}
 
   lint:
     uses: miracum/.github/.github/workflows/standard-lint.yaml@8bd8986d6b656c71b5570f91b5ad96bf606955b4 # v1.20.7
