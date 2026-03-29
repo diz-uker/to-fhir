@@ -8,10 +8,11 @@ import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.Bundle.HTTPVerb;
 import org.hl7.fhir.r4.model.Resource;
 
-/** Builder for creating FHIR transaction bundles. */
+/**
+ * Builder for creating FHIR transaction bundles. By default, using the update-as-create approach.
+ */
 public class TransactionBuilder {
   private BundleType bundleType = BundleType.TRANSACTION;
-  private boolean updateAsCreate = true;
   private List<Resource> resources = new ArrayList<>();
   private boolean useFirstEntryResourceIdAsBundleId = false;
   private String id = null;
@@ -31,27 +32,12 @@ public class TransactionBuilder {
   }
 
   /**
-   * Sets whether resources should be added as update-as-create (PUT) or conditional creates (POST
-   * with If-None-Exist). Defaults to conditional creates.
+   * Configures the builder to use the ID of the first entry's resource as the bundle ID.
    *
-   * @param updateAsCreate true for update-as-create, false for conditional creates
    * @return this builder instance for chaining
    */
-  public TransactionBuilder withUpdateAsCreate(boolean updateAsCreate) {
-    this.updateAsCreate = updateAsCreate;
-    return this;
-  }
-
-  /**
-   * Sets whether the first entry's resource ID should be used as the Bundle ID. Defaults to false.
-   *
-   * @param useFirstEntryResourceIdAsBundleId true to use the first entry's resource ID as the
-   *     Bundle ID, false to not set a Bundle ID
-   * @return this builder instance for chaining
-   */
-  public TransactionBuilder withUseFirstEntryResourceIdAsBundleId(
-      boolean useFirstEntryResourceIdAsBundleId) {
-    this.useFirstEntryResourceIdAsBundleId = useFirstEntryResourceIdAsBundleId;
+  public TransactionBuilder withUseFirstEntryResourceIdAsBundleId() {
+    this.useFirstEntryResourceIdAsBundleId = true;
     return this;
   }
 
@@ -129,19 +115,13 @@ public class TransactionBuilder {
 
       var resourceType = resource.getResourceType().name();
       var id = resource.getIdElement().getIdPart();
-      if (updateAsCreate) {
-        if (id == null || id.isEmpty()) {
-          throw new IllegalArgumentException(
-              "Resource must have an ID for update-as-create (PUT) method");
-        }
-        var url = resourceType + "/" + id;
-        entry.setFullUrl(url);
-        entry.getRequest().setMethod(HTTPVerb.PUT).setUrl(url);
-      } else {
-        // XXX: we could set a deterministic urn:uuid: (128 bit) fullUrl
-        // based on resource.id (256 bit)
-        entry.getRequest().setMethod(HTTPVerb.POST).setUrl(resourceType);
+      if (id == null || id.isEmpty()) {
+        throw new IllegalArgumentException(
+            "Resource must have an ID for update-as-create (PUT) method");
       }
+      var url = resourceType + "/" + id;
+      entry.setFullUrl(url);
+      entry.getRequest().setMethod(HTTPVerb.PUT).setUrl(url);
     }
 
     return bundle;
