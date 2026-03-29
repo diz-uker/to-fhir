@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.5](https://github.com/diz-uker/to-fhir/compare/v0.1.4...v0.1.5) (2026-03-29)
+
+
+### Features
+
+* configurable message digest ([#12](https://github.com/diz-uker/to-fhir/issues/12)) ([1398887](https://github.com/diz-uker/to-fhir/commit/139888772efb7c45eeaa6f081902140496c66f4a))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#10](https://github.com/diz-uker/to-fhir/issues/10)) ([f3fec65](https://github.com/diz-uker/to-fhir/commit/f3fec654d27de04080105bfe5b2b88a1a1c79bc2))
+
 ## [0.1.4](https://github.com/diz-uker/to-fhir/compare/v0.1.3...v0.1.4) (2026-03-29)
 
 
