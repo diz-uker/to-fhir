@@ -1,6 +1,7 @@
 package io.github.dizuker.tofhir;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import ca.uhn.fhir.context.FhirContext;
 import java.util.List;
@@ -174,5 +175,82 @@ public class TransactionBuilderTest {
     var bundle = new TransactionBuilder().withId(idValue).build();
 
     assertEquals(idValue, bundle.getIdElement().getIdPart());
+  }
+
+  @Test
+  void testThrowExceptionOnDuplicateResourceIds() {
+    var patient1 = new Patient();
+    patient1.setId("patient-123");
+
+    var patient2 = new Patient();
+    patient2.setId("patient-123");
+
+    assertThrows(
+        IllegalArgumentException.class,
+        () ->
+            new TransactionBuilder()
+                .failOnDuplicateEntries()
+                .addEntry(patient1)
+                .addEntry(patient2)
+                .build(),
+        "Should throw exception for duplicate resource IDs");
+  }
+
+  @Test
+  void testNoDuplicateExceptionWhenFlagNotEnabled() {
+    var patient1 = new Patient();
+    patient1.setId("patient-123");
+
+    var patient2 = new Patient();
+    patient2.setId("patient-123");
+
+    var bundle = new TransactionBuilder().addEntry(patient1).addEntry(patient2).build();
+
+    assertEquals(2, bundle.getEntry().size());
+  }
+
+  @Test
+  void testDifferentResourceTypesWithSameIdAllowed() {
+    var patient = new Patient();
+    patient.setId("resource-123");
+
+    var observation = new Observation();
+    observation.setId("resource-123");
+    observation.setStatus(ObservationStatus.FINAL);
+
+    var bundle =
+        new TransactionBuilder()
+            .failOnDuplicateEntries()
+            .addEntry(patient)
+            .addEntry(observation)
+            .build();
+
+    assertEquals(2, bundle.getEntry().size());
+  }
+
+  @Test
+  void testThrowExceptionOnDuplicateResourceIdsMultipleDuplicates() {
+    var patient1 = new Patient();
+    patient1.setId("patient-1");
+
+    var patient2 = new Patient();
+    patient2.setId("patient-1");
+
+    var patient3 = new Patient();
+    patient3.setId("patient-2");
+
+    var patient4 = new Patient();
+    patient4.setId("patient-2");
+
+    assertThrows(
+        IllegalArgumentException.class,
+        () ->
+            new TransactionBuilder()
+                .failOnDuplicateEntries()
+                .addEntry(patient1)
+                .addEntry(patient2)
+                .addEntry(patient3)
+                .addEntry(patient4)
+                .build());
   }
 }
