@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/diz-uker/to-fhir/compare/v0.1.1...v0.1.2) (2026-03-29)
+
+
+### Bug Fixes
+
+* publish ([c5792c8](https://github.com/diz-uker/to-fhir/commit/c5792c884e046ffbce3646ce0e1fe83249d86eda))
+
 ## [0.1.1](https://github.com/diz-uker/to-fhir/compare/v0.1.0...v0.1.1) (2026-03-29)
 
 
