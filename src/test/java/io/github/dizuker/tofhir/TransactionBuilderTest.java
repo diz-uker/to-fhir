@@ -1,7 +1,7 @@
 package io.github.dizuker.tofhir;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import ca.uhn.fhir.context.FhirContext;
 import java.util.List;
@@ -32,7 +32,7 @@ public class TransactionBuilderTest {
     patient.setId("test-patient");
     patient.addExtension("test", new CodeType("test"));
 
-    var trx = sut.withUpdateAsCreate(true).addEntry(patient).build();
+    var trx = sut.addEntry(patient).build();
 
     Approvals.verify(
         new ApprovalTextWriter(
@@ -54,8 +54,7 @@ public class TransactionBuilderTest {
     observation.setStatus(ObservationStatus.FINAL);
 
     var trx =
-        sut.withUpdateAsCreate(true)
-            .withUseFirstEntryResourceIdAsBundleId(true)
+        sut.withUseFirstEntryResourceIdAsBundleId()
             .addEntries(List.of(patient, observation))
             .build();
 
@@ -82,40 +81,17 @@ public class TransactionBuilderTest {
 
   @ParameterizedTest
   @ValueSource(booleans = {true, false})
-  void testWithUpdateAsCreate(boolean updateAsCreate) {
-    var patient = new Patient();
-    patient.setId("test-patient");
-
-    var bundle =
-        new TransactionBuilder().withUpdateAsCreate(updateAsCreate).addEntry(patient).build();
-
-    assertNotNull(bundle.getEntry());
-    assertEquals(1, bundle.getEntry().size());
-
-    var entry = bundle.getEntry().get(0);
-    var expectedMethod = updateAsCreate ? HTTPVerb.PUT : HTTPVerb.POST;
-    assertEquals(expectedMethod, entry.getRequest().getMethod());
-
-    var expectedUrl = updateAsCreate ? "Patient/test-patient" : "Patient";
-    assertEquals(expectedUrl, entry.getRequest().getUrl());
-  }
-
-  @ParameterizedTest
-  @ValueSource(booleans = {true, false})
   void testWithUseFirstEntryResourceIdAsBundleId(boolean useFirstEntryId) {
     var patient = new Patient();
     patient.setId("patient-123");
 
-    var bundle =
-        new TransactionBuilder()
-            .withUseFirstEntryResourceIdAsBundleId(useFirstEntryId)
-            .addEntry(patient)
-            .build();
+    var builder = new TransactionBuilder().addEntry(patient);
 
     if (useFirstEntryId) {
-      assertEquals("patient-123", bundle.getIdElement().getIdPart());
+      builder = builder.withUseFirstEntryResourceIdAsBundleId();
+      assertEquals("patient-123", builder.build().getIdElement().getIdPart());
     } else {
-      assertEquals(null, bundle.getIdElement().getIdPart());
+      assertEquals(null, builder.build().getIdElement().getIdPart());
     }
   }
 
@@ -153,14 +129,13 @@ public class TransactionBuilderTest {
     var bundle =
         new TransactionBuilder()
             .withType(BundleType.BATCH)
-            .withUpdateAsCreate(false)
-            .withUseFirstEntryResourceIdAsBundleId(true)
+            .withUseFirstEntryResourceIdAsBundleId()
             .addEntry(patient)
             .build();
 
     assertEquals(BundleType.BATCH, bundle.getType());
     assertEquals(1, bundle.getEntry().size());
-    assertEquals(HTTPVerb.POST, bundle.getEntry().get(0).getRequest().getMethod());
+    assertEquals(HTTPVerb.PUT, bundle.getEntry().get(0).getRequest().getMethod());
     assertEquals("test-patient", bundle.getIdElement().getIdPart());
   }
 
@@ -187,7 +162,7 @@ public class TransactionBuilderTest {
     var bundle =
         new TransactionBuilder()
             .withId("explicit-bundle-id")
-            .withUseFirstEntryResourceIdAsBundleId(true)
+            .withUseFirstEntryResourceIdAsBundleId()
             .addEntry(patient)
             .build();
 
@@ -200,5 +175,82 @@ public class TransactionBuilderTest {
     var bundle = new TransactionBuilder().withId(idValue).build();
 
     assertEquals(idValue, bundle.getIdElement().getIdPart());
+  }
+
+  @Test
+  void testThrowExceptionOnDuplicateResourceIds() {
+    var patient1 = new Patient();
+    patient1.setId("patient-123");
+
+    var patient2 = new Patient();
+    patient2.setId("patient-123");
+
+    assertThrows(
+        IllegalArgumentException.class,
+        () ->
+            new TransactionBuilder()
+                .failOnDuplicateEntries()
+                .addEntry(patient1)
+                .addEntry(patient2)
+                .build(),
+        "Should throw exception for duplicate resource IDs");
+  }
+
+  @Test
+  void testNoDuplicateExceptionWhenFlagNotEnabled() {
+    var patient1 = new Patient();
+    patient1.setId("patient-123");
+
+    var patient2 = new Patient();
+    patient2.setId("patient-123");
+
+    var bundle = new TransactionBuilder().addEntry(patient1).addEntry(patient2).build();
+
+    assertEquals(2, bundle.getEntry().size());
+  }
+
+  @Test
+  void testDifferentResourceTypesWithSameIdAllowed() {
+    var patient = new Patient();
+    patient.setId("resource-123");
+
+    var observation = new Observation();
+    observation.setId("resource-123");
+    observation.setStatus(ObservationStatus.FINAL);
+
+    var bundle =
+        new TransactionBuilder()
+            .failOnDuplicateEntries()
+            .addEntry(patient)
+            .addEntry(observation)
+            .build();
+
+    assertEquals(2, bundle.getEntry().size());
+  }
+
+  @Test
+  void testThrowExceptionOnDuplicateResourceIdsMultipleDuplicates() {
+    var patient1 = new Patient();
+    patient1.setId("patient-1");
+
+    var patient2 = new Patient();
+    patient2.setId("patient-1");
+
+    var patient3 = new Patient();
+    patient3.setId("patient-2");
+
+    var patient4 = new Patient();
+    patient4.setId("patient-2");
+
+    assertThrows(
+        IllegalArgumentException.class,
+        () ->
+            new TransactionBuilder()
+                .failOnDuplicateEntries()
+                .addEntry(patient1)
+                .addEntry(patient2)
+                .addEntry(patient3)
+                .addEntry(patient4)
+                .build());
   }
 }
