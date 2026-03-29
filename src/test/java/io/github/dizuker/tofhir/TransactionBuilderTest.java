@@ -11,6 +11,7 @@ import org.approvaltests.writers.ApprovalTextWriter;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.Bundle.HTTPVerb;
 import org.hl7.fhir.r4.model.CodeType;
+import org.hl7.fhir.r4.model.IdType;
 import org.hl7.fhir.r4.model.Observation;
 import org.hl7.fhir.r4.model.Observation.ObservationStatus;
 import org.hl7.fhir.r4.model.Patient;
@@ -161,5 +162,43 @@ public class TransactionBuilderTest {
     assertEquals(1, bundle.getEntry().size());
     assertEquals(HTTPVerb.POST, bundle.getEntry().get(0).getRequest().getMethod());
     assertEquals("test-patient", bundle.getIdElement().getIdPart());
+  }
+
+  @Test
+  void testWithIdString() {
+    var bundle = new TransactionBuilder().withId("bundle-123").build();
+
+    assertEquals("bundle-123", bundle.getIdElement().getIdPart());
+  }
+
+  @Test
+  void testWithIdIIdType() {
+    var idType = new IdType("bundle-456");
+    var bundle = new TransactionBuilder().withId(idType).build();
+
+    assertEquals("bundle-456", bundle.getIdElement().getIdPart());
+  }
+
+  @Test
+  void testWithIdTakesPrecedenceOverFirstEntryResourceId() {
+    var patient = new Patient();
+    patient.setId("patient-123");
+
+    var bundle =
+        new TransactionBuilder()
+            .withId("explicit-bundle-id")
+            .withUseFirstEntryResourceIdAsBundleId(true)
+            .addEntry(patient)
+            .build();
+
+    assertEquals("explicit-bundle-id", bundle.getIdElement().getIdPart());
+  }
+
+  @ParameterizedTest
+  @ValueSource(strings = {"bundle-1", "123", "my-bundle-id"})
+  void testWithIdVariousValues(String idValue) {
+    var bundle = new TransactionBuilder().withId(idValue).build();
+
+    assertEquals(idValue, bundle.getIdElement().getIdPart());
   }
 }

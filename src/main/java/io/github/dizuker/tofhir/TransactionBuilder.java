@@ -2,6 +2,7 @@ package io.github.dizuker.tofhir;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.hl7.fhir.instance.model.api.IIdType;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.Bundle.HTTPVerb;
@@ -13,6 +14,7 @@ public class TransactionBuilder {
   private boolean updateAsCreate = true;
   private List<Resource> resources = new ArrayList<>();
   private boolean useFirstEntryResourceIdAsBundleId = false;
+  private String id = null;
 
   /** Creates a new TransactionBuilder with the default type of TRANSACTION. */
   public TransactionBuilder() {}
@@ -76,6 +78,29 @@ public class TransactionBuilder {
   }
 
   /**
+   * Sets the ID of the bundle. Takes precedence over `useFirstEntryResourceIdAsBundleId` if both
+   * are set.
+   *
+   * @param id the ID to set for the bundle
+   * @return this builder instance for chaining
+   */
+  public TransactionBuilder withId(IIdType id) {
+    return this.withId(id.getIdPart());
+  }
+
+  /**
+   * Sets the ID of the bundle. Takes precedence over `useFirstEntryResourceIdAsBundleId` if both
+   * are set.
+   *
+   * @param id the ID to set for the bundle
+   * @return this builder instance for chaining
+   */
+  public TransactionBuilder withId(String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
    * Builds and returns a FHIR Bundle with the configured type.
    *
    * @return a new Bundle instance with the configured type
@@ -92,6 +117,10 @@ public class TransactionBuilder {
         throw new IllegalArgumentException(
             "First resource must have an ID for useFirstEntryResourceIdAsBundleId option");
       }
+    }
+
+    if (this.id != null) {
+      bundle.setId(this.id);
     }
 
     for (var resource : resources) {
