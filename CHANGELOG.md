@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/diz-uker/to-fhir/compare/v0.1.7...v0.1.8) (2026-03-30)
+
+
+### Bug Fixes
+
+* if what/who references aren't set, use display or identifier.value ([#18](https://github.com/diz-uker/to-fhir/issues/18)) ([8dc45e8](https://github.com/diz-uker/to-fhir/commit/8dc45e8adbd4db9c937115768ffb6168f5b48d5f))
+
 ## [0.1.7](https://github.com/diz-uker/to-fhir/compare/v0.1.6...v0.1.7) (2026-03-30)
 
 
