@@ -7,6 +7,9 @@ import ca.uhn.fhir.context.FhirContext;
 import java.util.List;
 import org.approvaltests.Approvals;
 import org.approvaltests.core.Options;
+import org.approvaltests.core.Scrubber;
+import org.approvaltests.scrubbers.RegExScrubber;
+import org.approvaltests.scrubbers.Scrubbers;
 import org.approvaltests.writers.ApprovalTextWriter;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.Bundle.HTTPVerb;
@@ -15,13 +18,19 @@ import org.hl7.fhir.r4.model.IdType;
 import org.hl7.fhir.r4.model.Observation;
 import org.hl7.fhir.r4.model.Observation.ObservationStatus;
 import org.hl7.fhir.r4.model.Patient;
+import org.hl7.fhir.r4.model.Reference;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class TransactionBuilderTest {
+class TransactionBuilderTest {
   private static final FhirContext fhirContext = FhirContext.forR4();
+  public static final Scrubber FHIR_DATE_TIME_SCRUBBER =
+      Scrubbers.scrubAll(
+          new RegExScrubber(
+              "\"occurredDateTime\": \"(.*)\"", "\"occurredDateTime\": \"2000-01-01T11:11:11Z\""),
+          new RegExScrubber("\"recorded\": \"(.*)\"", "\"recorded\": \"2000-01-01T11:11:11Z\""));
 
   @Test
   void testBuildWithSingleEntry() {
@@ -37,7 +46,7 @@ public class TransactionBuilderTest {
     Approvals.verify(
         new ApprovalTextWriter(
             fhirParser.encodeResourceToString(trx),
-            new Options().forFile().withExtension(".json")));
+            new Options().forFile().withExtension(".fhir.json")));
   }
 
   @Test
@@ -53,15 +62,43 @@ public class TransactionBuilderTest {
     observation.setId("test-observation");
     observation.setStatus(ObservationStatus.FINAL);
 
+    var trx = sut.withId("test-patient").addEntries(List.of(patient, observation)).build();
+
+    Approvals.verify(
+        new ApprovalTextWriter(
+            fhirParser.encodeResourceToString(trx),
+            new Options().forFile().withExtension(".fhir.json")));
+  }
+
+  @Test
+  void testBuildWithMultipleEntriesAndProvenance() {
+    var fhirParser = fhirContext.newJsonParser().setPrettyPrint(true);
+    final var sut = new TransactionBuilder();
+
+    var patient = new Patient();
+    patient.setId("test-patient");
+    patient.addExtension("test", new CodeType("test"));
+
+    var observation = new Observation();
+    observation.setId("test-observation");
+    observation.setStatus(ObservationStatus.FINAL);
+
+    var toDelete = new Reference("Observation/test-observation-to-delete");
+    var toDelete2 = new Reference("Observation/test-observation");
+
     var trx =
-        sut.withUseFirstEntryResourceIdAsBundleId()
+        sut.withId("test-patient")
+            .withProvenance(
+                new Reference("Device/the-etl-job").setDisplay("The test etl job in version 1.2.3"),
+                new Reference().setDisplay("The source system"))
             .addEntries(List.of(patient, observation))
+            .addDeleteEntries(List.of(toDelete, toDelete2))
             .build();
 
     Approvals.verify(
         new ApprovalTextWriter(
             fhirParser.encodeResourceToString(trx),
-            new Options().forFile().withExtension(".json")));
+            new Options(FHIR_DATE_TIME_SCRUBBER).forFile().withExtension(".fhir.json")));
   }
 
   @Test
@@ -77,22 +114,6 @@ public class TransactionBuilderTest {
     var bundle = new TransactionBuilder().withType(bundleType).build();
 
     assertEquals(bundleType, bundle.getType());
-  }
-
-  @ParameterizedTest
-  @ValueSource(booleans = {true, false})
-  void testWithUseFirstEntryResourceIdAsBundleId(boolean useFirstEntryId) {
-    var patient = new Patient();
-    patient.setId("patient-123");
-
-    var builder = new TransactionBuilder().addEntry(patient);
-
-    if (useFirstEntryId) {
-      builder = builder.withUseFirstEntryResourceIdAsBundleId();
-      assertEquals("patient-123", builder.build().getIdElement().getIdPart());
-    } else {
-      assertEquals(null, builder.build().getIdElement().getIdPart());
-    }
   }
 
   @Test
@@ -129,7 +150,7 @@ public class TransactionBuilderTest {
     var bundle =
         new TransactionBuilder()
             .withType(BundleType.BATCH)
-            .withUseFirstEntryResourceIdAsBundleId()
+            .withId(patient.getId())
             .addEntry(patient)
             .build();
 
@@ -152,21 +173,6 @@ public class TransactionBuilderTest {
     var bundle = new TransactionBuilder().withId(idType).build();
 
     assertEquals("bundle-456", bundle.getIdElement().getIdPart());
-  }
-
-  @Test
-  void testWithIdTakesPrecedenceOverFirstEntryResourceId() {
-    var patient = new Patient();
-    patient.setId("patient-123");
-
-    var bundle =
-        new TransactionBuilder()
-            .withId("explicit-bundle-id")
-            .withUseFirstEntryResourceIdAsBundleId()
-            .addEntry(patient)
-            .build();
-
-    assertEquals("explicit-bundle-id", bundle.getIdElement().getIdPart());
   }
 
   @ParameterizedTest
