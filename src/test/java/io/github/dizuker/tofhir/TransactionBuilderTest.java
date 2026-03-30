@@ -84,7 +84,7 @@ class TransactionBuilderTest {
     observation.setStatus(ObservationStatus.FINAL);
 
     var toDelete = new Reference("Observation/test-observation-to-delete");
-    var toDelete2 = new Reference("Observation/test-observation");
+    var toDelete2 = new Reference("Observation/test-observation-to-delte-as-well");
 
     var trx =
         sut.withId("test-patient")

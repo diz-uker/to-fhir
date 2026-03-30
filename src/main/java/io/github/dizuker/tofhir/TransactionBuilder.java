@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 import org.hl7.fhir.instance.model.api.IIdType;
 import org.hl7.fhir.r4.model.Bundle;
@@ -224,12 +225,7 @@ public class TransactionBuilder {
   private Provenance buildCreateProvenance() {
     var provenance = new Provenance();
 
-    var id =
-        DigestUtils.sha256Hex(
-            "create-"
-                + this.provenanceWho.getReference()
-                + "-"
-                + this.provenanceWhat.getReference());
+    var id = DigestUtils.sha256Hex("create-" + getProvenanceIdString());
     provenance.setId(id);
 
     var now = Date.from(Instant.now());
@@ -267,12 +263,7 @@ public class TransactionBuilder {
   private Provenance buildDeleteProvenance() {
     var provenance = new Provenance();
 
-    var id =
-        DigestUtils.sha256Hex(
-            "delete-"
-                + this.provenanceWho.getReference()
-                + "-"
-                + this.provenanceWhat.getReference());
+    var id = DigestUtils.sha256Hex("delete-" + getProvenanceIdString());
     provenance.setId(id);
 
     var now = Date.from(Instant.now());
@@ -301,5 +292,35 @@ public class TransactionBuilder {
     }
 
     return provenance;
+  }
+
+  private String getProvenanceIdString() {
+    var who = "";
+    if (!StringUtils.isBlank(this.provenanceWho.getReference())) {
+      who = this.provenanceWho.getReference();
+    } else if (this.provenanceWho.getIdentifier() != null
+        && this.provenanceWho.getIdentifier().getValue() != null) {
+      who = this.provenanceWho.getIdentifier().getValue();
+    } else if (this.provenanceWho.getDisplay() != null) {
+      who = this.provenanceWho.getDisplay();
+    } else {
+      throw new IllegalArgumentException(
+          "Invalid provenanceWho reference. Either reference, identifier or display must be provided.");
+    }
+
+    var what = "";
+    if (!StringUtils.isBlank(this.provenanceWhat.getReference())) {
+      what = this.provenanceWhat.getReference();
+    } else if (this.provenanceWhat.getIdentifier() != null
+        && this.provenanceWhat.getIdentifier().getValue() != null) {
+      what = this.provenanceWhat.getIdentifier().getValue();
+    } else if (this.provenanceWhat.getDisplay() != null) {
+      what = this.provenanceWhat.getDisplay();
+    } else {
+      throw new IllegalArgumentException(
+          "Invalid provenanceWhat reference. Either reference, identifier or display must be provided.");
+    }
+
+    return who + "-" + what;
   }
 }
