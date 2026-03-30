@@ -1,0 +1,28 @@
+to-fhir:
+  fhir:
+    codings:
+      loinc:
+        system: "${to-fhir.fhir.systems.loinc}"
+        version: "2.82"
+      snomed:
+        system: "${to-fhir.fhir.systems.snomed}"
+        version: "http://snomed.info/sct/900000000000207008/version/20260301"
+      atc:
+        system: "${to-fhir.fhir.systems.atc}"
+        version: "2026"
+      ops:
+        system: "${to-fhir.fhir.systems.ops}"
+        version: "2026"
+      icd-10-gm:
+        system: "${to-fhir.fhir.systems.icd-10-gm}"
+        version: "2026"
+    systems:
+      ucum: "http://unitsofmeasure.org"
+      loinc: "http://loinc.org"
+      snomed: "http://snomed.info/sct"
+      atc: "http://fhir.de/CodeSystem/bfarm/atc"
+      ops: "http://fhir.de/CodeSystem/bfarm/ops"
+      icd-10-gm: "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+    extensions:
+      data-absent-reason:
+        url: "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
