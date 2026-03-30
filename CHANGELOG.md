@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/diz-uker/to-fhir/compare/v0.1.6...v0.1.7) (2026-03-30)
+
+
+### Features
+
+* added more default fhir systems and codes ([#16](https://github.com/diz-uker/to-fhir/issues/16)) ([33e504a](https://github.com/diz-uker/to-fhir/commit/33e504a3628edef160ffaea4b89493456b5554e1))
+
 ## [0.1.6](https://github.com/diz-uker/to-fhir/compare/v0.1.5...v0.1.6) (2026-03-30)
 
 
