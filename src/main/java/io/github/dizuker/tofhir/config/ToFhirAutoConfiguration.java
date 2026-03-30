@@ -1,7 +1,6 @@
 package io.github.dizuker.tofhir.config;
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
@@ -12,9 +11,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  */
 @AutoConfiguration
 @EnableConfigurationProperties(ToFhirProperties.class)
-@ConditionalOnProperty(
-    prefix = "to-fhir",
-    name = "enabled",
-    havingValue = "true",
-    matchIfMissing = true)
-public class ToFhirAutoConfiguration {}
+public class ToFhirAutoConfiguration {
+  /** Default constructor. */
+  public ToFhirAutoConfiguration() {
+    super();
+  }
+}

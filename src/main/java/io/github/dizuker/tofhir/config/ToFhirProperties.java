@@ -1,52 +1,79 @@
 package io.github.dizuker.tofhir.config;
 
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Extension;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-/** Configuration properties for to-FHIR utilities. */
+/**
+ * Properties for configuring to-FHIR utilities.
+ *
+ * @param fhir FHIR codings, systems, etc.
+ */
 @ConfigurationProperties(prefix = "to-fhir")
-public class ToFhirProperties {
+public record ToFhirProperties(Fhir fhir) {
 
-  /** Enable to-FHIR auto-configuration. Default: true */
-  private boolean enabled = true;
+  /**
+   * FHIR properties
+   *
+   * @param systems FHIR systems
+   * @param codings FHIR codings
+   * @param extensions FHIR extensions
+   */
+  public record Fhir(Systems systems, Codings codings, Extensions extensions) {}
 
-  /** FHIR version to use (R4, R5, etc.). Default: R4 */
-  private String fhirVersion = "R4";
+  /**
+   * FHIR Systems
+   *
+   * @param ucum The units of measure system
+   * @param loinc The LOINC system
+   * @param snomed The SNOMED CT system
+   * @param atc The ATC system
+   * @param ops The OPS system
+   * @param icd10gm The ICD-10-GM system
+   */
+  public record Systems(
+      String ucum, String loinc, String snomed, String atc, String ops, String icd10gm) {}
 
-  /** Default resource validation enabled. Default: true */
-  private boolean validateResources = true;
+  /**
+   * FHIR codings
+   *
+   * @param loinc LOINC Coding
+   * @param snomed SNOMED CT Coding
+   * @param ops OPS Coding
+   * @param atc ATC Coding
+   */
+  public record Codings(Coding loinc, Coding snomed, Coding ops, Coding atc) {
+    @Override
+    public Coding loinc() {
+      // return a fresh copy, otherwise the original instance will be modified
+      return loinc.copy();
+    }
 
-  /** Default strict mode for reference validation. Default: false */
-  private boolean strictReferenceValidation = false;
+    @Override
+    public Coding snomed() {
+      return snomed.copy();
+    }
 
-  public boolean isEnabled() {
-    return enabled;
+    @Override
+    public Coding atc() {
+      return atc.copy();
+    }
+
+    @Override
+    public Coding ops() {
+      return ops.copy();
+    }
   }
 
-  public void setEnabled(boolean enabled) {
-    this.enabled = enabled;
-  }
-
-  public String getFhirVersion() {
-    return fhirVersion;
-  }
-
-  public void setFhirVersion(String fhirVersion) {
-    this.fhirVersion = fhirVersion;
-  }
-
-  public boolean isValidateResources() {
-    return validateResources;
-  }
-
-  public void setValidateResources(boolean validateResources) {
-    this.validateResources = validateResources;
-  }
-
-  public boolean isStrictReferenceValidation() {
-    return strictReferenceValidation;
-  }
-
-  public void setStrictReferenceValidation(boolean strictReferenceValidation) {
-    this.strictReferenceValidation = strictReferenceValidation;
+  /**
+   * FHIR extensions
+   *
+   * @param dataAbsentReason The data absent reason extension
+   */
+  public record Extensions(Extension dataAbsentReason) {
+    @Override
+    public Extension dataAbsentReason() {
+      return dataAbsentReason.copy();
+    }
   }
 }
