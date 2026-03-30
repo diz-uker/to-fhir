@@ -35,13 +35,13 @@
   }, {
     "request": {
       "method": "DELETE",
-      "url": "Observation/test-observation"
+      "url": "Observation/test-observation-to-delte-as-well"
     }
   }, {
-    "fullUrl": "Provenance/0a541c8bb623d63831ba39ac76c548b105185f4cd0a973205033b2187f9284ab",
+    "fullUrl": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
     "resource": {
       "resourceType": "Provenance",
-      "id": "0a541c8bb623d63831ba39ac76c548b105185f4cd0a973205033b2187f9284ab",
+      "id": "72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
       "target": [ {
         "reference": "Patient/test-patient"
       }, {
@@ -85,17 +85,17 @@
     },
     "request": {
       "method": "PUT",
-      "url": "Provenance/0a541c8bb623d63831ba39ac76c548b105185f4cd0a973205033b2187f9284ab"
+      "url": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027"
     }
   }, {
-    "fullUrl": "Provenance/6a947159575f39a3f22ac05b2568ad63e934e252b3df4755ed8f4c4a748c6352",
+    "fullUrl": "Provenance/859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",
     "resource": {
       "resourceType": "Provenance",
-      "id": "6a947159575f39a3f22ac05b2568ad63e934e252b3df4755ed8f4c4a748c6352",
+      "id": "859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",
       "target": [ {
         "reference": "Observation/test-observation-to-delete"
       }, {
-        "reference": "Observation/test-observation"
+        "reference": "Observation/test-observation-to-delte-as-well"
       } ],
       "occurredDateTime": "2000-01-01T11:11:11Z",
       "recorded": "2000-01-01T11:11:11Z",
@@ -127,13 +127,13 @@
       }, {
         "role": "removal",
         "what": {
-          "reference": "Observation/test-observation"
+          "reference": "Observation/test-observation-to-delte-as-well"
         }
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "Provenance/6a947159575f39a3f22ac05b2568ad63e934e252b3df4755ed8f4c4a748c6352"
+      "url": "Provenance/859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92"
     }
   } ]
 }
