@@ -6,7 +6,7 @@ to-fhir:
         version: "2.82"
       snomed:
         system: "${to-fhir.fhir.systems.snomed}"
-        version: "http://snomed.info/sct/900000000000207008/version/20260301"
+        version: "http://snomed.info/sct/900000000000207008/version/20250701"
       atc:
         system: "${to-fhir.fhir.systems.atc}"
         version: "2026"
