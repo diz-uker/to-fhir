@@ -9,7 +9,7 @@ Collection of utilities for mapping FHIR resources
 <!-- x-release-please-start-version -->
 
 ```groovy
-implementation "io.github.diz-uker:to-fhir:0.1.8"
+implementation "io.github.diz-uker:to-fhir:0.1.9"
 ```
 
 <!-- x-release-please-end -->
@@ -22,7 +22,7 @@ implementation "io.github.diz-uker:to-fhir:0.1.8"
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir</artifactId>
-    <version>0.1.8</version>
+    <version>0.1.9</version>
 </dependency>
 ```
 
