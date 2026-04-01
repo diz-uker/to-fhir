@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.9](https://github.com/diz-uker/to-fhir/compare/v0.1.8...v0.1.9) (2026-04-01)
+
+
+### Bug Fixes
+
+* use mii snomed version ([#20](https://github.com/diz-uker/to-fhir/issues/20)) ([4d0174d](https://github.com/diz-uker/to-fhir/commit/4d0174d2b624ef6ed1596849274bb673594bbc99))
+
 ## [0.1.8](https://github.com/diz-uker/to-fhir/compare/v0.1.7...v0.1.8) (2026-03-30)
 
 
