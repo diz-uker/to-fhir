@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.10](https://github.com/diz-uker/to-fhir/compare/v0.1.9...v0.1.10) (2026-04-18)
+
+
+### Features
+
+* added PZN ([#23](https://github.com/diz-uker/to-fhir/issues/23)) ([5c4b8e1](https://github.com/diz-uker/to-fhir/commit/5c4b8e186af741963dfaf69bb4a2e2a908befcb2))
+
 ## [0.1.9](https://github.com/diz-uker/to-fhir/compare/v0.1.8...v0.1.9) (2026-04-01)
 
 
