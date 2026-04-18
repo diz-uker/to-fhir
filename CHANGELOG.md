@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.11](https://github.com/diz-uker/to-fhir/compare/v0.1.10...v0.1.11) (2026-04-18)
+
+
+### Features
+
+* add resource type support to ID computation in IdUtils ([#25](https://github.com/diz-uker/to-fhir/issues/25)) ([d384e43](https://github.com/diz-uker/to-fhir/commit/d384e431c51aebb7af92335af144639d151a455e))
+
 ## [0.1.10](https://github.com/diz-uker/to-fhir/compare/v0.1.9...v0.1.10) (2026-04-18)
 
 
