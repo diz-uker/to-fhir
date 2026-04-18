@@ -41,8 +41,9 @@ public record ToFhirProperties(Fhir fhir) {
    * @param snomed SNOMED CT Coding
    * @param ops OPS Coding
    * @param atc ATC Coding
+   * @param pzn PZN Coding
    */
-  public record Codings(Coding loinc, Coding snomed, Coding ops, Coding atc) {
+  public record Codings(Coding loinc, Coding snomed, Coding ops, Coding atc, Coding pzn) {
     @Override
     public Coding loinc() {
       // return a fresh copy, otherwise the original instance will be modified
@@ -62,6 +63,11 @@ public record ToFhirProperties(Fhir fhir) {
     @Override
     public Coding ops() {
       return ops.copy();
+    }
+
+    @Override
+    public Coding pzn() {
+      return pzn.copy();
     }
   }
 
