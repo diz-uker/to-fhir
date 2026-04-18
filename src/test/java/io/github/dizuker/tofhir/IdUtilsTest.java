@@ -4,9 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.hl7.fhir.r4.model.Identifier;
+import org.hl7.fhir.r4.model.ResourceType;
 import org.junit.jupiter.api.Test;
 
-public class IdUtilsTest {
+class IdUtilsTest {
   @Test
   void testComputeIdFromIdentifier() {
     var identifier = new Identifier();
@@ -96,6 +97,22 @@ public class IdUtilsTest {
     // Value not set (null)
 
     assertThrows(Exception.class, () -> IdUtils.fromIdentifier(identifier));
+  }
+
+  @Test
+  void testComputeIdFromIdentifierWithResourceType() {
+    var identifier = new Identifier();
+    identifier.setSystem("http://example.com/patient");
+    identifier.setValue("12345");
+
+    var id = IdUtils.fromIdentifier(identifier, ResourceType.Patient);
+
+    assertEquals("Patient", id.getResourceType());
+    assertEquals(
+        "ab0ecec0f0b7f2e7d0034eb57fceee58120d2ecb95d4e05c2613143ae439f652", id.getIdPart());
+
+    assertEquals(
+        "Patient/ab0ecec0f0b7f2e7d0034eb57fceee58120d2ecb95d4e05c2613143ae439f652", id.getValue());
   }
 
   private void assertNotEquals(String id1, String id2) {
