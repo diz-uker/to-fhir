@@ -6,6 +6,8 @@ import org.apache.commons.lang3.Validate;
 import org.hl7.fhir.instance.model.api.IIdType;
 import org.hl7.fhir.r4.model.IdType;
 import org.hl7.fhir.r4.model.Identifier;
+import org.hl7.fhir.r4.model.ResourceType;
+import org.jspecify.annotations.Nullable;
 
 /** Utility class for FHIR resource Ids */
 public class IdUtils {
@@ -18,10 +20,22 @@ public class IdUtils {
    * SHA-256.
    *
    * @param identifier the FHIR Identifier to compute the ID from
+   * @param resourceType the FHIR ResourceType to include in the ID (optional)
+   * @return a deterministic ID string derived from the identifier's system and value
+   */
+  public static IIdType fromIdentifier(Identifier identifier, ResourceType resourceType) {
+    return fromIdentifier(identifier, DigestUtils.getSha256Digest(), resourceType);
+  }
+
+  /**
+   * Computes a deterministic ID from a FHIR Identifier by hashing the system and value using
+   * SHA-256.
+   *
+   * @param identifier the FHIR Identifier to compute the ID from
    * @return a deterministic ID string derived from the identifier's system and value
    */
   public static IIdType fromIdentifier(Identifier identifier) {
-    return fromIdentifier(identifier, DigestUtils.getSha256Digest());
+    return fromIdentifier(identifier, DigestUtils.getSha256Digest(), null);
   }
 
   /**
@@ -32,6 +46,20 @@ public class IdUtils {
    * @return a deterministic ID string derived from the identifier's system and value
    */
   public static IIdType fromIdentifier(Identifier identifier, MessageDigest digest) {
+    return fromIdentifier(identifier, digest, null);
+  }
+
+  /**
+   * Computes a deterministic ID from a FHIR Identifier using the provided MessageDigest algorithm.
+   *
+   * @param identifier the FHIR Identifier to compute the ID from
+   * @param digest the MessageDigest to use for hashing (e.g., SHA-256)
+   * @param resourceType the FHIR ResourceType to include in the ID (optional)
+   * @return a deterministic ID string derived from the identifier's system, value and optional
+   *     resource type
+   */
+  public static IIdType fromIdentifier(
+      Identifier identifier, MessageDigest digest, @Nullable ResourceType resourceType) {
     Validate.notBlank(identifier.getSystem());
     Validate.notBlank(
         identifier.getValue(),
@@ -40,6 +68,13 @@ public class IdUtils {
 
     var stringId =
         new DigestUtils(digest).digestAsHex(identifier.getSystem() + "|" + identifier.getValue());
-    return new IdType(stringId);
+
+    var id = new IdType(stringId);
+
+    if (resourceType != null) {
+      return id.withResourceType(resourceType.name());
+    }
+
+    return id;
   }
 }
