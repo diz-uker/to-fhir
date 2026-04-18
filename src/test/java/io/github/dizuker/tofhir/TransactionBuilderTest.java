@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import ca.uhn.fhir.context.FhirContext;
-import java.util.List;
 import org.approvaltests.Approvals;
 import org.approvaltests.core.Options;
 import org.approvaltests.core.Scrubber;
@@ -62,7 +61,7 @@ class TransactionBuilderTest {
     observation.setId("test-observation");
     observation.setStatus(ObservationStatus.FINAL);
 
-    var trx = sut.withId("test-patient").addEntries(List.of(patient, observation)).build();
+    var trx = sut.withId("test-patient").addEntries(patient, observation).build();
 
     Approvals.verify(
         new ApprovalTextWriter(
@@ -91,8 +90,8 @@ class TransactionBuilderTest {
             .withProvenance(
                 new Reference("Device/the-etl-job").setDisplay("The test etl job in version 1.2.3"),
                 new Reference().setDisplay("The source system"))
-            .addEntries(List.of(patient, observation))
-            .addDeleteEntries(List.of(toDelete, toDelete2))
+            .addEntries(patient, observation)
+            .addDeleteEntries(toDelete, toDelete2)
             .build();
 
     Approvals.verify(

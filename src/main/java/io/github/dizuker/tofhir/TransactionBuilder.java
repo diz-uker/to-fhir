@@ -76,11 +76,11 @@ public class TransactionBuilder {
   /**
    * Adds a list of FHIR resources to the transaction bundle.
    *
-   * @param resources the list of FHIR resources to add to the bundle
+   * @param resources the FHIR resources to add to the bundle
    * @return this builder instance for chaining
    */
-  public TransactionBuilder addEntries(List<? extends Resource> resources) {
-    this.resources.addAll(resources);
+  public TransactionBuilder addEntries(Resource... resources) {
+    this.resources.addAll(List.of(resources));
     return this;
   }
 
@@ -101,7 +101,7 @@ public class TransactionBuilder {
    * @param resources a list of references to the resources to delete
    * @return this builder instance for chaining
    */
-  public TransactionBuilder addDeleteEntries(List<? extends Reference> resources) {
+  public TransactionBuilder addDeleteEntries(Reference... resources) {
     for (var r : resources) {
       this.addDeleteEntry(r);
     }
