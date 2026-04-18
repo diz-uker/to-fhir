@@ -1,6 +1,8 @@
 # to-fhir
 
-Collection of utilities for mapping FHIR resources
+[![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/diz-uker/to-fhir?label=openssf%20scorecard&style=flat)](https://scorecard.dev/viewer/?uri=github.com/diz-uker/to-fhir)
+
+Collection of utilities for mapping FHIR resources.
 
 ## Installation
 

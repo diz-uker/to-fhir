@@ -16,6 +16,8 @@ to-fhir:
       icd-10-gm:
         system: "${to-fhir.fhir.systems.icd-10-gm}"
         version: "2026"
+      pzn:
+        system: "${to-fhir.fhir.systems.pzn}"
     systems:
       ucum: "http://unitsofmeasure.org"
       loinc: "http://loinc.org"
@@ -23,6 +25,7 @@ to-fhir:
       atc: "http://fhir.de/CodeSystem/bfarm/atc"
       ops: "http://fhir.de/CodeSystem/bfarm/ops"
       icd-10-gm: "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+      pzn: "http://fhir.de/CodeSystem/ifa/pzn"
     extensions:
       data-absent-reason:
         url: "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
