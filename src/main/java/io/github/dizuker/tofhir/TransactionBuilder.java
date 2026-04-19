@@ -16,6 +16,7 @@ import org.hl7.fhir.r4.model.Bundle.HTTPVerb;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.DateTimeType;
+import org.hl7.fhir.r4.model.Device;
 import org.hl7.fhir.r4.model.Provenance;
 import org.hl7.fhir.r4.model.Provenance.ProvenanceEntityRole;
 import org.hl7.fhir.r4.model.Reference;
@@ -34,6 +35,15 @@ public class TransactionBuilder {
   private boolean isProvenanceEnabled = false;
   private Reference provenanceWho = null;
   private Reference provenanceWhat = null;
+  private Device provenanceDevice = null;
+
+  /**
+   * A pair of FHIR Bundles: one containing data resources and one containing provenance resources.
+   *
+   * @param dataBundle the bundle containing data resources (e.g. Patient, Observation)
+   * @param provenanceBundle the bundle containing Provenance and optionally Device resources
+   */
+  public record DataAndProvenanceBundles(Bundle dataBundle, Bundle provenanceBundle) {}
 
   /** Creates a new TransactionBuilder with the default type of TRANSACTION. */
   public TransactionBuilder() {
@@ -76,11 +86,11 @@ public class TransactionBuilder {
   /**
    * Adds a list of FHIR resources to the transaction bundle.
    *
-   * @param resources the list of FHIR resources to add to the bundle
+   * @param resources the FHIR resources to add to the bundle
    * @return this builder instance for chaining
    */
-  public TransactionBuilder addEntries(List<? extends Resource> resources) {
-    this.resources.addAll(resources);
+  public TransactionBuilder addEntries(Resource... resources) {
+    this.resources.addAll(List.of(resources));
     return this;
   }
 
@@ -101,7 +111,7 @@ public class TransactionBuilder {
    * @param resources a list of references to the resources to delete
    * @return this builder instance for chaining
    */
-  public TransactionBuilder addDeleteEntries(List<? extends Reference> resources) {
+  public TransactionBuilder addDeleteEntries(Reference... resources) {
     for (var r : resources) {
       this.addDeleteEntry(r);
     }
@@ -147,6 +157,28 @@ public class TransactionBuilder {
   public TransactionBuilder withProvenance(@NonNull Reference who, @NonNull Reference what) {
     this.isProvenanceEnabled = true;
     this.provenanceWho = who;
+    this.provenanceWhat = what;
+    return this;
+  }
+
+  /**
+   * Enables the inclusion of a Provenance resource in the transaction bundle, with the specified
+   * `Provenance.entity.what` and `Provenance.agent.who` references. If the bundle contains both
+   * delete and update/create entries, two Provenance resources wil be included.
+   *
+   * <p>The `Provenance.id` is built from the hash of the `who` and `what` references.
+   *
+   * @param device the Device resource representing the agent responsible for the transformation or
+   *     deletion. The resource is automatically added to the bundle and referenced in the
+   *     Provenance.agent.who element.
+   * @param what a reference to the agent responsible for the transformation or deletion. This is
+   *     typically the transformation service itself.
+   * @return
+   */
+  public TransactionBuilder withProvenance(@NonNull Device device, @NonNull Reference what) {
+    this.isProvenanceEnabled = true;
+    this.provenanceDevice = device;
+    this.provenanceWho = ReferenceUtils.createReferenceTo(device);
     this.provenanceWhat = what;
     return this;
   }
@@ -220,6 +252,100 @@ public class TransactionBuilder {
     }
 
     return bundle;
+  }
+
+  /**
+   * Builds and returns two FHIR Bundles: a data bundle containing only the data resources and
+   * delete entries, and a provenance bundle containing the Provenance resource(s) and optionally
+   * the Device resource (if configured via {@link #withProvenance(Device, Reference)}). The
+   * provenance bundle always uses {@link BundleType#TRANSACTION}.
+   *
+   * @return a {@link DataAndProvenanceBundles} containing the data and provenance bundles
+   * @throws IllegalStateException if provenance has not been enabled via {@link
+   *     #withProvenance(Reference, Reference)} or {@link #withProvenance(Device, Reference)}
+   * @throws IllegalArgumentException if failOnDuplicateEntries is enabled and duplicate resource
+   *     IDs are found
+   */
+  public DataAndProvenanceBundles buildWithSeparateProvenance() {
+    if (!this.isProvenanceEnabled) {
+      throw new IllegalStateException(
+          "Provenance must be enabled via withProvenance() before calling"
+              + " buildWithSeparateProvenance()");
+    }
+
+    var dataBundle = new Bundle();
+    dataBundle.setType(bundleType);
+
+    if (this.bundleId.isPresent()) {
+      dataBundle.setId(this.bundleId.get());
+    }
+
+    var seen = new HashSet<String>();
+
+    for (var resource : resources) {
+      var resourceId = resource.getIdElement().getIdPart();
+
+      Validate.notBlank(resourceId);
+
+      var url = ReferenceUtils.createReferenceTo(resource).getReference();
+
+      if (failOnDuplicateEntries && !seen.add(url)) {
+        throw new IllegalArgumentException("Duplicate resource added:  " + url);
+      }
+
+      dataBundle
+          .addEntry()
+          .setResource(resource)
+          .setFullUrl(url)
+          .getRequest()
+          .setMethod(HTTPVerb.PUT)
+          .setUrl(url);
+    }
+
+    for (var toDeleteReference : resourcesToDelete) {
+      var entry = dataBundle.addEntry();
+      entry.getRequest().setMethod(HTTPVerb.DELETE).setUrl(toDeleteReference.getReference());
+    }
+
+    var provenanceBundle = new Bundle();
+    provenanceBundle.setType(BundleType.TRANSACTION);
+
+    if (this.provenanceDevice != null) {
+      var url = ReferenceUtils.createReferenceTo(provenanceDevice).getReference();
+      provenanceBundle
+          .addEntry()
+          .setResource(provenanceDevice)
+          .setFullUrl(url)
+          .getRequest()
+          .setMethod(HTTPVerb.PUT)
+          .setUrl(url);
+    }
+
+    if (!resources.isEmpty()) {
+      var provenance = buildCreateProvenance();
+      var url = ReferenceUtils.createReferenceTo(provenance).getReference();
+      provenanceBundle
+          .addEntry()
+          .setResource(provenance)
+          .setFullUrl(url)
+          .getRequest()
+          .setMethod(HTTPVerb.PUT)
+          .setUrl(url);
+    }
+
+    if (!resourcesToDelete.isEmpty()) {
+      var provenance = buildDeleteProvenance();
+      var url = ReferenceUtils.createReferenceTo(provenance).getReference();
+      provenanceBundle
+          .addEntry()
+          .setResource(provenance)
+          .setFullUrl(url)
+          .getRequest()
+          .setMethod(HTTPVerb.PUT)
+          .setUrl(url);
+    }
+
+    return new DataAndProvenanceBundles(dataBundle, provenanceBundle);
   }
 
   private Provenance buildCreateProvenance() {

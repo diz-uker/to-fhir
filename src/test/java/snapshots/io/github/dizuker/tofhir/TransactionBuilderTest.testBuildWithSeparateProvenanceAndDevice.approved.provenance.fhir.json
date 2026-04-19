@@ -1,0 +1,111 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "Device/the-etl-job",
+    "resource": {
+      "resourceType": "Device",
+      "id": "the-etl-job"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Device/the-etl-job"
+    }
+  }, {
+    "fullUrl": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
+      "target": [ {
+        "reference": "Patient/test-patient"
+      }, {
+        "reference": "Observation/test-observation"
+      } ],
+      "occurredDateTime": "2000-01-01T11:11:11Z",
+      "recorded": "2000-01-01T11:11:11Z",
+      "activity": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code": "CREATE",
+          "display": "create"
+        } ]
+      },
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "assembler",
+            "display": "Assembler"
+          } ]
+        },
+        "role": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code": "AUT",
+            "display": "author"
+          } ]
+        } ],
+        "who": {
+          "reference": "Device/the-etl-job"
+        }
+      } ],
+      "entity": [ {
+        "role": "source",
+        "what": {
+          "display": "The source system"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027"
+    }
+  }, {
+    "fullUrl": "Provenance/859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",
+      "target": [ {
+        "reference": "Observation/test-observation-to-delete"
+      }, {
+        "reference": "Observation/test-observation-to-delete-as-well"
+      } ],
+      "occurredDateTime": "2000-01-01T11:11:11Z",
+      "recorded": "2000-01-01T11:11:11Z",
+      "activity": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code": "DELETE",
+          "display": "delete"
+        } ]
+      },
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "performer",
+            "display": "Performer"
+          } ]
+        },
+        "who": {
+          "reference": "Device/the-etl-job"
+        }
+      } ],
+      "entity": [ {
+        "role": "removal",
+        "what": {
+          "reference": "Observation/test-observation-to-delete"
+        }
+      }, {
+        "role": "removal",
+        "what": {
+          "reference": "Observation/test-observation-to-delete-as-well"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Provenance/859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92"
+    }
+  } ]
+}
