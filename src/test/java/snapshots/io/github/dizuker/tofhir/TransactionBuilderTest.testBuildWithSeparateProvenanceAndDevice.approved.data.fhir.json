@@ -1,0 +1,41 @@
+{
+  "resourceType": "Bundle",
+  "id": "test-patient",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "Patient/test-patient",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "test-patient",
+      "extension": [ {
+        "url": "test",
+        "valueCode": "test"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/test-patient"
+    }
+  }, {
+    "fullUrl": "Observation/test-observation",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "test-observation",
+      "status": "final"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/test-observation"
+    }
+  }, {
+    "request": {
+      "method": "DELETE",
+      "url": "Observation/test-observation-to-delete"
+    }
+  }, {
+    "request": {
+      "method": "DELETE",
+      "url": "Observation/test-observation-to-delete-as-well"
+    }
+  } ]
+}

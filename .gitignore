@@ -148,4 +148,4 @@ megalinter-reports/
 *.ipr
 out/
 
-*.received.json
+*.received.fhir.json

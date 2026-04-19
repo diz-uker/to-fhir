@@ -1,0 +1,53 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
+      "target": [ {
+        "reference": "Patient/test-patient"
+      } ],
+      "occurredDateTime": "2000-01-01T11:11:11Z",
+      "recorded": "2000-01-01T11:11:11Z",
+      "activity": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code": "CREATE",
+          "display": "create"
+        } ]
+      },
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "assembler",
+            "display": "Assembler"
+          } ]
+        },
+        "role": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code": "AUT",
+            "display": "author"
+          } ]
+        } ],
+        "who": {
+          "reference": "Device/the-etl-job",
+          "display": "The test etl job in version 1.2.3"
+        }
+      } ],
+      "entity": [ {
+        "role": "source",
+        "what": {
+          "display": "The source system"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027"
+    }
+  } ]
+}

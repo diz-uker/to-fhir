@@ -13,6 +13,7 @@ import org.approvaltests.writers.ApprovalTextWriter;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.Bundle.HTTPVerb;
 import org.hl7.fhir.r4.model.CodeType;
+import org.hl7.fhir.r4.model.Device;
 import org.hl7.fhir.r4.model.IdType;
 import org.hl7.fhir.r4.model.Observation;
 import org.hl7.fhir.r4.model.Observation.ObservationStatus;
@@ -257,5 +258,90 @@ class TransactionBuilderTest {
                 .addEntry(patient3)
                 .addEntry(patient4)
                 .build());
+  }
+
+  @Test
+  void testBuildWithSeparateProvenanceAndDevice() {
+    var fhirParser = fhirContext.newJsonParser().setPrettyPrint(true);
+    final var sut = new TransactionBuilder();
+
+    var patient = new Patient();
+    patient.setId("test-patient");
+    patient.addExtension("test", new CodeType("test"));
+
+    var observation = new Observation();
+    observation.setId("test-observation");
+    observation.setStatus(ObservationStatus.FINAL);
+
+    var device = new Device();
+    device.setId("the-etl-job");
+
+    var toDelete = new Reference("Observation/test-observation-to-delete");
+    var toDelete2 = new Reference("Observation/test-observation-to-delete-as-well");
+
+    var result =
+        sut.withId("test-patient")
+            .withProvenance(device, new Reference().setDisplay("The source system"))
+            .addEntries(patient, observation)
+            .addDeleteEntries(toDelete, toDelete2)
+            .buildWithSeparateProvenance();
+    Approvals.verify(
+        new ApprovalTextWriter(
+            fhirParser.encodeResourceToString(result.dataBundle()),
+            new Options(FHIR_DATE_TIME_SCRUBBER).forFile().withExtension(".data.fhir.json")));
+
+    Approvals.verify(
+        new ApprovalTextWriter(
+            fhirParser.encodeResourceToString(result.provenanceBundle()),
+            new Options(FHIR_DATE_TIME_SCRUBBER).forFile().withExtension(".provenance.fhir.json")));
+  }
+
+  @Test
+  void testBuildWithSeparateProvenanceWithoutDevice() {
+    var fhirParser = fhirContext.newJsonParser().setPrettyPrint(true);
+    final var sut = new TransactionBuilder();
+
+    var patient = new Patient();
+    patient.setId("test-patient");
+
+    var result =
+        sut.withProvenance(
+                new Reference("Device/the-etl-job").setDisplay("The test etl job in version 1.2.3"),
+                new Reference().setDisplay("The source system"))
+            .addEntry(patient)
+            .buildWithSeparateProvenance();
+
+    Approvals.verify(
+        new ApprovalTextWriter(
+            fhirParser.encodeResourceToString(result.dataBundle()),
+            new Options(FHIR_DATE_TIME_SCRUBBER).forFile().withExtension(".data.fhir.json")));
+
+    Approvals.verify(
+        new ApprovalTextWriter(
+            fhirParser.encodeResourceToString(result.provenanceBundle()),
+            new Options(FHIR_DATE_TIME_SCRUBBER).forFile().withExtension(".provenance.fhir.json")));
+  }
+
+  @Test
+  void testBuildWithSeparateProvenanceThrowsWithoutProvenance() {
+    assertThrows(
+        IllegalStateException.class, () -> new TransactionBuilder().buildWithSeparateProvenance());
+  }
+
+  @Test
+  void testBuildWithSeparateProvenanceBundleIsAlwaysTransaction() {
+    var patient = new Patient();
+    patient.setId("test-patient");
+
+    var result =
+        new TransactionBuilder()
+            .withType(BundleType.BATCH)
+            .withProvenance(
+                new Reference("Device/the-etl-job"), new Reference().setDisplay("source"))
+            .addEntry(patient)
+            .buildWithSeparateProvenance();
+
+    assertEquals(BundleType.BATCH, result.dataBundle().getType());
+    assertEquals(BundleType.TRANSACTION, result.provenanceBundle().getType());
   }
 }
