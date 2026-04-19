@@ -226,6 +226,17 @@ public class TransactionBuilder {
     }
 
     if (this.isProvenanceEnabled) {
+      if (this.provenanceDevice != null && !resources.contains(this.provenanceDevice)) {
+        var url = ReferenceUtils.createReferenceTo(provenanceDevice).getReference();
+        bundle
+            .addEntry()
+            .setResource(provenanceDevice)
+            .setFullUrl(url)
+            .getRequest()
+            .setMethod(HTTPVerb.PUT)
+            .setUrl(url);
+      }
+
       if (!resources.isEmpty()) {
         var provenance = buildCreateProvenance();
         var url = ReferenceUtils.createReferenceTo(provenance).getReference();
@@ -370,6 +381,18 @@ public class TransactionBuilder {
     provenance.setRecorded(now);
 
     var targets = this.resources.stream().map(ReferenceUtils::createReferenceTo).toList();
+
+    if (this.provenanceDevice != null) {
+      // If a device is configured as the provenance agent, we also want to include a
+      // reference to it in the targets list
+      var deviceReference = ReferenceUtils.createReferenceTo(this.provenanceDevice);
+      // we can't simply do targets.add(deviceReference) because the targets list is
+      // immutable
+      if (!targets.contains(deviceReference)) {
+        targets = new ArrayList<>(targets);
+        targets.add(deviceReference);
+      }
+    }
 
     provenance.setTarget(targets);
 
