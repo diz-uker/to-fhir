@@ -285,6 +285,7 @@ class TransactionBuilderTest {
             .addEntries(patient, observation)
             .addDeleteEntries(toDelete, toDelete2)
             .buildWithSeparateProvenance();
+
     Approvals.verify(
         new ApprovalTextWriter(
             fhirParser.encodeResourceToString(result.dataBundle()),
