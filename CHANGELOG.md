@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.13](https://github.com/diz-uker/to-fhir/compare/v0.1.12...v0.1.13) (2026-04-19)
+
+
+### Bug Fixes
+
+* include device reference in provenance targets ([#31](https://github.com/diz-uker/to-fhir/issues/31)) ([63fcef3](https://github.com/diz-uker/to-fhir/commit/63fcef332d055884b02d83ee4db5d8392dc5fb3b))
+* set provenance bundle id ([#29](https://github.com/diz-uker/to-fhir/issues/29)) ([fae9fd7](https://github.com/diz-uker/to-fhir/commit/fae9fd7ae5a9f5fd519a50cffa947eba2e3f35fe))
+
 ## [0.1.12](https://github.com/diz-uker/to-fhir/compare/v0.1.11...v0.1.12) (2026-04-19)
 
 
