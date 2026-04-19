@@ -310,6 +310,17 @@ public class TransactionBuilder {
     var provenanceBundle = new Bundle();
     provenanceBundle.setType(BundleType.TRANSACTION);
 
+    // Use a SHA-256 hash of "provenance-" + the data bundle ID for the provenance
+    // bundle ID. This keeps the ID unique while ensuring it stays within FHIR ID
+    // length/character constraints.
+    // We could also just use the data bundle ID, but if both bundles are written to
+    // the same topic in Kafka and that ID is used as the key, it would cause issues
+    // on compaction.
+    if (this.bundleId.isPresent()) {
+      var provenanceBundleId = DigestUtils.sha256Hex("provenance-" + this.bundleId.get());
+      provenanceBundle.setId(provenanceBundleId);
+    }
+
     if (this.provenanceDevice != null) {
       var url = ReferenceUtils.createReferenceTo(provenanceDevice).getReference();
       provenanceBundle
