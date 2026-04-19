@@ -1,5 +1,6 @@
 {
   "resourceType": "Bundle",
+  "id": "739458d8024f393b28fe690194a1c4610cb6d3f92a449cfcd6b8ae5f08bbbe34",
   "type": "transaction",
   "entry": [ {
     "fullUrl": "Device/the-etl-job",

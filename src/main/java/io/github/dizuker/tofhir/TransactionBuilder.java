@@ -310,6 +310,16 @@ public class TransactionBuilder {
     var provenanceBundle = new Bundle();
     provenanceBundle.setType(BundleType.TRANSACTION);
 
+    // use the same bundle ID for the provenance bundle, but with a prefix to ensure
+    // uniqueness.
+    // we could also just use the data bundle id, but in case both are written to
+    // the same topic in Kafka, if that id is used as the key, it would cause issues
+    // on compaction.
+    if (this.bundleId.isPresent()) {
+      var provenanceBundleId = DigestUtils.sha256Hex("provenance-" + this.bundleId.get());
+      provenanceBundle.setId(provenanceBundleId);
+    }
+
     if (this.provenanceDevice != null) {
       var url = ReferenceUtils.createReferenceTo(provenanceDevice).getReference();
       provenanceBundle
