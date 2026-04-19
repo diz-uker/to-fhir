@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/diz-uker/to-fhir/compare/v0.1.11...v0.1.12) (2026-04-19)
+
+
+### Features
+
+* method to return separate provenance bundles ([#27](https://github.com/diz-uker/to-fhir/issues/27)) ([349a566](https://github.com/diz-uker/to-fhir/commit/349a56676114d7015a98de9b8eb83afd40814a4c))
+
 ## [0.1.11](https://github.com/diz-uker/to-fhir/compare/v0.1.10...v0.1.11) (2026-04-18)
 
 
