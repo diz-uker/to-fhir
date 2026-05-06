@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.14](https://github.com/diz-uker/to-fhir/compare/v0.1.13...v0.1.14) (2026-05-05)
+
+
+### Bug Fixes
+
+* update PZN version in application.yml ([#32](https://github.com/diz-uker/to-fhir/issues/32)) ([290b45a](https://github.com/diz-uker/to-fhir/commit/290b45acd38fed53f44931e562acba9dd3b1eb0d))
+
 ## [0.1.13](https://github.com/diz-uker/to-fhir/compare/v0.1.12...v0.1.13) (2026-04-19)
 
 
