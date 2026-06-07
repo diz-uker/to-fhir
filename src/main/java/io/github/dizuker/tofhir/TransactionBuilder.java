@@ -2,6 +2,7 @@ package io.github.dizuker.tofhir;
 
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -22,6 +23,7 @@ import org.hl7.fhir.r4.model.Provenance.ProvenanceEntityRole;
 import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.Resource;
 import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 /**
  * Builder for creating FHIR transaction bundles. By default, using the update-as-create approach.
@@ -32,10 +34,9 @@ public class TransactionBuilder {
   private List<Reference> resourcesToDelete = new ArrayList<>();
   private Optional<String> bundleId = Optional.empty();
   private boolean failOnDuplicateEntries = false;
-  private boolean isProvenanceEnabled = false;
-  private Reference provenanceWho = null;
-  private Reference provenanceWhat = null;
-  private Device provenanceDevice = null;
+  private @Nullable Reference provenanceWho = null;
+  private @Nullable Reference provenanceWhat = null;
+  private @Nullable Device provenanceDevice = null;
 
   /**
    * A pair of FHIR Bundles: one containing data resources and one containing provenance resources.
@@ -48,6 +49,10 @@ public class TransactionBuilder {
   /** Creates a new TransactionBuilder with the default type of TRANSACTION. */
   public TransactionBuilder() {
     // Default constructor with default bundle type
+  }
+
+  private boolean isProvenanceEnabled() {
+    return provenanceWho != null && provenanceWhat != null;
   }
 
   /**
@@ -84,13 +89,24 @@ public class TransactionBuilder {
   }
 
   /**
-   * Adds a list of FHIR resources to the transaction bundle.
+   * Adds FHIR resources to the transaction bundle.
    *
    * @param resources the FHIR resources to add to the bundle
    * @return this builder instance for chaining
    */
   public TransactionBuilder addEntries(Resource... resources) {
     this.resources.addAll(List.of(resources));
+    return this;
+  }
+
+  /**
+   * Adds a collection of FHIR resources to the transaction bundle.
+   *
+   * @param resources the FHIR resources to add to the bundle
+   * @return this builder instance for chaining
+   */
+  public TransactionBuilder addEntries(Collection<? extends Resource> resources) {
+    this.resources.addAll(resources);
     return this;
   }
 
@@ -152,10 +168,9 @@ public class TransactionBuilder {
    *     entries, this is automatically set to the resource being deleted instead.
    * @param what a reference to the agent responsible for the transformation or deletion. This is
    *     typically the transformation service itself.
-   * @return
+   * @return this builder instance for chaining
    */
   public TransactionBuilder withProvenance(@NonNull Reference who, @NonNull Reference what) {
-    this.isProvenanceEnabled = true;
     this.provenanceWho = who;
     this.provenanceWhat = what;
     return this;
@@ -173,10 +188,9 @@ public class TransactionBuilder {
    *     Provenance.agent.who element.
    * @param what a reference to the agent responsible for the transformation or deletion. This is
    *     typically the transformation service itself.
-   * @return
+   * @return this builder instance for chaining
    */
   public TransactionBuilder withProvenance(@NonNull Device device, @NonNull Reference what) {
-    this.isProvenanceEnabled = true;
     this.provenanceDevice = device;
     this.provenanceWho = ReferenceUtils.createReferenceTo(device);
     this.provenanceWhat = what;
@@ -225,7 +239,7 @@ public class TransactionBuilder {
       entry.getRequest().setMethod(HTTPVerb.DELETE).setUrl(toDeleteReference.getReference());
     }
 
-    if (this.isProvenanceEnabled) {
+    if (isProvenanceEnabled()) {
       if (this.provenanceDevice != null && !resources.contains(this.provenanceDevice)) {
         var url = ReferenceUtils.createReferenceTo(provenanceDevice).getReference();
         bundle
@@ -278,7 +292,7 @@ public class TransactionBuilder {
    *     IDs are found
    */
   public DataAndProvenanceBundles buildWithSeparateProvenance() {
-    if (!this.isProvenanceEnabled) {
+    if (!isProvenanceEnabled()) {
       throw new IllegalStateException(
           "Provenance must be enabled via withProvenance() before calling"
               + " buildWithSeparateProvenance()");
@@ -456,6 +470,11 @@ public class TransactionBuilder {
 
   private String getProvenanceIdString() {
     var who = "";
+    if (this.provenanceWho == null) {
+      throw new IllegalStateException(
+          "provenanceWho cannot be null when building provenance ID string");
+    }
+
     if (!StringUtils.isBlank(this.provenanceWho.getReference())) {
       who = this.provenanceWho.getReference();
     } else if (this.provenanceWho.getIdentifier() != null
@@ -466,6 +485,11 @@ public class TransactionBuilder {
     } else {
       throw new IllegalArgumentException(
           "Invalid provenanceWho reference. Either reference, identifier or display must be provided.");
+    }
+
+    if (this.provenanceWhat == null) {
+      throw new IllegalStateException(
+          "provenanceWhat cannot be null when building provenance ID string");
     }
 
     var what = "";
