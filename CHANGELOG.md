@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.15](https://github.com/diz-uker/to-fhir/compare/v0.1.14...v0.1.15) (2026-06-07)
+
+
+### Features
+
+* support for collection args in addEntries ([#34](https://github.com/diz-uker/to-fhir/issues/34)) ([0c40f9d](https://github.com/diz-uker/to-fhir/commit/0c40f9dae6e5a0b02aa66832b9e1d781fc608f14))
+
 ## [0.1.14](https://github.com/diz-uker/to-fhir/compare/v0.1.13...v0.1.14) (2026-05-05)
 
 
