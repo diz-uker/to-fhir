@@ -18,7 +18,6 @@ to-fhir:
         version: "2026"
       pzn:
         system: "${to-fhir.fhir.systems.pzn}"
-        version: "2026.2"
     systems:
       ucum: "http://unitsofmeasure.org"
       loinc: "http://loinc.org"
