@@ -11,7 +11,7 @@ Collection of utilities for mapping FHIR resources.
 <!-- x-release-please-start-version -->
 
 ```groovy
-implementation "io.github.diz-uker:to-fhir:0.1.15"
+implementation "io.github.diz-uker:to-fhir:0.1.16"
 ```
 
 <!-- x-release-please-end -->
@@ -24,7 +24,7 @@ implementation "io.github.diz-uker:to-fhir:0.1.15"
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir</artifactId>
-    <version>0.1.15</version>
+    <version>0.1.16</version>
 </dependency>
 ```
 
