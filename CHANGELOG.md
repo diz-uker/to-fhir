@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.16](https://github.com/diz-uker/to-fhir/compare/v0.1.15...v0.1.16) (2026-06-12)
+
+
+### Bug Fixes
+
+* drop PZN version ([#36](https://github.com/diz-uker/to-fhir/issues/36)) ([c47b2c6](https://github.com/diz-uker/to-fhir/commit/c47b2c63c1d264217a059df7e4a32a2a1b11fab6))
+
 ## [0.1.15](https://github.com/diz-uker/to-fhir/compare/v0.1.14...v0.1.15) (2026-06-07)
 
 
