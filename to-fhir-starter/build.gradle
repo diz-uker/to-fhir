@@ -1,0 +1,121 @@
+// groovylint-disable NestedBlockDepth
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+    id 'com.diffplug.spotless'
+    id 'io.gitee.pkmer.sonatype-central-publisher'
+    id 'org.springframework.boot' apply false
+    id 'io.spring.dependency-management'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+    }
+}
+
+dependencies {
+    api project(':to-fhir')
+
+    api 'org.springframework.boot:spring-boot-starter:4.0.5'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    // Use JUnit Jupiter API for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:6.0.3'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Use JUnit Jupiter Engine for testing.
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.3'
+}
+
+test {
+    // Use junit platform for unit tests
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'to-fhir-starter'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'to-FHIR® Starter'
+                description = 'Spring Boot auto-configuration starter for to-FHIR®.'
+                url = 'https://github.com/diz-uker/to-fhir'
+                licenses {
+                    license {
+                        name = 'Apache 2.0'
+                        url = 'https://opensource.org/licenses/Apache-2.0'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'https://github.com/diz-uker'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/diz-uker/to-fhir.git'
+                    developerConnection = 'scm:git:ssh://github.com:diz-uker/to-fhir.git'
+                    url = 'https://github.com/diz-uker/to-fhir'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'Local'
+            url = layout.buildDirectory.dir('repos/bundles')
+        }
+    }
+}
+
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
+signing {
+    def signingKey = System.getenv('SIGNING_KEY')
+    def signingPassword = System.getenv('SIGNING_KEY_PASSPHRASE')
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign publishing.publications.mavenJava
+}
+
+pkmerBoot {
+    sonatypeMavenCentral {
+        // the same with publishing.repositories.maven.url in the configuration.
+        stagingRepository = layout.buildDirectory.dir('repos/bundles')
+        /**
+         * get username and password from
+         * <a href="https://central.sonatype.com/account"> central sonatype account</a>
+         */
+        username = System.getenv('OSSRH_USERNAME')
+        password = System.getenv('OSSRH_PASSWORD')
+    }
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat()
+    }
+}
