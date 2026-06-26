@@ -4,6 +4,12 @@
 
 Collection of utilities for mapping FHIR resources.
 
+This repository contains two artifacts:
+
+- `to-fhir` — the core library. Plain Java, no Spring Boot dependency.
+- `to-fhir-starter` — a Spring Boot starter that auto-configures `ToFhirProperties`
+  (overridable via `to-fhir.*` properties) on top of `to-fhir`.
+
 ## Installation
 
 ### Gradle
@@ -12,6 +18,9 @@ Collection of utilities for mapping FHIR resources.
 
 ```groovy
 implementation "io.github.diz-uker:to-fhir:0.1.15"
+
+// optional, for Spring Boot auto-configuration
+implementation "io.github.diz-uker:to-fhir-starter:0.1.15"
 ```
 
 <!-- x-release-please-end -->
@@ -24,6 +33,13 @@ implementation "io.github.diz-uker:to-fhir:0.1.15"
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir</artifactId>
+    <version>0.1.15</version>
+</dependency>
+
+<!-- optional, for Spring Boot auto-configuration -->
+<dependency>
+    <groupId>io.github.diz-uker</groupId>
+    <artifactId>to-fhir-starter</artifactId>
     <version>0.1.15</version>
 </dependency>
 ```

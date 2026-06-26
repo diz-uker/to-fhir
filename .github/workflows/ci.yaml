@@ -49,13 +49,14 @@ jobs:
         with:
           name: libs
           path: |
-            build/libs/
+            to-fhir/build/libs/
+            to-fhir-starter/build/libs/
 
       - name: Publish to central
         if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
         run: |
-          ./gradlew :publish --no-configuration-cache
-          ./gradlew :publishToMavenCentralPortal --no-configuration-cache
+          ./gradlew publish --no-configuration-cache
+          ./gradlew publishToMavenCentralPortal --no-configuration-cache
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
@@ -63,7 +64,7 @@ jobs:
           SIGNING_KEY_PASSPHRASE: ${{ secrets.SIGNING_KEY_PASSPHRASE }}
 
   lint:
-    uses: miracum/.github/.github/workflows/standard-lint.yaml@8bd8986d6b656c71b5570f91b5ad96bf606955b4 # v1.20.7
+    uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
     permissions:
       contents: read
       pull-requests: write
