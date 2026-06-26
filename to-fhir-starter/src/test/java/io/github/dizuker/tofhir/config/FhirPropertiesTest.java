@@ -6,7 +6,7 @@ import io.github.dizuker.tofhir.FhirSystems;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 
-class ToFhirPropertiesTest {
+class FhirPropertiesTest {
   private final ApplicationContextRunner contextRunner =
       new ApplicationContextRunner()
           .withConfiguration(
@@ -17,23 +17,23 @@ class ToFhirPropertiesTest {
   void testDefaults() {
     contextRunner.run(
         context -> {
-          var props = context.getBean(ToFhirProperties.class);
-          assertEquals(FhirSystems.LOINC, props.fhir().systems().loinc());
+          var props = context.getBean(FhirProperties.class);
+          assertEquals(FhirSystems.LOINC, props.systems().loinc());
           assertEquals(
               "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              props.fhir().extensions().dataAbsentReason().getUrl());
-          assertEquals(FhirSystems.LOINC, props.fhir().codings().loinc().getSystem());
+              props.extensions().dataAbsentReason().getUrl());
+          assertEquals(FhirSystems.LOINC, props.codings().loinc().getSystem());
         });
   }
 
   @Test
   void testOverride() {
     contextRunner
-        .withPropertyValues("to-fhir.fhir.systems.loinc=https://example.com/loinc")
+        .withPropertyValues("fhir.systems.loinc=https://example.com/loinc")
         .run(
             context -> {
-              var props = context.getBean(ToFhirProperties.class);
-              assertEquals("https://example.com/loinc", props.fhir().systems().loinc());
+              var props = context.getBean(FhirProperties.class);
+              assertEquals("https://example.com/loinc", props.systems().loinc());
             });
   }
 }

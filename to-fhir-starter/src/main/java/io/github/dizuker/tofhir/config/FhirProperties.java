@@ -12,27 +12,21 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
  * Properties for configuring to-FHIR utilities.
  *
  * <p>Every value defaults to the constants in {@code io.github.dizuker.tofhir}, so no {@code
- * application.yml} ships with this starter. Set {@code to-fhir.*} properties in the consuming
+ * application.yml} ships with this starter. Set {@code fhir.*} properties in the consuming
  * application to override individual defaults.
  *
- * @param fhir FHIR codings, systems, etc.
+ * @param systems FHIR systems
+ * @param codings FHIR codings
+ * @param extensions FHIR extensions
  */
-@ConfigurationProperties(prefix = "to-fhir")
-public record ToFhirProperties(@DefaultValue Fhir fhir) {
+@ConfigurationProperties(prefix = "fhir")
+public record FhirProperties(
+    @DefaultValue Systems systems, Codings codings, Extensions extensions) {
 
-  /**
-   * FHIR properties
-   *
-   * @param systems FHIR systems
-   * @param codings FHIR codings
-   * @param extensions FHIR extensions
-   */
-  public record Fhir(@DefaultValue Systems systems, Codings codings, Extensions extensions) {
-    /** Default constructor. */
-    public Fhir {
-      codings = codings != null ? codings : new Codings(null, null, null, null, null, null);
-      extensions = extensions != null ? extensions : new Extensions(null);
-    }
+  /** Default constructor. */
+  public FhirProperties {
+    codings = codings != null ? codings : new Codings(null, null, null, null, null, null);
+    extensions = extensions != null ? extensions : new Extensions(null);
   }
 
   /**

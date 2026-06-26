@@ -7,8 +7,8 @@ Collection of utilities for mapping FHIR resources.
 This repository contains two artifacts:
 
 - `to-fhir` — the core library. Plain Java, no Spring Boot dependency.
-- `to-fhir-starter` — a Spring Boot starter that auto-configures `ToFhirProperties`
-  (overridable via `to-fhir.*` properties) on top of `to-fhir`.
+- `to-fhir-starter` — a Spring Boot starter that auto-configures `FhirProperties`
+  (overridable via `fhir.*` properties) on top of `to-fhir`.
 
 ## Installation
 
