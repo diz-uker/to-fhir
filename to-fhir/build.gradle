@@ -18,8 +18,10 @@ java {
 dependencies {
     // exposed on the public API (e.g. Bundle, Resource, Reference), so these must be 'api'
     // rather than 'implementation' for consumers to compile against this library.
-    api 'ca.uhn.hapi.fhir:hapi-fhir-base:8.8.1'
-    api 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:8.8.1'
+    api 'ca.uhn.hapi.fhir:hapi-fhir-base:8.10.0'
+    api 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:8.10.0'
+
+    api 'org.jspecify:jspecify:1.0.0'
 
     errorprone 'com.google.errorprone:error_prone_core:2.48.0'
     errorprone 'com.uber.nullaway:nullaway:0.13.1'
