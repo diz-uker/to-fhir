@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  * beans when the starter is included on the classpath.
  */
 @AutoConfiguration
-@EnableConfigurationProperties(ToFhirProperties.class)
+@EnableConfigurationProperties(FhirProperties.class)
 public class ToFhirAutoConfiguration {
   /** Default constructor. */
   public ToFhirAutoConfiguration() {
