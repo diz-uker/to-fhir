@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/diz-uker/to-fhir/compare/v0.2.0...v0.2.1) (2026-06-27)
+
+
+### Features
+
+* make the FhirProperties extensible by switching from record -&gt; class ([#40](https://github.com/diz-uker/to-fhir/issues/40)) ([6890d07](https://github.com/diz-uker/to-fhir/commit/6890d07ed2bcff7288c61298761ecc3982754658))
+
 ## [0.2.0](https://github.com/diz-uker/to-fhir/compare/v0.1.15...v0.2.0) (2026-06-26)
 
 
