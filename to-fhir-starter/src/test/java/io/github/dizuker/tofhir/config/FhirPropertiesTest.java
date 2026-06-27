@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.github.dizuker.tofhir.FhirSystems;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration;
 import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 
 class FhirPropertiesTest {
@@ -11,7 +12,7 @@ class FhirPropertiesTest {
       new ApplicationContextRunner()
           .withConfiguration(
               org.springframework.boot.autoconfigure.AutoConfigurations.of(
-                  ToFhirAutoConfiguration.class));
+                  ConfigurationPropertiesAutoConfiguration.class, ToFhirAutoConfiguration.class));
 
   @Test
   void testDefaults() {
