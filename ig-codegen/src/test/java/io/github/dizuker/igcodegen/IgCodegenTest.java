@@ -19,7 +19,7 @@ class IgCodegenTest {
 
   @Test
   void generatesOneClassPerNonSkippedDependency(@TempDir Path tempDir) throws Exception {
-    Path packageJsonFile = Path.of("package.json");
+    Path packageJsonFile = Path.of("src", "test", "resources", "package.json");
     Path fhirPackagesDir = Path.of(System.getProperty("user.home"), ".fhir", "packages");
     assumeTrue(Files.isRegularFile(packageJsonFile), "missing " + packageJsonFile.toAbsolutePath());
 
@@ -38,12 +38,23 @@ class IgCodegenTest {
   void defaultFhirPackagesDirPrefersHomeDirWhenItExists(@TempDir Path fakeHome) throws Exception {
     Path homeFhirPackages = Files.createDirectories(fakeHome.resolve(".fhir").resolve("packages"));
 
-    assertEquals(homeFhirPackages, IgCodegen.defaultFhirPackagesDir(fakeHome.toString()));
+    assertEquals(
+        homeFhirPackages, IgCodegen.defaultFhirPackagesDir(fakeHome.toString(), Path.of("")));
   }
 
   @Test
-  void defaultFhirPackagesDirFallsBackToCurrentDirWhenHomeDirIsMissing(@TempDir Path fakeHome) {
+  void defaultFhirPackagesDirFallsBackToCwdWhenHomeDirIsMissing(
+      @TempDir Path fakeHome, @TempDir Path fakeCwd) throws Exception {
+    Path cwdFhirPackages = Files.createDirectories(fakeCwd.resolve(".fhir").resolve("packages"));
+
+    assertEquals(cwdFhirPackages, IgCodegen.defaultFhirPackagesDir(fakeHome.toString(), fakeCwd));
+  }
+
+  @Test
+  void defaultFhirPackagesDirFallsBackToNodeModulesWhenNeitherFhirDirExists(
+      @TempDir Path fakeHome, @TempDir Path fakeCwd) {
     assertEquals(
-        Path.of(".fhir", "packages"), IgCodegen.defaultFhirPackagesDir(fakeHome.toString()));
+        fakeCwd.resolve("node_modules"),
+        IgCodegen.defaultFhirPackagesDir(fakeHome.toString(), fakeCwd));
   }
 }

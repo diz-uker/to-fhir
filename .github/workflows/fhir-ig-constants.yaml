@@ -41,8 +41,7 @@ jobs:
         uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: |
-            /github/home/.fhir/packages
-            fhir-ig-constants/fhirpkg.lock.json
+            fhir-ig-constants/node_modules
           key: fhir-packages-${{ hashFiles('fhir-ig-constants/package.json') }}
           restore-keys: |
             fhir-packages-
@@ -51,9 +50,7 @@ jobs:
         if: ${{ steps.fhir-package-cache.outputs.cache-hit != 'true' }}
         working-directory: fhir-ig-constants
         run: |
-          fhir cache location --path
-          fhir cache list
-          fhir restore
+          npm install --no-audit --no-fund --no-package-lock --ignore-scripts
 
       - name: Set up JDK
         uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # v5.2.0

@@ -129,14 +129,18 @@ tasks.register('generateSampleIgConstants', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'io.github.dizuker.igcodegen.IgCodegen'
     // Prefer the global Firely Terminal cache; fall back to a project-local ./.fhir/packages if
-    // it's missing, e.g. when packages were restored relative to this directory instead.
+    // it's missing (e.g. when packages were restored relative to this directory instead), then to
+    // ./node_modules (FHIR packages installed via 'npm install' rather than 'fhir restore').
     // Resolved from $HOME rather than the user.home system property: the JVM derives user.home
     // from the OS user database, which in GitHub Actions container jobs doesn't match $HOME
     // (overridden to /github/home) - the directory Firely Terminal actually restores into.
     def homeDir = System.getenv('HOME') ?: System.getProperty('user.home')
     def homeFhirPackagesDir = file("${homeDir}/.fhir/packages")
+    def cwdFhirPackagesDir = layout.projectDirectory.dir('.fhir/packages').asFile
     def fhirPackagesDir =
-        homeFhirPackagesDir.directory ? homeFhirPackagesDir : layout.projectDirectory.dir('.fhir/packages').asFile
+        homeFhirPackagesDir.directory ? homeFhirPackagesDir :
+        cwdFhirPackagesDir.directory ? cwdFhirPackagesDir :
+        layout.projectDirectory.dir('node_modules').asFile
     args = [
         layout.projectDirectory.file('src/test/resources/package.json').asFile.path,
         fhirPackagesDir.path,

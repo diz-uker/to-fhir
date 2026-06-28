@@ -7,17 +7,20 @@ resource.
 
 ## How it works
 
-1. You restore the IG packages you depend on locally with the Firely Terminal CLI
+1. You restore the IG packages you depend on locally, either with the Firely Terminal CLI
    (`fhir restore`), which reads a package manifest's `dependencies` map and populates
-   `~/.fhir/packages/<package-name>#<version>/package/*.json`.
+   `~/.fhir/packages/<package-name>#<version>/package/*.json`, or with `npm install` against the
+   same `package.json` (FHIR package manifests are npm-manifest-shaped), which populates
+   `node_modules/<package-name>/*.json` instead (no version segment, no nested `package`
+   directory). `ig-codegen` tries both layouts under whichever directory it's given.
 2. `ig-codegen` reads that same manifest, scans each restored package's resource files, and
    classifies them:
 
-   | Condition | Constant | Value |
-   |---|---|---|
-   | `resourceType == "CodeSystem"` | `CodeSystems` | `url` |
-   | `StructureDefinition`, `kind == "complex-type"`, `derivation == "constraint"`, `type == "Extension"` | `Extensions` | `url` |
-   | `StructureDefinition`, `kind == "resource"`, `derivation == "constraint"` | `Profiles` | `url + "|" + version` |
+   | Condition                                                                                            | Constant      | Value    |
+   | ---------------------------------------------------------------------------------------------------- | ------------- | -------- | ------------ |
+   | `resourceType == "CodeSystem"`                                                                       | `CodeSystems` | `url`    |
+   | `StructureDefinition`, `kind == "complex-type"`, `derivation == "constraint"`, `type == "Extension"` | `Extensions`  | `url`    |
+   | `StructureDefinition`, `kind == "resource"`, `derivation == "constraint"`                            | `Profiles`    | `url + " | " + version` |
 
    `kind == "logical"` (logical models) and `derivation == "specialization"` (base type
    definitions) are skipped — they show up in real packages but aren't IG profiles.
@@ -70,7 +73,8 @@ List<Path> generatedFiles = new IgCodegen().generate(
 ```
 
 Or run `IgCodegen.main(String[] args)` directly (`args[0]` = package.json, `args[1]` =
-`~/.fhir/packages`, `args[2]` = output dir; all optional, with those same defaults).
+`~/.fhir/packages`, `args[2]` = output dir; all optional). If `args[1]` is omitted, it tries, in
+order: `~/.fhir/packages`, `./.fhir/packages`, `./node_modules`.
 
 ### As a manually-invoked Gradle task
 

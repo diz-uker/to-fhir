@@ -27,8 +27,9 @@ whose `coding()` accessor returns a `org.hl7.fhir.r4.model.Coding`.
    }
    ```
 
-2. Restore those packages locally: `fhir restore` (Firely Terminal CLI), reading the same
-   `package.json`.
+2. Restore those packages locally, either with `fhir restore` (Firely Terminal CLI) or `npm
+   install`, reading the same `package.json` — both work, `generateIgConstants` tries
+   `~/.fhir/packages`, then `./.fhir/packages`, then `./node_modules`, in that order.
 3. Run `./gradlew :fhir-ig-constants:generateIgConstants`.
 4. Review the diff in `src/main/java`, commit it.
 

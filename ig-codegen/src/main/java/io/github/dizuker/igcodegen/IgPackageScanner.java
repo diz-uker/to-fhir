@@ -15,8 +15,9 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /**
- * Scans a restored FHIR package directory ({@code ~/.fhir/packages/<name>#<version>/package/}) and
- * classifies its resources into CodeSystem/Profile/Extension canonical URL constants.
+ * Scans a restored FHIR package directory ({@code ~/.fhir/packages/<name>#<version>/package/}, or
+ * {@code node_modules/<name>/} if installed via npm) and classifies its resources into
+ * CodeSystem/Profile/Extension canonical URL constants.
  */
 public final class IgPackageScanner {
 
@@ -26,10 +27,21 @@ public final class IgPackageScanner {
     this.objectMapper = objectMapper;
   }
 
-  /** Resolves {@code <fhirPackagesDir>/<packageName>#<packageVersion>/package}. */
+  /**
+   * Resolves the directory holding a package's resource JSON files. Tries the Firely Terminal cache
+   * layout ({@code <fhirPackagesDir>/<packageName>#<packageVersion>/package}) first, then falls
+   * back to the flat npm layout ({@code <fhirPackagesDir>/<packageName>}, no version segment, no
+   * nested {@code package} directory) used when FHIR packages are installed via {@code npm install}
+   * instead of Firely Terminal's {@code fhir restore}.
+   */
   public Path resolvePackageContentDir(
       Path fhirPackagesDir, String packageName, String packageVersion) {
-    return fhirPackagesDir.resolve(packageName + "#" + packageVersion).resolve("package");
+    Path firelyLayout =
+        fhirPackagesDir.resolve(packageName + "#" + packageVersion).resolve("package");
+    if (Files.isDirectory(firelyLayout)) {
+      return firelyLayout;
+    }
+    return fhirPackagesDir.resolve(packageName);
   }
 
   public IgPackageModel scan(Path packageContentDir, String packageName, String packageVersion) {

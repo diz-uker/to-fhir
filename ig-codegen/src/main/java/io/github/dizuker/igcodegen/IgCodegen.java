@@ -29,7 +29,8 @@ public final class IgCodegen {
    * Generates one Java constant class per non-skipped dependency in {@code packageJsonFile}.
    *
    * @param packageJsonFile the FHIR package manifest listing the IG packages to generate from
-   * @param fhirPackagesDir the Firely Terminal package cache (e.g. {@code ~/.fhir/packages})
+   * @param fhirPackagesDir where restored FHIR packages live, e.g. the Firely Terminal cache
+   *     ({@code ~/.fhir/packages}) or an npm {@code node_modules}
    * @param outputDir the Java source root to write generated classes into
    */
   public List<Path> generate(Path packageJsonFile, Path fhirPackagesDir, Path outputDir)
@@ -72,9 +73,10 @@ public final class IgCodegen {
   }
 
   /**
-   * Prefers the Firely Terminal global package cache ({@code ~/.fhir/packages}); falls back to a
-   * project-local {@code ./.fhir/packages} if the home directory one doesn't exist, e.g. when a
-   * local Firely Terminal config restores packages relative to the current directory instead.
+   * Tries, in order: the Firely Terminal global package cache ({@code ~/.fhir/packages}); a
+   * project-local {@code ./.fhir/packages}, e.g. when a local Firely Terminal config restores
+   * packages relative to the current directory instead; and finally {@code ./node_modules}, for
+   * FHIR packages installed via {@code npm install} rather than {@code fhir restore}.
    *
    * <p>Resolves the home directory from the {@code HOME} environment variable rather than the
    * {@code user.home} system property: the JVM derives {@code user.home} from the OS user database,
@@ -87,14 +89,18 @@ public final class IgCodegen {
     if (home == null || home.isEmpty()) {
       home = System.getProperty("user.home");
     }
-    return defaultFhirPackagesDir(home);
+    return defaultFhirPackagesDir(home, Path.of(""));
   }
 
-  static Path defaultFhirPackagesDir(String homeDir) {
+  static Path defaultFhirPackagesDir(String homeDir, Path cwd) {
     Path homeFhirPackagesDir = Path.of(homeDir, ".fhir", "packages");
     if (Files.isDirectory(homeFhirPackagesDir)) {
       return homeFhirPackagesDir;
     }
-    return Path.of(".fhir", "packages");
+    Path cwdFhirPackagesDir = cwd.resolve(".fhir").resolve("packages");
+    if (Files.isDirectory(cwdFhirPackagesDir)) {
+      return cwdFhirPackagesDir;
+    }
+    return cwd.resolve("node_modules");
   }
 }
