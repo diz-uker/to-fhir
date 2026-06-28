@@ -2,6 +2,7 @@ package io.github.dizuker.igcodegen;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,15 +62,25 @@ public final class IgCodegen {
   public static void main(String[] args) throws IOException {
     Path packageJsonFile =
         args.length > 0 ? Path.of(args[0]) : Path.of("ig-codegen", "package.json");
-    Path fhirPackagesDir =
-        args.length > 1
-            ? Path.of(args[1])
-            : Path.of(System.getProperty("user.home"), ".fhir", "packages");
+    Path fhirPackagesDir = args.length > 1 ? Path.of(args[1]) : defaultFhirPackagesDir();
     Path outputDir =
         args.length > 2 ? Path.of(args[2]) : Path.of("build", "generated", "sources", "ig-codegen");
 
     List<Path> generatedFiles =
         new IgCodegen().generate(packageJsonFile, fhirPackagesDir, outputDir);
     generatedFiles.forEach(file -> System.out.println("Generated " + file));
+  }
+
+  /**
+   * Prefers the Firely Terminal global package cache ({@code ~/.fhir/packages}); falls back to a
+   * project-local {@code ./.fhir/packages} if the home directory one doesn't exist, e.g. when a
+   * local Firely Terminal config restores packages relative to the current directory instead.
+   */
+  static Path defaultFhirPackagesDir() {
+    Path homeDir = Path.of(System.getProperty("user.home"), ".fhir", "packages");
+    if (Files.isDirectory(homeDir)) {
+      return homeDir;
+    }
+    return Path.of(".fhir", "packages");
   }
 }

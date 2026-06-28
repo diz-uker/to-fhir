@@ -127,9 +127,14 @@ tasks.register('generateSampleIgConstants', JavaExec) {
     description = 'Regenerates the sample constant classes in build/generated/sources/ig-codegen-sample from this module\'s own package.json (dev/smoke-test only).'
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'io.github.dizuker.igcodegen.IgCodegen'
+    // Prefer the global Firely Terminal cache; fall back to a project-local ./.fhir/packages if
+    // it's missing, e.g. when packages were restored relative to this directory instead.
+    def homeFhirPackagesDir = file("${System.getProperty('user.home')}/.fhir/packages")
+    def fhirPackagesDir =
+        homeFhirPackagesDir.directory ? homeFhirPackagesDir : layout.projectDirectory.dir('.fhir/packages').asFile
     args = [
         layout.projectDirectory.file('package.json').asFile.path,
-        "${System.getProperty('user.home')}/.fhir/packages",
+        fhirPackagesDir.path,
         layout.buildDirectory.dir('generated/sources/ig-codegen-sample').get().asFile.path,
     ]
     notCompatibleWithConfigurationCache('reads from outside the project (~/.fhir/packages, user.home)')

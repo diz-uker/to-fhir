@@ -39,9 +39,14 @@ tasks.register('generateIgConstants', JavaExec) {
     description = 'Regenerates the constant classes in src/main/java from package.json. Review the diff and commit.'
     classpath = configurations.codegen
     mainClass = 'io.github.dizuker.igcodegen.IgCodegen'
+    // Prefer the global Firely Terminal cache; fall back to a project-local ./.fhir/packages if
+    // it's missing, e.g. when packages were restored relative to this directory instead.
+    def homeFhirPackagesDir = file("${System.getProperty('user.home')}/.fhir/packages")
+    def fhirPackagesDir =
+        homeFhirPackagesDir.directory ? homeFhirPackagesDir : layout.projectDirectory.dir('.fhir/packages').asFile
     args = [
         layout.projectDirectory.file('package.json').asFile.path,
-        "${System.getProperty('user.home')}/.fhir/packages",
+        fhirPackagesDir.path,
         layout.projectDirectory.dir('src/main/java').asFile.path,
     ]
     notCompatibleWithConfigurationCache('reads from outside the project (~/.fhir/packages, user.home)')
