@@ -1,10 +1,9 @@
 package io.github.dizuker.igcodegen;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Map;
+import tools.jackson.databind.ObjectMapper;
 
 /**
  * A FHIR package manifest ({@code package.json}, restored by Firely Terminal's {@code fhir
@@ -13,8 +12,7 @@ import java.util.Map;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record PackageManifest(String name, String version, Map<String, String> dependencies) {
 
-  public static PackageManifest read(Path packageJsonFile, ObjectMapper objectMapper)
-      throws IOException {
+  public static PackageManifest read(Path packageJsonFile, ObjectMapper objectMapper) {
     return objectMapper.readValue(packageJsonFile.toFile(), PackageManifest.class);
   }
 }

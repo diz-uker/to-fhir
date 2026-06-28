@@ -1,6 +1,5 @@
 package io.github.dizuker.igcodegen;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.DirectoryStream;
@@ -13,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import tools.jackson.databind.ObjectMapper;
 
 /**
  * Scans a restored FHIR package directory ({@code ~/.fhir/packages/<name>#<version>/package/}, or
@@ -69,14 +69,7 @@ public final class IgPackageScanner {
       Map<String, String> profiles,
       Map<String, String> extensions,
       Map<String, List<ConceptConstant>> codeSystemConcepts) {
-    FhirResourceSummary resource;
-    try {
-      resource = objectMapper.readValue(file.toFile(), FhirResourceSummary.class);
-    } catch (IOException e) {
-      // Not every *.json file in a package directory is a FHIR resource (e.g. .index.json);
-      // skip anything that doesn't parse as one.
-      return;
-    }
+    var resource = objectMapper.readValue(file.toFile(), FhirResourceSummary.class);
 
     String resourceType = resource.resourceType();
     String id = resource.id();

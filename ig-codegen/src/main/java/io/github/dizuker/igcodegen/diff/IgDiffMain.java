@@ -1,10 +1,10 @@
 package io.github.dizuker.igcodegen.diff;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.dizuker.igcodegen.IgPackageModel;
 import io.github.dizuker.igcodegen.IgPackageScanner;
 import java.nio.file.Path;
 import java.util.List;
+import tools.jackson.databind.ObjectMapper;
 
 /**
  * CLI: report added/removed/renamed canonical URLs between two versions of the same FHIR package,
