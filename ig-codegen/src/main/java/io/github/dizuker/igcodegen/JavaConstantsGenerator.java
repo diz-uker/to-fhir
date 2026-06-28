@@ -61,6 +61,10 @@ public final class JavaConstantsGenerator {
       nestedType.addMethod(
           MethodSpec.methodBuilder(accessorName)
               .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+              .addJavadoc(
+                  "The canonical URL {@code $L}.\n\n@return {@code $L}\n",
+                  entry.getValue(),
+                  entry.getValue())
               .returns(String.class)
               .addStatement("return $S", entry.getValue())
               .build());

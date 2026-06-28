@@ -8,174 +8,473 @@ public final class Onkologie {
   public static final class CodeSystems {
     private CodeSystems() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog}
+     */
     public static String miiCsOnkoAllgemeinerLeistungszustandEcog() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky}
+     */
     public static String miiCsOnkoAllgemeinerLeistungszustandKarnofsky() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds}
+     */
     public static String miiCsOnkoAsaObds() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen}
+     */
     public static String miiCsOnkoFernmetastasen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung}
+     */
     public static String miiCsOnkoGenetischeVarianteAuspraegung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading}
+     */
     public static String miiCsOnkoGrading() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention}
+     */
     public static String miiCsOnkoIntention() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz}
+     */
     public static String miiCsOnkoKrkAnastomoseninsuffizienz() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status}
+     */
     public static String miiCsOnkoKrkMrtMesorektaleFaszieStatus() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-operationstyp}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-operationstyp}
+     */
     public static String miiCsOnkoKrkOperationstyp() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-operationstyp";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung}
+     */
     public static String miiCsOnkoKrkStomaAnzeichnung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet}
+     */
     public static String miiCsOnkoKrkTmeQualitaet() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie}
+     */
     public static String miiCsOnkoMammaHer2neuStatusLeitlinie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds}
+     */
     public static String miiCsOnkoMammaHer2neuStatusObds() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie}
+     */
     public static String miiCsOnkoMammaRezeptorstatusLeitlinie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration}
+     */
     public static String miiCsOnkoMelanomUlzeration() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad}
+     */
     public static String miiCsOnkoNebenwirkungCtcaeGrad() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation}
+     */
     public static String miiCsOnkoOperationKomplikation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency}
+     */
     public static String miiCsOnkoOperationUrgency() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung}
+     */
     public static String miiCsOnkoPrimaertumorDiagnosesicherung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications}
+     */
     public static String miiCsOnkoProstataPostsurgicalComplications() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus}
+     */
     public static String miiCsOnkoResidualstatus() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation}
+     */
     public static String miiCsOnkoSeitenlokalisation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart}
+     */
     public static String miiCsOnkoStrahlentherapieApplikationsart() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost}
+     */
     public static String miiCsOnkoStrahlentherapieBoost() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart}
+     */
     public static String miiCsOnkoStrahlentherapieStrahlenart() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet}
+     */
     public static String miiCsOnkoStrahlentherapieZielgebiet() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014}
+     */
     public static String miiCsOnkoStrahlentherapieZielgebiet2014() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme}
+     */
     public static String miiCsOnkoStudienteilnahme() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle}
+     */
     public static String miiCsOnkoSystemischeTherapieProtokolle() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung}
+     */
     public static String miiCsOnkoTherapieabweichung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ}
+     */
     public static String miiCsOnkoTherapieplanungTyp() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund}
+     */
     public static String miiCsOnkoTherapieEndeGrund() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop}
+     */
     public static String miiCsOnkoTherapieStellungzurop() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ}
+     */
     public static String miiCsOnkoTherapieTyp() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ";
     }
 
+    /**
+     * The canonical URL {@code https://www.uicc.org/resources/tnm}.
+     *
+     * @return {@code https://www.uicc.org/resources/tnm}
+     */
     public static String miiCsOnkoTnmUicc() {
       return "https://www.uicc.org/resources/tnm";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version}
+     */
     public static String miiCsOnkoTnmVersion() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod}
+     */
     public static String miiCsOnkoTod() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen}
+     */
     public static String miiCsOnkoVerlaufFernmetastasen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung}
+     */
     public static String miiCsOnkoVerlaufGesamtbeurteilung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten}
+     */
     public static String miiCsOnkoVerlaufLymphknoten() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor}
+     */
     public static String miiCsOnkoVerlaufPrimaertumor() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds}
+     */
     public static String miiCsOnkoWeitereKlassifikationenObds() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds";
     }
@@ -184,294 +483,805 @@ public final class Onkologie {
   public static final class Profiles {
     private Profiles() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2026.0.3}
+     */
     public static String miiPrOnkoAllgemeinerLeistungszustandEcog() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky|2026.0.3}
+     */
     public static String miiPrOnkoAllgemeinerLeistungszustandKarnofsky() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten|2026.0.3}
+     */
     public static String miiPrOnkoAnzahlBefalleneLymphknoten() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten|2026.0.3}
+     */
     public static String miiPrOnkoAnzahlBefalleneSentinelLymphknoten() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten|2026.0.3}
+     */
     public static String miiPrOnkoAnzahlUntersuchteLymphknoten() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten|2026.0.3}
+     */
     public static String miiPrOnkoAnzahlUntersuchteSentinelLymphknoten() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation|2026.0.3}
+     */
     public static String miiPrOnkoAsaKlassifikation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3}
+     */
     public static String miiPrOnkoBefund() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3}
+     */
     public static String miiPrOnkoDiagnosePrimaertumor() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3}
+     */
     public static String miiPrOnkoFernmetastasen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3}
+     */
     public static String miiPrOnkoFruehereTumorerkrankung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante|2026.0.3}
+     */
     public static String miiPrOnkoGenetischeVariante() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2026.0.3}
+     */
     public static String miiPrOnkoGrading() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3|2026.0.3}
+     */
     public static String miiPrOnkoHistologieIcdo3() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral|2026.0.3}
+     */
     public static String miiPrOnkoKrkAbstandAboral() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan|2026.0.3}
+     */
     public static String miiPrOnkoKrkAbstandAnokutan() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene|2026.0.3}
+     */
     public static String miiPrOnkoKrkAbstandCircumferelleResektionsebene() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz|2026.0.3}
+     */
     public static String miiPrOnkoKrkAnastomoseninsuffizienz() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie|2026.0.3}
+     */
     public static String miiPrOnkoKrkMrtMesorektaleFaszie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation|2026.0.3}
+     */
     public static String miiPrOnkoKrkOperation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen|2026.0.3}
+     */
     public static String miiPrOnkoKrkSpecimen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung|2026.0.3}
+     */
     public static String miiPrOnkoKrkStomaMarkierung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose|2026.0.3}
+     */
     public static String miiPrOnkoListeEvidenzErstdiagnose() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status|2026.0.3}
+     */
     public static String miiPrOnkoMammaHer2neuStatus() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3}
+     */
     public static String miiPrOnkoMammaMenopauseStatus() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation|2026.0.3}
+     */
     public static String miiPrOnkoMammaOperation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3}
+     */
     public static String miiPrOnkoMammaPraeoperativeMarkierung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen|2026.0.3}
+     */
     public static String miiPrOnkoMammaRezeptorstatusEstrogen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron|2026.0.3}
+     */
     public static String miiPrOnkoMammaRezeptorstatusProgesteron() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-sozialdienst|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-sozialdienst|2026.0.3}
+     */
     public static String miiPrOnkoMammaSozialdienst() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-sozialdienst|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe|2026.0.3}
+     */
     public static String miiPrOnkoMelanomBreslowTiefe() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3}
+     */
     public static String miiPrOnkoMelanomExzision() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh|2026.0.3}
+     */
     public static String miiPrOnkoMelanomLdh() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand|2026.0.3}
+     */
     public static String miiPrOnkoMelanomSicherheitsabstand() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration|2026.0.3}
+     */
     public static String miiPrOnkoMelanomUlzeration() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event|2026.0.3}
+     */
     public static String miiPrOnkoNebenwirkungAdverseEvent() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3}
+     */
     public static String miiPrOnkoOperation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2026.0.3}
+     */
     public static String miiPrOnkoProstataOperation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3}
+     */
     public static String miiPrOnkoProstateAnzahlPositiveStanzen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3}
+     */
     public static String miiPrOnkoProstateAnzahlStanzen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3}
+     */
     public static String miiPrOnkoProstateCaBefallStanze() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3}
+     */
     public static String miiPrOnkoProstateClavienDindo() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3}
+     */
     public static String miiPrOnkoProstateGleasonGradeGroup() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3}
+     */
     public static String miiPrOnkoProstateGleasonPatterns() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3}
+     */
     public static String miiPrOnkoProstatePsa() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus|2026.0.3}
+     */
     public static String miiPrOnkoResidualstatus() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen|2026.0.3}
+     */
     public static String miiPrOnkoSpecimen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie|2026.0.3}
+     */
     public static String miiPrOnkoStrahlentherapie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2026.0.3}
+     */
     public static String miiPrOnkoStrahlentherapieBestrahlungNuklearmedizin() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3}
+     */
     public static String miiPrOnkoStrahlentherapieBestrahlungStrahlentherapie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3}
+     */
     public static String miiPrOnkoStudienteilnahme() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2026.0.3}
+     */
     public static String miiPrOnkoSystemischeTherapie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.3}
+     */
     public static String miiPrOnkoSystemischeTherapieMedikation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3}
+     */
     public static String miiPrOnkoTherapieempfehlungKombinationstherapie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3}
+     */
     public static String miiPrOnkoTherapieempfehlungMedikation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation|2026.0.3}
+     */
     public static String miiPrOnkoTherapieempfehlungOperation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol|2026.0.3}
+     */
     public static String miiPrOnkoTnmASymbol() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3}
+     */
     public static String miiPrOnkoTnmKlassifikation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie|2026.0.3}
+     */
     public static String miiPrOnkoTnmLKategorie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3}
+     */
     public static String miiPrOnkoTnmMKategorie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-symbol|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-symbol|2026.0.3}
+     */
     public static String miiPrOnkoTnmMSymbol() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-symbol|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3}
+     */
     public static String miiPrOnkoTnmNKategorie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie|2026.0.3}
+     */
     public static String miiPrOnkoTnmPnKategorie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol|2026.0.3}
+     */
     public static String miiPrOnkoTnmRSymbol() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie|2026.0.3}
+     */
     public static String miiPrOnkoTnmSKategorie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3}
+     */
     public static String miiPrOnkoTnmTKategorie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie|2026.0.3}
+     */
     public static String miiPrOnkoTnmVKategorie() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2026.0.3}
+     */
     public static String miiPrOnkoTnmYSymbol() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod|2026.0.3}
+     */
     public static String miiPrOnkoTod() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse|2026.0.3}
+     */
     public static String miiPrOnkoTumorgroesse() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3}
+     */
     public static String miiPrOnkoTumorkonferenz() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf|2026.0.3}
+     */
     public static String miiPrOnkoVerlauf() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3}
+     */
     public static String miiPrOnkoWeitereKlassifikationen() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3";
     }
@@ -480,58 +1290,156 @@ public final class Onkologie {
   public static final class Extensions {
     private Extensions() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}
+     */
     public static String miiExOnkoHistologyMorphologyBehaviorIcdo3() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}
+     */
     public static String miiExOnkoOperationIntention() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency}
+     */
     public static String miiExOnkoOperationUrgency() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost}
+     */
     public static String miiExOnkoStrahlentherapieBestrahlungBoost() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis}
+     */
     public static String miiExOnkoStrahlentherapieBestrahlungEinzeldosis() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis}
+     */
     public static String miiExOnkoStrahlentherapieBestrahlungGesamtdosis() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation}
+     */
     public static String miiExOnkoStrahlentherapieBestrahlungSeitenlokalisation() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}
+     */
     public static String miiExOnkoStrahlentherapieIntention() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}
+     */
     public static String miiExOnkoStrahlentherapieStellungzurop() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention}
+     */
     public static String miiExOnkoSystemischeTherapieIntention() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop}
+     */
     public static String miiExOnkoSystemischeTherapieStellungzurop() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix}
+     */
     public static String miiExOnkoTnmCpPraefix() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix}
+     */
     public static String miiExOnkoTnmItcSuffix() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix}
+     */
     public static String miiExOnkoTnmSnSuffix() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix";
     }

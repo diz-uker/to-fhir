@@ -8,14 +8,35 @@ public final class Laborbefund {
   public static final class Profiles {
     private Profiles() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab|2026.0.3}
+     */
     public static String miiPrLaborLaboranforderung() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab|2026.0.3}
+     */
     public static String miiPrLaborLaborbefund() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab|2026.0.3";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2026.0.3}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2026.0.3}
+     */
     public static String miiPrLaborLaboruntersuchung() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2026.0.3";
     }
@@ -24,10 +45,24 @@ public final class Laborbefund {
   public static final class Extensions {
     private Extensions() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft}
+     */
     public static String miiExLaborInterpretationsbeeinflussendeEigenschaft() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum}
+     */
     public static String miiExLaborQuelleKlinischesBezugsdatum() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum";
     }

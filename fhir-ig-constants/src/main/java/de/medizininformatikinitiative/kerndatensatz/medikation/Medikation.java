@@ -8,6 +8,13 @@ public final class Medikation {
   public static final class CodeSystems {
     private CodeSystems() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp}
+     */
     public static String miiCsMedikationWirkstofftyp() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp";
     }
@@ -16,22 +23,57 @@ public final class Medikation {
   public static final class Profiles {
     private Profiles() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2026.0.1}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2026.0.1}
+     */
     public static String miiPrMedikationMedication() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2026.0.1";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration|2026.0.1}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration|2026.0.1}
+     */
     public static String miiPrMedikationMedicationAdministration() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration|2026.0.1";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1}
+     */
     public static String miiPrMedikationMedicationRequest() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1}
+     */
     public static String miiPrMedikationMedicationStatement() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2026.0.1}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2026.0.1}
+     */
     public static String miiPrMedikationMedikationsliste() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2026.0.1";
     }
@@ -40,10 +82,24 @@ public final class Medikation {
   public static final class Extensions {
     private Extensions() {}
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation}
+     */
     public static String miiExMedikationWirkstoffrelation() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation";
     }
 
+    /**
+     * The canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp}.
+     *
+     * @return {@code
+     *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp}
+     */
     public static String miiExMedikationWirkstofftyp() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp";
     }

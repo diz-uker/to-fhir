@@ -33,6 +33,28 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void accessorMethodHasJavadocWithTheUrlValue() {
+    TreeMap<String, String> codeSystems = new TreeMap<>();
+    codeSystems.put(
+        "MII_CS_ONKO_INTENTION", "https://example.org/CodeSystem/mii-cs-onko-intention");
+    IgPackageModel model =
+        new IgPackageModel(
+            "de.example.onkologie", "1.0.0", codeSystems, new TreeMap<>(), new TreeMap<>());
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    int javadocIndex = source.indexOf("/**");
+    int methodIndex = source.indexOf("String miiCsOnkoIntention()");
+    assertTrue(
+        javadocIndex >= 0 && javadocIndex < methodIndex,
+        "expected a javadoc comment before the accessor method");
+    assertTrue(
+        source.contains("{@code https://example.org/CodeSystem/mii-cs-onko-intention}"),
+        "expected the javadoc to contain the URL value");
+  }
+
+  @Test
   void profileValuesCarryVersionSuffix() {
     TreeMap<String, String> profiles = new TreeMap<>();
     profiles.put(
