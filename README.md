@@ -17,10 +17,10 @@ This repository contains two artifacts:
 <!-- x-release-please-start-version -->
 
 ```groovy
-implementation "io.github.diz-uker:to-fhir:0.2.2"
+implementation "io.github.diz-uker:to-fhir:0.2.3"
 
 // optional, for Spring Boot auto-configuration
-implementation "io.github.diz-uker:to-fhir-starter:0.2.2"
+implementation "io.github.diz-uker:to-fhir-starter:0.2.3"
 ```
 
 <!-- x-release-please-end -->
@@ -33,14 +33,14 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.2"
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir</artifactId>
-    <version>0.2.2</version>
+    <version>0.2.3</version>
 </dependency>
 
 <!-- optional, for Spring Boot auto-configuration -->
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir-starter</artifactId>
-    <version>0.2.2</version>
+    <version>0.2.3</version>
 </dependency>
 ```
 

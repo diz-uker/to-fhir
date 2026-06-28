@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/diz-uker/to-fhir/compare/v0.2.2...v0.2.3) (2026-06-28)
+
+
+### Features
+
+* added fromValue to generated enums ([#47](https://github.com/diz-uker/to-fhir/issues/47)) ([07a1ffd](https://github.com/diz-uker/to-fhir/commit/07a1ffdebcda01dc8bbe0fa61b21c54626139a7a))
+
 ## [0.2.2](https://github.com/diz-uker/to-fhir/compare/v0.2.1...v0.2.2) (2026-06-28)
 
 
