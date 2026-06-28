@@ -68,7 +68,8 @@ publishing {
             }
             pom {
                 name = 'fhir-ig-constants'
-                description = 'Generated Java constant classes for the canonical CodeSystem/Profile/Extension URLs of a set of FHIR Implementation Guides, via ig-codegen.'
+                description = 'Generated Java constant classes for the canonical URLs of a set ' +
+                    'of FHIR Implementation Guides, via ig-codegen.'
                 url = 'https://github.com/diz-uker/to-fhir'
                 licenses {
                     license {

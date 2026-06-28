@@ -48,7 +48,8 @@ publishing {
             }
             pom {
                 name = 'ig-codegen'
-                description = 'Generates Java constant classes (CodeSystem/Profile/Extension canonical URLs) from FHIR Implementation Guide packages.'
+                description = 'Generates Java constant classes (CodeSystem/Profile/Extension canonical URLs) ' +
+                    'from FHIR Implementation Guide packages.'
                 url = 'https://github.com/diz-uker/to-fhir'
                 licenses {
                     license {
@@ -124,7 +125,7 @@ tasks.withType(JavaCompile).configureEach {
 // be manually regenerated and committed, not rebuilt on every compile.
 tasks.register('generateSampleIgConstants', JavaExec) {
     group = 'codegen'
-    description = 'Regenerates the sample constant classes in build/generated/sources/ig-codegen-sample from this module\'s own package.json (dev/smoke-test only).'
+    description = 'Generates the sample classes in build/generated/sources/ig-codegen-sample'
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'io.github.dizuker.igcodegen.IgCodegen'
     // Prefer the global Firely Terminal cache; fall back to a project-local ./.fhir/packages if
@@ -133,7 +134,7 @@ tasks.register('generateSampleIgConstants', JavaExec) {
     def fhirPackagesDir =
         homeFhirPackagesDir.directory ? homeFhirPackagesDir : layout.projectDirectory.dir('.fhir/packages').asFile
     args = [
-        layout.projectDirectory.file('package.json').asFile.path,
+        layout.projectDirectory.file('src/test/resources/package.json').asFile.path,
         fhirPackagesDir.path,
         layout.buildDirectory.dir('generated/sources/ig-codegen-sample').get().asFile.path,
     ]
