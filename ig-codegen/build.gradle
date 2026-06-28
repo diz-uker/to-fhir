@@ -1,0 +1,136 @@
+// groovylint-disable NestedBlockDepth
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+    id 'com.diffplug.spotless'
+    id 'io.gitee.pkmer.sonatype-central-publisher'
+    id 'net.ltgt.errorprone'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+dependencies {
+    api 'com.palantir.javapoet:javapoet:0.7.0'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.19.0'
+
+    api 'org.jspecify:jspecify:1.0.0'
+
+    errorprone 'com.google.errorprone:error_prone_core:2.48.0'
+    errorprone 'com.uber.nullaway:nullaway:0.13.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:6.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.3'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'ig-codegen'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'ig-codegen'
+                description = 'Generates Java constant classes (CodeSystem/Profile/Extension canonical URLs) from FHIR Implementation Guide packages.'
+                url = 'https://github.com/diz-uker/to-fhir'
+                licenses {
+                    license {
+                        name = 'Apache 2.0'
+                        url = 'https://opensource.org/licenses/Apache-2.0'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'https://github.com/diz-uker'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/diz-uker/to-fhir.git'
+                    developerConnection = 'scm:git:ssh://github.com:diz-uker/to-fhir.git'
+                    url = 'https://github.com/diz-uker/to-fhir'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'Local'
+            url = layout.buildDirectory.dir('repos/bundles')
+        }
+    }
+}
+
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
+signing {
+    def signingKey = System.getenv('SIGNING_KEY')
+    def signingPassword = System.getenv('SIGNING_KEY_PASSPHRASE')
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign publishing.publications.mavenJava
+}
+
+pkmerBoot {
+    sonatypeMavenCentral {
+        stagingRepository = layout.buildDirectory.dir('repos/bundles')
+        username = System.getenv('OSSRH_USERNAME')
+        password = System.getenv('OSSRH_PASSWORD')
+    }
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat()
+        targetExclude 'src/test/resources/**'
+    }
+}
+
+import net.ltgt.gradle.errorprone.CheckSeverity
+
+tasks.withType(JavaCompile).configureEach {
+    options.errorprone {
+        check('NullAway', CheckSeverity.WARN)
+        option('NullAway:AnnotatedPackages', 'io.github.dizuker.igcodegen')
+    }
+}
+
+// Sample/dev-only invocation of this module's own generator against its own package.json.
+// Consumers should set up an equivalent JavaExec task in their own build pointing outputDir at a
+// checked-in source root (a "generate, review, commit" workflow, not a build-graph participant).
+// Deliberately not a custom Task type with @OutputDirectory: that would make Gradle's validation
+// correctly flag an undeclared implicit dependency on compileJava for a directory that is meant to
+// be manually regenerated and committed, not rebuilt on every compile.
+tasks.register('generateSampleIgConstants', JavaExec) {
+    group = 'codegen'
+    description = 'Regenerates the sample constant classes in build/generated/sources/ig-codegen-sample from this module\'s own package.json (dev/smoke-test only).'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'io.github.dizuker.igcodegen.IgCodegen'
+    args = [
+        layout.projectDirectory.file('package.json').asFile.path,
+        "${System.getProperty('user.home')}/.fhir/packages",
+        layout.buildDirectory.dir('generated/sources/ig-codegen-sample').get().asFile.path,
+    ]
+    notCompatibleWithConfigurationCache('reads from outside the project (~/.fhir/packages, user.home)')
+}

@@ -1,0 +1,122 @@
+// groovylint-disable NestedBlockDepth
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+    id 'com.diffplug.spotless'
+    id 'io.gitee.pkmer.sonatype-central-publisher'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+// Only used to run the generator below; the published artifact itself has zero runtime
+// dependencies (generated accessors just return String literals).
+configurations {
+    codegen
+}
+
+dependencies {
+    codegen project(':ig-codegen')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.3'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// Manually-invoked "generate, review, commit" dev tool - not a build-graph participant. See
+// ig-codegen/README.md for the rationale (don't wire this output dir as a custom @OutputDirectory
+// task, and don't make it configuration-cache compatible since it reads from ~/.fhir/packages).
+tasks.register('generateIgConstants', JavaExec) {
+    group = 'codegen'
+    description = 'Regenerates the constant classes in src/main/java from package.json. Review the diff and commit.'
+    classpath = configurations.codegen
+    mainClass = 'io.github.dizuker.igcodegen.IgCodegen'
+    args = [
+        layout.projectDirectory.file('package.json').asFile.path,
+        "${System.getProperty('user.home')}/.fhir/packages",
+        layout.projectDirectory.dir('src/main/java').asFile.path,
+    ]
+    notCompatibleWithConfigurationCache('reads from outside the project (~/.fhir/packages, user.home)')
+    finalizedBy 'spotlessApply'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'fhir-ig-constants'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'fhir-ig-constants'
+                description = 'Generated Java constant classes for the canonical CodeSystem/Profile/Extension URLs of a set of FHIR Implementation Guides, via ig-codegen.'
+                url = 'https://github.com/diz-uker/to-fhir'
+                licenses {
+                    license {
+                        name = 'Apache 2.0'
+                        url = 'https://opensource.org/licenses/Apache-2.0'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'https://github.com/diz-uker'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/diz-uker/to-fhir.git'
+                    developerConnection = 'scm:git:ssh://github.com:diz-uker/to-fhir.git'
+                    url = 'https://github.com/diz-uker/to-fhir'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'Local'
+            url = layout.buildDirectory.dir('repos/bundles')
+        }
+    }
+}
+
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
+signing {
+    def signingKey = System.getenv('SIGNING_KEY')
+    def signingPassword = System.getenv('SIGNING_KEY_PASSPHRASE')
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign publishing.publications.mavenJava
+}
+
+pkmerBoot {
+    sonatypeMavenCentral {
+        stagingRepository = layout.buildDirectory.dir('repos/bundles')
+        username = System.getenv('OSSRH_USERNAME')
+        password = System.getenv('OSSRH_PASSWORD')
+    }
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat()
+    }
+}

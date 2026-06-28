@@ -2,3 +2,5 @@ rootProject.name = 'to-fhir-parent'
 
 include 'to-fhir'
 include 'to-fhir-starter'
+include 'ig-codegen'
+include 'fhir-ig-constants'
