@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/diz-uker/to-fhir/compare/v0.2.1...v0.2.2) (2026-06-28)
+
+
+### Features
+
+* added codegen lib and artifacts for some packages ([#42](https://github.com/diz-uker/to-fhir/issues/42)) ([a9dcdcb](https://github.com/diz-uker/to-fhir/commit/a9dcdcb032def83fe558b327ee6a54a19d997c47))
+
 ## [0.2.1](https://github.com/diz-uker/to-fhir/compare/v0.2.0...v0.2.1) (2026-06-27)
 
 
