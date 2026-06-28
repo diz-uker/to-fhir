@@ -2,11 +2,11 @@ package io.github.dizuker.igcodegen;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
+import tools.jackson.databind.ObjectMapper;
 
 /**
  * Exercises {@link IgPackageScanner#resolvePackageContentDir} with synthetic directory trees, to
