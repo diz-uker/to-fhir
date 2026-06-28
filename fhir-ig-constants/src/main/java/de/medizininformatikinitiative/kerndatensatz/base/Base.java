@@ -88,6 +88,20 @@ public final class Base {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsPersonVitalstatus fromValue(String code) {
+        for (MiiCsPersonVitalstatus value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
   }
 

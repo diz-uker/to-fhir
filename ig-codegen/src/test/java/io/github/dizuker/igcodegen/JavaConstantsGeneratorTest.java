@@ -111,6 +111,28 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void generatesFromValueLookupOnConceptEnum() {
+    TreeMap<String, String> codeSystems = new TreeMap<>();
+    codeSystems.put(
+        "MII_CS_ONKO_INTENTION", "https://example.org/CodeSystem/mii-cs-onko-intention");
+    Map<String, List<ConceptConstant>> codeSystemConcepts =
+        Map.of(
+            "MII_CS_ONKO_INTENTION",
+            List.of(
+                new ConceptConstant("K", "K", "kurativ"),
+                new ConceptConstant("P", "P", "palliativ")));
+    IgPackageModel model = model(codeSystems, new TreeMap<>(), new TreeMap<>(), codeSystemConcepts);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("public static MiiCsOnkoIntention fromValue(String code)"));
+    assertTrue(source.contains("for (MiiCsOnkoIntention value : values())"));
+    assertTrue(source.contains("if (value.code.equals(code))"));
+    assertTrue(source.contains("throw new IllegalArgumentException(\"Unknown code: \" + code)"));
+  }
+
+  @Test
   void doesNotGenerateEnumWhenCodeSystemHasNoConcepts() {
     TreeMap<String, String> codeSystems = new TreeMap<>();
     codeSystems.put(
