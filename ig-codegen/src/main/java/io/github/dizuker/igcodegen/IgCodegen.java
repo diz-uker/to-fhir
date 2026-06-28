@@ -75,11 +75,25 @@ public final class IgCodegen {
    * Prefers the Firely Terminal global package cache ({@code ~/.fhir/packages}); falls back to a
    * project-local {@code ./.fhir/packages} if the home directory one doesn't exist, e.g. when a
    * local Firely Terminal config restores packages relative to the current directory instead.
+   *
+   * <p>Resolves the home directory from the {@code HOME} environment variable rather than the
+   * {@code user.home} system property: the JVM derives {@code user.home} from the OS user database,
+   * which in some containers (e.g. GitHub Actions container jobs, where {@code HOME} is overridden
+   * to {@code /github/home}) doesn't match the directory tools like Firely Terminal actually
+   * restore into.
    */
   static Path defaultFhirPackagesDir() {
-    Path homeDir = Path.of(System.getProperty("user.home"), ".fhir", "packages");
-    if (Files.isDirectory(homeDir)) {
-      return homeDir;
+    String home = System.getenv("HOME");
+    if (home == null || home.isEmpty()) {
+      home = System.getProperty("user.home");
+    }
+    return defaultFhirPackagesDir(home);
+  }
+
+  static Path defaultFhirPackagesDir(String homeDir) {
+    Path homeFhirPackagesDir = Path.of(homeDir, ".fhir", "packages");
+    if (Files.isDirectory(homeFhirPackagesDir)) {
+      return homeFhirPackagesDir;
     }
     return Path.of(".fhir", "packages");
   }

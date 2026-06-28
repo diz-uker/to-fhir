@@ -38,24 +38,12 @@ class IgCodegenTest {
   void defaultFhirPackagesDirPrefersHomeDirWhenItExists(@TempDir Path fakeHome) throws Exception {
     Path homeFhirPackages = Files.createDirectories(fakeHome.resolve(".fhir").resolve("packages"));
 
-    withUserHome(
-        fakeHome, () -> assertEquals(homeFhirPackages, IgCodegen.defaultFhirPackagesDir()));
+    assertEquals(homeFhirPackages, IgCodegen.defaultFhirPackagesDir(fakeHome.toString()));
   }
 
   @Test
   void defaultFhirPackagesDirFallsBackToCurrentDirWhenHomeDirIsMissing(@TempDir Path fakeHome) {
-    withUserHome(
-        fakeHome,
-        () -> assertEquals(Path.of(".fhir", "packages"), IgCodegen.defaultFhirPackagesDir()));
-  }
-
-  private static void withUserHome(Path fakeHome, Runnable test) {
-    String originalUserHome = System.getProperty("user.home");
-    System.setProperty("user.home", fakeHome.toString());
-    try {
-      test.run();
-    } finally {
-      System.setProperty("user.home", originalUserHome);
-    }
+    assertEquals(
+        Path.of(".fhir", "packages"), IgCodegen.defaultFhirPackagesDir(fakeHome.toString()));
   }
 }
