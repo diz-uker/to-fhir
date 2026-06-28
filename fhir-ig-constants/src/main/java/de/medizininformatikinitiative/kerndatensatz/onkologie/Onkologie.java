@@ -523,6 +523,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoAllgemeinerLeistungszustandEcog fromValue(String code) {
+        for (MiiCsOnkoAllgemeinerLeistungszustandEcog value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoAllgemeinerLeistungszustandKarnofsky {
@@ -567,6 +581,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoAllgemeinerLeistungszustandKarnofsky fromValue(String code) {
+        for (MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoAsaObds {
@@ -602,6 +630,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoAsaObds fromValue(String code) {
+        for (MiiCsOnkoAsaObds value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -649,6 +691,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoFernmetastasen fromValue(String code) {
+        for (MiiCsOnkoFernmetastasen value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoGenetischeVarianteAuspraegung {
@@ -682,6 +738,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoGenetischeVarianteAuspraegung fromValue(String code) {
+        for (MiiCsOnkoGenetischeVarianteAuspraegung value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -731,6 +801,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoGrading fromValue(String code) {
+        for (MiiCsOnkoGrading value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoIntention {
@@ -767,6 +851,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoIntention fromValue(String code) {
+        for (MiiCsOnkoIntention value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoKrkAnastomoseninsuffizienz {
@@ -797,6 +895,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoKrkAnastomoseninsuffizienz fromValue(String code) {
+        for (MiiCsOnkoKrkAnastomoseninsuffizienz value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoKrkMrtMesorektaleFaszieStatus {
@@ -824,6 +936,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoKrkMrtMesorektaleFaszieStatus fromValue(String code) {
+        for (MiiCsOnkoKrkMrtMesorektaleFaszieStatus value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -857,6 +983,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoKrkStomaAnzeichnung fromValue(String code) {
+        for (MiiCsOnkoKrkStomaAnzeichnung value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoKrkTmeQualitaet {
@@ -884,6 +1024,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoKrkTmeQualitaet fromValue(String code) {
+        for (MiiCsOnkoKrkTmeQualitaet value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -917,6 +1071,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoMammaHer2NeuStatusLeitlinie fromValue(String code) {
+        for (MiiCsOnkoMammaHer2NeuStatusLeitlinie value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoMammaHer2NeuStatusObds {
@@ -944,6 +1112,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoMammaHer2NeuStatusObds fromValue(String code) {
+        for (MiiCsOnkoMammaHer2NeuStatusObds value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -973,6 +1155,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoMammaRezeptorstatusLeitlinie fromValue(String code) {
+        for (MiiCsOnkoMammaRezeptorstatusLeitlinie value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoMelanomUlzeration {
@@ -1000,6 +1196,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoMelanomUlzeration fromValue(String code) {
+        for (MiiCsOnkoMelanomUlzeration value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -1036,6 +1246,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoNebenwirkungCtcaeGrad fromValue(String code) {
+        for (MiiCsOnkoNebenwirkungCtcaeGrad value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -1221,6 +1445,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoOperationKomplikation fromValue(String code) {
+        for (MiiCsOnkoOperationKomplikation value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoOperationUrgency {
@@ -1248,6 +1486,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoOperationUrgency fromValue(String code) {
+        for (MiiCsOnkoOperationUrgency value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -1295,6 +1547,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoPrimaertumorDiagnosesicherung fromValue(String code) {
+        for (MiiCsOnkoPrimaertumorDiagnosesicherung value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoProstataPostsurgicalComplications {
@@ -1322,6 +1588,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoProstataPostsurgicalComplications fromValue(String code) {
+        for (MiiCsOnkoProstataPostsurgicalComplications value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -1359,6 +1639,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoResidualstatus fromValue(String code) {
+        for (MiiCsOnkoResidualstatus value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoSeitenlokalisation {
@@ -1392,6 +1686,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoSeitenlokalisation fromValue(String code) {
+        for (MiiCsOnkoSeitenlokalisation value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -1471,6 +1779,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoStrahlentherapieApplikationsart fromValue(String code) {
+        for (MiiCsOnkoStrahlentherapieApplikationsart value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoStrahlentherapieBoost {
@@ -1502,6 +1824,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoStrahlentherapieBoost fromValue(String code) {
+        for (MiiCsOnkoStrahlentherapieBoost value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -1560,6 +1896,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoStrahlentherapieStrahlenart fromValue(String code) {
+        for (MiiCsOnkoStrahlentherapieStrahlenart value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -1782,6 +2132,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoStrahlentherapieZielgebiet fromValue(String code) {
+        for (MiiCsOnkoStrahlentherapieZielgebiet value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -2105,6 +2469,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoStrahlentherapieZielgebiet2014 fromValue(String code) {
+        for (MiiCsOnkoStrahlentherapieZielgebiet2014 value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoStudienteilnahme {
@@ -2132,6 +2510,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoStudienteilnahme fromValue(String code) {
+        for (MiiCsOnkoStudienteilnahme value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -2494,6 +2886,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoSystemischeTherapieProtokolle fromValue(String code) {
+        for (MiiCsOnkoSystemischeTherapieProtokolle value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoTherapieabweichung {
@@ -2521,6 +2927,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTherapieabweichung fromValue(String code) {
+        for (MiiCsOnkoTherapieabweichung value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -2553,6 +2973,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTherapieplanungTyp fromValue(String code) {
+        for (MiiCsOnkoTherapieplanungTyp value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -2596,6 +3030,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTherapieEndeGrund fromValue(String code) {
+        for (MiiCsOnkoTherapieEndeGrund value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoTherapieStellungzurop {
@@ -2629,6 +3077,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTherapieStellungzurop fromValue(String code) {
+        for (MiiCsOnkoTherapieStellungzurop value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -2683,6 +3145,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTherapieTyp fromValue(String code) {
+        for (MiiCsOnkoTherapieTyp value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -2973,6 +3449,20 @@ public final class Onkologie {
       public Coding coding() {
         return new Coding("https://www.uicc.org/resources/tnm", code, display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTnmUicc fromValue(String code) {
+        for (MiiCsOnkoTnmUicc value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoTnmVersion {
@@ -3013,6 +3503,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTnmVersion fromValue(String code) {
+        for (MiiCsOnkoTnmVersion value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoTod {
@@ -3044,6 +3548,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoTod fromValue(String code) {
+        for (MiiCsOnkoTod value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -3082,6 +3600,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoVerlaufFernmetastasen fromValue(String code) {
+        for (MiiCsOnkoVerlaufFernmetastasen value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -3127,6 +3659,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoVerlaufGesamtbeurteilung fromValue(String code) {
+        for (MiiCsOnkoVerlaufGesamtbeurteilung value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoVerlaufLymphknoten {
@@ -3165,6 +3711,20 @@ public final class Onkologie {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoVerlaufLymphknoten fromValue(String code) {
+        for (MiiCsOnkoVerlaufLymphknoten value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
 
     public enum MiiCsOnkoVerlaufPrimaertumor {
@@ -3202,6 +3762,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoVerlaufPrimaertumor fromValue(String code) {
+        for (MiiCsOnkoVerlaufPrimaertumor value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
 
@@ -3586,6 +4160,20 @@ public final class Onkologie {
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
             code,
             display);
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsOnkoWeitereKlassifikationenObds fromValue(String code) {
+        for (MiiCsOnkoWeitereKlassifikationenObds value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
       }
     }
   }

@@ -47,6 +47,20 @@ public final class Medikation {
             code,
             display);
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} equals {@code code}
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static MiiCsMedikationWirkstofftyp fromValue(String code) {
+        for (MiiCsMedikationWirkstofftyp value : values()) {
+          if (value.code.equals(code)) {
+            return value;
+          }
+        }
+        throw new IllegalArgumentException("Unknown code: " + code);
+      }
     }
   }
 

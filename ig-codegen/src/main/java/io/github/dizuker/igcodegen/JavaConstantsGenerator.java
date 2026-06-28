@@ -19,9 +19,11 @@ import javax.lang.model.element.Modifier;
  * miiPrDiagnoseCondition()}, called as {@code Onkologie.Profiles.miiPrDiagnoseCondition()}.
  *
  * <p>A CodeSystem that ships its own concepts inline ({@code content == "complete"}) additionally
- * gets a nested enum, named after the CodeSystem itself, with one constant per concept and a {@code
- * coding()} accessor returning a HAPI {@code org.hl7.fhir.r4.model.Coding}, e.g. {@code
- * Onkologie.CodeSystems.MiiCsOnkoIntention.K.coding()}.
+ * gets a nested enum, named after the CodeSystem itself, with one constant per concept, a {@code
+ * coding()} accessor returning a HAPI {@code org.hl7.fhir.r4.model.Coding}, and a static {@code
+ * fromValue(String)} lookup by {@code code}, e.g. {@code
+ * Onkologie.CodeSystems.MiiCsOnkoIntention.K.coding()} and {@code
+ * Onkologie.CodeSystems.MiiCsOnkoIntention.fromValue("K")}.
  */
 public final class JavaConstantsGenerator {
 
@@ -89,6 +91,7 @@ public final class JavaConstantsGenerator {
 
   private static TypeSpec buildConceptEnum(
       String enumName, String system, List<ConceptConstant> concepts) {
+    ClassName selfType = ClassName.get("", enumName);
     TypeSpec.Builder enumType =
         TypeSpec.enumBuilder(enumName)
             .addModifiers(Modifier.PUBLIC)
@@ -109,6 +112,25 @@ public final class JavaConstantsGenerator {
                         "@return a new {@link Coding} for this concept, with system {@code $L}\n",
                         system)
                     .addStatement("return new $T($S, code, display)", CODING_TYPE, system)
+                    .build())
+            .addMethod(
+                MethodSpec.methodBuilder("fromValue")
+                    .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+                    .addParameter(String.class, "code")
+                    .returns(selfType)
+                    .addJavadoc(
+                        """
+                        @param code the FHIR code to look up
+                        @return the constant whose {@code code} equals {@code code}
+                        @throws IllegalArgumentException if no constant has that code
+                        """)
+                    .beginControlFlow("for ($T value : values())", selfType)
+                    .beginControlFlow("if (value.code.equals(code))")
+                    .addStatement("return value")
+                    .endControlFlow()
+                    .endControlFlow()
+                    .addStatement(
+                        "throw new $T(\"Unknown code: \" + code)", IllegalArgumentException.class)
                     .build());
 
     for (ConceptConstant concept : concepts) {
