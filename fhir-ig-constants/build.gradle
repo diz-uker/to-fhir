@@ -13,14 +13,18 @@ java {
     withSourcesJar()
 }
 
-// Only used to run the generator below; the published artifact itself has zero runtime
-// dependencies (generated accessors just return String literals).
+// Only used to run the generator below, not part of the published artifact's dependencies.
 configurations {
     codegen
 }
 
 dependencies {
     codegen project(':ig-codegen')
+
+    // CodeSystems with inline concepts (content == "complete") get a generated enum whose
+    // coding() accessor returns a org.hl7.fhir.r4.model.Coding - part of the public API, so 'api'
+    // rather than 'implementation'.
+    api 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:8.10.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.3'

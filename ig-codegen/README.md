@@ -37,6 +37,29 @@ resource.
    // -> "https://www.medizininformatik-initiative.de/.../StructureDefinition/mii-pr-diagnose-condition|2026.0.0"
    ```
 
+4. A CodeSystem that ships its own concepts inline (`content == "complete"`) additionally gets a
+   nested enum, named after the CodeSystem, with one constant per concept and a `coding()`
+   accessor returning a HAPI `org.hl7.fhir.r4.model.Coding`:
+
+   ```java
+   Onkologie.CodeSystems.MiiCsOnkoIntention.K.coding()
+   // -> Coding{system=".../CodeSystem/mii-cs-onko-intention", code="K", display="kurativ"}
+   ```
+
+   External terminologies (SNOMED CT, LOINC, ICD-10, ...) ship with `content == "not-present"` —
+   FHIR doesn't redistribute those, so there's nothing to expand; they keep just the URL accessor.
+
+   Concept codes that aren't valid Java identifiers as-is are sanitized (`NameUtils.toEnumConstantName`):
+   leading digits get a `_` prefix (`"2"` → `_2`), and codes ending in `+`/`-` (common for
+   receptor-status codes like `mol+`/`mol-`) get a `_POS`/`_NEG` suffix instead of just stripping the
+   sign — otherwise `"i+"` and `"i-"` would both sanitize to the same identifier. Any remaining
+   collision within a CodeSystem is disambiguated with a numeric suffix (`_2`, `_3`, ...). Nested
+   concept hierarchies are flattened (both group and leaf concepts become constants).
+
+   Because the generated `coding()` accessor returns a HAPI type, depending on this generator's
+   output pulls in `hapi-fhir-structures-r4` as a runtime dependency wherever any CodeSystem enum
+   is generated.
+
 ## Usage
 
 ```java

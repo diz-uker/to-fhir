@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import io.github.dizuker.igcodegen.IgPackageModel;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 import org.junit.jupiter.api.Test;
 
@@ -88,6 +89,7 @@ class IgDiffTest {
       TreeMap<String, String> codeSystems,
       TreeMap<String, String> profiles,
       TreeMap<String, String> extensions) {
-    return new IgPackageModel("de.example.onkologie", "1.0.0", codeSystems, profiles, extensions);
+    return new IgPackageModel(
+        "de.example.onkologie", "1.0.0", codeSystems, profiles, extensions, Map.of());
   }
 }

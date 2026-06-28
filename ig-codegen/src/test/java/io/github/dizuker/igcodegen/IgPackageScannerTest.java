@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -72,6 +73,29 @@ class IgPackageScannerTest {
         model.profiles().values().stream().noneMatch(value -> !value.contains("|"));
     assertFalse(model.profiles().isEmpty());
     assertTrue(anyVersionFreeProfile, "every Profile value must carry a |<version> suffix");
+  }
+
+  @Test
+  void expandsCompleteCodeSystemConceptsIntoConceptConstants() {
+    IgPackageModel model = scan();
+
+    List<ConceptConstant> intention = model.codeSystemConcepts().get("MII_CS_ONKO_INTENTION");
+    assertTrue(intention != null && intention.size() == 7);
+    assertTrue(
+        intention.stream()
+            .anyMatch(
+                c ->
+                    c.constantName().equals("K")
+                        && c.code().equals("K")
+                        && "kurativ".equals(c.display())));
+  }
+
+  @Test
+  void doesNotExpandNonCompleteCodeSystems() {
+    IgPackageModel model = scan();
+
+    // mii-cs-onko-krk-operationstyp has content == "fragment" in this package, not "complete".
+    assertFalse(model.codeSystemConcepts().containsKey("MII_CS_ONKO_KRK_OPERATIONSTYP"));
   }
 
   private IgPackageModel scan() {

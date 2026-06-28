@@ -2,6 +2,8 @@
 // not edit directly.
 package de.medizininformatikinitiative.kerndatensatz.medikation;
 
+import org.hl7.fhir.r4.model.Coding;
+
 public final class Medikation {
   private Medikation() {}
 
@@ -17,6 +19,34 @@ public final class Medikation {
      */
     public static String miiCsMedikationWirkstofftyp() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp";
+    }
+
+    public enum MiiCsMedikationWirkstofftyp {
+      IN("IN", "ingredient"),
+
+      PIN("PIN", "precise ingredient"),
+
+      MIN("MIN", "multiple ingredients");
+
+      private final String code;
+
+      private final String display;
+
+      MiiCsMedikationWirkstofftyp(String code, String display) {
+        this.code = code;
+        this.display = display;
+      }
+
+      /**
+       * @return a new {@link Coding} for this concept, with system {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp}
+       */
+      public Coding coding() {
+        return new Coding(
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp",
+            code,
+            display);
+      }
     }
   }
 

@@ -1,10 +1,12 @@
 package io.github.dizuker.igcodegen;
 
+import com.palantir.javapoet.ClassName;
 import com.palantir.javapoet.JavaFile;
 import com.palantir.javapoet.MethodSpec;
 import com.palantir.javapoet.TypeSpec;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.Map;
 import javax.lang.model.element.Modifier;
 
@@ -15,8 +17,15 @@ import javax.lang.model.element.Modifier;
  *
  * <p>E.g. the FHIR id {@code mii-pr-diagnose-condition} becomes the accessor {@code
  * miiPrDiagnoseCondition()}, called as {@code Onkologie.Profiles.miiPrDiagnoseCondition()}.
+ *
+ * <p>A CodeSystem that ships its own concepts inline ({@code content == "complete"}) additionally
+ * gets a nested enum, named after the CodeSystem itself, with one constant per concept and a {@code
+ * coding()} accessor returning a HAPI {@code org.hl7.fhir.r4.model.Coding}, e.g. {@code
+ * Onkologie.CodeSystems.MiiCsOnkoIntention.K.coding()}.
  */
 public final class JavaConstantsGenerator {
+
+  private static final ClassName CODING_TYPE = ClassName.get("org.hl7.fhir.r4.model", "Coding");
 
   private JavaConstantsGenerator() {}
 
@@ -26,9 +35,9 @@ public final class JavaConstantsGenerator {
             .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
             .addMethod(privateConstructor());
 
-    addAccessorClass(rootType, "CodeSystems", model.codeSystems());
-    addAccessorClass(rootType, "Profiles", model.profiles());
-    addAccessorClass(rootType, "Extensions", model.extensions());
+    addAccessorClass(rootType, "CodeSystems", model.codeSystems(), model.codeSystemConcepts());
+    addAccessorClass(rootType, "Profiles", model.profiles(), Map.of());
+    addAccessorClass(rootType, "Extensions", model.extensions(), Map.of());
 
     return JavaFile.builder(javaPackageName, rootType.build())
         .addFileComment(
@@ -47,7 +56,10 @@ public final class JavaConstantsGenerator {
   }
 
   private static void addAccessorClass(
-      TypeSpec.Builder rootType, String nestedClassName, Map<String, String> constants) {
+      TypeSpec.Builder rootType,
+      String nestedClassName,
+      Map<String, String> constants,
+      Map<String, List<ConceptConstant>> conceptsByName) {
     if (constants.isEmpty()) {
       return;
     }
@@ -57,19 +69,54 @@ public final class JavaConstantsGenerator {
             .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
             .addMethod(privateConstructor());
     for (Map.Entry<String, String> entry : constants.entrySet()) {
+      String url = entry.getValue();
       String accessorName = NameUtils.toCamelCase(entry.getKey());
       nestedType.addMethod(
           MethodSpec.methodBuilder(accessorName)
               .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-              .addJavadoc(
-                  "The canonical URL {@code $L}.\n\n@return {@code $L}\n",
-                  entry.getValue(),
-                  entry.getValue())
+              .addJavadoc("The canonical URL {@code $L}.\n\n@return {@code $L}\n", url, url)
               .returns(String.class)
-              .addStatement("return $S", entry.getValue())
+              .addStatement("return $S", url)
               .build());
+
+      List<ConceptConstant> concepts = conceptsByName.get(entry.getKey());
+      if (concepts != null && !concepts.isEmpty()) {
+        nestedType.addType(buildConceptEnum(NameUtils.toPascalCase(entry.getKey()), url, concepts));
+      }
     }
     rootType.addType(nestedType.build());
+  }
+
+  private static TypeSpec buildConceptEnum(
+      String enumName, String system, List<ConceptConstant> concepts) {
+    TypeSpec.Builder enumType =
+        TypeSpec.enumBuilder(enumName)
+            .addModifiers(Modifier.PUBLIC)
+            .addField(String.class, "code", Modifier.PRIVATE, Modifier.FINAL)
+            .addField(String.class, "display", Modifier.PRIVATE, Modifier.FINAL)
+            .addMethod(
+                MethodSpec.constructorBuilder()
+                    .addParameter(String.class, "code")
+                    .addParameter(String.class, "display")
+                    .addStatement("this.code = code")
+                    .addStatement("this.display = display")
+                    .build())
+            .addMethod(
+                MethodSpec.methodBuilder("coding")
+                    .addModifiers(Modifier.PUBLIC)
+                    .returns(CODING_TYPE)
+                    .addJavadoc(
+                        "@return a new {@link Coding} for this concept, with system {@code $L}\n",
+                        system)
+                    .addStatement("return new $T($S, code, display)", CODING_TYPE, system)
+                    .build());
+
+    for (ConceptConstant concept : concepts) {
+      enumType.addEnumConstant(
+          concept.constantName(),
+          TypeSpec.anonymousClassBuilder("$S, $S", concept.code(), concept.display()).build());
+    }
+    return enumType.build();
   }
 
   private static MethodSpec privateConstructor() {

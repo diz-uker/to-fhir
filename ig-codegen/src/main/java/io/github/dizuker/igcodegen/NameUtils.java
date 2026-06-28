@@ -63,4 +63,35 @@ public final class NameUtils {
     }
     return result.toString();
   }
+
+  /**
+   * Converts a CodeSystem concept code into a valid Java enum constant name. Real FHIR code systems
+   * use codes that aren't valid Java identifiers as-is - e.g. purely numeric codes ({@code "2"}),
+   * or receptor-status codes ending in {@code +}/{@code -} ({@code "mol+"}, {@code "i-"}), which
+   * would otherwise collide once the sign is stripped by {@link #toConstantName}.
+   *
+   * <p>This does not guarantee uniqueness across a whole CodeSystem by itself - callers must still
+   * disambiguate any remaining collisions (e.g. two codes differing only in characters this method
+   * treats as equivalent).
+   */
+  public static String toEnumConstantName(String code) {
+    String base;
+    String suffix;
+    if (code.endsWith("+")) {
+      base = code.substring(0, code.length() - 1);
+      suffix = "_POS";
+    } else if (code.endsWith("-")) {
+      base = code.substring(0, code.length() - 1);
+      suffix = "_NEG";
+    } else {
+      base = code;
+      suffix = "";
+    }
+
+    String constantName = toConstantName(base) + suffix;
+    if (constantName.isEmpty()) {
+      return "_";
+    }
+    return Character.isDigit(constantName.charAt(0)) ? "_" + constantName : constantName;
+  }
 }

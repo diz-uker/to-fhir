@@ -41,4 +41,18 @@ class NameUtilsTest {
   void toCamelCase(String constantName, String expected) {
     assertEquals(expected, NameUtils.toCamelCase(constantName));
   }
+
+  @ParameterizedTest
+  @CsvSource({
+    "K, K",
+    "T1a1, T1A1",
+    "'Tis(LAMN)', TIS_LAMN_",
+    "'2', _2",
+    "'10', _10",
+    "'mol+', MOL_POS",
+    "'i-', I_NEG",
+  })
+  void toEnumConstantName(String code, String expected) {
+    assertEquals(expected, NameUtils.toEnumConstantName(code));
+  }
 }

@@ -2,6 +2,8 @@
 // edit directly.
 package de.medizininformatikinitiative.kerndatensatz.base;
 
+import org.hl7.fhir.r4.model.Coding;
+
 public final class Base {
   private Base() {}
 
@@ -50,6 +52,42 @@ public final class Base {
      */
     public static String miiCsPersonVitalstatus() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus";
+    }
+
+    public enum MiiCsPersonVitalstatus {
+      L("L", "Patient lebt"),
+
+      T("T", "Patient verstorben"),
+
+      A("A", "unbekannt, Patient nicht mehr auffindbar (lost to follow-up)"),
+
+      N("N", "unbekannt, Betreuung/Nachsorge nicht mehr nötig"),
+
+      B("B", "unbekannt, Patient ist anderenorts in Betreuung"),
+
+      V("V", "unbekannt, Patient verweigert weitere Betreuung"),
+
+      X("X", "unbekannt");
+
+      private final String code;
+
+      private final String display;
+
+      MiiCsPersonVitalstatus(String code, String display) {
+        this.code = code;
+        this.display = display;
+      }
+
+      /**
+       * @return a new {@link Coding} for this concept, with system {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus}
+       */
+      public Coding coding() {
+        return new Coding(
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus",
+            code,
+            display);
+      }
     }
   }
 

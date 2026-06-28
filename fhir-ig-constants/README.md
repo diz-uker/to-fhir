@@ -5,9 +5,10 @@ Generated Java constant classes for the canonical `CodeSystem`/`StructureDefinit
 [`ig-codegen`](../ig-codegen). A single artifact for all of them, kept simple: one Java class per
 IG package, all published together under one Maven coordinate.
 
-This module's published jar has **zero runtime dependencies** — generated accessors just return
-`String` literals. `ig-codegen` is only needed at generation time (wired up as a `codegen`
-configuration, not `api`/`implementation`).
+`ig-codegen` itself is only needed at generation time (wired up as a `codegen` configuration, not
+`api`/`implementation`). The generated code does carry one real runtime dependency, though:
+`hapi-fhir-structures-r4` (`api` scope) — CodeSystems with inline concepts get a generated enum
+whose `coding()` accessor returns a `org.hl7.fhir.r4.model.Coding`.
 
 ## Setup
 
@@ -37,6 +38,9 @@ configuration, not `api`/`implementation`).
 import de.medizininformatikinitiative.kerndatensatz.onkologie.Onkologie;
 
 String profileUrl = Onkologie.Profiles.miiPrOnkoOperation();
+
+// CodeSystems with inline concepts (content == "complete") also get an enum with a coding() accessor:
+Coding intention = Onkologie.CodeSystems.MiiCsOnkoIntention.K.coding();
 ```
 
 ## Updating an IG version
