@@ -1,0 +1,68 @@
+name: FHIR IG constants
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - "fhir-ig-constants/package.json"
+      - "ig-codegen/src/main/java/**"
+  push:
+    branches: [master]
+    paths:
+      - "fhir-ig-constants/package.json"
+      - "ig-codegen/src/main/java/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check-generated-code:
+    name: check generated code is up to date
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          set-safe-directory: true
+
+      # restore the fhir packages once per workflow run here to avoid multiple
+      # jobs running in parallel each restoring at the same time
+      - name: Cache FHIR packages
+        id: fhir-package-cache
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: |
+            fhir-ig-constants/node_modules
+          key: fhir-packages-${{ hashFiles('fhir-ig-constants/package.json') }}
+          restore-keys: |
+            fhir-packages-
+
+      - name: Restore FHIR package dependencies
+        if: ${{ steps.fhir-package-cache.outputs.cache-hit != 'true' }}
+        working-directory: fhir-ig-constants
+        run: |
+          npm install --no-audit --no-fund --no-package-lock --ignore-scripts
+
+      - name: Set up JDK
+        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # v5.2.0
+        with:
+          java-version: "25"
+          distribution: "temurin"
+          cache: "gradle"
+
+      - uses: gradle/actions/wrapper-validation@39e147cb9de83bb9910b8ef8bd7fff0ee20fcd6f # v6.0.1
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@39e147cb9de83bb9910b8ef8bd7fff0ee20fcd6f # v6.0.1
+
+      - name: Regenerate FHIR IG constants
+        run: ./gradlew :fhir-ig-constants:generateIgConstants
+
+      - name: Fail if generated code is out of date
+        run: |
+          if ! git diff --exit-code -- fhir-ig-constants/src/main/java; then
+            echo "::error::Generated FHIR IG constants are out of date. Run './gradlew :fhir-ig-constants:generateIgConstants' locally, review the diff, and commit the result."
+            exit 1
+          fi
