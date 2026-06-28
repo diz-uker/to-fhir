@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -22,6 +23,15 @@ class IgCodegenTest {
     Path packageJsonFile = Path.of("src", "test", "resources", "package.json");
     Path fhirPackagesDir = Path.of(System.getProperty("user.home"), ".fhir", "packages");
     assumeTrue(Files.isRegularFile(packageJsonFile), "missing " + packageJsonFile.toAbsolutePath());
+    Path onkologiePackageContentDir =
+        new IgPackageScanner(new ObjectMapper())
+            .resolvePackageContentDir(
+                fhirPackagesDir,
+                "de.medizininformatikinitiative.kerndatensatz.onkologie",
+                "2026.0.3");
+    assumeTrue(
+        Files.isDirectory(onkologiePackageContentDir),
+        "FHIR package not restored locally: " + onkologiePackageContentDir);
 
     List<Path> generatedFiles = new IgCodegen().generate(packageJsonFile, fhirPackagesDir, tempDir);
 
