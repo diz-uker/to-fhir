@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace></RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Description>Generated C# constant classes for the canonical URLs of a set of FHIR Implementation Guides, via ig-codegen.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hl7.Fhir.R4" Version="6.2.0" />
+  </ItemGroup>
+
+</Project>

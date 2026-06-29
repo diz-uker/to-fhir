@@ -160,3 +160,8 @@ __pycache__/
 *.py[cod]
 .venv/
 *.egg-info/
+
+### .NET (ig-codegen-csharp, fhir-ig-constants-csharp) ###
+obj/
+*.user
+.vs/
