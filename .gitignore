@@ -154,3 +154,9 @@ fhirpkg.lock.json
 
 node_modules/
 package-lock.json
+
+### Python (ig-codegen-python, fhir-ig-constants-python) ###
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/

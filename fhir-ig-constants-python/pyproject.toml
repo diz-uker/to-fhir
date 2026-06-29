@@ -1,0 +1,37 @@
+[project]
+name = "fhir-ig-constants"
+version = "0.1.0"
+description = "Generated Python constant classes for the canonical URLs of a set of FHIR Implementation Guides, via ig-codegen."
+readme = "README.md"
+authors = [
+    { name = "chgl", email = "5307555+chgl@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fhir.resources>=8.0",
+]
+
+[dependency-groups]
+dev = [
+    "ig-codegen",
+    "pytest>=8.0",
+    "ruff>=0.8",
+]
+
+[tool.uv.sources]
+ig-codegen = { path = "../ig-codegen-python" }
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+# Generated, from FHIR CodeSystem codes that are themselves single letters (e.g. "I", "O").
+"src/fhir_ig_constants/de/**" = ["E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

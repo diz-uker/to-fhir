@@ -1,0 +1,32 @@
+[project]
+name = "ig-codegen"
+version = "0.1.0"
+description = "Generates Python constant classes (CodeSystem/Profile/Extension canonical URLs) from FHIR Implementation Guide packages."
+readme = "README.md"
+authors = [
+    { name = "chgl", email = "5307555+chgl@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "jinja2>=3.1",
+]
+
+[project.scripts]
+ig-codegen = "ig_codegen.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.8",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
