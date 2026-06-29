@@ -1,0 +1,16 @@
+{
+  "name": "fhir-ig-constants",
+  "version": "0.1.0",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.0",
+    "de.medizininformatikinitiative.kerndatensatz.onkologie": "2026.0.3",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.1",
+    "de.medizininformatikinitiative.kerndatensatz.laborbefund": "2026.0.3",
+    "de.medizininformatikinitiative.kerndatensatz.icu": "2026.0.2",
+    "de.medizininformatikinitiative.kerndatensatz.studie": "2026.0.2"
+  },
+  "fhirVersions": [
+    "4.0.1"
+  ]
+}
