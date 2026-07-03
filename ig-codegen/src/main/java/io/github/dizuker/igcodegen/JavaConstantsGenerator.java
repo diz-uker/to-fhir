@@ -166,9 +166,14 @@ public final class JavaConstantsGenerator {
                     .build());
 
     for (ConceptConstant concept : concepts) {
-      enumType.addEnumConstant(
-          concept.constantName(),
-          TypeSpec.anonymousClassBuilder("$S, $S", concept.code(), concept.display()).build());
+      TypeSpec.Builder constant =
+          TypeSpec.anonymousClassBuilder("$S, $S", concept.code(), concept.display());
+      if (concept.display() != null) {
+        constant.addJavadoc("{@code $L} - $L\n", concept.code(), concept.display());
+      } else {
+        constant.addJavadoc("{@code $L}\n", concept.code());
+      }
+      enumType.addEnumConstant(concept.constantName(), constant.build());
     }
     return enumType.build();
   }

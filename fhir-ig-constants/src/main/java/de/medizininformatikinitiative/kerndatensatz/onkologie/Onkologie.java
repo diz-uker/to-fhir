@@ -485,26 +485,48 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoAllgemeinerLeistungszustandEcog {
+      /**
+       * {@code 0} - Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach
+       * Karnofsky)
+       */
       _0(
           "0",
           "Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)"),
 
+      /**
+       * {@code 1} - Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche
+       * Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 %
+       * nach Karnofsky)
+       */
       _1(
           "1",
           "Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)"),
 
+      /**
+       * {@code 2} - Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 %
+       * der Wachzeit aufstehen (50 - 60 % nach Karnofsky)
+       */
       _2(
           "2",
           "Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)"),
 
+      /**
+       * {@code 3} - Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett
+       * oder Stuhl gebunden (30 40 % nach Karnofsky)
+       */
       _3(
           "3",
           "Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)"),
 
+      /**
+       * {@code 4} - Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder
+       * Stuhl gebunden (10 - 20 % nach Karnofsky)
+       */
       _4(
           "4",
           "Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -544,26 +566,37 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoAllgemeinerLeistungszustandKarnofsky {
+      /** {@code 100%} - 100% */
       _100_("100%", "100%"),
 
+      /** {@code 90%} - 90% */
       _90_("90%", "90%"),
 
+      /** {@code 80%} - 80% */
       _80_("80%", "80%"),
 
+      /** {@code 70%} - 70% */
       _70_("70%", "70%"),
 
+      /** {@code 60%} - 60% */
       _60_("60%", "60%"),
 
+      /** {@code 50%} - 50% */
       _50_("50%", "50%"),
 
+      /** {@code 40%} - 40% */
       _40_("40%", "40%"),
 
+      /** {@code 30%} - 30% */
       _30_("30%", "30%"),
 
+      /** {@code 20%} - 20% */
       _20_("20%", "20%"),
 
+      /** {@code 10%} - 10% */
       _10_("10%", "10%"),
 
+      /** {@code 0%} - 0% */
       _0_("0%", "0%");
 
       private final @NonNull String code;
@@ -604,18 +637,25 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoAsaObds {
+      /** {@code 1} - ASA I */
       _1("1", "ASA I"),
 
+      /** {@code 2} - ASA II */
       _2("2", "ASA II"),
 
+      /** {@code 3} - ASA III */
       _3("3", "ASA III"),
 
+      /** {@code 4} - ASA IV */
       _4("4", "ASA IV"),
 
+      /** {@code 5} - ASA V */
       _5("5", "ASA V"),
 
+      /** {@code 6} - ASA VI */
       _6("6", "ASA VI"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -654,28 +694,40 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoFernmetastasen {
+      /** {@code PUL} - Lunge */
       PUL("PUL", "Lunge"),
 
+      /** {@code OSS} - Knochen */
       OSS("OSS", "Knochen"),
 
+      /** {@code HEP} - Leber */
       HEP("HEP", "Leber"),
 
+      /** {@code BRA} - Hirn */
       BRA("BRA", "Hirn"),
 
+      /** {@code LYM} - Lymphknoten */
       LYM("LYM", "Lymphknoten"),
 
+      /** {@code MAR} - Knochenmark */
       MAR("MAR", "Knochenmark"),
 
+      /** {@code PLE} - Pleura */
       PLE("PLE", "Pleura"),
 
+      /** {@code PER} - Peritoneum */
       PER("PER", "Peritoneum"),
 
+      /** {@code ADR} - Nebennieren */
       ADR("ADR", "Nebennieren"),
 
+      /** {@code SKI} - Haut */
       SKI("SKI", "Haut"),
 
+      /** {@code OTH} - andere Organe */
       OTH("OTH", "andere Organe"),
 
+      /** {@code GEN} - generalisierte Metastasierung */
       GEN("GEN", "generalisierte Metastasierung");
 
       private final @NonNull String code;
@@ -714,16 +766,22 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoGenetischeVarianteAuspraegung {
+      /** {@code M} - Mutation/positiv */
       M("M", "Mutation/positiv"),
 
+      /** {@code W} - Wildtyp/nicht mutiert/ negativ */
       W("W", "Wildtyp/nicht mutiert/ negativ"),
 
+      /** {@code P} - Polymorphismus */
       P("P", "Polymorphismus"),
 
+      /** {@code S} - Sonstiges */
       S("S", "Sonstiges"),
 
+      /** {@code N} - Nicht bestimmbar */
       N("N", "Nicht bestimmbar"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -763,30 +821,43 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoGrading {
+      /** {@code 0} - primär erworbene Melanose ohne zelluläre Atypien */
       _0("0", "primär erworbene Melanose ohne zelluläre Atypien"),
 
+      /** {@code 1} - gut differenziert */
       _1("1", "gut differenziert"),
 
+      /** {@code 2} - mäßig differenziert */
       _2("2", "mäßig differenziert"),
 
+      /** {@code 3} - schlecht differenziert */
       _3("3", "schlecht differenziert"),
 
+      /** {@code 4} - undifferenziert */
       _4("4", "undifferenziert"),
 
+      /** {@code 5} - nur für C61, TNM8 */
       _5("5", "nur für C61, TNM8"),
 
+      /** {@code X} - nicht bestimmbar */
       X("X", "nicht bestimmbar"),
 
+      /** {@code L} - low grade (G1 oder G2) */
       L("L", "low grade (G1 oder G2)"),
 
+      /** {@code M} - intermediate grade (G2 oder G3) */
       M("M", "intermediate grade (G2 oder G3)"),
 
+      /** {@code H} - high grade (G3 oder G4) */
       H("H", "high grade (G3 oder G4)"),
 
+      /** {@code B} - Borderline */
       B("B", "Borderline"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt"),
 
+      /** {@code T} - trifft nicht zu */
       T("T", "trifft nicht zu");
 
       private final @NonNull String code;
@@ -825,18 +896,25 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoIntention {
+      /** {@code K} - kurativ */
       K("K", "kurativ"),
 
+      /** {@code P} - palliativ */
       P("P", "palliativ"),
 
+      /** {@code D} - diagnostisch */
       D("D", "diagnostisch"),
 
+      /** {@code R} - Revision/Komplikation */
       R("R", "Revision/Komplikation"),
 
+      /** {@code S} - Sonstiges */
       S("S", "Sonstiges"),
 
+      /** {@code X} - fehlende Angabe */
       X("X", "fehlende Angabe"),
 
+      /** {@code O} - lokal kurativ bei Oligometastasierung */
       O("O", "lokal kurativ bei Oligometastasierung");
 
       private final @NonNull String code;
@@ -875,12 +953,16 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoKrkAnastomoseninsuffizienz {
+      /** {@code B} - Anastomoseninsuffizienz Grad B */
       B("B", "Anastomoseninsuffizienz Grad B"),
 
+      /** {@code C} - Anastomoseninsuffizienz Grad C */
       C("C", "Anastomoseninsuffizienz Grad C"),
 
+      /** {@code K} - Keine Insuffizienz oder höchstens Grad A */
       K("K", "Keine Insuffizienz oder höchstens Grad A"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -920,10 +1002,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoKrkMrtMesorektaleFaszieStatus {
+      /** {@code D} - Durchgeführt, aber Abstand nicht angegeben */
       D("D", "Durchgeführt, aber Abstand nicht angegeben"),
 
+      /** {@code N} - Nein (MRT/CT nicht durchgeführt) */
       N("N", "Nein (MRT/CT nicht durchgeführt)"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -963,14 +1048,19 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoKrkStomaAnzeichnung {
+      /** {@code D} - Anzeichnung durchgeführt */
       D("D", "Anzeichnung durchgeführt"),
 
+      /** {@code N} - Anzeichnung nicht durchgeführt */
       N("N", "Anzeichnung nicht durchgeführt"),
 
+      /** {@code K} - Kein Stoma */
       K("K", "Kein Stoma"),
 
+      /** {@code S} - Stoma angelegt, Anzeichnungsstatus unbekannt */
       S("S", "Stoma angelegt, Anzeichnungsstatus unbekannt"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -1010,10 +1100,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoKrkTmeQualitaet {
+      /** {@code 1} - Grad 1 (gut) */
       _1("1", "Grad 1 (gut)"),
 
+      /** {@code 2} - Grad 2 (moderat) */
       _2("2", "Grad 2 (moderat)"),
 
+      /** {@code 3} - Grad 3 (schlecht) */
       _3("3", "Grad 3 (schlecht)");
 
       private final @NonNull String code;
@@ -1052,14 +1145,19 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoMammaHer2NeuStatusLeitlinie {
+      /** {@code positiv} - HER2-positiv */
       POSITIV("positiv", "HER2-positiv"),
 
+      /** {@code low} - HER2-low */
       LOW("low", "HER2-low"),
 
+      /** {@code ultralow} - HER2-ultralow */
       ULTRALOW("ultralow", "HER2-ultralow"),
 
+      /** {@code negativ} - HER2-negativ */
       NEGATIV("negativ", "HER2-negativ"),
 
+      /** {@code equivocal} - equivocal */
       EQUIVOCAL("equivocal", "equivocal");
 
       private final @NonNull String code;
@@ -1099,10 +1197,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoMammaHer2NeuStatusObds {
+      /** {@code P} - positiv */
       P("P", "positiv"),
 
+      /** {@code N} - negativ */
       N("N", "negativ"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt");
 
       private final @NonNull String code;
@@ -1142,10 +1243,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoMammaRezeptorstatusLeitlinie {
+      /** {@code positiv} - positiv */
       POSITIV("positiv", "positiv"),
 
+      /** {@code gering-positiv} - gering positiv */
       GERING_POSITIV("gering-positiv", "gering positiv"),
 
+      /** {@code negativ} - negativ */
       NEGATIV("negativ", "negativ");
 
       private final @NonNull String code;
@@ -1185,10 +1289,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoMelanomUlzeration {
+      /** {@code J} - Ja */
       J("J", "Ja"),
 
+      /** {@code N} - Nein */
       N("N", "Nein"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -1227,18 +1334,25 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoNebenwirkungCtcaeGrad {
+      /** {@code 1} - mild */
       _1("1", "mild"),
 
+      /** {@code 2} - moderat */
       _2("2", "moderat"),
 
+      /** {@code 3} - schwerwiegend */
       _3("3", "schwerwiegend"),
 
+      /** {@code 4} - lebensbedrohlich */
       _4("4", "lebensbedrohlich"),
 
+      /** {@code 5} - tödlich */
       _5("5", "tödlich"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt"),
 
+      /** {@code K} - keine */
       K("K", "keine");
 
       private final @NonNull String code;
@@ -1278,166 +1392,251 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoOperationKomplikation {
+      /** {@code N} - nein */
       N("N", "nein"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt"),
 
+      /** {@code ABD} - Abszess in einem Drainagekanal */
       ABD("ABD", "Abszess in einem Drainagekanal"),
 
+      /** {@code ABS} - Abszess, intraabdominaler oder intrathorakaler */
       ABS("ABS", "Abszess, intraabdominaler oder intrathorakaler"),
 
+      /** {@code ASF} - Abszess, subfaszialer */
       ASF("ASF", "Abszess, subfaszialer"),
 
+      /** {@code ANI} - Akute Niereninsuffizienz */
       ANI("ANI", "Akute Niereninsuffizienz"),
 
+      /** {@code AEP} - Alkoholentzugspsychose */
       AEP("AEP", "Alkoholentzugspsychose"),
 
+      /** {@code ALR} - Allergische Reaktion ohne Schocksymptomatik */
       ALR("ALR", "Allergische Reaktion ohne Schocksymptomatik"),
 
+      /** {@code ANS} - Anaphylaktischer Schock */
       ANS("ANS", "Anaphylaktischer Schock"),
 
+      /** {@code AEE} - Anastomoseninsuffizienz einer Enterostomie */
       AEE("AEE", "Anastomoseninsuffizienz einer Enterostomie"),
 
+      /** {@code API} - Apoplektischer Insult */
       API("API", "Apoplektischer Insult"),
 
+      /** {@code BIF} - Biliäre Fistel */
       BIF("BIF", "Biliäre Fistel"),
 
+      /** {@code BOG} - Blutung, obere gastrointestinale (z. B „Stressulkus“) */
       BOG("BOG", "Blutung, obere gastrointestinale (z. B „Stressulkus“)"),
 
+      /** {@code BOE} - Bolusverlegung eines Endotubus */
       BOE("BOE", "Bolusverlegung eines Endotubus"),
 
+      /** {@code BSI} - Bronchusstumpfinsuffizienz */
       BSI("BSI", "Bronchusstumpfinsuffizienz"),
 
+      /** {@code CHI} - Cholangitis */
       CHI("CHI", "Cholangitis"),
 
+      /** {@code DAI} - Darmanastomoseninsuffizienz */
       DAI("DAI", "Darmanastomoseninsuffizienz"),
 
+      /** {@code DPS} - Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus) */
       DPS("DPS", "Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)"),
 
+      /** {@code DIC} - Disseminierte intravasale Koagulopathie */
       DIC("DIC", "Disseminierte intravasale Koagulopathie"),
 
+      /** {@code DEP} - Drogenentzugspsychose */
       DEP("DEP", "Drogenentzugspsychose"),
 
+      /** {@code DLU} - Druck- und Lagerungsschäden, z. B. Dekubitalulzera */
       DLU("DLU", "Druck- und Lagerungsschäden, z. B. Dekubitalulzera"),
 
+      /** {@code DSI} - Duodenalstumpfinsuffizienz */
       DSI("DSI", "Duodenalstumpfinsuffizienz"),
 
+      /** {@code ENF} - Enterale Fistel */
       ENF("ENF", "Enterale Fistel"),
 
+      /** {@code GER} - Gerinnungsstörung */
       GER("GER", "Gerinnungsstörung"),
 
+      /** {@code HEM} - Hämatemesis */
       HEM("HEM", "Hämatemesis"),
 
+      /** {@code HUR} - Hämaturie */
       HUR("HUR", "Hämaturie"),
 
+      /** {@code HAE} - Hämorrhagischer Schock */
       HAE("HAE", "Hämorrhagischer Schock"),
 
+      /** {@code HFI} - Harnfistel */
       HFI("HFI", "Harnfistel"),
 
+      /** {@code HNK} - Hautnekrose im Operationsbereich */
       HNK("HNK", "Hautnekrose im Operationsbereich"),
 
+      /** {@code HZI} - Herzinsuffizienz */
       HZI("HZI", "Herzinsuffizienz"),
 
+      /** {@code HRS} - Herzrhythmusstörungen */
       HRS("HRS", "Herzrhythmusstörungen"),
 
+      /** {@code HNA} - Hirnnervenausfälle */
       HNA("HNA", "Hirnnervenausfälle"),
 
+      /** {@code HOP} - Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“) */
       HOP("HOP", "Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)"),
 
+      /** {@code HYB} - Hyperbilirubinämie */
       HYB("HYB", "Hyperbilirubinämie"),
 
+      /** {@code HYF} - Hypopharynxfistel */
       HYF("HYF", "Hypopharynxfistel"),
 
+      /** {@code IFV} - Ileofemorale Venenthrombose */
       IFV("IFV", "Ileofemorale Venenthrombose"),
 
+      /** {@code KAS} - Kardiogener Schock */
       KAS("KAS", "Kardiogener Schock"),
 
+      /** {@code KES} - Komplikationen einer Stomaanlage */
       KES("KES", "Komplikationen einer Stomaanlage"),
 
+      /**
+       * {@code KIM} - Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter),
+       * z. B. Dislokation
+       */
       KIM(
           "KIM",
           "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation"),
 
+      /** {@code KRA} - Krampfanfall */
       KRA("KRA", "Krampfanfall"),
 
+      /** {@code KDS} - Kurzdarmsyndrom */
       KDS("KDS", "Kurzdarmsyndrom"),
 
+      /** {@code LEV} - Leberversagen */
       LEV("LEV", "Leberversagen"),
 
+      /** {@code LOE} - Lungenödem */
       LOE("LOE", "Lungenödem"),
 
+      /** {@code LYF} - Lymphfistel */
       LYF("LYF", "Lymphfistel"),
 
+      /** {@code LYE} - Lymphozele */
       LYE("LYE", "Lymphozele"),
 
+      /** {@code MES} - Magenentleerungsstörung */
       MES("MES", "Magenentleerungsstörung"),
 
+      /** {@code MIL} - Mechanischer Ileus */
       MIL("MIL", "Mechanischer Ileus"),
 
+      /** {@code MED} - Mediastinitis */
       MED("MED", "Mediastinitis"),
 
+      /** {@code MAT} - Mesenterialarterien- oder -venenthrombose */
       MAT("MAT", "Mesenterialarterien- oder -venenthrombose"),
 
+      /** {@code MYI} - Myokardinfarkt */
       MYI("MYI", "Myokardinfarkt"),
 
+      /** {@code RNB} - Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt */
       RNB("RNB", "Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt"),
 
+      /** {@code NAB} - Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt */
       NAB("NAB", "Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt"),
 
+      /** {@code NIN} - Nahtinsuffizienz, anderweitig nicht erwähnt */
       NIN("NIN", "Nahtinsuffizienz, anderweitig nicht erwähnt"),
 
+      /** {@code OES} - Ösophagitis */
       OES("OES", "Ösophagitis"),
 
+      /** {@code OSM} - Osteitis, Osteomyelitis */
       OSM("OSM", "Osteitis, Osteomyelitis"),
 
+      /** {@code PAF} - Pankreasfistel */
       PAF("PAF", "Pankreasfistel"),
 
+      /** {@code PIT} - Pankreatitis */
       PIT("PIT", "Pankreatitis"),
 
+      /** {@code PAB} - Peranale Blutung */
       PAB("PAB", "Peranale Blutung"),
 
+      /** {@code PPA} - Periphere Parese */
       PPA("PPA", "Periphere Parese"),
 
+      /** {@code PAV} - Peripherer arterieller Verschluss (Embolie, Thrombose) */
       PAV("PAV", "Peripherer arterieller Verschluss (Embolie, Thrombose)"),
 
+      /** {@code PER} - Peritonitis */
       PER("PER", "Peritonitis"),
 
+      /** {@code PLB} - Platzbauch */
       PLB("PLB", "Platzbauch"),
 
+      /** {@code PEY} - Pleuraempyem */
       PEY("PEY", "Pleuraempyem"),
 
+      /** {@code PLE} - Pleuraerguss */
       PLE("PLE", "Pleuraerguss"),
 
+      /** {@code PMN} - Pneumonie */
       PMN("PMN", "Pneumonie"),
 
+      /** {@code PNT} - Pneumothorax */
       PNT("PNT", "Pneumothorax"),
 
+      /** {@code PDA} - Protrahierte Darmatonie (paralytischer Ileus) */
       PDA("PDA", "Protrahierte Darmatonie (paralytischer Ileus)"),
 
+      /** {@code PAE} - Pulmonalarterienembolie */
       PAE("PAE", "Pulmonalarterienembolie"),
 
+      /** {@code RPA} - Rekurrensparese */
       RPA("RPA", "Rekurrensparese"),
 
+      /** {@code RIN} - Respiratorische Insuffizienz */
       RIN("RIN", "Respiratorische Insuffizienz"),
 
+      /** {@code SKI} - Septische Komplikation eines Implantates */
       SKI("SKI", "Septische Komplikation eines Implantates"),
 
+      /** {@code SES} - Septischer Schock */
       SES("SES", "Septischer Schock"),
 
+      /** {@code SFH} - Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes */
       SFH("SFH", "Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes"),
 
+      /** {@code STK} - Stomakomplikation (z. B. Blutung, Nekrose, Stenose) */
       STK("STK", "Stomakomplikation (z. B. Blutung, Nekrose, Stenose)"),
 
+      /** {@code TZP} - Thrombozytopenie */
       TZP("TZP", "Thrombozytopenie"),
 
+      /**
+       * {@code TIA} - TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches
+       * neurologisches Defizit)
+       */
       TIA(
           "TIA",
           "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)"),
 
+      /** {@code TRZ} - Transfusionszwischenfall */
       TRZ("TRZ", "Transfusionszwischenfall"),
 
+      /** {@code WUH} - Wundhämatom (konservativ therapiert) */
       WUH("WUH", "Wundhämatom (konservativ therapiert)"),
 
+      /** {@code WSS} - Wundheilungsstörung, subkutane */
       WSS("WSS", "Wundheilungsstörung, subkutane");
 
       private final @NonNull String code;
@@ -1477,10 +1676,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoOperationUrgency {
+      /** {@code E} - Elektiveingriff */
       E("E", "Elektiveingriff"),
 
+      /** {@code N} - Notfalleingriff */
       N("N", "Notfalleingriff"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -1519,28 +1721,40 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoPrimaertumorDiagnosesicherung {
+      /** {@code 0} - Totenschein */
       _0("0", "Totenschein"),
 
+      /** {@code 1} - klinisch */
       _1("1", "klinisch"),
 
+      /** {@code 2} - klinische Diagnostik */
       _2("2", "klinische Diagnostik"),
 
+      /** {@code 4} - spezifische Tumor-Marker */
       _4("4", "spezifische Tumor-Marker"),
 
+      /** {@code 5} - Zytologie */
       _5("5", "Zytologie"),
 
+      /** {@code 6} - histologische Untersuchung einer Metastase */
       _6("6", "histologische Untersuchung einer Metastase"),
 
+      /** {@code 7} - histologische Untersuchung eines Primärtumors */
       _7("7", "histologische Untersuchung eines Primärtumors"),
 
+      /** {@code 7.1} - histologische Untersuchung eines Primärtumors */
       _7_1("7.1", "histologische Untersuchung eines Primärtumors"),
 
+      /** {@code 7.2} - histologische Untersuchung einer Metastase */
       _7_2("7.2", "histologische Untersuchung einer Metastase"),
 
+      /** {@code 7.3} - Histologie der Autopsie */
       _7_3("7.3", "Histologie der Autopsie"),
 
+      /** {@code 8} - Zytogenetisch und/oder molekularer Test */
       _8("8", "Zytogenetisch und/oder molekularer Test"),
 
+      /** {@code 9} - unbekannt */
       _9("9", "unbekannt");
 
       private final @NonNull String code;
@@ -1580,10 +1794,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoProstataPostsurgicalComplications {
+      /** {@code J} - Ja */
       J("J", "Ja"),
 
+      /** {@code N} - keine oder höchstens Grad II */
       N("N", "keine oder höchstens Grad II"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -1623,18 +1840,25 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoResidualstatus {
+      /** {@code R0} - Kein Residualtumor */
       R0("R0", "Kein Residualtumor"),
 
+      /** {@code R1} - Mikroskopischer Residualtumor */
       R1("R1", "Mikroskopischer Residualtumor"),
 
+      /** {@code R1(is)} - In-Situ-Rest */
       R1_IS_("R1(is)", "In-Situ-Rest"),
 
+      /** {@code R1(cy+)} - Cytologischer Rest */
       R1_CY_("R1(cy+)", "Cytologischer Rest"),
 
+      /** {@code R2} - Makroskopischer Residualtumor */
       R2("R2", "Makroskopischer Residualtumor"),
 
+      /** {@code RX} - Vorhandensein von Residualtumor kann nicht beurteilt werden */
       RX("RX", "Vorhandensein von Residualtumor kann nicht beurteilt werden"),
 
+      /** {@code U} - Residualtumorstatus ist nicht bekannt */
       U("U", "Residualtumorstatus ist nicht bekannt");
 
       private final @NonNull String code;
@@ -1673,16 +1897,22 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoSeitenlokalisation {
+      /** {@code L} - links */
       L("L", "links"),
 
+      /** {@code R} - rechts */
       R("R", "rechts"),
 
+      /** {@code B} - beidseitig */
       B("B", "beidseitig"),
 
+      /** {@code M} - Mittellinie/mittig */
       M("M", "Mittellinie/mittig"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt"),
 
+      /** {@code T} - trifft nicht zu */
       T("T", "trifft nicht zu");
 
       private final @NonNull String code;
@@ -1721,60 +1951,91 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoStrahlentherapieApplikationsart {
+      /** {@code P} - perkutan (Teletherapie) */
       P("P", "perkutan (Teletherapie)"),
 
+      /** {@code P-ST} - perkutan stereotaktisch */
       P_ST("P-ST", "perkutan stereotaktisch"),
 
+      /** {@code P-4D} - perkutan, atemgetriggert */
       P_4_D("P-4D", "perkutan, atemgetriggert"),
 
+      /** {@code P-ST4D} - perkutan, stereotaktisch, atemgetriggert */
       P_ST4_D("P-ST4D", "perkutan, stereotaktisch, atemgetriggert"),
 
+      /** {@code PRCN} - perkutan ohne Chemotherapie/Sensitizer */
       PRCN("PRCN", "perkutan ohne Chemotherapie/Sensitizer"),
 
+      /** {@code PRCN-ST} - perkutan, stereotaktisch ohne Chemotherapie/Sensitizer */
       PRCN_ST("PRCN-ST", "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer"),
 
+      /** {@code PRCN-4D} - perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer */
       PRCN_4_D("PRCN-4D", "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer"),
 
+      /**
+       * {@code PRCN-ST4D} - perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer
+       */
       PRCN_ST4_D(
           "PRCN-ST4D", "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer"),
 
+      /** {@code PRCJ} - perkutan mit Chemotherapie/Sensitizer */
       PRCJ("PRCJ", "perkutan mit Chemotherapie/Sensitizer"),
 
+      /** {@code PRCJ-ST} - perkutan, stereotaktisch mit Chemotherapie/Sensitizer */
       PRCJ_ST("PRCJ-ST", "perkutan, stereotaktisch mit Chemotherapie/Sensitizer"),
 
+      /** {@code PRCJ-4D} - perkutan, atemgetriggert, mit Chemotherapie/Sensitizer */
       PRCJ_4_D("PRCJ-4D", "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer"),
 
+      /**
+       * {@code PRCJ-ST4D} - perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer
+       */
       PRCJ_ST4_D(
           "PRCJ-ST4D", "perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer"),
 
+      /** {@code K} - endokavitäre Kontakttherapie */
       K("K", "endokavitäre Kontakttherapie"),
 
+      /** {@code KHDR} - endokavitäre Kontakttherapie, high dose rate therapy */
       KHDR("KHDR", "endokavitäre Kontakttherapie, high dose rate therapy"),
 
+      /** {@code KLDR} - endokavitäre Kontakttherapie, low dose rate therapy */
       KLDR("KLDR", "endokavitäre Kontakttherapie, low dose rate therapy"),
 
+      /** {@code KPDR} - endokavitäre Kontakttherapie, pulsed dose rate therapy */
       KPDR("KPDR", "endokavitäre Kontakttherapie, pulsed dose rate therapy"),
 
+      /** {@code I} - intersitielle Kontakttherapie */
       I("I", "intersitielle Kontakttherapie"),
 
+      /** {@code IHDR} - intersitielle Kontakttherapie, high dose rate therapy */
       IHDR("IHDR", "intersitielle Kontakttherapie, high dose rate therapy"),
 
+      /** {@code ILDR} - intersitielle Kontakttherapie, low dose rate therapy */
       ILDR("ILDR", "intersitielle Kontakttherapie, low dose rate therapy"),
 
+      /** {@code IPDR} - intersitielle Kontakttherapie, pulsed dose rate therapy */
       IPDR("IPDR", "intersitielle Kontakttherapie, pulsed dose rate therapy"),
 
+      /** {@code MSIRT} - selektive interne Radio-Therapie */
       MSIRT("MSIRT", "selektive interne Radio-Therapie"),
 
+      /** {@code MPRRT} - Peptid-Radio-Rezeptor-Therapie */
       MPRRT("MPRRT", "Peptid-Radio-Rezeptor-Therapie"),
 
+      /** {@code MPSMA} - PSMA-Therapie */
       MPSMA("MPSMA", "PSMA-Therapie"),
 
+      /** {@code MRJT} - Radiojod-Therapie */
       MRJT("MRJT", "Radiojod-Therapie"),
 
+      /** {@code MRIT} - Radioimmun-Therapie */
       MRIT("MRIT", "Radioimmun-Therapie"),
 
+      /** {@code M} - sonstige metabolische Radionuklidtherapie */
       M("M", "sonstige metabolische Radionuklidtherapie"),
 
+      /** {@code S} - Sonstiges */
       S("S", "Sonstiges");
 
       private final @NonNull String code;
@@ -1814,14 +2075,19 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoStrahlentherapieBoost {
+      /** {@code J} - ja, mit Boost o. n. A. */
       J("J", "ja, mit Boost o. n. A."),
 
+      /** {@code SIB} - simultan integrierter Boost */
       SIB("SIB", "simultan integrierter Boost"),
 
+      /** {@code SEQ} - sequentieller Boost */
       SEQ("SEQ", "sequentieller Boost"),
 
+      /** {@code KON} - konkomitanter Boost */
       KON("KON", "konkomitanter Boost"),
 
+      /** {@code N} - nein, ohne Boost */
       N("N", "nein, ohne Boost");
 
       private final @NonNull String code;
@@ -1861,40 +2127,58 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoStrahlentherapieStrahlenart {
+      /** {@code UH} - Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler) */
       UH("UH", "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)"),
 
+      /** {@code EL} - Elektronen */
       EL("EL", "Elektronen"),
 
+      /** {@code NE} - Neutronen */
       NE("NE", "Neutronen"),
 
+      /** {@code PN} - Protonen (leichte Wasserstoffionen/H1/Leichtionen) */
       PN("PN", "Protonen (leichte Wasserstoffionen/H1/Leichtionen)"),
 
+      /** {@code SI} - Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen) */
       SI("SI", "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)"),
 
+      /** {@code RO} - Weichstrahl (kV) */
       RO("RO", "Weichstrahl (kV)"),
 
+      /** {@code SO} - Sonstige (inklusive Mixed Beams, exklusive Nuklide) */
       SO("SO", "Sonstige (inklusive Mixed Beams, exklusive Nuklide)"),
 
+      /** {@code Lu-177} - Lu-177 */
       LU_177("Lu-177", "Lu-177"),
 
+      /** {@code J-131} - J131 */
       J_131("J-131", "J131"),
 
+      /** {@code Y-90} - Y-90 */
       Y_90("Y-90", "Y-90"),
 
+      /** {@code Ra-223} - Ra-223 */
       RA_223("Ra-223", "Ra-223"),
 
+      /** {@code Ac-225} - Ac-225 */
       AC_225("Ac-225", "Ac-225"),
 
+      /** {@code Sm-153} - Sm-153 */
       SM_153("Sm-153", "Sm-153"),
 
+      /** {@code Tb-161} - Tb-161 */
       TB_161("Tb-161", "Tb-161"),
 
+      /** {@code Sr-89} - Sr-89 */
       SR_89("Sr-89", "Sr-89"),
 
+      /** {@code Ir-192} - Ir-192 */
       IR_192("Ir-192", "Ir-192"),
 
+      /** {@code Co-60} - Co-60 */
       CO_60("Co-60", "Co-60"),
 
+      /** {@code SONU} - Sonstige Nuklide */
       SONU("SONU", "Sonstige Nuklide");
 
       private final @NonNull String code;
@@ -1934,204 +2218,308 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoStrahlentherapieZielgebiet {
+      /** {@code 1.1} - Ganzhirn (Neurokranium, inklusive Meningen) */
       _1_1("1.1", "Ganzhirn (Neurokranium, inklusive Meningen)"),
 
+      /** {@code 1.2} - Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn) */
       _1_2("1.2", "Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)"),
 
+      /** {@code 1.3} - Neuroachse/Rückenmark */
       _1_3("1.3", "Neuroachse/Rückenmark"),
 
+      /** {@code 1.4} - Hypophyse */
       _1_4("1.4", "Hypophyse"),
 
+      /** {@code 1.5} - Hirn sonstiges */
       _1_5("1.5", "Hirn sonstiges"),
 
+      /** {@code 2.1} - Auge (r, l) */
       _2_1("2.1", "Auge (r, l)"),
 
+      /** {@code 2.2} - Nase/Nasennebenhöhle */
       _2_2("2.2", "Nase/Nasennebenhöhle"),
 
+      /** {@code 2.3} - Mundhöhle inklusive Mundhöhlenvorhof */
       _2_3("2.3", "Mundhöhle inklusive Mundhöhlenvorhof"),
 
+      /** {@code 2.4} - Ohr (r, l) */
       _2_4("2.4", "Ohr (r, l)"),
 
+      /** {@code 2.5} - Speicheldrüse (r, l) */
       _2_5("2.5", "Speicheldrüse (r, l)"),
 
+      /** {@code 2.6} - Pharynx */
       _2_6("2.6", "Pharynx"),
 
+      /** {@code 2.7} - Nasopharynx */
       _2_7("2.7", "Nasopharynx"),
 
+      /** {@code 2.8} - Oropharynx */
       _2_8("2.8", "Oropharynx"),
 
+      /** {@code 2.9} - Hypopharynx */
       _2_9("2.9", "Hypopharynx"),
 
+      /** {@code 2.10} - Larynx */
       _2_10("2.10", "Larynx"),
 
+      /** {@code 2.11} - Schilddrüse */
       _2_11("2.11", "Schilddrüse"),
 
+      /** {@code 2.12} - Kopf-Hals sonstige */
       _2_12("2.12", "Kopf-Hals sonstige"),
 
+      /** {@code 3.1} - Mamma als Ganzbrust (r, l) */
       _3_1("3.1", "Mamma als Ganzbrust (r, l)"),
 
+      /** {@code 3.2} - Mamma als Teilbrust (r, l) */
       _3_2("3.2", "Mamma als Teilbrust (r, l)"),
 
+      /** {@code 3.3} - Thoraxwand, gegebenenfalls r, l */
       _3_3("3.3", "Thoraxwand, gegebenenfalls r, l"),
 
+      /** {@code 3.4} - Lunge (r, l) */
       _3_4("3.4", "Lunge (r, l)"),
 
+      /** {@code 3.5} - Ösophagus */
       _3_5("3.5", "Ösophagus"),
 
+      /** {@code 3.6} - Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren) */
       _3_6("3.6", "Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)"),
 
+      /** {@code 3.7} - Thymus */
       _3_7("3.7", "Thymus"),
 
+      /** {@code 3.8} - Thorax sonstige */
       _3_8("3.8", "Thorax sonstige"),
 
+      /** {@code 4.1} - Magen */
       _4_1("4.1", "Magen"),
 
+      /** {@code 4.2} - Pankreas */
       _4_2("4.2", "Pankreas"),
 
+      /** {@code 4.3} - Leber, auch bei Teilbestrahlung */
       _4_3("4.3", "Leber, auch bei Teilbestrahlung"),
 
+      /** {@code 4.4} - Milz */
       _4_4("4.4", "Milz"),
 
+      /** {@code 4.5} - Niere (r, l) */
       _4_5("4.5", "Niere (r, l)"),
 
+      /** {@code 4.6} - Nebenniere (r, l) */
       _4_6("4.6", "Nebenniere (r, l)"),
 
+      /** {@code 4.7} - Retroperitoneum (z. B. Sarkome) */
       _4_7("4.7", "Retroperitoneum (z. B. Sarkome)"),
 
+      /** {@code 4.8} - Ureter (r, l) */
       _4_8("4.8", "Ureter (r, l)"),
 
+      /** {@code 4.9} - Bauchwand (z. B. Sarkome) */
       _4_9("4.9", "Bauchwand (z. B. Sarkome)"),
 
+      /** {@code 4.10} - Oberbauch */
       _4_10("4.10", "Oberbauch"),
 
+      /** {@code 4.11} - Gallengänge */
       _4_11("4.11", "Gallengänge"),
 
+      /** {@code 4.12} - Gallenblase */
       _4_12("4.12", "Gallenblase"),
 
+      /** {@code 4.13} - Abdomen sonstige */
       _4_13("4.13", "Abdomen sonstige"),
 
+      /** {@code 5.1} - Rektum */
       _5_1("5.1", "Rektum"),
 
+      /** {@code 5.2} - Analbereich */
       _5_2("5.2", "Analbereich"),
 
+      /** {@code 5.3} - Harnblase */
       _5_3("5.3", "Harnblase"),
 
+      /** {@code 5.4} - Prostata */
       _5_4("5.4", "Prostata"),
 
+      /** {@code 5.5} - Hoden (r, l) */
       _5_5("5.5", "Hoden (r, l)"),
 
+      /** {@code 5.6} - Penis */
       _5_6("5.6", "Penis"),
 
+      /** {@code 5.7} - Uterus */
       _5_7("5.7", "Uterus"),
 
+      /** {@code 5.8} - Zervix */
       _5_8("5.8", "Zervix"),
 
+      /** {@code 5.9} - Vulva */
       _5_9("5.9", "Vulva"),
 
+      /** {@code 5.10} - Vagina */
       _5_10("5.10", "Vagina"),
 
+      /** {@code 5.11} - Beckenwand */
       _5_11("5.11", "Beckenwand"),
 
+      /** {@code 5.12} - Becken sonstige */
       _5_12("5.12", "Becken sonstige"),
 
+      /** {@code 6.1} - Schädel */
       _6_1("6.1", "Schädel"),
 
+      /** {@code 6.2} - Schädelbasis */
       _6_2("6.2", "Schädelbasis"),
 
+      /** {@code 6.3} - Orbita (r, l) */
       _6_3("6.3", "Orbita (r, l)"),
 
+      /** {@code 6.4} - Halswirbelsäule */
       _6_4("6.4", "Halswirbelsäule"),
 
+      /** {@code 6.5} - Brustwirbelsäule */
       _6_5("6.5", "Brustwirbelsäule"),
 
+      /** {@code 6.6} - Lendenwirbelsäule */
       _6_6("6.6", "Lendenwirbelsäule"),
 
+      /** {@code 6.7} - Sacrum /Coccygeum */
       _6_7("6.7", "Sacrum /Coccygeum"),
 
+      /** {@code 6.8} - Rippen (r, l) */
       _6_8("6.8", "Rippen (r, l)"),
 
+      /** {@code 6.9} - Sternum */
       _6_9("6.9", "Sternum"),
 
+      /** {@code 6.10} - Schulter (r, l) */
       _6_10("6.10", "Schulter (r, l)"),
 
+      /** {@code 6.11} - Oberarm (r, l) */
       _6_11("6.11", "Oberarm (r, l)"),
 
+      /** {@code 6.12} - Unterarm (r, l) */
       _6_12("6.12", "Unterarm (r, l)"),
 
+      /** {@code 6.13} - Hand (r, l) */
       _6_13("6.13", "Hand (r, l)"),
 
+      /** {@code 6.14} - Becken (r, l) */
       _6_14("6.14", "Becken (r, l)"),
 
+      /** {@code 6.15} - Hüfte (r, l) */
       _6_15("6.15", "Hüfte (r, l)"),
 
+      /** {@code 6.16} - Oberschenkel (r, l) */
       _6_16("6.16", "Oberschenkel (r, l)"),
 
+      /** {@code 6.17} - Unterschenkel (r, l) */
       _6_17("6.17", "Unterschenkel (r, l)"),
 
+      /** {@code 6.18} - Fuß (r, l) */
       _6_18("6.18", "Fuß (r, l)"),
 
+      /** {@code 6.19} - Knochen sonstige */
       _6_19("6.19", "Knochen sonstige"),
 
+      /** {@code 7.1} - Kopf, Gesicht, Hals */
       _7_1("7.1", "Kopf, Gesicht, Hals"),
 
+      /** {@code 7.2} - obere Extremität ink* #lusive Schulter (r, l) */
       _7_2("7.2", "obere Extremität ink* #lusive Schulter (r, l)"),
 
+      /** {@code 7.3} - untere Extremität und Hüfte (r, l) */
       _7_3("7.3", "untere Extremität und Hüfte (r, l)"),
 
+      /** {@code 7.4} - Thorax */
       _7_4("7.4", "Thorax"),
 
+      /** {@code 7.5} - Abdomen */
       _7_5("7.5", "Abdomen"),
 
+      /** {@code 7.6} - Becken */
       _7_6("7.6", "Becken"),
 
+      /** {@code 7.7} - Stammes o. n. A. */
       _7_7("7.7", "Stammes o. n. A."),
 
+      /** {@code 7.8} - mehrere Bereiche überlappend */
       _7_8("7.8", "mehrere Bereiche überlappend"),
 
+      /** {@code 7.9} - sonstige Weichteile o. n. A. */
       _7_9("7.9", "sonstige Weichteile o. n. A."),
 
+      /** {@code 8.1} - Ganzhaut */
       _8_1("8.1", "Ganzhaut"),
 
+      /** {@code 8.2} - Teilbereiche */
       _8_2("8.2", "Teilbereiche"),
 
+      /** {@code 9.1} - Cervikale Lymphknoten (r, l) */
       _9_1("9.1", "Cervikale Lymphknoten (r, l)"),
 
+      /** {@code 9.2} - Supra-/infraclavikuläre Lymphknoten (r, l) */
       _9_2("9.2", "Supra-/infraclavikuläre Lymphknoten (r, l)"),
 
+      /** {@code 9.3} - Axilläre Lymphknoten (r, l) */
       _9_3("9.3", "Axilläre Lymphknoten (r, l)"),
 
+      /** {@code 9.4} - Retrosternale/sternale/Mammaria interna Lymphknoten */
       _9_4("9.4", "Retrosternale/sternale/Mammaria interna Lymphknoten"),
 
+      /** {@code 9.5} - Mediastinale Lymphknoten */
       _9_5("9.5", "Mediastinale Lymphknoten"),
 
+      /** {@code 9.6} - Hiläre Lymphknoten */
       _9_6("9.6", "Hiläre Lymphknoten"),
 
+      /**
+       * {@code 9.7} - Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch,
+       * peripankreatisch, Leber-, Milzhilus)
+       */
       _9_7(
           "9.7",
           "Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)"),
 
+      /** {@code 9.8} - Paraaortale/paracavale Lymphknoten */
       _9_8("9.8", "Paraaortale/paracavale Lymphknoten"),
 
+      /** {@code 9.9} - Retroperitoneale Lymphknoten */
       _9_9("9.9", "Retroperitoneale Lymphknoten"),
 
+      /**
+       * {@code 9.10} - Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch,
+       * präsakral)
+       */
       _9_10(
           "9.10",
           "Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)"),
 
+      /** {@code 9.11} - Inguinale Lymphknoten (r, l) */
       _9_11("9.11", "Inguinale Lymphknoten (r, l)"),
 
+      /** {@code 9.12} - Involved Node */
       _9_12("9.12", "Involved Node"),
 
+      /** {@code 9.13} - Involved Site */
       _9_13("9.13", "Involved Site"),
 
+      /** {@code 9.14} - Involved Field */
       _9_14("9.14", "Involved Field"),
 
+      /** {@code 9.15} - Sonstige Lymphknoten */
       _9_15("9.15", "Sonstige Lymphknoten"),
 
+      /** {@code 10.1} - Ganzkörperbestrahlung bei allogener Stammzelltransplantation */
       _10_1("10.1", "Ganzkörperbestrahlung bei allogener Stammzelltransplantation"),
 
+      /** {@code 10.2} - operative Zugangswege */
       _10_2("10.2", "operative Zugangswege"),
 
+      /** {@code 10.3} - Sonstige, nicht genannte Zielgebiete */
       _10_3("10.3", "Sonstige, nicht genannte Zielgebiete");
 
       private final @NonNull String code;
@@ -2171,304 +2559,454 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoStrahlentherapieZielgebiet2014 {
+      /** {@code 1.} - ZNS */
       _1_("1.", "ZNS"),
 
+      /** {@code 1.1.} - Ganzhirn */
       _1_1_("1.1.", "Ganzhirn"),
 
+      /** {@code 1.2.} - Teilhirn */
       _1_2_("1.2.", "Teilhirn"),
 
+      /** {@code 1.3.} - Neuroachse */
       _1_3_("1.3.", "Neuroachse"),
 
+      /** {@code 2.} - Kopf-Hals */
       _2_("2.", "Kopf-Hals"),
 
+      /** {@code 2.+} - Kopf-Hals mit Lk */
       _2__POS("2.+", "Kopf-Hals mit Lk"),
 
+      /** {@code 2.-} - Kopf-Hals ohne Lk */
       _2__NEG("2.-", "Kopf-Hals ohne Lk"),
 
+      /** {@code 2.1.} - Orbita, o.n.A. */
       _2_1_("2.1.", "Orbita, o.n.A."),
 
+      /** {@code 2.1.+} - Orbita mit Lk */
       _2_1__POS("2.1.+", "Orbita mit Lk"),
 
+      /** {@code 2.1.-} - Orbita ohne Lk */
       _2_1__NEG("2.1.-", "Orbita ohne Lk"),
 
+      /** {@code 2.2.} - Nase/ Nasennebenhöhle, o.n.A. */
       _2_2_("2.2.", "Nase/ Nasennebenhöhle, o.n.A."),
 
+      /** {@code 2.2.+} - Nase/ Nasennebenhöhle mit Lk */
       _2_2__POS("2.2.+", "Nase/ Nasennebenhöhle mit Lk"),
 
+      /** {@code 2.2.-} - Nase/ Nasennebenhöhle ohne Lk */
       _2_2__NEG("2.2.-", "Nase/ Nasennebenhöhle ohne Lk"),
 
+      /** {@code 2.3.} - Mundhöhle, o.n.A. */
       _2_3_("2.3.", "Mundhöhle, o.n.A."),
 
+      /** {@code 2.3.+} - Mundhöhle mit Lk */
       _2_3__POS("2.3.+", "Mundhöhle mit Lk"),
 
+      /** {@code 2.3.-} - Mundhöhle ohne Lk */
       _2_3__NEG("2.3.-", "Mundhöhle ohne Lk"),
 
+      /** {@code 2.4.} - Ohr, o.n.A. */
       _2_4_("2.4.", "Ohr, o.n.A."),
 
+      /** {@code 2.4.+} - Ohr mit Lk */
       _2_4__POS("2.4.+", "Ohr mit Lk"),
 
+      /** {@code 2.4.-} - Ohr ohne Lk */
       _2_4__NEG("2.4.-", "Ohr ohne Lk"),
 
+      /** {@code 2.5.} - Speicheldrüse, o.n.A. */
       _2_5_("2.5.", "Speicheldrüse, o.n.A."),
 
+      /** {@code 2.5.+} - Speicheldrüse mit Lk */
       _2_5__POS("2.5.+", "Speicheldrüse mit Lk"),
 
+      /** {@code 2.5.-} - Speicheldrüse ohne Lk */
       _2_5__NEG("2.5.-", "Speicheldrüse ohne Lk"),
 
+      /** {@code 2.6.} - Pharynx, o.n.A. */
       _2_6_("2.6.", "Pharynx, o.n.A."),
 
+      /** {@code 2.6.+} - Pharynx mit Lk */
       _2_6__POS("2.6.+", "Pharynx mit Lk"),
 
+      /** {@code 2.6.-} - Pharynx ohne Lk */
       _2_6__NEG("2.6.-", "Pharynx ohne Lk"),
 
+      /** {@code 2.7.} - Larynx, o.n.A. */
       _2_7_("2.7.", "Larynx, o.n.A."),
 
+      /** {@code 2.7.+} - Larynx mit Lk */
       _2_7__POS("2.7.+", "Larynx mit Lk"),
 
+      /** {@code 2.7.-} - Larynx ohne Lk */
       _2_7__NEG("2.7.-", "Larynx ohne Lk"),
 
+      /** {@code 2.8.} - Schilddrüse, o.n.A. */
       _2_8_("2.8.", "Schilddrüse, o.n.A."),
 
+      /** {@code 2.8.+} - Schilddrüse mit Lk */
       _2_8__POS("2.8.+", "Schilddrüse mit Lk"),
 
+      /** {@code 2.8.-} - Schilddrüse ohne Lk */
       _2_8__NEG("2.8.-", "Schilddrüse ohne Lk"),
 
+      /** {@code 2.9.} - Halslymphknoten */
       _2_9_("2.9.", "Halslymphknoten"),
 
+      /** {@code 3.} - Thorax */
       _3_("3.", "Thorax"),
 
+      /** {@code 3.+} - Thorax mit Lk */
       _3__POS("3.+", "Thorax mit Lk"),
 
+      /** {@code 3.-} - Thorax ohne Lk */
       _3__NEG("3.-", "Thorax ohne Lk"),
 
+      /** {@code 3.1.} - Mamma als Ganzbrust, o.n.A. */
       _3_1_("3.1.", "Mamma als Ganzbrust, o.n.A."),
 
+      /** {@code 3.1.+} - Mamma als Ganzbrust mit Lk */
       _3_1__POS("3.1.+", "Mamma als Ganzbrust mit Lk"),
 
+      /** {@code 3.1.-} - Mamma als Ganzbrust ohne Lk */
       _3_1__NEG("3.1.-", "Mamma als Ganzbrust ohne Lk"),
 
+      /** {@code 3.2.} - Mamma als Teilbrust, o.n.A. */
       _3_2_("3.2.", "Mamma als Teilbrust, o.n.A."),
 
+      /** {@code 3.2.+} - Mamma als Teilbrust mit Lk */
       _3_2__POS("3.2.+", "Mamma als Teilbrust mit Lk"),
 
+      /** {@code 3.2.-} - Mamma als Teilbrust ohne Lk */
       _3_2__NEG("3.2.-", "Mamma als Teilbrust ohne Lk"),
 
+      /** {@code 3.3.} - Brustwand */
       _3_3_("3.3.", "Brustwand"),
 
+      /** {@code 3.3.+} - Brustwand mit Lk */
       _3_3__POS("3.3.+", "Brustwand mit Lk"),
 
+      /** {@code 3.3.-} - Brustwand ohne Lk */
       _3_3__NEG("3.3.-", "Brustwand ohne Lk"),
 
+      /** {@code 3.4.} - Lunge, o.n.A. */
       _3_4_("3.4.", "Lunge, o.n.A."),
 
+      /** {@code 3.4.+} - Lunge mit Lk */
       _3_4__POS("3.4.+", "Lunge mit Lk"),
 
+      /** {@code 3.4.-} - Lunge ohne Lk */
       _3_4__NEG("3.4.-", "Lunge ohne Lk"),
 
+      /** {@code 3.5.} - Ösophagus, o.n.A. */
       _3_5_("3.5.", "Ösophagus, o.n.A."),
 
+      /** {@code 3.5.+} - Ösophagus mit Lk */
       _3_5__POS("3.5.+", "Ösophagus mit Lk"),
 
+      /** {@code 3.5.-} - Ösophagus ohne Lk */
       _3_5__NEG("3.5.-", "Ösophagus ohne Lk"),
 
+      /** {@code 3.6.} - Thymus, o.n.A. */
       _3_6_("3.6.", "Thymus, o.n.A."),
 
+      /** {@code 3.6.+} - Thymus mit Lk */
       _3_6__POS("3.6.+", "Thymus mit Lk"),
 
+      /** {@code 3.6.-} - Thymus ohne Lk */
       _3_6__NEG("3.6.-", "Thymus ohne Lk"),
 
+      /** {@code 3.7.} - Mediastinale Lymphknoten */
       _3_7_("3.7.", "Mediastinale Lymphknoten"),
 
+      /** {@code 4.} - Abdomen (ohne Becken) */
       _4_("4.", "Abdomen (ohne Becken)"),
 
+      /** {@code 4.+} - Abdomen (ohne Becken) mit Lk */
       _4__POS("4.+", "Abdomen (ohne Becken) mit Lk"),
 
+      /** {@code 4.-} - Abdomen (ohne Becken) ohne Lk */
       _4__NEG("4.-", "Abdomen (ohne Becken) ohne Lk"),
 
+      /** {@code 4.1.} - Magen, o.n.A. */
       _4_1_("4.1.", "Magen, o.n.A."),
 
+      /** {@code 4.1.+} - Magen mit Lk */
       _4_1__POS("4.1.+", "Magen mit Lk"),
 
+      /** {@code 4.1.-} - Magen ohne Lk */
       _4_1__NEG("4.1.-", "Magen ohne Lk"),
 
+      /** {@code 4.2.} - Pankreas, o.n.A. */
       _4_2_("4.2.", "Pankreas, o.n.A."),
 
+      /** {@code 4.2.+} - Pankreas mit Lk */
       _4_2__POS("4.2.+", "Pankreas mit Lk"),
 
+      /** {@code 4.2.-} - Pankreas ohne Lk */
       _4_2__NEG("4.2.-", "Pankreas ohne Lk"),
 
+      /** {@code 4.3.} - Leber, o.n.A. */
       _4_3_("4.3.", "Leber, o.n.A."),
 
+      /** {@code 4.3.+} - Leber mit Lk */
       _4_3__POS("4.3.+", "Leber mit Lk"),
 
+      /** {@code 4.3.-} - Leber ohne Lk */
       _4_3__NEG("4.3.-", "Leber ohne Lk"),
 
+      /** {@code 4.4.} - Milz, o.n.A. */
       _4_4_("4.4.", "Milz, o.n.A."),
 
+      /** {@code 4.4.+} - Milz mit Lk */
       _4_4__POS("4.4.+", "Milz mit Lk"),
 
+      /** {@code 4.4.-} - Milz ohne Lk */
       _4_4__NEG("4.4.-", "Milz ohne Lk"),
 
+      /** {@code 4.5.} - Niere, o.n.A. */
       _4_5_("4.5.", "Niere, o.n.A."),
 
+      /** {@code 4.5.+} - Niere mit Lk */
       _4_5__POS("4.5.+", "Niere mit Lk"),
 
+      /** {@code 4.5.-} - Niere ohne Lk */
       _4_5__NEG("4.5.-", "Niere ohne Lk"),
 
+      /** {@code 4.6.} - Nebenniere, o.n.A. */
       _4_6_("4.6.", "Nebenniere, o.n.A."),
 
+      /** {@code 4.6.+} - Nebenniere mit Lk */
       _4_6__POS("4.6.+", "Nebenniere mit Lk"),
 
+      /** {@code 4.6.-} - Nebenniere ohne Lk */
       _4_6__NEG("4.6.-", "Nebenniere ohne Lk"),
 
+      /** {@code 4.7.} - Retroperitoneale Lymphknoten */
       _4_7_("4.7.", "Retroperitoneale Lymphknoten"),
 
+      /** {@code 4.8.} - Retroperitoneum, o.n.A. */
       _4_8_("4.8.", "Retroperitoneum, o.n.A."),
 
+      /** {@code 4.8.+} - Retroperitoneum mit Lk */
       _4_8__POS("4.8.+", "Retroperitoneum mit Lk"),
 
+      /** {@code 4.8.-} - Retroperitoneum ohne Lk */
       _4_8__NEG("4.8.-", "Retroperitoneum ohne Lk"),
 
+      /** {@code 4.9.} - Bauchwand, o.n.A. */
       _4_9_("4.9.", "Bauchwand, o.n.A."),
 
+      /** {@code 4.9.+} - Bauchwand mit Lk */
       _4_9__POS("4.9.+", "Bauchwand mit Lk"),
 
+      /** {@code 4.9.-} - Bauchwand ohne Lk */
       _4_9__NEG("4.9.-", "Bauchwand ohne Lk"),
 
+      /** {@code 5.} - Becken */
       _5_("5.", "Becken"),
 
+      /** {@code 5.+} - Becken mit Lk */
       _5__POS("5.+", "Becken mit Lk"),
 
+      /** {@code 5.-} - Becken ohne Lk */
       _5__NEG("5.-", "Becken ohne Lk"),
 
+      /** {@code 5.1.} - Rektum, o.n.A. */
       _5_1_("5.1.", "Rektum, o.n.A."),
 
+      /** {@code 5.1.+} - Rektum mit Lk */
       _5_1__POS("5.1.+", "Rektum mit Lk"),
 
+      /** {@code 5.1.-} - Rektum ohne Lk */
       _5_1__NEG("5.1.-", "Rektum ohne Lk"),
 
+      /** {@code 5.2.} - Analbereich, o.n.A. */
       _5_2_("5.2.", "Analbereich, o.n.A."),
 
+      /** {@code 5.2.-} - Analbereich ohne Lk */
       _5_2__NEG("5.2.-", "Analbereich ohne Lk"),
 
+      /** {@code 5.2.+} - Analbereich mit Lk */
       _5_2__POS("5.2.+", "Analbereich mit Lk"),
 
+      /** {@code 5.3.} - Harnblase, o.n.A. */
       _5_3_("5.3.", "Harnblase, o.n.A."),
 
+      /** {@code 5.3.-} - Harnblase ohne Lk */
       _5_3__NEG("5.3.-", "Harnblase ohne Lk"),
 
+      /** {@code 5.3.+} - Harnblase mit Lk */
       _5_3__POS("5.3.+", "Harnblase mit Lk"),
 
+      /** {@code 5.4.} - Prostata, o.n.A. */
       _5_4_("5.4.", "Prostata, o.n.A."),
 
+      /** {@code 5.4.+} - Prostata mit Lk */
       _5_4__POS("5.4.+", "Prostata mit Lk"),
 
+      /** {@code 5.4.-} - Prostata ohne Lk */
       _5_4__NEG("5.4.-", "Prostata ohne Lk"),
 
+      /** {@code 5.5.} - Hoden, o.n.A. */
       _5_5_("5.5.", "Hoden, o.n.A."),
 
+      /** {@code 5.5.+} - Hoden mit Lk */
       _5_5__POS("5.5.+", "Hoden mit Lk"),
 
+      /** {@code 5.5.-} - Hoden ohne Lk */
       _5_5__NEG("5.5.-", "Hoden ohne Lk"),
 
+      /** {@code 5.6.} - Penis, o.n.A. */
       _5_6_("5.6.", "Penis, o.n.A."),
 
+      /** {@code 5.6.+} - Penis mit Lk */
       _5_6__POS("5.6.+", "Penis mit Lk"),
 
+      /** {@code 5.6.-} - Penis ohne Lk */
       _5_6__NEG("5.6.-", "Penis ohne Lk"),
 
+      /** {@code 5.7.} - Uterus und Zervix, o.n.A. */
       _5_7_("5.7.", "Uterus und Zervix, o.n.A."),
 
+      /** {@code 5.7.+} - Uterus und Zervix mit Lk */
       _5_7__POS("5.7.+", "Uterus und Zervix mit Lk"),
 
+      /** {@code 5.7.-} - Uterus und Zervix ohne Lk */
       _5_7__NEG("5.7.-", "Uterus und Zervix ohne Lk"),
 
+      /** {@code 5.7.1.} - Uterus */
       _5_7_1_("5.7.1.", "Uterus"),
 
+      /** {@code 5.7.1.+} - Uterus mit Lymphknoten */
       _5_7_1__POS("5.7.1.+", "Uterus mit Lymphknoten"),
 
+      /** {@code 5.7.1.-} - Uterus ohne Lymphknoten */
       _5_7_1__NEG("5.7.1.-", "Uterus ohne Lymphknoten"),
 
+      /** {@code 5.7.2.} - Zervix */
       _5_7_2_("5.7.2.", "Zervix"),
 
+      /** {@code 5.7.2.+} - Zervix mit Lymphknoten */
       _5_7_2__POS("5.7.2.+", "Zervix mit Lymphknoten"),
 
+      /** {@code 5.7.2.-} - Zervix ohne Lymphknoten */
       _5_7_2__NEG("5.7.2.-", "Zervix ohne Lymphknoten"),
 
+      /** {@code 5.8.} - Ovar, o.n.A. */
       _5_8_("5.8.", "Ovar, o.n.A."),
 
+      /** {@code 5.8.-} - Ovar ohne Lk */
       _5_8__NEG("5.8.-", "Ovar ohne Lk"),
 
+      /** {@code 5.8.+} - Ovar mit Lk */
       _5_8__POS("5.8.+", "Ovar mit Lk"),
 
+      /** {@code 5.9.} - Vulva, o.n.A. */
       _5_9_("5.9.", "Vulva, o.n.A."),
 
+      /** {@code 5.9.-} - Vulva ohne Lk */
       _5_9__NEG("5.9.-", "Vulva ohne Lk"),
 
+      /** {@code 5.9.+} - Vulva mit Lk */
       _5_9__POS("5.9.+", "Vulva mit Lk"),
 
+      /** {@code 5.10.} - Vagina, o.n.A. */
       _5_10_("5.10.", "Vagina, o.n.A."),
 
+      /** {@code 5.10.+} - Vagina mit Lk */
       _5_10__POS("5.10.+", "Vagina mit Lk"),
 
+      /** {@code 5.10.-} - Vagina ohne Lk */
       _5_10__NEG("5.10.-", "Vagina ohne Lk"),
 
+      /** {@code 5.11.} - Beckenwand, o.n.A. */
       _5_11_("5.11.", "Beckenwand, o.n.A."),
 
+      /** {@code 5.11.+} - Beckenwand mit Lk */
       _5_11__POS("5.11.+", "Beckenwand mit Lk"),
 
+      /** {@code 5.11.-} - Beckenwand ohne Lk */
       _5_11__NEG("5.11.-", "Beckenwand ohne Lk"),
 
+      /** {@code 5.12.} - Beckenlymphkn. (ohne Primtu.) */
       _5_12_("5.12.", "Beckenlymphkn. (ohne Primtu.)"),
 
+      /** {@code 6.} - Stütz-/Bewegungsapparat */
       _6_("6.", "Stütz-/Bewegungsapparat"),
 
+      /** {@code 6.1.} - Schädelknochen */
       _6_1_("6.1.", "Schädelknochen"),
 
+      /** {@code 6.2.} - Rippen */
       _6_2_("6.2.", "Rippen"),
 
+      /** {@code 6.3.} - Sternum */
       _6_3_("6.3.", "Sternum"),
 
+      /** {@code 6.4.} - HWS */
       _6_4_("6.4.", "HWS"),
 
+      /** {@code 6.5.} - BWS */
       _6_5_("6.5.", "BWS"),
 
+      /** {@code 6.6.} - LWS */
       _6_6_("6.6.", "LWS"),
 
+      /** {@code 6.7.} - knöchernes Becken */
       _6_7_("6.7.", "knöchernes Becken"),
 
+      /** {@code 6.8.} - Hüfte */
       _6_8_("6.8.", "Hüfte"),
 
+      /** {@code 6.9.} - Schulter */
       _6_9_("6.9.", "Schulter"),
 
+      /** {@code 6.10.} - Oberarm */
       _6_10_("6.10.", "Oberarm"),
 
+      /** {@code 6.11.} - Unterarm */
       _6_11_("6.11.", "Unterarm"),
 
+      /** {@code 6.12.} - Hand */
       _6_12_("6.12.", "Hand"),
 
+      /** {@code 6.13.} - Leiste */
       _6_13_("6.13.", "Leiste"),
 
+      /** {@code 6.14.} - Oberschenkel */
       _6_14_("6.14.", "Oberschenkel"),
 
+      /** {@code 6.15.} - Unterschenkel */
       _6_15_("6.15.", "Unterschenkel"),
 
+      /** {@code 6.16.} - Fuß */
       _6_16_("6.16.", "Fuß"),
 
+      /** {@code 7.} - Haut */
       _7_("7.", "Haut"),
 
+      /** {@code 7.+} - Haut mit Lymphknoten */
       _7__POS("7.+", "Haut mit Lymphknoten"),
 
+      /** {@code 7.-} - Haut ohne Lymphknoten */
       _7__NEG("7.-", "Haut ohne Lymphknoten"),
 
+      /** {@code 7.1.} - Primärer Hauttumor */
       _7_1_("7.1.", "Primärer Hauttumor"),
 
+      /** {@code 7.2.} - Hautmetastasen */
       _7_2_("7.2.", "Hautmetastasen"),
 
+      /** {@code 8.} - Sonstiges */
       _8_("8.", "Sonstiges"),
 
+      /** {@code 8.1.} - Ganzkörperbestrahlung */
       _8_1_("8.1.", "Ganzkörperbestrahlung"),
 
+      /** {@code 8.2.} - Mantelfeldbestrahlung */
       _8_2_("8.2.", "Mantelfeldbestrahlung");
 
       private final @NonNull String code;
@@ -2508,10 +3046,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoStudienteilnahme {
+      /** {@code J} - Ja */
       J("J", "Ja"),
 
+      /** {@code N} - Nein */
       N("N", "Nein"),
 
+      /** {@code U} - Unbekannt */
       U("U", "Unbekannt");
 
       private final @NonNull String code;
@@ -2550,343 +3091,518 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoSystemischeTherapieProtokolle {
+      /** {@code ABVD} - ABVD */
       ABVD("ABVD", "ABVD"),
 
+      /** {@code AC} - AC */
       AC("AC", "AC"),
 
+      /** {@code ACO} - ACO */
       ACO("ACO", "ACO"),
 
+      /** {@code ADORE} - ADORE */
       ADORE("ADORE", "ADORE"),
 
+      /** {@code ADR-IFO} - ADR-IFO */
       ADR_IFO("ADR-IFO", "ADR-IFO"),
 
+      /** {@code AIO} - AIO */
       AIO("AIO", "AIO"),
 
+      /** {@code AIO-04} - AIO-04 */
       AIO_04("AIO-04", "AIO-04"),
 
+      /** {@code AIO-Irinotecan} - AIO-Irinotecan */
       AIO_IRINOTECAN("AIO-Irinotecan", "AIO-Irinotecan"),
 
+      /** {@code ARO} - ARO */
       ARO("ARO", "ARO"),
 
+      /** {@code AVD} - AVD */
       AVD("AVD", "AVD"),
 
+      /** {@code BCD} - BCD */
       BCD("BCD", "BCD"),
 
+      /** {@code BEACOPP-basis} - BEACOPP basis */
       BEACOPP_BASIS("BEACOPP-basis", "BEACOPP basis"),
 
+      /** {@code BEACOPP-eskaliert} - BEACOPP eskaliert */
       BEACOPP_ESKALIERT("BEACOPP-eskaliert", "BEACOPP eskaliert"),
 
+      /** {@code BEAM} - BEAM */
       BEAM("BEAM", "BEAM"),
 
+      /** {@code BOLD} - BOLD */
       BOLD("BOLD", "BOLD"),
 
+      /** {@code BP} - BP */
       BP("BP", "BP"),
 
+      /** {@code BR} - BR */
       BR("BR", "BR"),
 
+      /** {@code BrECADD} - BrECADD */
       BR_ECADD("BrECADD", "BrECADD"),
 
+      /** {@code BuCy} - BuCy */
       BU_CY("BuCy", "BuCy"),
 
+      /** {@code CAD} - CAD */
       CAD("CAD", "CAD"),
 
+      /** {@code CAO} - CAO */
       CAO("CAO", "CAO"),
 
+      /** {@code CapeOx} - CapeOx */
       CAPE_OX("CapeOx", "CapeOx"),
 
+      /** {@code Cap-Schema} - Cap-Schema */
       CAP_SCHEMA("Cap-Schema", "Cap-Schema"),
 
+      /** {@code CarboTax} - CarboTax */
       CARBO_TAX("CarboTax", "CarboTax"),
 
+      /** {@code CEV} - CEV */
       CEV("CEV", "CEV"),
 
+      /** {@code CHOEP} - CHOEP */
       CHOEP("CHOEP", "CHOEP"),
 
+      /** {@code CHOEP-14} - CHOEP-14 */
       CHOEP_14("CHOEP-14", "CHOEP-14"),
 
+      /** {@code CHOEP-21} - CHOEP-21 */
       CHOEP_21("CHOEP-21", "CHOEP-21"),
 
+      /** {@code CHOP} - CHOP */
       CHOP("CHOP", "CHOP"),
 
+      /** {@code CHOP-14} - CHOP-14 */
       CHOP_14("CHOP-14", "CHOP-14"),
 
+      /** {@code CHOP-21} - CHOP-21 */
       CHOP_21("CHOP-21", "CHOP-21"),
 
+      /** {@code CMF} - CMF */
       CMF("CMF", "CMF"),
 
+      /** {@code COPP} - COPP */
       COPP("COPP", "COPP"),
 
+      /** {@code CV} - CV */
       CV("CV", "CV"),
 
+      /** {@code DA} - DA */
       DA("DA", "DA"),
 
+      /** {@code DAC} - DAC */
       DAC("DAC", "DAC"),
 
+      /** {@code DC-Doce-Carbo} - DC (Doce/Carbo) */
       DC_DOCE_CARBO("DC-Doce-Carbo", "DC (Doce/Carbo)"),
 
+      /** {@code DC-Doce-Cyclo} - DC (Doce/Cyclo) */
       DC_DOCE_CYCLO("DC-Doce-Cyclo", "DC (Doce/Cyclo)"),
 
+      /** {@code DCbH} - DCbH */
       DCB_H("DCbH", "DCbH"),
 
+      /** {@code DeVIC} - DeVIC */
       DE_VIC("DeVIC", "DeVIC"),
 
+      /** {@code Dexa-BEAM} - Dexa-BEAM */
       DEXA_BEAM("Dexa-BEAM", "Dexa-BEAM"),
 
+      /** {@code DHAP} - DHAP */
       DHAP("DHAP", "DHAP"),
 
+      /** {@code DRC} - DRC */
       DRC("DRC", "DRC"),
 
+      /** {@code DVP} - DVP */
       DVP("DVP", "DVP"),
 
+      /** {@code EC} - EC */
       EC("EC", "EC"),
 
+      /** {@code EC-D} - EC-D */
       EC_D("EC-D", "EC-D"),
 
+      /** {@code ECF} - ECF */
       ECF("ECF", "ECF"),
 
+      /** {@code EC-P} - EC-P */
       EC_P("EC-P", "EC-P"),
 
+      /** {@code ELO-Rd} - ELO-Rd */
       ELO_RD("ELO-Rd", "ELO-Rd"),
 
+      /** {@code EOX} - EOX */
       EOX("EOX", "EOX"),
 
+      /** {@code EXTREME-mit-Carboplatin} - EXTREME mit Carboplatin */
       EXTREME_MIT_CARBOPLATIN("EXTREME-mit-Carboplatin", "EXTREME mit Carboplatin"),
 
+      /** {@code EXTREME-mit-Cisplatin} - EXTREME mit Cisplatin */
       EXTREME_MIT_CISPLATIN("EXTREME-mit-Cisplatin", "EXTREME mit Cisplatin"),
 
+      /** {@code FAC} - FAC */
       FAC("FAC", "FAC"),
 
+      /** {@code FC} - FC */
       FC("FC", "FC"),
 
+      /** {@code FCR} - FCR */
       FCR("FCR", "FCR"),
 
+      /** {@code FEC} - FEC */
       FEC("FEC", "FEC"),
 
+      /** {@code FEC-Doc} - FEC-Doc */
       FEC_DOC("FEC-Doc", "FEC-Doc"),
 
+      /** {@code FLAG-Ida} - FLAG-Ida */
       FLAG_IDA("FLAG-Ida", "FLAG-Ida"),
 
+      /** {@code FLO} - FLO */
       FLO("FLO", "FLO"),
 
+      /** {@code FLOT} - FLOT */
       FLOT("FLOT", "FLOT"),
 
+      /** {@code Flu-Cam} - Flu-Cam */
       FLU_CAM("Flu-Cam", "Flu-Cam"),
 
+      /** {@code FOLFIRI} - FOLFIRI */
       FOLFIRI("FOLFIRI", "FOLFIRI"),
 
+      /** {@code Folfirinox} - Folfirinox */
       FOLFIRINOX("Folfirinox", "Folfirinox"),
 
+      /** {@code FOLFOX4} - FOLFOX4 */
       FOLFOX4("FOLFOX4", "FOLFOX4"),
 
+      /** {@code FOLFOX-6} - FOLFOX-6 */
       FOLFOX_6("FOLFOX-6", "FOLFOX-6"),
 
+      /** {@code FOLFOXIRI} - FOLFOXIRI */
       FOLFOXIRI("FOLFOXIRI", "FOLFOXIRI"),
 
+      /** {@code FUFAMI} - FUFAMI */
       FUFAMI("FUFAMI", "FUFAMI"),
 
+      /** {@code FUFIRI} - FUFIRI */
       FUFIRI("FUFIRI", "FUFIRI"),
 
+      /** {@code FUFOX} - FUFOX */
       FUFOX("FUFOX", "FUFOX"),
 
+      /** {@code GC-B} - GC-B */
       GC_B("GC-B", "GC-B"),
 
+      /** {@code GDP-Schema} - GDP-Schema */
       GDP_SCHEMA("GDP-Schema", "GDP-Schema"),
 
+      /** {@code GELOX} - GELOX */
       GELOX("GELOX", "GELOX"),
 
+      /** {@code Gem-Carbo} - Gem-Carbo */
       GEM_CARBO("Gem-Carbo", "Gem-Carbo"),
 
+      /** {@code Gem-Cis} - Gem-Cis */
       GEM_CIS("Gem-Cis", "Gem-Cis"),
 
+      /** {@code GemTreo} - GemTreo */
       GEM_TREO("GemTreo", "GemTreo"),
 
+      /** {@code GOP} - GOP */
       GOP("GOP", "GOP"),
 
+      /** {@code HAM-Cytarabin} - HAM-Cytarabin */
       HAM_CYTARABIN("HAM-Cytarabin", "HAM-Cytarabin"),
 
+      /** {@code HD-Protokoll} - HD-Protokoll */
       HD_PROTOKOLL("HD-Protokoll", "HD-Protokoll"),
 
+      /** {@code ICE} - ICE */
       ICE("ICE", "ICE"),
 
+      /** {@code IEV} - IEV */
       IEV("IEV", "IEV"),
 
+      /** {@code IMVP-16} - IMVP-16 */
       IMVP_16("IMVP-16", "IMVP-16"),
 
+      /** {@code IRd} - IRd */
       IRD("IRd", "IRd"),
 
+      /** {@code Knospe} - Knospe */
       KNOSPE("Knospe", "Knospe"),
 
+      /** {@code Knospe-modifiziert} - Knospe modifiziert */
       KNOSPE_MODIFIZIERT("Knospe-modifiziert", "Knospe modifiziert"),
 
+      /** {@code KRD} - KRD */
       KRD("KRD", "KRD"),
 
+      /** {@code LV5FU2} - LV5FU2 */
       LV5_FU2("LV5FU2", "LV5FU2"),
 
+      /** {@code LV5FU2-modif} - LV5FU2 modif. */
       LV5_FU2_MODIF("LV5FU2-modif", "LV5FU2 modif."),
 
+      /** {@code MAMAC} - MAMAC */
       MAMAC("MAMAC", "MAMAC"),
 
+      /** {@code MATRix} - MATRix */
       MATRIX("MATRix", "MATRix"),
 
+      /** {@code MAV} - MAV */
       MAV("MAV", "MAV"),
 
+      /** {@code Mayo-Protokoll} - Mayo-Protokoll */
       MAYO_PROTOKOLL("Mayo-Protokoll", "Mayo-Protokoll"),
 
+      /** {@code M-Cavi} - M-Cavi */
       M_CAVI("M-Cavi", "M-Cavi"),
 
+      /** {@code MPT} - MPT */
       MPT("MPT", "MPT"),
 
+      /** {@code M-VAC} - M-VAC */
       M_VAC("M-VAC", "M-VAC"),
 
+      /** {@code PAC} - PAC */
       PAC("PAC", "PAC"),
 
+      /** {@code PC} - PC */
       PC("PC", "PC"),
 
+      /** {@code PC-mit-Bevacizumab} - PC mit Bevacizumab */
       PC_MIT_BEVACIZUMAB("PC-mit-Bevacizumab", "PC mit Bevacizumab"),
 
+      /** {@code PC-ohne-Bevacizumab} - PC ohne Bevacizumab */
       PC_OHNE_BEVACIZUMAB("PC-ohne-Bevacizumab", "PC ohne Bevacizumab"),
 
+      /** {@code PCV} - PCV */
       PCV("PCV", "PCV"),
 
+      /** {@code PE} - PE */
       PE("PE", "PE"),
 
+      /** {@code PEB} - PEB */
       PEB("PEB", "PEB"),
 
+      /** {@code Peg-DoxC} - Peg. DoxC */
       PEG_DOX_C("Peg-DoxC", "Peg. DoxC"),
 
+      /** {@code PEI} - PEI */
       PEI("PEI", "PEI"),
 
+      /** {@code P-GEMOX} - P-GEMOX */
       P_GEMOX("P-GEMOX", "P-GEMOX"),
 
+      /** {@code PLF} - PLF */
       PLF("PLF", "PLF"),
 
+      /** {@code PVAG-Schema} - PVAG-Schema */
       PVAG_SCHEMA("PVAG-Schema", "PVAG-Schema"),
 
+      /** {@code PVBI} - PVBI */
       PVBI("PVBI", "PVBI"),
 
+      /** {@code R-BAC} - R-BAC */
       R_BAC("R-BAC", "R-BAC"),
 
+      /** {@code R-Bendamustin} - R-Bendamustin */
       R_BENDAMUSTIN("R-Bendamustin", "R-Bendamustin"),
 
+      /** {@code R-CHOP} - R-CHOP */
       R_CHOP("R-CHOP", "R-CHOP"),
 
+      /** {@code R-DeVIC} - R-DeVIC */
       R_DE_VIC("R-DeVIC", "R-DeVIC"),
 
+      /** {@code R-DHAP} - R-DHAP */
       R_DHAP("R-DHAP", "R-DHAP"),
 
+      /** {@code RD-Schema} - RD-Schema */
       RD_SCHEMA("RD-Schema", "RD-Schema"),
 
+      /** {@code RevDex} - Rev/Dex */
       REV_DEX("RevDex", "Rev/Dex"),
 
+      /** {@code R-GemOx} - R-GemOx */
       R_GEM_OX("R-GemOx", "R-GemOx"),
 
+      /** {@code R-HAD} - R-HAD */
       R_HAD("R-HAD", "R-HAD"),
 
+      /** {@code R-ICE} - R-ICE */
       R_ICE("R-ICE", "R-ICE"),
 
+      /** {@code R-MCP} - R-MCP */
       R_MCP("R-MCP", "R-MCP"),
 
+      /** {@code R-MP} - R-MP */
       R_MP("R-MP", "R-MP"),
 
+      /** {@code S-HAI} - S-HAI */
       S_HAI("S-HAI", "S-HAI"),
 
+      /** {@code S-HAM} - S-HAM */
       S_HAM("S-HAM", "S-HAM"),
 
+      /** {@code SMILE} - SMILE */
       SMILE("SMILE", "SMILE"),
 
+      /** {@code TAC} - TAC */
       TAC("TAC", "TAC"),
 
+      /** {@code TCED} - TCED */
       TCED("TCED", "TCED"),
 
+      /** {@code TCH} - TCH */
       TCH("TCH", "TCH"),
 
+      /** {@code TIP} - TIP */
       TIP("TIP", "TIP"),
 
+      /** {@code TMZ} - TMZ */
       TMZ("TMZ", "TMZ"),
 
+      /** {@code TPF} - TPF */
       TPF("TPF", "TPF"),
 
+      /** {@code VCD} - VCD */
       VCD("VCD", "VCD"),
 
+      /** {@code VFD} - VFD */
       VFD("VFD", "VFD"),
 
+      /** {@code VIPD} - VIPD */
       VIPD("VIPD", "VIPD"),
 
+      /** {@code VMP} - VMP */
       VMP("VMP", "VMP"),
 
+      /** {@code VRD} - VRD */
       VRD("VRD", "VRD"),
 
+      /** {@code VTD} - VTD */
       VTD("VTD", "VTD"),
 
+      /** {@code XELOX} - XELOX */
       XELOX("XELOX", "XELOX"),
 
+      /** {@code XP} - XP */
       XP("XP", "XP"),
 
+      /** {@code Konditionierung-aemyeloablativ-MAC} - Konditionierung, ämyeloablativ (MAC) */
       KONDITIONIERUNG_AEMYELOABLATIV_MAC(
           "Konditionierung-aemyeloablativ-MAC", "Konditionierung, ämyeloablativ (MAC)"),
 
+      /**
+       * {@code Konditionierung-nicht-myeloablativ-NMA} - Konditionierung, nicht myeloablativ (NMA)
+       */
       KONDITIONIERUNG_NICHT_MYELOABLATIV_NMA(
           "Konditionierung-nicht-myeloablativ-NMA", "Konditionierung, nicht myeloablativ (NMA)"),
 
+      /**
+       * {@code Konditionierung-reduzierte-Intensitaet-RIC} - Konditionierung, reduzierte Intensität
+       * (RIC)
+       */
       KONDITIONIERUNG_REDUZIERTE_INTENSITAET_RIC(
           "Konditionierung-reduzierte-Intensitaet-RIC",
           "Konditionierung, reduzierte Intensität (RIC)"),
 
+      /**
+       * {@code Konditionierung-reduzierte-Toxizitaet-RTC} - Konditionierung, reduzierte Toxizität
+       * (RTC)
+       */
       KONDITIONIERUNG_REDUZIERTE_TOXIZITAET_RTC(
           "Konditionierung-reduzierte-Toxizitaet-RTC",
           "Konditionierung, reduzierte Toxizität (RTC)"),
 
+      /** {@code TACE-Doxorubicin-Mitomycin} - TACE Doxorubicin-Mitomycin */
       TACE_DOXORUBICIN_MITOMYCIN("TACE-Doxorubicin-Mitomycin", "TACE Doxorubicin-Mitomycin"),
 
+      /** {@code TACE-Doxorubicin} - TACE Doxorubicin */
       TACE_DOXORUBICIN("TACE-Doxorubicin", "TACE Doxorubicin"),
 
+      /** {@code TACE} - TACE */
       TACE("TACE", "TACE"),
 
+      /** {@code HIPEC-Cisplatin-Mitomycin} - HIPEC Cisplatin-Mitomycin */
       HIPEC_CISPLATIN_MITOMYCIN("HIPEC-Cisplatin-Mitomycin", "HIPEC Cisplatin-Mitomycin"),
 
+      /** {@code HIPEC-Mitomycin} - HIPEC Mitomycin */
       HIPEC_MITOMYCIN("HIPEC-Mitomycin", "HIPEC Mitomycin"),
 
+      /** {@code HIPEC} - HIPEC */
       HIPEC("HIPEC", "HIPEC"),
 
+      /** {@code HITOC} - HITOC */
       HITOC("HITOC", "HITOC"),
 
+      /** {@code PIPAC-Cisplatin-Doxorubicin} - PIPAC Cisplatin-Doxorubicin */
       PIPAC_CISPLATIN_DOXORUBICIN("PIPAC-Cisplatin-Doxorubicin", "PIPAC Cisplatin-Doxorubicin"),
 
+      /** {@code PIPAC-Cisplatin-Paclitaxel} - PIPAC Cisplatin-Paclitaxel */
       PIPAC_CISPLATIN_PACLITAXEL("PIPAC-Cisplatin-Paclitaxel", "PIPAC Cisplatin-Paclitaxel"),
 
+      /** {@code PIPAC} - PIPAC */
       PIPAC("PIPAC", "PIPAC"),
 
+      /** {@code Instillation-Harnblase-Mitomycin} - Instillation Harnblase Mitomycin */
       INSTILLATION_HARNBLASE_MITOMYCIN(
           "Instillation-Harnblase-Mitomycin", "Instillation Harnblase Mitomycin"),
 
+      /** {@code Instillation-Harnblase-Doxorubicin} - Instillation Harnblase Doxorubicin */
       INSTILLATION_HARNBLASE_DOXORUBICIN(
           "Instillation-Harnblase-Doxorubicin", "Instillation Harnblase Doxorubicin"),
 
+      /**
+       * {@code Instillation-Harnblase-Chemotherapeutikum} - Instillation Harnblase
+       * Chemotherapeutikum
+       */
       INSTILLATION_HARNBLASE_CHEMOTHERAPEUTIKUM(
           "Instillation-Harnblase-Chemotherapeutikum", "Instillation Harnblase Chemotherapeutikum"),
 
+      /** {@code Instillation-Harnblase-BCG} - Instillation Harnblase (BCG) */
       INSTILLATION_HARNBLASE_BCG("Instillation-Harnblase-BCG", "Instillation Harnblase (BCG)"),
 
+      /** {@code Instillation-Intrathekal-Tripel} - Instillation Intrathekal Tripel */
       INSTILLATION_INTRATHEKAL_TRIPEL(
           "Instillation-Intrathekal-Tripel", "Instillation Intrathekal Tripel"),
 
+      /** {@code Instillation-Intrathekal-Quadrupel} - Instillation Intrathekal Quadrupel */
       INSTILLATION_INTRATHEKAL_QUADRUPEL(
           "Instillation-Intrathekal-Quadrupel", "Instillation Intrathekal Quadrupel"),
 
+      /** {@code Instillation-intrathekal} - Instillation intrathekal */
       INSTILLATION_INTRATHEKAL("Instillation-intrathekal", "Instillation intrathekal"),
 
+      /** {@code PUVA-systemisch-oral} - PUVA systemisch oral */
       PUVA_SYSTEMISCH_ORAL("PUVA-systemisch-oral", "PUVA systemisch oral"),
 
+      /** {@code Bade-PUVA-topisch} - (Bade-) PUVA (topisch) */
       BADE_PUVA_TOPISCH("Bade-PUVA-topisch", "(Bade-) PUVA (topisch)"),
 
+      /** {@code Aderlass} - Aderlass */
       ADERLASS("Aderlass", "Aderlass"),
 
+      /** {@code Leukapherese} - Leukapherese */
       LEUKAPHERESE("Leukapherese", "Leukapherese"),
 
+      /** {@code Plasmapherese} - Plasmapherese */
       PLASMAPHERESE("Plasmapherese", "Plasmapherese"),
 
+      /** {@code TTFields} - TTFields */
       TTFIELDS("TTFields", "TTFields"),
 
+      /** {@code CAR-T-Zelltherapie} - CAR-T-Zelltherapie */
       CAR_T_ZELLTHERAPIE("CAR-T-Zelltherapie", "CAR-T-Zelltherapie");
 
       private final @NonNull String code;
@@ -2926,10 +3642,13 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTherapieabweichung {
+      /** {@code J} - ja */
       J("J", "ja"),
 
+      /** {@code N} - nein */
       N("N", "nein"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt");
 
       private final @NonNull String code;
@@ -2968,14 +3687,23 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTherapieplanungTyp {
+      /** {@code praeth} - prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie) */
       PRAETH("praeth", "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"),
 
+      /**
+       * {@code postop} - postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B.
+       * zur Frage adjuvante Therapie)
+       */
       POSTOP(
           "postop",
           "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"),
 
+      /**
+       * {@code postth} - posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)
+       */
       POSTTH("postth", "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)"),
 
+      /** {@code ther} - Therapieplanung ohne Tumorkonferenz */
       THER("ther", "Therapieplanung ohne Tumorkonferenz");
 
       private final @NonNull String code;
@@ -3014,24 +3742,34 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTherapieEndeGrund {
+      /** {@code E} - reguläres Ende */
       E("E", "reguläres Ende"),
 
+      /** {@code R} - reguläres Ende mit Dosisreduktion */
       R("R", "reguläres Ende mit Dosisreduktion"),
 
+      /** {@code W} - reguläres Ende mit Substanzwechsel */
       W("W", "reguläres Ende mit Substanzwechsel"),
 
+      /** {@code A} - Abbruch wegen Nebenwirkungen */
       A("A", "Abbruch wegen Nebenwirkungen"),
 
+      /** {@code P} - Abbruch wegen Progress */
       P("P", "Abbruch wegen Progress"),
 
+      /** {@code S} - Abbruch aus sonstigen Gründen */
       S("S", "Abbruch aus sonstigen Gründen"),
 
+      /** {@code V} - Patient verweigert weitere Therapie */
       V("V", "Patient verweigert weitere Therapie"),
 
+      /** {@code T} - Patient verstorben */
       T("T", "Patient verstorben"),
 
+      /** {@code F} - Zieldosis erreicht mit Unterbrechung > 3 Kalendertage */
       F("F", "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt");
 
       private final @NonNull String code;
@@ -3070,16 +3808,22 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTherapieStellungzurop {
+      /** {@code O} - ohne Bezug zur operativen Therapie */
       O("O", "ohne Bezug zur operativen Therapie"),
 
+      /** {@code A} - adjuvant */
       A("A", "adjuvant"),
 
+      /** {@code N} - neoadjuvant */
       N("N", "neoadjuvant"),
 
+      /** {@code I} - intraoperativ */
       I("I", "intraoperativ"),
 
+      /** {@code Z} - additiv */
       Z("Z", "additiv"),
 
+      /** {@code S} - Sonstiges */
       S("S", "Sonstiges");
 
       private final @NonNull String code;
@@ -3119,36 +3863,52 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTherapieTyp {
+      /** {@code CH} - Chemotherapie */
       CH("CH", "Chemotherapie"),
 
+      /** {@code HO} - Hormontherapie */
       HO("HO", "Hormontherapie"),
 
+      /** {@code IM} - Immun-/Antikörpertherapie */
       IM("IM", "Immun-/Antikörpertherapie"),
 
+      /** {@code ZS} - zielgerichtete Substanzen */
       ZS("ZS", "zielgerichtete Substanzen"),
 
+      /** {@code SZ} - Stammzelltransplantation (inklusive Knochenmarktransplantation) */
       SZ("SZ", "Stammzelltransplantation (inklusive Knochenmarktransplantation)"),
 
+      /** {@code CI} - Chemo- + Immun-/Antikörpertherapie */
       CI("CI", "Chemo- + Immun-/Antikörpertherapie"),
 
+      /** {@code CZ} - Chemotherapie + zielgerichtete Substanzen */
       CZ("CZ", "Chemotherapie + zielgerichtete Substanzen"),
 
+      /** {@code CIZ} - Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen */
       CIZ("CIZ", "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"),
 
+      /** {@code IZ} - Immun-/Antikörpertherapie + zielgerichtete Substanzen */
       IZ("IZ", "Immun-/Antikörpertherapie + zielgerichtete Substanzen"),
 
+      /** {@code WW} - Watchful Waiting */
       WW("WW", "Watchful Waiting"),
 
+      /** {@code AS} - Active Surveillance */
       AS("AS", "Active Surveillance"),
 
+      /** {@code WS} - Wait and see */
       WS("WS", "Wait and see"),
 
+      /** {@code OP} - Operation */
       OP("OP", "Operation"),
 
+      /** {@code ST} - Strahlentherapie */
       ST("ST", "Strahlentherapie"),
 
+      /** {@code KW} - keine weitere tumorspezifische Therapie empfohlen */
       KW("KW", "keine weitere tumorspezifische Therapie empfohlen"),
 
+      /** {@code SO} - Sonstiges */
       SO("SO", "Sonstiges");
 
       private final @NonNull String code;
@@ -3187,274 +3947,409 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTnmUicc {
+      /** {@code y} - y */
       Y("y", "y"),
 
+      /** {@code r} - r */
       R("r", "r"),
 
+      /** {@code a} - a */
       A("a", "a"),
 
+      /** {@code c} - c */
       C("c", "c"),
 
+      /** {@code p} - p */
       P("p", "p"),
 
+      /** {@code u} - u */
       U("u", "u"),
 
+      /** {@code TX} - TX */
       TX("TX", "TX"),
 
+      /** {@code T0} - T0 */
       T0("T0", "T0"),
 
+      /** {@code Ta} - Ta */
       TA("Ta", "Ta"),
 
+      /** {@code Tis} - Tis */
       TIS("Tis", "Tis"),
 
+      /** {@code Tis(LAMN)} - Tis(LAMN) */
       TIS_LAMN_("Tis(LAMN)", "Tis(LAMN)"),
 
+      /** {@code Tis(DCIS)} - Tis(DCIS) */
       TIS_DCIS_("Tis(DCIS)", "Tis(DCIS)"),
 
+      /** {@code Tis(LCIS)} - Tis(LCIS) */
       TIS_LCIS_("Tis(LCIS)", "Tis(LCIS)"),
 
+      /** {@code Tis(Paget)} - Tis(Paget) */
       TIS_PAGET_("Tis(Paget)", "Tis(Paget)"),
 
+      /** {@code Tis(pu)} - Tis(pu) */
       TIS_PU_("Tis(pu)", "Tis(pu)"),
 
+      /** {@code Tis(pd)} - Tis(pd) */
       TIS_PD_("Tis(pd)", "Tis(pd)"),
 
+      /** {@code T1} - T1 */
       T1("T1", "T1"),
 
+      /** {@code T1mi} - T1mi */
       T1MI("T1mi", "T1mi"),
 
+      /** {@code T1a} - T1a */
       T1A("T1a", "T1a"),
 
+      /** {@code T1a1} - T1a1 */
       T1A1("T1a1", "T1a1"),
 
+      /** {@code T1a2} - T1a2 */
       T1A2("T1a2", "T1a2"),
 
+      /** {@code T1b} - T1b */
       T1B("T1b", "T1b"),
 
+      /** {@code T1b1} - T1b1 */
       T1B1("T1b1", "T1b1"),
 
+      /** {@code T1b2} - T1b2 */
       T1B2("T1b2", "T1b2"),
 
+      /** {@code T1c} - T1c */
       T1C("T1c", "T1c"),
 
+      /** {@code T1c1} - T1c1 */
       T1C1("T1c1", "T1c1"),
 
+      /** {@code T1c2} - T1c2 */
       T1C2("T1c2", "T1c2"),
 
+      /** {@code T1c3} - T1c3 */
       T1C3("T1c3", "T1c3"),
 
+      /** {@code T1d} - T1d */
       T1D("T1d", "T1d"),
 
+      /** {@code T2} - T2 */
       T2("T2", "T2"),
 
+      /** {@code T2a} - T2a */
       T2A("T2a", "T2a"),
 
+      /** {@code T2a1} - T2a1 */
       T2A1("T2a1", "T2a1"),
 
+      /** {@code T2a2} - T2a2 */
       T2A2("T2a2", "T2a2"),
 
+      /** {@code T2b} - T2b */
       T2B("T2b", "T2b"),
 
+      /** {@code T2c} - T2c */
       T2C("T2c", "T2c"),
 
+      /** {@code T2d} - T2d */
       T2D("T2d", "T2d"),
 
+      /** {@code T3} - T3 */
       T3("T3", "T3"),
 
+      /** {@code T3a} - T3a */
       T3A("T3a", "T3a"),
 
+      /** {@code T3b} - T3b */
       T3B("T3b", "T3b"),
 
+      /** {@code T3c} - T3c */
       T3C("T3c", "T3c"),
 
+      /** {@code T3d} - T3d */
       T3D("T3d", "T3d"),
 
+      /** {@code T3e} - T3e */
       T3E("T3e", "T3e"),
 
+      /** {@code T4} - T4 */
       T4("T4", "T4"),
 
+      /** {@code T4a} - T4a */
       T4A("T4a", "T4a"),
 
+      /** {@code T4b} - T4b */
       T4B("T4b", "T4b"),
 
+      /** {@code T4c} - T4c */
       T4C("T4c", "T4c"),
 
+      /** {@code T4d} - T4d */
       T4D("T4d", "T4d"),
 
+      /** {@code T4e} - T4e */
       T4E("T4e", "T4e"),
 
+      /** {@code m} - (m) */
       M("m", "(m)"),
 
+      /** {@code 2} - (2) */
       _2("2", "(2)"),
 
+      /** {@code 3} - (3) */
       _3("3", "(3)"),
 
+      /** {@code 4} - (4) */
       _4("4", "(4)"),
 
+      /** {@code 5} - (5) */
       _5("5", "(5)"),
 
+      /** {@code 6} - (6) */
       _6("6", "(6)"),
 
+      /** {@code 7} - (7) */
       _7("7", "(7)"),
 
+      /** {@code 8} - (8) */
       _8("8", "(8)"),
 
+      /** {@code 9} - (9) */
       _9("9", "(9)"),
 
+      /** {@code 10} - (10) */
       _10("10", "(10)"),
 
+      /** {@code NX} - Nx */
       NX("NX", "Nx"),
 
+      /** {@code N0} - N0 */
       N0("N0", "N0"),
 
+      /** {@code N1} - N1 */
       N1("N1", "N1"),
 
+      /** {@code N1mi} - N1(mi) */
       N1MI("N1mi", "N1(mi)"),
 
+      /** {@code N1a} - N1a */
       N1A("N1a", "N1a"),
 
+      /** {@code N1b} - N1b */
       N1B("N1b", "N1b"),
 
+      /** {@code N1c} - N1c */
       N1C("N1c", "N1c"),
 
+      /** {@code N2} - N2 */
       N2("N2", "N2"),
 
+      /** {@code N2a} - N2a */
       N2A("N2a", "N2a"),
 
+      /** {@code N2b} - N2b */
       N2B("N2b", "N2b"),
 
+      /** {@code N2c} - N2c */
       N2C("N2c", "N2c"),
 
+      /** {@code N3} - N3 */
       N3("N3", "N3"),
 
+      /** {@code N3a} - N3a */
       N3A("N3a", "N3a"),
 
+      /** {@code N3b} - N3b */
       N3B("N3b", "N3b"),
 
+      /** {@code N3c} - N3c */
       N3C("N3c", "N3c"),
 
+      /** {@code M0} - M0 */
       M0("M0", "M0"),
 
+      /** {@code M1} - M1 */
       M1("M1", "M1"),
 
+      /** {@code M1a} - M1a */
       M1A("M1a", "M1a"),
 
+      /** {@code M1b} - M1b */
       M1B("M1b", "M1b"),
 
+      /** {@code M1c} - M1c */
       M1C("M1c", "M1c"),
 
+      /** {@code M1d} - M1d */
       M1D("M1d", "M1d"),
 
+      /** {@code MX} - MX */
       MX("MX", "MX"),
 
+      /** {@code i+} - (i+) */
       I_POS("i+", "(i+)"),
 
+      /** {@code i-} - (i-) */
       I_NEG("i-", "(i-)"),
 
+      /** {@code mol+} - (mol+) */
       MOL_POS("mol+", "(mol+)"),
 
+      /** {@code mol-} - (mol-) */
       MOL_NEG("mol-", "(mol-)"),
 
+      /** {@code sn} - (sn) */
       SN("sn", "(sn)"),
 
+      /** {@code L0} - L0 */
       L0("L0", "L0"),
 
+      /** {@code L1} - L1 */
       L1("L1", "L1"),
 
+      /** {@code LX} - LX */
       LX("LX", "LX"),
 
+      /** {@code V0} - V0 */
       V0("V0", "V0"),
 
+      /** {@code V1} - V1 */
       V1("V1", "V1"),
 
+      /** {@code V2} - V2 */
       V2("V2", "V2"),
 
+      /** {@code VX} - VX */
       VX("VX", "VX"),
 
+      /** {@code Pn0} - Pn0 */
       PN0("Pn0", "Pn0"),
 
+      /** {@code Pn1} - Pn1 */
       PN1("Pn1", "Pn1"),
 
+      /** {@code PnX} - PnX */
       PN_X("PnX", "PnX"),
 
+      /** {@code S0} - S0 */
       S0("S0", "S0"),
 
+      /** {@code S1} - S1 */
       S1("S1", "S1"),
 
+      /** {@code S2} - S2 */
       S2("S2", "S2"),
 
+      /** {@code S3} - S3 */
       S3("S3", "S3"),
 
+      /** {@code SX} - SX */
       SX("SX", "SX"),
 
+      /** {@code okk} - Stadium X */
       OKK("okk", "Stadium X"),
 
+      /** {@code 0} - Stadium 0 */
       _0("0", "Stadium 0"),
 
+      /** {@code 0a} - Stadium 0a */
       _0A("0a", "Stadium 0a"),
 
+      /** {@code 0is} - Stadium 0is */
       _0IS("0is", "Stadium 0is"),
 
+      /** {@code I} - Stadium I */
       I("I", "Stadium I"),
 
+      /** {@code IA} - Stadium IA */
       IA("IA", "Stadium IA"),
 
+      /** {@code IA1} - Stadium IA1 */
       IA1("IA1", "Stadium IA1"),
 
+      /** {@code IA2} - Stadium IA2 */
       IA2("IA2", "Stadium IA2"),
 
+      /** {@code IA3} - Stadium IA3 */
       IA3("IA3", "Stadium IA3"),
 
+      /** {@code IB} - Stadium IB */
       IB("IB", "Stadium IB"),
 
+      /** {@code IB1} - Stadium IB1 */
       IB1("IB1", "Stadium IB1"),
 
+      /** {@code IB2} - Stadium IB2 */
       IB2("IB2", "Stadium IB2"),
 
+      /** {@code IC} - Stadium IC */
       IC("IC", "Stadium IC"),
 
+      /** {@code IS} - Stadium IS */
       IS("IS", "Stadium IS"),
 
+      /** {@code II} - Stadium II */
       II("II", "Stadium II"),
 
+      /** {@code IIA} - Stadium IIA */
       IIA("IIA", "Stadium IIA"),
 
+      /** {@code IIA1} - Stadium IIA1 */
       IIA1("IIA1", "Stadium IIA1"),
 
+      /** {@code IIA2} - Stadium IIA2 */
       IIA2("IIA2", "Stadium IIA2"),
 
+      /** {@code IIB} - Stadium IIB */
       IIB("IIB", "Stadium IIB"),
 
+      /** {@code IIC} - Stadium IIC */
       IIC("IIC", "Stadium IIC"),
 
+      /** {@code III} - Stadium III */
       III("III", "Stadium III"),
 
+      /** {@code IIIA} - Stadium IIIA */
       IIIA("IIIA", "Stadium IIIA"),
 
+      /** {@code IIIA1} - Stadium IIIA1 */
       IIIA1("IIIA1", "Stadium IIIA1"),
 
+      /** {@code IIIA2} - Stadium IIIA2 */
       IIIA2("IIIA2", "Stadium IIIA2"),
 
+      /** {@code IIIB} - Stadium IIIB */
       IIIB("IIIB", "Stadium IIIB"),
 
+      /** {@code IIIC} - Stadium IIIC */
       IIIC("IIIC", "Stadium IIIC"),
 
+      /** {@code IIIC1} - Stadium IIIC1 */
       IIIC1("IIIC1", "Stadium IIIC1"),
 
+      /** {@code IIIC2} - Stadium IIIC2 */
       IIIC2("IIIC2", "Stadium IIIC2"),
 
+      /** {@code IIID} - Stadium IIID */
       IIID("IIID", "Stadium IIID"),
 
+      /** {@code IV} - Stadium IV */
       IV("IV", "Stadium IV"),
 
+      /** {@code IVA} - Stadium IVA */
       IVA("IVA", "Stadium IVA"),
 
+      /** {@code IVA1} - Stadium IVA1 */
       IVA1("IVA1", "Stadium IVA1"),
 
+      /** {@code IVA2} - Stadium IVA2 */
       IVA2("IVA2", "Stadium IVA2"),
 
+      /** {@code IVB} - Stadium IVB */
       IVB("IVB", "Stadium IVB"),
 
+      /** {@code IVC} - Stadium IVC */
       IVC("IVC", "Stadium IVC");
 
       private final @NonNull String code;
@@ -3490,22 +4385,31 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTnmVersion {
+      /** {@code 1} - 1. Auflage */
       _1("1", "1. Auflage"),
 
+      /** {@code 2} - 2. Auflage */
       _2("2", "2. Auflage"),
 
+      /** {@code 3} - 3. Auflage */
       _3("3", "3. Auflage"),
 
+      /** {@code 4} - 4. Auflage */
       _4("4", "4. Auflage"),
 
+      /** {@code 5} - 5. Auflage */
       _5("5", "5. Auflage"),
 
+      /** {@code 6} - 6. Auflage */
       _6("6", "6. Auflage"),
 
+      /** {@code 7} - 7. Auflage */
       _7("7", "7. Auflage"),
 
+      /** {@code 8} - 8. Auflage */
       _8("8", "8. Auflage"),
 
+      /** {@code 9} - 9. Auflage */
       _9("9", "9. Auflage");
 
       private final @NonNull String code;
@@ -3544,14 +4448,23 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoTod {
+      /**
+       * {@code J} - Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung
+       * (einschließlich Behandlungskomplikation) verstorben.
+       */
       J(
           "J",
           "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."),
 
+      /**
+       * {@code N} - Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer
+       * Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.
+       */
       N(
           "N",
           "Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben."),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt");
 
       private final @NonNull String code;
@@ -3590,20 +4503,28 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoVerlaufFernmetastasen {
+      /** {@code K} - keine Fernmetastasen nachweisbar */
       K("K", "keine Fernmetastasen nachweisbar"),
 
+      /** {@code R} - neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv */
       R("R", "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"),
 
+      /** {@code T} - Fernmetastasen Residuen */
       T("T", "Fernmetastasen Residuen"),
 
+      /** {@code P} - Fernmetastasen Progress */
       P("P", "Fernmetastasen Progress"),
 
+      /** {@code N} - Fernmetastasen No Change */
       N("N", "Fernmetastasen No Change"),
 
+      /** {@code F} - fraglicher Befund */
       F("F", "fraglicher Befund"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt"),
 
+      /** {@code X} - fehlende Angabe */
       X("X", "fehlende Angabe");
 
       private final @NonNull String code;
@@ -3643,26 +4564,39 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoVerlaufGesamtbeurteilung {
+      /** {@code V} - Vollremission (complete remission, CR) */
       V("V", "Vollremission (complete remission, CR)"),
 
+      /** {@code T} - Teilremission (partial remission, PR) */
       T("T", "Teilremission (partial remission, PR)"),
 
+      /** {@code K} - keine Änderung (no change, NC) = stable disease */
       K("K", "keine Änderung (no change, NC) = stable disease"),
 
+      /** {@code P} - Progression */
       P("P", "Progression"),
 
+      /** {@code D} - divergentes Geschehen */
       D("D", "divergentes Geschehen"),
 
+      /**
+       * {@code B} - klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt
+       * (minimal response, MR)
+       */
       B(
           "B",
           "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)"),
 
+      /** {@code R} - Vollremission mit residualen Auffälligkeiten (CRr) */
       R("R", "Vollremission mit residualen Auffälligkeiten (CRr)"),
 
+      /** {@code Y} - Rezidiv */
       Y("Y", "Rezidiv"),
 
+      /** {@code U} - Beurteilung unmöglich */
       U("U", "Beurteilung unmöglich"),
 
+      /** {@code X} - fehlende Angabe */
       X("X", "fehlende Angabe");
 
       private final @NonNull String code;
@@ -3702,20 +4636,28 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoVerlaufLymphknoten {
+      /** {@code K} - kein Lymphknotenbefall nachweisbar */
       K("K", "kein Lymphknotenbefall nachweisbar"),
 
+      /** {@code R} - neu aufgetretenes Lymphknotenrezidiv */
       R("R", "neu aufgetretenes Lymphknotenrezidiv"),
 
+      /** {@code T} - bekannter Lymphknotenbefall Residuen */
       T("T", "bekannter Lymphknotenbefall Residuen"),
 
+      /** {@code P} - bekannter Lymphknotenbefall Progress */
       P("P", "bekannter Lymphknotenbefall Progress"),
 
+      /** {@code N} - bekannter Lymphknotenbefall No Change */
       N("N", "bekannter Lymphknotenbefall No Change"),
 
+      /** {@code F} - fraglicher Befund */
       F("F", "fraglicher Befund"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt"),
 
+      /** {@code X} - fehlende Angabe */
       X("X", "fehlende Angabe");
 
       private final @NonNull String code;
@@ -3754,20 +4696,28 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoVerlaufPrimaertumor {
+      /** {@code K} - kein Tumor nachweisbar */
       K("K", "kein Tumor nachweisbar"),
 
+      /** {@code T} - Tumorreste (Residualtumor) */
       T("T", "Tumorreste (Residualtumor)"),
 
+      /** {@code P} - Tumorreste (Residualtumor) Progress */
       P("P", "Tumorreste (Residualtumor) Progress"),
 
+      /** {@code N} - Tumorreste (Residualtumor) No Change */
       N("N", "Tumorreste (Residualtumor) No Change"),
 
+      /** {@code R} - Lokalrezidiv */
       R("R", "Lokalrezidiv"),
 
+      /** {@code F} - fraglicher Befund */
       F("F", "fraglicher Befund"),
 
+      /** {@code U} - unbekannt */
       U("U", "unbekannt"),
 
+      /** {@code X} - fehlende Angabe */
       X("X", "fehlende Angabe");
 
       private final @NonNull String code;
@@ -3807,366 +4757,547 @@ public final class Onkologie {
     }
 
     public enum MiiCsOnkoWeitereKlassifikationenObds {
+      /** {@code binet} - BINET Staging System */
       BINET("binet", "BINET Staging System"),
 
+      /** {@code binet-a} - BINET A */
       BINET_A("binet-a", "BINET A"),
 
+      /** {@code binet-b} - BINET B */
       BINET_B("binet-b", "BINET B"),
 
+      /** {@code binet-c} - BINET C */
       BINET_C("binet-c", "BINET C"),
 
+      /** {@code ann-arbor-stadium} - Ann-Arbor Stadium */
       ANN_ARBOR_STADIUM("ann-arbor-stadium", "Ann-Arbor Stadium"),
 
+      /** {@code ann-arbor-i} - I */
       ANN_ARBOR_I("ann-arbor-i", "I"),
 
+      /** {@code ann-arbor-ia} - IA */
       ANN_ARBOR_IA("ann-arbor-ia", "IA"),
 
+      /** {@code ann-arbor-iae} - IAE */
       ANN_ARBOR_IAE("ann-arbor-iae", "IAE"),
 
+      /** {@code ann-arbor-ib} - IB */
       ANN_ARBOR_IB("ann-arbor-ib", "IB"),
 
+      /** {@code ann-arbor-ibe} - IBE */
       ANN_ARBOR_IBE("ann-arbor-ibe", "IBE"),
 
+      /** {@code ann-arbor-ie} - IE */
       ANN_ARBOR_IE("ann-arbor-ie", "IE"),
 
+      /** {@code ann-arbor-ix} - IX */
       ANN_ARBOR_IX("ann-arbor-ix", "IX"),
 
+      /** {@code ann-arbor-ixa} - IXA */
       ANN_ARBOR_IXA("ann-arbor-ixa", "IXA"),
 
+      /** {@code ann-arbor-ixae} - IXAE */
       ANN_ARBOR_IXAE("ann-arbor-ixae", "IXAE"),
 
+      /** {@code ann-arbor-ixb} - IXB */
       ANN_ARBOR_IXB("ann-arbor-ixb", "IXB"),
 
+      /** {@code ann-arbor-ixbe} - IXBE */
       ANN_ARBOR_IXBE("ann-arbor-ixbe", "IXBE"),
 
+      /** {@code ann-arbor-ixe} - IXE */
       ANN_ARBOR_IXE("ann-arbor-ixe", "IXE"),
 
+      /** {@code ann-arbor-ii} - II */
       ANN_ARBOR_II("ann-arbor-ii", "II"),
 
+      /** {@code ann-arbor-ii1} - II1 */
       ANN_ARBOR_II1("ann-arbor-ii1", "II1"),
 
+      /** {@code ann-arbor-ii1a} - II1A */
       ANN_ARBOR_II1A("ann-arbor-ii1a", "II1A"),
 
+      /** {@code ann-arbor-ii1ae} - II1AE */
       ANN_ARBOR_II1AE("ann-arbor-ii1ae", "II1AE"),
 
+      /** {@code ann-arbor-ii1b} - II1B */
       ANN_ARBOR_II1B("ann-arbor-ii1b", "II1B"),
 
+      /** {@code ann-arbor-ii1be} - II1BE */
       ANN_ARBOR_II1BE("ann-arbor-ii1be", "II1BE"),
 
+      /** {@code ann-arbor-ii1e} - II1E */
       ANN_ARBOR_II1E("ann-arbor-ii1e", "II1E"),
 
+      /** {@code ann-arbor-ii1x} - II1X */
       ANN_ARBOR_II1X("ann-arbor-ii1x", "II1X"),
 
+      /** {@code ann-arbor-ii1xa} - II1XA */
       ANN_ARBOR_II1XA("ann-arbor-ii1xa", "II1XA"),
 
+      /** {@code ann-arbor-ii1xae} - II1XAE */
       ANN_ARBOR_II1XAE("ann-arbor-ii1xae", "II1XAE"),
 
+      /** {@code ann-arbor-ii1xb} - II1XB */
       ANN_ARBOR_II1XB("ann-arbor-ii1xb", "II1XB"),
 
+      /** {@code ann-arbor-ii1xbe} - II1XBE */
       ANN_ARBOR_II1XBE("ann-arbor-ii1xbe", "II1XBE"),
 
+      /** {@code ann-arbor-ii1xe} - II1XE */
       ANN_ARBOR_II1XE("ann-arbor-ii1xe", "II1XE"),
 
+      /** {@code ann-arbor-ii2} - II2 */
       ANN_ARBOR_II2("ann-arbor-ii2", "II2"),
 
+      /** {@code ann-arbor-ii2a} - II2A */
       ANN_ARBOR_II2A("ann-arbor-ii2a", "II2A"),
 
+      /** {@code ann-arbor-ii2ae} - II2AE */
       ANN_ARBOR_II2AE("ann-arbor-ii2ae", "II2AE"),
 
+      /** {@code ann-arbor-ii2b} - II2B */
       ANN_ARBOR_II2B("ann-arbor-ii2b", "II2B"),
 
+      /** {@code ann-arbor-ii2be} - II2BE */
       ANN_ARBOR_II2BE("ann-arbor-ii2be", "II2BE"),
 
+      /** {@code ann-arbor-ii2e} - II2E */
       ANN_ARBOR_II2E("ann-arbor-ii2e", "II2E"),
 
+      /** {@code ann-arbor-ii2x} - II2X */
       ANN_ARBOR_II2X("ann-arbor-ii2x", "II2X"),
 
+      /** {@code ann-arbor-ii2xa} - II2XA */
       ANN_ARBOR_II2XA("ann-arbor-ii2xa", "II2XA"),
 
+      /** {@code ann-arbor-ii2xae} - II2XAE */
       ANN_ARBOR_II2XAE("ann-arbor-ii2xae", "II2XAE"),
 
+      /** {@code ann-arbor-ii2xb} - II2XB */
       ANN_ARBOR_II2XB("ann-arbor-ii2xb", "II2XB"),
 
+      /** {@code ann-arbor-ii2xbe} - II2XBE */
       ANN_ARBOR_II2XBE("ann-arbor-ii2xbe", "II2XBE"),
 
+      /** {@code ann-arbor-ii2xe} - II2XE */
       ANN_ARBOR_II2XE("ann-arbor-ii2xe", "II2XE"),
 
+      /** {@code ann-arbor-iia} - IIA */
       ANN_ARBOR_IIA("ann-arbor-iia", "IIA"),
 
+      /** {@code ann-arbor-iiae} - IIAE */
       ANN_ARBOR_IIAE("ann-arbor-iiae", "IIAE"),
 
+      /** {@code ann-arbor-iib} - IIB */
       ANN_ARBOR_IIB("ann-arbor-iib", "IIB"),
 
+      /** {@code ann-arbor-iibe} - IIBE */
       ANN_ARBOR_IIBE("ann-arbor-iibe", "IIBE"),
 
+      /** {@code ann-arbor-iie} - IIE */
       ANN_ARBOR_IIE("ann-arbor-iie", "IIE"),
 
+      /** {@code ann-arbor-iix} - IIX */
       ANN_ARBOR_IIX("ann-arbor-iix", "IIX"),
 
+      /** {@code ann-arbor-iixa} - IIXA */
       ANN_ARBOR_IIXA("ann-arbor-iixa", "IIXA"),
 
+      /** {@code ann-arbor-iixae} - IIXAE */
       ANN_ARBOR_IIXAE("ann-arbor-iixae", "IIXAE"),
 
+      /** {@code ann-arbor-iixb} - IIXB */
       ANN_ARBOR_IIXB("ann-arbor-iixb", "IIXB"),
 
+      /** {@code ann-arbor-iixbe} - IIXBE */
       ANN_ARBOR_IIXBE("ann-arbor-iixbe", "IIXBE"),
 
+      /** {@code ann-arbor-iixe} - IIXE */
       ANN_ARBOR_IIXE("ann-arbor-iixe", "IIXE"),
 
+      /** {@code ann-arbor-iii} - III */
       ANN_ARBOR_III("ann-arbor-iii", "III"),
 
+      /** {@code ann-arbor-iiia} - IIIA */
       ANN_ARBOR_IIIA("ann-arbor-iiia", "IIIA"),
 
+      /** {@code ann-arbor-iiiae} - IIIAE */
       ANN_ARBOR_IIIAE("ann-arbor-iiiae", "IIIAE"),
 
+      /** {@code ann-arbor-iiiaes} - IIIAES */
       ANN_ARBOR_IIIAES("ann-arbor-iiiaes", "IIIAES"),
 
+      /** {@code ann-arbor-iiias} - IIIAS */
       ANN_ARBOR_IIIAS("ann-arbor-iiias", "IIIAS"),
 
+      /** {@code ann-arbor-iiib} - IIIB */
       ANN_ARBOR_IIIB("ann-arbor-iiib", "IIIB"),
 
+      /** {@code ann-arbor-iiibe} - IIIBE */
       ANN_ARBOR_IIIBE("ann-arbor-iiibe", "IIIBE"),
 
+      /** {@code ann-arbor-iiibes} - IIIBES */
       ANN_ARBOR_IIIBES("ann-arbor-iiibes", "IIIBES"),
 
+      /** {@code ann-arbor-iiibs} - IIIBS */
       ANN_ARBOR_IIIBS("ann-arbor-iiibs", "IIIBS"),
 
+      /** {@code ann-arbor-iiie} - IIIE */
       ANN_ARBOR_IIIE("ann-arbor-iiie", "IIIE"),
 
+      /** {@code ann-arbor-iiies} - IIIES */
       ANN_ARBOR_IIIES("ann-arbor-iiies", "IIIES"),
 
+      /** {@code ann-arbor-iiis} - IIIS */
       ANN_ARBOR_IIIS("ann-arbor-iiis", "IIIS"),
 
+      /** {@code ann-arbor-iiix} - IIIX */
       ANN_ARBOR_IIIX("ann-arbor-iiix", "IIIX"),
 
+      /** {@code ann-arbor-iiixa} - IIIXA */
       ANN_ARBOR_IIIXA("ann-arbor-iiixa", "IIIXA"),
 
+      /** {@code ann-arbor-iiixae} - IIIXAE */
       ANN_ARBOR_IIIXAE("ann-arbor-iiixae", "IIIXAE"),
 
+      /** {@code ann-arbor-iiixaes} - IIIXAES */
       ANN_ARBOR_IIIXAES("ann-arbor-iiixaes", "IIIXAES"),
 
+      /** {@code ann-arbor-iiixas} - IIIXAS */
       ANN_ARBOR_IIIXAS("ann-arbor-iiixas", "IIIXAS"),
 
+      /** {@code ann-arbor-iiixb} - IIIXB */
       ANN_ARBOR_IIIXB("ann-arbor-iiixb", "IIIXB"),
 
+      /** {@code ann-arbor-iiixbe} - IIIXBE */
       ANN_ARBOR_IIIXBE("ann-arbor-iiixbe", "IIIXBE"),
 
+      /** {@code ann-arbor-iiixbes} - IIIXBES */
       ANN_ARBOR_IIIXBES("ann-arbor-iiixbes", "IIIXBES"),
 
+      /** {@code ann-arbor-iiixbs} - IIIXBS */
       ANN_ARBOR_IIIXBS("ann-arbor-iiixbs", "IIIXBS"),
 
+      /** {@code ann-arbor-iiixe} - IIIXE */
       ANN_ARBOR_IIIXE("ann-arbor-iiixe", "IIIXE"),
 
+      /** {@code ann-arbor-iiixes} - IIIXES */
       ANN_ARBOR_IIIXES("ann-arbor-iiixes", "IIIXES"),
 
+      /** {@code ann-arbor-iiixs} - IIIXS */
       ANN_ARBOR_IIIXS("ann-arbor-iiixs", "IIIXS"),
 
+      /** {@code ann-arbor-iii1} - III1 */
       ANN_ARBOR_III1("ann-arbor-iii1", "III1"),
 
+      /** {@code ann-arbor-iii1a} - III1A */
       ANN_ARBOR_III1A("ann-arbor-iii1a", "III1A"),
 
+      /** {@code ann-arbor-iii1b} - III1B */
       ANN_ARBOR_III1B("ann-arbor-iii1b", "III1B"),
 
+      /** {@code ann-arbor-iii2} - III2 */
       ANN_ARBOR_III2("ann-arbor-iii2", "III2"),
 
+      /** {@code ann-arbor-iii2a} - III2A */
       ANN_ARBOR_III2A("ann-arbor-iii2a", "III2A"),
 
+      /** {@code ann-arbor-iii2b} - III2B */
       ANN_ARBOR_III2B("ann-arbor-iii2b", "III2B"),
 
+      /** {@code ann-arbor-iv} - IV */
       ANN_ARBOR_IV("ann-arbor-iv", "IV"),
 
+      /** {@code ann-arbor-iva} - IVA */
       ANN_ARBOR_IVA("ann-arbor-iva", "IVA"),
 
+      /** {@code ann-arbor-ivae} - IVAE */
       ANN_ARBOR_IVAE("ann-arbor-ivae", "IVAE"),
 
+      /** {@code ann-arbor-ivb} - IVB */
       ANN_ARBOR_IVB("ann-arbor-ivb", "IVB"),
 
+      /** {@code ann-arbor-ivbe} - IVBE */
       ANN_ARBOR_IVBE("ann-arbor-ivbe", "IVBE"),
 
+      /** {@code ann-arbor-ive} - IVE */
       ANN_ARBOR_IVE("ann-arbor-ive", "IVE"),
 
+      /** {@code ann-arbor-ivx} - IVX */
       ANN_ARBOR_IVX("ann-arbor-ivx", "IVX"),
 
+      /** {@code ann-arbor-ivxa} - IVXA */
       ANN_ARBOR_IVXA("ann-arbor-ivxa", "IVXA"),
 
+      /** {@code ann-arbor-ivxae} - IVXAE */
       ANN_ARBOR_IVXAE("ann-arbor-ivxae", "IVXAE"),
 
+      /** {@code ann-arbor-ivxb} - IVXB */
       ANN_ARBOR_IVXB("ann-arbor-ivxb", "IVXB"),
 
+      /** {@code ann-arbor-ivxbe} - IVXBE */
       ANN_ARBOR_IVXBE("ann-arbor-ivxbe", "IVXBE"),
 
+      /** {@code ann-arbor-ivxe} - IVXE */
       ANN_ARBOR_IVXE("ann-arbor-ivxe", "IVXE"),
 
+      /** {@code iss} - International Staging System */
       ISS("iss", "International Staging System"),
 
+      /** {@code iss-i} - ISS I */
       ISS_I("iss-i", "ISS I"),
 
+      /** {@code iss-ii} - ISS II */
       ISS_II("iss-ii", "ISS II"),
 
+      /** {@code iss-iii} - ISS III */
       ISS_III("iss-iii", "ISS III"),
 
+      /** {@code isswm} - International Scoring System for Waldenström's Macroglobulinemia */
       ISSWM("isswm", "International Scoring System for Waldenström's Macroglobulinemia"),
 
+      /** {@code isswm-n} - ISSWM Niedrig */
       ISSWM_N("isswm-n", "ISSWM Niedrig"),
 
+      /** {@code isswm-i} - ISSWM Intermediär */
       ISSWM_I("isswm-i", "ISSWM Intermediär"),
 
+      /** {@code isswm-h} - ISSWM Hoch */
       ISSWM_H("isswm-h", "ISSWM Hoch"),
 
+      /** {@code who-grad} - WHO Grade */
       WHO_GRAD("who-grad", "WHO Grade"),
 
+      /** {@code who-grad-i} - WHO Grad I */
       WHO_GRAD_I("who-grad-i", "WHO Grad I"),
 
+      /** {@code who-grad-ii} - WHO Grad II */
       WHO_GRAD_II("who-grad-ii", "WHO Grad II"),
 
+      /** {@code who-grad-iii} - WHO Grad III */
       WHO_GRAD_III("who-grad-iii", "WHO Grad III"),
 
+      /** {@code who-grad-iv} - WHO Grad IV */
       WHO_GRAD_IV("who-grad-iv", "WHO Grad IV"),
 
+      /** {@code formen} - Formen */
       FORMEN("formen", "Formen"),
 
+      /** {@code formen-k} - Klassisch */
       FORMEN_K("formen-k", "Klassisch"),
 
+      /** {@code formen-v} - Variante */
       FORMEN_V("formen-v", "Variante"),
 
+      /** {@code eln-klassifikation} - ELN-Klassifikation */
       ELN_KLASSIFIKATION("eln-klassifikation", "ELN-Klassifikation"),
 
+      /** {@code eln-g} - ELN Günstig */
       ELN_G("eln-g", "ELN Günstig"),
 
+      /** {@code eln-i1} - ELN Intermediär I */
       ELN_I1("eln-i1", "ELN Intermediär I"),
 
+      /** {@code eln-i2} - ELN Intermediär II */
       ELN_I2("eln-i2", "ELN Intermediär II"),
 
+      /** {@code eln-u} - ELN Ungünstig */
       ELN_U("eln-u", "ELN Ungünstig"),
 
+      /** {@code eln-cp} - ELN Chronische Phase */
       ELN_CP("eln-cp", "ELN Chronische Phase"),
 
+      /** {@code eln-ap} - ELN Akzelierte Phase */
       ELN_AP("eln-ap", "ELN Akzelierte Phase"),
 
+      /** {@code eln-bk} - ELN Blastenkrise */
       ELN_BK("eln-bk", "ELN Blastenkrise"),
 
+      /** {@code durie-salmon-stadium} - Durie-Salmon Stadium */
       DURIE_SALMON_STADIUM("durie-salmon-stadium", "Durie-Salmon Stadium"),
 
+      /** {@code durie-salmon-i} - Durie-Salmon I */
       DURIE_SALMON_I("durie-salmon-i", "Durie-Salmon I"),
 
+      /** {@code durie-salmon-ia} - Durie-Salmon IA */
       DURIE_SALMON_IA("durie-salmon-ia", "Durie-Salmon IA"),
 
+      /** {@code durie-salmon-ib} - Durie-Salmon IB */
       DURIE_SALMON_IB("durie-salmon-ib", "Durie-Salmon IB"),
 
+      /** {@code durie-salmon-ii} - Durie-Salmon II */
       DURIE_SALMON_II("durie-salmon-ii", "Durie-Salmon II"),
 
+      /** {@code durie-salmon-iia} - Durie-Salmon IIA */
       DURIE_SALMON_IIA("durie-salmon-iia", "Durie-Salmon IIA"),
 
+      /** {@code durie-salmon-iib} - Durie-Salmon IIB */
       DURIE_SALMON_IIB("durie-salmon-iib", "Durie-Salmon IIB"),
 
+      /** {@code durie-salmon-iii} - Durie-Salmon III */
       DURIE_SALMON_III("durie-salmon-iii", "Durie-Salmon III"),
 
+      /** {@code durie-salmon-iiia} - Durie-Salmon IIIA */
       DURIE_SALMON_IIIA("durie-salmon-iiia", "Durie-Salmon IIIA"),
 
+      /** {@code durie-salmon-iiib} - Durie-Salmon IIIB */
       DURIE_SALMON_IIIB("durie-salmon-iiib", "Durie-Salmon IIIB"),
 
+      /** {@code bismuth} - Bismuth */
       BISMUTH("bismuth", "Bismuth"),
 
+      /** {@code bismuth-i} - Bismuth I */
       BISMUTH_I("bismuth-i", "Bismuth I"),
 
+      /** {@code bismuth-ii} - Bismuth II */
       BISMUTH_II("bismuth-ii", "Bismuth II"),
 
+      /** {@code bismuth-iii} - Bismuth III */
       BISMUTH_III("bismuth-iii", "Bismuth III"),
 
+      /** {@code bismuth-iiia} - Bismuth IIIA */
       BISMUTH_IIIA("bismuth-iiia", "Bismuth IIIA"),
 
+      /** {@code bismuth-iiib} - Bismuth IIIB */
       BISMUTH_IIIB("bismuth-iiib", "Bismuth IIIB"),
 
+      /** {@code bismuth-iv} - Bismuth IV */
       BISMUTH_IV("bismuth-iv", "Bismuth IV"),
 
+      /** {@code masaoka} - Masaoka */
       MASAOKA("masaoka", "Masaoka"),
 
+      /** {@code masaoka-i} - Masaoka I */
       MASAOKA_I("masaoka-i", "Masaoka I"),
 
+      /** {@code masaoka-ii} - Masaoka II */
       MASAOKA_II("masaoka-ii", "Masaoka II"),
 
+      /** {@code masaoka-iii} - Masaoka III */
       MASAOKA_III("masaoka-iii", "Masaoka III"),
 
+      /** {@code masaoka-iv} - Masaoka IV */
       MASAOKA_IV("masaoka-iv", "Masaoka IV"),
 
+      /** {@code masaoka-iva} - Masaoka IVA */
       MASAOKA_IVA("masaoka-iva", "Masaoka IVA"),
 
+      /** {@code masaoka-ivb} - Masaoka IVB */
       MASAOKA_IVB("masaoka-ivb", "Masaoka IVB"),
 
+      /** {@code mitoserate-gist} - Mitoserate-GIST */
       MITOSERATE_GIST("mitoserate-gist", "Mitoserate-GIST"),
 
+      /** {@code mitoserate-gist-n} - Mitoserate-GIST Niedrig */
       MITOSERATE_GIST_N("mitoserate-gist-n", "Mitoserate-GIST Niedrig"),
 
+      /** {@code mitoserate-gist-h} - Mitoserate-GIST Hoch */
       MITOSERATE_GIST_H("mitoserate-gist-h", "Mitoserate-GIST Hoch"),
 
+      /** {@code p16} - p16 */
       P16("p16", "p16"),
 
+      /** {@code p16-p} - p16 Positiv */
       P16_P("p16-p", "p16 Positiv"),
 
+      /** {@code p16-n} - p16 Negativ */
       P16_N("p16-n", "p16 Negativ"),
 
+      /** {@code eutos-score} - EUTOS-Score */
       EUTOS_SCORE("eutos-score", "EUTOS-Score"),
 
+      /** {@code eutos-score-n} - EUTOS-Score Niedrigrisiko */
       EUTOS_SCORE_N("eutos-score-n", "EUTOS-Score Niedrigrisiko"),
 
+      /** {@code eutos-score-h} - EUTOS-Score Hochrisiko */
       EUTOS_SCORE_H("eutos-score-h", "EUTOS-Score Hochrisiko"),
 
+      /** {@code sanz-score} - Sanz-Score */
       SANZ_SCORE("sanz-score", "Sanz-Score"),
 
+      /** {@code sanz-score-n} - Sanz-Score Niedrig */
       SANZ_SCORE_N("sanz-score-n", "Sanz-Score Niedrig"),
 
+      /** {@code sanz-score-i} - Sanz-Score Intermediär */
       SANZ_SCORE_I("sanz-score-i", "Sanz-Score Intermediär"),
 
+      /** {@code sanz-score-h} - Sanz-Score Hoch */
       SANZ_SCORE_H("sanz-score-h", "Sanz-Score Hoch"),
 
+      /** {@code ipi} - IPI */
       IPI("ipi", "IPI"),
 
+      /** {@code ipi-n} - IPI Niedrig */
       IPI_N("ipi-n", "IPI Niedrig"),
 
+      /** {@code ipi-ni} - IPI Niedrig-Intermediär */
       IPI_NI("ipi-ni", "IPI Niedrig-Intermediär"),
 
+      /** {@code ipi-hi} - IPI Hoch-Intermediär */
       IPI_HI("ipi-hi", "IPI Hoch-Intermediär"),
 
+      /** {@code ipi-h} - IPI Hoch */
       IPI_H("ipi-h", "IPI Hoch"),
 
+      /** {@code flipi} - FLIPI */
       FLIPI("flipi", "FLIPI"),
 
+      /** {@code flipi-l} - FLIPI Low risk */
       FLIPI_L("flipi-l", "FLIPI Low risk"),
 
+      /** {@code flipi-i} - FLIPI Intermediate risk */
       FLIPI_I("flipi-i", "FLIPI Intermediate risk"),
 
+      /** {@code flipi-h} - FLIPI High risk */
       FLIPI_H("flipi-h", "FLIPI High risk"),
 
+      /** {@code mipi} - MIPI */
       MIPI("mipi", "MIPI"),
 
+      /** {@code mipi-n} - MIPI Niedrig */
       MIPI_N("mipi-n", "MIPI Niedrig"),
 
+      /** {@code mipi-i} - MIPI Intermediär */
       MIPI_I("mipi-i", "MIPI Intermediär"),
 
+      /** {@code mipi-h} - MIPI Hoch */
       MIPI_H("mipi-h", "MIPI Hoch"),
 
+      /** {@code risikogruppen-ghsg} - Risikogruppen GHSG */
       RISIKOGRUPPEN_GHSG("risikogruppen-ghsg", "Risikogruppen GHSG"),
 
+      /** {@code risikogruppen-ghsg-fr} - GHSG Frühe */
       RISIKOGRUPPEN_GHSG_FR("risikogruppen-ghsg-fr", "GHSG Frühe"),
 
+      /** {@code risikogruppen-ghsg-i} - GHSG Intermediär */
       RISIKOGRUPPEN_GHSG_I("risikogruppen-ghsg-i", "GHSG Intermediär"),
 
+      /** {@code risikogruppen-ghsg-fo} - GHSG Fortgeschritten */
       RISIKOGRUPPEN_GHSG_FO("risikogruppen-ghsg-fo", "GHSG Fortgeschritten"),
 
+      /** {@code ipss} - IPSS */
       IPSS("ipss", "IPSS"),
 
+      /** {@code ipss-l} - IPSS Low */
       IPSS_L("ipss-l", "IPSS Low"),
 
+      /** {@code ipss-i1} - IPSS Intermediate-I */
       IPSS_I1("ipss-i1", "IPSS Intermediate-I"),
 
+      /** {@code ipss-i2} - IPSS Intermediate-II */
       IPSS_I2("ipss-i2", "IPSS Intermediate-II"),
 
+      /** {@code ipss-h} - IPSS High risk */
       IPSS_H("ipss-h", "IPSS High risk"),
 
+      /** {@code her2-neu} - HER2-neu */
       HER2_NEU("her2-neu", "HER2-neu"),
 
+      /** {@code her2-neu-p} - HER2-neu Positiv */
       HER2_NEU_P("her2-neu-p", "HER2-neu Positiv"),
 
+      /** {@code her2-neu-n} - HER2-neu Negativ */
       HER2_NEU_N("her2-neu-n", "HER2-neu Negativ");
 
       private final @NonNull String code;

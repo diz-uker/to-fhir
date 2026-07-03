@@ -58,18 +58,25 @@ public final class Base {
     }
 
     public enum MiiCsPersonVitalstatus {
+      /** {@code L} - Patient lebt */
       L("L", "Patient lebt"),
 
+      /** {@code T} - Patient verstorben */
       T("T", "Patient verstorben"),
 
+      /** {@code A} - unbekannt, Patient nicht mehr auffindbar (lost to follow-up) */
       A("A", "unbekannt, Patient nicht mehr auffindbar (lost to follow-up)"),
 
+      /** {@code N} - unbekannt, Betreuung/Nachsorge nicht mehr nötig */
       N("N", "unbekannt, Betreuung/Nachsorge nicht mehr nötig"),
 
+      /** {@code B} - unbekannt, Patient ist anderenorts in Betreuung */
       B("B", "unbekannt, Patient ist anderenorts in Betreuung"),
 
+      /** {@code V} - unbekannt, Patient verweigert weitere Betreuung */
       V("V", "unbekannt, Patient verweigert weitere Betreuung"),
 
+      /** {@code X} - unbekannt */
       X("X", "unbekannt");
 
       private final @NonNull String code;

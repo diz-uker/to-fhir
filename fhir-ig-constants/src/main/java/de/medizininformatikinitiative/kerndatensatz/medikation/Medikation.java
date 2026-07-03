@@ -25,10 +25,13 @@ public final class Medikation {
     }
 
     public enum MiiCsMedikationWirkstofftyp {
+      /** {@code IN} - ingredient */
       IN("IN", "ingredient"),
 
+      /** {@code PIN} - precise ingredient */
       PIN("PIN", "precise ingredient"),
 
+      /** {@code MIN} - multiple ingredients */
       MIN("MIN", "multiple ingredients");
 
       private final @NonNull String code;

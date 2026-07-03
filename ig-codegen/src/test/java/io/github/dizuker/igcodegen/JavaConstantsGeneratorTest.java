@@ -101,7 +101,9 @@ class JavaConstantsGeneratorTest {
 
     assertTrue(source.contains("import org.hl7.fhir.r4.model.Coding;"));
     assertTrue(source.contains("enum MiiCsOnkoIntention"));
+    assertTrue(source.contains("{@code K} - kurativ"));
     assertTrue(source.contains("K(\"K\", \"kurativ\")"));
+    assertTrue(source.contains("{@code P} - palliativ"));
     assertTrue(source.contains("P(\"P\", \"palliativ\")"));
     assertTrue(source.contains("public @NonNull Coding coding(@NonNull MiiCsOnkoIntention this)"));
     assertTrue(
