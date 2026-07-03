@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/diz-uker/to-fhir/compare/v0.2.4...v0.2.5) (2026-07-03)
+
+
+### Features
+
+* support for null annotations ([#58](https://github.com/diz-uker/to-fhir/issues/58)) ([ee472bf](https://github.com/diz-uker/to-fhir/commit/ee472bf306fdfa07b28e31d73346463172d215ad))
+
 ## [0.2.4](https://github.com/diz-uker/to-fhir/compare/v0.2.3...v0.2.4) (2026-07-03)
 
 
