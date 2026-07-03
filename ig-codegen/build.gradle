@@ -21,7 +21,7 @@ dependencies {
     api 'org.jspecify:jspecify:1.0.0'
 
     errorprone 'com.google.errorprone:error_prone_core:2.50.0'
-    errorprone 'com.uber.nullaway:nullaway:0.13.6'
+    errorprone 'com.uber.nullaway:nullaway:0.13.7'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.1.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-params:6.1.0'
