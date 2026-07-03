@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.6](https://github.com/diz-uker/to-fhir/compare/v0.2.5...v0.2.6) (2026-07-03)
+
+
+### Bug Fixes
+
+* receiver nonnull ([#60](https://github.com/diz-uker/to-fhir/issues/60)) ([6fc0f42](https://github.com/diz-uker/to-fhir/commit/6fc0f427c0e4a6e08ff2f197ba7d0a17cb252823))
+
 ## [0.2.5](https://github.com/diz-uker/to-fhir/compare/v0.2.4...v0.2.5) (2026-07-03)
 
 
