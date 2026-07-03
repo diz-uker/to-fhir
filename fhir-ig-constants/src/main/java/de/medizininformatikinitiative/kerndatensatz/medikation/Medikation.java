@@ -25,10 +25,13 @@ public final class Medikation {
     }
 
     public enum MiiCsMedikationWirkstofftyp {
+      /** {@code IN} - ingredient */
       IN("IN", "ingredient"),
 
+      /** {@code PIN} - precise ingredient */
       PIN("PIN", "precise ingredient"),
 
+      /** {@code MIN} - multiple ingredients */
       MIN("MIN", "multiple ingredients");
 
       private final @NonNull String code;
@@ -44,7 +47,7 @@ public final class Medikation {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp}
        */
-      public @NonNull Coding coding() {
+      public @NonNull Coding coding(@NonNull MiiCsMedikationWirkstofftyp this) {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp",
             code,

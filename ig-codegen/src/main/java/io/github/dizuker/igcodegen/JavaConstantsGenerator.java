@@ -134,6 +134,8 @@ public final class JavaConstantsGenerator {
             .addMethod(
                 MethodSpec.methodBuilder("coding")
                     .addModifiers(Modifier.PUBLIC)
+                    .addParameter(
+                        ParameterSpec.builder(selfType.annotated(NONNULL), "this").build())
                     .returns(CODING_TYPE.annotated(NONNULL))
                     .addJavadoc(
                         "@return a new {@link Coding} for this concept, with system {@code $L}\n",
@@ -164,9 +166,14 @@ public final class JavaConstantsGenerator {
                     .build());
 
     for (ConceptConstant concept : concepts) {
-      enumType.addEnumConstant(
-          concept.constantName(),
-          TypeSpec.anonymousClassBuilder("$S, $S", concept.code(), concept.display()).build());
+      TypeSpec.Builder constant =
+          TypeSpec.anonymousClassBuilder("$S, $S", concept.code(), concept.display());
+      if (concept.display() != null) {
+        constant.addJavadoc("{@code $L} - $L\n", concept.code(), concept.display());
+      } else {
+        constant.addJavadoc("{@code $L}\n", concept.code());
+      }
+      enumType.addEnumConstant(concept.constantName(), constant.build());
     }
     return enumType.build();
   }

@@ -58,18 +58,25 @@ public final class Base {
     }
 
     public enum MiiCsPersonVitalstatus {
+      /** {@code L} - Patient lebt */
       L("L", "Patient lebt"),
 
+      /** {@code T} - Patient verstorben */
       T("T", "Patient verstorben"),
 
+      /** {@code A} - unbekannt, Patient nicht mehr auffindbar (lost to follow-up) */
       A("A", "unbekannt, Patient nicht mehr auffindbar (lost to follow-up)"),
 
+      /** {@code N} - unbekannt, Betreuung/Nachsorge nicht mehr nötig */
       N("N", "unbekannt, Betreuung/Nachsorge nicht mehr nötig"),
 
+      /** {@code B} - unbekannt, Patient ist anderenorts in Betreuung */
       B("B", "unbekannt, Patient ist anderenorts in Betreuung"),
 
+      /** {@code V} - unbekannt, Patient verweigert weitere Betreuung */
       V("V", "unbekannt, Patient verweigert weitere Betreuung"),
 
+      /** {@code X} - unbekannt */
       X("X", "unbekannt");
 
       private final @NonNull String code;
@@ -85,7 +92,7 @@ public final class Base {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus}
        */
-      public @NonNull Coding coding() {
+      public @NonNull Coding coding(@NonNull MiiCsPersonVitalstatus this) {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus",
             code,
