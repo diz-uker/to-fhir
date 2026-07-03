@@ -4,6 +4,8 @@ package de.medizininformatikinitiative.kerndatensatz.onkologie;
 
 import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public final class Onkologie {
   private Onkologie() {}
@@ -505,11 +507,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoAllgemeinerLeistungszustandEcog(String code, String display) {
+      MiiCsOnkoAllgemeinerLeistungszustandEcog(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -518,7 +520,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog",
             code,
@@ -530,7 +532,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoAllgemeinerLeistungszustandEcog> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoAllgemeinerLeistungszustandEcog> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoAllgemeinerLeistungszustandEcog value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -563,11 +566,12 @@ public final class Onkologie {
 
       _0_("0%", "0%");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoAllgemeinerLeistungszustandKarnofsky(String code, String display) {
+      MiiCsOnkoAllgemeinerLeistungszustandKarnofsky(
+          @NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -576,7 +580,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
             code,
@@ -588,7 +592,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoAllgemeinerLeistungszustandKarnofsky> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoAllgemeinerLeistungszustandKarnofsky> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -613,11 +618,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoAsaObds(String code, String display) {
+      MiiCsOnkoAsaObds(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -626,7 +631,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds",
             code,
@@ -638,7 +643,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoAsaObds> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoAsaObds> fromValue(@NonNull String code) {
         for (MiiCsOnkoAsaObds value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -673,11 +678,11 @@ public final class Onkologie {
 
       GEN("GEN", "generalisierte Metastasierung");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoFernmetastasen(String code, String display) {
+      MiiCsOnkoFernmetastasen(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -686,7 +691,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen",
             code,
@@ -698,7 +703,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoFernmetastasen> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoFernmetastasen> fromValue(@NonNull String code) {
         for (MiiCsOnkoFernmetastasen value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -721,11 +726,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoGenetischeVarianteAuspraegung(String code, String display) {
+      MiiCsOnkoGenetischeVarianteAuspraegung(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -734,7 +739,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung",
             code,
@@ -746,7 +751,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoGenetischeVarianteAuspraegung> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoGenetischeVarianteAuspraegung> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoGenetischeVarianteAuspraegung value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -783,11 +789,11 @@ public final class Onkologie {
 
       T("T", "trifft nicht zu");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoGrading(String code, String display) {
+      MiiCsOnkoGrading(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -796,7 +802,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading",
             code,
@@ -808,7 +814,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoGrading> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoGrading> fromValue(@NonNull String code) {
         for (MiiCsOnkoGrading value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -833,11 +839,11 @@ public final class Onkologie {
 
       O("O", "lokal kurativ bei Oligometastasierung");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoIntention(String code, String display) {
+      MiiCsOnkoIntention(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -846,7 +852,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
             code,
@@ -858,7 +864,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoIntention> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoIntention> fromValue(@NonNull String code) {
         for (MiiCsOnkoIntention value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -877,11 +883,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoKrkAnastomoseninsuffizienz(String code, String display) {
+      MiiCsOnkoKrkAnastomoseninsuffizienz(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -890,7 +896,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz",
             code,
@@ -902,7 +908,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoKrkAnastomoseninsuffizienz> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoKrkAnastomoseninsuffizienz> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoKrkAnastomoseninsuffizienz value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -919,11 +926,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoKrkMrtMesorektaleFaszieStatus(String code, String display) {
+      MiiCsOnkoKrkMrtMesorektaleFaszieStatus(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -932,7 +939,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status",
             code,
@@ -944,7 +951,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoKrkMrtMesorektaleFaszieStatus> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoKrkMrtMesorektaleFaszieStatus> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoKrkMrtMesorektaleFaszieStatus value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -965,11 +973,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoKrkStomaAnzeichnung(String code, String display) {
+      MiiCsOnkoKrkStomaAnzeichnung(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -978,7 +986,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung",
             code,
@@ -990,7 +998,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoKrkStomaAnzeichnung> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoKrkStomaAnzeichnung> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoKrkStomaAnzeichnung value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1007,11 +1016,11 @@ public final class Onkologie {
 
       _3("3", "Grad 3 (schlecht)");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoKrkTmeQualitaet(String code, String display) {
+      MiiCsOnkoKrkTmeQualitaet(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1020,7 +1029,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet",
             code,
@@ -1032,7 +1041,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoKrkTmeQualitaet> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoKrkTmeQualitaet> fromValue(@NonNull String code) {
         for (MiiCsOnkoKrkTmeQualitaet value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1053,11 +1062,11 @@ public final class Onkologie {
 
       EQUIVOCAL("equivocal", "equivocal");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoMammaHer2NeuStatusLeitlinie(String code, String display) {
+      MiiCsOnkoMammaHer2NeuStatusLeitlinie(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1066,7 +1075,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie",
             code,
@@ -1078,7 +1087,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoMammaHer2NeuStatusLeitlinie> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoMammaHer2NeuStatusLeitlinie> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoMammaHer2NeuStatusLeitlinie value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1095,11 +1105,11 @@ public final class Onkologie {
 
       U("U", "unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoMammaHer2NeuStatusObds(String code, String display) {
+      MiiCsOnkoMammaHer2NeuStatusObds(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1108,7 +1118,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds",
             code,
@@ -1120,7 +1130,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoMammaHer2NeuStatusObds> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoMammaHer2NeuStatusObds> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoMammaHer2NeuStatusObds value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1137,11 +1148,11 @@ public final class Onkologie {
 
       NEGATIV("negativ", "negativ");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoMammaRezeptorstatusLeitlinie(String code, String display) {
+      MiiCsOnkoMammaRezeptorstatusLeitlinie(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1150,7 +1161,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie",
             code,
@@ -1162,7 +1173,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoMammaRezeptorstatusLeitlinie> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoMammaRezeptorstatusLeitlinie> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoMammaRezeptorstatusLeitlinie value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1179,11 +1191,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoMelanomUlzeration(String code, String display) {
+      MiiCsOnkoMelanomUlzeration(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1192,7 +1204,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration",
             code,
@@ -1204,7 +1216,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoMelanomUlzeration> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoMelanomUlzeration> fromValue(@NonNull String code) {
         for (MiiCsOnkoMelanomUlzeration value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1229,11 +1241,11 @@ public final class Onkologie {
 
       K("K", "keine");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoNebenwirkungCtcaeGrad(String code, String display) {
+      MiiCsOnkoNebenwirkungCtcaeGrad(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1242,7 +1254,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
             code,
@@ -1254,7 +1266,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoNebenwirkungCtcaeGrad> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoNebenwirkungCtcaeGrad> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoNebenwirkungCtcaeGrad value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1427,11 +1440,11 @@ public final class Onkologie {
 
       WSS("WSS", "Wundheilungsstörung, subkutane");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoOperationKomplikation(String code, String display) {
+      MiiCsOnkoOperationKomplikation(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1440,7 +1453,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation",
             code,
@@ -1452,7 +1465,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoOperationKomplikation> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoOperationKomplikation> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoOperationKomplikation value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1469,11 +1483,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoOperationUrgency(String code, String display) {
+      MiiCsOnkoOperationUrgency(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1482,7 +1496,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency",
             code,
@@ -1494,7 +1508,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoOperationUrgency> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoOperationUrgency> fromValue(@NonNull String code) {
         for (MiiCsOnkoOperationUrgency value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1529,11 +1543,11 @@ public final class Onkologie {
 
       _9("9", "unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoPrimaertumorDiagnosesicherung(String code, String display) {
+      MiiCsOnkoPrimaertumorDiagnosesicherung(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1542,7 +1556,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
             code,
@@ -1554,7 +1568,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoPrimaertumorDiagnosesicherung> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoPrimaertumorDiagnosesicherung> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoPrimaertumorDiagnosesicherung value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1571,11 +1586,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoProstataPostsurgicalComplications(String code, String display) {
+      MiiCsOnkoProstataPostsurgicalComplications(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1584,7 +1599,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications",
             code,
@@ -1596,7 +1611,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoProstataPostsurgicalComplications> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoProstataPostsurgicalComplications> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoProstataPostsurgicalComplications value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1621,11 +1637,11 @@ public final class Onkologie {
 
       U("U", "Residualtumorstatus ist nicht bekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoResidualstatus(String code, String display) {
+      MiiCsOnkoResidualstatus(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1634,7 +1650,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
             code,
@@ -1646,7 +1662,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoResidualstatus> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoResidualstatus> fromValue(@NonNull String code) {
         for (MiiCsOnkoResidualstatus value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1669,11 +1685,11 @@ public final class Onkologie {
 
       T("T", "trifft nicht zu");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoSeitenlokalisation(String code, String display) {
+      MiiCsOnkoSeitenlokalisation(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1682,7 +1698,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
             code,
@@ -1694,7 +1710,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoSeitenlokalisation> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoSeitenlokalisation> fromValue(@NonNull String code) {
         for (MiiCsOnkoSeitenlokalisation value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1761,11 +1777,11 @@ public final class Onkologie {
 
       S("S", "Sonstiges");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoStrahlentherapieApplikationsart(String code, String display) {
+      MiiCsOnkoStrahlentherapieApplikationsart(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1774,7 +1790,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
             code,
@@ -1786,7 +1802,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoStrahlentherapieApplikationsart> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoStrahlentherapieApplikationsart> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoStrahlentherapieApplikationsart value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1807,11 +1824,11 @@ public final class Onkologie {
 
       N("N", "nein, ohne Boost");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoStrahlentherapieBoost(String code, String display) {
+      MiiCsOnkoStrahlentherapieBoost(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1820,7 +1837,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost",
             code,
@@ -1832,7 +1849,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoStrahlentherapieBoost> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoStrahlentherapieBoost> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoStrahlentherapieBoost value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -1879,11 +1897,11 @@ public final class Onkologie {
 
       SONU("SONU", "Sonstige Nuklide");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoStrahlentherapieStrahlenart(String code, String display) {
+      MiiCsOnkoStrahlentherapieStrahlenart(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1892,7 +1910,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart",
             code,
@@ -1904,7 +1922,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoStrahlentherapieStrahlenart> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoStrahlentherapieStrahlenart> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoStrahlentherapieStrahlenart value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -2115,11 +2134,11 @@ public final class Onkologie {
 
       _10_3("10.3", "Sonstige, nicht genannte Zielgebiete");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoStrahlentherapieZielgebiet(String code, String display) {
+      MiiCsOnkoStrahlentherapieZielgebiet(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -2128,7 +2147,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet",
             code,
@@ -2140,7 +2159,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoStrahlentherapieZielgebiet> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoStrahlentherapieZielgebiet> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoStrahlentherapieZielgebiet value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -2451,11 +2471,11 @@ public final class Onkologie {
 
       _8_2_("8.2.", "Mantelfeldbestrahlung");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoStrahlentherapieZielgebiet2014(String code, String display) {
+      MiiCsOnkoStrahlentherapieZielgebiet2014(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -2464,7 +2484,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014",
             code,
@@ -2476,7 +2496,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoStrahlentherapieZielgebiet2014> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoStrahlentherapieZielgebiet2014> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoStrahlentherapieZielgebiet2014 value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -2493,11 +2514,11 @@ public final class Onkologie {
 
       U("U", "Unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoStudienteilnahme(String code, String display) {
+      MiiCsOnkoStudienteilnahme(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -2506,7 +2527,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
             code,
@@ -2518,7 +2539,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoStudienteilnahme> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoStudienteilnahme> fromValue(@NonNull String code) {
         for (MiiCsOnkoStudienteilnahme value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -2868,11 +2889,11 @@ public final class Onkologie {
 
       CAR_T_ZELLTHERAPIE("CAR-T-Zelltherapie", "CAR-T-Zelltherapie");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoSystemischeTherapieProtokolle(String code, String display) {
+      MiiCsOnkoSystemischeTherapieProtokolle(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -2881,7 +2902,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle",
             code,
@@ -2893,7 +2914,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoSystemischeTherapieProtokolle> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoSystemischeTherapieProtokolle> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoSystemischeTherapieProtokolle value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -2910,11 +2932,11 @@ public final class Onkologie {
 
       U("U", "unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTherapieabweichung(String code, String display) {
+      MiiCsOnkoTherapieabweichung(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -2923,7 +2945,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
             code,
@@ -2935,7 +2957,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTherapieabweichung> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTherapieabweichung> fromValue(@NonNull String code) {
         for (MiiCsOnkoTherapieabweichung value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -2956,11 +2978,11 @@ public final class Onkologie {
 
       THER("ther", "Therapieplanung ohne Tumorkonferenz");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTherapieplanungTyp(String code, String display) {
+      MiiCsOnkoTherapieplanungTyp(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -2969,7 +2991,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
             code,
@@ -2981,7 +3003,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTherapieplanungTyp> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTherapieplanungTyp> fromValue(@NonNull String code) {
         for (MiiCsOnkoTherapieplanungTyp value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3012,11 +3034,11 @@ public final class Onkologie {
 
       U("U", "unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTherapieEndeGrund(String code, String display) {
+      MiiCsOnkoTherapieEndeGrund(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3025,7 +3047,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund",
             code,
@@ -3037,7 +3059,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTherapieEndeGrund> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTherapieEndeGrund> fromValue(@NonNull String code) {
         for (MiiCsOnkoTherapieEndeGrund value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3060,11 +3082,11 @@ public final class Onkologie {
 
       S("S", "Sonstiges");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTherapieStellungzurop(String code, String display) {
+      MiiCsOnkoTherapieStellungzurop(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3073,7 +3095,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop",
             code,
@@ -3085,7 +3107,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTherapieStellungzurop> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTherapieStellungzurop> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoTherapieStellungzurop value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3128,11 +3151,11 @@ public final class Onkologie {
 
       SO("SO", "Sonstiges");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTherapieTyp(String code, String display) {
+      MiiCsOnkoTherapieTyp(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3141,7 +3164,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
             code,
@@ -3153,7 +3176,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTherapieTyp> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTherapieTyp> fromValue(@NonNull String code) {
         for (MiiCsOnkoTherapieTyp value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3434,11 +3457,11 @@ public final class Onkologie {
 
       IVC("IVC", "Stadium IVC");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTnmUicc(String code, String display) {
+      MiiCsOnkoTnmUicc(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3447,7 +3470,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.uicc.org/resources/tnm}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding("https://www.uicc.org/resources/tnm", code, display);
       }
 
@@ -3456,7 +3479,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTnmUicc> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTnmUicc> fromValue(@NonNull String code) {
         for (MiiCsOnkoTnmUicc value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3485,11 +3508,11 @@ public final class Onkologie {
 
       _9("9", "9. Auflage");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTnmVersion(String code, String display) {
+      MiiCsOnkoTnmVersion(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3498,7 +3521,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
             code,
@@ -3510,7 +3533,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTnmVersion> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTnmVersion> fromValue(@NonNull String code) {
         for (MiiCsOnkoTnmVersion value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3531,11 +3554,11 @@ public final class Onkologie {
 
       U("U", "unbekannt");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoTod(String code, String display) {
+      MiiCsOnkoTod(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3544,7 +3567,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod",
             code,
@@ -3556,7 +3579,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoTod> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoTod> fromValue(@NonNull String code) {
         for (MiiCsOnkoTod value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3583,11 +3606,11 @@ public final class Onkologie {
 
       X("X", "fehlende Angabe");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoVerlaufFernmetastasen(String code, String display) {
+      MiiCsOnkoVerlaufFernmetastasen(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3596,7 +3619,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen",
             code,
@@ -3608,7 +3631,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoVerlaufFernmetastasen> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoVerlaufFernmetastasen> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoVerlaufFernmetastasen value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3641,11 +3665,11 @@ public final class Onkologie {
 
       X("X", "fehlende Angabe");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoVerlaufGesamtbeurteilung(String code, String display) {
+      MiiCsOnkoVerlaufGesamtbeurteilung(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3654,7 +3678,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung",
             code,
@@ -3666,7 +3690,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoVerlaufGesamtbeurteilung> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoVerlaufGesamtbeurteilung> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoVerlaufGesamtbeurteilung value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3693,11 +3718,11 @@ public final class Onkologie {
 
       X("X", "fehlende Angabe");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoVerlaufLymphknoten(String code, String display) {
+      MiiCsOnkoVerlaufLymphknoten(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3706,7 +3731,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten",
             code,
@@ -3718,7 +3743,7 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoVerlaufLymphknoten> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoVerlaufLymphknoten> fromValue(@NonNull String code) {
         for (MiiCsOnkoVerlaufLymphknoten value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -3745,11 +3770,11 @@ public final class Onkologie {
 
       X("X", "fehlende Angabe");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoVerlaufPrimaertumor(String code, String display) {
+      MiiCsOnkoVerlaufPrimaertumor(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -3758,7 +3783,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor",
             code,
@@ -3770,7 +3795,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoVerlaufPrimaertumor> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoVerlaufPrimaertumor> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoVerlaufPrimaertumor value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
@@ -4143,11 +4169,11 @@ public final class Onkologie {
 
       HER2_NEU_N("her2-neu-n", "HER2-neu Negativ");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      MiiCsOnkoWeitereKlassifikationenObds(String code, String display) {
+      MiiCsOnkoWeitereKlassifikationenObds(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -4156,7 +4182,7 @@ public final class Onkologie {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
             code,
@@ -4168,7 +4194,8 @@ public final class Onkologie {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<MiiCsOnkoWeitereKlassifikationenObds> fromValue(String code) {
+      public static Optional<@NonNull MiiCsOnkoWeitereKlassifikationenObds> fromValue(
+          @NonNull String code) {
         for (MiiCsOnkoWeitereKlassifikationenObds value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);

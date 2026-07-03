@@ -1,8 +1,11 @@
 package io.github.dizuker.igcodegen;
 
+import com.palantir.javapoet.AnnotationSpec;
 import com.palantir.javapoet.ClassName;
+import com.palantir.javapoet.FieldSpec;
 import com.palantir.javapoet.JavaFile;
 import com.palantir.javapoet.MethodSpec;
+import com.palantir.javapoet.ParameterSpec;
 import com.palantir.javapoet.ParameterizedTypeName;
 import com.palantir.javapoet.TypeSpec;
 import java.io.IOException;
@@ -30,6 +33,10 @@ import javax.lang.model.element.Modifier;
 public final class JavaConstantsGenerator {
 
   private static final ClassName CODING_TYPE = ClassName.get("org.hl7.fhir.r4.model", "Coding");
+  private static final AnnotationSpec NONNULL =
+      AnnotationSpec.builder(ClassName.get("org.jspecify.annotations", "NonNull")).build();
+  private static final AnnotationSpec NULLABLE =
+      AnnotationSpec.builder(ClassName.get("org.jspecify.annotations", "Nullable")).build();
 
   private JavaConstantsGenerator() {}
 
@@ -97,19 +104,37 @@ public final class JavaConstantsGenerator {
     TypeSpec.Builder enumType =
         TypeSpec.enumBuilder(enumName)
             .addModifiers(Modifier.PUBLIC)
-            .addField(String.class, "code", Modifier.PRIVATE, Modifier.FINAL)
-            .addField(String.class, "display", Modifier.PRIVATE, Modifier.FINAL)
+            .addField(
+                FieldSpec.builder(
+                        ClassName.get(String.class).annotated(NONNULL),
+                        "code",
+                        Modifier.PRIVATE,
+                        Modifier.FINAL)
+                    .build())
+            .addField(
+                FieldSpec.builder(
+                        ClassName.get(String.class).annotated(NULLABLE),
+                        "display",
+                        Modifier.PRIVATE,
+                        Modifier.FINAL)
+                    .build())
             .addMethod(
                 MethodSpec.constructorBuilder()
-                    .addParameter(String.class, "code")
-                    .addParameter(String.class, "display")
+                    .addParameter(
+                        ParameterSpec.builder(
+                                ClassName.get(String.class).annotated(NONNULL), "code")
+                            .build())
+                    .addParameter(
+                        ParameterSpec.builder(
+                                ClassName.get(String.class).annotated(NULLABLE), "display")
+                            .build())
                     .addStatement("this.code = code")
                     .addStatement("this.display = display")
                     .build())
             .addMethod(
                 MethodSpec.methodBuilder("coding")
                     .addModifiers(Modifier.PUBLIC)
-                    .returns(CODING_TYPE)
+                    .returns(CODING_TYPE.annotated(NONNULL))
                     .addJavadoc(
                         "@return a new {@link Coding} for this concept, with system {@code $L}\n",
                         system)
@@ -118,8 +143,13 @@ public final class JavaConstantsGenerator {
             .addMethod(
                 MethodSpec.methodBuilder("fromValue")
                     .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-                    .addParameter(String.class, "code")
-                    .returns(ParameterizedTypeName.get(ClassName.get(Optional.class), selfType))
+                    .addParameter(
+                        ParameterSpec.builder(
+                                ClassName.get(String.class).annotated(NONNULL), "code")
+                            .build())
+                    .returns(
+                        ParameterizedTypeName.get(
+                            ClassName.get(Optional.class), selfType.annotated(NONNULL)))
                     .addJavadoc(
                         """
                         @param code the FHIR code to look up

@@ -103,7 +103,7 @@ class JavaConstantsGeneratorTest {
     assertTrue(source.contains("enum MiiCsOnkoIntention"));
     assertTrue(source.contains("K(\"K\", \"kurativ\")"));
     assertTrue(source.contains("P(\"P\", \"palliativ\")"));
-    assertTrue(source.contains("public Coding coding()"));
+    assertTrue(source.contains("public @NonNull Coding coding()"));
     assertTrue(
         source.contains(
             "return new Coding(\"https://example.org/CodeSystem/mii-cs-onko-intention\", code,"
@@ -127,7 +127,8 @@ class JavaConstantsGeneratorTest {
         JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
 
     assertTrue(
-        source.contains("public static Optional<MiiCsOnkoIntention> fromValue(String code)"));
+        source.contains(
+            "public static Optional<@NonNull MiiCsOnkoIntention> fromValue(@NonNull String code)"));
     assertTrue(source.contains("for (MiiCsOnkoIntention value : values())"));
     assertTrue(source.contains("if (value.code.equals(code))"));
     assertTrue(source.contains("return Optional.of(value)"));
