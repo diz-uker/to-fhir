@@ -103,7 +103,7 @@ class JavaConstantsGeneratorTest {
     assertTrue(source.contains("enum MiiCsOnkoIntention"));
     assertTrue(source.contains("K(\"K\", \"kurativ\")"));
     assertTrue(source.contains("P(\"P\", \"palliativ\")"));
-    assertTrue(source.contains("public @NonNull Coding coding()"));
+    assertTrue(source.contains("public @NonNull Coding coding(@NonNull MiiCsOnkoIntention this)"));
     assertTrue(
         source.contains(
             "return new Coding(\"https://example.org/CodeSystem/mii-cs-onko-intention\", code,"

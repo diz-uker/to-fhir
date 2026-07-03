@@ -44,7 +44,7 @@ public final class Medikation {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp}
        */
-      public @NonNull Coding coding() {
+      public @NonNull Coding coding(@NonNull MiiCsMedikationWirkstofftyp this) {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp",
             code,

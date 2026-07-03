@@ -85,7 +85,7 @@ public final class Base {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus}
        */
-      public @NonNull Coding coding() {
+      public @NonNull Coding coding(@NonNull MiiCsPersonVitalstatus this) {
         return new Coding(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus",
             code,

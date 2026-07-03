@@ -134,6 +134,8 @@ public final class JavaConstantsGenerator {
             .addMethod(
                 MethodSpec.methodBuilder("coding")
                     .addModifiers(Modifier.PUBLIC)
+                    .addParameter(
+                        ParameterSpec.builder(selfType.annotated(NONNULL), "this").build())
                     .returns(CODING_TYPE.annotated(NONNULL))
                     .addJavadoc(
                         "@return a new {@link Coding} for this concept, with system {@code $L}\n",
