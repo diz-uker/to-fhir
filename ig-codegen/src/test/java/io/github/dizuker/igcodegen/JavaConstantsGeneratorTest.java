@@ -126,10 +126,12 @@ class JavaConstantsGeneratorTest {
     String source =
         JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
 
-    assertTrue(source.contains("public static MiiCsOnkoIntention fromValue(String code)"));
+    assertTrue(
+        source.contains("public static Optional<MiiCsOnkoIntention> fromValue(String code)"));
     assertTrue(source.contains("for (MiiCsOnkoIntention value : values())"));
     assertTrue(source.contains("if (value.code.equals(code))"));
-    assertTrue(source.contains("throw new IllegalArgumentException(\"Unknown code: \" + code)"));
+    assertTrue(source.contains("return Optional.of(value)"));
+    assertTrue(source.contains("return Optional.empty()"));
   }
 
   @Test

@@ -2,6 +2,7 @@
 // edit directly.
 package de.medizininformatikinitiative.kerndatensatz.base;
 
+import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
 
 public final class Base {
@@ -91,16 +92,16 @@ public final class Base {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsPersonVitalstatus fromValue(String code) {
+      public static Optional<MiiCsPersonVitalstatus> fromValue(String code) {
         for (MiiCsPersonVitalstatus value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
   }

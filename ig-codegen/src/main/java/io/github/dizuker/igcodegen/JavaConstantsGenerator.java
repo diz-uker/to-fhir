@@ -3,11 +3,13 @@ package io.github.dizuker.igcodegen;
 import com.palantir.javapoet.ClassName;
 import com.palantir.javapoet.JavaFile;
 import com.palantir.javapoet.MethodSpec;
+import com.palantir.javapoet.ParameterizedTypeName;
 import com.palantir.javapoet.TypeSpec;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.lang.model.element.Modifier;
 
 /**
@@ -117,20 +119,18 @@ public final class JavaConstantsGenerator {
                 MethodSpec.methodBuilder("fromValue")
                     .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                     .addParameter(String.class, "code")
-                    .returns(selfType)
+                    .returns(ParameterizedTypeName.get(ClassName.get(Optional.class), selfType))
                     .addJavadoc(
                         """
                         @param code the FHIR code to look up
-                        @return the constant whose {@code code} equals {@code code}
-                        @throws IllegalArgumentException if no constant has that code
+                        @return an {@link Optional} containing the constant whose {@code code} matches, or empty if none matches
                         """)
                     .beginControlFlow("for ($T value : values())", selfType)
                     .beginControlFlow("if (value.code.equals(code))")
-                    .addStatement("return value")
+                    .addStatement("return $T.of(value)", Optional.class)
                     .endControlFlow()
                     .endControlFlow()
-                    .addStatement(
-                        "throw new $T(\"Unknown code: \" + code)", IllegalArgumentException.class)
+                    .addStatement("return $T.empty()", Optional.class)
                     .build());
 
     for (ConceptConstant concept : concepts) {

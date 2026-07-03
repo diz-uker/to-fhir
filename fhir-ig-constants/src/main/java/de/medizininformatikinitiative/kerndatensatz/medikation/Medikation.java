@@ -2,6 +2,7 @@
 // not edit directly.
 package de.medizininformatikinitiative.kerndatensatz.medikation;
 
+import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
 
 public final class Medikation {
@@ -50,16 +51,16 @@ public final class Medikation {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsMedikationWirkstofftyp fromValue(String code) {
+      public static Optional<MiiCsMedikationWirkstofftyp> fromValue(String code) {
         for (MiiCsMedikationWirkstofftyp value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
   }

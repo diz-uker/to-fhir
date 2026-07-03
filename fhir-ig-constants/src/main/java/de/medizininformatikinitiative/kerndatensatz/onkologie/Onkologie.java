@@ -2,6 +2,7 @@
 // not edit directly.
 package de.medizininformatikinitiative.kerndatensatz.onkologie;
 
+import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
 
 public final class Onkologie {
@@ -526,16 +527,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoAllgemeinerLeistungszustandEcog fromValue(String code) {
+      public static Optional<MiiCsOnkoAllgemeinerLeistungszustandEcog> fromValue(String code) {
         for (MiiCsOnkoAllgemeinerLeistungszustandEcog value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -584,16 +585,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoAllgemeinerLeistungszustandKarnofsky fromValue(String code) {
+      public static Optional<MiiCsOnkoAllgemeinerLeistungszustandKarnofsky> fromValue(String code) {
         for (MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -634,16 +635,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoAsaObds fromValue(String code) {
+      public static Optional<MiiCsOnkoAsaObds> fromValue(String code) {
         for (MiiCsOnkoAsaObds value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -694,16 +695,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoFernmetastasen fromValue(String code) {
+      public static Optional<MiiCsOnkoFernmetastasen> fromValue(String code) {
         for (MiiCsOnkoFernmetastasen value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -742,16 +743,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoGenetischeVarianteAuspraegung fromValue(String code) {
+      public static Optional<MiiCsOnkoGenetischeVarianteAuspraegung> fromValue(String code) {
         for (MiiCsOnkoGenetischeVarianteAuspraegung value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -804,16 +805,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoGrading fromValue(String code) {
+      public static Optional<MiiCsOnkoGrading> fromValue(String code) {
         for (MiiCsOnkoGrading value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -854,16 +855,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoIntention fromValue(String code) {
+      public static Optional<MiiCsOnkoIntention> fromValue(String code) {
         for (MiiCsOnkoIntention value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -898,16 +899,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoKrkAnastomoseninsuffizienz fromValue(String code) {
+      public static Optional<MiiCsOnkoKrkAnastomoseninsuffizienz> fromValue(String code) {
         for (MiiCsOnkoKrkAnastomoseninsuffizienz value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -940,16 +941,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoKrkMrtMesorektaleFaszieStatus fromValue(String code) {
+      public static Optional<MiiCsOnkoKrkMrtMesorektaleFaszieStatus> fromValue(String code) {
         for (MiiCsOnkoKrkMrtMesorektaleFaszieStatus value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -986,16 +987,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoKrkStomaAnzeichnung fromValue(String code) {
+      public static Optional<MiiCsOnkoKrkStomaAnzeichnung> fromValue(String code) {
         for (MiiCsOnkoKrkStomaAnzeichnung value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1028,16 +1029,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoKrkTmeQualitaet fromValue(String code) {
+      public static Optional<MiiCsOnkoKrkTmeQualitaet> fromValue(String code) {
         for (MiiCsOnkoKrkTmeQualitaet value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1074,16 +1075,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoMammaHer2NeuStatusLeitlinie fromValue(String code) {
+      public static Optional<MiiCsOnkoMammaHer2NeuStatusLeitlinie> fromValue(String code) {
         for (MiiCsOnkoMammaHer2NeuStatusLeitlinie value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1116,16 +1117,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoMammaHer2NeuStatusObds fromValue(String code) {
+      public static Optional<MiiCsOnkoMammaHer2NeuStatusObds> fromValue(String code) {
         for (MiiCsOnkoMammaHer2NeuStatusObds value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1158,16 +1159,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoMammaRezeptorstatusLeitlinie fromValue(String code) {
+      public static Optional<MiiCsOnkoMammaRezeptorstatusLeitlinie> fromValue(String code) {
         for (MiiCsOnkoMammaRezeptorstatusLeitlinie value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1200,16 +1201,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoMelanomUlzeration fromValue(String code) {
+      public static Optional<MiiCsOnkoMelanomUlzeration> fromValue(String code) {
         for (MiiCsOnkoMelanomUlzeration value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1250,16 +1251,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoNebenwirkungCtcaeGrad fromValue(String code) {
+      public static Optional<MiiCsOnkoNebenwirkungCtcaeGrad> fromValue(String code) {
         for (MiiCsOnkoNebenwirkungCtcaeGrad value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1448,16 +1449,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoOperationKomplikation fromValue(String code) {
+      public static Optional<MiiCsOnkoOperationKomplikation> fromValue(String code) {
         for (MiiCsOnkoOperationKomplikation value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1490,16 +1491,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoOperationUrgency fromValue(String code) {
+      public static Optional<MiiCsOnkoOperationUrgency> fromValue(String code) {
         for (MiiCsOnkoOperationUrgency value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1550,16 +1551,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoPrimaertumorDiagnosesicherung fromValue(String code) {
+      public static Optional<MiiCsOnkoPrimaertumorDiagnosesicherung> fromValue(String code) {
         for (MiiCsOnkoPrimaertumorDiagnosesicherung value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1592,16 +1593,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoProstataPostsurgicalComplications fromValue(String code) {
+      public static Optional<MiiCsOnkoProstataPostsurgicalComplications> fromValue(String code) {
         for (MiiCsOnkoProstataPostsurgicalComplications value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1642,16 +1643,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoResidualstatus fromValue(String code) {
+      public static Optional<MiiCsOnkoResidualstatus> fromValue(String code) {
         for (MiiCsOnkoResidualstatus value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1690,16 +1691,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoSeitenlokalisation fromValue(String code) {
+      public static Optional<MiiCsOnkoSeitenlokalisation> fromValue(String code) {
         for (MiiCsOnkoSeitenlokalisation value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1782,16 +1783,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoStrahlentherapieApplikationsart fromValue(String code) {
+      public static Optional<MiiCsOnkoStrahlentherapieApplikationsart> fromValue(String code) {
         for (MiiCsOnkoStrahlentherapieApplikationsart value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1828,16 +1829,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoStrahlentherapieBoost fromValue(String code) {
+      public static Optional<MiiCsOnkoStrahlentherapieBoost> fromValue(String code) {
         for (MiiCsOnkoStrahlentherapieBoost value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -1900,16 +1901,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoStrahlentherapieStrahlenart fromValue(String code) {
+      public static Optional<MiiCsOnkoStrahlentherapieStrahlenart> fromValue(String code) {
         for (MiiCsOnkoStrahlentherapieStrahlenart value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -2136,16 +2137,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoStrahlentherapieZielgebiet fromValue(String code) {
+      public static Optional<MiiCsOnkoStrahlentherapieZielgebiet> fromValue(String code) {
         for (MiiCsOnkoStrahlentherapieZielgebiet value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -2472,16 +2473,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoStrahlentherapieZielgebiet2014 fromValue(String code) {
+      public static Optional<MiiCsOnkoStrahlentherapieZielgebiet2014> fromValue(String code) {
         for (MiiCsOnkoStrahlentherapieZielgebiet2014 value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -2514,16 +2515,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoStudienteilnahme fromValue(String code) {
+      public static Optional<MiiCsOnkoStudienteilnahme> fromValue(String code) {
         for (MiiCsOnkoStudienteilnahme value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -2889,16 +2890,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoSystemischeTherapieProtokolle fromValue(String code) {
+      public static Optional<MiiCsOnkoSystemischeTherapieProtokolle> fromValue(String code) {
         for (MiiCsOnkoSystemischeTherapieProtokolle value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -2931,16 +2932,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTherapieabweichung fromValue(String code) {
+      public static Optional<MiiCsOnkoTherapieabweichung> fromValue(String code) {
         for (MiiCsOnkoTherapieabweichung value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -2977,16 +2978,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTherapieplanungTyp fromValue(String code) {
+      public static Optional<MiiCsOnkoTherapieplanungTyp> fromValue(String code) {
         for (MiiCsOnkoTherapieplanungTyp value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3033,16 +3034,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTherapieEndeGrund fromValue(String code) {
+      public static Optional<MiiCsOnkoTherapieEndeGrund> fromValue(String code) {
         for (MiiCsOnkoTherapieEndeGrund value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3081,16 +3082,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTherapieStellungzurop fromValue(String code) {
+      public static Optional<MiiCsOnkoTherapieStellungzurop> fromValue(String code) {
         for (MiiCsOnkoTherapieStellungzurop value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3149,16 +3150,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTherapieTyp fromValue(String code) {
+      public static Optional<MiiCsOnkoTherapieTyp> fromValue(String code) {
         for (MiiCsOnkoTherapieTyp value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3452,16 +3453,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTnmUicc fromValue(String code) {
+      public static Optional<MiiCsOnkoTnmUicc> fromValue(String code) {
         for (MiiCsOnkoTnmUicc value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3506,16 +3507,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTnmVersion fromValue(String code) {
+      public static Optional<MiiCsOnkoTnmVersion> fromValue(String code) {
         for (MiiCsOnkoTnmVersion value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3552,16 +3553,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoTod fromValue(String code) {
+      public static Optional<MiiCsOnkoTod> fromValue(String code) {
         for (MiiCsOnkoTod value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3604,16 +3605,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoVerlaufFernmetastasen fromValue(String code) {
+      public static Optional<MiiCsOnkoVerlaufFernmetastasen> fromValue(String code) {
         for (MiiCsOnkoVerlaufFernmetastasen value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3662,16 +3663,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoVerlaufGesamtbeurteilung fromValue(String code) {
+      public static Optional<MiiCsOnkoVerlaufGesamtbeurteilung> fromValue(String code) {
         for (MiiCsOnkoVerlaufGesamtbeurteilung value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3714,16 +3715,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoVerlaufLymphknoten fromValue(String code) {
+      public static Optional<MiiCsOnkoVerlaufLymphknoten> fromValue(String code) {
         for (MiiCsOnkoVerlaufLymphknoten value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -3766,16 +3767,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoVerlaufPrimaertumor fromValue(String code) {
+      public static Optional<MiiCsOnkoVerlaufPrimaertumor> fromValue(String code) {
         for (MiiCsOnkoVerlaufPrimaertumor value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
 
@@ -4164,16 +4165,16 @@ public final class Onkologie {
 
       /**
        * @param code the FHIR code to look up
-       * @return the constant whose {@code code} equals {@code code}
-       * @throws IllegalArgumentException if no constant has that code
+       * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
+       *     none matches
        */
-      public static MiiCsOnkoWeitereKlassifikationenObds fromValue(String code) {
+      public static Optional<MiiCsOnkoWeitereKlassifikationenObds> fromValue(String code) {
         for (MiiCsOnkoWeitereKlassifikationenObds value : values()) {
           if (value.code.equals(code)) {
-            return value;
+            return Optional.of(value);
           }
         }
-        throw new IllegalArgumentException("Unknown code: " + code);
+        return Optional.empty();
       }
     }
   }
