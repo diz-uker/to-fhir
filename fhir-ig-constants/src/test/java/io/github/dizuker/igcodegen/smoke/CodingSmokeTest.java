@@ -1,7 +1,7 @@
 package io.github.dizuker.igcodegen.smoke;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import de.medizininformatikinitiative.kerndatensatz.onkologie.Onkologie;
 import org.hl7.fhir.r4.model.Coding;
@@ -31,19 +31,17 @@ class CodingSmokeTest {
   void fromValueLooksUpConstantByCode() {
     assertEquals(
         Onkologie.CodeSystems.MiiCsOnkoIntention.K,
-        Onkologie.CodeSystems.MiiCsOnkoIntention.fromValue("K"));
+        Onkologie.CodeSystems.MiiCsOnkoIntention.fromValue("K").orElseThrow());
     assertEquals(
         Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_POS,
-        Onkologie.CodeSystems.MiiCsOnkoTnmUicc.fromValue("i+"));
+        Onkologie.CodeSystems.MiiCsOnkoTnmUicc.fromValue("i+").orElseThrow());
     assertEquals(
         Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_NEG,
-        Onkologie.CodeSystems.MiiCsOnkoTnmUicc.fromValue("i-"));
+        Onkologie.CodeSystems.MiiCsOnkoTnmUicc.fromValue("i-").orElseThrow());
   }
 
   @Test
-  void fromValueThrowsForUnknownCode() {
-    assertThrows(
-        IllegalArgumentException.class,
-        () -> Onkologie.CodeSystems.MiiCsOnkoIntention.fromValue("not-a-real-code"));
+  void fromValueReturnsEmptyForUnknownCode() {
+    assertTrue(Onkologie.CodeSystems.MiiCsOnkoIntention.fromValue("not-a-real-code").isEmpty());
   }
 }
