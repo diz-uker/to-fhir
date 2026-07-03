@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.4](https://github.com/diz-uker/to-fhir/compare/v0.2.3...v0.2.4) (2026-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#50](https://github.com/diz-uker/to-fhir/issues/50)) ([70d08a9](https://github.com/diz-uker/to-fhir/commit/70d08a99cbc9cae982e4360d1842b5879e90f91e))
+* **deps:** update all non-major dependencies ([#54](https://github.com/diz-uker/to-fhir/issues/54)) ([eb0ae35](https://github.com/diz-uker/to-fhir/commit/eb0ae35574a7758eee0e8b6561f7f8ac51fed59a))
+* **deps:** update dependency com.approvaltests:approvaltests to v31 ([#52](https://github.com/diz-uker/to-fhir/issues/52)) ([bc3b849](https://github.com/diz-uker/to-fhir/commit/bc3b8497a9615dba8b52e47e8a8b953f9805789e))
+* return optional instead of throwing ([#57](https://github.com/diz-uker/to-fhir/issues/57)) ([da72aa4](https://github.com/diz-uker/to-fhir/commit/da72aa46e72a3b42e32304566bd922013e1370bd))
+
 ## [0.2.3](https://github.com/diz-uker/to-fhir/compare/v0.2.2...v0.2.3) (2026-06-28)
 
 
