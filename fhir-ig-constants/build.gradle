@@ -25,6 +25,9 @@ dependencies {
     // coding() accessor returns a org.hl7.fhir.r4.model.Coding - part of the public API, so 'api'
     // rather than 'implementation'.
     api 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:8.10.0'
+    // Generated enums carry JSpecify @NonNull/@Nullable on their public API - part of the public
+    // type contract, so consumers can use them without adding jspecify themselves.
+    api 'org.jspecify:jspecify:1.0.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.1.0'
