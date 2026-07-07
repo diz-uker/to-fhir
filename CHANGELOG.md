@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.7](https://github.com/diz-uker/to-fhir/compare/v0.2.6...v0.2.7) (2026-07-07)
+
+
+### Features
+
+* added convience class for data absent reason extensions ([#62](https://github.com/diz-uker/to-fhir/issues/62)) ([20ac4e2](https://github.com/diz-uker/to-fhir/commit/20ac4e2ea226ce0b341aaee1122baee43a71d416))
+
 ## [0.2.6](https://github.com/diz-uker/to-fhir/compare/v0.2.5...v0.2.6) (2026-07-03)
 
 
