@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/IgCodegen/IgCodegen.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/IgCodegen.Tests/IgCodegen.Tests.csproj" />
+  </Folder>
+</Solution>
