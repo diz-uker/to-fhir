@@ -90,6 +90,6 @@ class IgDiffTest {
       TreeMap<String, String> profiles,
       TreeMap<String, String> extensions) {
     return new IgPackageModel(
-        "de.example.onkologie", "1.0.0", codeSystems, profiles, extensions, Map.of());
+        "de.example.onkologie", "1.0.0", codeSystems, profiles, extensions, Map.of(), Map.of());
   }
 }

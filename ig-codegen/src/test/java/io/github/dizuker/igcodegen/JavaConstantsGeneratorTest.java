@@ -138,6 +138,81 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void extensionWithFixedValueTypeGetsATypedFactoryMethod() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_EINZELDOSIS",
+        "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_EINZELDOSIS", ExtensionValueType.fixed("decimal"));
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.DecimalType;"));
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.Extension;"));
+    assertTrue(
+        source.contains(
+            "public static @NonNull Extension miiExOnkoEinzeldosis(@NonNull DecimalType value)"));
+    assertTrue(
+        source.contains(
+            "return new Extension(\"https://example.org/StructureDefinition/mii-ex-onko-einzeldosis\","
+                + " value)"));
+  }
+
+  @Test
+  void extensionWithChoiceValueTypeFallsBackToGenericHapiType() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_CHOICE", "https://example.org/StructureDefinition/mii-ex-onko-choice");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_CHOICE", ExtensionValueType.CHOICE);
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.Type;"));
+    assertTrue(
+        source.contains("public static @NonNull Extension miiExOnkoChoice(@NonNull Type value)"));
+  }
+
+  @Test
+  void complexExtensionWithNoValueGetsANoArgFactoryMethod() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_COMPLEX", "https://example.org/StructureDefinition/mii-ex-onko-complex");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_COMPLEX", ExtensionValueType.NONE);
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("public static @NonNull Extension miiExOnkoComplex()"));
+    assertTrue(
+        source.contains(
+            "return new Extension(\"https://example.org/StructureDefinition/mii-ex-onko-complex\")"));
+  }
+
+  @Test
+  void extensionWithNoRecordedValueTypeDefaultsToNoArgFactoryMethod() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_UNKNOWN", "https://example.org/StructureDefinition/mii-ex-onko-unknown");
+    IgPackageModel model = model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of());
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("public static @NonNull Extension miiExOnkoUnknown()"));
+  }
+
+  @Test
   void doesNotGenerateEnumWhenCodeSystemHasNoConcepts() {
     TreeMap<String, String> codeSystems = new TreeMap<>();
     codeSystems.put(
@@ -155,7 +230,22 @@ class JavaConstantsGeneratorTest {
       TreeMap<String, String> profiles,
       TreeMap<String, String> extensions,
       Map<String, List<ConceptConstant>> codeSystemConcepts) {
+    return model(codeSystems, profiles, extensions, codeSystemConcepts, Map.of());
+  }
+
+  private static IgPackageModel model(
+      TreeMap<String, String> codeSystems,
+      TreeMap<String, String> profiles,
+      TreeMap<String, String> extensions,
+      Map<String, List<ConceptConstant>> codeSystemConcepts,
+      Map<String, ExtensionValueType> extensionValueTypes) {
     return new IgPackageModel(
-        "de.example.onkologie", "1.0.0", codeSystems, profiles, extensions, codeSystemConcepts);
+        "de.example.onkologie",
+        "1.0.0",
+        codeSystems,
+        profiles,
+        extensions,
+        codeSystemConcepts,
+        extensionValueTypes);
   }
 }

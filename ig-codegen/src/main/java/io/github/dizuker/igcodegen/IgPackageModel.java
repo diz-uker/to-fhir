@@ -14,6 +14,10 @@ import java.util.SortedMap;
  * everything needed to additionally render a Java enum. Entries absent from this map (e.g. external
  * terminologies like SNOMED CT or LOINC, which FHIR doesn't redistribute inline) only get the plain
  * URL constant.
+ *
+ * <p>{@code extensionValueTypes} holds, for each entry in {@code extensions}, the shape of its
+ * {@code value[x]} - everything needed to render a factory method that returns a HAPI {@code
+ * Extension} missing only the value. See {@link ExtensionValueType}.
  */
 public record IgPackageModel(
     String packageName,
@@ -21,12 +25,14 @@ public record IgPackageModel(
     SortedMap<String, String> codeSystems,
     SortedMap<String, String> profiles,
     SortedMap<String, String> extensions,
-    Map<String, List<ConceptConstant>> codeSystemConcepts) {
+    Map<String, List<ConceptConstant>> codeSystemConcepts,
+    Map<String, ExtensionValueType> extensionValueTypes) {
 
   public IgPackageModel {
     codeSystems = Collections.unmodifiableSortedMap(codeSystems);
     profiles = Collections.unmodifiableSortedMap(profiles);
     extensions = Collections.unmodifiableSortedMap(extensions);
     codeSystemConcepts = Map.copyOf(codeSystemConcepts);
+    extensionValueTypes = Map.copyOf(extensionValueTypes);
   }
 }

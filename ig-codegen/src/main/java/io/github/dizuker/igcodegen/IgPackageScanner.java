@@ -49,10 +49,11 @@ public final class IgPackageScanner {
     TreeMap<String, String> profiles = new TreeMap<>();
     TreeMap<String, String> extensions = new TreeMap<>();
     Map<String, List<ConceptConstant>> codeSystemConcepts = new HashMap<>();
+    Map<String, ExtensionValueType> extensionValueTypes = new HashMap<>();
 
     try (DirectoryStream<Path> files = Files.newDirectoryStream(packageContentDir, "*.json")) {
       for (Path file : files) {
-        classify(file, codeSystems, profiles, extensions, codeSystemConcepts);
+        classify(file, codeSystems, profiles, extensions, codeSystemConcepts, extensionValueTypes);
       }
     } catch (IOException e) {
       throw new UncheckedIOException(
@@ -60,7 +61,13 @@ public final class IgPackageScanner {
     }
 
     return new IgPackageModel(
-        packageName, packageVersion, codeSystems, profiles, extensions, codeSystemConcepts);
+        packageName,
+        packageVersion,
+        codeSystems,
+        profiles,
+        extensions,
+        codeSystemConcepts,
+        extensionValueTypes);
   }
 
   private void classify(
@@ -68,7 +75,8 @@ public final class IgPackageScanner {
       Map<String, String> codeSystems,
       Map<String, String> profiles,
       Map<String, String> extensions,
-      Map<String, List<ConceptConstant>> codeSystemConcepts) {
+      Map<String, List<ConceptConstant>> codeSystemConcepts,
+      Map<String, ExtensionValueType> extensionValueTypes) {
     var resource = objectMapper.readValue(file.toFile(), FhirResourceSummary.class);
 
     String resourceType = resource.resourceType();
@@ -99,6 +107,7 @@ public final class IgPackageScanner {
         && "constraint".equals(derivation)
         && "Extension".equals(resource.type())) {
       extensions.put(constantName, url);
+      extensionValueTypes.put(constantName, extensionValueType(resource));
       return;
     }
 
@@ -106,6 +115,32 @@ public final class IgPackageScanner {
       String version = resource.version();
       profiles.put(constantName, version == null ? url : url + "|" + version);
     }
+  }
+
+  /**
+   * Inspects an extension's {@code snapshot.element} for {@code Extension.value[x]} to determine
+   * the shape its generated factory method's value parameter should take. See {@link
+   * ExtensionValueType}.
+   */
+  private static ExtensionValueType extensionValueType(FhirResourceSummary resource) {
+    if (resource.snapshot() == null || resource.snapshot().element() == null) {
+      return ExtensionValueType.NONE;
+    }
+    for (FhirResourceSummary.Element element : resource.snapshot().element()) {
+      if (!"Extension.value[x]".equals(element.path())) {
+        continue;
+      }
+      List<FhirResourceSummary.ElementType> types = element.type();
+      if ("0".equals(element.max()) || types == null || types.isEmpty()) {
+        return ExtensionValueType.NONE;
+      }
+      if (types.size() > 1) {
+        return ExtensionValueType.CHOICE;
+      }
+      String code = types.get(0).code();
+      return code == null ? ExtensionValueType.NONE : ExtensionValueType.fixed(code);
+    }
+    return ExtensionValueType.NONE;
   }
 
   private static void classifyCodeSystem(

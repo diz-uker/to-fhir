@@ -31,14 +31,41 @@ resource.
    FHIR package (e.g. FHIR package `de.medizininformatikinitiative.kerndatensatz.onkologie` →
    Java package `de.medizininformatikinitiative.kerndatensatz.onkologie`, class `Onkologie`),
    with one nested utility class per non-empty category (`CodeSystems` / `Profiles` /
-   `Extensions`). Each canonical URL becomes a static no-arg accessor method, named in
-   record-accessor style (lowerCamelCase, no `get` prefix), e.g. the FHIR id
+   `Extensions`). Each `CodeSystems`/`Profiles` canonical URL becomes a static no-arg accessor
+   method, named in record-accessor style (lowerCamelCase, no `get` prefix), e.g. the FHIR id
    `mii-pr-diagnose-condition` becomes `miiPrDiagnoseCondition()`:
 
    ```java
    Onkologie.Profiles.miiPrDiagnoseCondition()
    // -> "https://www.medizininformatik-initiative.de/.../StructureDefinition/mii-pr-diagnose-condition|2026.0.0"
    ```
+
+   `Extensions` instead get a static **factory method** that returns a HAPI
+   `org.hl7.fhir.r4.model.Extension` missing only the value, so the URL never has to be
+   hand-transcribed at the call site either. The generator reads each extension's
+   `StructureDefinition.snapshot` to determine the shape of `Extension.value[x]`:
+
+   - A simple extension with exactly one `value[x]` type takes that type as its `value`
+     parameter, e.g. `Extension.value[x]: decimal` becomes:
+
+     ```java
+     Onkologie.Extensions.miiExOnkoStrahlentherapieBestrahlungEinzeldosis(new DecimalType(2.5))
+     // -> Extension{url=".../mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis", value=DecimalType(2.5)}
+     ```
+
+   - A choice-typed `value[x]` (more than one allowed type) falls back to the generic HAPI
+     `Type` parameter.
+   - A complex extension (nested sub-extensions, no `value[x]` of its own) gets a no-arg
+     overload, for further population via `Extension#addExtension`:
+
+     ```java
+     Onkologie.Extensions.miiExOnkoSomeComplexExtension()
+         .addExtension("teil", new StringType("..."))
+     ```
+
+   Because the generated `Extensions` factory methods return HAPI types, depending on this
+   generator's output pulls in `hapi-fhir-structures-r4` as a runtime dependency wherever any
+   Extension is generated.
 
 4. A CodeSystem that ships its own concepts inline (`content == "complete"`) additionally gets a
    nested enum, named after the CodeSystem, with one constant per concept and a `coding()`
