@@ -343,6 +343,25 @@ public final class JavaConstantsGenerator {
                     .endControlFlow()
                     .endControlFlow()
                     .addStatement("return $T.empty()", Optional.class)
+                    .build())
+            .addMethod(
+                MethodSpec.methodBuilder("fromValueOrThrow")
+                    .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+                    .addParameter(
+                        ParameterSpec.builder(
+                                ClassName.get(String.class).annotated(NONNULL), "code")
+                            .build())
+                    .returns(selfType.annotated(NONNULL))
+                    .addJavadoc(
+                        """
+                        @param code the FHIR code to look up
+                        @return the constant whose {@code code} matches
+                        @throws IllegalArgumentException if no constant has that code
+                        """)
+                    .addStatement(
+                        "return fromValue(code).orElseThrow(() -> new $T(\"Unknown code: \""
+                            + " + code))",
+                        IllegalArgumentException.class)
                     .build());
 
     for (ConceptConstant concept : concepts) {

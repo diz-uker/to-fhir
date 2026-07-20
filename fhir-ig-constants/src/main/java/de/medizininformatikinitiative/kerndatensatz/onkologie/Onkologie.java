@@ -566,6 +566,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoAllgemeinerLeistungszustandEcog fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoAllgemeinerLeistungszustandKarnofsky {
@@ -637,6 +648,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoAllgemeinerLeistungszustandKarnofsky fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoAsaObds {
@@ -693,6 +715,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoAsaObds fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -766,6 +798,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoFernmetastasen fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoGenetischeVarianteAuspraegung {
@@ -820,6 +862,17 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoGenetischeVarianteAuspraegung fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -896,6 +949,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoGrading fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoIntention {
@@ -953,6 +1016,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoIntention fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoKrkAnastomoseninsuffizienz {
@@ -1002,6 +1075,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoKrkAnastomoseninsuffizienz fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoKrkMrtMesorektaleFaszieStatus {
@@ -1047,6 +1131,17 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoKrkMrtMesorektaleFaszieStatus fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -1100,6 +1195,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoKrkStomaAnzeichnung fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoKrkTmeQualitaet {
@@ -1144,6 +1249,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoKrkTmeQualitaet fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -1197,6 +1312,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoMammaHer2NeuStatusLeitlinie fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoMammaHer2NeuStatusObds {
@@ -1242,6 +1368,17 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoMammaHer2NeuStatusObds fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -1289,6 +1426,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoMammaRezeptorstatusLeitlinie fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoMelanomUlzeration {
@@ -1333,6 +1481,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoMelanomUlzeration fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -1391,6 +1549,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoNebenwirkungCtcaeGrad fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -1676,6 +1844,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoOperationKomplikation fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoOperationUrgency {
@@ -1720,6 +1898,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoOperationUrgency fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -1794,6 +1982,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoPrimaertumorDiagnosesicherung fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoProstataPostsurgicalComplications {
@@ -1839,6 +2038,17 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoProstataPostsurgicalComplications fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -1897,6 +2107,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoResidualstatus fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoSeitenlokalisation {
@@ -1950,6 +2170,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoSeitenlokalisation fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -2075,6 +2305,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoStrahlentherapieApplikationsart fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoStrahlentherapieBoost {
@@ -2126,6 +2367,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoStrahlentherapieBoost fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -2217,6 +2468,17 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoStrahlentherapieStrahlenart fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -2558,6 +2820,17 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoStrahlentherapieZielgebiet fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -3046,6 +3319,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoStrahlentherapieZielgebiet2014 fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoStudienteilnahme {
@@ -3090,6 +3374,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoStudienteilnahme fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -3642,6 +3936,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoSystemischeTherapieProtokolle fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoTherapieabweichung {
@@ -3686,6 +3991,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTherapieabweichung fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -3741,6 +4056,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTherapieplanungTyp fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -3808,6 +4133,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTherapieEndeGrund fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoTherapieStellungzurop {
@@ -3862,6 +4197,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTherapieStellungzurop fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -3946,6 +4291,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTherapieTyp fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -4385,6 +4740,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTnmUicc fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoTnmVersion {
@@ -4448,6 +4813,16 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTnmVersion fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoTod {
@@ -4502,6 +4877,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoTod fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -4563,6 +4948,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoVerlaufFernmetastasen fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -4636,6 +5031,17 @@ public final class Onkologie {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoVerlaufGesamtbeurteilung fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
 
     public enum MiiCsOnkoVerlaufLymphknoten {
@@ -4695,6 +5101,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoVerlaufLymphknoten fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -4756,6 +5172,16 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoVerlaufPrimaertumor fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
 
@@ -5336,6 +5762,17 @@ public final class Onkologie {
           }
         }
         return Optional.empty();
+      }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsOnkoWeitereKlassifikationenObds fromValueOrThrow(
+          @NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
       }
     }
   }

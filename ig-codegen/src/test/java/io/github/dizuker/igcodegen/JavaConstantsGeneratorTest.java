@@ -135,6 +135,13 @@ class JavaConstantsGeneratorTest {
     assertTrue(source.contains("if (value.code.equals(code))"));
     assertTrue(source.contains("return Optional.of(value)"));
     assertTrue(source.contains("return Optional.empty()"));
+    assertTrue(
+        source.contains(
+            "public static @NonNull MiiCsOnkoIntention fromValueOrThrow(@NonNull String code)"));
+    assertTrue(
+        source.contains(
+            "return fromValue(code).orElseThrow(() -> new IllegalArgumentException(\"Unknown"
+                + " code: \" + code))"));
   }
 
   @Test
