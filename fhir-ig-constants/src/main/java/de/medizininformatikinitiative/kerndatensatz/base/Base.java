@@ -114,6 +114,16 @@ public final class Base {
         }
         return Optional.empty();
       }
+
+      /**
+       * @param code the FHIR code to look up
+       * @return the constant whose {@code code} matches
+       * @throws IllegalArgumentException if no constant has that code
+       */
+      public static @NonNull MiiCsPersonVitalstatus fromValueOrThrow(@NonNull String code) {
+        return fromValue(code)
+            .orElseThrow(() -> new IllegalArgumentException("Unknown code: " + code));
+      }
     }
   }
 
