@@ -4,6 +4,8 @@ package de.medizininformatikinitiative.kerndatensatz.base;
 
 import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.DateTimeType;
+import org.hl7.fhir.r4.model.Extension;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
@@ -200,36 +202,47 @@ public final class Base {
     private Extensions() {}
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate}.
      *
-     * @return {@code
-     *     http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate}
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
+     *     http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate} and the
+     *     given value
      */
-    public static String miiExFallPlannedEndDate() {
-      return "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate";
+    public static @NonNull Extension miiExFallPlannedEndDate(@NonNull DateTimeType value) {
+      return new Extension(
+          "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate", value);
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate}.
      *
-     * @return {@code
-     *     http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate}
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
+     *     http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate} and the
+     *     given value
      */
-    public static String miiExFallPlannedStartDate() {
-      return "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate";
+    public static @NonNull Extension miiExFallPlannedStartDate(@NonNull DateTimeType value) {
+      return new Extension(
+          "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate",
+          value);
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht}.
      *
-     * @return {@code
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht}
+     *     and the given value
      */
-    public static String miiExProzedurDurchfuehrungsabsicht() {
-      return "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht";
+    public static @NonNull Extension miiExProzedurDurchfuehrungsabsicht(@NonNull Coding value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht",
+          value);
     }
   }
 }

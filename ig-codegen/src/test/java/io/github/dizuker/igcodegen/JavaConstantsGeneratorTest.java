@@ -138,6 +138,207 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void extensionWithFixedValueTypeGetsATypedFactoryMethod() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_EINZELDOSIS",
+        "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_EINZELDOSIS", ExtensionValueType.fixed("decimal"));
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.DecimalType;"));
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.Extension;"));
+    assertTrue(
+        source.contains(
+            "public static @NonNull Extension miiExOnkoEinzeldosis(@NonNull DecimalType value)"));
+    assertTrue(
+        source.contains(
+            "return new Extension(\"https://example.org/StructureDefinition/mii-ex-onko-einzeldosis\","
+                + " value)"));
+  }
+
+  @Test
+  void extensionWithCodeableConceptValueTypeTakesACodeableConceptParameter() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_INTENTION", "https://example.org/StructureDefinition/mii-ex-onko-intention");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_INTENTION", ExtensionValueType.fixed("CodeableConcept"));
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.CodeableConcept;"));
+    assertTrue(
+        source.contains(
+            "public static @NonNull Extension miiExOnkoIntention(@NonNull CodeableConcept"
+                + " value)"));
+    assertTrue(
+        source.contains(
+            "return new Extension(\"https://example.org/StructureDefinition/mii-ex-onko-intention\","
+                + " value)"));
+  }
+
+  @Test
+  void extensionWithCodingValueTypeTakesACodingParameter() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_STATUS", "https://example.org/StructureDefinition/mii-ex-onko-status");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_STATUS", ExtensionValueType.fixed("Coding"));
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.Coding;"));
+    assertTrue(
+        source.contains("public static @NonNull Extension miiExOnkoStatus(@NonNull Coding value)"));
+  }
+
+  @Test
+  void codeableConceptExtensionBoundToALocalCodeSystemTakesItsGeneratedEnum() {
+    TreeMap<String, String> codeSystems = new TreeMap<>();
+    codeSystems.put(
+        "MII_CS_ONKO_INTENTION", "https://example.org/CodeSystem/mii-cs-onko-intention");
+    Map<String, List<ConceptConstant>> codeSystemConcepts =
+        Map.of("MII_CS_ONKO_INTENTION", List.of(new ConceptConstant("K", "K", "kurativ")));
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_INTENTION", "https://example.org/StructureDefinition/mii-ex-onko-intention");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of(
+            "MII_EX_ONKO_INTENTION",
+            ExtensionValueType.boundCoding(
+                "CodeableConcept", "https://example.org/CodeSystem/mii-cs-onko-intention"));
+    IgPackageModel model =
+        model(codeSystems, new TreeMap<>(), extensions, codeSystemConcepts, extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.CodeableConcept;"));
+    assertTrue(source.contains("public static @NonNull Extension miiExOnkoIntention("));
+    assertTrue(source.contains("CodeSystems. @NonNull MiiCsOnkoIntention value)"));
+    assertTrue(
+        source.contains(
+            "return new Extension(\"https://example.org/StructureDefinition/mii-ex-onko-intention\","
+                + " new CodeableConcept(value.coding()))"));
+  }
+
+  @Test
+  void codingExtensionBoundToALocalCodeSystemTakesItsGeneratedEnum() {
+    TreeMap<String, String> codeSystems = new TreeMap<>();
+    codeSystems.put(
+        "MII_CS_ONKO_INTENTION", "https://example.org/CodeSystem/mii-cs-onko-intention");
+    Map<String, List<ConceptConstant>> codeSystemConcepts =
+        Map.of("MII_CS_ONKO_INTENTION", List.of(new ConceptConstant("K", "K", "kurativ")));
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_INTENTION", "https://example.org/StructureDefinition/mii-ex-onko-intention");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of(
+            "MII_EX_ONKO_INTENTION",
+            ExtensionValueType.boundCoding(
+                "Coding", "https://example.org/CodeSystem/mii-cs-onko-intention"));
+    IgPackageModel model =
+        model(codeSystems, new TreeMap<>(), extensions, codeSystemConcepts, extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("public static @NonNull Extension miiExOnkoIntention("));
+    assertTrue(source.contains("CodeSystems. @NonNull MiiCsOnkoIntention value)"));
+    assertTrue(
+        source.contains(
+            "return new Extension(\"https://example.org/StructureDefinition/mii-ex-onko-intention\","
+                + " value.coding())"));
+  }
+
+  @Test
+  void extensionBoundToCodeSystemWithoutAGeneratedEnumFallsBackToTheGenericDatatype() {
+    // A CodeSystem present in the model but without concepts (e.g. an external terminology like
+    // SNOMED CT) has no generated enum to bind to.
+    TreeMap<String, String> codeSystems = new TreeMap<>();
+    codeSystems.put("SNOMED_CT", "http://snomed.info/sct");
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_PROZEDUR_INTENTION",
+        "https://example.org/StructureDefinition/mii-ex-prozedur-intention");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of(
+            "MII_EX_PROZEDUR_INTENTION",
+            ExtensionValueType.boundCoding("Coding", "http://snomed.info/sct"));
+    IgPackageModel model =
+        model(codeSystems, new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(
+        source.contains(
+            "public static @NonNull Extension miiExProzedurIntention(@NonNull Coding value)"));
+  }
+
+  @Test
+  void extensionWithChoiceValueTypeFallsBackToGenericHapiType() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_CHOICE", "https://example.org/StructureDefinition/mii-ex-onko-choice");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_CHOICE", ExtensionValueType.CHOICE);
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.r4.model.Type;"));
+    assertTrue(
+        source.contains("public static @NonNull Extension miiExOnkoChoice(@NonNull Type value)"));
+  }
+
+  @Test
+  void complexExtensionWithNoValueGetsANoArgFactoryMethod() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_COMPLEX", "https://example.org/StructureDefinition/mii-ex-onko-complex");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_COMPLEX", ExtensionValueType.NONE);
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("public static @NonNull Extension miiExOnkoComplex()"));
+    assertTrue(
+        source.contains(
+            "return new Extension(\"https://example.org/StructureDefinition/mii-ex-onko-complex\")"));
+  }
+
+  @Test
+  void extensionWithNoRecordedValueTypeDefaultsToNoArgFactoryMethod() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_UNKNOWN", "https://example.org/StructureDefinition/mii-ex-onko-unknown");
+    IgPackageModel model = model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of());
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("public static @NonNull Extension miiExOnkoUnknown()"));
+  }
+
+  @Test
   void doesNotGenerateEnumWhenCodeSystemHasNoConcepts() {
     TreeMap<String, String> codeSystems = new TreeMap<>();
     codeSystems.put(
@@ -155,7 +356,22 @@ class JavaConstantsGeneratorTest {
       TreeMap<String, String> profiles,
       TreeMap<String, String> extensions,
       Map<String, List<ConceptConstant>> codeSystemConcepts) {
+    return model(codeSystems, profiles, extensions, codeSystemConcepts, Map.of());
+  }
+
+  private static IgPackageModel model(
+      TreeMap<String, String> codeSystems,
+      TreeMap<String, String> profiles,
+      TreeMap<String, String> extensions,
+      Map<String, List<ConceptConstant>> codeSystemConcepts,
+      Map<String, ExtensionValueType> extensionValueTypes) {
     return new IgPackageModel(
-        "de.example.onkologie", "1.0.0", codeSystems, profiles, extensions, codeSystemConcepts);
+        "de.example.onkologie",
+        "1.0.0",
+        codeSystems,
+        profiles,
+        extensions,
+        codeSystemConcepts,
+        extensionValueTypes);
   }
 }

@@ -2,6 +2,10 @@
 // Do not edit directly.
 package de.medizininformatikinitiative.kerndatensatz.laborbefund;
 
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Extension;
+import org.jspecify.annotations.NonNull;
+
 public final class Laborbefund {
   private Laborbefund() {}
 
@@ -46,25 +50,34 @@ public final class Laborbefund {
     private Extensions() {}
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft}.
      *
-     * @return {@code
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft}
+     *     and the given value
      */
-    public static String miiExLaborInterpretationsbeeinflussendeEigenschaft() {
-      return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft";
+    public static @NonNull Extension miiExLaborInterpretationsbeeinflussendeEigenschaft(
+        @NonNull Coding value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft",
+          value);
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum}.
      *
-     * @return {@code
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum}
+     *     and the given value
      */
-    public static String miiExLaborQuelleKlinischesBezugsdatum() {
-      return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum";
+    public static @NonNull Extension miiExLaborQuelleKlinischesBezugsdatum(@NonNull Coding value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum",
+          value);
     }
   }
 }

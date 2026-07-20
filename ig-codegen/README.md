@@ -31,14 +31,64 @@ resource.
    FHIR package (e.g. FHIR package `de.medizininformatikinitiative.kerndatensatz.onkologie` →
    Java package `de.medizininformatikinitiative.kerndatensatz.onkologie`, class `Onkologie`),
    with one nested utility class per non-empty category (`CodeSystems` / `Profiles` /
-   `Extensions`). Each canonical URL becomes a static no-arg accessor method, named in
-   record-accessor style (lowerCamelCase, no `get` prefix), e.g. the FHIR id
+   `Extensions`). Each `CodeSystems`/`Profiles` canonical URL becomes a static no-arg accessor
+   method, named in record-accessor style (lowerCamelCase, no `get` prefix), e.g. the FHIR id
    `mii-pr-diagnose-condition` becomes `miiPrDiagnoseCondition()`:
 
    ```java
    Onkologie.Profiles.miiPrDiagnoseCondition()
    // -> "https://www.medizininformatik-initiative.de/.../StructureDefinition/mii-pr-diagnose-condition|2026.0.0"
    ```
+
+   `Extensions` instead get a static **factory method** that returns a HAPI
+   `org.hl7.fhir.r4.model.Extension` missing only the value, so the URL never has to be
+   hand-transcribed at the call site either. The generator reads each extension's
+   `StructureDefinition.snapshot` to determine the shape of `Extension.value[x]`:
+
+   - A simple extension with exactly one `value[x]` type takes that type as its `value`
+     parameter, e.g. `Extension.value[x]: decimal` becomes:
+
+     ```java
+     Onkologie.Extensions.miiExOnkoStrahlentherapieBestrahlungEinzeldosis(new DecimalType(2.5))
+     // -> Extension{url=".../mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis", value=DecimalType(2.5)}
+     ```
+
+   - If a `CodeableConcept`/`Coding`-typed `value[x]` is pinned to one CodeSystem, and that
+     CodeSystem ships its own concepts (so it has a generated enum, see item 4 below) in the
+     **same** IG package, the `value` parameter is typed to that enum directly instead of the
+     generic datatype:
+
+     ```java
+     Onkologie.Extensions.miiExOnkoStrahlentherapieIntention(MiiCsOnkoIntention.K)
+     // -> Extension{url=".../mii-ex-onko-strahlentherapie-intention", value=CodeableConcept(Coding{system=".../mii-cs-onko-intention", code="K"})}
+     ```
+
+     Two profile-authoring patterns are recognized, since IGs use both interchangeably: a
+     `fixedUri` pinning the (only, unsliced) nested `Coding.system` element directly, or a
+     `required`-strength `binding` to a ValueSet whose `compose.include` draws from exactly one
+     CodeSystem (no `exclude`, no nested `valueSet` imports; a `concept`/`filter` restriction to a
+     subset of that CodeSystem's codes is ignored - the generated enum is a permissive superset,
+     the same looseness the `fixedUri` case already has). An `extensible`/`preferred` binding is
+     *not* followed, since those explicitly allow codes outside the bound ValueSet.
+
+     Either way, this only applies when the bound CodeSystem is defined in the same FHIR package
+     as the extension (so its enum lives in the same generated Java class) and has inline concepts;
+     otherwise (external terminology, a CodeSystem from a different package, or a ValueSet spanning
+     more than one CodeSystem) the factory method falls back to the generic `CodeableConcept`/
+     `Coding` parameter.
+   - A choice-typed `value[x]` (more than one allowed type) falls back to the generic HAPI
+     `Type` parameter.
+   - A complex extension (nested sub-extensions, no `value[x]` of its own) gets a no-arg
+     overload, for further population via `Extension#addExtension`:
+
+     ```java
+     Onkologie.Extensions.miiExOnkoSomeComplexExtension()
+         .addExtension("teil", new StringType("..."))
+     ```
+
+   Because the generated `Extensions` factory methods return HAPI types, depending on this
+   generator's output pulls in `hapi-fhir-structures-r4` as a runtime dependency wherever any
+   Extension is generated.
 
 4. A CodeSystem that ships its own concepts inline (`content == "complete"`) additionally gets a
    nested enum, named after the CodeSystem, with one constant per concept and a `coding()`

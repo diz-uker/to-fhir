@@ -3,7 +3,10 @@
 package de.medizininformatikinitiative.kerndatensatz.onkologie;
 
 import java.util.Optional;
+import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Extension;
+import org.hl7.fhir.r4.model.Quantity;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
@@ -6148,157 +6151,227 @@ public final class Onkologie {
     private Extensions() {}
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}.
      *
-     * @return {@code
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}
+     *     and the given value
      */
-    public static String miiExOnkoHistologyMorphologyBehaviorIcdo3() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3";
+    public static @NonNull Extension miiExOnkoHistologyMorphologyBehaviorIcdo3(
+        @NonNull CodeableConcept value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3",
+          value);
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoIntention} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}
+     *     and the given value
      */
-    public static String miiExOnkoOperationIntention() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention";
+    public static @NonNull Extension miiExOnkoOperationIntention(
+        CodeSystems.@NonNull MiiCsOnkoIntention value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoOperationUrgency} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency}
+     *     and the given value
      */
-    public static String miiExOnkoOperationUrgency() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency";
+    public static @NonNull Extension miiExOnkoOperationUrgency(
+        CodeSystems.@NonNull MiiCsOnkoOperationUrgency value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoStrahlentherapieBoost} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost}
+     *     and the given value
      */
-    public static String miiExOnkoStrahlentherapieBestrahlungBoost() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost";
+    public static @NonNull Extension miiExOnkoStrahlentherapieBestrahlungBoost(
+        CodeSystems.@NonNull MiiCsOnkoStrahlentherapieBoost value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis}.
      *
-     * @return {@code
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis}
+     *     and the given value
      */
-    public static String miiExOnkoStrahlentherapieBestrahlungEinzeldosis() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis";
+    public static @NonNull Extension miiExOnkoStrahlentherapieBestrahlungEinzeldosis(
+        @NonNull Quantity value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
+          value);
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis}.
      *
-     * @return {@code
+     * @param value the extension value
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis}
+     *     and the given value
      */
-    public static String miiExOnkoStrahlentherapieBestrahlungGesamtdosis() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis";
+    public static @NonNull Extension miiExOnkoStrahlentherapieBestrahlungGesamtdosis(
+        @NonNull Quantity value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+          value);
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoSeitenlokalisation} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation}
+     *     and the given value
      */
-    public static String miiExOnkoStrahlentherapieBestrahlungSeitenlokalisation() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation";
+    public static @NonNull Extension miiExOnkoStrahlentherapieBestrahlungSeitenlokalisation(
+        CodeSystems.@NonNull MiiCsOnkoSeitenlokalisation value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoIntention} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}
+     *     and the given value
      */
-    public static String miiExOnkoStrahlentherapieIntention() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention";
+    public static @NonNull Extension miiExOnkoStrahlentherapieIntention(
+        CodeSystems.@NonNull MiiCsOnkoIntention value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoTherapieStellungzurop} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}
+     *     and the given value
      */
-    public static String miiExOnkoStrahlentherapieStellungzurop() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop";
+    public static @NonNull Extension miiExOnkoStrahlentherapieStellungzurop(
+        CodeSystems.@NonNull MiiCsOnkoTherapieStellungzurop value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoIntention} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention}
+     *     and the given value
      */
-    public static String miiExOnkoSystemischeTherapieIntention() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention";
+    public static @NonNull Extension miiExOnkoSystemischeTherapieIntention(
+        CodeSystems.@NonNull MiiCsOnkoIntention value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoTherapieStellungzurop} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop}
+     *     and the given value
      */
-    public static String miiExOnkoSystemischeTherapieStellungzurop() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop";
+    public static @NonNull Extension miiExOnkoSystemischeTherapieStellungzurop(
+        CodeSystems.@NonNull MiiCsOnkoTherapieStellungzurop value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoTnmUicc} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix}
+     *     and the given value
      */
-    public static String miiExOnkoTnmCpPraefix() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix";
+    public static @NonNull Extension miiExOnkoTnmCpPraefix(
+        CodeSystems.@NonNull MiiCsOnkoTnmUicc value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoTnmUicc} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix}
+     *     and the given value
      */
-    public static String miiExOnkoTnmItcSuffix() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix";
+    public static @NonNull Extension miiExOnkoTnmItcSuffix(
+        CodeSystems.@NonNull MiiCsOnkoTnmUicc value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix",
+          new CodeableConcept(value.coding()));
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsOnkoTnmUicc} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix}
+     *     and the given value
      */
-    public static String miiExOnkoTnmSnSuffix() {
-      return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix";
+    public static @NonNull Extension miiExOnkoTnmSnSuffix(
+        CodeSystems.@NonNull MiiCsOnkoTnmUicc value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix",
+          new CodeableConcept(value.coding()));
     }
   }
 }

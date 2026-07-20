@@ -4,6 +4,7 @@ package de.medizininformatikinitiative.kerndatensatz.medikation;
 
 import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Extension;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
@@ -133,25 +134,33 @@ public final class Medikation {
     private Extensions() {}
 
     /**
-     * The canonical URL {@code
-     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation}.
+     * A new, empty {@link Extension} for the canonical URL {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation},
+     * for further population with nested extensions via {@link Extension#addExtension}.
      *
-     * @return {@code
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation}
+     *     and no value
      */
-    public static String miiExMedikationWirkstoffrelation() {
-      return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation";
+    public static @NonNull Extension miiExMedikationWirkstoffrelation() {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation");
     }
 
     /**
-     * The canonical URL {@code
+     * A new {@link Extension} for the canonical URL {@code
      * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp}.
      *
-     * @return {@code
+     * @param value the extension value, as a {@code MiiCsMedikationWirkstofftyp} concept
+     * @return a new {@link Extension} with url {@code
      *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp}
+     *     and the given value
      */
-    public static String miiExMedikationWirkstofftyp() {
-      return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp";
+    public static @NonNull Extension miiExMedikationWirkstofftyp(
+        CodeSystems.@NonNull MiiCsMedikationWirkstofftyp value) {
+      return new Extension(
+          "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp",
+          value.coding());
     }
   }
 }
