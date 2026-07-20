@@ -10,6 +10,7 @@ import com.palantir.javapoet.ParameterizedTypeName;
 import com.palantir.javapoet.TypeSpec;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -39,10 +40,17 @@ import javax.lang.model.element.Modifier;
  * HAPI {@code Type}, and a complex extension (nested sub-extensions, no {@code value[x]} of its
  * own) takes no parameter at all, e.g. {@code Onkologie.Extensions.miiExOnkoOperationIntention(new
  * CodeableConcept(...))}.
+ *
+ * <p>If a {@code CodeableConcept}/{@code Coding}-typed {@code value[x]} additionally pins its
+ * {@code Coding.system} to one fixed CodeSystem that ships its own concepts (see above), the
+ * factory method takes that CodeSystem's generated enum directly instead of the generic datatype,
+ * e.g. {@code Onkologie.Extensions.miiExOnkoStrahlentherapieIntention(MiiCsOnkoIntention.K)}.
  */
 public final class JavaConstantsGenerator {
 
   private static final ClassName CODING_TYPE = ClassName.get("org.hl7.fhir.r4.model", "Coding");
+  private static final ClassName CODEABLE_CONCEPT_TYPE =
+      ClassName.get("org.hl7.fhir.r4.model", "CodeableConcept");
   private static final ClassName EXTENSION_TYPE =
       ClassName.get("org.hl7.fhir.r4.model", "Extension");
   private static final ClassName GENERIC_VALUE_TYPE =
@@ -62,7 +70,11 @@ public final class JavaConstantsGenerator {
 
     addAccessorClass(rootType, "CodeSystems", model.codeSystems(), model.codeSystemConcepts());
     addAccessorClass(rootType, "Profiles", model.profiles(), Map.of());
-    addExtensionsClass(rootType, model.extensions(), model.extensionValueTypes());
+    addExtensionsClass(
+        rootType,
+        model.extensions(),
+        model.extensionValueTypes(),
+        boundEnumSimpleNamesByCodeSystemUrl(model));
 
     return JavaFile.builder(javaPackageName, rootType.build())
         .addFileComment(
@@ -115,7 +127,8 @@ public final class JavaConstantsGenerator {
   private static void addExtensionsClass(
       TypeSpec.Builder rootType,
       Map<String, String> extensions,
-      Map<String, ExtensionValueType> extensionValueTypes) {
+      Map<String, ExtensionValueType> extensionValueTypes,
+      Map<String, String> boundEnumSimpleNamesByCodeSystemUrl) {
     if (extensions.isEmpty()) {
       return;
     }
@@ -129,9 +142,28 @@ public final class JavaConstantsGenerator {
       String accessorName = NameUtils.toCamelCase(entry.getKey());
       ExtensionValueType valueType =
           extensionValueTypes.getOrDefault(entry.getKey(), ExtensionValueType.NONE);
-      nestedType.addMethod(buildExtensionFactoryMethod(accessorName, url, valueType));
+      nestedType.addMethod(
+          buildExtensionFactoryMethod(
+              accessorName, url, valueType, boundEnumSimpleNamesByCodeSystemUrl));
     }
     rootType.addType(nestedType.build());
+  }
+
+  /**
+   * Maps each CodeSystem URL that has a generated concept enum (see {@link #buildConceptEnum}) to
+   * that enum's simple name, so a bound {@code CodeableConcept}/{@code Coding} extension value (see
+   * {@link ExtensionValueType#boundCodeSystemUrl}) can be typed to it instead of the generic
+   * datatype.
+   */
+  private static Map<String, String> boundEnumSimpleNamesByCodeSystemUrl(IgPackageModel model) {
+    Map<String, String> enumSimpleNamesByUrl = new HashMap<>();
+    for (String constantName : model.codeSystemConcepts().keySet()) {
+      String url = model.codeSystems().get(constantName);
+      if (url != null) {
+        enumSimpleNamesByUrl.put(url, NameUtils.toPascalCase(constantName));
+      }
+    }
+    return enumSimpleNamesByUrl;
   }
 
   /**
@@ -139,12 +171,17 @@ public final class JavaConstantsGenerator {
    * URL, missing only the value: a no-arg overload returning {@code new Extension(url)} for a
    * complex extension with no {@code value[x]} of its own (see {@link ExtensionValueType#NONE}),
    * otherwise a single-{@code value}-parameter overload returning {@code new Extension(url,
-   * value)}, typed to the extension's {@code value[x]} type if it has exactly one (see {@link
-   * ExtensionValueType#fixed}), or the generic HAPI {@code Type} if {@code value[x]} is a choice of
-   * several (see {@link ExtensionValueType#CHOICE}).
+   * value)}. The {@code value} parameter is typed to the extension's {@code value[x]} type if it
+   * has exactly one (see {@link ExtensionValueType#fixed}) - or, if that type is a {@code
+   * CodeableConcept}/{@code Coding} bound to a CodeSystem with a generated enum (see {@link
+   * ExtensionValueType#boundCodeSystemUrl}), to that enum directly - or the generic HAPI {@code
+   * Type} if {@code value[x]} is a choice of several (see {@link ExtensionValueType#CHOICE}).
    */
   private static MethodSpec buildExtensionFactoryMethod(
-      String accessorName, String url, ExtensionValueType valueType) {
+      String accessorName,
+      String url,
+      ExtensionValueType valueType,
+      Map<String, String> boundEnumSimpleNamesByCodeSystemUrl) {
     MethodSpec.Builder method =
         MethodSpec.methodBuilder(accessorName)
             .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
@@ -165,6 +202,15 @@ public final class JavaConstantsGenerator {
           .build();
     }
 
+    String boundEnumSimpleName =
+        valueType.boundCodeSystemUrl() == null
+            ? null
+            : boundEnumSimpleNamesByCodeSystemUrl.get(valueType.boundCodeSystemUrl());
+    if (boundEnumSimpleName != null) {
+      return buildBoundCodingExtensionFactoryMethod(
+          method, url, Objects.requireNonNull(valueType.fhirTypeCode()), boundEnumSimpleName);
+    }
+
     ClassName valueClassName =
         valueType.choice()
             ? GENERIC_VALUE_TYPE
@@ -182,6 +228,40 @@ public final class JavaConstantsGenerator {
             url)
         .addStatement("return new $T($S, value)", EXTENSION_TYPE, url)
         .build();
+  }
+
+  /**
+   * Builds the factory method overload for a {@code CodeableConcept}/{@code Coding} extension value
+   * whose {@code Coding.system} is pinned to a CodeSystem with a generated concept enum: the {@code
+   * value} parameter takes that enum directly, and the method body converts it via the enum's
+   * {@code coding()} accessor - wrapped in a new {@link CodeableConcept} if that's the extension's
+   * value type.
+   */
+  private static MethodSpec buildBoundCodingExtensionFactoryMethod(
+      MethodSpec.Builder method, String url, String fhirTypeCode, String boundEnumSimpleName) {
+    ClassName enumType = ClassName.get("", "CodeSystems", boundEnumSimpleName);
+    method
+        .addParameter(ParameterSpec.builder(enumType.annotated(NONNULL), "value").build())
+        .addJavadoc(
+            """
+            A new {@link Extension} for the canonical URL {@code $L}.
+
+            @param value the extension value, as a {@code $L} concept
+            @return a new {@link Extension} with url {@code $L} and the given value
+            """,
+            url,
+            boundEnumSimpleName,
+            url);
+    if ("CodeableConcept".equals(fhirTypeCode)) {
+      return method
+          .addStatement(
+              "return new $T($S, new $T(value.coding()))",
+              EXTENSION_TYPE,
+              url,
+              CODEABLE_CONCEPT_TYPE)
+          .build();
+    }
+    return method.addStatement("return new $T($S, value.coding())", EXTENSION_TYPE, url).build();
   }
 
   /**

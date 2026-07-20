@@ -53,6 +53,29 @@ resource.
      // -> Extension{url=".../mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis", value=DecimalType(2.5)}
      ```
 
+   - If a `CodeableConcept`/`Coding`-typed `value[x]` is pinned to one CodeSystem, and that
+     CodeSystem ships its own concepts (so it has a generated enum, see item 4 below) in the
+     **same** IG package, the `value` parameter is typed to that enum directly instead of the
+     generic datatype:
+
+     ```java
+     Onkologie.Extensions.miiExOnkoStrahlentherapieIntention(MiiCsOnkoIntention.K)
+     // -> Extension{url=".../mii-ex-onko-strahlentherapie-intention", value=CodeableConcept(Coding{system=".../mii-cs-onko-intention", code="K"})}
+     ```
+
+     Two profile-authoring patterns are recognized, since IGs use both interchangeably: a
+     `fixedUri` pinning the (only, unsliced) nested `Coding.system` element directly, or a
+     `required`-strength `binding` to a ValueSet whose `compose.include` draws from exactly one
+     CodeSystem (no `exclude`, no nested `valueSet` imports; a `concept`/`filter` restriction to a
+     subset of that CodeSystem's codes is ignored - the generated enum is a permissive superset,
+     the same looseness the `fixedUri` case already has). An `extensible`/`preferred` binding is
+     *not* followed, since those explicitly allow codes outside the bound ValueSet.
+
+     Either way, this only applies when the bound CodeSystem is defined in the same FHIR package
+     as the extension (so its enum lives in the same generated Java class) and has inline concepts;
+     otherwise (external terminology, a CodeSystem from a different package, or a ValueSet spanning
+     more than one CodeSystem) the factory method falls back to the generic `CodeableConcept`/
+     `Coding` parameter.
    - A choice-typed `value[x]` (more than one allowed type) falls back to the generic HAPI
      `Type` parameter.
    - A complex extension (nested sub-extensions, no `value[x]` of its own) gets a no-arg

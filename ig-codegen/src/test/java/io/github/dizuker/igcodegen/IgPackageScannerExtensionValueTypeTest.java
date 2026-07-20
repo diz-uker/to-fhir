@@ -55,6 +55,281 @@ class IgPackageScannerExtensionValueTypeTest {
   }
 
   @Test
+  void detectsCodeSystemBoundToACodeableConceptValueViaAFixedCodingSystem(
+      @TempDir Path fhirPackagesDir) throws Exception {
+    Path packageContentDir = Files.createDirectories(fhirPackagesDir.resolve(PACKAGE_NAME));
+    Files.writeString(
+        packageContentDir.resolve("StructureDefinition-mii-ex-onko-intention.json"),
+        """
+        {
+          "resourceType": "StructureDefinition",
+          "id": "mii-ex-onko-intention",
+          "url": "https://example.org/StructureDefinition/mii-ex-onko-intention",
+          "kind": "complex-type",
+          "type": "Extension",
+          "derivation": "constraint",
+          "snapshot": {
+            "element": [
+              {"id": "Extension", "path": "Extension"},
+              {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "1",
+                "type": [{"code": "CodeableConcept"}]
+              },
+              {
+                "id": "Extension.value[x].coding.system",
+                "path": "Extension.value[x].coding.system",
+                "fixedUri": "https://example.org/CodeSystem/mii-cs-onko-intention"
+              }
+            ]
+          }
+        }
+        """);
+
+    IgPackageModel model = scan(fhirPackagesDir);
+
+    assertEquals(
+        ExtensionValueType.boundCoding(
+            "CodeableConcept", "https://example.org/CodeSystem/mii-cs-onko-intention"),
+        model.extensionValueTypes().get("MII_EX_ONKO_INTENTION"));
+  }
+
+  @Test
+  void detectsCodeSystemBoundToADirectCodingValueViaAFixedSystem(@TempDir Path fhirPackagesDir)
+      throws Exception {
+    Path packageContentDir = Files.createDirectories(fhirPackagesDir.resolve(PACKAGE_NAME));
+    Files.writeString(
+        packageContentDir.resolve("StructureDefinition-mii-ex-onko-status.json"),
+        """
+        {
+          "resourceType": "StructureDefinition",
+          "id": "mii-ex-onko-status",
+          "url": "https://example.org/StructureDefinition/mii-ex-onko-status",
+          "kind": "complex-type",
+          "type": "Extension",
+          "derivation": "constraint",
+          "snapshot": {
+            "element": [
+              {"id": "Extension", "path": "Extension"},
+              {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "1",
+                "type": [{"code": "Coding"}]
+              },
+              {
+                "id": "Extension.value[x].system",
+                "path": "Extension.value[x].system",
+                "fixedUri": "https://example.org/CodeSystem/mii-cs-onko-status"
+              }
+            ]
+          }
+        }
+        """);
+
+    IgPackageModel model = scan(fhirPackagesDir);
+
+    assertEquals(
+        ExtensionValueType.boundCoding(
+            "Coding", "https://example.org/CodeSystem/mii-cs-onko-status"),
+        model.extensionValueTypes().get("MII_EX_ONKO_STATUS"));
+  }
+
+  @Test
+  void codeableConceptWithoutAFixedCodingSystemIsJustAFixedType(@TempDir Path fhirPackagesDir)
+      throws Exception {
+    Path packageContentDir = Files.createDirectories(fhirPackagesDir.resolve(PACKAGE_NAME));
+    Files.writeString(
+        packageContentDir.resolve("StructureDefinition-mii-ex-onko-freitext.json"),
+        """
+        {
+          "resourceType": "StructureDefinition",
+          "id": "mii-ex-onko-freitext",
+          "url": "https://example.org/StructureDefinition/mii-ex-onko-freitext",
+          "kind": "complex-type",
+          "type": "Extension",
+          "derivation": "constraint",
+          "snapshot": {
+            "element": [
+              {"id": "Extension", "path": "Extension"},
+              {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "1",
+                "type": [{"code": "CodeableConcept"}]
+              }
+            ]
+          }
+        }
+        """);
+
+    IgPackageModel model = scan(fhirPackagesDir);
+
+    assertEquals(
+        ExtensionValueType.fixed("CodeableConcept"),
+        model.extensionValueTypes().get("MII_EX_ONKO_FREITEXT"));
+  }
+
+  @Test
+  void detectsCodeSystemBoundViaARequiredValueSetBindingWithNoFixedUri(
+      @TempDir Path fhirPackagesDir) throws Exception {
+    // Mirrors mii-ex-onko-strahlentherapie-bestrahlung-boost: the snapshot doesn't expand
+    // value[x].coding.system at all, only a required binding to a single-CodeSystem ValueSet.
+    Path packageContentDir = Files.createDirectories(fhirPackagesDir.resolve(PACKAGE_NAME));
+    Files.writeString(
+        packageContentDir.resolve("StructureDefinition-mii-ex-onko-boost.json"),
+        """
+        {
+          "resourceType": "StructureDefinition",
+          "id": "mii-ex-onko-boost",
+          "url": "https://example.org/StructureDefinition/mii-ex-onko-boost",
+          "kind": "complex-type",
+          "type": "Extension",
+          "derivation": "constraint",
+          "snapshot": {
+            "element": [
+              {"id": "Extension", "path": "Extension"},
+              {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "1",
+                "type": [{"code": "CodeableConcept"}],
+                "binding": {
+                  "strength": "required",
+                  "valueSet": "https://example.org/ValueSet/mii-vs-onko-boost"
+                }
+              }
+            ]
+          }
+        }
+        """);
+    Files.writeString(
+        packageContentDir.resolve("ValueSet-mii-vs-onko-boost.json"),
+        """
+        {
+          "resourceType": "ValueSet",
+          "id": "mii-vs-onko-boost",
+          "url": "https://example.org/ValueSet/mii-vs-onko-boost",
+          "compose": {
+            "include": [{"system": "https://example.org/CodeSystem/mii-cs-onko-boost"}]
+          }
+        }
+        """);
+
+    IgPackageModel model = scan(fhirPackagesDir);
+
+    assertEquals(
+        ExtensionValueType.boundCoding(
+            "CodeableConcept", "https://example.org/CodeSystem/mii-cs-onko-boost"),
+        model.extensionValueTypes().get("MII_EX_ONKO_BOOST"));
+  }
+
+  @Test
+  void ignoresAnExtensibleValueSetBinding(@TempDir Path fhirPackagesDir) throws Exception {
+    Path packageContentDir = Files.createDirectories(fhirPackagesDir.resolve(PACKAGE_NAME));
+    Files.writeString(
+        packageContentDir.resolve("StructureDefinition-mii-ex-onko-extensible.json"),
+        """
+        {
+          "resourceType": "StructureDefinition",
+          "id": "mii-ex-onko-extensible",
+          "url": "https://example.org/StructureDefinition/mii-ex-onko-extensible",
+          "kind": "complex-type",
+          "type": "Extension",
+          "derivation": "constraint",
+          "snapshot": {
+            "element": [
+              {"id": "Extension", "path": "Extension"},
+              {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "1",
+                "type": [{"code": "CodeableConcept"}],
+                "binding": {
+                  "strength": "extensible",
+                  "valueSet": "https://example.org/ValueSet/mii-vs-onko-extensible"
+                }
+              }
+            ]
+          }
+        }
+        """);
+    Files.writeString(
+        packageContentDir.resolve("ValueSet-mii-vs-onko-extensible.json"),
+        """
+        {
+          "resourceType": "ValueSet",
+          "id": "mii-vs-onko-extensible",
+          "url": "https://example.org/ValueSet/mii-vs-onko-extensible",
+          "compose": {
+            "include": [{"system": "https://example.org/CodeSystem/mii-cs-onko-extensible"}]
+          }
+        }
+        """);
+
+    IgPackageModel model = scan(fhirPackagesDir);
+
+    assertEquals(
+        ExtensionValueType.fixed("CodeableConcept"),
+        model.extensionValueTypes().get("MII_EX_ONKO_EXTENSIBLE"));
+  }
+
+  @Test
+  void ignoresARequiredBindingToAValueSetComposedFromMultipleCodeSystems(
+      @TempDir Path fhirPackagesDir) throws Exception {
+    Path packageContentDir = Files.createDirectories(fhirPackagesDir.resolve(PACKAGE_NAME));
+    Files.writeString(
+        packageContentDir.resolve("StructureDefinition-mii-ex-onko-multi.json"),
+        """
+        {
+          "resourceType": "StructureDefinition",
+          "id": "mii-ex-onko-multi",
+          "url": "https://example.org/StructureDefinition/mii-ex-onko-multi",
+          "kind": "complex-type",
+          "type": "Extension",
+          "derivation": "constraint",
+          "snapshot": {
+            "element": [
+              {"id": "Extension", "path": "Extension"},
+              {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "1",
+                "type": [{"code": "CodeableConcept"}],
+                "binding": {
+                  "strength": "required",
+                  "valueSet": "https://example.org/ValueSet/mii-vs-onko-multi"
+                }
+              }
+            ]
+          }
+        }
+        """);
+    Files.writeString(
+        packageContentDir.resolve("ValueSet-mii-vs-onko-multi.json"),
+        """
+        {
+          "resourceType": "ValueSet",
+          "id": "mii-vs-onko-multi",
+          "url": "https://example.org/ValueSet/mii-vs-onko-multi",
+          "compose": {
+            "include": [
+              {"system": "https://example.org/CodeSystem/mii-cs-onko-a"},
+              {"system": "https://example.org/CodeSystem/mii-cs-onko-b"}
+            ]
+          }
+        }
+        """);
+
+    IgPackageModel model = scan(fhirPackagesDir);
+
+    assertEquals(
+        ExtensionValueType.fixed("CodeableConcept"),
+        model.extensionValueTypes().get("MII_EX_ONKO_MULTI"));
+  }
+
+  @Test
   void detectsChoiceValueTypeWhenMultipleTypesAreAllowed(@TempDir Path fhirPackagesDir)
       throws Exception {
     Path packageContentDir = Files.createDirectories(fhirPackagesDir.resolve(PACKAGE_NAME));

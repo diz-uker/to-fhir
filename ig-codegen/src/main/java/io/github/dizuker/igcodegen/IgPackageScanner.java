@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import org.jspecify.annotations.Nullable;
 import tools.jackson.databind.ObjectMapper;
 
 /**
@@ -45,19 +46,48 @@ public final class IgPackageScanner {
   }
 
   public IgPackageModel scan(Path packageContentDir, String packageName, String packageVersion) {
+    List<FhirResourceSummary> resources = readResources(packageContentDir);
+
     TreeMap<String, String> codeSystems = new TreeMap<>();
     TreeMap<String, String> profiles = new TreeMap<>();
     TreeMap<String, String> extensions = new TreeMap<>();
     Map<String, List<ConceptConstant>> codeSystemConcepts = new HashMap<>();
     Map<String, ExtensionValueType> extensionValueTypes = new HashMap<>();
 
-    try (DirectoryStream<Path> files = Files.newDirectoryStream(packageContentDir, "*.json")) {
-      for (Path file : files) {
-        classify(file, codeSystems, profiles, extensions, codeSystemConcepts, extensionValueTypes);
+    for (FhirResourceSummary resource : resources) {
+      if (!"CodeSystem".equals(resource.resourceType())) {
+        continue;
       }
-    } catch (IOException e) {
-      throw new UncheckedIOException(
-          "Failed to scan FHIR package directory: " + packageContentDir, e);
+      String id = resource.id();
+      String url = resource.url();
+      if (id == null || url == null) {
+        continue;
+      }
+      classifyCodeSystem(
+          resource, NameUtils.toConstantName(id), url, codeSystems, codeSystemConcepts);
+    }
+
+    // Built up front (a second pass over `resources`) so an extension's `binding.valueSet` can be
+    // resolved to a CodeSystem regardless of which file the ValueSet happens to be defined in.
+    Map<String, String> codeSystemUrlByValueSetUrl = indexSingleCodeSystemValueSets(resources);
+
+    for (FhirResourceSummary resource : resources) {
+      if (!"StructureDefinition".equals(resource.resourceType())) {
+        continue;
+      }
+      String id = resource.id();
+      String url = resource.url();
+      if (id == null || url == null) {
+        continue;
+      }
+      classifyStructureDefinition(
+          resource,
+          NameUtils.toConstantName(id),
+          url,
+          profiles,
+          extensions,
+          extensionValueTypes,
+          codeSystemUrlByValueSetUrl);
     }
 
     return new IgPackageModel(
@@ -70,33 +100,27 @@ public final class IgPackageScanner {
         extensionValueTypes);
   }
 
-  private void classify(
-      Path file,
-      Map<String, String> codeSystems,
+  private List<FhirResourceSummary> readResources(Path packageContentDir) {
+    List<FhirResourceSummary> resources = new ArrayList<>();
+    try (DirectoryStream<Path> files = Files.newDirectoryStream(packageContentDir, "*.json")) {
+      for (Path file : files) {
+        resources.add(objectMapper.readValue(file.toFile(), FhirResourceSummary.class));
+      }
+    } catch (IOException e) {
+      throw new UncheckedIOException(
+          "Failed to scan FHIR package directory: " + packageContentDir, e);
+    }
+    return resources;
+  }
+
+  private static void classifyStructureDefinition(
+      FhirResourceSummary resource,
+      String constantName,
+      String url,
       Map<String, String> profiles,
       Map<String, String> extensions,
-      Map<String, List<ConceptConstant>> codeSystemConcepts,
-      Map<String, ExtensionValueType> extensionValueTypes) {
-    var resource = objectMapper.readValue(file.toFile(), FhirResourceSummary.class);
-
-    String resourceType = resource.resourceType();
-    String id = resource.id();
-    String url = resource.url();
-    if (resourceType == null || id == null || url == null) {
-      return;
-    }
-
-    String constantName = NameUtils.toConstantName(id);
-
-    if ("CodeSystem".equals(resourceType)) {
-      classifyCodeSystem(resource, constantName, url, codeSystems, codeSystemConcepts);
-      return;
-    }
-
-    if (!"StructureDefinition".equals(resourceType)) {
-      return;
-    }
-
+      Map<String, ExtensionValueType> extensionValueTypes,
+      Map<String, String> codeSystemUrlByValueSetUrl) {
     String kind = resource.kind();
     String derivation = resource.derivation();
     if ("logical".equals(kind) || "specialization".equals(derivation)) {
@@ -107,7 +131,8 @@ public final class IgPackageScanner {
         && "constraint".equals(derivation)
         && "Extension".equals(resource.type())) {
       extensions.put(constantName, url);
-      extensionValueTypes.put(constantName, extensionValueType(resource));
+      extensionValueTypes.put(
+          constantName, extensionValueType(resource, codeSystemUrlByValueSetUrl));
       return;
     }
 
@@ -122,11 +147,13 @@ public final class IgPackageScanner {
    * the shape its generated factory method's value parameter should take. See {@link
    * ExtensionValueType}.
    */
-  private static ExtensionValueType extensionValueType(FhirResourceSummary resource) {
+  private static ExtensionValueType extensionValueType(
+      FhirResourceSummary resource, Map<String, String> codeSystemUrlByValueSetUrl) {
     if (resource.snapshot() == null || resource.snapshot().element() == null) {
       return ExtensionValueType.NONE;
     }
-    for (FhirResourceSummary.Element element : resource.snapshot().element()) {
+    List<FhirResourceSummary.Element> elements = resource.snapshot().element();
+    for (FhirResourceSummary.Element element : elements) {
       if (!"Extension.value[x]".equals(element.path())) {
         continue;
       }
@@ -138,9 +165,100 @@ public final class IgPackageScanner {
         return ExtensionValueType.CHOICE;
       }
       String code = types.get(0).code();
-      return code == null ? ExtensionValueType.NONE : ExtensionValueType.fixed(code);
+      if (code == null) {
+        return ExtensionValueType.NONE;
+      }
+      String boundCodeSystemUrl =
+          boundCodeSystemUrl(elements, element, code, codeSystemUrlByValueSetUrl);
+      return boundCodeSystemUrl == null
+          ? ExtensionValueType.fixed(code)
+          : ExtensionValueType.boundCoding(code, boundCodeSystemUrl);
     }
     return ExtensionValueType.NONE;
+  }
+
+  /**
+   * For a {@code CodeableConcept}- or {@code Coding}-typed {@code value[x]}, determines whether its
+   * {@code Coding.system} is pinned to one CodeSystem - either directly, via a {@code fixedUri} on
+   * its (only, unsliced) nested {@code Coding.system} element, or indirectly, via a {@code
+   * required}-strength {@code binding} to a ValueSet that itself draws from exactly one CodeSystem
+   * (see {@link #indexSingleCodeSystemValueSets}). Returns {@code null} for any other value type,
+   * or if neither pattern applies (e.g. an {@code extensible} binding, or a ValueSet composed from
+   * more than one CodeSystem).
+   */
+  private static @Nullable String boundCodeSystemUrl(
+      List<FhirResourceSummary.Element> elements,
+      FhirResourceSummary.Element valueElement,
+      String valueTypeCode,
+      Map<String, String> codeSystemUrlByValueSetUrl) {
+    if (!"CodeableConcept".equals(valueTypeCode) && !"Coding".equals(valueTypeCode)) {
+      return null;
+    }
+    String systemPath =
+        "CodeableConcept".equals(valueTypeCode)
+            ? "Extension.value[x].coding.system"
+            : "Extension.value[x].system";
+    for (FhirResourceSummary.Element element : elements) {
+      if (systemPath.equals(element.path()) && element.fixedUri() != null) {
+        return element.fixedUri();
+      }
+    }
+
+    FhirResourceSummary.Binding binding = valueElement.binding();
+    if (binding == null || !"required".equals(binding.strength()) || binding.valueSet() == null) {
+      return null;
+    }
+    // Canonical references may carry a `|version` suffix; the ValueSet index is keyed by bare url.
+    String valueSetUrl = binding.valueSet();
+    int versionSeparator = valueSetUrl.indexOf('|');
+    String bareValueSetUrl =
+        versionSeparator < 0 ? valueSetUrl : valueSetUrl.substring(0, versionSeparator);
+    return codeSystemUrlByValueSetUrl.get(bareValueSetUrl);
+  }
+
+  /**
+   * Maps each ValueSet URL that draws from exactly one CodeSystem - one {@code compose.include}
+   * entry with a {@code system} and no nested {@code valueSet} imports, and no {@code
+   * compose.exclude} - to that CodeSystem's URL. A {@code concept}/{@code filter} restriction on
+   * the include is ignored: the ValueSet may only permit a subset of that CodeSystem's codes, but
+   * every code it does permit still comes from the one system, which is all that's needed to safely
+   * type a bound extension value to that CodeSystem's generated enum (itself a superset).
+   */
+  private static Map<String, String> indexSingleCodeSystemValueSets(
+      List<FhirResourceSummary> resources) {
+    Map<String, String> codeSystemUrlByValueSetUrl = new HashMap<>();
+    for (FhirResourceSummary resource : resources) {
+      if (!"ValueSet".equals(resource.resourceType())) {
+        continue;
+      }
+      String valueSetUrl = resource.url();
+      String codeSystemUrl = singleCodeSystemUrl(resource.compose());
+      if (valueSetUrl != null && codeSystemUrl != null) {
+        codeSystemUrlByValueSetUrl.put(valueSetUrl, codeSystemUrl);
+      }
+    }
+    return codeSystemUrlByValueSetUrl;
+  }
+
+  private static @Nullable String singleCodeSystemUrl(
+      FhirResourceSummary.@Nullable Compose compose) {
+    if (compose == null) {
+      return null;
+    }
+    List<FhirResourceSummary.ComposeInclude> excludes = compose.exclude();
+    if (excludes != null && !excludes.isEmpty()) {
+      return null;
+    }
+    List<FhirResourceSummary.ComposeInclude> includes = compose.include();
+    if (includes == null || includes.size() != 1) {
+      return null;
+    }
+    FhirResourceSummary.ComposeInclude onlyInclude = includes.get(0);
+    List<String> nestedValueSets = onlyInclude.valueSet();
+    if (nestedValueSets != null && !nestedValueSets.isEmpty()) {
+      return null;
+    }
+    return onlyInclude.system();
   }
 
   private static void classifyCodeSystem(
