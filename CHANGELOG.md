@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.8](https://github.com/diz-uker/to-fhir/compare/v0.2.7...v0.2.8) (2026-07-20)
+
+
+### Features
+
+* typed extensions ([#64](https://github.com/diz-uker/to-fhir/issues/64)) ([1b1520a](https://github.com/diz-uker/to-fhir/commit/1b1520a46e2a6dbef1065acf12b989153fdcb446))
+
 ## [0.2.7](https://github.com/diz-uker/to-fhir/compare/v0.2.6...v0.2.7) (2026-07-07)
 
 
