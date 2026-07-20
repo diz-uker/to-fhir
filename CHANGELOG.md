@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.9](https://github.com/diz-uker/to-fhir/compare/v0.2.8...v0.2.9) (2026-07-20)
+
+
+### Features
+
+* added fromValueOrThrow ([#66](https://github.com/diz-uker/to-fhir/issues/66)) ([f695b6f](https://github.com/diz-uker/to-fhir/commit/f695b6f92719b94a624e58febbdbcafbd287fbef))
+
 ## [0.2.8](https://github.com/diz-uker/to-fhir/compare/v0.2.7...v0.2.8) (2026-07-20)
 
 
