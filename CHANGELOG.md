@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.10](https://github.com/diz-uker/to-fhir/compare/v0.2.9...v0.2.10) (2026-07-28)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#69](https://github.com/diz-uker/to-fhir/issues/69)) ([cc7c600](https://github.com/diz-uker/to-fhir/commit/cc7c60039413ba45a54daffaa449285ecbd8ef76))
+* **deps:** update dependency tools.jackson.core:jackson-databind to v3.2.1 [security] ([#71](https://github.com/diz-uker/to-fhir/issues/71)) ([f0023a0](https://github.com/diz-uker/to-fhir/commit/f0023a03f918fcb5379c2f8306a9553c9d8a3604))
+
 ## [0.2.9](https://github.com/diz-uker/to-fhir/compare/v0.2.8...v0.2.9) (2026-07-20)
 
 
