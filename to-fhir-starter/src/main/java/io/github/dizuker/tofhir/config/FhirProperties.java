@@ -1,10 +1,8 @@
 package io.github.dizuker.tofhir.config;
 
 import io.github.dizuker.tofhir.FhirCodings;
-import io.github.dizuker.tofhir.FhirExtensions;
 import io.github.dizuker.tofhir.FhirSystems;
 import org.hl7.fhir.r4.model.Coding;
-import org.hl7.fhir.r4.model.Extension;
 
 /**
  * Properties for configuring to-FHIR utilities, bound from the {@code fhir} prefix.
