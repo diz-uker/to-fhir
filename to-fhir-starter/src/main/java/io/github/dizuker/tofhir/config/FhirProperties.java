@@ -227,19 +227,4 @@ public class FhirProperties {
       this.pzn = pzn;
     }
   }
-
-  /** FHIR extensions. */
-  public static class Extensions {
-    private Extension dataAbsentReason = FhirExtensions.dataAbsentReason();
-
-    /** Returns a fresh copy of the data-absent-reason extension. */
-    public Extension dataAbsentReason() {
-      return dataAbsentReason.copy();
-    }
-
-    /** Used by Spring Boot for property binding. */
-    public void setDataAbsentReason(Extension dataAbsentReason) {
-      this.dataAbsentReason = dataAbsentReason;
-    }
-  }
 }
