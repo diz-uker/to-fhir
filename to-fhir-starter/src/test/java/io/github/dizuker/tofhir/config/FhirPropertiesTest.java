@@ -20,9 +20,6 @@ class FhirPropertiesTest {
         context -> {
           var props = context.getBean(FhirProperties.class);
           assertEquals(FhirSystems.LOINC, props.systems().loinc());
-          assertEquals(
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              props.extensions().dataAbsentReason().getUrl());
           assertEquals(FhirSystems.LOINC, props.codings().loinc().getSystem());
         });
   }

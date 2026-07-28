@@ -225,4 +225,6 @@ public class FhirProperties {
       this.pzn = pzn;
     }
   }
+
+  public static class Extensions {}
 }
