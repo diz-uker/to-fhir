@@ -1,10 +1,8 @@
 package io.github.dizuker.tofhir.config;
 
 import io.github.dizuker.tofhir.FhirCodings;
-import io.github.dizuker.tofhir.FhirExtensions;
 import io.github.dizuker.tofhir.FhirSystems;
 import org.hl7.fhir.r4.model.Coding;
-import org.hl7.fhir.r4.model.Extension;
 
 /**
  * Properties for configuring to-FHIR utilities, bound from the {@code fhir} prefix.
@@ -228,18 +226,5 @@ public class FhirProperties {
     }
   }
 
-  /** FHIR extensions. */
-  public static class Extensions {
-    private Extension dataAbsentReason = FhirExtensions.dataAbsentReason();
-
-    /** Returns a fresh copy of the data-absent-reason extension. */
-    public Extension dataAbsentReason() {
-      return dataAbsentReason.copy();
-    }
-
-    /** Used by Spring Boot for property binding. */
-    public void setDataAbsentReason(Extension dataAbsentReason) {
-      this.dataAbsentReason = dataAbsentReason;
-    }
-  }
+  public static class Extensions {}
 }
