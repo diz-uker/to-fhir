@@ -507,5 +507,145 @@ public final class Studie {
           "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister",
           value);
     }
+
+    public static final class Urls {
+      private Urls() {}
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym}
+       */
+      public static @NonNull String miiExStudieAkronym() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.associatedParty}
+       */
+      public static @NonNull String miiExStudieBackportAssociatedParty() {
+        return "http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.associatedParty";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByCombination}
+       */
+      public static @NonNull String miiExStudieBackportDefinitionByCombination() {
+        return "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByCombination";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByTypeAndValue}
+       */
+      public static @NonNull String miiExStudieBackportDefinitionByTypeAndValue() {
+        return "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByTypeAndValue";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionCanonical}
+       */
+      public static @NonNull String miiExStudieBackportDefinitionCanonical() {
+        return "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionCanonical";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionReference}
+       */
+      public static @NonNull String miiExStudieBackportDefinitionReference() {
+        return "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionReference";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.label}
+       */
+      public static @NonNull String miiExStudieBackportLabel() {
+        return "http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.label";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.linkId}
+       */
+      public static @NonNull String miiExStudieBackportLinkId() {
+        return "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.linkId";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-eligibility}
+       */
+      public static @NonNull String miiExStudieEligibility() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-eligibility";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-ethikvotum}
+       */
+      public static @NonNull String miiExStudieEthikvotum() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-ethikvotum";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-finanzierung}
+       */
+      public static @NonNull String miiExStudieFinanzierung() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-finanzierung";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-quell-register}
+       */
+      public static @NonNull String miiExStudieQuellRegister() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-quell-register";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-randomisierungsmethode}
+       */
+      public static @NonNull String miiExStudieRandomisierungsmethode() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-randomisierungsmethode";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-rekrutierung}
+       */
+      public static @NonNull String miiExStudieRekrutierung() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-rekrutierung";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-schlagwort}
+       */
+      public static @NonNull String miiExStudieSchlagwort() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-schlagwort";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienfokus}
+       */
+      public static @NonNull String miiExStudieStudienfokus() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienfokus";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister}
+       */
+      public static @NonNull String miiExStudieStudienregister() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister";
+      }
+    }
   }
 }

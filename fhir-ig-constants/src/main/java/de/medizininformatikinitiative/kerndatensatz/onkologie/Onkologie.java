@@ -7145,5 +7145,121 @@ public final class Onkologie {
           "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix",
           new CodeableConcept(value.coding()));
     }
+
+    public static final class Urls {
+      private Urls() {}
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}
+       */
+      public static @NonNull String miiExOnkoHistologyMorphologyBehaviorIcdo3() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}
+       */
+      public static @NonNull String miiExOnkoOperationIntention() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency}
+       */
+      public static @NonNull String miiExOnkoOperationUrgency() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost}
+       */
+      public static @NonNull String miiExOnkoStrahlentherapieBestrahlungBoost() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis}
+       */
+      public static @NonNull String miiExOnkoStrahlentherapieBestrahlungEinzeldosis() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis}
+       */
+      public static @NonNull String miiExOnkoStrahlentherapieBestrahlungGesamtdosis() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation}
+       */
+      public static @NonNull String miiExOnkoStrahlentherapieBestrahlungSeitenlokalisation() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}
+       */
+      public static @NonNull String miiExOnkoStrahlentherapieIntention() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}
+       */
+      public static @NonNull String miiExOnkoStrahlentherapieStellungzurop() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention}
+       */
+      public static @NonNull String miiExOnkoSystemischeTherapieIntention() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop}
+       */
+      public static @NonNull String miiExOnkoSystemischeTherapieStellungzurop() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix}
+       */
+      public static @NonNull String miiExOnkoTnmCpPraefix() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix}
+       */
+      public static @NonNull String miiExOnkoTnmItcSuffix() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix}
+       */
+      public static @NonNull String miiExOnkoTnmSnSuffix() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix";
+      }
+    }
   }
 }

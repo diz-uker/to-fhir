@@ -232,5 +232,17 @@ public final class Base {
           "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht",
           value);
     }
+
+    public static final class Urls {
+      private Urls() {}
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht}
+       */
+      public static @NonNull String miiExProzedurDurchfuehrungsabsicht() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht";
+      }
+    }
   }
 }
