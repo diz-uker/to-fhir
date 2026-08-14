@@ -24,7 +24,14 @@
   <Target Name="GenerateIgConstants">
     <PropertyGroup>
       <_PackageJson>$(MSBuildThisFileDirectory)..\fhir-ig-constants\package.json</_PackageJson>
-      <_FhirPackagesDir>$([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))/.fhir/packages</_FhirPackagesDir>
+      <!--
+        Prefer npm-installed packages from the sibling fhir-ig-constants directory (run
+        'npm install' there first); fall back to the Firely Terminal cache (~/.fhir/packages).
+      -->
+      <_NodeModules>$(MSBuildThisFileDirectory)../fhir-ig-constants/node_modules</_NodeModules>
+      <_FhirPackagesDir Condition="Exists('$(_NodeModules)')">$(_NodeModules)</_FhirPackagesDir>
+      <_FhirPackagesDir Condition="'$(_FhirPackagesDir)' == ''"
+        >$([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))/.fhir/packages</_FhirPackagesDir>
       <_OutputDir>$(MSBuildThisFileDirectory)src\</_OutputDir>
       <_GeneratorProject>$(MSBuildThisFileDirectory)..\ig-codegen-cs\IgCodegen\IgCodegen.csproj</_GeneratorProject>
     </PropertyGroup>

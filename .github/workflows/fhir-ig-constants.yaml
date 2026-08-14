@@ -6,11 +6,13 @@ on:
     paths:
       - "fhir-ig-constants/package.json"
       - "ig-codegen/src/main/java/**"
+      - "ig-codegen-cs/**"
   push:
     branches: [master]
     paths:
       - "fhir-ig-constants/package.json"
       - "ig-codegen/src/main/java/**"
+      - "ig-codegen-cs/**"
   workflow_dispatch: {}
 
 permissions:
@@ -52,17 +54,36 @@ jobs:
           distribution: "temurin"
           cache: "gradle"
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: "10.x"
+
       - uses: gradle/actions/wrapper-validation@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
 
-      - name: Regenerate FHIR IG constants
+      - name: Regenerate Java FHIR IG constants
         run: ./gradlew :fhir-ig-constants:generateIgConstants
 
-      - name: Fail if generated code is out of date
+      - name: Fail if Java generated code is out of date
         run: |
           if ! git diff --exit-code -- fhir-ig-constants/src/main/java; then
-            echo "::error::Generated FHIR IG constants are out of date. Run './gradlew :fhir-ig-constants:generateIgConstants' locally, review the diff, and commit the result."
+            echo "::error::Generated Java FHIR IG constants are out of date. Run './gradlew :fhir-ig-constants:generateIgConstants' locally, review the diff, and commit the result."
+            exit 1
+          fi
+
+      - name: Regenerate C# FHIR IG constants
+        run: |
+          dotnet run --project ig-codegen-cs/IgCodegen/IgCodegen.csproj --configuration Release -- \
+            fhir-ig-constants/package.json \
+            fhir-ig-constants/node_modules \
+            fhir-ig-constants-cs/src/
+
+      - name: Fail if C# generated code is out of date
+        run: |
+          if ! git diff --exit-code -- fhir-ig-constants-cs/src/; then
+            echo "::error::Generated C# FHIR IG constants are out of date. Run 'cd fhir-ig-constants && npm install && cd .. && dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants' locally, review the diff, and commit the result."
             exit 1
           fi

@@ -24,6 +24,7 @@ public static class Base
             /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus</c>.</summary>
             public static string MiiCsPersonVitalstatus =>
                 "https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus";
+
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus</c>.</summary>
@@ -31,22 +32,16 @@ public static class Base
         {
             /// <summary><c>L</c> - Patient lebt</summary>
             L,
-
             /// <summary><c>T</c> - Patient verstorben</summary>
             T,
-
             /// <summary><c>A</c> - unbekannt, Patient nicht mehr auffindbar (lost to follow-up)</summary>
             A,
-
             /// <summary><c>N</c> - unbekannt, Betreuung/Nachsorge nicht mehr nötig</summary>
             N,
-
             /// <summary><c>B</c> - unbekannt, Patient ist anderenorts in Betreuung</summary>
             B,
-
             /// <summary><c>V</c> - unbekannt, Patient verweigert weitere Betreuung</summary>
             V,
-
             /// <summary><c>X</c> - unbekannt</summary>
             X,
         }
@@ -55,44 +50,42 @@ public static class Base
     public static class Profiles
     {
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.1</c>.</summary>
-        public static string MiiPrDiagnoseCondition =>
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.1";
+        public static string MiiPrDiagnoseCondition => "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2026.0.1</c>.</summary>
-        public static string MiiPrFallKontaktGesundheitseinrichtung =>
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2026.0.1";
+        public static string MiiPrFallKontaktGesundheitseinrichtung => "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient|2026.0.1</c>.</summary>
-        public static string MiiPrPersonPatient =>
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient|2026.0.1";
+        public static string MiiPrPersonPatient => "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert|2026.0.1</c>.</summary>
-        public static string MiiPrPersonPatientPseudonymisiert =>
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert|2026.0.1";
+        public static string MiiPrPersonPatientPseudonymisiert => "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache|2026.0.1</c>.</summary>
-        public static string MiiPrPersonTodesursache =>
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache|2026.0.1";
+        public static string MiiPrPersonTodesursache => "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus|2026.0.1</c>.</summary>
-        public static string MiiPrPersonVitalstatus =>
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus|2026.0.1";
+        public static string MiiPrPersonVitalstatus => "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.1</c>.</summary>
-        public static string MiiPrProzedurProcedure =>
-            "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.1";
+        public static string MiiPrProzedurProcedure => "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.1";
+
     }
 
     public static class Extensions
     {
+        public static class Urls
+        {
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht</c>.</summary>
+            public static string MiiExProzedurDurchfuehrungsabsicht => "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht";
+
+        }
+
         /// <summary>A new <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht</c>.</summary>
         /// <param name="value">The extension value.</param>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht</c> and the given value.</returns>
         public static Extension MiiExProzedurDurchfuehrungsabsicht(Coding value) =>
-            new(
-                "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht",
-                value
-            );
+            new("https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht", value);
     }
 }
 
@@ -104,36 +97,30 @@ public static class MiiCsPersonVitalstatusExtensions
         "https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Base.CodeSystems.MiiCsPersonVitalstatus value) =>
-        value switch
-        {
-            Base.CodeSystems.MiiCsPersonVitalstatus.L => "L",
-            Base.CodeSystems.MiiCsPersonVitalstatus.T => "T",
-            Base.CodeSystems.MiiCsPersonVitalstatus.A => "A",
-            Base.CodeSystems.MiiCsPersonVitalstatus.N => "N",
-            Base.CodeSystems.MiiCsPersonVitalstatus.B => "B",
-            Base.CodeSystems.MiiCsPersonVitalstatus.V => "V",
-            Base.CodeSystems.MiiCsPersonVitalstatus.X => "X",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string Code(this Base.CodeSystems.MiiCsPersonVitalstatus value) => value switch
+    {
+        Base.CodeSystems.MiiCsPersonVitalstatus.L => "L",
+        Base.CodeSystems.MiiCsPersonVitalstatus.T => "T",
+        Base.CodeSystems.MiiCsPersonVitalstatus.A => "A",
+        Base.CodeSystems.MiiCsPersonVitalstatus.N => "N",
+        Base.CodeSystems.MiiCsPersonVitalstatus.B => "B",
+        Base.CodeSystems.MiiCsPersonVitalstatus.V => "V",
+        Base.CodeSystems.MiiCsPersonVitalstatus.X => "X",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Base.CodeSystems.MiiCsPersonVitalstatus value) =>
-        value switch
-        {
-            Base.CodeSystems.MiiCsPersonVitalstatus.L => "Patient lebt",
-            Base.CodeSystems.MiiCsPersonVitalstatus.T => "Patient verstorben",
-            Base.CodeSystems.MiiCsPersonVitalstatus.A =>
-                "unbekannt, Patient nicht mehr auffindbar (lost to follow-up)",
-            Base.CodeSystems.MiiCsPersonVitalstatus.N =>
-                "unbekannt, Betreuung/Nachsorge nicht mehr nötig",
-            Base.CodeSystems.MiiCsPersonVitalstatus.B =>
-                "unbekannt, Patient ist anderenorts in Betreuung",
-            Base.CodeSystems.MiiCsPersonVitalstatus.V =>
-                "unbekannt, Patient verweigert weitere Betreuung",
-            Base.CodeSystems.MiiCsPersonVitalstatus.X => "unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string? Display(this Base.CodeSystems.MiiCsPersonVitalstatus value) => value switch
+    {
+        Base.CodeSystems.MiiCsPersonVitalstatus.L => "Patient lebt",
+        Base.CodeSystems.MiiCsPersonVitalstatus.T => "Patient verstorben",
+        Base.CodeSystems.MiiCsPersonVitalstatus.A => "unbekannt, Patient nicht mehr auffindbar (lost to follow-up)",
+        Base.CodeSystems.MiiCsPersonVitalstatus.N => "unbekannt, Betreuung/Nachsorge nicht mehr nötig",
+        Base.CodeSystems.MiiCsPersonVitalstatus.B => "unbekannt, Patient ist anderenorts in Betreuung",
+        Base.CodeSystems.MiiCsPersonVitalstatus.V => "unbekannt, Patient verweigert weitere Betreuung",
+        Base.CodeSystems.MiiCsPersonVitalstatus.X => "unbekannt",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
     public static Coding Coding(this Base.CodeSystems.MiiCsPersonVitalstatus value) =>
@@ -141,22 +128,29 @@ public static class MiiCsPersonVitalstatusExtensions
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Base.CodeSystems.MiiCsPersonVitalstatus"/>, or <c>null</c> if none matches.</returns>
-    public static Base.CodeSystems.MiiCsPersonVitalstatus? FromValue(string code) =>
-        code switch
-        {
-            "L" => Base.CodeSystems.MiiCsPersonVitalstatus.L,
-            "T" => Base.CodeSystems.MiiCsPersonVitalstatus.T,
-            "A" => Base.CodeSystems.MiiCsPersonVitalstatus.A,
-            "N" => Base.CodeSystems.MiiCsPersonVitalstatus.N,
-            "B" => Base.CodeSystems.MiiCsPersonVitalstatus.B,
-            "V" => Base.CodeSystems.MiiCsPersonVitalstatus.V,
-            "X" => Base.CodeSystems.MiiCsPersonVitalstatus.X,
-            _ => null,
-        };
+    public static Base.CodeSystems.MiiCsPersonVitalstatus? FromValue(string code) => code switch
+    {
+        "L" => Base.CodeSystems.MiiCsPersonVitalstatus.L,
+        "T" => Base.CodeSystems.MiiCsPersonVitalstatus.T,
+        "A" => Base.CodeSystems.MiiCsPersonVitalstatus.A,
+        "N" => Base.CodeSystems.MiiCsPersonVitalstatus.N,
+        "B" => Base.CodeSystems.MiiCsPersonVitalstatus.B,
+        "V" => Base.CodeSystems.MiiCsPersonVitalstatus.V,
+        "X" => Base.CodeSystems.MiiCsPersonVitalstatus.X,
+        _ => null
+    };
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Base.CodeSystems.MiiCsPersonVitalstatus"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
     public static Base.CodeSystems.MiiCsPersonVitalstatus FromValueOrThrow(string code) =>
         FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for reading <see cref="Base.Extensions"/> from FHIR resources.</summary>
+public static class BaseFhirExtensions
+{
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExProzedurDurchfuehrungsabsicht(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht");
 }

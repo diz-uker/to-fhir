@@ -48,6 +48,37 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.11"
 
 ## Development
 
+### Generating C# FHIR IG constants
+
+The generated C# constant classes live in `fhir-ig-constants-cs/src/`.
+They are produced from `fhir-ig-constants/package.json` by the `ig-codegen-cs` tool
+and must be re-generated whenever the package manifest or the codegen itself changes.
+
+**1. Install FHIR packages**
+
+```sh
+cd fhir-ig-constants && npm install
+```
+
+**2. Re-generate**
+
+```sh
+dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants
+```
+
+Review the diff, then commit. The `fhir-ig-constants.yaml` CI workflow fails if the
+checked-in files are out of date.
+
+Alternatively, invoke the tool directly (useful if you want to point at a different
+packages directory):
+
+```sh
+dotnet run --project ig-codegen-cs/IgCodegen/IgCodegen.csproj -- \
+  fhir-ig-constants/package.json \
+  fhir-ig-constants/node_modules \
+  fhir-ig-constants-cs/src/
+```
+
 ### Snapshot testing
 
 #### Auto-approve snapshot changes

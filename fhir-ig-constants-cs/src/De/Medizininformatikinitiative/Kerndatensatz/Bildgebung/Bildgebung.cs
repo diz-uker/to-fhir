@@ -28,6 +28,7 @@ public static class Bildgebung
             /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type</c>.</summary>
             public static string MiiCsBildgebungTransducerType =>
                 "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type";
+
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type</c>.</summary>
@@ -35,49 +36,34 @@ public static class Bildgebung
         {
             /// <summary><c>SECTOR_PHASED</c> - Sector Phased</summary>
             SECTOR_PHASED,
-
             /// <summary><c>SECTOR_MECH</c> - Sector Mech</summary>
             SECTOR_MECH,
-
             /// <summary><c>SECTOR_ANNULAR</c> - Sector Annular</summary>
             SECTOR_ANNULAR,
-
             /// <summary><c>LINEAR</c> - Linear</summary>
             LINEAR,
-
             /// <summary><c>CURVED_LINEAR</c> - Curved Linear</summary>
             CURVED_LINEAR,
-
             /// <summary><c>SINGLE_CRYSTAL</c> - Single Crystal</summary>
             SINGLE_CRYSTAL,
-
             /// <summary><c>SPLIT_XTAL_CWD</c> - Split Xtal CWD</summary>
             SPLIT_XTAL_CWD,
-
             /// <summary><c>IV_PHASED</c> - IV Phased</summary>
             IV_PHASED,
-
             /// <summary><c>IV_ROT_XTAL</c> - IV Rot XTAL</summary>
             IV_ROT_XTAL,
-
             /// <summary><c>IV_ROT_MIRROR</c> - IV Rot Mirror</summary>
             IV_ROT_MIRROR,
-
             /// <summary><c>ENDOCAV_PA</c> - Endocav PA</summary>
             ENDOCAV_PA,
-
             /// <summary><c>ENDOCAV_MECH</c> - Endocav Mech</summary>
             ENDOCAV_MECH,
-
             /// <summary><c>ENDOCAV_CLA</c> - EndocavCLA</summary>
             ENDOCAV_CLA,
-
             /// <summary><c>ENDOCAV_AA</c> - Endocav AA</summary>
             ENDOCAV_AA,
-
             /// <summary><c>ENDOCAV_LINEAR</c> - Endocav Linear</summary>
             ENDOCAV_LINEAR,
-
             /// <summary><c>VECTOR_PHASED</c> - Vector Phased</summary>
             VECTOR_PHASED,
         }
@@ -87,19 +73,14 @@ public static class Bildgebung
         {
             /// <summary><c>STATIC</c> - a group of images at varying spatial locations at the same time</summary>
             STATIC,
-
             /// <summary><c>DYNAMIC</c> - a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices</summary>
             DYNAMIC,
-
             /// <summary><c>GATED</c> - a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals</summary>
             GATED,
-
             /// <summary><c>WHOLEBODY</c> - same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)</summary>
             WHOLEBODY,
-
             /// <summary><c>IMAGE</c> - a tomographic image slice</summary>
             IMAGE,
-
             /// <summary><c>REPROJECTION</c> - a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)</summary>
             REPROJECTION,
         }
@@ -109,16 +90,12 @@ public static class Bildgebung
         {
             /// <summary><c>SE</c> - Spin Echo</summary>
             SE,
-
             /// <summary><c>IR</c> - Inversion Recovery</summary>
             IR,
-
             /// <summary><c>GR</c> - Gradient Recalled</summary>
             GR,
-
             /// <summary><c>EP</c> - Echo Planar</summary>
             EP,
-
             /// <summary><c>RM</c> - Research Mode</summary>
             RM,
         }
@@ -128,25 +105,18 @@ public static class Bildgebung
         {
             /// <summary><c>SK</c> - segmented k-space</summary>
             SK,
-
             /// <summary><c>MTC</c> - magnetization transfer contrast</summary>
             MTC,
-
             /// <summary><c>SS</c> - steady state</summary>
             SS,
-
             /// <summary><c>TRSS</c> - time reversed steady state</summary>
             TRSS,
-
             /// <summary><c>SP</c> - spoiled</summary>
             SP,
-
             /// <summary><c>MP</c> - MAG prepared</summary>
             MP,
-
             /// <summary><c>OSP</c> - oversampling phase</summary>
             OSP,
-
             /// <summary><c>NONE</c> - no sequence variant</summary>
             NONE,
         }
@@ -156,226 +126,152 @@ public static class Bildgebung
         {
             /// <summary><c>PDC</c> - Pixel Data Characteristics</summary>
             PDC,
-
             /// <summary><c>ORIGINAL</c> - identifies an original image</summary>
             ORIGINAL,
-
             /// <summary><c>DERIVED</c> - identifies an derived image</summary>
             DERIVED,
-
             /// <summary><c>PEC</c> - Patient Examination Characteristics</summary>
             PEC,
-
             /// <summary><c>PRIMARY</c> - identifies a primary image</summary>
             PRIMARY,
-
             /// <summary><c>SECONDARY</c> - identifies a secondary image</summary>
             SECONDARY,
-
             /// <summary><c>MSC</c> - Modality Specific Characteristics</summary>
             MSC,
-
             /// <summary><c>CT</c> - CT Specific Characteristics</summary>
             CT,
-
             /// <summary><c>AXIAL</c> - a CT Cross-sectional Image</summary>
             AXIAL,
-
             /// <summary><c>LOCALIZER</c> - a CT Localizer Image</summary>
             LOCALIZER,
-
             /// <summary><c>MR</c> - MR Specific Characteristics</summary>
             MR,
-
             /// <summary><c>DENSITYMAP</c> - Density Map</summary>
             DENSITYMAP,
-
             /// <summary><c>DIFFUSIONMAP</c> - Diffusion Map</summary>
             DIFFUSIONMAP,
-
             /// <summary><c>IMAGEADDITION</c> - Image Addition</summary>
             IMAGEADDITION,
-
             /// <summary><c>MODULUSSUBTRACT</c> - Modulus Substract</summary>
             MODULUSSUBTRACT,
-
             /// <summary><c>MPR</c> - MPR</summary>
             MPR,
-
             /// <summary><c>OTHER</c> - Other</summary>
             OTHER,
-
             /// <summary><c>PHASEMAP</c> - Phase Map</summary>
             PHASEMAP,
-
             /// <summary><c>PHASESUBTRACT</c> - Phase Substract</summary>
             PHASESUBTRACT,
-
             /// <summary><c>PROJECTIONIMAGE</c> - Projection Image</summary>
             PROJECTIONIMAGE,
-
             /// <summary><c>T1MAP</c> - T1 Map</summary>
             T1_MAP,
-
             /// <summary><c>T2MAP</c> - T2 Map</summary>
             T2_MAP,
-
             /// <summary><c>VELOCITYMAP</c> - Velocity Map</summary>
             VELOCITYMAP,
-
             /// <summary><c>NM</c> - NM Specific Characteristics</summary>
             NM,
-
             /// <summary><c>STATIC</c> - Static</summary>
             STATIC,
-
             /// <summary><c>DYNAMIC</c> - Dynamic</summary>
             DYNAMIC,
-
             /// <summary><c>GATED</c> - Gated</summary>
             GATED,
-
             /// <summary><c>WHOLEBODY</c> - Whole Body</summary>
             WHOLEBODY,
-
             /// <summary><c>TOMO</c> - Tomo</summary>
             TOMO,
-
             /// <summary><c>GATEDTOMO</c> - Gated Tomo</summary>
             GATEDTOMO,
-
             /// <summary><c>RECONTOMO</c> - Recon Tomo</summary>
             RECONTOMO,
-
             /// <summary><c>RECONGATEDTOMO</c> - Recon Gated Tomo</summary>
             RECONGATEDTOMO,
-
             /// <summary><c>US</c> - US Specific Characteristics</summary>
             US,
-
             /// <summary><c>ABDOMINAL</c> - ABDOMINAL</summary>
             ABDOMINAL,
-
             /// <summary><c>BREAST</c> - BREAST</summary>
             BREAST,
-
             /// <summary><c>CHEST</c> - CHEST</summary>
             CHEST,
-
             /// <summary><c>ENDOCAVITARY</c> - ENDOCAVITARY</summary>
             ENDOCAVITARY,
-
             /// <summary><c>ENDORECTAL</c> - ENDORECTAL</summary>
             ENDORECTAL,
-
             /// <summary><c>ENDOVAGINAL</c> - ENDOVAGINAL</summary>
             ENDOVAGINAL,
-
             /// <summary><c>EPICARDIAL</c> - EPICARDIAL</summary>
             EPICARDIAL,
-
             /// <summary><c>FETAL_HEART</c> - FETAL HEART</summary>
             FETAL_HEART,
-
             /// <summary><c>GYNECOLOGY</c> - GYNECOLOGY</summary>
             GYNECOLOGY,
-
             /// <summary><c>INTRACARDIAC</c> - INTRACARDIAC</summary>
             INTRACARDIAC,
-
             /// <summary><c>INTRAOPERATIVE</c> - INTRAOPERATIVE</summary>
             INTRAOPERATIVE,
-
             /// <summary><c>INTRAVASCULAR</c> - INTRAVASCULAR</summary>
             INTRAVASCULAR,
-
             /// <summary><c>MUSCULOSKELETAL</c> - MUSCULOSKELETAL</summary>
             MUSCULOSKELETAL,
-
             /// <summary><c>NEONATAL_HEAD</c> - NEONATAL HEAD</summary>
             NEONATAL_HEAD,
-
             /// <summary><c>OBSTETRICAL</c> - OBSTETRICAL</summary>
             OBSTETRICAL,
-
             /// <summary><c>OPHTHALMIC</c> - OPHTHALMIC</summary>
             OPHTHALMIC,
-
             /// <summary><c>PEDIATRIC</c> - PEDIATRIC</summary>
             PEDIATRIC,
-
             /// <summary><c>PELVIC</c> - PELVIC</summary>
             PELVIC,
-
             /// <summary><c>RETROPERITONEAL</c> - RETROPERITONEAL</summary>
             RETROPERITONEAL,
-
             /// <summary><c>SCROTAL</c> - SCROTAL</summary>
             SCROTAL,
-
             /// <summary><c>SMALL_PARTS</c> - SMALL PARTS</summary>
             SMALL_PARTS,
-
             /// <summary><c>TEE</c> - TEE</summary>
             TEE,
-
             /// <summary><c>THYROID</c> - THYROID</summary>
             THYROID,
-
             /// <summary><c>TRANSCRANIAL</c> - TRANSCRANIAL</summary>
             TRANSCRANIAL,
-
             /// <summary><c>TTE</c> - TTE</summary>
             TTE,
-
             /// <summary><c>US_BIOPSY</c> - US BIOPSY</summary>
             US_BIOPSY,
-
             /// <summary><c>VASCULAR</c> - VASCULAR</summary>
             VASCULAR,
-
             /// <summary><c>ISI</c> - Implemetation Specific Identifiers</summary>
             ISI,
-
             /// <summary><c>NMI</c> - NM Implematation</summary>
             NMI,
-
             /// <summary><c>EMISSION</c> - Emission</summary>
             EMISSION,
-
             /// <summary><c>TRANSMISSION</c> - Transmission</summary>
             TRANSMISSION,
-
             /// <summary><c>USI</c> - US Implemantation</summary>
             USI,
-
             /// <summary><c>0001</c> - 2D Imaging</summary>
             _0001,
-
             /// <summary><c>0002</c> - M-Mode</summary>
             _0002,
-
             /// <summary><c>0004</c> - CW Doppler</summary>
             _0004,
-
             /// <summary><c>0008</c> - PW Doppler</summary>
             _0008,
-
             /// <summary><c>0010</c> - Color Doppler</summary>
             _0010,
-
             /// <summary><c>0020</c> - Color M-Mode</summary>
             _0020,
-
             /// <summary><c>0040</c> - 3D Rendering</summary>
             _0040,
-
             /// <summary><c>0100</c> - Color Power Mode</summary>
             _0100,
-
             /// <summary><c>0200</c> - Tissue Characterization</summary>
             _0200,
-
             /// <summary><c>0400</c> - Spatially-related frames</summary>
             _0400,
         }
@@ -384,60 +280,87 @@ public static class Bildgebung
     public static class Profiles
     {
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-anforderung-bildgebung|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungAnforderungBildgebung =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-anforderung-bildgebung|2026.0.0";
+        public static string MiiPrBildgebungAnforderungBildgebung => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-anforderung-bildgebung|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-behandlungsempfehlung|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungBehandlungsempfehlung =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-behandlungsempfehlung|2026.0.0";
+        public static string MiiPrBildgebungBehandlungsempfehlung => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-behandlungsempfehlung|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsprozedur|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungBildgebungsprozedur =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsprozedur|2026.0.0";
+        public static string MiiPrBildgebungBildgebungsprozedur => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsprozedur|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsstudie|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungBildgebungsstudie =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsstudie|2026.0.0";
+        public static string MiiPrBildgebungBildgebungsstudie => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsstudie|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-geraet|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungGeraet =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-geraet|2026.0.0";
+        public static string MiiPrBildgebungGeraet => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-geraet|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-koerperstruktur|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungKoerperstruktur =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-koerperstruktur|2026.0.0";
+        public static string MiiPrBildgebungKoerperstruktur => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-koerperstruktur|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-kontrastmittelgabe|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungKontrastmittelgabe =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-kontrastmittelgabe|2026.0.0";
+        public static string MiiPrBildgebungKontrastmittelgabe => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-kontrastmittelgabe|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologischer-befund|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungRadiologischerBefund =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologischer-befund|2026.0.0";
+        public static string MiiPrBildgebungRadiologischerBefund => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologischer-befund|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-befundungsprozedur|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungRadiologischeBefundungsprozedur =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-befundungsprozedur|2026.0.0";
+        public static string MiiPrBildgebungRadiologischeBefundungsprozedur => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-befundungsprozedur|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-beobachtung|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungRadiologischeBeobachtung =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-beobachtung|2026.0.0";
+        public static string MiiPrBildgebungRadiologischeBeobachtung => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-beobachtung|2026.0.0";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht|2026.0.0</c>.</summary>
-        public static string MiiPrBildgebungSemistruktBefundbericht =>
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht|2026.0.0";
+        public static string MiiPrBildgebungSemistruktBefundbericht => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht|2026.0.0";
+
     }
 
     public static class Extensions
     {
+        public static class Urls
+        {
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund</c>.</summary>
+            public static string MiiExBildgebungBildgebungsgrund => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details</c>.</summary>
+            public static string MiiExBildgebungInstanzDetails => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel</c>.</summary>
+            public static string MiiExBildgebungKontrastmittel => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct</c>.</summary>
+            public static string MiiExBildgebungModalitaetCt => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx</c>.</summary>
+            public static string MiiExBildgebungModalitaetMgCrDx => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr</c>.</summary>
+            public static string MiiExBildgebungModalitaetMr => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm</c>.</summary>
+            public static string MiiExBildgebungModalitaetNm => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt</c>.</summary>
+            public static string MiiExBildgebungModalitaetPt => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us</c>.</summary>
+            public static string MiiExBildgebungModalitaetUs => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke</c>.</summary>
+            public static string MiiExBildgebungSerieSchichtdicke => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid</c>.</summary>
+            public static string MiiExBildgebungSerieUid => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid";
+
+            /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid</c>.</summary>
+            public static string MiiExBildgebungSopInstanzUid => "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid";
+
+        }
+
         /// <summary>A new <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund</c>.</summary>
         /// <param name="value">The extension value.</param>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund</c> and the given value.</returns>
         public static Extension MiiExBildgebungBildgebungsgrund(FhirString value) =>
-            new(
-                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund",
-                value
-            );
+            new("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund", value);
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details</c>, for further
@@ -445,11 +368,7 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details</c> and no value.</returns>
         public static Extension MiiExBildgebungInstanzDetails() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details" };
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel</c>, for further
@@ -457,11 +376,7 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel</c> and no value.</returns>
         public static Extension MiiExBildgebungKontrastmittel() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel" };
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct</c>, for further
@@ -469,11 +384,7 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct</c> and no value.</returns>
         public static Extension MiiExBildgebungModalitaetCt() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct" };
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx</c>, for further
@@ -481,11 +392,7 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx</c> and no value.</returns>
         public static Extension MiiExBildgebungModalitaetMgCrDx() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx" };
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr</c>, for further
@@ -493,11 +400,7 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr</c> and no value.</returns>
         public static Extension MiiExBildgebungModalitaetMr() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr" };
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm</c>, for further
@@ -505,11 +408,7 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm</c> and no value.</returns>
         public static Extension MiiExBildgebungModalitaetNm() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm" };
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt</c>, for further
@@ -517,11 +416,7 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt</c> and no value.</returns>
         public static Extension MiiExBildgebungModalitaetPt() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt" };
 
         /// <summary>
         /// A new, empty <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us</c>, for further
@@ -529,38 +424,25 @@ public static class Bildgebung
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us</c> and no value.</returns>
         public static Extension MiiExBildgebungModalitaetUs() =>
-            new()
-            {
-                Url =
-                    "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us",
-            };
+            new() { Url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us" };
 
         /// <summary>A new <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke</c>.</summary>
         /// <param name="value">The extension value.</param>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke</c> and the given value.</returns>
         public static Extension MiiExBildgebungSerieSchichtdicke(Quantity value) =>
-            new(
-                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke",
-                value
-            );
+            new("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke", value);
 
         /// <summary>A new <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid</c>.</summary>
         /// <param name="value">The extension value.</param>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid</c> and the given value.</returns>
         public static Extension MiiExBildgebungSerieUid(Id value) =>
-            new(
-                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid",
-                value
-            );
+            new("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid", value);
 
         /// <summary>A new <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid</c>.</summary>
         /// <param name="value">The extension value.</param>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid</c> and the given value.</returns>
         public static Extension MiiExBildgebungSopInstanzUid(Id value) =>
-            new(
-                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid",
-                value
-            );
+            new("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid", value);
     }
 }
 
@@ -572,52 +454,48 @@ public static class MiiCsBildgebungTransducerTypeExtensions
         "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED => "SECTOR_PHASED",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH => "SECTOR_MECH",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR => "SECTOR_ANNULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR => "LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR => "CURVED_LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL => "SINGLE_CRYSTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD => "SPLIT_XTAL_CWD",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED => "IV_PHASED",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL => "IV_ROT_XTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR => "IV_ROT_MIRROR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA => "ENDOCAV_PA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH => "ENDOCAV_MECH",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA => "ENDOCAV_CLA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA => "ENDOCAV_AA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR => "ENDOCAV_LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED => "VECTOR_PHASED",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED => "SECTOR_PHASED",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH => "SECTOR_MECH",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR => "SECTOR_ANNULAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR => "LINEAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR => "CURVED_LINEAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL => "SINGLE_CRYSTAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD => "SPLIT_XTAL_CWD",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED => "IV_PHASED",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL => "IV_ROT_XTAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR => "IV_ROT_MIRROR",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA => "ENDOCAV_PA",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH => "ENDOCAV_MECH",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA => "ENDOCAV_CLA",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA => "ENDOCAV_AA",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR => "ENDOCAV_LINEAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED => "VECTOR_PHASED",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED => "Sector Phased",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH => "Sector Mech",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR => "Sector Annular",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR => "Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR => "Curved Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL => "Single Crystal",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD => "Split Xtal CWD",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED => "IV Phased",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL => "IV Rot XTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR => "IV Rot Mirror",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA => "Endocav PA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH => "Endocav Mech",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA => "EndocavCLA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA => "Endocav AA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR => "Endocav Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED => "Vector Phased",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED => "Sector Phased",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH => "Sector Mech",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR => "Sector Annular",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR => "Linear",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR => "Curved Linear",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL => "Single Crystal",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD => "Split Xtal CWD",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED => "IV Phased",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL => "IV Rot XTAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR => "IV Rot Mirror",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA => "Endocav PA",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH => "Endocav Mech",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA => "EndocavCLA",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA => "Endocav AA",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR => "Endocav Linear",
+        Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED => "Vector Phased",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
     public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) =>
@@ -625,34 +503,32 @@ public static class MiiCsBildgebungTransducerTypeExtensions
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType? FromValue(string code) =>
-        code switch
-        {
-            "SECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED,
-            "SECTOR_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH,
-            "SECTOR_ANNULAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR,
-            "LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR,
-            "CURVED_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR,
-            "SINGLE_CRYSTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL,
-            "SPLIT_XTAL_CWD" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD,
-            "IV_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED,
-            "IV_ROT_XTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL,
-            "IV_ROT_MIRROR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR,
-            "ENDOCAV_PA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA,
-            "ENDOCAV_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH,
-            "ENDOCAV_CLA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA,
-            "ENDOCAV_AA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA,
-            "ENDOCAV_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR,
-            "VECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED,
-            _ => null,
-        };
+    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType? FromValue(string code) => code switch
+    {
+        "SECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED,
+        "SECTOR_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH,
+        "SECTOR_ANNULAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR,
+        "LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR,
+        "CURVED_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR,
+        "SINGLE_CRYSTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL,
+        "SPLIT_XTAL_CWD" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD,
+        "IV_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED,
+        "IV_ROT_XTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL,
+        "IV_ROT_MIRROR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR,
+        "ENDOCAV_PA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA,
+        "ENDOCAV_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH,
+        "ENDOCAV_CLA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA,
+        "ENDOCAV_AA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA,
+        "ENDOCAV_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR,
+        "VECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED,
+        _ => null
+    };
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>.</summary>
@@ -663,35 +539,28 @@ public static class MiiCsBildgebungSeriesTypeExtensions
         "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC => "STATIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC => "DYNAMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED => "GATED",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY => "WHOLEBODY",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE => "IMAGE",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION => "REPROJECTION",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC => "STATIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC => "DYNAMIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED => "GATED",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY => "WHOLEBODY",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE => "IMAGE",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION => "REPROJECTION",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC =>
-                "a group of images at varying spatial locations at the same time",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC =>
-                "a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED =>
-                "a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY =>
-                "same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE => "a tomographic image slice",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION =>
-                "a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC => "a group of images at varying spatial locations at the same time",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC => "a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED => "a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY => "same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE => "a tomographic image slice",
+        Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION => "a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
     public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
@@ -699,17 +568,16 @@ public static class MiiCsBildgebungSeriesTypeExtensions
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungSeriesType? FromValue(string code) =>
-        code switch
-        {
-            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC,
-            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC,
-            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED,
-            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY,
-            "IMAGE" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE,
-            "REPROJECTION" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION,
-            _ => null,
-        };
+    public static Bildgebung.CodeSystems.MiiCsBildgebungSeriesType? FromValue(string code) => code switch
+    {
+        "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC,
+        "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC,
+        "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED,
+        "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY,
+        "IMAGE" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE,
+        "REPROJECTION" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION,
+        _ => null
+    };
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>.</returns>
@@ -726,133 +594,109 @@ public static class MiiCsBildgebungScanningSequenceExtensions
         "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE => "SE",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR => "IR",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR => "GR",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP => "EP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM => "RM",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE => "SE",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR => "IR",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR => "GR",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP => "EP",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM => "RM",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE => "Spin Echo",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR => "Inversion Recovery",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR => "Gradient Recalled",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP => "Echo Planar",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM => "Research Mode",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE => "Spin Echo",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR => "Inversion Recovery",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR => "Gradient Recalled",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP => "Echo Planar",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM => "Research Mode",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value
-    ) => new(value.Url(), value.Code(), value.Display());
+    public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value) =>
+        new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence? FromValue(string code) =>
-        code switch
-        {
-            "SE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE,
-            "IR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR,
-            "GR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR,
-            "EP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP,
-            "RM" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM,
-            _ => null,
-        };
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence? FromValue(string code) => code switch
+    {
+        "SE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE,
+        "IR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR,
+        "GR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR,
+        "EP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP,
+        "RM" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM,
+        _ => null
+    };
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>.</summary>
 public static class MiiCsBildgebungScanningSequenceVariantExtensions
 {
     /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant</c>.</returns>
-    public static string Url(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant _
-    ) =>
+    public static string Url(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant _) =>
         "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK => "SK",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC => "MTC",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS => "SS",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS => "TRSS",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP => "SP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP => "MP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP => "OSP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE => "NONE",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK => "SK",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC => "MTC",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS => "SS",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS => "TRSS",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP => "SP",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP => "MP",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP => "OSP",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE => "NONE",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK => "segmented k-space",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC =>
-                "magnetization transfer contrast",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS => "steady state",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS =>
-                "time reversed steady state",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP => "spoiled",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP => "MAG prepared",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP =>
-                "oversampling phase",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE =>
-                "no sequence variant",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK => "segmented k-space",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC => "magnetization transfer contrast",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS => "steady state",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS => "time reversed steady state",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP => "spoiled",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP => "MAG prepared",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP => "oversampling phase",
+        Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE => "no sequence variant",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
-    ) => new(value.Url(), value.Code(), value.Display());
+    public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value) =>
+        new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "SK" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK,
-            "MTC" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC,
-            "SS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS,
-            "TRSS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS,
-            "SP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP,
-            "MP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP,
-            "OSP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP,
-            "NONE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE,
-            _ => null,
-        };
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant? FromValue(string code) => code switch
+    {
+        "SK" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK,
+        "MTC" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC,
+        "SS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS,
+        "TRSS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS,
+        "SP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP,
+        "MP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP,
+        "OSP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP,
+        "NONE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE,
+        _ => null
+    };
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType"/>.</summary>
@@ -863,329 +707,308 @@ public static class MiiCsBildgebungInstanceImageTypeExtensions
         "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-instance-image-type";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC => "PDC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL => "ORIGINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED => "DERIVED",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC => "PEC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY => "PRIMARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY => "SECONDARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC => "MSC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT => "CT",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL => "AXIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER => "LOCALIZER",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR => "MR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP => "DENSITYMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP => "DIFFUSIONMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.IMAGEADDITION =>
-                "IMAGEADDITION",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MODULUSSUBTRACT =>
-                "MODULUSSUBTRACT",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR => "MPR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER => "OTHER",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP => "PHASEMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASESUBTRACT =>
-                "PHASESUBTRACT",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PROJECTIONIMAGE =>
-                "PROJECTIONIMAGE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP => "T1MAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP => "T2MAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP => "VELOCITYMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM => "NM",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC => "STATIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC => "DYNAMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED => "GATED",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY => "WHOLEBODY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO => "TOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO => "GATEDTOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO => "RECONTOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONGATEDTOMO =>
-                "RECONGATEDTOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US => "US",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL => "ABDOMINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST => "BREAST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST => "CHEST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY => "ENDOCAVITARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL => "ENDORECTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL => "ENDOVAGINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL => "EPICARDIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART => "FETAL_HEART",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY => "GYNECOLOGY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC => "INTRACARDIAC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAOPERATIVE =>
-                "INTRAOPERATIVE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAVASCULAR =>
-                "INTRAVASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MUSCULOSKELETAL =>
-                "MUSCULOSKELETAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NEONATAL_HEAD =>
-                "NEONATAL_HEAD",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL => "OBSTETRICAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC => "OPHTHALMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC => "PEDIATRIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC => "PELVIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RETROPERITONEAL =>
-                "RETROPERITONEAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL => "SCROTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS => "SMALL_PARTS",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE => "TEE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID => "THYROID",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL => "TRANSCRANIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE => "TTE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY => "US_BIOPSY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR => "VASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI => "ISI",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI => "NMI",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION => "EMISSION",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION => "TRANSMISSION",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI => "USI",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001 => "0001",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002 => "0002",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004 => "0004",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0008 => "0008",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0010 => "0010",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0020 => "0020",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0040 => "0040",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0100 => "0100",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0200 => "0200",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0400 => "0400",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC => "PDC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL => "ORIGINAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED => "DERIVED",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC => "PEC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY => "PRIMARY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY => "SECONDARY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC => "MSC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT => "CT",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL => "AXIAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER => "LOCALIZER",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR => "MR",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP => "DENSITYMAP",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP => "DIFFUSIONMAP",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.IMAGEADDITION => "IMAGEADDITION",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MODULUSSUBTRACT => "MODULUSSUBTRACT",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR => "MPR",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER => "OTHER",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP => "PHASEMAP",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASESUBTRACT => "PHASESUBTRACT",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PROJECTIONIMAGE => "PROJECTIONIMAGE",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP => "T1MAP",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP => "T2MAP",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP => "VELOCITYMAP",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM => "NM",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC => "STATIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC => "DYNAMIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED => "GATED",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY => "WHOLEBODY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO => "TOMO",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO => "GATEDTOMO",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO => "RECONTOMO",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONGATEDTOMO => "RECONGATEDTOMO",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US => "US",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL => "ABDOMINAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST => "BREAST",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST => "CHEST",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY => "ENDOCAVITARY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL => "ENDORECTAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL => "ENDOVAGINAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL => "EPICARDIAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART => "FETAL_HEART",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY => "GYNECOLOGY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC => "INTRACARDIAC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAOPERATIVE => "INTRAOPERATIVE",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAVASCULAR => "INTRAVASCULAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MUSCULOSKELETAL => "MUSCULOSKELETAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NEONATAL_HEAD => "NEONATAL_HEAD",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL => "OBSTETRICAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC => "OPHTHALMIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC => "PEDIATRIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC => "PELVIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RETROPERITONEAL => "RETROPERITONEAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL => "SCROTAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS => "SMALL_PARTS",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE => "TEE",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID => "THYROID",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL => "TRANSCRANIAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE => "TTE",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY => "US_BIOPSY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR => "VASCULAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI => "ISI",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI => "NMI",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION => "EMISSION",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION => "TRANSMISSION",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI => "USI",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001 => "0001",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002 => "0002",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004 => "0004",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0008 => "0008",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0010 => "0010",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0020 => "0020",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0040 => "0040",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0100 => "0100",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0200 => "0200",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0400 => "0400",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC =>
-                "Pixel Data Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL =>
-                "identifies an original image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED =>
-                "identifies an derived image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC =>
-                "Patient Examination Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY =>
-                "identifies a primary image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY =>
-                "identifies a secondary image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC =>
-                "Modality Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT =>
-                "CT Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL =>
-                "a CT Cross-sectional Image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER =>
-                "a CT Localizer Image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR =>
-                "MR Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP => "Density Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP => "Diffusion Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.IMAGEADDITION =>
-                "Image Addition",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MODULUSSUBTRACT =>
-                "Modulus Substract",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR => "MPR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER => "Other",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP => "Phase Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASESUBTRACT =>
-                "Phase Substract",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PROJECTIONIMAGE =>
-                "Projection Image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP => "T1 Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP => "T2 Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP => "Velocity Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM =>
-                "NM Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC => "Static",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC => "Dynamic",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED => "Gated",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY => "Whole Body",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO => "Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO => "Gated Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO => "Recon Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONGATEDTOMO =>
-                "Recon Gated Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US =>
-                "US Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL => "ABDOMINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST => "BREAST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST => "CHEST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY => "ENDOCAVITARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL => "ENDORECTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL => "ENDOVAGINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL => "EPICARDIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART => "FETAL HEART",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY => "GYNECOLOGY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC => "INTRACARDIAC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAOPERATIVE =>
-                "INTRAOPERATIVE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAVASCULAR =>
-                "INTRAVASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MUSCULOSKELETAL =>
-                "MUSCULOSKELETAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NEONATAL_HEAD =>
-                "NEONATAL HEAD",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL => "OBSTETRICAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC => "OPHTHALMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC => "PEDIATRIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC => "PELVIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RETROPERITONEAL =>
-                "RETROPERITONEAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL => "SCROTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS => "SMALL PARTS",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE => "TEE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID => "THYROID",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL => "TRANSCRANIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE => "TTE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY => "US BIOPSY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR => "VASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI =>
-                "Implemetation Specific Identifiers",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI => "NM Implematation",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION => "Emission",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION => "Transmission",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI => "US Implemantation",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001 => "2D Imaging",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002 => "M-Mode",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004 => "CW Doppler",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0008 => "PW Doppler",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0010 => "Color Doppler",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0020 => "Color M-Mode",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0040 => "3D Rendering",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0100 => "Color Power Mode",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0200 =>
-                "Tissue Characterization",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0400 =>
-                "Spatially-related frames",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
+    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType value) => value switch
+    {
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC => "Pixel Data Characteristics",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL => "identifies an original image",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED => "identifies an derived image",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC => "Patient Examination Characteristics",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY => "identifies a primary image",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY => "identifies a secondary image",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC => "Modality Specific Characteristics",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT => "CT Specific Characteristics",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL => "a CT Cross-sectional Image",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER => "a CT Localizer Image",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR => "MR Specific Characteristics",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP => "Density Map",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP => "Diffusion Map",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.IMAGEADDITION => "Image Addition",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MODULUSSUBTRACT => "Modulus Substract",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR => "MPR",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER => "Other",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP => "Phase Map",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASESUBTRACT => "Phase Substract",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PROJECTIONIMAGE => "Projection Image",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP => "T1 Map",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP => "T2 Map",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP => "Velocity Map",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM => "NM Specific Characteristics",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC => "Static",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC => "Dynamic",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED => "Gated",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY => "Whole Body",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO => "Tomo",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO => "Gated Tomo",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO => "Recon Tomo",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONGATEDTOMO => "Recon Gated Tomo",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US => "US Specific Characteristics",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL => "ABDOMINAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST => "BREAST",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST => "CHEST",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY => "ENDOCAVITARY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL => "ENDORECTAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL => "ENDOVAGINAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL => "EPICARDIAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART => "FETAL HEART",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY => "GYNECOLOGY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC => "INTRACARDIAC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAOPERATIVE => "INTRAOPERATIVE",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAVASCULAR => "INTRAVASCULAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MUSCULOSKELETAL => "MUSCULOSKELETAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NEONATAL_HEAD => "NEONATAL HEAD",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL => "OBSTETRICAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC => "OPHTHALMIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC => "PEDIATRIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC => "PELVIC",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RETROPERITONEAL => "RETROPERITONEAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL => "SCROTAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS => "SMALL PARTS",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE => "TEE",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID => "THYROID",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL => "TRANSCRANIAL",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE => "TTE",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY => "US BIOPSY",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR => "VASCULAR",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI => "Implemetation Specific Identifiers",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI => "NM Implematation",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION => "Emission",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION => "Transmission",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI => "US Implemantation",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001 => "2D Imaging",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002 => "M-Mode",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004 => "CW Doppler",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0008 => "PW Doppler",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0010 => "Color Doppler",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0020 => "Color M-Mode",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0040 => "3D Rendering",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0100 => "Color Power Mode",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0200 => "Tissue Characterization",
+        Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0400 => "Spatially-related frames",
+        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
+    };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType value
-    ) => new(value.Url(), value.Code(), value.Display());
+    public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType value) =>
+        new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType? FromValue(string code) =>
-        code switch
-        {
-            "PDC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC,
-            "ORIGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL,
-            "DERIVED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED,
-            "PEC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC,
-            "PRIMARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY,
-            "SECONDARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY,
-            "MSC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC,
-            "CT" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT,
-            "AXIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL,
-            "LOCALIZER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER,
-            "MR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR,
-            "DENSITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP,
-            "DIFFUSIONMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP,
-            "IMAGEADDITION" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .IMAGEADDITION,
-            "MODULUSSUBTRACT" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .MODULUSSUBTRACT,
-            "MPR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR,
-            "OTHER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER,
-            "PHASEMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP,
-            "PHASESUBTRACT" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .PHASESUBTRACT,
-            "PROJECTIONIMAGE" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .PROJECTIONIMAGE,
-            "T1MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP,
-            "T2MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP,
-            "VELOCITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP,
-            "NM" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM,
-            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC,
-            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC,
-            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED,
-            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY,
-            "TOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO,
-            "GATEDTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO,
-            "RECONTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO,
-            "RECONGATEDTOMO" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .RECONGATEDTOMO,
-            "US" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US,
-            "ABDOMINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL,
-            "BREAST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST,
-            "CHEST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST,
-            "ENDOCAVITARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY,
-            "ENDORECTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL,
-            "ENDOVAGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL,
-            "EPICARDIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL,
-            "FETAL_HEART" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART,
-            "GYNECOLOGY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY,
-            "INTRACARDIAC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC,
-            "INTRAOPERATIVE" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .INTRAOPERATIVE,
-            "INTRAVASCULAR" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .INTRAVASCULAR,
-            "MUSCULOSKELETAL" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .MUSCULOSKELETAL,
-            "NEONATAL_HEAD" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .NEONATAL_HEAD,
-            "OBSTETRICAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL,
-            "OPHTHALMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC,
-            "PEDIATRIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC,
-            "PELVIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC,
-            "RETROPERITONEAL" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .RETROPERITONEAL,
-            "SCROTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL,
-            "SMALL_PARTS" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS,
-            "TEE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE,
-            "THYROID" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID,
-            "TRANSCRANIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL,
-            "TTE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE,
-            "US_BIOPSY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY,
-            "VASCULAR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR,
-            "ISI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI,
-            "NMI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI,
-            "EMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION,
-            "TRANSMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION,
-            "USI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI,
-            "0001" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001,
-            "0002" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002,
-            "0004" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004,
-            "0008" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0008,
-            "0010" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0010,
-            "0020" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0020,
-            "0040" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0040,
-            "0100" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0100,
-            "0200" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0200,
-            "0400" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0400,
-            _ => null,
-        };
+    public static Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType? FromValue(string code) => code switch
+    {
+        "PDC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC,
+        "ORIGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL,
+        "DERIVED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED,
+        "PEC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC,
+        "PRIMARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY,
+        "SECONDARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY,
+        "MSC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC,
+        "CT" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT,
+        "AXIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL,
+        "LOCALIZER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER,
+        "MR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR,
+        "DENSITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP,
+        "DIFFUSIONMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP,
+        "IMAGEADDITION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.IMAGEADDITION,
+        "MODULUSSUBTRACT" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MODULUSSUBTRACT,
+        "MPR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR,
+        "OTHER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER,
+        "PHASEMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP,
+        "PHASESUBTRACT" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASESUBTRACT,
+        "PROJECTIONIMAGE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PROJECTIONIMAGE,
+        "T1MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP,
+        "T2MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP,
+        "VELOCITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP,
+        "NM" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM,
+        "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC,
+        "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC,
+        "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED,
+        "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY,
+        "TOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO,
+        "GATEDTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO,
+        "RECONTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO,
+        "RECONGATEDTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONGATEDTOMO,
+        "US" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US,
+        "ABDOMINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL,
+        "BREAST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST,
+        "CHEST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST,
+        "ENDOCAVITARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY,
+        "ENDORECTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL,
+        "ENDOVAGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL,
+        "EPICARDIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL,
+        "FETAL_HEART" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART,
+        "GYNECOLOGY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY,
+        "INTRACARDIAC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC,
+        "INTRAOPERATIVE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAOPERATIVE,
+        "INTRAVASCULAR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAVASCULAR,
+        "MUSCULOSKELETAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MUSCULOSKELETAL,
+        "NEONATAL_HEAD" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NEONATAL_HEAD,
+        "OBSTETRICAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL,
+        "OPHTHALMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC,
+        "PEDIATRIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC,
+        "PELVIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC,
+        "RETROPERITONEAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RETROPERITONEAL,
+        "SCROTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL,
+        "SMALL_PARTS" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS,
+        "TEE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE,
+        "THYROID" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID,
+        "TRANSCRANIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL,
+        "TTE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE,
+        "US_BIOPSY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY,
+        "VASCULAR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR,
+        "ISI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI,
+        "NMI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI,
+        "EMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION,
+        "TRANSMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION,
+        "USI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI,
+        "0001" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001,
+        "0002" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002,
+        "0004" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004,
+        "0008" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0008,
+        "0010" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0010,
+        "0020" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0020,
+        "0040" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0040,
+        "0100" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0100,
+        "0200" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0200,
+        "0400" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0400,
+        _ => null
+    };
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+    public static Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for reading <see cref="Bildgebung.Extensions"/> from FHIR resources.</summary>
+public static class BildgebungFhirExtensions
+{
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungBildgebungsgrund(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungInstanzDetails(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungKontrastmittel(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungModalitaetCt(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungModalitaetMgCrDx(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungModalitaetMr(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungModalitaetNm(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungModalitaetPt(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungModalitaetUs(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungSerieSchichtdicke(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungSerieUid(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid");
+
+    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Extension? GetMiiExBildgebungSopInstanzUid(this IExtendable resource) =>
+        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid");
 }
