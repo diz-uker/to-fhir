@@ -100,11 +100,14 @@ class JavaConstantsGeneratorTest {
         JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
 
     assertTrue(source.contains("import org.hl7.fhir.r4.model.Coding;"));
+    assertFalse(source.contains("import java.lang."), "java.lang types must not be imported");
     assertTrue(source.contains("enum MiiCsOnkoIntention"));
     assertTrue(source.contains("{@code K} - kurativ"));
     assertTrue(source.contains("K(\"K\", \"kurativ\")"));
     assertTrue(source.contains("{@code P} - palliativ"));
     assertTrue(source.contains("P(\"P\", \"palliativ\")"));
+    assertTrue(source.contains("public @NonNull String system(@NonNull MiiCsOnkoIntention this)"));
+    assertTrue(source.contains("return \"https://example.org/CodeSystem/mii-cs-onko-intention\""));
     assertTrue(source.contains("public @NonNull Coding coding(@NonNull MiiCsOnkoIntention this)"));
     assertTrue(
         source.contains(

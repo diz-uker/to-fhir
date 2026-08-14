@@ -308,6 +308,14 @@ public final class Bildgebung {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-instance-image-type}
+       */
+      public @NonNull String system(@NonNull MiiCsBildgebungInstanceImageType this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-instance-image-type";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-instance-image-type}
        */
@@ -368,6 +376,14 @@ public final class Bildgebung {
       MiiCsBildgebungScanningSequence(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence}
+       */
+      public @NonNull String system(@NonNull MiiCsBildgebungScanningSequence this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence";
       }
 
       /**
@@ -440,6 +456,14 @@ public final class Bildgebung {
       MiiCsBildgebungScanningSequenceVariant(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant}
+       */
+      public @NonNull String system(@NonNull MiiCsBildgebungScanningSequenceVariant this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant";
       }
 
       /**
@@ -526,6 +550,14 @@ public final class Bildgebung {
       MiiCsBildgebungSeriesType(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type}
+       */
+      public @NonNull String system(@NonNull MiiCsBildgebungSeriesType this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type";
       }
 
       /**
@@ -620,6 +652,14 @@ public final class Bildgebung {
       MiiCsBildgebungTransducerType(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type}
+       */
+      public @NonNull String system(@NonNull MiiCsBildgebungTransducerType this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type";
       }
 
       /**
