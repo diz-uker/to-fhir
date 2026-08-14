@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.11](https://github.com/diz-uker/to-fhir/compare/v0.2.10...v0.2.11) (2026-08-14)
+
+
+### Features
+
+* added studie and system() to return the CS URL as an alternative ([#73](https://github.com/diz-uker/to-fhir/issues/73)) ([4f91ac5](https://github.com/diz-uker/to-fhir/commit/4f91ac5bdebe3fd5303e2d54aa2a7cba3b6a2b82))
+
 ## [0.2.10](https://github.com/diz-uker/to-fhir/compare/v0.2.9...v0.2.10) (2026-07-28)
 
 
