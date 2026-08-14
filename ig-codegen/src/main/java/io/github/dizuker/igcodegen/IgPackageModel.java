@@ -18,6 +18,9 @@ import java.util.SortedMap;
  * <p>{@code extensionValueTypes} holds, for each entry in {@code extensions}, the shape of its
  * {@code value[x]} - everything needed to render a factory method that returns a HAPI {@code
  * Extension} missing only the value. See {@link ExtensionValueType}.
+ *
+ * <p>{@code namingSystems} holds the uniqueId entries of each NamingSystem resource, grouped by
+ * their {@code type} (e.g. {@code "uri"}, {@code "oid"}).
  */
 public record IgPackageModel(
     String packageName,
@@ -26,7 +29,8 @@ public record IgPackageModel(
     SortedMap<String, String> profiles,
     SortedMap<String, String> extensions,
     Map<String, List<ConceptConstant>> codeSystemConcepts,
-    Map<String, ExtensionValueType> extensionValueTypes) {
+    Map<String, ExtensionValueType> extensionValueTypes,
+    SortedMap<String, NamingSystemUniqueIds> namingSystems) {
 
   public IgPackageModel {
     codeSystems = Collections.unmodifiableSortedMap(codeSystems);
@@ -34,5 +38,6 @@ public record IgPackageModel(
     extensions = Collections.unmodifiableSortedMap(extensions);
     codeSystemConcepts = Map.copyOf(codeSystemConcepts);
     extensionValueTypes = Map.copyOf(extensionValueTypes);
+    namingSystems = Collections.unmodifiableSortedMap(namingSystems);
   }
 }

@@ -15,9 +15,11 @@ public record FhirResourceSummary(
     @Nullable String derivation,
     @Nullable String type,
     @Nullable String content,
+    @Nullable String description,
     @Nullable List<Concept> concept,
     @Nullable Snapshot snapshot,
-    @Nullable Compose compose) {
+    @Nullable Compose compose,
+    @Nullable List<UniqueId> uniqueId) {
 
   /** A CodeSystem.concept entry; {@code concept} holds nested child concepts, if any. */
   @JsonIgnoreProperties(ignoreUnknown = true)
@@ -66,4 +68,8 @@ public record FhirResourceSummary(
       @Nullable List<Object> concept,
       @Nullable List<Object> filter,
       @Nullable List<String> valueSet) {}
+
+  /** One entry of a {@code NamingSystem.uniqueId} array. */
+  @JsonIgnoreProperties(ignoreUnknown = true)
+  public record UniqueId(@Nullable String type, @Nullable String value) {}
 }

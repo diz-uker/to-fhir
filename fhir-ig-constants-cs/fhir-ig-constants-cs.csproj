@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Coding / Extension / CodeableConcept returned by generated accessor methods. -->
+    <PackageReference Include="Hl7.Fhir.R4" Version="5.13.4" />
+  </ItemGroup>
+
+  <!--
+    Manually-invoked "generate, review, commit" dev tool — not a build-graph participant.
+    Run with: dotnet msbuild -t:GenerateIgConstants
+    Reads ../fhir-ig-constants/package.json and writes generated .cs files into src/.
+  -->
+  <Target Name="GenerateIgConstants">
+    <PropertyGroup>
+      <_PackageJson>$(MSBuildThisFileDirectory)..\fhir-ig-constants\package.json</_PackageJson>
+      <_FhirPackagesDir>$([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))/.fhir/packages</_FhirPackagesDir>
+      <_OutputDir>$(MSBuildThisFileDirectory)src\</_OutputDir>
+      <_GeneratorProject>$(MSBuildThisFileDirectory)..\ig-codegen-cs\IgCodegen\IgCodegen.csproj</_GeneratorProject>
+    </PropertyGroup>
+    <Exec Command="dotnet run --project &quot;$(_GeneratorProject)&quot; -- &quot;$(_PackageJson)&quot; &quot;$(_FhirPackagesDir)&quot; &quot;$(_OutputDir)&quot;" />
+  </Target>
+</Project>
