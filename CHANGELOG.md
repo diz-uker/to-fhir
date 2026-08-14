@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.12](https://github.com/diz-uker/to-fhir/compare/v0.2.11...v0.2.12) (2026-08-14)
+
+
+### Features
+
+* added csharp codegen ([#75](https://github.com/diz-uker/to-fhir/issues/75)) ([e042d1e](https://github.com/diz-uker/to-fhir/commit/e042d1eaf1c964435e7da4aeb68a82422fe0b79c))
+
 ## [0.2.11](https://github.com/diz-uker/to-fhir/compare/v0.2.10...v0.2.11) (2026-08-14)
 
 
