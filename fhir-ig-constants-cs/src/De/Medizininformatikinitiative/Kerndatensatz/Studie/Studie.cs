@@ -18,22 +18,6 @@ public static class Studie
                 "http://example.org/fhir/CodeSystem/research-study-category";
         }
 
-        /// <summary>Concepts for <c>http://example.org/fhir/CodeSystem/research-study-category</c>.</summary>
-        public enum ResearchStudyCategoryCs
-        {
-            /// <summary><c>interventional</c> - Interventional study</summary>
-            Interventional,
-
-            /// <summary><c>observational</c> - Observational study</summary>
-            Observational,
-
-            /// <summary><c>registry</c> - Registry study</summary>
-            Registry,
-
-            /// <summary><c>other</c> - Other</summary>
-            Other,
-        }
-
         /// <summary>Concepts for <c>http://example.org/fhir/CodeSystem/associated-party-role</c>.</summary>
         public enum AssociatedPartyRoleCs
         {
@@ -54,6 +38,22 @@ public static class Studie
 
             /// <summary><c>publisher</c> - Publisher</summary>
             Publisher,
+
+            /// <summary><c>other</c> - Other</summary>
+            Other,
+        }
+
+        /// <summary>Concepts for <c>http://example.org/fhir/CodeSystem/research-study-category</c>.</summary>
+        public enum ResearchStudyCategoryCs
+        {
+            /// <summary><c>interventional</c> - Interventional study</summary>
+            Interventional,
+
+            /// <summary><c>observational</c> - Observational study</summary>
+            Observational,
+
+            /// <summary><c>registry</c> - Registry study</summary>
+            Registry,
 
             /// <summary><c>other</c> - Other</summary>
             Other,
@@ -336,58 +336,6 @@ public static class Studie
     }
 }
 
-/// <summary>Extension methods for <see cref="Studie.CodeSystems.ResearchStudyCategoryCs"/>.</summary>
-public static class ResearchStudyCategoryCsExtensions
-{
-    /// <returns>The CodeSystem URL <c>http://example.org/fhir/CodeSystem/research-study-category</c>.</returns>
-    public static string Url(this Studie.CodeSystems.ResearchStudyCategoryCs _) =>
-        "http://example.org/fhir/CodeSystem/research-study-category";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
-        value switch
-        {
-            Studie.CodeSystems.ResearchStudyCategoryCs.Interventional => "interventional",
-            Studie.CodeSystems.ResearchStudyCategoryCs.Observational => "observational",
-            Studie.CodeSystems.ResearchStudyCategoryCs.Registry => "registry",
-            Studie.CodeSystems.ResearchStudyCategoryCs.Other => "other",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
-        value switch
-        {
-            Studie.CodeSystems.ResearchStudyCategoryCs.Interventional => "Interventional study",
-            Studie.CodeSystems.ResearchStudyCategoryCs.Observational => "Observational study",
-            Studie.CodeSystems.ResearchStudyCategoryCs.Registry => "Registry study",
-            Studie.CodeSystems.ResearchStudyCategoryCs.Other => "Other",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Studie.CodeSystems.ResearchStudyCategoryCs"/>, or <c>null</c> if none matches.</returns>
-    public static Studie.CodeSystems.ResearchStudyCategoryCs? FromValue(string code) =>
-        code switch
-        {
-            "interventional" => Studie.CodeSystems.ResearchStudyCategoryCs.Interventional,
-            "observational" => Studie.CodeSystems.ResearchStudyCategoryCs.Observational,
-            "registry" => Studie.CodeSystems.ResearchStudyCategoryCs.Registry,
-            "other" => Studie.CodeSystems.ResearchStudyCategoryCs.Other,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Studie.CodeSystems.ResearchStudyCategoryCs"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Studie.CodeSystems.ResearchStudyCategoryCs FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
 /// <summary>Extension methods for <see cref="Studie.CodeSystems.AssociatedPartyRoleCs"/>.</summary>
 public static class AssociatedPartyRoleCsExtensions
 {
@@ -451,6 +399,58 @@ public static class AssociatedPartyRoleCsExtensions
     /// <returns>The matching <see cref="Studie.CodeSystems.AssociatedPartyRoleCs"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
     public static Studie.CodeSystems.AssociatedPartyRoleCs FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Studie.CodeSystems.ResearchStudyCategoryCs"/>.</summary>
+public static class ResearchStudyCategoryCsExtensions
+{
+    /// <returns>The CodeSystem URL <c>http://example.org/fhir/CodeSystem/research-study-category</c>.</returns>
+    public static string Url(this Studie.CodeSystems.ResearchStudyCategoryCs _) =>
+        "http://example.org/fhir/CodeSystem/research-study-category";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
+        value switch
+        {
+            Studie.CodeSystems.ResearchStudyCategoryCs.Interventional => "interventional",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Observational => "observational",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Registry => "registry",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Other => "other",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
+        value switch
+        {
+            Studie.CodeSystems.ResearchStudyCategoryCs.Interventional => "Interventional study",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Observational => "Observational study",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Registry => "Registry study",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Other => "Other",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Studie.CodeSystems.ResearchStudyCategoryCs"/>, or <c>null</c> if none matches.</returns>
+    public static Studie.CodeSystems.ResearchStudyCategoryCs? FromValue(string code) =>
+        code switch
+        {
+            "interventional" => Studie.CodeSystems.ResearchStudyCategoryCs.Interventional,
+            "observational" => Studie.CodeSystems.ResearchStudyCategoryCs.Observational,
+            "registry" => Studie.CodeSystems.ResearchStudyCategoryCs.Registry,
+            "other" => Studie.CodeSystems.ResearchStudyCategoryCs.Other,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Studie.CodeSystems.ResearchStudyCategoryCs"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Studie.CodeSystems.ResearchStudyCategoryCs FromValueOrThrow(string code) =>
         FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 

@@ -181,65 +181,246 @@ public static class Onkologie
                 "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds";
         }
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten</c>.</summary>
-        public enum MiiCsOnkoVerlaufLymphknoten
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog</c>.</summary>
+        public enum MiiCsOnkoAllgemeinerLeistungszustandEcog
         {
-            /// <summary><c>K</c> - kein Lymphknotenbefall nachweisbar</summary>
-            K,
+            /// <summary><c>0</c> - Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)</summary>
+            _0,
 
-            /// <summary><c>R</c> - neu aufgetretenes Lymphknotenrezidiv</summary>
-            R,
+            /// <summary><c>1</c> - Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)</summary>
+            _1,
 
-            /// <summary><c>T</c> - bekannter Lymphknotenbefall Residuen</summary>
-            T,
+            /// <summary><c>2</c> - Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)</summary>
+            _2,
 
-            /// <summary><c>P</c> - bekannter Lymphknotenbefall Progress</summary>
+            /// <summary><c>3</c> - Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)</summary>
+            _3,
+
+            /// <summary><c>4</c> - Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)</summary>
+            _4,
+
+            /// <summary><c>U</c> - Unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky</c>.</summary>
+        public enum MiiCsOnkoAllgemeinerLeistungszustandKarnofsky
+        {
+            /// <summary><c>100%</c> - 100%</summary>
+            _100,
+
+            /// <summary><c>90%</c> - 90%</summary>
+            _90,
+
+            /// <summary><c>80%</c> - 80%</summary>
+            _80,
+
+            /// <summary><c>70%</c> - 70%</summary>
+            _70,
+
+            /// <summary><c>60%</c> - 60%</summary>
+            _60,
+
+            /// <summary><c>50%</c> - 50%</summary>
+            _50,
+
+            /// <summary><c>40%</c> - 40%</summary>
+            _40,
+
+            /// <summary><c>30%</c> - 30%</summary>
+            _30,
+
+            /// <summary><c>20%</c> - 20%</summary>
+            _20,
+
+            /// <summary><c>10%</c> - 10%</summary>
+            _10,
+
+            /// <summary><c>0%</c> - 0%</summary>
+            _0,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds</c>.</summary>
+        public enum MiiCsOnkoAsaObds
+        {
+            /// <summary><c>1</c> - ASA I</summary>
+            _1,
+
+            /// <summary><c>2</c> - ASA II</summary>
+            _2,
+
+            /// <summary><c>3</c> - ASA III</summary>
+            _3,
+
+            /// <summary><c>4</c> - ASA IV</summary>
+            _4,
+
+            /// <summary><c>5</c> - ASA V</summary>
+            _5,
+
+            /// <summary><c>6</c> - ASA VI</summary>
+            _6,
+
+            /// <summary><c>U</c> - Unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen</c>.</summary>
+        public enum MiiCsOnkoFernmetastasen
+        {
+            /// <summary><c>PUL</c> - Lunge</summary>
+            Pul,
+
+            /// <summary><c>OSS</c> - Knochen</summary>
+            Oss,
+
+            /// <summary><c>HEP</c> - Leber</summary>
+            Hep,
+
+            /// <summary><c>BRA</c> - Hirn</summary>
+            Bra,
+
+            /// <summary><c>LYM</c> - Lymphknoten</summary>
+            Lym,
+
+            /// <summary><c>MAR</c> - Knochenmark</summary>
+            Mar,
+
+            /// <summary><c>PLE</c> - Pleura</summary>
+            Ple,
+
+            /// <summary><c>PER</c> - Peritoneum</summary>
+            Per,
+
+            /// <summary><c>ADR</c> - Nebennieren</summary>
+            Adr,
+
+            /// <summary><c>SKI</c> - Haut</summary>
+            Ski,
+
+            /// <summary><c>OTH</c> - andere Organe</summary>
+            Oth,
+
+            /// <summary><c>GEN</c> - generalisierte Metastasierung</summary>
+            Gen,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung</c>.</summary>
+        public enum MiiCsOnkoGenetischeVarianteAuspraegung
+        {
+            /// <summary><c>M</c> - Mutation/positiv</summary>
+            M,
+
+            /// <summary><c>W</c> - Wildtyp/nicht mutiert/ negativ</summary>
+            W,
+
+            /// <summary><c>P</c> - Polymorphismus</summary>
             P,
 
-            /// <summary><c>N</c> - bekannter Lymphknotenbefall No Change</summary>
+            /// <summary><c>S</c> - Sonstiges</summary>
+            S,
+
+            /// <summary><c>N</c> - Nicht bestimmbar</summary>
             N,
 
-            /// <summary><c>F</c> - fraglicher Befund</summary>
-            F,
+            /// <summary><c>U</c> - Unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading</c>.</summary>
+        public enum MiiCsOnkoGrading
+        {
+            /// <summary><c>0</c> - primär erworbene Melanose ohne zelluläre Atypien</summary>
+            _0,
+
+            /// <summary><c>1</c> - gut differenziert</summary>
+            _1,
+
+            /// <summary><c>2</c> - mäßig differenziert</summary>
+            _2,
+
+            /// <summary><c>3</c> - schlecht differenziert</summary>
+            _3,
+
+            /// <summary><c>4</c> - undifferenziert</summary>
+            _4,
+
+            /// <summary><c>5</c> - nur für C61, TNM8</summary>
+            _5,
+
+            /// <summary><c>X</c> - nicht bestimmbar</summary>
+            X,
+
+            /// <summary><c>L</c> - low grade (G1 oder G2)</summary>
+            L,
+
+            /// <summary><c>M</c> - intermediate grade (G2 oder G3)</summary>
+            M,
+
+            /// <summary><c>H</c> - high grade (G3 oder G4)</summary>
+            H,
+
+            /// <summary><c>B</c> - Borderline</summary>
+            B,
 
             /// <summary><c>U</c> - unbekannt</summary>
             U,
 
-            /// <summary><c>X</c> - fehlende Angabe</summary>
-            X,
+            /// <summary><c>T</c> - trifft nicht zu</summary>
+            T,
         }
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund</c>.</summary>
-        public enum MiiCsOnkoTherapieEndeGrund
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention</c>.</summary>
+        public enum MiiCsOnkoIntention
         {
-            /// <summary><c>E</c> - reguläres Ende</summary>
-            E,
+            /// <summary><c>K</c> - kurativ</summary>
+            K,
 
-            /// <summary><c>R</c> - reguläres Ende mit Dosisreduktion</summary>
-            R,
-
-            /// <summary><c>W</c> - reguläres Ende mit Substanzwechsel</summary>
-            W,
-
-            /// <summary><c>A</c> - Abbruch wegen Nebenwirkungen</summary>
-            A,
-
-            /// <summary><c>P</c> - Abbruch wegen Progress</summary>
+            /// <summary><c>P</c> - palliativ</summary>
             P,
 
-            /// <summary><c>S</c> - Abbruch aus sonstigen Gründen</summary>
+            /// <summary><c>D</c> - diagnostisch</summary>
+            D,
+
+            /// <summary><c>R</c> - Revision/Komplikation</summary>
+            R,
+
+            /// <summary><c>S</c> - Sonstiges</summary>
             S,
 
-            /// <summary><c>V</c> - Patient verweigert weitere Therapie</summary>
-            V,
+            /// <summary><c>X</c> - fehlende Angabe</summary>
+            X,
 
-            /// <summary><c>T</c> - Patient verstorben</summary>
-            T,
+            /// <summary><c>O</c> - lokal kurativ bei Oligometastasierung</summary>
+            O,
+        }
 
-            /// <summary><c>F</c> - Zieldosis erreicht mit Unterbrechung &gt; 3 Kalendertage</summary>
-            F,
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz</c>.</summary>
+        public enum MiiCsOnkoKrkAnastomoseninsuffizienz
+        {
+            /// <summary><c>B</c> - Anastomoseninsuffizienz Grad B</summary>
+            B,
 
-            /// <summary><c>U</c> - unbekannt</summary>
+            /// <summary><c>C</c> - Anastomoseninsuffizienz Grad C</summary>
+            C,
+
+            /// <summary><c>K</c> - Keine Insuffizienz oder höchstens Grad A</summary>
+            K,
+
+            /// <summary><c>U</c> - Unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status</c>.</summary>
+        public enum MiiCsOnkoKrkMrtMesorektaleFaszieStatus
+        {
+            /// <summary><c>D</c> - Durchgeführt, aber Abstand nicht angegeben</summary>
+            D,
+
+            /// <summary><c>N</c> - Nein (MRT/CT nicht durchgeführt)</summary>
+            N,
+
+            /// <summary><c>U</c> - Unbekannt</summary>
             U,
         }
 
@@ -260,6 +441,618 @@ public static class Onkologie
 
             /// <summary><c>U</c> - Unbekannt</summary>
             U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet</c>.</summary>
+        public enum MiiCsOnkoKrkTmeQualitaet
+        {
+            /// <summary><c>1</c> - Grad 1 (gut)</summary>
+            _1,
+
+            /// <summary><c>2</c> - Grad 2 (moderat)</summary>
+            _2,
+
+            /// <summary><c>3</c> - Grad 3 (schlecht)</summary>
+            _3,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie</c>.</summary>
+        public enum MiiCsOnkoMammaHer2NeuStatusLeitlinie
+        {
+            /// <summary><c>positiv</c> - HER2-positiv</summary>
+            Positiv,
+
+            /// <summary><c>low</c> - HER2-low</summary>
+            Low,
+
+            /// <summary><c>ultralow</c> - HER2-ultralow</summary>
+            Ultralow,
+
+            /// <summary><c>negativ</c> - HER2-negativ</summary>
+            Negativ,
+
+            /// <summary><c>equivocal</c> - equivocal</summary>
+            Equivocal,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds</c>.</summary>
+        public enum MiiCsOnkoMammaHer2NeuStatusObds
+        {
+            /// <summary><c>P</c> - positiv</summary>
+            P,
+
+            /// <summary><c>N</c> - negativ</summary>
+            N,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie</c>.</summary>
+        public enum MiiCsOnkoMammaRezeptorstatusLeitlinie
+        {
+            /// <summary><c>positiv</c> - positiv</summary>
+            Positiv,
+
+            /// <summary><c>gering-positiv</c> - gering positiv</summary>
+            GeringPositiv,
+
+            /// <summary><c>negativ</c> - negativ</summary>
+            Negativ,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration</c>.</summary>
+        public enum MiiCsOnkoMelanomUlzeration
+        {
+            /// <summary><c>J</c> - Ja</summary>
+            J,
+
+            /// <summary><c>N</c> - Nein</summary>
+            N,
+
+            /// <summary><c>U</c> - Unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad</c>.</summary>
+        public enum MiiCsOnkoNebenwirkungCtcaeGrad
+        {
+            /// <summary><c>1</c> - mild</summary>
+            _1,
+
+            /// <summary><c>2</c> - moderat</summary>
+            _2,
+
+            /// <summary><c>3</c> - schwerwiegend</summary>
+            _3,
+
+            /// <summary><c>4</c> - lebensbedrohlich</summary>
+            _4,
+
+            /// <summary><c>5</c> - tödlich</summary>
+            _5,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+
+            /// <summary><c>K</c> - keine</summary>
+            K,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation</c>.</summary>
+        public enum MiiCsOnkoOperationKomplikation
+        {
+            /// <summary><c>N</c> - nein</summary>
+            N,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+
+            /// <summary><c>ABD</c> - Abszess in einem Drainagekanal</summary>
+            Abd,
+
+            /// <summary><c>ABS</c> - Abszess, intraabdominaler oder intrathorakaler</summary>
+            Abs,
+
+            /// <summary><c>ASF</c> - Abszess, subfaszialer</summary>
+            Asf,
+
+            /// <summary><c>ANI</c> - Akute Niereninsuffizienz</summary>
+            Ani,
+
+            /// <summary><c>AEP</c> - Alkoholentzugspsychose</summary>
+            Aep,
+
+            /// <summary><c>ALR</c> - Allergische Reaktion ohne Schocksymptomatik</summary>
+            Alr,
+
+            /// <summary><c>ANS</c> - Anaphylaktischer Schock</summary>
+            Ans,
+
+            /// <summary><c>AEE</c> - Anastomoseninsuffizienz einer Enterostomie</summary>
+            Aee,
+
+            /// <summary><c>API</c> - Apoplektischer Insult</summary>
+            Api,
+
+            /// <summary><c>BIF</c> - Biliäre Fistel</summary>
+            Bif,
+
+            /// <summary><c>BOG</c> - Blutung, obere gastrointestinale (z. B „Stressulkus“)</summary>
+            Bog,
+
+            /// <summary><c>BOE</c> - Bolusverlegung eines Endotubus</summary>
+            Boe,
+
+            /// <summary><c>BSI</c> - Bronchusstumpfinsuffizienz</summary>
+            Bsi,
+
+            /// <summary><c>CHI</c> - Cholangitis</summary>
+            Chi,
+
+            /// <summary><c>DAI</c> - Darmanastomoseninsuffizienz</summary>
+            Dai,
+
+            /// <summary><c>DPS</c> - Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)</summary>
+            Dps,
+
+            /// <summary><c>DIC</c> - Disseminierte intravasale Koagulopathie</summary>
+            Dic,
+
+            /// <summary><c>DEP</c> - Drogenentzugspsychose</summary>
+            Dep,
+
+            /// <summary><c>DLU</c> - Druck- und Lagerungsschäden, z. B. Dekubitalulzera</summary>
+            Dlu,
+
+            /// <summary><c>DSI</c> - Duodenalstumpfinsuffizienz</summary>
+            Dsi,
+
+            /// <summary><c>ENF</c> - Enterale Fistel</summary>
+            Enf,
+
+            /// <summary><c>GER</c> - Gerinnungsstörung</summary>
+            Ger,
+
+            /// <summary><c>HEM</c> - Hämatemesis</summary>
+            Hem,
+
+            /// <summary><c>HUR</c> - Hämaturie</summary>
+            Hur,
+
+            /// <summary><c>HAE</c> - Hämorrhagischer Schock</summary>
+            Hae,
+
+            /// <summary><c>HFI</c> - Harnfistel</summary>
+            Hfi,
+
+            /// <summary><c>HNK</c> - Hautnekrose im Operationsbereich</summary>
+            Hnk,
+
+            /// <summary><c>HZI</c> - Herzinsuffizienz</summary>
+            Hzi,
+
+            /// <summary><c>HRS</c> - Herzrhythmusstörungen</summary>
+            Hrs,
+
+            /// <summary><c>HNA</c> - Hirnnervenausfälle</summary>
+            Hna,
+
+            /// <summary><c>HOP</c> - Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)</summary>
+            Hop,
+
+            /// <summary><c>HYB</c> - Hyperbilirubinämie</summary>
+            Hyb,
+
+            /// <summary><c>HYF</c> - Hypopharynxfistel</summary>
+            Hyf,
+
+            /// <summary><c>IFV</c> - Ileofemorale Venenthrombose</summary>
+            Ifv,
+
+            /// <summary><c>KAS</c> - Kardiogener Schock</summary>
+            Kas,
+
+            /// <summary><c>KES</c> - Komplikationen einer Stomaanlage</summary>
+            Kes,
+
+            /// <summary><c>KIM</c> - Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation</summary>
+            Kim,
+
+            /// <summary><c>KRA</c> - Krampfanfall</summary>
+            Kra,
+
+            /// <summary><c>KDS</c> - Kurzdarmsyndrom</summary>
+            Kds,
+
+            /// <summary><c>LEV</c> - Leberversagen</summary>
+            Lev,
+
+            /// <summary><c>LOE</c> - Lungenödem</summary>
+            Loe,
+
+            /// <summary><c>LYF</c> - Lymphfistel</summary>
+            Lyf,
+
+            /// <summary><c>LYE</c> - Lymphozele</summary>
+            Lye,
+
+            /// <summary><c>MES</c> - Magenentleerungsstörung</summary>
+            Mes,
+
+            /// <summary><c>MIL</c> - Mechanischer Ileus</summary>
+            Mil,
+
+            /// <summary><c>MED</c> - Mediastinitis</summary>
+            Med,
+
+            /// <summary><c>MAT</c> - Mesenterialarterien- oder -venenthrombose</summary>
+            Mat,
+
+            /// <summary><c>MYI</c> - Myokardinfarkt</summary>
+            Myi,
+
+            /// <summary><c>RNB</c> - Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt</summary>
+            Rnb,
+
+            /// <summary><c>NAB</c> - Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt</summary>
+            Nab,
+
+            /// <summary><c>NIN</c> - Nahtinsuffizienz, anderweitig nicht erwähnt</summary>
+            Nin,
+
+            /// <summary><c>OES</c> - Ösophagitis</summary>
+            Oes,
+
+            /// <summary><c>OSM</c> - Osteitis, Osteomyelitis</summary>
+            Osm,
+
+            /// <summary><c>PAF</c> - Pankreasfistel</summary>
+            Paf,
+
+            /// <summary><c>PIT</c> - Pankreatitis</summary>
+            Pit,
+
+            /// <summary><c>PAB</c> - Peranale Blutung</summary>
+            Pab,
+
+            /// <summary><c>PPA</c> - Periphere Parese</summary>
+            Ppa,
+
+            /// <summary><c>PAV</c> - Peripherer arterieller Verschluss (Embolie, Thrombose)</summary>
+            Pav,
+
+            /// <summary><c>PER</c> - Peritonitis</summary>
+            Per,
+
+            /// <summary><c>PLB</c> - Platzbauch</summary>
+            Plb,
+
+            /// <summary><c>PEY</c> - Pleuraempyem</summary>
+            Pey,
+
+            /// <summary><c>PLE</c> - Pleuraerguss</summary>
+            Ple,
+
+            /// <summary><c>PMN</c> - Pneumonie</summary>
+            Pmn,
+
+            /// <summary><c>PNT</c> - Pneumothorax</summary>
+            Pnt,
+
+            /// <summary><c>PDA</c> - Protrahierte Darmatonie (paralytischer Ileus)</summary>
+            Pda,
+
+            /// <summary><c>PAE</c> - Pulmonalarterienembolie</summary>
+            Pae,
+
+            /// <summary><c>RPA</c> - Rekurrensparese</summary>
+            Rpa,
+
+            /// <summary><c>RIN</c> - Respiratorische Insuffizienz</summary>
+            Rin,
+
+            /// <summary><c>SKI</c> - Septische Komplikation eines Implantates</summary>
+            Ski,
+
+            /// <summary><c>SES</c> - Septischer Schock</summary>
+            Ses,
+
+            /// <summary><c>SFH</c> - Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes</summary>
+            Sfh,
+
+            /// <summary><c>STK</c> - Stomakomplikation (z. B. Blutung, Nekrose, Stenose)</summary>
+            Stk,
+
+            /// <summary><c>TZP</c> - Thrombozytopenie</summary>
+            Tzp,
+
+            /// <summary><c>TIA</c> - TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)</summary>
+            Tia,
+
+            /// <summary><c>TRZ</c> - Transfusionszwischenfall</summary>
+            Trz,
+
+            /// <summary><c>WUH</c> - Wundhämatom (konservativ therapiert)</summary>
+            Wuh,
+
+            /// <summary><c>WSS</c> - Wundheilungsstörung, subkutane</summary>
+            Wss,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency</c>.</summary>
+        public enum MiiCsOnkoOperationUrgency
+        {
+            /// <summary><c>E</c> - Elektiveingriff</summary>
+            E,
+
+            /// <summary><c>N</c> - Notfalleingriff</summary>
+            N,
+
+            /// <summary><c>U</c> - Unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung</c>.</summary>
+        public enum MiiCsOnkoPrimaertumorDiagnosesicherung
+        {
+            /// <summary><c>0</c> - Totenschein</summary>
+            _0,
+
+            /// <summary><c>1</c> - klinisch</summary>
+            _1,
+
+            /// <summary><c>2</c> - klinische Diagnostik</summary>
+            _2,
+
+            /// <summary><c>4</c> - spezifische Tumor-Marker</summary>
+            _4,
+
+            /// <summary><c>5</c> - Zytologie</summary>
+            _5,
+
+            /// <summary><c>6</c> - histologische Untersuchung einer Metastase</summary>
+            _6,
+
+            /// <summary><c>7</c> - histologische Untersuchung eines Primärtumors</summary>
+            _7,
+
+            /// <summary><c>7.1</c> - histologische Untersuchung eines Primärtumors</summary>
+            _71,
+
+            /// <summary><c>7.2</c> - histologische Untersuchung einer Metastase</summary>
+            _72,
+
+            /// <summary><c>7.3</c> - Histologie der Autopsie</summary>
+            _73,
+
+            /// <summary><c>8</c> - Zytogenetisch und/oder molekularer Test</summary>
+            _8,
+
+            /// <summary><c>9</c> - unbekannt</summary>
+            _9,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications</c>.</summary>
+        public enum MiiCsOnkoProstataPostsurgicalComplications
+        {
+            /// <summary><c>J</c> - Ja</summary>
+            J,
+
+            /// <summary><c>N</c> - keine oder höchstens Grad II</summary>
+            N,
+
+            /// <summary><c>U</c> - Unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus</c>.</summary>
+        public enum MiiCsOnkoResidualstatus
+        {
+            /// <summary><c>R0</c> - Kein Residualtumor</summary>
+            R0,
+
+            /// <summary><c>R1</c> - Mikroskopischer Residualtumor</summary>
+            R1,
+
+            /// <summary><c>R1(is)</c> - In-Situ-Rest</summary>
+            R1Is,
+
+            /// <summary><c>R1(cy+)</c> - Cytologischer Rest</summary>
+            R1Cy,
+
+            /// <summary><c>R2</c> - Makroskopischer Residualtumor</summary>
+            R2,
+
+            /// <summary><c>RX</c> - Vorhandensein von Residualtumor kann nicht beurteilt werden</summary>
+            Rx,
+
+            /// <summary><c>U</c> - Residualtumorstatus ist nicht bekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation</c>.</summary>
+        public enum MiiCsOnkoSeitenlokalisation
+        {
+            /// <summary><c>L</c> - links</summary>
+            L,
+
+            /// <summary><c>R</c> - rechts</summary>
+            R,
+
+            /// <summary><c>B</c> - beidseitig</summary>
+            B,
+
+            /// <summary><c>M</c> - Mittellinie/mittig</summary>
+            M,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+
+            /// <summary><c>T</c> - trifft nicht zu</summary>
+            T,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart</c>.</summary>
+        public enum MiiCsOnkoStrahlentherapieApplikationsart
+        {
+            /// <summary><c>P</c> - perkutan (Teletherapie)</summary>
+            P,
+
+            /// <summary><c>P-ST</c> - perkutan stereotaktisch</summary>
+            PSt,
+
+            /// <summary><c>P-4D</c> - perkutan, atemgetriggert</summary>
+            P4D,
+
+            /// <summary><c>P-ST4D</c> - perkutan, stereotaktisch, atemgetriggert</summary>
+            PSt4D,
+
+            /// <summary><c>PRCN</c> - perkutan ohne Chemotherapie/Sensitizer</summary>
+            Prcn,
+
+            /// <summary><c>PRCN-ST</c> - perkutan, stereotaktisch ohne Chemotherapie/Sensitizer</summary>
+            PrcnSt,
+
+            /// <summary><c>PRCN-4D</c> - perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer</summary>
+            Prcn4D,
+
+            /// <summary><c>PRCN-ST4D</c> - perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer</summary>
+            PrcnSt4D,
+
+            /// <summary><c>PRCJ</c> - perkutan mit Chemotherapie/Sensitizer</summary>
+            Prcj,
+
+            /// <summary><c>PRCJ-ST</c> - perkutan, stereotaktisch mit Chemotherapie/Sensitizer</summary>
+            PrcjSt,
+
+            /// <summary><c>PRCJ-4D</c> - perkutan, atemgetriggert, mit Chemotherapie/Sensitizer</summary>
+            Prcj4D,
+
+            /// <summary><c>PRCJ-ST4D</c> - perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer</summary>
+            PrcjSt4D,
+
+            /// <summary><c>K</c> - endokavitäre Kontakttherapie</summary>
+            K,
+
+            /// <summary><c>KHDR</c> - endokavitäre Kontakttherapie, high dose rate therapy</summary>
+            Khdr,
+
+            /// <summary><c>KLDR</c> - endokavitäre Kontakttherapie, low dose rate therapy</summary>
+            Kldr,
+
+            /// <summary><c>KPDR</c> - endokavitäre Kontakttherapie, pulsed dose rate therapy</summary>
+            Kpdr,
+
+            /// <summary><c>I</c> - intersitielle Kontakttherapie</summary>
+            I,
+
+            /// <summary><c>IHDR</c> - intersitielle Kontakttherapie, high dose rate therapy</summary>
+            Ihdr,
+
+            /// <summary><c>ILDR</c> - intersitielle Kontakttherapie, low dose rate therapy</summary>
+            Ildr,
+
+            /// <summary><c>IPDR</c> - intersitielle Kontakttherapie, pulsed dose rate therapy</summary>
+            Ipdr,
+
+            /// <summary><c>MSIRT</c> - selektive interne Radio-Therapie</summary>
+            Msirt,
+
+            /// <summary><c>MPRRT</c> - Peptid-Radio-Rezeptor-Therapie</summary>
+            Mprrt,
+
+            /// <summary><c>MPSMA</c> - PSMA-Therapie</summary>
+            Mpsma,
+
+            /// <summary><c>MRJT</c> - Radiojod-Therapie</summary>
+            Mrjt,
+
+            /// <summary><c>MRIT</c> - Radioimmun-Therapie</summary>
+            Mrit,
+
+            /// <summary><c>M</c> - sonstige metabolische Radionuklidtherapie</summary>
+            M,
+
+            /// <summary><c>S</c> - Sonstiges</summary>
+            S,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost</c>.</summary>
+        public enum MiiCsOnkoStrahlentherapieBoost
+        {
+            /// <summary><c>J</c> - ja, mit Boost o. n. A.</summary>
+            J,
+
+            /// <summary><c>SIB</c> - simultan integrierter Boost</summary>
+            Sib,
+
+            /// <summary><c>SEQ</c> - sequentieller Boost</summary>
+            Seq,
+
+            /// <summary><c>KON</c> - konkomitanter Boost</summary>
+            Kon,
+
+            /// <summary><c>N</c> - nein, ohne Boost</summary>
+            N,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart</c>.</summary>
+        public enum MiiCsOnkoStrahlentherapieStrahlenart
+        {
+            /// <summary><c>UH</c> - Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)</summary>
+            Uh,
+
+            /// <summary><c>EL</c> - Elektronen</summary>
+            El,
+
+            /// <summary><c>NE</c> - Neutronen</summary>
+            Ne,
+
+            /// <summary><c>PN</c> - Protonen (leichte Wasserstoffionen/H1/Leichtionen)</summary>
+            Pn,
+
+            /// <summary><c>SI</c> - Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)</summary>
+            Si,
+
+            /// <summary><c>RO</c> - Weichstrahl (kV)</summary>
+            Ro,
+
+            /// <summary><c>SO</c> - Sonstige (inklusive Mixed Beams, exklusive Nuklide)</summary>
+            So,
+
+            /// <summary><c>Lu-177</c> - Lu-177</summary>
+            Lu177,
+
+            /// <summary><c>J-131</c> - J131</summary>
+            J131,
+
+            /// <summary><c>Y-90</c> - Y-90</summary>
+            Y90,
+
+            /// <summary><c>Ra-223</c> - Ra-223</summary>
+            Ra223,
+
+            /// <summary><c>Ac-225</c> - Ac-225</summary>
+            Ac225,
+
+            /// <summary><c>Sm-153</c> - Sm-153</summary>
+            Sm153,
+
+            /// <summary><c>Tb-161</c> - Tb-161</summary>
+            Tb161,
+
+            /// <summary><c>Sr-89</c> - Sr-89</summary>
+            Sr89,
+
+            /// <summary><c>Ir-192</c> - Ir-192</summary>
+            Ir192,
+
+            /// <summary><c>Co-60</c> - Co-60</summary>
+            Co60,
+
+            /// <summary><c>SONU</c> - Sonstige Nuklide</summary>
+            Sonu,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet</c>.</summary>
@@ -560,682 +1353,467 @@ public static class Onkologie
             _103,
         }
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart</c>.</summary>
-        public enum MiiCsOnkoStrahlentherapieApplikationsart
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014</c>.</summary>
+        public enum MiiCsOnkoStrahlentherapieZielgebiet2014
         {
-            /// <summary><c>P</c> - perkutan (Teletherapie)</summary>
-            P,
-
-            /// <summary><c>P-ST</c> - perkutan stereotaktisch</summary>
-            PSt,
-
-            /// <summary><c>P-4D</c> - perkutan, atemgetriggert</summary>
-            P4D,
-
-            /// <summary><c>P-ST4D</c> - perkutan, stereotaktisch, atemgetriggert</summary>
-            PSt4D,
-
-            /// <summary><c>PRCN</c> - perkutan ohne Chemotherapie/Sensitizer</summary>
-            Prcn,
-
-            /// <summary><c>PRCN-ST</c> - perkutan, stereotaktisch ohne Chemotherapie/Sensitizer</summary>
-            PrcnSt,
-
-            /// <summary><c>PRCN-4D</c> - perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer</summary>
-            Prcn4D,
-
-            /// <summary><c>PRCN-ST4D</c> - perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer</summary>
-            PrcnSt4D,
-
-            /// <summary><c>PRCJ</c> - perkutan mit Chemotherapie/Sensitizer</summary>
-            Prcj,
-
-            /// <summary><c>PRCJ-ST</c> - perkutan, stereotaktisch mit Chemotherapie/Sensitizer</summary>
-            PrcjSt,
-
-            /// <summary><c>PRCJ-4D</c> - perkutan, atemgetriggert, mit Chemotherapie/Sensitizer</summary>
-            Prcj4D,
-
-            /// <summary><c>PRCJ-ST4D</c> - perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer</summary>
-            PrcjSt4D,
-
-            /// <summary><c>K</c> - endokavitäre Kontakttherapie</summary>
-            K,
-
-            /// <summary><c>KHDR</c> - endokavitäre Kontakttherapie, high dose rate therapy</summary>
-            Khdr,
-
-            /// <summary><c>KLDR</c> - endokavitäre Kontakttherapie, low dose rate therapy</summary>
-            Kldr,
-
-            /// <summary><c>KPDR</c> - endokavitäre Kontakttherapie, pulsed dose rate therapy</summary>
-            Kpdr,
-
-            /// <summary><c>I</c> - intersitielle Kontakttherapie</summary>
-            I,
-
-            /// <summary><c>IHDR</c> - intersitielle Kontakttherapie, high dose rate therapy</summary>
-            Ihdr,
-
-            /// <summary><c>ILDR</c> - intersitielle Kontakttherapie, low dose rate therapy</summary>
-            Ildr,
-
-            /// <summary><c>IPDR</c> - intersitielle Kontakttherapie, pulsed dose rate therapy</summary>
-            Ipdr,
-
-            /// <summary><c>MSIRT</c> - selektive interne Radio-Therapie</summary>
-            Msirt,
-
-            /// <summary><c>MPRRT</c> - Peptid-Radio-Rezeptor-Therapie</summary>
-            Mprrt,
-
-            /// <summary><c>MPSMA</c> - PSMA-Therapie</summary>
-            Mpsma,
-
-            /// <summary><c>MRJT</c> - Radiojod-Therapie</summary>
-            Mrjt,
-
-            /// <summary><c>MRIT</c> - Radioimmun-Therapie</summary>
-            Mrit,
-
-            /// <summary><c>M</c> - sonstige metabolische Radionuklidtherapie</summary>
-            M,
-
-            /// <summary><c>S</c> - Sonstiges</summary>
-            S,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds</c>.</summary>
-        public enum MiiCsOnkoMammaHer2NeuStatusObds
-        {
-            /// <summary><c>P</c> - positiv</summary>
-            P,
-
-            /// <summary><c>N</c> - negativ</summary>
-            N,
-
-            /// <summary><c>U</c> - unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod</c>.</summary>
-        public enum MiiCsOnkoTod
-        {
-            /// <summary><c>J</c> - Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.</summary>
-            J,
-
-            /// <summary><c>N</c> - Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.</summary>
-            N,
-
-            /// <summary><c>U</c> - unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ</c>.</summary>
-        public enum MiiCsOnkoTherapieplanungTyp
-        {
-            /// <summary><c>praeth</c> - prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</summary>
-            Praeth,
-
-            /// <summary><c>postop</c> - postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)</summary>
-            Postop,
-
-            /// <summary><c>postth</c> - posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)</summary>
-            Postth,
-
-            /// <summary><c>ther</c> - Therapieplanung ohne Tumorkonferenz</summary>
-            Ther,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention</c>.</summary>
-        public enum MiiCsOnkoIntention
-        {
-            /// <summary><c>K</c> - kurativ</summary>
-            K,
-
-            /// <summary><c>P</c> - palliativ</summary>
-            P,
-
-            /// <summary><c>D</c> - diagnostisch</summary>
-            D,
-
-            /// <summary><c>R</c> - Revision/Komplikation</summary>
-            R,
-
-            /// <summary><c>S</c> - Sonstiges</summary>
-            S,
-
-            /// <summary><c>X</c> - fehlende Angabe</summary>
-            X,
-
-            /// <summary><c>O</c> - lokal kurativ bei Oligometastasierung</summary>
-            O,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad</c>.</summary>
-        public enum MiiCsOnkoNebenwirkungCtcaeGrad
-        {
-            /// <summary><c>1</c> - mild</summary>
+            /// <summary><c>1.</c> - ZNS</summary>
             _1,
 
-            /// <summary><c>2</c> - moderat</summary>
+            /// <summary><c>1.1.</c> - Ganzhirn</summary>
+            _11,
+
+            /// <summary><c>1.2.</c> - Teilhirn</summary>
+            _12,
+
+            /// <summary><c>1.3.</c> - Neuroachse</summary>
+            _13,
+
+            /// <summary><c>2.</c> - Kopf-Hals</summary>
             _2,
 
-            /// <summary><c>3</c> - schwerwiegend</summary>
+            /// <summary><c>2.+</c> - Kopf-Hals mit Lk</summary>
+            _2Pos,
+
+            /// <summary><c>2.-</c> - Kopf-Hals ohne Lk</summary>
+            _2Neg,
+
+            /// <summary><c>2.1.</c> - Orbita, o.n.A.</summary>
+            _21,
+
+            /// <summary><c>2.1.+</c> - Orbita mit Lk</summary>
+            _21Pos,
+
+            /// <summary><c>2.1.-</c> - Orbita ohne Lk</summary>
+            _21Neg,
+
+            /// <summary><c>2.2.</c> - Nase/ Nasennebenhöhle, o.n.A.</summary>
+            _22,
+
+            /// <summary><c>2.2.+</c> - Nase/ Nasennebenhöhle mit Lk</summary>
+            _22Pos,
+
+            /// <summary><c>2.2.-</c> - Nase/ Nasennebenhöhle ohne Lk</summary>
+            _22Neg,
+
+            /// <summary><c>2.3.</c> - Mundhöhle, o.n.A.</summary>
+            _23,
+
+            /// <summary><c>2.3.+</c> - Mundhöhle mit Lk</summary>
+            _23Pos,
+
+            /// <summary><c>2.3.-</c> - Mundhöhle ohne Lk</summary>
+            _23Neg,
+
+            /// <summary><c>2.4.</c> - Ohr, o.n.A.</summary>
+            _24,
+
+            /// <summary><c>2.4.+</c> - Ohr mit Lk</summary>
+            _24Pos,
+
+            /// <summary><c>2.4.-</c> - Ohr ohne Lk</summary>
+            _24Neg,
+
+            /// <summary><c>2.5.</c> - Speicheldrüse, o.n.A.</summary>
+            _25,
+
+            /// <summary><c>2.5.+</c> - Speicheldrüse mit Lk</summary>
+            _25Pos,
+
+            /// <summary><c>2.5.-</c> - Speicheldrüse ohne Lk</summary>
+            _25Neg,
+
+            /// <summary><c>2.6.</c> - Pharynx, o.n.A.</summary>
+            _26,
+
+            /// <summary><c>2.6.+</c> - Pharynx mit Lk</summary>
+            _26Pos,
+
+            /// <summary><c>2.6.-</c> - Pharynx ohne Lk</summary>
+            _26Neg,
+
+            /// <summary><c>2.7.</c> - Larynx, o.n.A.</summary>
+            _27,
+
+            /// <summary><c>2.7.+</c> - Larynx mit Lk</summary>
+            _27Pos,
+
+            /// <summary><c>2.7.-</c> - Larynx ohne Lk</summary>
+            _27Neg,
+
+            /// <summary><c>2.8.</c> - Schilddrüse, o.n.A.</summary>
+            _28,
+
+            /// <summary><c>2.8.+</c> - Schilddrüse mit Lk</summary>
+            _28Pos,
+
+            /// <summary><c>2.8.-</c> - Schilddrüse ohne Lk</summary>
+            _28Neg,
+
+            /// <summary><c>2.9.</c> - Halslymphknoten</summary>
+            _29,
+
+            /// <summary><c>3.</c> - Thorax</summary>
             _3,
 
-            /// <summary><c>4</c> - lebensbedrohlich</summary>
+            /// <summary><c>3.+</c> - Thorax mit Lk</summary>
+            _3Pos,
+
+            /// <summary><c>3.-</c> - Thorax ohne Lk</summary>
+            _3Neg,
+
+            /// <summary><c>3.1.</c> - Mamma als Ganzbrust, o.n.A.</summary>
+            _31,
+
+            /// <summary><c>3.1.+</c> - Mamma als Ganzbrust mit Lk</summary>
+            _31Pos,
+
+            /// <summary><c>3.1.-</c> - Mamma als Ganzbrust ohne Lk</summary>
+            _31Neg,
+
+            /// <summary><c>3.2.</c> - Mamma als Teilbrust, o.n.A.</summary>
+            _32,
+
+            /// <summary><c>3.2.+</c> - Mamma als Teilbrust mit Lk</summary>
+            _32Pos,
+
+            /// <summary><c>3.2.-</c> - Mamma als Teilbrust ohne Lk</summary>
+            _32Neg,
+
+            /// <summary><c>3.3.</c> - Brustwand</summary>
+            _33,
+
+            /// <summary><c>3.3.+</c> - Brustwand mit Lk</summary>
+            _33Pos,
+
+            /// <summary><c>3.3.-</c> - Brustwand ohne Lk</summary>
+            _33Neg,
+
+            /// <summary><c>3.4.</c> - Lunge, o.n.A.</summary>
+            _34,
+
+            /// <summary><c>3.4.+</c> - Lunge mit Lk</summary>
+            _34Pos,
+
+            /// <summary><c>3.4.-</c> - Lunge ohne Lk</summary>
+            _34Neg,
+
+            /// <summary><c>3.5.</c> - Ösophagus, o.n.A.</summary>
+            _35,
+
+            /// <summary><c>3.5.+</c> - Ösophagus mit Lk</summary>
+            _35Pos,
+
+            /// <summary><c>3.5.-</c> - Ösophagus ohne Lk</summary>
+            _35Neg,
+
+            /// <summary><c>3.6.</c> - Thymus, o.n.A.</summary>
+            _36,
+
+            /// <summary><c>3.6.+</c> - Thymus mit Lk</summary>
+            _36Pos,
+
+            /// <summary><c>3.6.-</c> - Thymus ohne Lk</summary>
+            _36Neg,
+
+            /// <summary><c>3.7.</c> - Mediastinale Lymphknoten</summary>
+            _37,
+
+            /// <summary><c>4.</c> - Abdomen (ohne Becken)</summary>
             _4,
 
-            /// <summary><c>5</c> - tödlich</summary>
+            /// <summary><c>4.+</c> - Abdomen (ohne Becken) mit Lk</summary>
+            _4Pos,
+
+            /// <summary><c>4.-</c> - Abdomen (ohne Becken) ohne Lk</summary>
+            _4Neg,
+
+            /// <summary><c>4.1.</c> - Magen, o.n.A.</summary>
+            _41,
+
+            /// <summary><c>4.1.+</c> - Magen mit Lk</summary>
+            _41Pos,
+
+            /// <summary><c>4.1.-</c> - Magen ohne Lk</summary>
+            _41Neg,
+
+            /// <summary><c>4.2.</c> - Pankreas, o.n.A.</summary>
+            _42,
+
+            /// <summary><c>4.2.+</c> - Pankreas mit Lk</summary>
+            _42Pos,
+
+            /// <summary><c>4.2.-</c> - Pankreas ohne Lk</summary>
+            _42Neg,
+
+            /// <summary><c>4.3.</c> - Leber, o.n.A.</summary>
+            _43,
+
+            /// <summary><c>4.3.+</c> - Leber mit Lk</summary>
+            _43Pos,
+
+            /// <summary><c>4.3.-</c> - Leber ohne Lk</summary>
+            _43Neg,
+
+            /// <summary><c>4.4.</c> - Milz, o.n.A.</summary>
+            _44,
+
+            /// <summary><c>4.4.+</c> - Milz mit Lk</summary>
+            _44Pos,
+
+            /// <summary><c>4.4.-</c> - Milz ohne Lk</summary>
+            _44Neg,
+
+            /// <summary><c>4.5.</c> - Niere, o.n.A.</summary>
+            _45,
+
+            /// <summary><c>4.5.+</c> - Niere mit Lk</summary>
+            _45Pos,
+
+            /// <summary><c>4.5.-</c> - Niere ohne Lk</summary>
+            _45Neg,
+
+            /// <summary><c>4.6.</c> - Nebenniere, o.n.A.</summary>
+            _46,
+
+            /// <summary><c>4.6.+</c> - Nebenniere mit Lk</summary>
+            _46Pos,
+
+            /// <summary><c>4.6.-</c> - Nebenniere ohne Lk</summary>
+            _46Neg,
+
+            /// <summary><c>4.7.</c> - Retroperitoneale Lymphknoten</summary>
+            _47,
+
+            /// <summary><c>4.8.</c> - Retroperitoneum, o.n.A.</summary>
+            _48,
+
+            /// <summary><c>4.8.+</c> - Retroperitoneum mit Lk</summary>
+            _48Pos,
+
+            /// <summary><c>4.8.-</c> - Retroperitoneum ohne Lk</summary>
+            _48Neg,
+
+            /// <summary><c>4.9.</c> - Bauchwand, o.n.A.</summary>
+            _49,
+
+            /// <summary><c>4.9.+</c> - Bauchwand mit Lk</summary>
+            _49Pos,
+
+            /// <summary><c>4.9.-</c> - Bauchwand ohne Lk</summary>
+            _49Neg,
+
+            /// <summary><c>5.</c> - Becken</summary>
             _5,
 
-            /// <summary><c>U</c> - unbekannt</summary>
-            U,
+            /// <summary><c>5.+</c> - Becken mit Lk</summary>
+            _5Pos,
 
-            /// <summary><c>K</c> - keine</summary>
-            K,
-        }
+            /// <summary><c>5.-</c> - Becken ohne Lk</summary>
+            _5Neg,
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen</c>.</summary>
-        public enum MiiCsOnkoFernmetastasen
-        {
-            /// <summary><c>PUL</c> - Lunge</summary>
-            Pul,
+            /// <summary><c>5.1.</c> - Rektum, o.n.A.</summary>
+            _51,
 
-            /// <summary><c>OSS</c> - Knochen</summary>
-            Oss,
+            /// <summary><c>5.1.+</c> - Rektum mit Lk</summary>
+            _51Pos,
 
-            /// <summary><c>HEP</c> - Leber</summary>
-            Hep,
+            /// <summary><c>5.1.-</c> - Rektum ohne Lk</summary>
+            _51Neg,
 
-            /// <summary><c>BRA</c> - Hirn</summary>
-            Bra,
+            /// <summary><c>5.2.</c> - Analbereich, o.n.A.</summary>
+            _52,
 
-            /// <summary><c>LYM</c> - Lymphknoten</summary>
-            Lym,
+            /// <summary><c>5.2.-</c> - Analbereich ohne Lk</summary>
+            _52Neg,
 
-            /// <summary><c>MAR</c> - Knochenmark</summary>
-            Mar,
+            /// <summary><c>5.2.+</c> - Analbereich mit Lk</summary>
+            _52Pos,
 
-            /// <summary><c>PLE</c> - Pleura</summary>
-            Ple,
+            /// <summary><c>5.3.</c> - Harnblase, o.n.A.</summary>
+            _53,
 
-            /// <summary><c>PER</c> - Peritoneum</summary>
-            Per,
+            /// <summary><c>5.3.-</c> - Harnblase ohne Lk</summary>
+            _53Neg,
 
-            /// <summary><c>ADR</c> - Nebennieren</summary>
-            Adr,
+            /// <summary><c>5.3.+</c> - Harnblase mit Lk</summary>
+            _53Pos,
 
-            /// <summary><c>SKI</c> - Haut</summary>
-            Ski,
+            /// <summary><c>5.4.</c> - Prostata, o.n.A.</summary>
+            _54,
 
-            /// <summary><c>OTH</c> - andere Organe</summary>
-            Oth,
+            /// <summary><c>5.4.+</c> - Prostata mit Lk</summary>
+            _54Pos,
 
-            /// <summary><c>GEN</c> - generalisierte Metastasierung</summary>
-            Gen,
-        }
+            /// <summary><c>5.4.-</c> - Prostata ohne Lk</summary>
+            _54Neg,
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet</c>.</summary>
-        public enum MiiCsOnkoKrkTmeQualitaet
-        {
-            /// <summary><c>1</c> - Grad 1 (gut)</summary>
-            _1,
+            /// <summary><c>5.5.</c> - Hoden, o.n.A.</summary>
+            _55,
 
-            /// <summary><c>2</c> - Grad 2 (moderat)</summary>
-            _2,
+            /// <summary><c>5.5.+</c> - Hoden mit Lk</summary>
+            _55Pos,
 
-            /// <summary><c>3</c> - Grad 3 (schlecht)</summary>
-            _3,
-        }
+            /// <summary><c>5.5.-</c> - Hoden ohne Lk</summary>
+            _55Neg,
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ</c>.</summary>
-        public enum MiiCsOnkoTherapieTyp
-        {
-            /// <summary><c>CH</c> - Chemotherapie</summary>
-            Ch,
+            /// <summary><c>5.6.</c> - Penis, o.n.A.</summary>
+            _56,
 
-            /// <summary><c>HO</c> - Hormontherapie</summary>
-            Ho,
+            /// <summary><c>5.6.+</c> - Penis mit Lk</summary>
+            _56Pos,
 
-            /// <summary><c>IM</c> - Immun-/Antikörpertherapie</summary>
-            Im,
+            /// <summary><c>5.6.-</c> - Penis ohne Lk</summary>
+            _56Neg,
 
-            /// <summary><c>ZS</c> - zielgerichtete Substanzen</summary>
-            Zs,
+            /// <summary><c>5.7.</c> - Uterus und Zervix, o.n.A.</summary>
+            _57,
 
-            /// <summary><c>SZ</c> - Stammzelltransplantation (inklusive Knochenmarktransplantation)</summary>
-            Sz,
+            /// <summary><c>5.7.+</c> - Uterus und Zervix mit Lk</summary>
+            _57Pos,
 
-            /// <summary><c>CI</c> - Chemo- + Immun-/Antikörpertherapie</summary>
-            Ci,
+            /// <summary><c>5.7.-</c> - Uterus und Zervix ohne Lk</summary>
+            _57Neg,
 
-            /// <summary><c>CZ</c> - Chemotherapie + zielgerichtete Substanzen</summary>
-            Cz,
+            /// <summary><c>5.7.1.</c> - Uterus</summary>
+            _571,
 
-            /// <summary><c>CIZ</c> - Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen</summary>
-            Ciz,
+            /// <summary><c>5.7.1.+</c> - Uterus mit Lymphknoten</summary>
+            _571Pos,
 
-            /// <summary><c>IZ</c> - Immun-/Antikörpertherapie + zielgerichtete Substanzen</summary>
-            Iz,
+            /// <summary><c>5.7.1.-</c> - Uterus ohne Lymphknoten</summary>
+            _571Neg,
 
-            /// <summary><c>WW</c> - Watchful Waiting</summary>
-            Ww,
+            /// <summary><c>5.7.2.</c> - Zervix</summary>
+            _572,
 
-            /// <summary><c>AS</c> - Active Surveillance</summary>
-            As,
+            /// <summary><c>5.7.2.+</c> - Zervix mit Lymphknoten</summary>
+            _572Pos,
 
-            /// <summary><c>WS</c> - Wait and see</summary>
-            Ws,
+            /// <summary><c>5.7.2.-</c> - Zervix ohne Lymphknoten</summary>
+            _572Neg,
 
-            /// <summary><c>OP</c> - Operation</summary>
-            Op,
+            /// <summary><c>5.8.</c> - Ovar, o.n.A.</summary>
+            _58,
 
-            /// <summary><c>ST</c> - Strahlentherapie</summary>
-            St,
+            /// <summary><c>5.8.-</c> - Ovar ohne Lk</summary>
+            _58Neg,
 
-            /// <summary><c>KW</c> - keine weitere tumorspezifische Therapie empfohlen</summary>
-            Kw,
+            /// <summary><c>5.8.+</c> - Ovar mit Lk</summary>
+            _58Pos,
 
-            /// <summary><c>SO</c> - Sonstiges</summary>
-            So,
-        }
+            /// <summary><c>5.9.</c> - Vulva, o.n.A.</summary>
+            _59,
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status</c>.</summary>
-        public enum MiiCsOnkoKrkMrtMesorektaleFaszieStatus
-        {
-            /// <summary><c>D</c> - Durchgeführt, aber Abstand nicht angegeben</summary>
-            D,
+            /// <summary><c>5.9.-</c> - Vulva ohne Lk</summary>
+            _59Neg,
 
-            /// <summary><c>N</c> - Nein (MRT/CT nicht durchgeführt)</summary>
-            N,
+            /// <summary><c>5.9.+</c> - Vulva mit Lk</summary>
+            _59Pos,
 
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
+            /// <summary><c>5.10.</c> - Vagina, o.n.A.</summary>
+            _510,
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation</c>.</summary>
-        public enum MiiCsOnkoOperationKomplikation
-        {
-            /// <summary><c>N</c> - nein</summary>
-            N,
+            /// <summary><c>5.10.+</c> - Vagina mit Lk</summary>
+            _510Pos,
 
-            /// <summary><c>U</c> - unbekannt</summary>
-            U,
+            /// <summary><c>5.10.-</c> - Vagina ohne Lk</summary>
+            _510Neg,
 
-            /// <summary><c>ABD</c> - Abszess in einem Drainagekanal</summary>
-            Abd,
+            /// <summary><c>5.11.</c> - Beckenwand, o.n.A.</summary>
+            _511,
 
-            /// <summary><c>ABS</c> - Abszess, intraabdominaler oder intrathorakaler</summary>
-            Abs,
+            /// <summary><c>5.11.+</c> - Beckenwand mit Lk</summary>
+            _511Pos,
 
-            /// <summary><c>ASF</c> - Abszess, subfaszialer</summary>
-            Asf,
+            /// <summary><c>5.11.-</c> - Beckenwand ohne Lk</summary>
+            _511Neg,
 
-            /// <summary><c>ANI</c> - Akute Niereninsuffizienz</summary>
-            Ani,
+            /// <summary><c>5.12.</c> - Beckenlymphkn. (ohne Primtu.)</summary>
+            _512,
 
-            /// <summary><c>AEP</c> - Alkoholentzugspsychose</summary>
-            Aep,
-
-            /// <summary><c>ALR</c> - Allergische Reaktion ohne Schocksymptomatik</summary>
-            Alr,
-
-            /// <summary><c>ANS</c> - Anaphylaktischer Schock</summary>
-            Ans,
-
-            /// <summary><c>AEE</c> - Anastomoseninsuffizienz einer Enterostomie</summary>
-            Aee,
-
-            /// <summary><c>API</c> - Apoplektischer Insult</summary>
-            Api,
-
-            /// <summary><c>BIF</c> - Biliäre Fistel</summary>
-            Bif,
-
-            /// <summary><c>BOG</c> - Blutung, obere gastrointestinale (z. B „Stressulkus“)</summary>
-            Bog,
-
-            /// <summary><c>BOE</c> - Bolusverlegung eines Endotubus</summary>
-            Boe,
-
-            /// <summary><c>BSI</c> - Bronchusstumpfinsuffizienz</summary>
-            Bsi,
-
-            /// <summary><c>CHI</c> - Cholangitis</summary>
-            Chi,
-
-            /// <summary><c>DAI</c> - Darmanastomoseninsuffizienz</summary>
-            Dai,
-
-            /// <summary><c>DPS</c> - Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)</summary>
-            Dps,
-
-            /// <summary><c>DIC</c> - Disseminierte intravasale Koagulopathie</summary>
-            Dic,
-
-            /// <summary><c>DEP</c> - Drogenentzugspsychose</summary>
-            Dep,
-
-            /// <summary><c>DLU</c> - Druck- und Lagerungsschäden, z. B. Dekubitalulzera</summary>
-            Dlu,
-
-            /// <summary><c>DSI</c> - Duodenalstumpfinsuffizienz</summary>
-            Dsi,
-
-            /// <summary><c>ENF</c> - Enterale Fistel</summary>
-            Enf,
-
-            /// <summary><c>GER</c> - Gerinnungsstörung</summary>
-            Ger,
-
-            /// <summary><c>HEM</c> - Hämatemesis</summary>
-            Hem,
-
-            /// <summary><c>HUR</c> - Hämaturie</summary>
-            Hur,
-
-            /// <summary><c>HAE</c> - Hämorrhagischer Schock</summary>
-            Hae,
-
-            /// <summary><c>HFI</c> - Harnfistel</summary>
-            Hfi,
-
-            /// <summary><c>HNK</c> - Hautnekrose im Operationsbereich</summary>
-            Hnk,
-
-            /// <summary><c>HZI</c> - Herzinsuffizienz</summary>
-            Hzi,
-
-            /// <summary><c>HRS</c> - Herzrhythmusstörungen</summary>
-            Hrs,
-
-            /// <summary><c>HNA</c> - Hirnnervenausfälle</summary>
-            Hna,
-
-            /// <summary><c>HOP</c> - Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)</summary>
-            Hop,
-
-            /// <summary><c>HYB</c> - Hyperbilirubinämie</summary>
-            Hyb,
-
-            /// <summary><c>HYF</c> - Hypopharynxfistel</summary>
-            Hyf,
-
-            /// <summary><c>IFV</c> - Ileofemorale Venenthrombose</summary>
-            Ifv,
-
-            /// <summary><c>KAS</c> - Kardiogener Schock</summary>
-            Kas,
-
-            /// <summary><c>KES</c> - Komplikationen einer Stomaanlage</summary>
-            Kes,
-
-            /// <summary><c>KIM</c> - Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation</summary>
-            Kim,
-
-            /// <summary><c>KRA</c> - Krampfanfall</summary>
-            Kra,
-
-            /// <summary><c>KDS</c> - Kurzdarmsyndrom</summary>
-            Kds,
-
-            /// <summary><c>LEV</c> - Leberversagen</summary>
-            Lev,
-
-            /// <summary><c>LOE</c> - Lungenödem</summary>
-            Loe,
-
-            /// <summary><c>LYF</c> - Lymphfistel</summary>
-            Lyf,
-
-            /// <summary><c>LYE</c> - Lymphozele</summary>
-            Lye,
-
-            /// <summary><c>MES</c> - Magenentleerungsstörung</summary>
-            Mes,
-
-            /// <summary><c>MIL</c> - Mechanischer Ileus</summary>
-            Mil,
-
-            /// <summary><c>MED</c> - Mediastinitis</summary>
-            Med,
-
-            /// <summary><c>MAT</c> - Mesenterialarterien- oder -venenthrombose</summary>
-            Mat,
-
-            /// <summary><c>MYI</c> - Myokardinfarkt</summary>
-            Myi,
-
-            /// <summary><c>RNB</c> - Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt</summary>
-            Rnb,
-
-            /// <summary><c>NAB</c> - Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt</summary>
-            Nab,
-
-            /// <summary><c>NIN</c> - Nahtinsuffizienz, anderweitig nicht erwähnt</summary>
-            Nin,
-
-            /// <summary><c>OES</c> - Ösophagitis</summary>
-            Oes,
-
-            /// <summary><c>OSM</c> - Osteitis, Osteomyelitis</summary>
-            Osm,
-
-            /// <summary><c>PAF</c> - Pankreasfistel</summary>
-            Paf,
-
-            /// <summary><c>PIT</c> - Pankreatitis</summary>
-            Pit,
-
-            /// <summary><c>PAB</c> - Peranale Blutung</summary>
-            Pab,
-
-            /// <summary><c>PPA</c> - Periphere Parese</summary>
-            Ppa,
-
-            /// <summary><c>PAV</c> - Peripherer arterieller Verschluss (Embolie, Thrombose)</summary>
-            Pav,
-
-            /// <summary><c>PER</c> - Peritonitis</summary>
-            Per,
-
-            /// <summary><c>PLB</c> - Platzbauch</summary>
-            Plb,
-
-            /// <summary><c>PEY</c> - Pleuraempyem</summary>
-            Pey,
-
-            /// <summary><c>PLE</c> - Pleuraerguss</summary>
-            Ple,
-
-            /// <summary><c>PMN</c> - Pneumonie</summary>
-            Pmn,
-
-            /// <summary><c>PNT</c> - Pneumothorax</summary>
-            Pnt,
-
-            /// <summary><c>PDA</c> - Protrahierte Darmatonie (paralytischer Ileus)</summary>
-            Pda,
-
-            /// <summary><c>PAE</c> - Pulmonalarterienembolie</summary>
-            Pae,
-
-            /// <summary><c>RPA</c> - Rekurrensparese</summary>
-            Rpa,
-
-            /// <summary><c>RIN</c> - Respiratorische Insuffizienz</summary>
-            Rin,
-
-            /// <summary><c>SKI</c> - Septische Komplikation eines Implantates</summary>
-            Ski,
-
-            /// <summary><c>SES</c> - Septischer Schock</summary>
-            Ses,
-
-            /// <summary><c>SFH</c> - Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes</summary>
-            Sfh,
-
-            /// <summary><c>STK</c> - Stomakomplikation (z. B. Blutung, Nekrose, Stenose)</summary>
-            Stk,
-
-            /// <summary><c>TZP</c> - Thrombozytopenie</summary>
-            Tzp,
-
-            /// <summary><c>TIA</c> - TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)</summary>
-            Tia,
-
-            /// <summary><c>TRZ</c> - Transfusionszwischenfall</summary>
-            Trz,
-
-            /// <summary><c>WUH</c> - Wundhämatom (konservativ therapiert)</summary>
-            Wuh,
-
-            /// <summary><c>WSS</c> - Wundheilungsstörung, subkutane</summary>
-            Wss,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung</c>.</summary>
-        public enum MiiCsOnkoPrimaertumorDiagnosesicherung
-        {
-            /// <summary><c>0</c> - Totenschein</summary>
-            _0,
-
-            /// <summary><c>1</c> - klinisch</summary>
-            _1,
-
-            /// <summary><c>2</c> - klinische Diagnostik</summary>
-            _2,
-
-            /// <summary><c>4</c> - spezifische Tumor-Marker</summary>
-            _4,
-
-            /// <summary><c>5</c> - Zytologie</summary>
-            _5,
-
-            /// <summary><c>6</c> - histologische Untersuchung einer Metastase</summary>
+            /// <summary><c>6.</c> - Stütz-/Bewegungsapparat</summary>
             _6,
 
-            /// <summary><c>7</c> - histologische Untersuchung eines Primärtumors</summary>
+            /// <summary><c>6.1.</c> - Schädelknochen</summary>
+            _61,
+
+            /// <summary><c>6.2.</c> - Rippen</summary>
+            _62,
+
+            /// <summary><c>6.3.</c> - Sternum</summary>
+            _63,
+
+            /// <summary><c>6.4.</c> - HWS</summary>
+            _64,
+
+            /// <summary><c>6.5.</c> - BWS</summary>
+            _65,
+
+            /// <summary><c>6.6.</c> - LWS</summary>
+            _66,
+
+            /// <summary><c>6.7.</c> - knöchernes Becken</summary>
+            _67,
+
+            /// <summary><c>6.8.</c> - Hüfte</summary>
+            _68,
+
+            /// <summary><c>6.9.</c> - Schulter</summary>
+            _69,
+
+            /// <summary><c>6.10.</c> - Oberarm</summary>
+            _610,
+
+            /// <summary><c>6.11.</c> - Unterarm</summary>
+            _611,
+
+            /// <summary><c>6.12.</c> - Hand</summary>
+            _612,
+
+            /// <summary><c>6.13.</c> - Leiste</summary>
+            _613,
+
+            /// <summary><c>6.14.</c> - Oberschenkel</summary>
+            _614,
+
+            /// <summary><c>6.15.</c> - Unterschenkel</summary>
+            _615,
+
+            /// <summary><c>6.16.</c> - Fuß</summary>
+            _616,
+
+            /// <summary><c>7.</c> - Haut</summary>
             _7,
 
-            /// <summary><c>7.1</c> - histologische Untersuchung eines Primärtumors</summary>
+            /// <summary><c>7.+</c> - Haut mit Lymphknoten</summary>
+            _7Pos,
+
+            /// <summary><c>7.-</c> - Haut ohne Lymphknoten</summary>
+            _7Neg,
+
+            /// <summary><c>7.1.</c> - Primärer Hauttumor</summary>
             _71,
 
-            /// <summary><c>7.2</c> - histologische Untersuchung einer Metastase</summary>
+            /// <summary><c>7.2.</c> - Hautmetastasen</summary>
             _72,
 
-            /// <summary><c>7.3</c> - Histologie der Autopsie</summary>
-            _73,
-
-            /// <summary><c>8</c> - Zytogenetisch und/oder molekularer Test</summary>
+            /// <summary><c>8.</c> - Sonstiges</summary>
             _8,
 
-            /// <summary><c>9</c> - unbekannt</summary>
-            _9,
+            /// <summary><c>8.1.</c> - Ganzkörperbestrahlung</summary>
+            _81,
+
+            /// <summary><c>8.2.</c> - Mantelfeldbestrahlung</summary>
+            _82,
         }
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung</c>.</summary>
-        public enum MiiCsOnkoVerlaufGesamtbeurteilung
-        {
-            /// <summary><c>V</c> - Vollremission (complete remission, CR)</summary>
-            V,
-
-            /// <summary><c>T</c> - Teilremission (partial remission, PR)</summary>
-            T,
-
-            /// <summary><c>K</c> - keine Änderung (no change, NC) = stable disease</summary>
-            K,
-
-            /// <summary><c>P</c> - Progression</summary>
-            P,
-
-            /// <summary><c>D</c> - divergentes Geschehen</summary>
-            D,
-
-            /// <summary><c>B</c> - klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)</summary>
-            B,
-
-            /// <summary><c>R</c> - Vollremission mit residualen Auffälligkeiten (CRr)</summary>
-            R,
-
-            /// <summary><c>Y</c> - Rezidiv</summary>
-            Y,
-
-            /// <summary><c>U</c> - Beurteilung unmöglich</summary>
-            U,
-
-            /// <summary><c>X</c> - fehlende Angabe</summary>
-            X,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version</c>.</summary>
-        public enum MiiCsOnkoTnmVersion
-        {
-            /// <summary><c>1</c> - 1. Auflage</summary>
-            _1,
-
-            /// <summary><c>2</c> - 2. Auflage</summary>
-            _2,
-
-            /// <summary><c>3</c> - 3. Auflage</summary>
-            _3,
-
-            /// <summary><c>4</c> - 4. Auflage</summary>
-            _4,
-
-            /// <summary><c>5</c> - 5. Auflage</summary>
-            _5,
-
-            /// <summary><c>6</c> - 6. Auflage</summary>
-            _6,
-
-            /// <summary><c>7</c> - 7. Auflage</summary>
-            _7,
-
-            /// <summary><c>8</c> - 8. Auflage</summary>
-            _8,
-
-            /// <summary><c>9</c> - 9. Auflage</summary>
-            _9,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor</c>.</summary>
-        public enum MiiCsOnkoVerlaufPrimaertumor
-        {
-            /// <summary><c>K</c> - kein Tumor nachweisbar</summary>
-            K,
-
-            /// <summary><c>T</c> - Tumorreste (Residualtumor)</summary>
-            T,
-
-            /// <summary><c>P</c> - Tumorreste (Residualtumor) Progress</summary>
-            P,
-
-            /// <summary><c>N</c> - Tumorreste (Residualtumor) No Change</summary>
-            N,
-
-            /// <summary><c>R</c> - Lokalrezidiv</summary>
-            R,
-
-            /// <summary><c>F</c> - fraglicher Befund</summary>
-            F,
-
-            /// <summary><c>U</c> - unbekannt</summary>
-            U,
-
-            /// <summary><c>X</c> - fehlende Angabe</summary>
-            X,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications</c>.</summary>
-        public enum MiiCsOnkoProstataPostsurgicalComplications
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme</c>.</summary>
+        public enum MiiCsOnkoStudienteilnahme
         {
             /// <summary><c>J</c> - Ja</summary>
             J,
 
-            /// <summary><c>N</c> - keine oder höchstens Grad II</summary>
+            /// <summary><c>N</c> - Nein</summary>
             N,
 
             /// <summary><c>U</c> - Unbekannt</summary>
@@ -1738,6 +2316,69 @@ public static class Onkologie
             CarTZelltherapie,
         }
 
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung</c>.</summary>
+        public enum MiiCsOnkoTherapieabweichung
+        {
+            /// <summary><c>J</c> - ja</summary>
+            J,
+
+            /// <summary><c>N</c> - nein</summary>
+            N,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ</c>.</summary>
+        public enum MiiCsOnkoTherapieplanungTyp
+        {
+            /// <summary><c>praeth</c> - prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</summary>
+            Praeth,
+
+            /// <summary><c>postop</c> - postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)</summary>
+            Postop,
+
+            /// <summary><c>postth</c> - posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)</summary>
+            Postth,
+
+            /// <summary><c>ther</c> - Therapieplanung ohne Tumorkonferenz</summary>
+            Ther,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund</c>.</summary>
+        public enum MiiCsOnkoTherapieEndeGrund
+        {
+            /// <summary><c>E</c> - reguläres Ende</summary>
+            E,
+
+            /// <summary><c>R</c> - reguläres Ende mit Dosisreduktion</summary>
+            R,
+
+            /// <summary><c>W</c> - reguläres Ende mit Substanzwechsel</summary>
+            W,
+
+            /// <summary><c>A</c> - Abbruch wegen Nebenwirkungen</summary>
+            A,
+
+            /// <summary><c>P</c> - Abbruch wegen Progress</summary>
+            P,
+
+            /// <summary><c>S</c> - Abbruch aus sonstigen Gründen</summary>
+            S,
+
+            /// <summary><c>V</c> - Patient verweigert weitere Therapie</summary>
+            V,
+
+            /// <summary><c>T</c> - Patient verstorben</summary>
+            T,
+
+            /// <summary><c>F</c> - Zieldosis erreicht mit Unterbrechung &gt; 3 Kalendertage</summary>
+            F,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+        }
+
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop</c>.</summary>
         public enum MiiCsOnkoTherapieStellungzurop
         {
@@ -1760,561 +2401,627 @@ public static class Onkologie
             S,
         }
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie</c>.</summary>
-        public enum MiiCsOnkoMammaRezeptorstatusLeitlinie
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ</c>.</summary>
+        public enum MiiCsOnkoTherapieTyp
         {
-            /// <summary><c>positiv</c> - positiv</summary>
-            Positiv,
+            /// <summary><c>CH</c> - Chemotherapie</summary>
+            Ch,
 
-            /// <summary><c>gering-positiv</c> - gering positiv</summary>
-            GeringPositiv,
+            /// <summary><c>HO</c> - Hormontherapie</summary>
+            Ho,
 
-            /// <summary><c>negativ</c> - negativ</summary>
-            Negativ,
+            /// <summary><c>IM</c> - Immun-/Antikörpertherapie</summary>
+            Im,
+
+            /// <summary><c>ZS</c> - zielgerichtete Substanzen</summary>
+            Zs,
+
+            /// <summary><c>SZ</c> - Stammzelltransplantation (inklusive Knochenmarktransplantation)</summary>
+            Sz,
+
+            /// <summary><c>CI</c> - Chemo- + Immun-/Antikörpertherapie</summary>
+            Ci,
+
+            /// <summary><c>CZ</c> - Chemotherapie + zielgerichtete Substanzen</summary>
+            Cz,
+
+            /// <summary><c>CIZ</c> - Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen</summary>
+            Ciz,
+
+            /// <summary><c>IZ</c> - Immun-/Antikörpertherapie + zielgerichtete Substanzen</summary>
+            Iz,
+
+            /// <summary><c>WW</c> - Watchful Waiting</summary>
+            Ww,
+
+            /// <summary><c>AS</c> - Active Surveillance</summary>
+            As,
+
+            /// <summary><c>WS</c> - Wait and see</summary>
+            Ws,
+
+            /// <summary><c>OP</c> - Operation</summary>
+            Op,
+
+            /// <summary><c>ST</c> - Strahlentherapie</summary>
+            St,
+
+            /// <summary><c>KW</c> - keine weitere tumorspezifische Therapie empfohlen</summary>
+            Kw,
+
+            /// <summary><c>SO</c> - Sonstiges</summary>
+            So,
         }
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds</c>.</summary>
-        public enum MiiCsOnkoAsaObds
+        /// <summary>Concepts for <c>https://www.uicc.org/resources/tnm</c>.</summary>
+        public enum MiiCsOnkoTnmUicc
         {
-            /// <summary><c>1</c> - ASA I</summary>
-            _1,
+            /// <summary><c>y</c> - y</summary>
+            Y,
 
-            /// <summary><c>2</c> - ASA II</summary>
-            _2,
-
-            /// <summary><c>3</c> - ASA III</summary>
-            _3,
-
-            /// <summary><c>4</c> - ASA IV</summary>
-            _4,
-
-            /// <summary><c>5</c> - ASA V</summary>
-            _5,
-
-            /// <summary><c>6</c> - ASA VI</summary>
-            _6,
-
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014</c>.</summary>
-        public enum MiiCsOnkoStrahlentherapieZielgebiet2014
-        {
-            /// <summary><c>1.</c> - ZNS</summary>
-            _1,
-
-            /// <summary><c>1.1.</c> - Ganzhirn</summary>
-            _11,
-
-            /// <summary><c>1.2.</c> - Teilhirn</summary>
-            _12,
-
-            /// <summary><c>1.3.</c> - Neuroachse</summary>
-            _13,
-
-            /// <summary><c>2.</c> - Kopf-Hals</summary>
-            _2,
-
-            /// <summary><c>2.+</c> - Kopf-Hals mit Lk</summary>
-            _2Pos,
-
-            /// <summary><c>2.-</c> - Kopf-Hals ohne Lk</summary>
-            _2Neg,
-
-            /// <summary><c>2.1.</c> - Orbita, o.n.A.</summary>
-            _21,
-
-            /// <summary><c>2.1.+</c> - Orbita mit Lk</summary>
-            _21Pos,
-
-            /// <summary><c>2.1.-</c> - Orbita ohne Lk</summary>
-            _21Neg,
-
-            /// <summary><c>2.2.</c> - Nase/ Nasennebenhöhle, o.n.A.</summary>
-            _22,
-
-            /// <summary><c>2.2.+</c> - Nase/ Nasennebenhöhle mit Lk</summary>
-            _22Pos,
-
-            /// <summary><c>2.2.-</c> - Nase/ Nasennebenhöhle ohne Lk</summary>
-            _22Neg,
-
-            /// <summary><c>2.3.</c> - Mundhöhle, o.n.A.</summary>
-            _23,
-
-            /// <summary><c>2.3.+</c> - Mundhöhle mit Lk</summary>
-            _23Pos,
-
-            /// <summary><c>2.3.-</c> - Mundhöhle ohne Lk</summary>
-            _23Neg,
-
-            /// <summary><c>2.4.</c> - Ohr, o.n.A.</summary>
-            _24,
-
-            /// <summary><c>2.4.+</c> - Ohr mit Lk</summary>
-            _24Pos,
-
-            /// <summary><c>2.4.-</c> - Ohr ohne Lk</summary>
-            _24Neg,
-
-            /// <summary><c>2.5.</c> - Speicheldrüse, o.n.A.</summary>
-            _25,
-
-            /// <summary><c>2.5.+</c> - Speicheldrüse mit Lk</summary>
-            _25Pos,
-
-            /// <summary><c>2.5.-</c> - Speicheldrüse ohne Lk</summary>
-            _25Neg,
-
-            /// <summary><c>2.6.</c> - Pharynx, o.n.A.</summary>
-            _26,
-
-            /// <summary><c>2.6.+</c> - Pharynx mit Lk</summary>
-            _26Pos,
-
-            /// <summary><c>2.6.-</c> - Pharynx ohne Lk</summary>
-            _26Neg,
-
-            /// <summary><c>2.7.</c> - Larynx, o.n.A.</summary>
-            _27,
-
-            /// <summary><c>2.7.+</c> - Larynx mit Lk</summary>
-            _27Pos,
-
-            /// <summary><c>2.7.-</c> - Larynx ohne Lk</summary>
-            _27Neg,
-
-            /// <summary><c>2.8.</c> - Schilddrüse, o.n.A.</summary>
-            _28,
-
-            /// <summary><c>2.8.+</c> - Schilddrüse mit Lk</summary>
-            _28Pos,
-
-            /// <summary><c>2.8.-</c> - Schilddrüse ohne Lk</summary>
-            _28Neg,
-
-            /// <summary><c>2.9.</c> - Halslymphknoten</summary>
-            _29,
-
-            /// <summary><c>3.</c> - Thorax</summary>
-            _3,
-
-            /// <summary><c>3.+</c> - Thorax mit Lk</summary>
-            _3Pos,
-
-            /// <summary><c>3.-</c> - Thorax ohne Lk</summary>
-            _3Neg,
-
-            /// <summary><c>3.1.</c> - Mamma als Ganzbrust, o.n.A.</summary>
-            _31,
-
-            /// <summary><c>3.1.+</c> - Mamma als Ganzbrust mit Lk</summary>
-            _31Pos,
-
-            /// <summary><c>3.1.-</c> - Mamma als Ganzbrust ohne Lk</summary>
-            _31Neg,
-
-            /// <summary><c>3.2.</c> - Mamma als Teilbrust, o.n.A.</summary>
-            _32,
-
-            /// <summary><c>3.2.+</c> - Mamma als Teilbrust mit Lk</summary>
-            _32Pos,
-
-            /// <summary><c>3.2.-</c> - Mamma als Teilbrust ohne Lk</summary>
-            _32Neg,
-
-            /// <summary><c>3.3.</c> - Brustwand</summary>
-            _33,
-
-            /// <summary><c>3.3.+</c> - Brustwand mit Lk</summary>
-            _33Pos,
-
-            /// <summary><c>3.3.-</c> - Brustwand ohne Lk</summary>
-            _33Neg,
-
-            /// <summary><c>3.4.</c> - Lunge, o.n.A.</summary>
-            _34,
-
-            /// <summary><c>3.4.+</c> - Lunge mit Lk</summary>
-            _34Pos,
-
-            /// <summary><c>3.4.-</c> - Lunge ohne Lk</summary>
-            _34Neg,
-
-            /// <summary><c>3.5.</c> - Ösophagus, o.n.A.</summary>
-            _35,
-
-            /// <summary><c>3.5.+</c> - Ösophagus mit Lk</summary>
-            _35Pos,
-
-            /// <summary><c>3.5.-</c> - Ösophagus ohne Lk</summary>
-            _35Neg,
-
-            /// <summary><c>3.6.</c> - Thymus, o.n.A.</summary>
-            _36,
-
-            /// <summary><c>3.6.+</c> - Thymus mit Lk</summary>
-            _36Pos,
-
-            /// <summary><c>3.6.-</c> - Thymus ohne Lk</summary>
-            _36Neg,
-
-            /// <summary><c>3.7.</c> - Mediastinale Lymphknoten</summary>
-            _37,
-
-            /// <summary><c>4.</c> - Abdomen (ohne Becken)</summary>
-            _4,
-
-            /// <summary><c>4.+</c> - Abdomen (ohne Becken) mit Lk</summary>
-            _4Pos,
-
-            /// <summary><c>4.-</c> - Abdomen (ohne Becken) ohne Lk</summary>
-            _4Neg,
-
-            /// <summary><c>4.1.</c> - Magen, o.n.A.</summary>
-            _41,
-
-            /// <summary><c>4.1.+</c> - Magen mit Lk</summary>
-            _41Pos,
-
-            /// <summary><c>4.1.-</c> - Magen ohne Lk</summary>
-            _41Neg,
-
-            /// <summary><c>4.2.</c> - Pankreas, o.n.A.</summary>
-            _42,
-
-            /// <summary><c>4.2.+</c> - Pankreas mit Lk</summary>
-            _42Pos,
-
-            /// <summary><c>4.2.-</c> - Pankreas ohne Lk</summary>
-            _42Neg,
-
-            /// <summary><c>4.3.</c> - Leber, o.n.A.</summary>
-            _43,
-
-            /// <summary><c>4.3.+</c> - Leber mit Lk</summary>
-            _43Pos,
-
-            /// <summary><c>4.3.-</c> - Leber ohne Lk</summary>
-            _43Neg,
-
-            /// <summary><c>4.4.</c> - Milz, o.n.A.</summary>
-            _44,
-
-            /// <summary><c>4.4.+</c> - Milz mit Lk</summary>
-            _44Pos,
-
-            /// <summary><c>4.4.-</c> - Milz ohne Lk</summary>
-            _44Neg,
-
-            /// <summary><c>4.5.</c> - Niere, o.n.A.</summary>
-            _45,
-
-            /// <summary><c>4.5.+</c> - Niere mit Lk</summary>
-            _45Pos,
-
-            /// <summary><c>4.5.-</c> - Niere ohne Lk</summary>
-            _45Neg,
-
-            /// <summary><c>4.6.</c> - Nebenniere, o.n.A.</summary>
-            _46,
-
-            /// <summary><c>4.6.+</c> - Nebenniere mit Lk</summary>
-            _46Pos,
-
-            /// <summary><c>4.6.-</c> - Nebenniere ohne Lk</summary>
-            _46Neg,
-
-            /// <summary><c>4.7.</c> - Retroperitoneale Lymphknoten</summary>
-            _47,
-
-            /// <summary><c>4.8.</c> - Retroperitoneum, o.n.A.</summary>
-            _48,
-
-            /// <summary><c>4.8.+</c> - Retroperitoneum mit Lk</summary>
-            _48Pos,
-
-            /// <summary><c>4.8.-</c> - Retroperitoneum ohne Lk</summary>
-            _48Neg,
-
-            /// <summary><c>4.9.</c> - Bauchwand, o.n.A.</summary>
-            _49,
-
-            /// <summary><c>4.9.+</c> - Bauchwand mit Lk</summary>
-            _49Pos,
-
-            /// <summary><c>4.9.-</c> - Bauchwand ohne Lk</summary>
-            _49Neg,
-
-            /// <summary><c>5.</c> - Becken</summary>
-            _5,
-
-            /// <summary><c>5.+</c> - Becken mit Lk</summary>
-            _5Pos,
-
-            /// <summary><c>5.-</c> - Becken ohne Lk</summary>
-            _5Neg,
-
-            /// <summary><c>5.1.</c> - Rektum, o.n.A.</summary>
-            _51,
-
-            /// <summary><c>5.1.+</c> - Rektum mit Lk</summary>
-            _51Pos,
-
-            /// <summary><c>5.1.-</c> - Rektum ohne Lk</summary>
-            _51Neg,
-
-            /// <summary><c>5.2.</c> - Analbereich, o.n.A.</summary>
-            _52,
-
-            /// <summary><c>5.2.-</c> - Analbereich ohne Lk</summary>
-            _52Neg,
-
-            /// <summary><c>5.2.+</c> - Analbereich mit Lk</summary>
-            _52Pos,
-
-            /// <summary><c>5.3.</c> - Harnblase, o.n.A.</summary>
-            _53,
-
-            /// <summary><c>5.3.-</c> - Harnblase ohne Lk</summary>
-            _53Neg,
-
-            /// <summary><c>5.3.+</c> - Harnblase mit Lk</summary>
-            _53Pos,
-
-            /// <summary><c>5.4.</c> - Prostata, o.n.A.</summary>
-            _54,
-
-            /// <summary><c>5.4.+</c> - Prostata mit Lk</summary>
-            _54Pos,
-
-            /// <summary><c>5.4.-</c> - Prostata ohne Lk</summary>
-            _54Neg,
-
-            /// <summary><c>5.5.</c> - Hoden, o.n.A.</summary>
-            _55,
-
-            /// <summary><c>5.5.+</c> - Hoden mit Lk</summary>
-            _55Pos,
-
-            /// <summary><c>5.5.-</c> - Hoden ohne Lk</summary>
-            _55Neg,
-
-            /// <summary><c>5.6.</c> - Penis, o.n.A.</summary>
-            _56,
-
-            /// <summary><c>5.6.+</c> - Penis mit Lk</summary>
-            _56Pos,
-
-            /// <summary><c>5.6.-</c> - Penis ohne Lk</summary>
-            _56Neg,
-
-            /// <summary><c>5.7.</c> - Uterus und Zervix, o.n.A.</summary>
-            _57,
-
-            /// <summary><c>5.7.+</c> - Uterus und Zervix mit Lk</summary>
-            _57Pos,
-
-            /// <summary><c>5.7.-</c> - Uterus und Zervix ohne Lk</summary>
-            _57Neg,
-
-            /// <summary><c>5.7.1.</c> - Uterus</summary>
-            _571,
-
-            /// <summary><c>5.7.1.+</c> - Uterus mit Lymphknoten</summary>
-            _571Pos,
-
-            /// <summary><c>5.7.1.-</c> - Uterus ohne Lymphknoten</summary>
-            _571Neg,
-
-            /// <summary><c>5.7.2.</c> - Zervix</summary>
-            _572,
-
-            /// <summary><c>5.7.2.+</c> - Zervix mit Lymphknoten</summary>
-            _572Pos,
-
-            /// <summary><c>5.7.2.-</c> - Zervix ohne Lymphknoten</summary>
-            _572Neg,
-
-            /// <summary><c>5.8.</c> - Ovar, o.n.A.</summary>
-            _58,
-
-            /// <summary><c>5.8.-</c> - Ovar ohne Lk</summary>
-            _58Neg,
-
-            /// <summary><c>5.8.+</c> - Ovar mit Lk</summary>
-            _58Pos,
-
-            /// <summary><c>5.9.</c> - Vulva, o.n.A.</summary>
-            _59,
-
-            /// <summary><c>5.9.-</c> - Vulva ohne Lk</summary>
-            _59Neg,
-
-            /// <summary><c>5.9.+</c> - Vulva mit Lk</summary>
-            _59Pos,
-
-            /// <summary><c>5.10.</c> - Vagina, o.n.A.</summary>
-            _510,
-
-            /// <summary><c>5.10.+</c> - Vagina mit Lk</summary>
-            _510Pos,
-
-            /// <summary><c>5.10.-</c> - Vagina ohne Lk</summary>
-            _510Neg,
-
-            /// <summary><c>5.11.</c> - Beckenwand, o.n.A.</summary>
-            _511,
-
-            /// <summary><c>5.11.+</c> - Beckenwand mit Lk</summary>
-            _511Pos,
-
-            /// <summary><c>5.11.-</c> - Beckenwand ohne Lk</summary>
-            _511Neg,
-
-            /// <summary><c>5.12.</c> - Beckenlymphkn. (ohne Primtu.)</summary>
-            _512,
-
-            /// <summary><c>6.</c> - Stütz-/Bewegungsapparat</summary>
-            _6,
-
-            /// <summary><c>6.1.</c> - Schädelknochen</summary>
-            _61,
-
-            /// <summary><c>6.2.</c> - Rippen</summary>
-            _62,
-
-            /// <summary><c>6.3.</c> - Sternum</summary>
-            _63,
-
-            /// <summary><c>6.4.</c> - HWS</summary>
-            _64,
-
-            /// <summary><c>6.5.</c> - BWS</summary>
-            _65,
-
-            /// <summary><c>6.6.</c> - LWS</summary>
-            _66,
-
-            /// <summary><c>6.7.</c> - knöchernes Becken</summary>
-            _67,
-
-            /// <summary><c>6.8.</c> - Hüfte</summary>
-            _68,
-
-            /// <summary><c>6.9.</c> - Schulter</summary>
-            _69,
-
-            /// <summary><c>6.10.</c> - Oberarm</summary>
-            _610,
-
-            /// <summary><c>6.11.</c> - Unterarm</summary>
-            _611,
-
-            /// <summary><c>6.12.</c> - Hand</summary>
-            _612,
-
-            /// <summary><c>6.13.</c> - Leiste</summary>
-            _613,
-
-            /// <summary><c>6.14.</c> - Oberschenkel</summary>
-            _614,
-
-            /// <summary><c>6.15.</c> - Unterschenkel</summary>
-            _615,
-
-            /// <summary><c>6.16.</c> - Fuß</summary>
-            _616,
-
-            /// <summary><c>7.</c> - Haut</summary>
-            _7,
-
-            /// <summary><c>7.+</c> - Haut mit Lymphknoten</summary>
-            _7Pos,
-
-            /// <summary><c>7.-</c> - Haut ohne Lymphknoten</summary>
-            _7Neg,
-
-            /// <summary><c>7.1.</c> - Primärer Hauttumor</summary>
-            _71,
-
-            /// <summary><c>7.2.</c> - Hautmetastasen</summary>
-            _72,
-
-            /// <summary><c>8.</c> - Sonstiges</summary>
-            _8,
-
-            /// <summary><c>8.1.</c> - Ganzkörperbestrahlung</summary>
-            _81,
-
-            /// <summary><c>8.2.</c> - Mantelfeldbestrahlung</summary>
-            _82,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation</c>.</summary>
-        public enum MiiCsOnkoSeitenlokalisation
-        {
-            /// <summary><c>L</c> - links</summary>
-            L,
-
-            /// <summary><c>R</c> - rechts</summary>
+            /// <summary><c>r</c> - r</summary>
             R,
 
-            /// <summary><c>B</c> - beidseitig</summary>
-            B,
+            /// <summary><c>a</c> - a</summary>
+            A,
 
-            /// <summary><c>M</c> - Mittellinie/mittig</summary>
-            M,
+            /// <summary><c>c</c> - c</summary>
+            C,
 
-            /// <summary><c>U</c> - unbekannt</summary>
+            /// <summary><c>p</c> - p</summary>
+            P,
+
+            /// <summary><c>u</c> - u</summary>
             U,
 
-            /// <summary><c>T</c> - trifft nicht zu</summary>
-            T,
-        }
+            /// <summary><c>TX</c> - TX</summary>
+            Tx,
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading</c>.</summary>
-        public enum MiiCsOnkoGrading
-        {
-            /// <summary><c>0</c> - primär erworbene Melanose ohne zelluläre Atypien</summary>
-            _0,
+            /// <summary><c>T0</c> - T0</summary>
+            T0,
 
-            /// <summary><c>1</c> - gut differenziert</summary>
-            _1,
+            /// <summary><c>Ta</c> - Ta</summary>
+            Ta,
 
-            /// <summary><c>2</c> - mäßig differenziert</summary>
+            /// <summary><c>Tis</c> - Tis</summary>
+            Tis,
+
+            /// <summary><c>Tis(LAMN)</c> - Tis(LAMN)</summary>
+            TisLamn,
+
+            /// <summary><c>Tis(DCIS)</c> - Tis(DCIS)</summary>
+            TisDcis,
+
+            /// <summary><c>Tis(LCIS)</c> - Tis(LCIS)</summary>
+            TisLcis,
+
+            /// <summary><c>Tis(Paget)</c> - Tis(Paget)</summary>
+            TisPaget,
+
+            /// <summary><c>Tis(pu)</c> - Tis(pu)</summary>
+            TisPu,
+
+            /// <summary><c>Tis(pd)</c> - Tis(pd)</summary>
+            TisPd,
+
+            /// <summary><c>T1</c> - T1</summary>
+            T1,
+
+            /// <summary><c>T1mi</c> - T1mi</summary>
+            T1mi,
+
+            /// <summary><c>T1a</c> - T1a</summary>
+            T1a,
+
+            /// <summary><c>T1a1</c> - T1a1</summary>
+            T1a1,
+
+            /// <summary><c>T1a2</c> - T1a2</summary>
+            T1a2,
+
+            /// <summary><c>T1b</c> - T1b</summary>
+            T1b,
+
+            /// <summary><c>T1b1</c> - T1b1</summary>
+            T1b1,
+
+            /// <summary><c>T1b2</c> - T1b2</summary>
+            T1b2,
+
+            /// <summary><c>T1c</c> - T1c</summary>
+            T1c,
+
+            /// <summary><c>T1c1</c> - T1c1</summary>
+            T1c1,
+
+            /// <summary><c>T1c2</c> - T1c2</summary>
+            T1c2,
+
+            /// <summary><c>T1c3</c> - T1c3</summary>
+            T1c3,
+
+            /// <summary><c>T1d</c> - T1d</summary>
+            T1d,
+
+            /// <summary><c>T2</c> - T2</summary>
+            T2,
+
+            /// <summary><c>T2a</c> - T2a</summary>
+            T2a,
+
+            /// <summary><c>T2a1</c> - T2a1</summary>
+            T2a1,
+
+            /// <summary><c>T2a2</c> - T2a2</summary>
+            T2a2,
+
+            /// <summary><c>T2b</c> - T2b</summary>
+            T2b,
+
+            /// <summary><c>T2c</c> - T2c</summary>
+            T2c,
+
+            /// <summary><c>T2d</c> - T2d</summary>
+            T2d,
+
+            /// <summary><c>T3</c> - T3</summary>
+            T3,
+
+            /// <summary><c>T3a</c> - T3a</summary>
+            T3a,
+
+            /// <summary><c>T3b</c> - T3b</summary>
+            T3b,
+
+            /// <summary><c>T3c</c> - T3c</summary>
+            T3c,
+
+            /// <summary><c>T3d</c> - T3d</summary>
+            T3d,
+
+            /// <summary><c>T3e</c> - T3e</summary>
+            T3e,
+
+            /// <summary><c>T4</c> - T4</summary>
+            T4,
+
+            /// <summary><c>T4a</c> - T4a</summary>
+            T4a,
+
+            /// <summary><c>T4b</c> - T4b</summary>
+            T4b,
+
+            /// <summary><c>T4c</c> - T4c</summary>
+            T4c,
+
+            /// <summary><c>T4d</c> - T4d</summary>
+            T4d,
+
+            /// <summary><c>T4e</c> - T4e</summary>
+            T4e,
+
+            /// <summary><c>m</c> - (m)</summary>
+            M,
+
+            /// <summary><c>2</c> - (2)</summary>
             _2,
 
-            /// <summary><c>3</c> - schlecht differenziert</summary>
+            /// <summary><c>3</c> - (3)</summary>
             _3,
 
-            /// <summary><c>4</c> - undifferenziert</summary>
+            /// <summary><c>4</c> - (4)</summary>
             _4,
 
-            /// <summary><c>5</c> - nur für C61, TNM8</summary>
+            /// <summary><c>5</c> - (5)</summary>
             _5,
 
-            /// <summary><c>X</c> - nicht bestimmbar</summary>
-            X,
+            /// <summary><c>6</c> - (6)</summary>
+            _6,
 
-            /// <summary><c>L</c> - low grade (G1 oder G2)</summary>
-            L,
+            /// <summary><c>7</c> - (7)</summary>
+            _7,
 
-            /// <summary><c>M</c> - intermediate grade (G2 oder G3)</summary>
-            M,
+            /// <summary><c>8</c> - (8)</summary>
+            _8,
 
-            /// <summary><c>H</c> - high grade (G3 oder G4)</summary>
-            H,
+            /// <summary><c>9</c> - (9)</summary>
+            _9,
 
-            /// <summary><c>B</c> - Borderline</summary>
-            B,
+            /// <summary><c>10</c> - (10)</summary>
+            _10,
+
+            /// <summary><c>NX</c> - Nx</summary>
+            Nx,
+
+            /// <summary><c>N0</c> - N0</summary>
+            N0,
+
+            /// <summary><c>N1</c> - N1</summary>
+            N1,
+
+            /// <summary><c>N1mi</c> - N1(mi)</summary>
+            N1mi,
+
+            /// <summary><c>N1a</c> - N1a</summary>
+            N1a,
+
+            /// <summary><c>N1b</c> - N1b</summary>
+            N1b,
+
+            /// <summary><c>N1c</c> - N1c</summary>
+            N1c,
+
+            /// <summary><c>N2</c> - N2</summary>
+            N2,
+
+            /// <summary><c>N2a</c> - N2a</summary>
+            N2a,
+
+            /// <summary><c>N2b</c> - N2b</summary>
+            N2b,
+
+            /// <summary><c>N2c</c> - N2c</summary>
+            N2c,
+
+            /// <summary><c>N3</c> - N3</summary>
+            N3,
+
+            /// <summary><c>N3a</c> - N3a</summary>
+            N3a,
+
+            /// <summary><c>N3b</c> - N3b</summary>
+            N3b,
+
+            /// <summary><c>N3c</c> - N3c</summary>
+            N3c,
+
+            /// <summary><c>M0</c> - M0</summary>
+            M0,
+
+            /// <summary><c>M1</c> - M1</summary>
+            M1,
+
+            /// <summary><c>M1a</c> - M1a</summary>
+            M1a,
+
+            /// <summary><c>M1b</c> - M1b</summary>
+            M1b,
+
+            /// <summary><c>M1c</c> - M1c</summary>
+            M1c,
+
+            /// <summary><c>M1d</c> - M1d</summary>
+            M1d,
+
+            /// <summary><c>MX</c> - MX</summary>
+            Mx,
+
+            /// <summary><c>i+</c> - (i+)</summary>
+            IPos,
+
+            /// <summary><c>i-</c> - (i-)</summary>
+            INeg,
+
+            /// <summary><c>mol+</c> - (mol+)</summary>
+            MolPos,
+
+            /// <summary><c>mol-</c> - (mol-)</summary>
+            MolNeg,
+
+            /// <summary><c>sn</c> - (sn)</summary>
+            Sn,
+
+            /// <summary><c>L0</c> - L0</summary>
+            L0,
+
+            /// <summary><c>L1</c> - L1</summary>
+            L1,
+
+            /// <summary><c>LX</c> - LX</summary>
+            Lx,
+
+            /// <summary><c>V0</c> - V0</summary>
+            V0,
+
+            /// <summary><c>V1</c> - V1</summary>
+            V1,
+
+            /// <summary><c>V2</c> - V2</summary>
+            V2,
+
+            /// <summary><c>VX</c> - VX</summary>
+            Vx,
+
+            /// <summary><c>Pn0</c> - Pn0</summary>
+            Pn0,
+
+            /// <summary><c>Pn1</c> - Pn1</summary>
+            Pn1,
+
+            /// <summary><c>PnX</c> - PnX</summary>
+            PnX,
+
+            /// <summary><c>S0</c> - S0</summary>
+            S0,
+
+            /// <summary><c>S1</c> - S1</summary>
+            S1,
+
+            /// <summary><c>S2</c> - S2</summary>
+            S2,
+
+            /// <summary><c>S3</c> - S3</summary>
+            S3,
+
+            /// <summary><c>SX</c> - SX</summary>
+            Sx,
+
+            /// <summary><c>okk</c> - Stadium X</summary>
+            Okk,
+
+            /// <summary><c>0</c> - Stadium 0</summary>
+            _0,
+
+            /// <summary><c>0a</c> - Stadium 0a</summary>
+            _0a,
+
+            /// <summary><c>0is</c> - Stadium 0is</summary>
+            _0is,
+
+            /// <summary><c>I</c> - Stadium I</summary>
+            I,
+
+            /// <summary><c>IA</c> - Stadium IA</summary>
+            Ia,
+
+            /// <summary><c>IA1</c> - Stadium IA1</summary>
+            Ia1,
+
+            /// <summary><c>IA2</c> - Stadium IA2</summary>
+            Ia2,
+
+            /// <summary><c>IA3</c> - Stadium IA3</summary>
+            Ia3,
+
+            /// <summary><c>IB</c> - Stadium IB</summary>
+            Ib,
+
+            /// <summary><c>IB1</c> - Stadium IB1</summary>
+            Ib1,
+
+            /// <summary><c>IB2</c> - Stadium IB2</summary>
+            Ib2,
+
+            /// <summary><c>IC</c> - Stadium IC</summary>
+            Ic,
+
+            /// <summary><c>IS</c> - Stadium IS</summary>
+            Is,
+
+            /// <summary><c>II</c> - Stadium II</summary>
+            Ii,
+
+            /// <summary><c>IIA</c> - Stadium IIA</summary>
+            Iia,
+
+            /// <summary><c>IIA1</c> - Stadium IIA1</summary>
+            Iia1,
+
+            /// <summary><c>IIA2</c> - Stadium IIA2</summary>
+            Iia2,
+
+            /// <summary><c>IIB</c> - Stadium IIB</summary>
+            Iib,
+
+            /// <summary><c>IIC</c> - Stadium IIC</summary>
+            Iic,
+
+            /// <summary><c>III</c> - Stadium III</summary>
+            Iii,
+
+            /// <summary><c>IIIA</c> - Stadium IIIA</summary>
+            Iiia,
+
+            /// <summary><c>IIIA1</c> - Stadium IIIA1</summary>
+            Iiia1,
+
+            /// <summary><c>IIIA2</c> - Stadium IIIA2</summary>
+            Iiia2,
+
+            /// <summary><c>IIIB</c> - Stadium IIIB</summary>
+            Iiib,
+
+            /// <summary><c>IIIC</c> - Stadium IIIC</summary>
+            Iiic,
+
+            /// <summary><c>IIIC1</c> - Stadium IIIC1</summary>
+            Iiic1,
+
+            /// <summary><c>IIIC2</c> - Stadium IIIC2</summary>
+            Iiic2,
+
+            /// <summary><c>IIID</c> - Stadium IIID</summary>
+            Iiid,
+
+            /// <summary><c>IV</c> - Stadium IV</summary>
+            Iv,
+
+            /// <summary><c>IVA</c> - Stadium IVA</summary>
+            Iva,
+
+            /// <summary><c>IVA1</c> - Stadium IVA1</summary>
+            Iva1,
+
+            /// <summary><c>IVA2</c> - Stadium IVA2</summary>
+            Iva2,
+
+            /// <summary><c>IVB</c> - Stadium IVB</summary>
+            Ivb,
+
+            /// <summary><c>IVC</c> - Stadium IVC</summary>
+            Ivc,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version</c>.</summary>
+        public enum MiiCsOnkoTnmVersion
+        {
+            /// <summary><c>1</c> - 1. Auflage</summary>
+            _1,
+
+            /// <summary><c>2</c> - 2. Auflage</summary>
+            _2,
+
+            /// <summary><c>3</c> - 3. Auflage</summary>
+            _3,
+
+            /// <summary><c>4</c> - 4. Auflage</summary>
+            _4,
+
+            /// <summary><c>5</c> - 5. Auflage</summary>
+            _5,
+
+            /// <summary><c>6</c> - 6. Auflage</summary>
+            _6,
+
+            /// <summary><c>7</c> - 7. Auflage</summary>
+            _7,
+
+            /// <summary><c>8</c> - 8. Auflage</summary>
+            _8,
+
+            /// <summary><c>9</c> - 9. Auflage</summary>
+            _9,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod</c>.</summary>
+        public enum MiiCsOnkoTod
+        {
+            /// <summary><c>J</c> - Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.</summary>
+            J,
+
+            /// <summary><c>N</c> - Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.</summary>
+            N,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen</c>.</summary>
+        public enum MiiCsOnkoVerlaufFernmetastasen
+        {
+            /// <summary><c>K</c> - keine Fernmetastasen nachweisbar</summary>
+            K,
+
+            /// <summary><c>R</c> - neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv</summary>
+            R,
+
+            /// <summary><c>T</c> - Fernmetastasen Residuen</summary>
+            T,
+
+            /// <summary><c>P</c> - Fernmetastasen Progress</summary>
+            P,
+
+            /// <summary><c>N</c> - Fernmetastasen No Change</summary>
+            N,
+
+            /// <summary><c>F</c> - fraglicher Befund</summary>
+            F,
 
             /// <summary><c>U</c> - unbekannt</summary>
             U,
 
-            /// <summary><c>T</c> - trifft nicht zu</summary>
+            /// <summary><c>X</c> - fehlende Angabe</summary>
+            X,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung</c>.</summary>
+        public enum MiiCsOnkoVerlaufGesamtbeurteilung
+        {
+            /// <summary><c>V</c> - Vollremission (complete remission, CR)</summary>
+            V,
+
+            /// <summary><c>T</c> - Teilremission (partial remission, PR)</summary>
             T,
+
+            /// <summary><c>K</c> - keine Änderung (no change, NC) = stable disease</summary>
+            K,
+
+            /// <summary><c>P</c> - Progression</summary>
+            P,
+
+            /// <summary><c>D</c> - divergentes Geschehen</summary>
+            D,
+
+            /// <summary><c>B</c> - klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)</summary>
+            B,
+
+            /// <summary><c>R</c> - Vollremission mit residualen Auffälligkeiten (CRr)</summary>
+            R,
+
+            /// <summary><c>Y</c> - Rezidiv</summary>
+            Y,
+
+            /// <summary><c>U</c> - Beurteilung unmöglich</summary>
+            U,
+
+            /// <summary><c>X</c> - fehlende Angabe</summary>
+            X,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten</c>.</summary>
+        public enum MiiCsOnkoVerlaufLymphknoten
+        {
+            /// <summary><c>K</c> - kein Lymphknotenbefall nachweisbar</summary>
+            K,
+
+            /// <summary><c>R</c> - neu aufgetretenes Lymphknotenrezidiv</summary>
+            R,
+
+            /// <summary><c>T</c> - bekannter Lymphknotenbefall Residuen</summary>
+            T,
+
+            /// <summary><c>P</c> - bekannter Lymphknotenbefall Progress</summary>
+            P,
+
+            /// <summary><c>N</c> - bekannter Lymphknotenbefall No Change</summary>
+            N,
+
+            /// <summary><c>F</c> - fraglicher Befund</summary>
+            F,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+
+            /// <summary><c>X</c> - fehlende Angabe</summary>
+            X,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor</c>.</summary>
+        public enum MiiCsOnkoVerlaufPrimaertumor
+        {
+            /// <summary><c>K</c> - kein Tumor nachweisbar</summary>
+            K,
+
+            /// <summary><c>T</c> - Tumorreste (Residualtumor)</summary>
+            T,
+
+            /// <summary><c>P</c> - Tumorreste (Residualtumor) Progress</summary>
+            P,
+
+            /// <summary><c>N</c> - Tumorreste (Residualtumor) No Change</summary>
+            N,
+
+            /// <summary><c>R</c> - Lokalrezidiv</summary>
+            R,
+
+            /// <summary><c>F</c> - fraglicher Befund</summary>
+            F,
+
+            /// <summary><c>U</c> - unbekannt</summary>
+            U,
+
+            /// <summary><c>X</c> - fehlende Angabe</summary>
+            X,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</c>.</summary>
@@ -2863,713 +3570,6 @@ public static class Onkologie
             /// <summary><c>her2-neu-n</c> - HER2-neu Negativ</summary>
             Her2NeuN,
         }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency</c>.</summary>
-        public enum MiiCsOnkoOperationUrgency
-        {
-            /// <summary><c>E</c> - Elektiveingriff</summary>
-            E,
-
-            /// <summary><c>N</c> - Notfalleingriff</summary>
-            N,
-
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung</c>.</summary>
-        public enum MiiCsOnkoGenetischeVarianteAuspraegung
-        {
-            /// <summary><c>M</c> - Mutation/positiv</summary>
-            M,
-
-            /// <summary><c>W</c> - Wildtyp/nicht mutiert/ negativ</summary>
-            W,
-
-            /// <summary><c>P</c> - Polymorphismus</summary>
-            P,
-
-            /// <summary><c>S</c> - Sonstiges</summary>
-            S,
-
-            /// <summary><c>N</c> - Nicht bestimmbar</summary>
-            N,
-
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.uicc.org/resources/tnm</c>.</summary>
-        public enum MiiCsOnkoTnmUicc
-        {
-            /// <summary><c>y</c> - y</summary>
-            Y,
-
-            /// <summary><c>r</c> - r</summary>
-            R,
-
-            /// <summary><c>a</c> - a</summary>
-            A,
-
-            /// <summary><c>c</c> - c</summary>
-            C,
-
-            /// <summary><c>p</c> - p</summary>
-            P,
-
-            /// <summary><c>u</c> - u</summary>
-            U,
-
-            /// <summary><c>TX</c> - TX</summary>
-            Tx,
-
-            /// <summary><c>T0</c> - T0</summary>
-            T0,
-
-            /// <summary><c>Ta</c> - Ta</summary>
-            Ta,
-
-            /// <summary><c>Tis</c> - Tis</summary>
-            Tis,
-
-            /// <summary><c>Tis(LAMN)</c> - Tis(LAMN)</summary>
-            TisLamn,
-
-            /// <summary><c>Tis(DCIS)</c> - Tis(DCIS)</summary>
-            TisDcis,
-
-            /// <summary><c>Tis(LCIS)</c> - Tis(LCIS)</summary>
-            TisLcis,
-
-            /// <summary><c>Tis(Paget)</c> - Tis(Paget)</summary>
-            TisPaget,
-
-            /// <summary><c>Tis(pu)</c> - Tis(pu)</summary>
-            TisPu,
-
-            /// <summary><c>Tis(pd)</c> - Tis(pd)</summary>
-            TisPd,
-
-            /// <summary><c>T1</c> - T1</summary>
-            T1,
-
-            /// <summary><c>T1mi</c> - T1mi</summary>
-            T1mi,
-
-            /// <summary><c>T1a</c> - T1a</summary>
-            T1a,
-
-            /// <summary><c>T1a1</c> - T1a1</summary>
-            T1a1,
-
-            /// <summary><c>T1a2</c> - T1a2</summary>
-            T1a2,
-
-            /// <summary><c>T1b</c> - T1b</summary>
-            T1b,
-
-            /// <summary><c>T1b1</c> - T1b1</summary>
-            T1b1,
-
-            /// <summary><c>T1b2</c> - T1b2</summary>
-            T1b2,
-
-            /// <summary><c>T1c</c> - T1c</summary>
-            T1c,
-
-            /// <summary><c>T1c1</c> - T1c1</summary>
-            T1c1,
-
-            /// <summary><c>T1c2</c> - T1c2</summary>
-            T1c2,
-
-            /// <summary><c>T1c3</c> - T1c3</summary>
-            T1c3,
-
-            /// <summary><c>T1d</c> - T1d</summary>
-            T1d,
-
-            /// <summary><c>T2</c> - T2</summary>
-            T2,
-
-            /// <summary><c>T2a</c> - T2a</summary>
-            T2a,
-
-            /// <summary><c>T2a1</c> - T2a1</summary>
-            T2a1,
-
-            /// <summary><c>T2a2</c> - T2a2</summary>
-            T2a2,
-
-            /// <summary><c>T2b</c> - T2b</summary>
-            T2b,
-
-            /// <summary><c>T2c</c> - T2c</summary>
-            T2c,
-
-            /// <summary><c>T2d</c> - T2d</summary>
-            T2d,
-
-            /// <summary><c>T3</c> - T3</summary>
-            T3,
-
-            /// <summary><c>T3a</c> - T3a</summary>
-            T3a,
-
-            /// <summary><c>T3b</c> - T3b</summary>
-            T3b,
-
-            /// <summary><c>T3c</c> - T3c</summary>
-            T3c,
-
-            /// <summary><c>T3d</c> - T3d</summary>
-            T3d,
-
-            /// <summary><c>T3e</c> - T3e</summary>
-            T3e,
-
-            /// <summary><c>T4</c> - T4</summary>
-            T4,
-
-            /// <summary><c>T4a</c> - T4a</summary>
-            T4a,
-
-            /// <summary><c>T4b</c> - T4b</summary>
-            T4b,
-
-            /// <summary><c>T4c</c> - T4c</summary>
-            T4c,
-
-            /// <summary><c>T4d</c> - T4d</summary>
-            T4d,
-
-            /// <summary><c>T4e</c> - T4e</summary>
-            T4e,
-
-            /// <summary><c>m</c> - (m)</summary>
-            M,
-
-            /// <summary><c>2</c> - (2)</summary>
-            _2,
-
-            /// <summary><c>3</c> - (3)</summary>
-            _3,
-
-            /// <summary><c>4</c> - (4)</summary>
-            _4,
-
-            /// <summary><c>5</c> - (5)</summary>
-            _5,
-
-            /// <summary><c>6</c> - (6)</summary>
-            _6,
-
-            /// <summary><c>7</c> - (7)</summary>
-            _7,
-
-            /// <summary><c>8</c> - (8)</summary>
-            _8,
-
-            /// <summary><c>9</c> - (9)</summary>
-            _9,
-
-            /// <summary><c>10</c> - (10)</summary>
-            _10,
-
-            /// <summary><c>NX</c> - Nx</summary>
-            Nx,
-
-            /// <summary><c>N0</c> - N0</summary>
-            N0,
-
-            /// <summary><c>N1</c> - N1</summary>
-            N1,
-
-            /// <summary><c>N1mi</c> - N1(mi)</summary>
-            N1mi,
-
-            /// <summary><c>N1a</c> - N1a</summary>
-            N1a,
-
-            /// <summary><c>N1b</c> - N1b</summary>
-            N1b,
-
-            /// <summary><c>N1c</c> - N1c</summary>
-            N1c,
-
-            /// <summary><c>N2</c> - N2</summary>
-            N2,
-
-            /// <summary><c>N2a</c> - N2a</summary>
-            N2a,
-
-            /// <summary><c>N2b</c> - N2b</summary>
-            N2b,
-
-            /// <summary><c>N2c</c> - N2c</summary>
-            N2c,
-
-            /// <summary><c>N3</c> - N3</summary>
-            N3,
-
-            /// <summary><c>N3a</c> - N3a</summary>
-            N3a,
-
-            /// <summary><c>N3b</c> - N3b</summary>
-            N3b,
-
-            /// <summary><c>N3c</c> - N3c</summary>
-            N3c,
-
-            /// <summary><c>M0</c> - M0</summary>
-            M0,
-
-            /// <summary><c>M1</c> - M1</summary>
-            M1,
-
-            /// <summary><c>M1a</c> - M1a</summary>
-            M1a,
-
-            /// <summary><c>M1b</c> - M1b</summary>
-            M1b,
-
-            /// <summary><c>M1c</c> - M1c</summary>
-            M1c,
-
-            /// <summary><c>M1d</c> - M1d</summary>
-            M1d,
-
-            /// <summary><c>MX</c> - MX</summary>
-            Mx,
-
-            /// <summary><c>i+</c> - (i+)</summary>
-            IPos,
-
-            /// <summary><c>i-</c> - (i-)</summary>
-            INeg,
-
-            /// <summary><c>mol+</c> - (mol+)</summary>
-            MolPos,
-
-            /// <summary><c>mol-</c> - (mol-)</summary>
-            MolNeg,
-
-            /// <summary><c>sn</c> - (sn)</summary>
-            Sn,
-
-            /// <summary><c>L0</c> - L0</summary>
-            L0,
-
-            /// <summary><c>L1</c> - L1</summary>
-            L1,
-
-            /// <summary><c>LX</c> - LX</summary>
-            Lx,
-
-            /// <summary><c>V0</c> - V0</summary>
-            V0,
-
-            /// <summary><c>V1</c> - V1</summary>
-            V1,
-
-            /// <summary><c>V2</c> - V2</summary>
-            V2,
-
-            /// <summary><c>VX</c> - VX</summary>
-            Vx,
-
-            /// <summary><c>Pn0</c> - Pn0</summary>
-            Pn0,
-
-            /// <summary><c>Pn1</c> - Pn1</summary>
-            Pn1,
-
-            /// <summary><c>PnX</c> - PnX</summary>
-            PnX,
-
-            /// <summary><c>S0</c> - S0</summary>
-            S0,
-
-            /// <summary><c>S1</c> - S1</summary>
-            S1,
-
-            /// <summary><c>S2</c> - S2</summary>
-            S2,
-
-            /// <summary><c>S3</c> - S3</summary>
-            S3,
-
-            /// <summary><c>SX</c> - SX</summary>
-            Sx,
-
-            /// <summary><c>okk</c> - Stadium X</summary>
-            Okk,
-
-            /// <summary><c>0</c> - Stadium 0</summary>
-            _0,
-
-            /// <summary><c>0a</c> - Stadium 0a</summary>
-            _0a,
-
-            /// <summary><c>0is</c> - Stadium 0is</summary>
-            _0is,
-
-            /// <summary><c>I</c> - Stadium I</summary>
-            I,
-
-            /// <summary><c>IA</c> - Stadium IA</summary>
-            Ia,
-
-            /// <summary><c>IA1</c> - Stadium IA1</summary>
-            Ia1,
-
-            /// <summary><c>IA2</c> - Stadium IA2</summary>
-            Ia2,
-
-            /// <summary><c>IA3</c> - Stadium IA3</summary>
-            Ia3,
-
-            /// <summary><c>IB</c> - Stadium IB</summary>
-            Ib,
-
-            /// <summary><c>IB1</c> - Stadium IB1</summary>
-            Ib1,
-
-            /// <summary><c>IB2</c> - Stadium IB2</summary>
-            Ib2,
-
-            /// <summary><c>IC</c> - Stadium IC</summary>
-            Ic,
-
-            /// <summary><c>IS</c> - Stadium IS</summary>
-            Is,
-
-            /// <summary><c>II</c> - Stadium II</summary>
-            Ii,
-
-            /// <summary><c>IIA</c> - Stadium IIA</summary>
-            Iia,
-
-            /// <summary><c>IIA1</c> - Stadium IIA1</summary>
-            Iia1,
-
-            /// <summary><c>IIA2</c> - Stadium IIA2</summary>
-            Iia2,
-
-            /// <summary><c>IIB</c> - Stadium IIB</summary>
-            Iib,
-
-            /// <summary><c>IIC</c> - Stadium IIC</summary>
-            Iic,
-
-            /// <summary><c>III</c> - Stadium III</summary>
-            Iii,
-
-            /// <summary><c>IIIA</c> - Stadium IIIA</summary>
-            Iiia,
-
-            /// <summary><c>IIIA1</c> - Stadium IIIA1</summary>
-            Iiia1,
-
-            /// <summary><c>IIIA2</c> - Stadium IIIA2</summary>
-            Iiia2,
-
-            /// <summary><c>IIIB</c> - Stadium IIIB</summary>
-            Iiib,
-
-            /// <summary><c>IIIC</c> - Stadium IIIC</summary>
-            Iiic,
-
-            /// <summary><c>IIIC1</c> - Stadium IIIC1</summary>
-            Iiic1,
-
-            /// <summary><c>IIIC2</c> - Stadium IIIC2</summary>
-            Iiic2,
-
-            /// <summary><c>IIID</c> - Stadium IIID</summary>
-            Iiid,
-
-            /// <summary><c>IV</c> - Stadium IV</summary>
-            Iv,
-
-            /// <summary><c>IVA</c> - Stadium IVA</summary>
-            Iva,
-
-            /// <summary><c>IVA1</c> - Stadium IVA1</summary>
-            Iva1,
-
-            /// <summary><c>IVA2</c> - Stadium IVA2</summary>
-            Iva2,
-
-            /// <summary><c>IVB</c> - Stadium IVB</summary>
-            Ivb,
-
-            /// <summary><c>IVC</c> - Stadium IVC</summary>
-            Ivc,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration</c>.</summary>
-        public enum MiiCsOnkoMelanomUlzeration
-        {
-            /// <summary><c>J</c> - Ja</summary>
-            J,
-
-            /// <summary><c>N</c> - Nein</summary>
-            N,
-
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog</c>.</summary>
-        public enum MiiCsOnkoAllgemeinerLeistungszustandEcog
-        {
-            /// <summary><c>0</c> - Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)</summary>
-            _0,
-
-            /// <summary><c>1</c> - Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)</summary>
-            _1,
-
-            /// <summary><c>2</c> - Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)</summary>
-            _2,
-
-            /// <summary><c>3</c> - Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)</summary>
-            _3,
-
-            /// <summary><c>4</c> - Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)</summary>
-            _4,
-
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie</c>.</summary>
-        public enum MiiCsOnkoMammaHer2NeuStatusLeitlinie
-        {
-            /// <summary><c>positiv</c> - HER2-positiv</summary>
-            Positiv,
-
-            /// <summary><c>low</c> - HER2-low</summary>
-            Low,
-
-            /// <summary><c>ultralow</c> - HER2-ultralow</summary>
-            Ultralow,
-
-            /// <summary><c>negativ</c> - HER2-negativ</summary>
-            Negativ,
-
-            /// <summary><c>equivocal</c> - equivocal</summary>
-            Equivocal,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen</c>.</summary>
-        public enum MiiCsOnkoVerlaufFernmetastasen
-        {
-            /// <summary><c>K</c> - keine Fernmetastasen nachweisbar</summary>
-            K,
-
-            /// <summary><c>R</c> - neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv</summary>
-            R,
-
-            /// <summary><c>T</c> - Fernmetastasen Residuen</summary>
-            T,
-
-            /// <summary><c>P</c> - Fernmetastasen Progress</summary>
-            P,
-
-            /// <summary><c>N</c> - Fernmetastasen No Change</summary>
-            N,
-
-            /// <summary><c>F</c> - fraglicher Befund</summary>
-            F,
-
-            /// <summary><c>U</c> - unbekannt</summary>
-            U,
-
-            /// <summary><c>X</c> - fehlende Angabe</summary>
-            X,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky</c>.</summary>
-        public enum MiiCsOnkoAllgemeinerLeistungszustandKarnofsky
-        {
-            /// <summary><c>100%</c> - 100%</summary>
-            _100,
-
-            /// <summary><c>90%</c> - 90%</summary>
-            _90,
-
-            /// <summary><c>80%</c> - 80%</summary>
-            _80,
-
-            /// <summary><c>70%</c> - 70%</summary>
-            _70,
-
-            /// <summary><c>60%</c> - 60%</summary>
-            _60,
-
-            /// <summary><c>50%</c> - 50%</summary>
-            _50,
-
-            /// <summary><c>40%</c> - 40%</summary>
-            _40,
-
-            /// <summary><c>30%</c> - 30%</summary>
-            _30,
-
-            /// <summary><c>20%</c> - 20%</summary>
-            _20,
-
-            /// <summary><c>10%</c> - 10%</summary>
-            _10,
-
-            /// <summary><c>0%</c> - 0%</summary>
-            _0,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart</c>.</summary>
-        public enum MiiCsOnkoStrahlentherapieStrahlenart
-        {
-            /// <summary><c>UH</c> - Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)</summary>
-            Uh,
-
-            /// <summary><c>EL</c> - Elektronen</summary>
-            El,
-
-            /// <summary><c>NE</c> - Neutronen</summary>
-            Ne,
-
-            /// <summary><c>PN</c> - Protonen (leichte Wasserstoffionen/H1/Leichtionen)</summary>
-            Pn,
-
-            /// <summary><c>SI</c> - Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)</summary>
-            Si,
-
-            /// <summary><c>RO</c> - Weichstrahl (kV)</summary>
-            Ro,
-
-            /// <summary><c>SO</c> - Sonstige (inklusive Mixed Beams, exklusive Nuklide)</summary>
-            So,
-
-            /// <summary><c>Lu-177</c> - Lu-177</summary>
-            Lu177,
-
-            /// <summary><c>J-131</c> - J131</summary>
-            J131,
-
-            /// <summary><c>Y-90</c> - Y-90</summary>
-            Y90,
-
-            /// <summary><c>Ra-223</c> - Ra-223</summary>
-            Ra223,
-
-            /// <summary><c>Ac-225</c> - Ac-225</summary>
-            Ac225,
-
-            /// <summary><c>Sm-153</c> - Sm-153</summary>
-            Sm153,
-
-            /// <summary><c>Tb-161</c> - Tb-161</summary>
-            Tb161,
-
-            /// <summary><c>Sr-89</c> - Sr-89</summary>
-            Sr89,
-
-            /// <summary><c>Ir-192</c> - Ir-192</summary>
-            Ir192,
-
-            /// <summary><c>Co-60</c> - Co-60</summary>
-            Co60,
-
-            /// <summary><c>SONU</c> - Sonstige Nuklide</summary>
-            Sonu,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost</c>.</summary>
-        public enum MiiCsOnkoStrahlentherapieBoost
-        {
-            /// <summary><c>J</c> - ja, mit Boost o. n. A.</summary>
-            J,
-
-            /// <summary><c>SIB</c> - simultan integrierter Boost</summary>
-            Sib,
-
-            /// <summary><c>SEQ</c> - sequentieller Boost</summary>
-            Seq,
-
-            /// <summary><c>KON</c> - konkomitanter Boost</summary>
-            Kon,
-
-            /// <summary><c>N</c> - nein, ohne Boost</summary>
-            N,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung</c>.</summary>
-        public enum MiiCsOnkoTherapieabweichung
-        {
-            /// <summary><c>J</c> - ja</summary>
-            J,
-
-            /// <summary><c>N</c> - nein</summary>
-            N,
-
-            /// <summary><c>U</c> - unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme</c>.</summary>
-        public enum MiiCsOnkoStudienteilnahme
-        {
-            /// <summary><c>J</c> - Ja</summary>
-            J,
-
-            /// <summary><c>N</c> - Nein</summary>
-            N,
-
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz</c>.</summary>
-        public enum MiiCsOnkoKrkAnastomoseninsuffizienz
-        {
-            /// <summary><c>B</c> - Anastomoseninsuffizienz Grad B</summary>
-            B,
-
-            /// <summary><c>C</c> - Anastomoseninsuffizienz Grad C</summary>
-            C,
-
-            /// <summary><c>K</c> - Keine Insuffizienz oder höchstens Grad A</summary>
-            K,
-
-            /// <summary><c>U</c> - Unbekannt</summary>
-            U,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus</c>.</summary>
-        public enum MiiCsOnkoResidualstatus
-        {
-            /// <summary><c>R0</c> - Kein Residualtumor</summary>
-            R0,
-
-            /// <summary><c>R1</c> - Mikroskopischer Residualtumor</summary>
-            R1,
-
-            /// <summary><c>R1(is)</c> - In-Situ-Rest</summary>
-            R1Is,
-
-            /// <summary><c>R1(cy+)</c> - Cytologischer Rest</summary>
-            R1Cy,
-
-            /// <summary><c>R2</c> - Makroskopischer Residualtumor</summary>
-            R2,
-
-            /// <summary><c>RX</c> - Vorhandensein von Residualtumor kann nicht beurteilt werden</summary>
-            Rx,
-
-            /// <summary><c>U</c> - Residualtumorstatus ist nicht bekannt</summary>
-            U,
-        }
     }
 
     public static class Profiles
@@ -4070,147 +4070,627 @@ public static class Onkologie
     }
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten"/>.</summary>
-public static class MiiCsOnkoVerlaufLymphknotenExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog"/>.</summary>
+public static class MiiCsOnkoAllgemeinerLeistungszustandEcogExtensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten";
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog</c>.</returns>
+    public static string Url(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog _
+    ) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten value) =>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog value
+    ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.R => "R",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.T => "T",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.F => "F",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.X => "X",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._0 => "0",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._1 => "1",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._3 => "3",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._4 => "4",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog.U => "U",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten value) =>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog value
+    ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.K =>
-                "kein Lymphknotenbefall nachweisbar",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.R =>
-                "neu aufgetretenes Lymphknotenrezidiv",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.T =>
-                "bekannter Lymphknotenbefall Residuen",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.P =>
-                "bekannter Lymphknotenbefall Progress",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.N =>
-                "bekannter Lymphknotenbefall No Change",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.F => "fraglicher Befund",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.X => "fehlende Angabe",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._0 =>
+                "Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._1 =>
+                "Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._2 =>
+                "Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._3 =>
+                "Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._4 =>
+                "Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog.U => "Unbekannt",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten value) =>
-        new(value.Url(), value.Code(), value.Display());
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog value
+    ) => new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten? FromValue(string code) =>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog? FromValue(
+        string code
+    ) =>
         code switch
         {
-            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.K,
-            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.R,
-            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.T,
-            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.P,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.N,
-            "F" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.F,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.U,
-            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.X,
+            "0" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._0,
+            "1" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._1,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._2,
+            "3" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._3,
+            "4" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._4,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog.U,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten FromValueOrThrow(string code) =>
+    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky"/>.</summary>
+public static class MiiCsOnkoAllgemeinerLeistungszustandKarnofskyExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky</c>.</returns>
+    public static string Url(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky _
+    ) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100 => "100%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90 => "90%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80 => "80%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70 => "70%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60 => "60%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50 => "50%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40 => "40%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30 => "30%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20 => "20%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10 => "10%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0 => "0%",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100 => "100%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90 => "90%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80 => "80%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70 => "70%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60 => "60%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50 => "50%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40 => "40%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30 => "30%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20 => "20%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10 => "10%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0 => "0%",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "100%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100,
+            "90%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90,
+            "80%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80,
+            "70%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70,
+            "60%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60,
+            "50%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50,
+            "40%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40,
+            "30%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30,
+            "20%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20,
+            "10%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10,
+            "0%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoAsaObds"/>.</summary>
+public static class MiiCsOnkoAsaObdsExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoAsaObds _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoAsaObds value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._1 => "1",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._3 => "3",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._4 => "4",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._5 => "5",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._6 => "6",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoAsaObds value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._1 => "ASA I",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._2 => "ASA II",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._3 => "ASA III",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._4 => "ASA IV",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._5 => "ASA V",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds._6 => "ASA VI",
+            Onkologie.CodeSystems.MiiCsOnkoAsaObds.U => "Unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoAsaObds value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAsaObds"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoAsaObds? FromValue(string code) =>
+        code switch
+        {
+            "1" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._1,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._2,
+            "3" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._3,
+            "4" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._4,
+            "5" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._5,
+            "6" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._6,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoAsaObds.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAsaObds"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoAsaObds FromValueOrThrow(string code) =>
         FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund"/>.</summary>
-public static class MiiCsOnkoTherapieEndeGrundExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoFernmetastasen"/>.</summary>
+public static class MiiCsOnkoFernmetastasenExtensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund";
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund value) =>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.E => "E",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.R => "R",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.W => "W",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.A => "A",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.S => "S",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.V => "V",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.T => "T",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.F => "F",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul => "PUL",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss => "OSS",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep => "HEP",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra => "BRA",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym => "LYM",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar => "MAR",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple => "PLE",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per => "PER",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr => "ADR",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski => "SKI",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth => "OTH",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen => "GEN",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund value) =>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.E => "reguläres Ende",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.R =>
-                "reguläres Ende mit Dosisreduktion",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.W =>
-                "reguläres Ende mit Substanzwechsel",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.A => "Abbruch wegen Nebenwirkungen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.P => "Abbruch wegen Progress",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.S => "Abbruch aus sonstigen Gründen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.V =>
-                "Patient verweigert weitere Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.T => "Patient verstorben",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.F =>
-                "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul => "Lunge",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss => "Knochen",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep => "Leber",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra => "Hirn",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym => "Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar => "Knochenmark",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple => "Pleura",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per => "Peritoneum",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr => "Nebennieren",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski => "Haut",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth => "andere Organe",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen => "generalisierte Metastasierung",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund value) =>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
         new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund? FromValue(string code) =>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoFernmetastasen"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoFernmetastasen? FromValue(string code) =>
         code switch
         {
-            "E" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.E,
-            "R" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.R,
-            "W" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.W,
-            "A" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.A,
-            "P" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.P,
-            "S" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.S,
-            "V" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.V,
-            "T" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.T,
-            "F" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.F,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.U,
+            "PUL" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul,
+            "OSS" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss,
+            "HEP" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep,
+            "BRA" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra,
+            "LYM" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym,
+            "MAR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar,
+            "PLE" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple,
+            "PER" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per,
+            "ADR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr,
+            "SKI" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski,
+            "OTH" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth,
+            "GEN" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoFernmetastasen"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund FromValueOrThrow(string code) =>
+    public static Onkologie.CodeSystems.MiiCsOnkoFernmetastasen FromValueOrThrow(string code) =>
         FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung"/>.</summary>
+public static class MiiCsOnkoGenetischeVarianteAuspraegungExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.M => "M",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.W => "W",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.S => "S",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.M => "Mutation/positiv",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.W =>
+                "Wildtyp/nicht mutiert/ negativ",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.P => "Polymorphismus",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.S => "Sonstiges",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.N => "Nicht bestimmbar",
+            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.U => "Unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "M" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.M,
+            "W" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.W,
+            "P" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.P,
+            "S" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.S,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoGrading"/>.</summary>
+public static class MiiCsOnkoGradingExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoGrading _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoGrading value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoGrading._0 => "0",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._1 => "1",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._3 => "3",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._4 => "4",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._5 => "5",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.X => "X",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.L => "L",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.M => "M",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.H => "H",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.B => "B",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.T => "T",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoGrading value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoGrading._0 =>
+                "primär erworbene Melanose ohne zelluläre Atypien",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._1 => "gut differenziert",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._2 => "mäßig differenziert",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._3 => "schlecht differenziert",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._4 => "undifferenziert",
+            Onkologie.CodeSystems.MiiCsOnkoGrading._5 => "nur für C61, TNM8",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.X => "nicht bestimmbar",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.L => "low grade (G1 oder G2)",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.M => "intermediate grade (G2 oder G3)",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.H => "high grade (G3 oder G4)",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.B => "Borderline",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoGrading.T => "trifft nicht zu",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoGrading value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGrading"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoGrading? FromValue(string code) =>
+        code switch
+        {
+            "0" => Onkologie.CodeSystems.MiiCsOnkoGrading._0,
+            "1" => Onkologie.CodeSystems.MiiCsOnkoGrading._1,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoGrading._2,
+            "3" => Onkologie.CodeSystems.MiiCsOnkoGrading._3,
+            "4" => Onkologie.CodeSystems.MiiCsOnkoGrading._4,
+            "5" => Onkologie.CodeSystems.MiiCsOnkoGrading._5,
+            "X" => Onkologie.CodeSystems.MiiCsOnkoGrading.X,
+            "L" => Onkologie.CodeSystems.MiiCsOnkoGrading.L,
+            "M" => Onkologie.CodeSystems.MiiCsOnkoGrading.M,
+            "H" => Onkologie.CodeSystems.MiiCsOnkoGrading.H,
+            "B" => Onkologie.CodeSystems.MiiCsOnkoGrading.B,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoGrading.U,
+            "T" => Onkologie.CodeSystems.MiiCsOnkoGrading.T,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGrading"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoGrading FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoIntention"/>.</summary>
+public static class MiiCsOnkoIntentionExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoIntention _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoIntention value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoIntention.K => "K",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.D => "D",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.R => "R",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.S => "S",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.X => "X",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.O => "O",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoIntention value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoIntention.K => "kurativ",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.P => "palliativ",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.D => "diagnostisch",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.R => "Revision/Komplikation",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.S => "Sonstiges",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.X => "fehlende Angabe",
+            Onkologie.CodeSystems.MiiCsOnkoIntention.O => "lokal kurativ bei Oligometastasierung",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoIntention value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoIntention"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoIntention? FromValue(string code) =>
+        code switch
+        {
+            "K" => Onkologie.CodeSystems.MiiCsOnkoIntention.K,
+            "P" => Onkologie.CodeSystems.MiiCsOnkoIntention.P,
+            "D" => Onkologie.CodeSystems.MiiCsOnkoIntention.D,
+            "R" => Onkologie.CodeSystems.MiiCsOnkoIntention.R,
+            "S" => Onkologie.CodeSystems.MiiCsOnkoIntention.S,
+            "X" => Onkologie.CodeSystems.MiiCsOnkoIntention.X,
+            "O" => Onkologie.CodeSystems.MiiCsOnkoIntention.O,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoIntention"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoIntention FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz"/>.</summary>
+public static class MiiCsOnkoKrkAnastomoseninsuffizienzExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.B => "B",
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.C => "C",
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.K => "K",
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.B =>
+                "Anastomoseninsuffizienz Grad B",
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.C =>
+                "Anastomoseninsuffizienz Grad C",
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.K =>
+                "Keine Insuffizienz oder höchstens Grad A",
+            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.U => "Unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "B" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.B,
+            "C" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.C,
+            "K" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.K,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus"/>.</summary>
+public static class MiiCsOnkoKrkMrtMesorektaleFaszieStatusExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.D => "D",
+            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.D =>
+                "Durchgeführt, aber Abstand nicht angegeben",
+            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.N =>
+                "Nein (MRT/CT nicht durchgeführt)",
+            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.U => "Unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "D" => Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.D,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkStomaAnzeichnung"/>.</summary>
@@ -4267,6 +4747,1298 @@ public static class MiiCsOnkoKrkStomaAnzeichnungExtensions
     /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkStomaAnzeichnung"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
     public static Onkologie.CodeSystems.MiiCsOnkoKrkStomaAnzeichnung FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet"/>.</summary>
+public static class MiiCsOnkoKrkTmeQualitaetExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._1 => "1",
+            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._3 => "3",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._1 => "Grad 1 (gut)",
+            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._2 => "Grad 2 (moderat)",
+            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._3 => "Grad 3 (schlecht)",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet? FromValue(string code) =>
+        code switch
+        {
+            "1" => Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._1,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._2,
+            "3" => Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._3,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie"/>.</summary>
+public static class MiiCsOnkoMammaHer2NeuStatusLeitlinieExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv => "positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low => "low",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow => "ultralow",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ => "negativ",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal => "equivocal",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv => "HER2-positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low => "HER2-low",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow => "HER2-ultralow",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ => "HER2-negativ",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal => "equivocal",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv,
+            "low" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low,
+            "ultralow" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow,
+            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ,
+            "equivocal" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds"/>.</summary>
+public static class MiiCsOnkoMammaHer2NeuStatusObdsExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.P => "positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.N => "negativ",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.U => "unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds? FromValue(string code) =>
+        code switch
+        {
+            "P" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.P,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie"/>.</summary>
+public static class MiiCsOnkoMammaRezeptorstatusLeitlinieExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv => "positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GeringPositiv =>
+                "gering-positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ => "negativ",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv => "positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GeringPositiv =>
+                "gering positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ => "negativ",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv,
+            "gering-positiv" => Onkologie
+                .CodeSystems
+                .MiiCsOnkoMammaRezeptorstatusLeitlinie
+                .GeringPositiv,
+            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration"/>.</summary>
+public static class MiiCsOnkoMelanomUlzerationExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.J => "J",
+            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.J => "Ja",
+            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.N => "Nein",
+            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.U => "Unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration? FromValue(string code) =>
+        code switch
+        {
+            "J" => Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.J,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad"/>.</summary>
+public static class MiiCsOnkoNebenwirkungCtcaeGradExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._1 => "1",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._3 => "3",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._4 => "4",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._5 => "5",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.K => "K",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._1 => "mild",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._2 => "moderat",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._3 => "schwerwiegend",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._4 => "lebensbedrohlich",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._5 => "tödlich",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.K => "keine",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad? FromValue(string code) =>
+        code switch
+        {
+            "1" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._1,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._2,
+            "3" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._3,
+            "4" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._4,
+            "5" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._5,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.U,
+            "K" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.K,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation"/>.</summary>
+public static class MiiCsOnkoOperationKomplikationExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd => "ABD",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs => "ABS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf => "ASF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani => "ANI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep => "AEP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr => "ALR",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans => "ANS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee => "AEE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api => "API",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif => "BIF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog => "BOG",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe => "BOE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi => "BSI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi => "CHI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai => "DAI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps => "DPS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic => "DIC",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep => "DEP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu => "DLU",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi => "DSI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf => "ENF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger => "GER",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem => "HEM",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur => "HUR",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae => "HAE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi => "HFI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk => "HNK",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi => "HZI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs => "HRS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna => "HNA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop => "HOP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb => "HYB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf => "HYF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv => "IFV",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas => "KAS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes => "KES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim => "KIM",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra => "KRA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds => "KDS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev => "LEV",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe => "LOE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf => "LYF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye => "LYE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes => "MES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil => "MIL",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med => "MED",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat => "MAT",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi => "MYI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb => "RNB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab => "NAB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin => "NIN",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes => "OES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm => "OSM",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf => "PAF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit => "PIT",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab => "PAB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa => "PPA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav => "PAV",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per => "PER",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb => "PLB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey => "PEY",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple => "PLE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn => "PMN",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt => "PNT",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda => "PDA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae => "PAE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa => "RPA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin => "RIN",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski => "SKI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses => "SES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh => "SFH",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk => "STK",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp => "TZP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia => "TIA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz => "TRZ",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh => "WUH",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss => "WSS",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N => "nein",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd =>
+                "Abszess in einem Drainagekanal",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs =>
+                "Abszess, intraabdominaler oder intrathorakaler",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf => "Abszess, subfaszialer",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani => "Akute Niereninsuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep => "Alkoholentzugspsychose",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr =>
+                "Allergische Reaktion ohne Schocksymptomatik",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans => "Anaphylaktischer Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee =>
+                "Anastomoseninsuffizienz einer Enterostomie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api => "Apoplektischer Insult",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif => "Biliäre Fistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog =>
+                "Blutung, obere gastrointestinale (z. B „Stressulkus“)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe =>
+                "Bolusverlegung eines Endotubus",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi =>
+                "Bronchusstumpfinsuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi => "Cholangitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai =>
+                "Darmanastomoseninsuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps =>
+                "Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic =>
+                "Disseminierte intravasale Koagulopathie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep => "Drogenentzugspsychose",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu =>
+                "Druck- und Lagerungsschäden, z. B. Dekubitalulzera",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi =>
+                "Duodenalstumpfinsuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf => "Enterale Fistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger => "Gerinnungsstörung",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem => "Hämatemesis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur => "Hämaturie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae => "Hämorrhagischer Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi => "Harnfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk =>
+                "Hautnekrose im Operationsbereich",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi => "Herzinsuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs => "Herzrhythmusstörungen",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna => "Hirnnervenausfälle",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop =>
+                "Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb => "Hyperbilirubinämie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf => "Hypopharynxfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv =>
+                "Ileofemorale Venenthrombose",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas => "Kardiogener Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes =>
+                "Komplikationen einer Stomaanlage",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim =>
+                "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra => "Krampfanfall",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds => "Kurzdarmsyndrom",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev => "Leberversagen",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe => "Lungenödem",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf => "Lymphfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye => "Lymphozele",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes => "Magenentleerungsstörung",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil => "Mechanischer Ileus",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med => "Mediastinitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat =>
+                "Mesenterialarterien- oder -venenthrombose",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi => "Myokardinfarkt",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb =>
+                "Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab =>
+                "Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin =>
+                "Nahtinsuffizienz, anderweitig nicht erwähnt",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes => "Ösophagitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm => "Osteitis, Osteomyelitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf => "Pankreasfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit => "Pankreatitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab => "Peranale Blutung",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa => "Periphere Parese",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav =>
+                "Peripherer arterieller Verschluss (Embolie, Thrombose)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per => "Peritonitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb => "Platzbauch",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey => "Pleuraempyem",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple => "Pleuraerguss",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn => "Pneumonie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt => "Pneumothorax",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda =>
+                "Protrahierte Darmatonie (paralytischer Ileus)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae => "Pulmonalarterienembolie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa => "Rekurrensparese",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin =>
+                "Respiratorische Insuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski =>
+                "Septische Komplikation eines Implantates",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses => "Septischer Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh =>
+                "Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk =>
+                "Stomakomplikation (z. B. Blutung, Nekrose, Stenose)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp => "Thrombozytopenie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia =>
+                "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz => "Transfusionszwischenfall",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh =>
+                "Wundhämatom (konservativ therapiert)",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss =>
+                "Wundheilungsstörung, subkutane",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation? FromValue(string code) =>
+        code switch
+        {
+            "N" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U,
+            "ABD" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd,
+            "ABS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs,
+            "ASF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf,
+            "ANI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani,
+            "AEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep,
+            "ALR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr,
+            "ANS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans,
+            "AEE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee,
+            "API" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api,
+            "BIF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif,
+            "BOG" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog,
+            "BOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe,
+            "BSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi,
+            "CHI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi,
+            "DAI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai,
+            "DPS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps,
+            "DIC" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic,
+            "DEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep,
+            "DLU" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu,
+            "DSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi,
+            "ENF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf,
+            "GER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger,
+            "HEM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem,
+            "HUR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur,
+            "HAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae,
+            "HFI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi,
+            "HNK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk,
+            "HZI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi,
+            "HRS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs,
+            "HNA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna,
+            "HOP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop,
+            "HYB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb,
+            "HYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf,
+            "IFV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv,
+            "KAS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas,
+            "KES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes,
+            "KIM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim,
+            "KRA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra,
+            "KDS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds,
+            "LEV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev,
+            "LOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe,
+            "LYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf,
+            "LYE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye,
+            "MES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes,
+            "MIL" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil,
+            "MED" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med,
+            "MAT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat,
+            "MYI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi,
+            "RNB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb,
+            "NAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab,
+            "NIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin,
+            "OES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes,
+            "OSM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm,
+            "PAF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf,
+            "PIT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit,
+            "PAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab,
+            "PPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa,
+            "PAV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav,
+            "PER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per,
+            "PLB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb,
+            "PEY" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey,
+            "PLE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple,
+            "PMN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn,
+            "PNT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt,
+            "PDA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda,
+            "PAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae,
+            "RPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa,
+            "RIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin,
+            "SKI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski,
+            "SES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses,
+            "SFH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh,
+            "STK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk,
+            "TZP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp,
+            "TIA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia,
+            "TRZ" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz,
+            "WUH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh,
+            "WSS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationUrgency"/>.</summary>
+public static class MiiCsOnkoOperationUrgencyExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.E => "E",
+            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.E => "Elektiveingriff",
+            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.N => "Notfalleingriff",
+            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.U => "Unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationUrgency"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoOperationUrgency? FromValue(string code) =>
+        code switch
+        {
+            "E" => Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.E,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationUrgency"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoOperationUrgency FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung"/>.</summary>
+public static class MiiCsOnkoPrimaertumorDiagnosesicherungExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._0 => "0",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._1 => "1",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._4 => "4",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5 => "5",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6 => "6",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7 => "7",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71 => "7.1",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72 => "7.2",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73 => "7.3",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8 => "8",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9 => "9",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._0 => "Totenschein",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._1 => "klinisch",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._2 =>
+                "klinische Diagnostik",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._4 =>
+                "spezifische Tumor-Marker",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5 => "Zytologie",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6 =>
+                "histologische Untersuchung einer Metastase",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7 =>
+                "histologische Untersuchung eines Primärtumors",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71 =>
+                "histologische Untersuchung eines Primärtumors",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72 =>
+                "histologische Untersuchung einer Metastase",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73 =>
+                "Histologie der Autopsie",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8 =>
+                "Zytogenetisch und/oder molekularer Test",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9 => "unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "0" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._0,
+            "1" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._1,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._2,
+            "4" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._4,
+            "5" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5,
+            "6" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6,
+            "7" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7,
+            "7.1" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71,
+            "7.2" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72,
+            "7.3" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73,
+            "8" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8,
+            "9" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications"/>.</summary>
+public static class MiiCsOnkoProstataPostsurgicalComplicationsExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications</c>.</returns>
+    public static string Url(
+        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications _
+    ) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.J => "J",
+            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.J => "Ja",
+            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.N =>
+                "keine oder höchstens Grad II",
+            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.U => "Unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "J" => Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.J,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoResidualstatus"/>.</summary>
+public static class MiiCsOnkoResidualstatusExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0 => "R0",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1 => "R1",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is => "R1(is)",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy => "R1(cy+)",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2 => "R2",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx => "RX",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0 => "Kein Residualtumor",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1 => "Mikroskopischer Residualtumor",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is => "In-Situ-Rest",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy => "Cytologischer Rest",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2 => "Makroskopischer Residualtumor",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx =>
+                "Vorhandensein von Residualtumor kann nicht beurteilt werden",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U =>
+                "Residualtumorstatus ist nicht bekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoResidualstatus"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoResidualstatus? FromValue(string code) =>
+        code switch
+        {
+            "R0" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0,
+            "R1" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1,
+            "R1(is)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is,
+            "R1(cy+)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy,
+            "R2" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2,
+            "RX" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoResidualstatus"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoResidualstatus FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation"/>.</summary>
+public static class MiiCsOnkoSeitenlokalisationExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.L => "L",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.R => "R",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.B => "B",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.M => "M",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.T => "T",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.L => "links",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.R => "rechts",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.B => "beidseitig",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.M => "Mittellinie/mittig",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.T => "trifft nicht zu",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation? FromValue(string code) =>
+        code switch
+        {
+            "L" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.L,
+            "R" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.R,
+            "B" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.B,
+            "M" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.M,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.U,
+            "T" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.T,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart"/>.</summary>
+public static class MiiCsOnkoStrahlentherapieApplikationsartExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart</c>.</returns>
+    public static string Url(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart _
+    ) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt => "P-ST",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D => "P-4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D => "P-ST4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn => "PRCN",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt => "PRCN-ST",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D => "PRCN-4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D => "PRCN-ST4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj => "PRCJ",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt => "PRCJ-ST",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D => "PRCJ-4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D => "PRCJ-ST4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K => "K",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr => "KHDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr => "KLDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr => "KPDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I => "I",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr => "IHDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr => "ILDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr => "IPDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt => "MSIRT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt => "MPRRT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma => "MPSMA",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt => "MRJT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit => "MRIT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M => "M",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S => "S",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P =>
+                "perkutan (Teletherapie)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt =>
+                "perkutan stereotaktisch",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D =>
+                "perkutan, atemgetriggert",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D =>
+                "perkutan, stereotaktisch, atemgetriggert",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn =>
+                "perkutan ohne Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt =>
+                "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D =>
+                "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D =>
+                "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj =>
+                "perkutan mit Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt =>
+                "perkutan, stereotaktisch mit Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D =>
+                "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D =>
+                "perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K =>
+                "endokavitäre Kontakttherapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr =>
+                "endokavitäre Kontakttherapie, high dose rate therapy",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr =>
+                "endokavitäre Kontakttherapie, low dose rate therapy",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr =>
+                "endokavitäre Kontakttherapie, pulsed dose rate therapy",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I =>
+                "intersitielle Kontakttherapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr =>
+                "intersitielle Kontakttherapie, high dose rate therapy",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr =>
+                "intersitielle Kontakttherapie, low dose rate therapy",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr =>
+                "intersitielle Kontakttherapie, pulsed dose rate therapy",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt =>
+                "selektive interne Radio-Therapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt =>
+                "Peptid-Radio-Rezeptor-Therapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma => "PSMA-Therapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt =>
+                "Radiojod-Therapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit =>
+                "Radioimmun-Therapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M =>
+                "sonstige metabolische Radionuklidtherapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S => "Sonstiges",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "P" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P,
+            "P-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt,
+            "P-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D,
+            "P-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D,
+            "PRCN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn,
+            "PRCN-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt,
+            "PRCN-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D,
+            "PRCN-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D,
+            "PRCJ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj,
+            "PRCJ-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt,
+            "PRCJ-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D,
+            "PRCJ-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D,
+            "K" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K,
+            "KHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr,
+            "KLDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr,
+            "KPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr,
+            "I" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I,
+            "IHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr,
+            "ILDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr,
+            "IPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr,
+            "MSIRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt,
+            "MPRRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt,
+            "MPSMA" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma,
+            "MRJT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt,
+            "MRIT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit,
+            "M" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M,
+            "S" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost"/>.</summary>
+public static class MiiCsOnkoStrahlentherapieBoostExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J => "J",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib => "SIB",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq => "SEQ",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon => "KON",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N => "N",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J => "ja, mit Boost o. n. A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib =>
+                "simultan integrierter Boost",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq => "sequentieller Boost",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon => "konkomitanter Boost",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N => "nein, ohne Boost",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost? FromValue(string code) =>
+        code switch
+        {
+            "J" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J,
+            "SIB" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib,
+            "SEQ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq,
+            "KON" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart"/>.</summary>
+public static class MiiCsOnkoStrahlentherapieStrahlenartExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh => "UH",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El => "EL",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne => "NE",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn => "PN",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si => "SI",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro => "RO",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So => "SO",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177 => "Lu-177",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131 => "J-131",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90 => "Y-90",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223 => "Ra-223",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225 => "Ac-225",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153 => "Sm-153",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161 => "Tb-161",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89 => "Sr-89",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192 => "Ir-192",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60 => "Co-60",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu => "SONU",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart value
+    ) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh =>
+                "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El => "Elektronen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne => "Neutronen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn =>
+                "Protonen (leichte Wasserstoffionen/H1/Leichtionen)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si =>
+                "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro => "Weichstrahl (kV)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So =>
+                "Sonstige (inklusive Mixed Beams, exklusive Nuklide)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177 => "Lu-177",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131 => "J131",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90 => "Y-90",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223 => "Ra-223",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225 => "Ac-225",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153 => "Sm-153",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161 => "Tb-161",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89 => "Sr-89",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192 => "Ir-192",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60 => "Co-60",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu => "Sonstige Nuklide",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "UH" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh,
+            "EL" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El,
+            "NE" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne,
+            "PN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn,
+            "SI" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si,
+            "RO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro,
+            "SO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So,
+            "Lu-177" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177,
+            "J-131" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131,
+            "Y-90" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90,
+            "Ra-223" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223,
+            "Ac-225" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225,
+            "Sm-153" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153,
+            "Tb-161" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161,
+            "Sr-89" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89,
+            "Ir-192" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192,
+            "Co-60" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60,
+            "SONU" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart FromValueOrThrow(
         string code
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
@@ -4643,1396 +6415,628 @@ public static class MiiCsOnkoStrahlentherapieZielgebietExtensions
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart"/>.</summary>
-public static class MiiCsOnkoStrahlentherapieApplikationsartExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014"/>.</summary>
+public static class MiiCsOnkoStrahlentherapieZielgebiet2014Extensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart</c>.</returns>
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014</c>.</returns>
     public static string Url(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart _
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 _
     ) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart";
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014";
 
     /// <returns>The FHIR code for this concept.</returns>
     public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart value
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 value
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt => "P-ST",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D => "P-4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D => "P-ST4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn => "PRCN",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt => "PRCN-ST",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D => "PRCN-4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D => "PRCN-ST4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj => "PRCJ",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt => "PRCJ-ST",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D => "PRCJ-4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D => "PRCJ-ST4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr => "KHDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr => "KLDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr => "KPDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I => "I",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr => "IHDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr => "ILDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr => "IPDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt => "MSIRT",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt => "MPRRT",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma => "MPSMA",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt => "MRJT",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit => "MRIT",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M => "M",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S => "S",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1 => "1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11 => "1.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12 => "1.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13 => "1.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2 => "2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos => "2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg => "2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21 => "2.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos => "2.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg => "2.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22 => "2.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos => "2.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg => "2.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23 => "2.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos => "2.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg => "2.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24 => "2.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos => "2.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg => "2.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25 => "2.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos => "2.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg => "2.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26 => "2.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos => "2.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg => "2.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27 => "2.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos => "2.7.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg => "2.7.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28 => "2.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos => "2.8.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg => "2.8.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29 => "2.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3 => "3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos => "3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg => "3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31 => "3.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos => "3.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg => "3.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32 => "3.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos => "3.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg => "3.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33 => "3.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos => "3.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg => "3.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34 => "3.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos => "3.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg => "3.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35 => "3.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos => "3.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg => "3.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36 => "3.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos => "3.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg => "3.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37 => "3.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4 => "4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos => "4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg => "4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41 => "4.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos => "4.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg => "4.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42 => "4.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos => "4.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg => "4.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43 => "4.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos => "4.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg => "4.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44 => "4.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos => "4.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg => "4.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45 => "4.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos => "4.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg => "4.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46 => "4.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos => "4.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg => "4.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47 => "4.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48 => "4.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos => "4.8.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg => "4.8.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49 => "4.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos => "4.9.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg => "4.9.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5 => "5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos => "5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg => "5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51 => "5.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos => "5.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg => "5.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52 => "5.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg => "5.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos => "5.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53 => "5.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg => "5.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos => "5.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54 => "5.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos => "5.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg => "5.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55 => "5.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos => "5.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg => "5.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56 => "5.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos => "5.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg => "5.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57 => "5.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos => "5.7.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg => "5.7.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571 => "5.7.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos => "5.7.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg => "5.7.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572 => "5.7.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos => "5.7.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg => "5.7.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58 => "5.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg => "5.8.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos => "5.8.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59 => "5.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg => "5.9.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos => "5.9.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510 => "5.10.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos => "5.10.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg => "5.10.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511 => "5.11.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos => "5.11.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg => "5.11.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512 => "5.12.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6 => "6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61 => "6.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62 => "6.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63 => "6.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64 => "6.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65 => "6.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66 => "6.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67 => "6.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68 => "6.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69 => "6.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610 => "6.10.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611 => "6.11.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612 => "6.12.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613 => "6.13.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614 => "6.14.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615 => "6.15.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616 => "6.16.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7 => "7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos => "7.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg => "7.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71 => "7.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72 => "7.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8 => "8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81 => "8.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82 => "8.2.",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
     public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart value
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 value
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P =>
-                "perkutan (Teletherapie)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt =>
-                "perkutan stereotaktisch",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D =>
-                "perkutan, atemgetriggert",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D =>
-                "perkutan, stereotaktisch, atemgetriggert",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn =>
-                "perkutan ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt =>
-                "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D =>
-                "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D =>
-                "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj =>
-                "perkutan mit Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt =>
-                "perkutan, stereotaktisch mit Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D =>
-                "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D =>
-                "perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K =>
-                "endokavitäre Kontakttherapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr =>
-                "endokavitäre Kontakttherapie, high dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr =>
-                "endokavitäre Kontakttherapie, low dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr =>
-                "endokavitäre Kontakttherapie, pulsed dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I =>
-                "intersitielle Kontakttherapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr =>
-                "intersitielle Kontakttherapie, high dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr =>
-                "intersitielle Kontakttherapie, low dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr =>
-                "intersitielle Kontakttherapie, pulsed dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt =>
-                "selektive interne Radio-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt =>
-                "Peptid-Radio-Rezeptor-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma => "PSMA-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt =>
-                "Radiojod-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit =>
-                "Radioimmun-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M =>
-                "sonstige metabolische Radionuklidtherapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S => "Sonstiges",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1 => "ZNS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11 => "Ganzhirn",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12 => "Teilhirn",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13 => "Neuroachse",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2 => "Kopf-Hals",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos =>
+                "Kopf-Hals mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg =>
+                "Kopf-Hals ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21 => "Orbita, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos => "Orbita mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg =>
+                "Orbita ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22 =>
+                "Nase/ Nasennebenhöhle, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos =>
+                "Nase/ Nasennebenhöhle mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg =>
+                "Nase/ Nasennebenhöhle ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23 =>
+                "Mundhöhle, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos =>
+                "Mundhöhle mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg =>
+                "Mundhöhle ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24 => "Ohr, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos => "Ohr mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg => "Ohr ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25 =>
+                "Speicheldrüse, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos =>
+                "Speicheldrüse mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg =>
+                "Speicheldrüse ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26 => "Pharynx, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos =>
+                "Pharynx mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg =>
+                "Pharynx ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27 => "Larynx, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos => "Larynx mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg =>
+                "Larynx ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28 =>
+                "Schilddrüse, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos =>
+                "Schilddrüse mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg =>
+                "Schilddrüse ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29 => "Halslymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3 => "Thorax",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos => "Thorax mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg => "Thorax ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31 =>
+                "Mamma als Ganzbrust, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos =>
+                "Mamma als Ganzbrust mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg =>
+                "Mamma als Ganzbrust ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32 =>
+                "Mamma als Teilbrust, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos =>
+                "Mamma als Teilbrust mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg =>
+                "Mamma als Teilbrust ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33 => "Brustwand",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos =>
+                "Brustwand mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg =>
+                "Brustwand ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34 => "Lunge, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos => "Lunge mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg => "Lunge ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35 =>
+                "Ösophagus, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos =>
+                "Ösophagus mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg =>
+                "Ösophagus ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36 => "Thymus, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos => "Thymus mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg =>
+                "Thymus ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37 =>
+                "Mediastinale Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4 =>
+                "Abdomen (ohne Becken)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos =>
+                "Abdomen (ohne Becken) mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg =>
+                "Abdomen (ohne Becken) ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41 => "Magen, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos => "Magen mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg => "Magen ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42 => "Pankreas, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos =>
+                "Pankreas mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg =>
+                "Pankreas ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43 => "Leber, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos => "Leber mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg => "Leber ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44 => "Milz, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos => "Milz mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg => "Milz ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45 => "Niere, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos => "Niere mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg => "Niere ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46 =>
+                "Nebenniere, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos =>
+                "Nebenniere mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg =>
+                "Nebenniere ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47 =>
+                "Retroperitoneale Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48 =>
+                "Retroperitoneum, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos =>
+                "Retroperitoneum mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg =>
+                "Retroperitoneum ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49 =>
+                "Bauchwand, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos =>
+                "Bauchwand mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg =>
+                "Bauchwand ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5 => "Becken",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos => "Becken mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg => "Becken ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51 => "Rektum, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos => "Rektum mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg =>
+                "Rektum ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52 =>
+                "Analbereich, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg =>
+                "Analbereich ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos =>
+                "Analbereich mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53 =>
+                "Harnblase, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg =>
+                "Harnblase ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos =>
+                "Harnblase mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54 => "Prostata, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos =>
+                "Prostata mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg =>
+                "Prostata ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55 => "Hoden, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos => "Hoden mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg => "Hoden ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56 => "Penis, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos => "Penis mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg => "Penis ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57 =>
+                "Uterus und Zervix, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos =>
+                "Uterus und Zervix mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg =>
+                "Uterus und Zervix ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571 => "Uterus",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos =>
+                "Uterus mit Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg =>
+                "Uterus ohne Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572 => "Zervix",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos =>
+                "Zervix mit Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg =>
+                "Zervix ohne Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58 => "Ovar, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg => "Ovar ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos => "Ovar mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59 => "Vulva, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg => "Vulva ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos => "Vulva mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510 => "Vagina, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos =>
+                "Vagina mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg =>
+                "Vagina ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511 =>
+                "Beckenwand, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos =>
+                "Beckenwand mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg =>
+                "Beckenwand ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512 =>
+                "Beckenlymphkn. (ohne Primtu.)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6 =>
+                "Stütz-/Bewegungsapparat",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61 => "Schädelknochen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62 => "Rippen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63 => "Sternum",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64 => "HWS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65 => "BWS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66 => "LWS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67 =>
+                "knöchernes Becken",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68 => "Hüfte",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69 => "Schulter",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610 => "Oberarm",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611 => "Unterarm",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612 => "Hand",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613 => "Leiste",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614 => "Oberschenkel",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615 => "Unterschenkel",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616 => "Fuß",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7 => "Haut",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos =>
+                "Haut mit Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg =>
+                "Haut ohne Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71 =>
+                "Primärer Hauttumor",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72 => "Hautmetastasen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8 => "Sonstiges",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81 =>
+                "Ganzkörperbestrahlung",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82 =>
+                "Mantelfeldbestrahlung",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
     public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart value
+        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 value
     ) => new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart? FromValue(
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014? FromValue(
         string code
     ) =>
         code switch
         {
-            "P" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P,
-            "P-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt,
-            "P-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D,
-            "P-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D,
-            "PRCN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn,
-            "PRCN-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt,
-            "PRCN-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D,
-            "PRCN-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D,
-            "PRCJ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj,
-            "PRCJ-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt,
-            "PRCJ-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D,
-            "PRCJ-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D,
-            "K" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K,
-            "KHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr,
-            "KLDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr,
-            "KPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr,
-            "I" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I,
-            "IHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr,
-            "ILDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr,
-            "IPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr,
-            "MSIRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt,
-            "MPRRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt,
-            "MPSMA" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma,
-            "MRJT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt,
-            "MRIT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit,
-            "M" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M,
-            "S" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S,
+            "1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1,
+            "1.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11,
+            "1.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12,
+            "1.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13,
+            "2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2,
+            "2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos,
+            "2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg,
+            "2.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21,
+            "2.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos,
+            "2.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg,
+            "2.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22,
+            "2.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos,
+            "2.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg,
+            "2.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23,
+            "2.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos,
+            "2.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg,
+            "2.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24,
+            "2.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos,
+            "2.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg,
+            "2.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25,
+            "2.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos,
+            "2.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg,
+            "2.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26,
+            "2.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos,
+            "2.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg,
+            "2.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27,
+            "2.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos,
+            "2.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg,
+            "2.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28,
+            "2.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos,
+            "2.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg,
+            "2.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29,
+            "3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3,
+            "3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos,
+            "3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg,
+            "3.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31,
+            "3.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos,
+            "3.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg,
+            "3.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32,
+            "3.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos,
+            "3.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg,
+            "3.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33,
+            "3.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos,
+            "3.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg,
+            "3.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34,
+            "3.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos,
+            "3.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg,
+            "3.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35,
+            "3.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos,
+            "3.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg,
+            "3.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36,
+            "3.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos,
+            "3.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg,
+            "3.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37,
+            "4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4,
+            "4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos,
+            "4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg,
+            "4.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41,
+            "4.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos,
+            "4.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg,
+            "4.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42,
+            "4.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos,
+            "4.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg,
+            "4.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43,
+            "4.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos,
+            "4.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg,
+            "4.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44,
+            "4.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos,
+            "4.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg,
+            "4.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45,
+            "4.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos,
+            "4.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg,
+            "4.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46,
+            "4.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos,
+            "4.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg,
+            "4.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47,
+            "4.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48,
+            "4.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos,
+            "4.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg,
+            "4.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49,
+            "4.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos,
+            "4.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg,
+            "5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5,
+            "5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos,
+            "5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg,
+            "5.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51,
+            "5.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos,
+            "5.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg,
+            "5.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52,
+            "5.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg,
+            "5.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos,
+            "5.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53,
+            "5.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg,
+            "5.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos,
+            "5.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54,
+            "5.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos,
+            "5.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg,
+            "5.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55,
+            "5.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos,
+            "5.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg,
+            "5.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56,
+            "5.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos,
+            "5.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg,
+            "5.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57,
+            "5.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos,
+            "5.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg,
+            "5.7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571,
+            "5.7.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos,
+            "5.7.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg,
+            "5.7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572,
+            "5.7.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos,
+            "5.7.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg,
+            "5.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58,
+            "5.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg,
+            "5.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos,
+            "5.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59,
+            "5.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg,
+            "5.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos,
+            "5.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510,
+            "5.10.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos,
+            "5.10.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg,
+            "5.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511,
+            "5.11.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos,
+            "5.11.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg,
+            "5.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512,
+            "6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6,
+            "6.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61,
+            "6.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62,
+            "6.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63,
+            "6.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64,
+            "6.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65,
+            "6.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66,
+            "6.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67,
+            "6.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68,
+            "6.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69,
+            "6.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610,
+            "6.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611,
+            "6.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612,
+            "6.13." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613,
+            "6.14." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614,
+            "6.15." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615,
+            "6.16." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616,
+            "7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7,
+            "7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos,
+            "7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg,
+            "7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71,
+            "7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72,
+            "8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8,
+            "8.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81,
+            "8.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart FromValueOrThrow(
+    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 FromValueOrThrow(
         string code
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds"/>.</summary>
-public static class MiiCsOnkoMammaHer2NeuStatusObdsExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme"/>.</summary>
+public static class MiiCsOnkoStudienteilnahmeExtensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds";
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds value) =>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.J => "J",
+            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.U => "U",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds value
-    ) =>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.P => "positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.N => "negativ",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.J => "Ja",
+            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.N => "Nein",
+            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.U => "Unbekannt",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds value) =>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme value) =>
         new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds? FromValue(string code) =>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme? FromValue(string code) =>
         code switch
         {
-            "P" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.P,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds.U,
+            "J" => Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.J,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.U,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusObds FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTod"/>.</summary>
-public static class MiiCsOnkoTodExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTod _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTod value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTod.J => "J",
-            Onkologie.CodeSystems.MiiCsOnkoTod.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoTod.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTod value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTod.J =>
-                "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.",
-            Onkologie.CodeSystems.MiiCsOnkoTod.N =>
-                "Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.",
-            Onkologie.CodeSystems.MiiCsOnkoTod.U => "unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTod value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTod"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoTod? FromValue(string code) =>
-        code switch
-        {
-            "J" => Onkologie.CodeSystems.MiiCsOnkoTod.J,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoTod.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoTod.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTod"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoTod FromValueOrThrow(string code) =>
+    public static Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme FromValueOrThrow(string code) =>
         FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp"/>.</summary>
-public static class MiiCsOnkoTherapieplanungTypExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth => "praeth",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop => "postop",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth => "postth",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther => "ther",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth =>
-                "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop =>
-                "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth =>
-                "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther =>
-                "Therapieplanung ohne Tumorkonferenz",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp? FromValue(string code) =>
-        code switch
-        {
-            "praeth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth,
-            "postop" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop,
-            "postth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth,
-            "ther" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoIntention"/>.</summary>
-public static class MiiCsOnkoIntentionExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoIntention _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoIntention value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoIntention.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.D => "D",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.R => "R",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.S => "S",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.X => "X",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.O => "O",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoIntention value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoIntention.K => "kurativ",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.P => "palliativ",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.D => "diagnostisch",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.R => "Revision/Komplikation",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.S => "Sonstiges",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.X => "fehlende Angabe",
-            Onkologie.CodeSystems.MiiCsOnkoIntention.O => "lokal kurativ bei Oligometastasierung",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoIntention value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoIntention"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoIntention? FromValue(string code) =>
-        code switch
-        {
-            "K" => Onkologie.CodeSystems.MiiCsOnkoIntention.K,
-            "P" => Onkologie.CodeSystems.MiiCsOnkoIntention.P,
-            "D" => Onkologie.CodeSystems.MiiCsOnkoIntention.D,
-            "R" => Onkologie.CodeSystems.MiiCsOnkoIntention.R,
-            "S" => Onkologie.CodeSystems.MiiCsOnkoIntention.S,
-            "X" => Onkologie.CodeSystems.MiiCsOnkoIntention.X,
-            "O" => Onkologie.CodeSystems.MiiCsOnkoIntention.O,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoIntention"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoIntention FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad"/>.</summary>
-public static class MiiCsOnkoNebenwirkungCtcaeGradExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._1 => "1",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._3 => "3",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._4 => "4",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._5 => "5",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.K => "K",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._1 => "mild",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._2 => "moderat",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._3 => "schwerwiegend",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._4 => "lebensbedrohlich",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._5 => "tödlich",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.K => "keine",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad? FromValue(string code) =>
-        code switch
-        {
-            "1" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._1,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._2,
-            "3" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._3,
-            "4" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._4,
-            "5" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad._5,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.U,
-            "K" => Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad.K,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoNebenwirkungCtcaeGrad FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoFernmetastasen"/>.</summary>
-public static class MiiCsOnkoFernmetastasenExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul => "PUL",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss => "OSS",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep => "HEP",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra => "BRA",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym => "LYM",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar => "MAR",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple => "PLE",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per => "PER",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr => "ADR",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski => "SKI",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth => "OTH",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen => "GEN",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul => "Lunge",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss => "Knochen",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep => "Leber",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra => "Hirn",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym => "Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar => "Knochenmark",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple => "Pleura",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per => "Peritoneum",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr => "Nebennieren",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski => "Haut",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth => "andere Organe",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen => "generalisierte Metastasierung",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoFernmetastasen"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoFernmetastasen? FromValue(string code) =>
-        code switch
-        {
-            "PUL" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul,
-            "OSS" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss,
-            "HEP" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep,
-            "BRA" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra,
-            "LYM" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym,
-            "MAR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar,
-            "PLE" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple,
-            "PER" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per,
-            "ADR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr,
-            "SKI" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski,
-            "OTH" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth,
-            "GEN" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoFernmetastasen"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoFernmetastasen FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet"/>.</summary>
-public static class MiiCsOnkoKrkTmeQualitaetExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._1 => "1",
-            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._3 => "3",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._1 => "Grad 1 (gut)",
-            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._2 => "Grad 2 (moderat)",
-            Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._3 => "Grad 3 (schlecht)",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet? FromValue(string code) =>
-        code switch
-        {
-            "1" => Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._1,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._2,
-            "3" => Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet._3,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoKrkTmeQualitaet FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieTyp"/>.</summary>
-public static class MiiCsOnkoTherapieTypExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch => "CH",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho => "HO",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im => "IM",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs => "ZS",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz => "SZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci => "CI",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz => "CZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz => "CIZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz => "IZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww => "WW",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As => "AS",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws => "WS",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op => "OP",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St => "ST",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw => "KW",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So => "SO",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch => "Chemotherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho => "Hormontherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im => "Immun-/Antikörpertherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs => "zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz =>
-                "Stammzelltransplantation (inklusive Knochenmarktransplantation)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci => "Chemo- + Immun-/Antikörpertherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz =>
-                "Chemotherapie + zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz =>
-                "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz =>
-                "Immun-/Antikörpertherapie + zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww => "Watchful Waiting",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As => "Active Surveillance",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws => "Wait and see",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op => "Operation",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St => "Strahlentherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw =>
-                "keine weitere tumorspezifische Therapie empfohlen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So => "Sonstiges",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieTyp"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieTyp? FromValue(string code) =>
-        code switch
-        {
-            "CH" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch,
-            "HO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho,
-            "IM" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im,
-            "ZS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs,
-            "SZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz,
-            "CI" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci,
-            "CZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz,
-            "CIZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz,
-            "IZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz,
-            "WW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww,
-            "AS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As,
-            "WS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws,
-            "OP" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op,
-            "ST" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St,
-            "KW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw,
-            "SO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieTyp"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieTyp FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus"/>.</summary>
-public static class MiiCsOnkoKrkMrtMesorektaleFaszieStatusExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.D => "D",
-            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.D =>
-                "Durchgeführt, aber Abstand nicht angegeben",
-            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.N =>
-                "Nein (MRT/CT nicht durchgeführt)",
-            Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "D" => Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.D,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoKrkMrtMesorektaleFaszieStatus FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation"/>.</summary>
-public static class MiiCsOnkoOperationKomplikationExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd => "ABD",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs => "ABS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf => "ASF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani => "ANI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep => "AEP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr => "ALR",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans => "ANS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee => "AEE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api => "API",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif => "BIF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog => "BOG",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe => "BOE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi => "BSI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi => "CHI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai => "DAI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps => "DPS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic => "DIC",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep => "DEP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu => "DLU",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi => "DSI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf => "ENF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger => "GER",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem => "HEM",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur => "HUR",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae => "HAE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi => "HFI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk => "HNK",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi => "HZI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs => "HRS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna => "HNA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop => "HOP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb => "HYB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf => "HYF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv => "IFV",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas => "KAS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes => "KES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim => "KIM",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra => "KRA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds => "KDS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev => "LEV",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe => "LOE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf => "LYF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye => "LYE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes => "MES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil => "MIL",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med => "MED",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat => "MAT",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi => "MYI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb => "RNB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab => "NAB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin => "NIN",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes => "OES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm => "OSM",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf => "PAF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit => "PIT",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab => "PAB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa => "PPA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav => "PAV",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per => "PER",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb => "PLB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey => "PEY",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple => "PLE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn => "PMN",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt => "PNT",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda => "PDA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae => "PAE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa => "RPA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin => "RIN",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski => "SKI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses => "SES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh => "SFH",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk => "STK",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp => "TZP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia => "TIA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz => "TRZ",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh => "WUH",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss => "WSS",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N => "nein",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd =>
-                "Abszess in einem Drainagekanal",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs =>
-                "Abszess, intraabdominaler oder intrathorakaler",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf => "Abszess, subfaszialer",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani => "Akute Niereninsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep => "Alkoholentzugspsychose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr =>
-                "Allergische Reaktion ohne Schocksymptomatik",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans => "Anaphylaktischer Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee =>
-                "Anastomoseninsuffizienz einer Enterostomie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api => "Apoplektischer Insult",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif => "Biliäre Fistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog =>
-                "Blutung, obere gastrointestinale (z. B „Stressulkus“)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe =>
-                "Bolusverlegung eines Endotubus",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi =>
-                "Bronchusstumpfinsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi => "Cholangitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai =>
-                "Darmanastomoseninsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps =>
-                "Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic =>
-                "Disseminierte intravasale Koagulopathie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep => "Drogenentzugspsychose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu =>
-                "Druck- und Lagerungsschäden, z. B. Dekubitalulzera",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi =>
-                "Duodenalstumpfinsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf => "Enterale Fistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger => "Gerinnungsstörung",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem => "Hämatemesis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur => "Hämaturie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae => "Hämorrhagischer Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi => "Harnfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk =>
-                "Hautnekrose im Operationsbereich",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi => "Herzinsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs => "Herzrhythmusstörungen",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna => "Hirnnervenausfälle",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop =>
-                "Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb => "Hyperbilirubinämie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf => "Hypopharynxfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv =>
-                "Ileofemorale Venenthrombose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas => "Kardiogener Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes =>
-                "Komplikationen einer Stomaanlage",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim =>
-                "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra => "Krampfanfall",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds => "Kurzdarmsyndrom",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev => "Leberversagen",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe => "Lungenödem",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf => "Lymphfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye => "Lymphozele",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes => "Magenentleerungsstörung",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil => "Mechanischer Ileus",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med => "Mediastinitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat =>
-                "Mesenterialarterien- oder -venenthrombose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi => "Myokardinfarkt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb =>
-                "Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab =>
-                "Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin =>
-                "Nahtinsuffizienz, anderweitig nicht erwähnt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes => "Ösophagitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm => "Osteitis, Osteomyelitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf => "Pankreasfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit => "Pankreatitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab => "Peranale Blutung",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa => "Periphere Parese",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav =>
-                "Peripherer arterieller Verschluss (Embolie, Thrombose)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per => "Peritonitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb => "Platzbauch",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey => "Pleuraempyem",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple => "Pleuraerguss",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn => "Pneumonie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt => "Pneumothorax",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda =>
-                "Protrahierte Darmatonie (paralytischer Ileus)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae => "Pulmonalarterienembolie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa => "Rekurrensparese",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin =>
-                "Respiratorische Insuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski =>
-                "Septische Komplikation eines Implantates",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses => "Septischer Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh =>
-                "Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk =>
-                "Stomakomplikation (z. B. Blutung, Nekrose, Stenose)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp => "Thrombozytopenie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia =>
-                "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz => "Transfusionszwischenfall",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh =>
-                "Wundhämatom (konservativ therapiert)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss =>
-                "Wundheilungsstörung, subkutane",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation? FromValue(string code) =>
-        code switch
-        {
-            "N" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U,
-            "ABD" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd,
-            "ABS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs,
-            "ASF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf,
-            "ANI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani,
-            "AEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep,
-            "ALR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr,
-            "ANS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans,
-            "AEE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee,
-            "API" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api,
-            "BIF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif,
-            "BOG" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog,
-            "BOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe,
-            "BSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi,
-            "CHI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi,
-            "DAI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai,
-            "DPS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps,
-            "DIC" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic,
-            "DEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep,
-            "DLU" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu,
-            "DSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi,
-            "ENF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf,
-            "GER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger,
-            "HEM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem,
-            "HUR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur,
-            "HAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae,
-            "HFI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi,
-            "HNK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk,
-            "HZI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi,
-            "HRS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs,
-            "HNA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna,
-            "HOP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop,
-            "HYB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb,
-            "HYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf,
-            "IFV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv,
-            "KAS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas,
-            "KES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes,
-            "KIM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim,
-            "KRA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra,
-            "KDS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds,
-            "LEV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev,
-            "LOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe,
-            "LYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf,
-            "LYE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye,
-            "MES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes,
-            "MIL" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil,
-            "MED" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med,
-            "MAT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat,
-            "MYI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi,
-            "RNB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb,
-            "NAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab,
-            "NIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin,
-            "OES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes,
-            "OSM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm,
-            "PAF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf,
-            "PIT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit,
-            "PAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab,
-            "PPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa,
-            "PAV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav,
-            "PER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per,
-            "PLB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb,
-            "PEY" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey,
-            "PLE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple,
-            "PMN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn,
-            "PNT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt,
-            "PDA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda,
-            "PAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae,
-            "RPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa,
-            "RIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin,
-            "SKI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski,
-            "SES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses,
-            "SFH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh,
-            "STK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk,
-            "TZP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp,
-            "TIA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia,
-            "TRZ" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz,
-            "WUH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh,
-            "WSS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung"/>.</summary>
-public static class MiiCsOnkoPrimaertumorDiagnosesicherungExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._0 => "0",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._1 => "1",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._4 => "4",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5 => "5",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6 => "6",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7 => "7",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71 => "7.1",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72 => "7.2",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73 => "7.3",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8 => "8",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9 => "9",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._0 => "Totenschein",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._1 => "klinisch",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._2 =>
-                "klinische Diagnostik",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._4 =>
-                "spezifische Tumor-Marker",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5 => "Zytologie",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6 =>
-                "histologische Untersuchung einer Metastase",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7 =>
-                "histologische Untersuchung eines Primärtumors",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71 =>
-                "histologische Untersuchung eines Primärtumors",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72 =>
-                "histologische Untersuchung einer Metastase",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73 =>
-                "Histologie der Autopsie",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8 =>
-                "Zytogenetisch und/oder molekularer Test",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9 => "unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "0" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._0,
-            "1" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._1,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._2,
-            "4" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._4,
-            "5" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5,
-            "6" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6,
-            "7" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7,
-            "7.1" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71,
-            "7.2" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72,
-            "7.3" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73,
-            "8" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8,
-            "9" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung"/>.</summary>
-public static class MiiCsOnkoVerlaufGesamtbeurteilungExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.V => "V",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.T => "T",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.D => "D",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.B => "B",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.R => "R",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.Y => "Y",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.X => "X",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.V =>
-                "Vollremission (complete remission, CR)",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.T =>
-                "Teilremission (partial remission, PR)",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.K =>
-                "keine Änderung (no change, NC) = stable disease",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.P => "Progression",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.D => "divergentes Geschehen",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.B =>
-                "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.R =>
-                "Vollremission mit residualen Auffälligkeiten (CRr)",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.Y => "Rezidiv",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.U => "Beurteilung unmöglich",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.X => "fehlende Angabe",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung? FromValue(string code) =>
-        code switch
-        {
-            "V" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.V,
-            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.T,
-            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.K,
-            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.P,
-            "D" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.D,
-            "B" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.B,
-            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.R,
-            "Y" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.Y,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.U,
-            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.X,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmVersion"/>.</summary>
-public static class MiiCsOnkoTnmVersionExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._1 => "1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._3 => "3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._4 => "4",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._5 => "5",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._6 => "6",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._7 => "7",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._8 => "8",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._9 => "9",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._1 => "1. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._2 => "2. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._3 => "3. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._4 => "4. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._5 => "5. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._6 => "6. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._7 => "7. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._8 => "8. Auflage",
-            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._9 => "9. Auflage",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmVersion"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoTnmVersion? FromValue(string code) =>
-        code switch
-        {
-            "1" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._1,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._2,
-            "3" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._3,
-            "4" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._4,
-            "5" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._5,
-            "6" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._6,
-            "7" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._7,
-            "8" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._8,
-            "9" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._9,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmVersion"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoTnmVersion FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor"/>.</summary>
-public static class MiiCsOnkoVerlaufPrimaertumorExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.T => "T",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.R => "R",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.F => "F",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.X => "X",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.K => "kein Tumor nachweisbar",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.T => "Tumorreste (Residualtumor)",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.P =>
-                "Tumorreste (Residualtumor) Progress",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.N =>
-                "Tumorreste (Residualtumor) No Change",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.R => "Lokalrezidiv",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.F => "fraglicher Befund",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.X => "fehlende Angabe",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor? FromValue(string code) =>
-        code switch
-        {
-            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.K,
-            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.T,
-            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.P,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.N,
-            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.R,
-            "F" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.F,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.U,
-            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.X,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications"/>.</summary>
-public static class MiiCsOnkoProstataPostsurgicalComplicationsExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications</c>.</returns>
-    public static string Url(
-        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications _
-    ) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.J => "J",
-            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.J => "Ja",
-            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.N =>
-                "keine oder höchstens Grad II",
-            Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "J" => Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.J,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoProstataPostsurgicalComplications FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle"/>.</summary>
@@ -6811,6 +7815,185 @@ public static class MiiCsOnkoSystemischeTherapieProtokolleExtensions
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung"/>.</summary>
+public static class MiiCsOnkoTherapieabweichungExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.J => "J",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.J => "ja",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.N => "nein",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.U => "unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung? FromValue(string code) =>
+        code switch
+        {
+            "J" => Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.J,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp"/>.</summary>
+public static class MiiCsOnkoTherapieplanungTypExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth => "praeth",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop => "postop",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth => "postth",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther => "ther",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth =>
+                "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop =>
+                "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth =>
+                "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther =>
+                "Therapieplanung ohne Tumorkonferenz",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp? FromValue(string code) =>
+        code switch
+        {
+            "praeth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth,
+            "postop" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop,
+            "postth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth,
+            "ther" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund"/>.</summary>
+public static class MiiCsOnkoTherapieEndeGrundExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.E => "E",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.R => "R",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.W => "W",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.A => "A",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.S => "S",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.V => "V",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.T => "T",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.F => "F",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.E => "reguläres Ende",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.R =>
+                "reguläres Ende mit Dosisreduktion",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.W =>
+                "reguläres Ende mit Substanzwechsel",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.A => "Abbruch wegen Nebenwirkungen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.P => "Abbruch wegen Progress",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.S => "Abbruch aus sonstigen Gründen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.V =>
+                "Patient verweigert weitere Therapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.T => "Patient verstorben",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.F =>
+                "Zieldosis erreicht mit Unterbrechung > 3 Kalendertage",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.U => "unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund? FromValue(string code) =>
+        code switch
+        {
+            "E" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.E,
+            "R" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.R,
+            "W" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.W,
+            "A" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.A,
+            "P" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.P,
+            "S" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.S,
+            "V" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.V,
+            "T" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.T,
+            "F" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.F,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieEndeGrund FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
 /// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieStellungzurop"/>.</summary>
 public static class MiiCsOnkoTherapieStellungzuropExtensions
 {
@@ -6873,840 +8056,944 @@ public static class MiiCsOnkoTherapieStellungzuropExtensions
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie"/>.</summary>
-public static class MiiCsOnkoMammaRezeptorstatusLeitlinieExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieTyp"/>.</summary>
+public static class MiiCsOnkoTherapieTypExtensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie";
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie value
-    ) =>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv => "positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GeringPositiv =>
-                "gering-positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ => "negativ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch => "CH",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho => "HO",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im => "IM",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs => "ZS",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz => "SZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci => "CI",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz => "CZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz => "CIZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz => "IZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww => "WW",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As => "AS",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws => "WS",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op => "OP",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St => "ST",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw => "KW",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So => "SO",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch => "Chemotherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho => "Hormontherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im => "Immun-/Antikörpertherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs => "zielgerichtete Substanzen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz =>
+                "Stammzelltransplantation (inklusive Knochenmarktransplantation)",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci => "Chemo- + Immun-/Antikörpertherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz =>
+                "Chemotherapie + zielgerichtete Substanzen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz =>
+                "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz =>
+                "Immun-/Antikörpertherapie + zielgerichtete Substanzen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww => "Watchful Waiting",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As => "Active Surveillance",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws => "Wait and see",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op => "Operation",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St => "Strahlentherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw =>
+                "keine weitere tumorspezifische Therapie empfohlen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So => "Sonstiges",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieTyp"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieTyp? FromValue(string code) =>
+        code switch
+        {
+            "CH" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch,
+            "HO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho,
+            "IM" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im,
+            "ZS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs,
+            "SZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz,
+            "CI" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci,
+            "CZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz,
+            "CIZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz,
+            "IZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz,
+            "WW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww,
+            "AS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As,
+            "WS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws,
+            "OP" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op,
+            "ST" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St,
+            "KW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw,
+            "SO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieTyp"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoTherapieTyp FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmUicc"/>.</summary>
+public static class MiiCsOnkoTnmUiccExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.uicc.org/resources/tnm</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc _) =>
+        "https://www.uicc.org/resources/tnm";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Y => "y",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.R => "r",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.A => "a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C => "c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P => "p",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U => "u",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx => "TX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0 => "T0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta => "Ta",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis => "Tis",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn => "Tis(LAMN)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis => "Tis(DCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis => "Tis(LCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget => "Tis(Paget)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu => "Tis(pu)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd => "Tis(pd)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1 => "T1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi => "T1mi",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a => "T1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1 => "T1a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2 => "T1a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b => "T1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1 => "T1b1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2 => "T1b2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c => "T1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1 => "T1c1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2 => "T1c2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3 => "T1c3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d => "T1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2 => "T2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a => "T2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1 => "T2a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2 => "T2a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b => "T2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c => "T2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d => "T2d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3 => "T3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a => "T3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b => "T3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c => "T3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d => "T3d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e => "T3e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4 => "T4",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a => "T4a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b => "T4b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c => "T4c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d => "T4d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e => "T4e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M => "m",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3 => "3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._4 => "4",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._5 => "5",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._6 => "6",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._7 => "7",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8 => "8",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9 => "9",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10 => "10",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx => "NX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0 => "N0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1 => "N1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi => "N1mi",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a => "N1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b => "N1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c => "N1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2 => "N2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a => "N2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b => "N2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c => "N2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3 => "N3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a => "N3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b => "N3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c => "N3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0 => "M0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1 => "M1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a => "M1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b => "M1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c => "M1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d => "M1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx => "MX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos => "i+",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg => "i-",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos => "mol+",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg => "mol-",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn => "sn",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0 => "L0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1 => "L1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx => "LX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0 => "V0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1 => "V1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2 => "V2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx => "VX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0 => "Pn0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1 => "Pn1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX => "PnX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0 => "S0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1 => "S1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2 => "S2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3 => "S3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx => "SX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk => "okk",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0 => "0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a => "0a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is => "0is",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I => "I",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia => "IA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1 => "IA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2 => "IA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3 => "IA3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib => "IB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1 => "IB1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2 => "IB2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic => "IC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is => "IS",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii => "II",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia => "IIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1 => "IIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2 => "IIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib => "IIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic => "IIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii => "III",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia => "IIIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1 => "IIIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2 => "IIIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib => "IIIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic => "IIIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1 => "IIIC1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2 => "IIIC2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid => "IIID",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv => "IV",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva => "IVA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1 => "IVA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2 => "IVA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb => "IVB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc => "IVC",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Y => "y",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.R => "r",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.A => "a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C => "c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P => "p",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U => "u",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx => "TX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0 => "T0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta => "Ta",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis => "Tis",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn => "Tis(LAMN)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis => "Tis(DCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis => "Tis(LCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget => "Tis(Paget)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu => "Tis(pu)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd => "Tis(pd)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1 => "T1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi => "T1mi",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a => "T1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1 => "T1a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2 => "T1a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b => "T1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1 => "T1b1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2 => "T1b2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c => "T1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1 => "T1c1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2 => "T1c2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3 => "T1c3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d => "T1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2 => "T2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a => "T2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1 => "T2a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2 => "T2a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b => "T2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c => "T2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d => "T2d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3 => "T3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a => "T3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b => "T3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c => "T3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d => "T3d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e => "T3e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4 => "T4",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a => "T4a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b => "T4b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c => "T4c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d => "T4d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e => "T4e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M => "(m)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2 => "(2)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3 => "(3)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._4 => "(4)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._5 => "(5)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._6 => "(6)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._7 => "(7)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8 => "(8)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9 => "(9)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10 => "(10)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx => "Nx",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0 => "N0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1 => "N1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi => "N1(mi)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a => "N1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b => "N1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c => "N1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2 => "N2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a => "N2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b => "N2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c => "N2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3 => "N3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a => "N3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b => "N3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c => "N3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0 => "M0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1 => "M1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a => "M1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b => "M1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c => "M1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d => "M1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx => "MX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos => "(i+)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg => "(i-)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos => "(mol+)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg => "(mol-)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn => "(sn)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0 => "L0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1 => "L1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx => "LX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0 => "V0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1 => "V1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2 => "V2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx => "VX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0 => "Pn0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1 => "Pn1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX => "PnX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0 => "S0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1 => "S1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2 => "S2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3 => "S3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx => "SX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk => "Stadium X",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0 => "Stadium 0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a => "Stadium 0a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is => "Stadium 0is",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I => "Stadium I",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia => "Stadium IA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1 => "Stadium IA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2 => "Stadium IA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3 => "Stadium IA3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib => "Stadium IB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1 => "Stadium IB1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2 => "Stadium IB2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic => "Stadium IC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is => "Stadium IS",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii => "Stadium II",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia => "Stadium IIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1 => "Stadium IIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2 => "Stadium IIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib => "Stadium IIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic => "Stadium IIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii => "Stadium III",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia => "Stadium IIIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1 => "Stadium IIIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2 => "Stadium IIIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib => "Stadium IIIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic => "Stadium IIIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1 => "Stadium IIIC1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2 => "Stadium IIIC2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid => "Stadium IIID",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv => "Stadium IV",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva => "Stadium IVA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1 => "Stadium IVA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2 => "Stadium IVA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb => "Stadium IVB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc => "Stadium IVC",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmUicc"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoTnmUicc? FromValue(string code) =>
+        code switch
+        {
+            "y" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Y,
+            "r" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.R,
+            "a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.A,
+            "c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C,
+            "p" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P,
+            "u" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U,
+            "TX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx,
+            "T0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0,
+            "Ta" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta,
+            "Tis" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis,
+            "Tis(LAMN)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn,
+            "Tis(DCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis,
+            "Tis(LCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis,
+            "Tis(Paget)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget,
+            "Tis(pu)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu,
+            "Tis(pd)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd,
+            "T1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1,
+            "T1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi,
+            "T1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a,
+            "T1a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1,
+            "T1a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2,
+            "T1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b,
+            "T1b1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1,
+            "T1b2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2,
+            "T1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c,
+            "T1c1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1,
+            "T1c2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2,
+            "T1c3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3,
+            "T1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d,
+            "T2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2,
+            "T2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a,
+            "T2a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1,
+            "T2a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2,
+            "T2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b,
+            "T2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c,
+            "T2d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d,
+            "T3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3,
+            "T3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a,
+            "T3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b,
+            "T3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c,
+            "T3d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d,
+            "T3e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e,
+            "T4" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4,
+            "T4a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a,
+            "T4b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b,
+            "T4c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c,
+            "T4d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d,
+            "T4e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e,
+            "m" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2,
+            "3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3,
+            "4" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._4,
+            "5" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._5,
+            "6" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._6,
+            "7" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._7,
+            "8" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8,
+            "9" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9,
+            "10" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10,
+            "NX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx,
+            "N0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0,
+            "N1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1,
+            "N1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi,
+            "N1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a,
+            "N1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b,
+            "N1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c,
+            "N2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2,
+            "N2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a,
+            "N2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b,
+            "N2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c,
+            "N3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3,
+            "N3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a,
+            "N3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b,
+            "N3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c,
+            "M0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0,
+            "M1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1,
+            "M1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a,
+            "M1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b,
+            "M1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c,
+            "M1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d,
+            "MX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx,
+            "i+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos,
+            "i-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg,
+            "mol+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos,
+            "mol-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg,
+            "sn" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn,
+            "L0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0,
+            "L1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1,
+            "LX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx,
+            "V0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0,
+            "V1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1,
+            "V2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2,
+            "VX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx,
+            "Pn0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0,
+            "Pn1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1,
+            "PnX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX,
+            "S0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0,
+            "S1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1,
+            "S2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2,
+            "S3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3,
+            "SX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx,
+            "okk" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk,
+            "0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0,
+            "0a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a,
+            "0is" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is,
+            "I" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I,
+            "IA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia,
+            "IA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1,
+            "IA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2,
+            "IA3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3,
+            "IB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib,
+            "IB1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1,
+            "IB2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2,
+            "IC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic,
+            "IS" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is,
+            "II" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii,
+            "IIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia,
+            "IIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1,
+            "IIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2,
+            "IIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib,
+            "IIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic,
+            "III" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii,
+            "IIIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia,
+            "IIIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1,
+            "IIIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2,
+            "IIIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib,
+            "IIIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic,
+            "IIIC1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1,
+            "IIIC2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2,
+            "IIID" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid,
+            "IV" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv,
+            "IVA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva,
+            "IVA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1,
+            "IVA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2,
+            "IVB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb,
+            "IVC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmUicc"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoTnmUicc FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmVersion"/>.</summary>
+public static class MiiCsOnkoTnmVersionExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._1 => "1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._2 => "2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._3 => "3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._4 => "4",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._5 => "5",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._6 => "6",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._7 => "7",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._8 => "8",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._9 => "9",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._1 => "1. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._2 => "2. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._3 => "3. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._4 => "4. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._5 => "5. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._6 => "6. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._7 => "7. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._8 => "8. Auflage",
+            Onkologie.CodeSystems.MiiCsOnkoTnmVersion._9 => "9. Auflage",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTnmVersion value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmVersion"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoTnmVersion? FromValue(string code) =>
+        code switch
+        {
+            "1" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._1,
+            "2" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._2,
+            "3" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._3,
+            "4" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._4,
+            "5" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._5,
+            "6" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._6,
+            "7" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._7,
+            "8" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._8,
+            "9" => Onkologie.CodeSystems.MiiCsOnkoTnmVersion._9,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmVersion"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoTnmVersion FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTod"/>.</summary>
+public static class MiiCsOnkoTodExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTod _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTod value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTod.J => "J",
+            Onkologie.CodeSystems.MiiCsOnkoTod.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoTod.U => "U",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTod value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoTod.J =>
+                "Ja, die Person ist an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.",
+            Onkologie.CodeSystems.MiiCsOnkoTod.N =>
+                "Nein, die Person ist nicht an einer Tumorerkrankung oder Folge einer Tumorerkrankung (einschließlich Behandlungskomplikation) verstorben.",
+            Onkologie.CodeSystems.MiiCsOnkoTod.U => "unbekannt",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTod value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTod"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoTod? FromValue(string code) =>
+        code switch
+        {
+            "J" => Onkologie.CodeSystems.MiiCsOnkoTod.J,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoTod.N,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoTod.U,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTod"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Onkologie.CodeSystems.MiiCsOnkoTod FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen"/>.</summary>
+public static class MiiCsOnkoVerlaufFernmetastasenExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen value) =>
+        value switch
+        {
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.K => "K",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.R => "R",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.T => "T",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.F => "F",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.X => "X",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
     public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie value
+        this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen value
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv => "positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GeringPositiv =>
-                "gering positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ => "negativ",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.K =>
+                "keine Fernmetastasen nachweisbar",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.R =>
+                "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.T => "Fernmetastasen Residuen",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.P => "Fernmetastasen Progress",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.N => "Fernmetastasen No Change",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.F => "fraglicher Befund",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.X => "fehlende Angabe",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie value
-    ) => new(value.Url(), value.Code(), value.Display());
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen value) =>
+        new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie? FromValue(
-        string code
-    ) =>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen? FromValue(string code) =>
         code switch
         {
-            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv,
-            "gering-positiv" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoMammaRezeptorstatusLeitlinie
-                .GeringPositiv,
-            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ,
+            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.K,
+            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.R,
+            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.T,
+            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.P,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.N,
+            "F" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.F,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.U,
+            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.X,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie FromValueOrThrow(
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen FromValueOrThrow(
         string code
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoAsaObds"/>.</summary>
-public static class MiiCsOnkoAsaObdsExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung"/>.</summary>
+public static class MiiCsOnkoVerlaufGesamtbeurteilungExtensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoAsaObds _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds";
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoAsaObds value) =>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._1 => "1",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._3 => "3",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._4 => "4",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._5 => "5",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._6 => "6",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoAsaObds value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._1 => "ASA I",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._2 => "ASA II",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._3 => "ASA III",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._4 => "ASA IV",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._5 => "ASA V",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds._6 => "ASA VI",
-            Onkologie.CodeSystems.MiiCsOnkoAsaObds.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoAsaObds value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAsaObds"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoAsaObds? FromValue(string code) =>
-        code switch
-        {
-            "1" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._1,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._2,
-            "3" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._3,
-            "4" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._4,
-            "5" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._5,
-            "6" => Onkologie.CodeSystems.MiiCsOnkoAsaObds._6,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoAsaObds.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAsaObds"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoAsaObds FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014"/>.</summary>
-public static class MiiCsOnkoStrahlentherapieZielgebiet2014Extensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014</c>.</returns>
-    public static string Url(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 _
-    ) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1 => "1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11 => "1.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12 => "1.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13 => "1.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2 => "2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos => "2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg => "2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21 => "2.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos => "2.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg => "2.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22 => "2.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos => "2.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg => "2.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23 => "2.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos => "2.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg => "2.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24 => "2.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos => "2.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg => "2.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25 => "2.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos => "2.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg => "2.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26 => "2.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos => "2.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg => "2.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27 => "2.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos => "2.7.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg => "2.7.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28 => "2.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos => "2.8.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg => "2.8.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29 => "2.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3 => "3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos => "3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg => "3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31 => "3.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos => "3.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg => "3.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32 => "3.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos => "3.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg => "3.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33 => "3.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos => "3.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg => "3.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34 => "3.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos => "3.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg => "3.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35 => "3.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos => "3.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg => "3.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36 => "3.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos => "3.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg => "3.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37 => "3.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4 => "4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos => "4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg => "4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41 => "4.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos => "4.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg => "4.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42 => "4.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos => "4.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg => "4.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43 => "4.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos => "4.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg => "4.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44 => "4.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos => "4.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg => "4.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45 => "4.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos => "4.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg => "4.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46 => "4.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos => "4.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg => "4.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47 => "4.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48 => "4.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos => "4.8.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg => "4.8.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49 => "4.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos => "4.9.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg => "4.9.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5 => "5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos => "5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg => "5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51 => "5.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos => "5.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg => "5.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52 => "5.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg => "5.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos => "5.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53 => "5.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg => "5.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos => "5.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54 => "5.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos => "5.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg => "5.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55 => "5.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos => "5.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg => "5.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56 => "5.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos => "5.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg => "5.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57 => "5.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos => "5.7.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg => "5.7.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571 => "5.7.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos => "5.7.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg => "5.7.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572 => "5.7.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos => "5.7.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg => "5.7.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58 => "5.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg => "5.8.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos => "5.8.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59 => "5.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg => "5.9.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos => "5.9.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510 => "5.10.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos => "5.10.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg => "5.10.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511 => "5.11.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos => "5.11.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg => "5.11.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512 => "5.12.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6 => "6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61 => "6.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62 => "6.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63 => "6.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64 => "6.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65 => "6.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66 => "6.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67 => "6.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68 => "6.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69 => "6.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610 => "6.10.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611 => "6.11.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612 => "6.12.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613 => "6.13.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614 => "6.14.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615 => "6.15.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616 => "6.16.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7 => "7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos => "7.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg => "7.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71 => "7.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72 => "7.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8 => "8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81 => "8.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82 => "8.2.",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.V => "V",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.T => "T",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.K => "K",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.D => "D",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.B => "B",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.R => "R",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.Y => "Y",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.X => "X",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
     public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 value
+        this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung value
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1 => "ZNS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11 => "Ganzhirn",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12 => "Teilhirn",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13 => "Neuroachse",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2 => "Kopf-Hals",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos =>
-                "Kopf-Hals mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg =>
-                "Kopf-Hals ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21 => "Orbita, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos => "Orbita mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg =>
-                "Orbita ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22 =>
-                "Nase/ Nasennebenhöhle, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos =>
-                "Nase/ Nasennebenhöhle mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg =>
-                "Nase/ Nasennebenhöhle ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23 =>
-                "Mundhöhle, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos =>
-                "Mundhöhle mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg =>
-                "Mundhöhle ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24 => "Ohr, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos => "Ohr mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg => "Ohr ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25 =>
-                "Speicheldrüse, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos =>
-                "Speicheldrüse mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg =>
-                "Speicheldrüse ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26 => "Pharynx, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos =>
-                "Pharynx mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg =>
-                "Pharynx ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27 => "Larynx, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos => "Larynx mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg =>
-                "Larynx ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28 =>
-                "Schilddrüse, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos =>
-                "Schilddrüse mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg =>
-                "Schilddrüse ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29 => "Halslymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3 => "Thorax",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos => "Thorax mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg => "Thorax ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31 =>
-                "Mamma als Ganzbrust, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos =>
-                "Mamma als Ganzbrust mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg =>
-                "Mamma als Ganzbrust ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32 =>
-                "Mamma als Teilbrust, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos =>
-                "Mamma als Teilbrust mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg =>
-                "Mamma als Teilbrust ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33 => "Brustwand",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos =>
-                "Brustwand mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg =>
-                "Brustwand ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34 => "Lunge, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos => "Lunge mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg => "Lunge ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35 =>
-                "Ösophagus, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos =>
-                "Ösophagus mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg =>
-                "Ösophagus ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36 => "Thymus, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos => "Thymus mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg =>
-                "Thymus ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37 =>
-                "Mediastinale Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4 =>
-                "Abdomen (ohne Becken)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos =>
-                "Abdomen (ohne Becken) mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg =>
-                "Abdomen (ohne Becken) ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41 => "Magen, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos => "Magen mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg => "Magen ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42 => "Pankreas, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos =>
-                "Pankreas mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg =>
-                "Pankreas ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43 => "Leber, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos => "Leber mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg => "Leber ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44 => "Milz, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos => "Milz mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg => "Milz ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45 => "Niere, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos => "Niere mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg => "Niere ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46 =>
-                "Nebenniere, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos =>
-                "Nebenniere mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg =>
-                "Nebenniere ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47 =>
-                "Retroperitoneale Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48 =>
-                "Retroperitoneum, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos =>
-                "Retroperitoneum mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg =>
-                "Retroperitoneum ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49 =>
-                "Bauchwand, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos =>
-                "Bauchwand mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg =>
-                "Bauchwand ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5 => "Becken",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos => "Becken mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg => "Becken ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51 => "Rektum, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos => "Rektum mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg =>
-                "Rektum ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52 =>
-                "Analbereich, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg =>
-                "Analbereich ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos =>
-                "Analbereich mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53 =>
-                "Harnblase, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg =>
-                "Harnblase ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos =>
-                "Harnblase mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54 => "Prostata, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos =>
-                "Prostata mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg =>
-                "Prostata ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55 => "Hoden, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos => "Hoden mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg => "Hoden ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56 => "Penis, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos => "Penis mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg => "Penis ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57 =>
-                "Uterus und Zervix, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos =>
-                "Uterus und Zervix mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg =>
-                "Uterus und Zervix ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571 => "Uterus",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos =>
-                "Uterus mit Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg =>
-                "Uterus ohne Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572 => "Zervix",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos =>
-                "Zervix mit Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg =>
-                "Zervix ohne Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58 => "Ovar, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg => "Ovar ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos => "Ovar mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59 => "Vulva, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg => "Vulva ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos => "Vulva mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510 => "Vagina, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos =>
-                "Vagina mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg =>
-                "Vagina ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511 =>
-                "Beckenwand, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos =>
-                "Beckenwand mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg =>
-                "Beckenwand ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512 =>
-                "Beckenlymphkn. (ohne Primtu.)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6 =>
-                "Stütz-/Bewegungsapparat",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61 => "Schädelknochen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62 => "Rippen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63 => "Sternum",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64 => "HWS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65 => "BWS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66 => "LWS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67 =>
-                "knöchernes Becken",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68 => "Hüfte",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69 => "Schulter",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610 => "Oberarm",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611 => "Unterarm",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612 => "Hand",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613 => "Leiste",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614 => "Oberschenkel",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615 => "Unterschenkel",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616 => "Fuß",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7 => "Haut",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos =>
-                "Haut mit Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg =>
-                "Haut ohne Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71 =>
-                "Primärer Hauttumor",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72 => "Hautmetastasen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8 => "Sonstiges",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81 =>
-                "Ganzkörperbestrahlung",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82 =>
-                "Mantelfeldbestrahlung",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.V =>
+                "Vollremission (complete remission, CR)",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.T =>
+                "Teilremission (partial remission, PR)",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.K =>
+                "keine Änderung (no change, NC) = stable disease",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.P => "Progression",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.D => "divergentes Geschehen",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.B =>
+                "klinische Besserung des Zustandes, Teilremissionkriterien jedoch nicht erfüllt (minimal response, MR)",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.R =>
+                "Vollremission mit residualen Auffälligkeiten (CRr)",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.Y => "Rezidiv",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.U => "Beurteilung unmöglich",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.X => "fehlende Angabe",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
     public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 value
+        this Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung value
     ) => new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014? FromValue(
-        string code
-    ) =>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung? FromValue(string code) =>
         code switch
         {
-            "1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1,
-            "1.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11,
-            "1.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12,
-            "1.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13,
-            "2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2,
-            "2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos,
-            "2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg,
-            "2.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21,
-            "2.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos,
-            "2.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg,
-            "2.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22,
-            "2.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos,
-            "2.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg,
-            "2.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23,
-            "2.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos,
-            "2.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg,
-            "2.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24,
-            "2.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos,
-            "2.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg,
-            "2.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25,
-            "2.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos,
-            "2.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg,
-            "2.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26,
-            "2.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos,
-            "2.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg,
-            "2.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27,
-            "2.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos,
-            "2.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg,
-            "2.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28,
-            "2.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos,
-            "2.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg,
-            "2.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29,
-            "3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3,
-            "3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos,
-            "3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg,
-            "3.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31,
-            "3.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos,
-            "3.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg,
-            "3.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32,
-            "3.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos,
-            "3.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg,
-            "3.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33,
-            "3.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos,
-            "3.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg,
-            "3.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34,
-            "3.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos,
-            "3.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg,
-            "3.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35,
-            "3.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos,
-            "3.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg,
-            "3.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36,
-            "3.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos,
-            "3.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg,
-            "3.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37,
-            "4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4,
-            "4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos,
-            "4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg,
-            "4.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41,
-            "4.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos,
-            "4.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg,
-            "4.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42,
-            "4.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos,
-            "4.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg,
-            "4.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43,
-            "4.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos,
-            "4.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg,
-            "4.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44,
-            "4.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos,
-            "4.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg,
-            "4.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45,
-            "4.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos,
-            "4.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg,
-            "4.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46,
-            "4.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos,
-            "4.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg,
-            "4.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47,
-            "4.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48,
-            "4.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos,
-            "4.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg,
-            "4.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49,
-            "4.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos,
-            "4.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg,
-            "5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5,
-            "5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos,
-            "5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg,
-            "5.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51,
-            "5.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos,
-            "5.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg,
-            "5.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52,
-            "5.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg,
-            "5.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos,
-            "5.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53,
-            "5.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg,
-            "5.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos,
-            "5.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54,
-            "5.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos,
-            "5.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg,
-            "5.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55,
-            "5.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos,
-            "5.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg,
-            "5.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56,
-            "5.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos,
-            "5.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg,
-            "5.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57,
-            "5.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos,
-            "5.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg,
-            "5.7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571,
-            "5.7.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos,
-            "5.7.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg,
-            "5.7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572,
-            "5.7.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos,
-            "5.7.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg,
-            "5.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58,
-            "5.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg,
-            "5.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos,
-            "5.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59,
-            "5.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg,
-            "5.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos,
-            "5.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510,
-            "5.10.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos,
-            "5.10.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg,
-            "5.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511,
-            "5.11.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos,
-            "5.11.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg,
-            "5.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512,
-            "6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6,
-            "6.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61,
-            "6.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62,
-            "6.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63,
-            "6.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64,
-            "6.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65,
-            "6.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66,
-            "6.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67,
-            "6.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68,
-            "6.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69,
-            "6.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610,
-            "6.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611,
-            "6.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612,
-            "6.13." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613,
-            "6.14." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614,
-            "6.15." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615,
-            "6.16." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616,
-            "7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7,
-            "7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos,
-            "7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg,
-            "7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71,
-            "7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72,
-            "8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8,
-            "8.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81,
-            "8.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82,
+            "V" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.V,
+            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.T,
+            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.K,
+            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.P,
+            "D" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.D,
+            "B" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.B,
+            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.R,
+            "Y" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.Y,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.U,
+            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung.X,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014 FromValueOrThrow(
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufGesamtbeurteilung FromValueOrThrow(
         string code
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation"/>.</summary>
-public static class MiiCsOnkoSeitenlokalisationExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten"/>.</summary>
+public static class MiiCsOnkoVerlaufLymphknotenExtensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation";
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation value) =>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.L => "L",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.R => "R",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.B => "B",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.M => "M",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.T => "T",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.K => "K",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.R => "R",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.T => "T",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.F => "F",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.X => "X",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation value) =>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.L => "links",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.R => "rechts",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.B => "beidseitig",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.M => "Mittellinie/mittig",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.T => "trifft nicht zu",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.K =>
+                "kein Lymphknotenbefall nachweisbar",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.R =>
+                "neu aufgetretenes Lymphknotenrezidiv",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.T =>
+                "bekannter Lymphknotenbefall Residuen",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.P =>
+                "bekannter Lymphknotenbefall Progress",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.N =>
+                "bekannter Lymphknotenbefall No Change",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.F => "fraglicher Befund",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.X => "fehlende Angabe",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation value) =>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten value) =>
         new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation? FromValue(string code) =>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten? FromValue(string code) =>
         code switch
         {
-            "L" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.L,
-            "R" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.R,
-            "B" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.B,
-            "M" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.M,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.U,
-            "T" => Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation.T,
+            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.K,
+            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.R,
+            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.T,
+            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.P,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.N,
+            "F" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.F,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.U,
+            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten.X,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoSeitenlokalisation FromValueOrThrow(string code) =>
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufLymphknoten FromValueOrThrow(string code) =>
         FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoGrading"/>.</summary>
-public static class MiiCsOnkoGradingExtensions
+/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor"/>.</summary>
+public static class MiiCsOnkoVerlaufPrimaertumorExtensions
 {
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoGrading _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading";
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor</c>.</returns>
+    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoGrading value) =>
+    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoGrading._0 => "0",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._1 => "1",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._3 => "3",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._4 => "4",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._5 => "5",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.X => "X",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.L => "L",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.M => "M",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.H => "H",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.B => "B",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.T => "T",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.K => "K",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.T => "T",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.P => "P",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.N => "N",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.R => "R",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.F => "F",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.U => "U",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.X => "X",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoGrading value) =>
+    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoGrading._0 =>
-                "primär erworbene Melanose ohne zelluläre Atypien",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._1 => "gut differenziert",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._2 => "mäßig differenziert",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._3 => "schlecht differenziert",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._4 => "undifferenziert",
-            Onkologie.CodeSystems.MiiCsOnkoGrading._5 => "nur für C61, TNM8",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.X => "nicht bestimmbar",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.L => "low grade (G1 oder G2)",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.M => "intermediate grade (G2 oder G3)",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.H => "high grade (G3 oder G4)",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.B => "Borderline",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoGrading.T => "trifft nicht zu",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.K => "kein Tumor nachweisbar",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.T => "Tumorreste (Residualtumor)",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.P =>
+                "Tumorreste (Residualtumor) Progress",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.N =>
+                "Tumorreste (Residualtumor) No Change",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.R => "Lokalrezidiv",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.F => "fraglicher Befund",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.U => "unbekannt",
+            Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.X => "fehlende Angabe",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoGrading value) =>
+    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor value) =>
         new(value.Url(), value.Code(), value.Display());
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGrading"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoGrading? FromValue(string code) =>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor"/>, or <c>null</c> if none matches.</returns>
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor? FromValue(string code) =>
         code switch
         {
-            "0" => Onkologie.CodeSystems.MiiCsOnkoGrading._0,
-            "1" => Onkologie.CodeSystems.MiiCsOnkoGrading._1,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoGrading._2,
-            "3" => Onkologie.CodeSystems.MiiCsOnkoGrading._3,
-            "4" => Onkologie.CodeSystems.MiiCsOnkoGrading._4,
-            "5" => Onkologie.CodeSystems.MiiCsOnkoGrading._5,
-            "X" => Onkologie.CodeSystems.MiiCsOnkoGrading.X,
-            "L" => Onkologie.CodeSystems.MiiCsOnkoGrading.L,
-            "M" => Onkologie.CodeSystems.MiiCsOnkoGrading.M,
-            "H" => Onkologie.CodeSystems.MiiCsOnkoGrading.H,
-            "B" => Onkologie.CodeSystems.MiiCsOnkoGrading.B,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoGrading.U,
-            "T" => Onkologie.CodeSystems.MiiCsOnkoGrading.T,
+            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.K,
+            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.T,
+            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.P,
+            "N" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.N,
+            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.R,
+            "F" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.F,
+            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.U,
+            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor.X,
             _ => null,
         };
 
     /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGrading"/>.</returns>
+    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoGrading FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufPrimaertumor FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds"/>.</summary>
@@ -8762,1293 +10049,6 @@ public static class MiiCsOnkoWeitereKlassifikationenObdsExtensions
     public static Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds FromValueOrThrow(
         string code
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationUrgency"/>.</summary>
-public static class MiiCsOnkoOperationUrgencyExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.E => "E",
-            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.E => "Elektiveingriff",
-            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.N => "Notfalleingriff",
-            Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoOperationUrgency value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationUrgency"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoOperationUrgency? FromValue(string code) =>
-        code switch
-        {
-            "E" => Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.E,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoOperationUrgency.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoOperationUrgency"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoOperationUrgency FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung"/>.</summary>
-public static class MiiCsOnkoGenetischeVarianteAuspraegungExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.M => "M",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.W => "W",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.S => "S",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.M => "Mutation/positiv",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.W =>
-                "Wildtyp/nicht mutiert/ negativ",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.P => "Polymorphismus",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.S => "Sonstiges",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.N => "Nicht bestimmbar",
-            Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "M" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.M,
-            "W" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.W,
-            "P" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.P,
-            "S" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.S,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoGenetischeVarianteAuspraegung FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmUicc"/>.</summary>
-public static class MiiCsOnkoTnmUiccExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.uicc.org/resources/tnm</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc _) =>
-        "https://www.uicc.org/resources/tnm";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Y => "y",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.R => "r",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.A => "a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C => "c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P => "p",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U => "u",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx => "TX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0 => "T0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta => "Ta",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis => "Tis",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn => "Tis(LAMN)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis => "Tis(DCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis => "Tis(LCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget => "Tis(Paget)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu => "Tis(pu)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd => "Tis(pd)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1 => "T1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi => "T1mi",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a => "T1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1 => "T1a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2 => "T1a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b => "T1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1 => "T1b1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2 => "T1b2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c => "T1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1 => "T1c1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2 => "T1c2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3 => "T1c3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d => "T1d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2 => "T2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a => "T2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1 => "T2a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2 => "T2a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b => "T2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c => "T2c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d => "T2d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3 => "T3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a => "T3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b => "T3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c => "T3c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d => "T3d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e => "T3e",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4 => "T4",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a => "T4a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b => "T4b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c => "T4c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d => "T4d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e => "T4e",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M => "m",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3 => "3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._4 => "4",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._5 => "5",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._6 => "6",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._7 => "7",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8 => "8",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9 => "9",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10 => "10",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx => "NX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0 => "N0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1 => "N1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi => "N1mi",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a => "N1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b => "N1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c => "N1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2 => "N2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a => "N2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b => "N2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c => "N2c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3 => "N3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a => "N3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b => "N3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c => "N3c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0 => "M0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1 => "M1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a => "M1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b => "M1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c => "M1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d => "M1d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx => "MX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos => "i+",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg => "i-",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos => "mol+",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg => "mol-",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn => "sn",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0 => "L0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1 => "L1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx => "LX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0 => "V0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1 => "V1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2 => "V2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx => "VX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0 => "Pn0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1 => "Pn1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX => "PnX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0 => "S0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1 => "S1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2 => "S2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3 => "S3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx => "SX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk => "okk",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0 => "0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a => "0a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is => "0is",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I => "I",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia => "IA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1 => "IA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2 => "IA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3 => "IA3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib => "IB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1 => "IB1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2 => "IB2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic => "IC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is => "IS",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii => "II",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia => "IIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1 => "IIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2 => "IIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib => "IIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic => "IIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii => "III",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia => "IIIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1 => "IIIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2 => "IIIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib => "IIIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic => "IIIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1 => "IIIC1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2 => "IIIC2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid => "IIID",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv => "IV",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva => "IVA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1 => "IVA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2 => "IVA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb => "IVB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc => "IVC",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Y => "y",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.R => "r",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.A => "a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C => "c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P => "p",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U => "u",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx => "TX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0 => "T0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta => "Ta",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis => "Tis",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn => "Tis(LAMN)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis => "Tis(DCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis => "Tis(LCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget => "Tis(Paget)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu => "Tis(pu)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd => "Tis(pd)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1 => "T1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi => "T1mi",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a => "T1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1 => "T1a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2 => "T1a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b => "T1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1 => "T1b1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2 => "T1b2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c => "T1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1 => "T1c1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2 => "T1c2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3 => "T1c3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d => "T1d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2 => "T2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a => "T2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1 => "T2a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2 => "T2a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b => "T2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c => "T2c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d => "T2d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3 => "T3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a => "T3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b => "T3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c => "T3c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d => "T3d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e => "T3e",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4 => "T4",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a => "T4a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b => "T4b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c => "T4c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d => "T4d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e => "T4e",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M => "(m)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2 => "(2)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3 => "(3)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._4 => "(4)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._5 => "(5)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._6 => "(6)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._7 => "(7)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8 => "(8)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9 => "(9)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10 => "(10)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx => "Nx",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0 => "N0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1 => "N1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi => "N1(mi)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a => "N1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b => "N1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c => "N1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2 => "N2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a => "N2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b => "N2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c => "N2c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3 => "N3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a => "N3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b => "N3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c => "N3c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0 => "M0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1 => "M1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a => "M1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b => "M1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c => "M1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d => "M1d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx => "MX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos => "(i+)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg => "(i-)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos => "(mol+)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg => "(mol-)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn => "(sn)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0 => "L0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1 => "L1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx => "LX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0 => "V0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1 => "V1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2 => "V2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx => "VX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0 => "Pn0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1 => "Pn1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX => "PnX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0 => "S0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1 => "S1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2 => "S2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3 => "S3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx => "SX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk => "Stadium X",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0 => "Stadium 0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a => "Stadium 0a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is => "Stadium 0is",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I => "Stadium I",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia => "Stadium IA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1 => "Stadium IA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2 => "Stadium IA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3 => "Stadium IA3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib => "Stadium IB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1 => "Stadium IB1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2 => "Stadium IB2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic => "Stadium IC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is => "Stadium IS",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii => "Stadium II",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia => "Stadium IIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1 => "Stadium IIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2 => "Stadium IIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib => "Stadium IIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic => "Stadium IIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii => "Stadium III",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia => "Stadium IIIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1 => "Stadium IIIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2 => "Stadium IIIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib => "Stadium IIIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic => "Stadium IIIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1 => "Stadium IIIC1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2 => "Stadium IIIC2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid => "Stadium IIID",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv => "Stadium IV",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva => "Stadium IVA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1 => "Stadium IVA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2 => "Stadium IVA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb => "Stadium IVB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc => "Stadium IVC",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTnmUicc value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmUicc"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoTnmUicc? FromValue(string code) =>
-        code switch
-        {
-            "y" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Y,
-            "r" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.R,
-            "a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.A,
-            "c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C,
-            "p" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P,
-            "u" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U,
-            "TX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx,
-            "T0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0,
-            "Ta" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta,
-            "Tis" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis,
-            "Tis(LAMN)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn,
-            "Tis(DCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis,
-            "Tis(LCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis,
-            "Tis(Paget)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget,
-            "Tis(pu)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu,
-            "Tis(pd)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd,
-            "T1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1,
-            "T1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi,
-            "T1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a,
-            "T1a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1,
-            "T1a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2,
-            "T1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b,
-            "T1b1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1,
-            "T1b2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2,
-            "T1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c,
-            "T1c1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1,
-            "T1c2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2,
-            "T1c3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3,
-            "T1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d,
-            "T2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2,
-            "T2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a,
-            "T2a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1,
-            "T2a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2,
-            "T2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b,
-            "T2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c,
-            "T2d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d,
-            "T3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3,
-            "T3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a,
-            "T3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b,
-            "T3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c,
-            "T3d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d,
-            "T3e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e,
-            "T4" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4,
-            "T4a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a,
-            "T4b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b,
-            "T4c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c,
-            "T4d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d,
-            "T4e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e,
-            "m" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2,
-            "3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3,
-            "4" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._4,
-            "5" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._5,
-            "6" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._6,
-            "7" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._7,
-            "8" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8,
-            "9" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9,
-            "10" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10,
-            "NX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx,
-            "N0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0,
-            "N1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1,
-            "N1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi,
-            "N1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a,
-            "N1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b,
-            "N1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c,
-            "N2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2,
-            "N2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a,
-            "N2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b,
-            "N2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c,
-            "N3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3,
-            "N3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a,
-            "N3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b,
-            "N3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c,
-            "M0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0,
-            "M1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1,
-            "M1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a,
-            "M1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b,
-            "M1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c,
-            "M1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d,
-            "MX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx,
-            "i+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos,
-            "i-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg,
-            "mol+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos,
-            "mol-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg,
-            "sn" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn,
-            "L0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0,
-            "L1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1,
-            "LX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx,
-            "V0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0,
-            "V1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1,
-            "V2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2,
-            "VX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx,
-            "Pn0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0,
-            "Pn1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1,
-            "PnX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX,
-            "S0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0,
-            "S1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1,
-            "S2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2,
-            "S3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3,
-            "SX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx,
-            "okk" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk,
-            "0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0,
-            "0a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a,
-            "0is" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is,
-            "I" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I,
-            "IA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia,
-            "IA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1,
-            "IA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2,
-            "IA3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3,
-            "IB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib,
-            "IB1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1,
-            "IB2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2,
-            "IC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic,
-            "IS" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is,
-            "II" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii,
-            "IIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia,
-            "IIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1,
-            "IIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2,
-            "IIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib,
-            "IIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic,
-            "III" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii,
-            "IIIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia,
-            "IIIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1,
-            "IIIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2,
-            "IIIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib,
-            "IIIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic,
-            "IIIC1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1,
-            "IIIC2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2,
-            "IIID" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid,
-            "IV" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv,
-            "IVA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva,
-            "IVA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1,
-            "IVA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2,
-            "IVB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb,
-            "IVC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmUicc"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoTnmUicc FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration"/>.</summary>
-public static class MiiCsOnkoMelanomUlzerationExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.J => "J",
-            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.J => "Ja",
-            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.N => "Nein",
-            Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration? FromValue(string code) =>
-        code switch
-        {
-            "J" => Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.J,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoMelanomUlzeration FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog"/>.</summary>
-public static class MiiCsOnkoAllgemeinerLeistungszustandEcogExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog</c>.</returns>
-    public static string Url(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog _
-    ) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._0 => "0",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._1 => "1",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._2 => "2",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._3 => "3",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._4 => "4",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._0 =>
-                "Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._1 =>
-                "Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z. B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._2 =>
-                "Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50 % der Wachzeit aufstehen (50 - 60 % nach Karnofsky)",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._3 =>
-                "Nur begrenzte Selbstversorgung möglich; ist 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden (30  40 % nach Karnofsky)",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._4 =>
-                "Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20 % nach Karnofsky)",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "0" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._0,
-            "1" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._1,
-            "2" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._2,
-            "3" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._3,
-            "4" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog._4,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandEcog FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie"/>.</summary>
-public static class MiiCsOnkoMammaHer2NeuStatusLeitlinieExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv => "positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low => "low",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow => "ultralow",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ => "negativ",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal => "equivocal",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv => "HER2-positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low => "HER2-low",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow => "HER2-ultralow",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ => "HER2-negativ",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal => "equivocal",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv,
-            "low" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low,
-            "ultralow" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow,
-            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ,
-            "equivocal" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen"/>.</summary>
-public static class MiiCsOnkoVerlaufFernmetastasenExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.R => "R",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.T => "T",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.F => "F",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.X => "X",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.K =>
-                "keine Fernmetastasen nachweisbar",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.R =>
-                "neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.T => "Fernmetastasen Residuen",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.P => "Fernmetastasen Progress",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.N => "Fernmetastasen No Change",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.F => "fraglicher Befund",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.X => "fehlende Angabe",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen? FromValue(string code) =>
-        code switch
-        {
-            "K" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.K,
-            "R" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.R,
-            "T" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.T,
-            "P" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.P,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.N,
-            "F" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.F,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.U,
-            "X" => Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen.X,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoVerlaufFernmetastasen FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky"/>.</summary>
-public static class MiiCsOnkoAllgemeinerLeistungszustandKarnofskyExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky</c>.</returns>
-    public static string Url(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky _
-    ) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100 => "100%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90 => "90%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80 => "80%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70 => "70%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60 => "60%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50 => "50%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40 => "40%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30 => "30%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20 => "20%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10 => "10%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0 => "0%",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100 => "100%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90 => "90%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80 => "80%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70 => "70%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60 => "60%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50 => "50%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40 => "40%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30 => "30%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20 => "20%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10 => "10%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0 => "0%",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "100%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100,
-            "90%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90,
-            "80%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80,
-            "70%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70,
-            "60%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60,
-            "50%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50,
-            "40%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40,
-            "30%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30,
-            "20%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20,
-            "10%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10,
-            "0%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart"/>.</summary>
-public static class MiiCsOnkoStrahlentherapieStrahlenartExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh => "UH",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El => "EL",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne => "NE",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn => "PN",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si => "SI",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro => "RO",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So => "SO",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177 => "Lu-177",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131 => "J-131",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90 => "Y-90",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223 => "Ra-223",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225 => "Ac-225",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153 => "Sm-153",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161 => "Tb-161",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89 => "Sr-89",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192 => "Ir-192",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60 => "Co-60",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu => "SONU",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh =>
-                "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El => "Elektronen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne => "Neutronen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn =>
-                "Protonen (leichte Wasserstoffionen/H1/Leichtionen)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si =>
-                "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro => "Weichstrahl (kV)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So =>
-                "Sonstige (inklusive Mixed Beams, exklusive Nuklide)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177 => "Lu-177",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131 => "J131",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90 => "Y-90",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223 => "Ra-223",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225 => "Ac-225",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153 => "Sm-153",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161 => "Tb-161",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89 => "Sr-89",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192 => "Ir-192",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60 => "Co-60",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu => "Sonstige Nuklide",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "UH" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh,
-            "EL" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El,
-            "NE" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne,
-            "PN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn,
-            "SI" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si,
-            "RO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro,
-            "SO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So,
-            "Lu-177" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177,
-            "J-131" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131,
-            "Y-90" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90,
-            "Ra-223" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223,
-            "Ac-225" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225,
-            "Sm-153" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153,
-            "Tb-161" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161,
-            "Sr-89" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89,
-            "Ir-192" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192,
-            "Co-60" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60,
-            "SONU" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost"/>.</summary>
-public static class MiiCsOnkoStrahlentherapieBoostExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J => "J",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib => "SIB",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq => "SEQ",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon => "KON",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N => "N",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J => "ja, mit Boost o. n. A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib =>
-                "simultan integrierter Boost",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq => "sequentieller Boost",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon => "konkomitanter Boost",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N => "nein, ohne Boost",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost? FromValue(string code) =>
-        code switch
-        {
-            "J" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J,
-            "SIB" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib,
-            "SEQ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq,
-            "KON" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung"/>.</summary>
-public static class MiiCsOnkoTherapieabweichungExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.J => "J",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.J => "ja",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.N => "nein",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.U => "unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung? FromValue(string code) =>
-        code switch
-        {
-            "J" => Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.J,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoTherapieabweichung FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme"/>.</summary>
-public static class MiiCsOnkoStudienteilnahmeExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.J => "J",
-            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.N => "N",
-            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.J => "Ja",
-            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.N => "Nein",
-            Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme? FromValue(string code) =>
-        code switch
-        {
-            "J" => Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.J,
-            "N" => Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.N,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoStudienteilnahme FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz"/>.</summary>
-public static class MiiCsOnkoKrkAnastomoseninsuffizienzExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.B => "B",
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.C => "C",
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz value
-    ) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.B =>
-                "Anastomoseninsuffizienz Grad B",
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.C =>
-                "Anastomoseninsuffizienz Grad C",
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.K =>
-                "Keine Insuffizienz oder höchstens Grad A",
-            Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.U => "Unbekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "B" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.B,
-            "C" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.C,
-            "K" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.K,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoKrkAnastomoseninsuffizienz FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Onkologie.CodeSystems.MiiCsOnkoResidualstatus"/>.</summary>
-public static class MiiCsOnkoResidualstatusExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus</c>.</returns>
-    public static string Url(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0 => "R0",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1 => "R1",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is => "R1(is)",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy => "R1(cy+)",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2 => "R2",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx => "RX",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U => "U",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus value) =>
-        value switch
-        {
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0 => "Kein Residualtumor",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1 => "Mikroskopischer Residualtumor",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is => "In-Situ-Rest",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy => "Cytologischer Rest",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2 => "Makroskopischer Residualtumor",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx =>
-                "Vorhandensein von Residualtumor kann nicht beurteilt werden",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U =>
-                "Residualtumorstatus ist nicht bekannt",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Onkologie.CodeSystems.MiiCsOnkoResidualstatus value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoResidualstatus"/>, or <c>null</c> if none matches.</returns>
-    public static Onkologie.CodeSystems.MiiCsOnkoResidualstatus? FromValue(string code) =>
-        code switch
-        {
-            "R0" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0,
-            "R1" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1,
-            "R1(is)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is,
-            "R1(cy+)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy,
-            "R2" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2,
-            "RX" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx,
-            "U" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoResidualstatus"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Onkologie.CodeSystems.MiiCsOnkoResidualstatus FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for reading <see cref="Onkologie.Extensions"/> from FHIR resources.</summary>

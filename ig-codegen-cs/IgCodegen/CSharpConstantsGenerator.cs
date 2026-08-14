@@ -79,7 +79,12 @@ public static class CSharpConstantsGenerator
         });
 
         // Extension method classes must be at namespace level in C#.
-        foreach (var (constantName, concepts) in model.CodeSystemConcepts)
+        foreach (
+            var (constantName, concepts) in model.CodeSystemConcepts.OrderBy(
+                kvp => kvp.Key,
+                StringComparer.Ordinal
+            )
+        )
         {
             string enumName = NameUtils.ToPascalCase(constantName);
             string systemUrl = model.CodeSystems[constantName];
@@ -133,7 +138,12 @@ public static class CSharpConstantsGenerator
                 }
             });
 
-            foreach (var (constantName, concepts) in model.CodeSystemConcepts)
+            foreach (
+                var (constantName, concepts) in model.CodeSystemConcepts.OrderBy(
+                    kvp => kvp.Key,
+                    StringComparer.Ordinal
+                )
+            )
             {
                 string enumName = NameUtils.ToPascalCase(constantName);
                 string systemUrl = model.CodeSystems[constantName];

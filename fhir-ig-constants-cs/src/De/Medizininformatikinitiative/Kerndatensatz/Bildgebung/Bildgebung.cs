@@ -30,127 +30,6 @@ public static class Bildgebung
                 "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type";
         }
 
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type</c>.</summary>
-        public enum MiiCsBildgebungTransducerType
-        {
-            /// <summary><c>SECTOR_PHASED</c> - Sector Phased</summary>
-            SectorPhased,
-
-            /// <summary><c>SECTOR_MECH</c> - Sector Mech</summary>
-            SectorMech,
-
-            /// <summary><c>SECTOR_ANNULAR</c> - Sector Annular</summary>
-            SectorAnnular,
-
-            /// <summary><c>LINEAR</c> - Linear</summary>
-            Linear,
-
-            /// <summary><c>CURVED_LINEAR</c> - Curved Linear</summary>
-            CurvedLinear,
-
-            /// <summary><c>SINGLE_CRYSTAL</c> - Single Crystal</summary>
-            SingleCrystal,
-
-            /// <summary><c>SPLIT_XTAL_CWD</c> - Split Xtal CWD</summary>
-            SplitXtalCwd,
-
-            /// <summary><c>IV_PHASED</c> - IV Phased</summary>
-            IvPhased,
-
-            /// <summary><c>IV_ROT_XTAL</c> - IV Rot XTAL</summary>
-            IvRotXtal,
-
-            /// <summary><c>IV_ROT_MIRROR</c> - IV Rot Mirror</summary>
-            IvRotMirror,
-
-            /// <summary><c>ENDOCAV_PA</c> - Endocav PA</summary>
-            EndocavPa,
-
-            /// <summary><c>ENDOCAV_MECH</c> - Endocav Mech</summary>
-            EndocavMech,
-
-            /// <summary><c>ENDOCAV_CLA</c> - EndocavCLA</summary>
-            EndocavCla,
-
-            /// <summary><c>ENDOCAV_AA</c> - Endocav AA</summary>
-            EndocavAa,
-
-            /// <summary><c>ENDOCAV_LINEAR</c> - Endocav Linear</summary>
-            EndocavLinear,
-
-            /// <summary><c>VECTOR_PHASED</c> - Vector Phased</summary>
-            VectorPhased,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type</c>.</summary>
-        public enum MiiCsBildgebungSeriesType
-        {
-            /// <summary><c>STATIC</c> - a group of images at varying spatial locations at the same time</summary>
-            Static,
-
-            /// <summary><c>DYNAMIC</c> - a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices</summary>
-            Dynamic,
-
-            /// <summary><c>GATED</c> - a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals</summary>
-            Gated,
-
-            /// <summary><c>WHOLEBODY</c> - same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)</summary>
-            Wholebody,
-
-            /// <summary><c>IMAGE</c> - a tomographic image slice</summary>
-            Image,
-
-            /// <summary><c>REPROJECTION</c> - a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)</summary>
-            Reprojection,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence</c>.</summary>
-        public enum MiiCsBildgebungScanningSequence
-        {
-            /// <summary><c>SE</c> - Spin Echo</summary>
-            Se,
-
-            /// <summary><c>IR</c> - Inversion Recovery</summary>
-            Ir,
-
-            /// <summary><c>GR</c> - Gradient Recalled</summary>
-            Gr,
-
-            /// <summary><c>EP</c> - Echo Planar</summary>
-            Ep,
-
-            /// <summary><c>RM</c> - Research Mode</summary>
-            Rm,
-        }
-
-        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant</c>.</summary>
-        public enum MiiCsBildgebungScanningSequenceVariant
-        {
-            /// <summary><c>SK</c> - segmented k-space</summary>
-            Sk,
-
-            /// <summary><c>MTC</c> - magnetization transfer contrast</summary>
-            Mtc,
-
-            /// <summary><c>SS</c> - steady state</summary>
-            Ss,
-
-            /// <summary><c>TRSS</c> - time reversed steady state</summary>
-            Trss,
-
-            /// <summary><c>SP</c> - spoiled</summary>
-            Sp,
-
-            /// <summary><c>MP</c> - MAG prepared</summary>
-            Mp,
-
-            /// <summary><c>OSP</c> - oversampling phase</summary>
-            Osp,
-
-            /// <summary><c>NONE</c> - no sequence variant</summary>
-            None,
-        }
-
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-instance-image-type</c>.</summary>
         public enum MiiCsBildgebungInstanceImageType
         {
@@ -378,6 +257,127 @@ public static class Bildgebung
 
             /// <summary><c>0400</c> - Spatially-related frames</summary>
             _0400,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence</c>.</summary>
+        public enum MiiCsBildgebungScanningSequence
+        {
+            /// <summary><c>SE</c> - Spin Echo</summary>
+            Se,
+
+            /// <summary><c>IR</c> - Inversion Recovery</summary>
+            Ir,
+
+            /// <summary><c>GR</c> - Gradient Recalled</summary>
+            Gr,
+
+            /// <summary><c>EP</c> - Echo Planar</summary>
+            Ep,
+
+            /// <summary><c>RM</c> - Research Mode</summary>
+            Rm,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant</c>.</summary>
+        public enum MiiCsBildgebungScanningSequenceVariant
+        {
+            /// <summary><c>SK</c> - segmented k-space</summary>
+            Sk,
+
+            /// <summary><c>MTC</c> - magnetization transfer contrast</summary>
+            Mtc,
+
+            /// <summary><c>SS</c> - steady state</summary>
+            Ss,
+
+            /// <summary><c>TRSS</c> - time reversed steady state</summary>
+            Trss,
+
+            /// <summary><c>SP</c> - spoiled</summary>
+            Sp,
+
+            /// <summary><c>MP</c> - MAG prepared</summary>
+            Mp,
+
+            /// <summary><c>OSP</c> - oversampling phase</summary>
+            Osp,
+
+            /// <summary><c>NONE</c> - no sequence variant</summary>
+            None,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type</c>.</summary>
+        public enum MiiCsBildgebungSeriesType
+        {
+            /// <summary><c>STATIC</c> - a group of images at varying spatial locations at the same time</summary>
+            Static,
+
+            /// <summary><c>DYNAMIC</c> - a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices</summary>
+            Dynamic,
+
+            /// <summary><c>GATED</c> - a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals</summary>
+            Gated,
+
+            /// <summary><c>WHOLEBODY</c> - same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)</summary>
+            Wholebody,
+
+            /// <summary><c>IMAGE</c> - a tomographic image slice</summary>
+            Image,
+
+            /// <summary><c>REPROJECTION</c> - a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)</summary>
+            Reprojection,
+        }
+
+        /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type</c>.</summary>
+        public enum MiiCsBildgebungTransducerType
+        {
+            /// <summary><c>SECTOR_PHASED</c> - Sector Phased</summary>
+            SectorPhased,
+
+            /// <summary><c>SECTOR_MECH</c> - Sector Mech</summary>
+            SectorMech,
+
+            /// <summary><c>SECTOR_ANNULAR</c> - Sector Annular</summary>
+            SectorAnnular,
+
+            /// <summary><c>LINEAR</c> - Linear</summary>
+            Linear,
+
+            /// <summary><c>CURVED_LINEAR</c> - Curved Linear</summary>
+            CurvedLinear,
+
+            /// <summary><c>SINGLE_CRYSTAL</c> - Single Crystal</summary>
+            SingleCrystal,
+
+            /// <summary><c>SPLIT_XTAL_CWD</c> - Split Xtal CWD</summary>
+            SplitXtalCwd,
+
+            /// <summary><c>IV_PHASED</c> - IV Phased</summary>
+            IvPhased,
+
+            /// <summary><c>IV_ROT_XTAL</c> - IV Rot XTAL</summary>
+            IvRotXtal,
+
+            /// <summary><c>IV_ROT_MIRROR</c> - IV Rot Mirror</summary>
+            IvRotMirror,
+
+            /// <summary><c>ENDOCAV_PA</c> - Endocav PA</summary>
+            EndocavPa,
+
+            /// <summary><c>ENDOCAV_MECH</c> - Endocav Mech</summary>
+            EndocavMech,
+
+            /// <summary><c>ENDOCAV_CLA</c> - EndocavCLA</summary>
+            EndocavCla,
+
+            /// <summary><c>ENDOCAV_AA</c> - Endocav AA</summary>
+            EndocavAa,
+
+            /// <summary><c>ENDOCAV_LINEAR</c> - Endocav Linear</summary>
+            EndocavLinear,
+
+            /// <summary><c>VECTOR_PHASED</c> - Vector Phased</summary>
+            VectorPhased,
         }
     }
 
@@ -613,297 +613,6 @@ public static class Bildgebung
                 value
             );
     }
-}
-
-/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>.</summary>
-public static class MiiCsBildgebungTransducerTypeExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type</c>.</returns>
-    public static string Url(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased => "SECTOR_PHASED",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech => "SECTOR_MECH",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular => "SECTOR_ANNULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear => "LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear => "CURVED_LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal => "SINGLE_CRYSTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd => "SPLIT_XTAL_CWD",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased => "IV_PHASED",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal => "IV_ROT_XTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror => "IV_ROT_MIRROR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa => "ENDOCAV_PA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech => "ENDOCAV_MECH",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla => "ENDOCAV_CLA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa => "ENDOCAV_AA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear => "ENDOCAV_LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased => "VECTOR_PHASED",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased => "Sector Phased",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech => "Sector Mech",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular => "Sector Annular",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear => "Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear => "Curved Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal => "Single Crystal",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd => "Split Xtal CWD",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased => "IV Phased",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal => "IV Rot XTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror => "IV Rot Mirror",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa => "Endocav PA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech => "Endocav Mech",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla => "EndocavCLA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa => "Endocav AA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear => "Endocav Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased => "Vector Phased",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType? FromValue(string code) =>
-        code switch
-        {
-            "SECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased,
-            "SECTOR_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech,
-            "SECTOR_ANNULAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular,
-            "LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear,
-            "CURVED_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear,
-            "SINGLE_CRYSTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal,
-            "SPLIT_XTAL_CWD" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd,
-            "IV_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased,
-            "IV_ROT_XTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal,
-            "IV_ROT_MIRROR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror,
-            "ENDOCAV_PA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa,
-            "ENDOCAV_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech,
-            "ENDOCAV_CLA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla,
-            "ENDOCAV_AA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa,
-            "ENDOCAV_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear,
-            "VECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>.</summary>
-public static class MiiCsBildgebungSeriesTypeExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type</c>.</returns>
-    public static string Url(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static => "STATIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic => "DYNAMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated => "GATED",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody => "WHOLEBODY",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image => "IMAGE",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection => "REPROJECTION",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static =>
-                "a group of images at varying spatial locations at the same time",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic =>
-                "a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated =>
-                "a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody =>
-                "same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image => "a tomographic image slice",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection =>
-                "a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
-        new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungSeriesType? FromValue(string code) =>
-        code switch
-        {
-            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static,
-            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic,
-            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated,
-            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody,
-            "IMAGE" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image,
-            "REPROJECTION" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungSeriesType FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>.</summary>
-public static class MiiCsBildgebungScanningSequenceExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence</c>.</returns>
-    public static string Url(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence _) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se => "SE",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir => "IR",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr => "GR",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep => "EP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm => "RM",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se => "Spin Echo",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir => "Inversion Recovery",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr => "Gradient Recalled",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep => "Echo Planar",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm => "Research Mode",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence? FromValue(string code) =>
-        code switch
-        {
-            "SE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se,
-            "IR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir,
-            "GR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr,
-            "EP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep,
-            "RM" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
-}
-
-/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>.</summary>
-public static class MiiCsBildgebungScanningSequenceVariantExtensions
-{
-    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant</c>.</returns>
-    public static string Url(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant _
-    ) =>
-        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant";
-
-    /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk => "SK",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc => "MTC",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss => "SS",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss => "TRSS",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp => "SP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp => "MP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp => "OSP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None => "NONE",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
-    ) =>
-        value switch
-        {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk => "segmented k-space",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc =>
-                "magnetization transfer contrast",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss => "steady state",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss =>
-                "time reversed steady state",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp => "spoiled",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp => "MAG prepared",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp =>
-                "oversampling phase",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None =>
-                "no sequence variant",
-            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
-        };
-
-    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
-    public static Coding Coding(
-        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
-    ) => new(value.Url(), value.Code(), value.Display());
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>, or <c>null</c> if none matches.</returns>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant? FromValue(
-        string code
-    ) =>
-        code switch
-        {
-            "SK" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk,
-            "MTC" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc,
-            "SS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss,
-            "TRSS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss,
-            "SP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp,
-            "MP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp,
-            "OSP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp,
-            "NONE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None,
-            _ => null,
-        };
-
-    /// <param name="code">The FHIR code to look up.</param>
-    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>.</returns>
-    /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant FromValueOrThrow(
-        string code
-    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType"/>.</summary>
@@ -1232,6 +941,297 @@ public static class MiiCsBildgebungInstanceImageTypeExtensions
     /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
     public static Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>.</summary>
+public static class MiiCsBildgebungScanningSequenceExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence</c>.</returns>
+    public static string Url(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se => "SE",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir => "IR",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr => "GR",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep => "EP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm => "RM",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value
+    ) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se => "Spin Echo",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir => "Inversion Recovery",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr => "Gradient Recalled",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep => "Echo Planar",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm => "Research Mode",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>, or <c>null</c> if none matches.</returns>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence? FromValue(string code) =>
+        code switch
+        {
+            "SE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se,
+            "IR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir,
+            "GR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr,
+            "EP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep,
+            "RM" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>.</summary>
+public static class MiiCsBildgebungScanningSequenceVariantExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant</c>.</returns>
+    public static string Url(
+        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant _
+    ) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(
+        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
+    ) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk => "SK",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc => "MTC",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss => "SS",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss => "TRSS",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp => "SP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp => "MP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp => "OSP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None => "NONE",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
+    ) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk => "segmented k-space",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc =>
+                "magnetization transfer contrast",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss => "steady state",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss =>
+                "time reversed steady state",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp => "spoiled",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp => "MAG prepared",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp =>
+                "oversampling phase",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None =>
+                "no sequence variant",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(
+        this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant value
+    ) => new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>, or <c>null</c> if none matches.</returns>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant? FromValue(
+        string code
+    ) =>
+        code switch
+        {
+            "SK" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk,
+            "MTC" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc,
+            "SS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss,
+            "TRSS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss,
+            "SP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp,
+            "MP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp,
+            "OSP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp,
+            "NONE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>.</summary>
+public static class MiiCsBildgebungSeriesTypeExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type</c>.</returns>
+    public static string Url(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static => "STATIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic => "DYNAMIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated => "GATED",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody => "WHOLEBODY",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image => "IMAGE",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection => "REPROJECTION",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static =>
+                "a group of images at varying spatial locations at the same time",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic =>
+                "a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated =>
+                "a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody =>
+                "same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image => "a tomographic image slice",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection =>
+                "a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>, or <c>null</c> if none matches.</returns>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungSeriesType? FromValue(string code) =>
+        code switch
+        {
+            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static,
+            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic,
+            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated,
+            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody,
+            "IMAGE" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image,
+            "REPROJECTION" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungSeriesType"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungSeriesType FromValueOrThrow(string code) =>
+        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+}
+
+/// <summary>Extension methods for <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>.</summary>
+public static class MiiCsBildgebungTransducerTypeExtensions
+{
+    /// <returns>The CodeSystem URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type</c>.</returns>
+    public static string Url(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType _) =>
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-transducer-type";
+
+    /// <returns>The FHIR code for this concept.</returns>
+    public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased => "SECTOR_PHASED",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech => "SECTOR_MECH",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular => "SECTOR_ANNULAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear => "LINEAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear => "CURVED_LINEAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal => "SINGLE_CRYSTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd => "SPLIT_XTAL_CWD",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased => "IV_PHASED",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal => "IV_ROT_XTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror => "IV_ROT_MIRROR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa => "ENDOCAV_PA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech => "ENDOCAV_MECH",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla => "ENDOCAV_CLA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa => "ENDOCAV_AA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear => "ENDOCAV_LINEAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased => "VECTOR_PHASED",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
+    public static string? Display(
+        this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value
+    ) =>
+        value switch
+        {
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased => "Sector Phased",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech => "Sector Mech",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular => "Sector Annular",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear => "Linear",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear => "Curved Linear",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal => "Single Crystal",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd => "Split Xtal CWD",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased => "IV Phased",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal => "IV Rot XTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror => "IV Rot Mirror",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa => "Endocav PA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech => "Endocav Mech",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla => "EndocavCLA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa => "Endocav AA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear => "Endocav Linear",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased => "Vector Phased",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
+    /// <returns>A new <see cref="Coding"/> for this concept.</returns>
+    public static Coding Coding(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) =>
+        new(value.Url(), value.Code(), value.Display());
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>, or <c>null</c> if none matches.</returns>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType? FromValue(string code) =>
+        code switch
+        {
+            "SECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased,
+            "SECTOR_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech,
+            "SECTOR_ANNULAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular,
+            "LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear,
+            "CURVED_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear,
+            "SINGLE_CRYSTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal,
+            "SPLIT_XTAL_CWD" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd,
+            "IV_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased,
+            "IV_ROT_XTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal,
+            "IV_ROT_MIRROR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror,
+            "ENDOCAV_PA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa,
+            "ENDOCAV_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech,
+            "ENDOCAV_CLA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla,
+            "ENDOCAV_AA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa,
+            "ENDOCAV_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear,
+            "VECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased,
+            _ => null,
+        };
+
+    /// <param name="code">The FHIR code to look up.</param>
+    /// <returns>The matching <see cref="Bildgebung.CodeSystems.MiiCsBildgebungTransducerType"/>.</returns>
+    /// <exception cref="ArgumentException">If no constant has that code.</exception>
+    public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType FromValueOrThrow(
         string code
     ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
