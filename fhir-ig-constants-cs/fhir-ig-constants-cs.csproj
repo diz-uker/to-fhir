@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <PackageId>io.github.diz-uker.fhir-ig-constants</PackageId>
+    <Description>Pre-generated FHIR IG constants for the MII Kerndatensatz — canonical CodeSystem/Profile/Extension URLs, coded concept enums with Firely SDK Coding/CodeableConcept helpers, and NamingSystem uniqueId accessors.</Description>
+    <PackageTags>FHIR;HL7;MII;Kerndatensatz;constants;Firely</PackageTags>
+    <!-- Generated code has no hand-written XML doc comments. -->
+    <NoWarn>$(NoWarn);CS1591;CS1574</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Coding / Extension / CodeableConcept returned by generated accessor methods. -->
+    <PackageReference Include="Hl7.Fhir.R4" Version="6.4.0" />
+  </ItemGroup>
+
+  <!--
+    Manually-invoked "generate, review, commit" dev tool — not a build-graph participant.
+    Run with: dotnet msbuild -t:GenerateIgConstants
+    Reads ../fhir-ig-constants/package.json and writes generated .cs files into src/.
+  -->
+  <Target Name="GenerateIgConstants">
+    <PropertyGroup>
+      <_PackageJson>$(MSBuildThisFileDirectory)..\fhir-ig-constants\package.json</_PackageJson>
+      <!--
+        Prefer npm-installed packages from the sibling fhir-ig-constants directory (run
+        'npm install' there first); fall back to the Firely Terminal cache (~/.fhir/packages).
+      -->
+      <_NodeModules>$(MSBuildThisFileDirectory)../fhir-ig-constants/node_modules</_NodeModules>
+      <_FhirPackagesDir Condition="Exists('$(_NodeModules)')">$(_NodeModules)</_FhirPackagesDir>
+      <_FhirPackagesDir Condition="'$(_FhirPackagesDir)' == ''"
+        >$([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))/.fhir/packages</_FhirPackagesDir>
+      <_OutputDir>$(MSBuildThisFileDirectory)src\</_OutputDir>
+      <_GeneratorProject>$(MSBuildThisFileDirectory)..\ig-codegen-cs\IgCodegen\IgCodegen.csproj</_GeneratorProject>
+    </PropertyGroup>
+    <Exec Command="dotnet run --project &quot;$(_GeneratorProject)&quot; -- &quot;$(_PackageJson)&quot; &quot;$(_FhirPackagesDir)&quot; &quot;$(_OutputDir)&quot;" />
+  </Target>
+</Project>

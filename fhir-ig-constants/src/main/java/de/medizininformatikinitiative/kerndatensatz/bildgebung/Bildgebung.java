@@ -999,5 +999,105 @@ public final class Bildgebung {
           "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid",
           value);
     }
+
+    public static final class Urls {
+      private Urls() {}
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund}
+       */
+      public static @NonNull String miiExBildgebungBildgebungsgrund() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details}
+       */
+      public static @NonNull String miiExBildgebungInstanzDetails() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel}
+       */
+      public static @NonNull String miiExBildgebungKontrastmittel() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct}
+       */
+      public static @NonNull String miiExBildgebungModalitaetCt() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx}
+       */
+      public static @NonNull String miiExBildgebungModalitaetMgCrDx() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr}
+       */
+      public static @NonNull String miiExBildgebungModalitaetMr() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm}
+       */
+      public static @NonNull String miiExBildgebungModalitaetNm() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt}
+       */
+      public static @NonNull String miiExBildgebungModalitaetPt() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us}
+       */
+      public static @NonNull String miiExBildgebungModalitaetUs() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke}
+       */
+      public static @NonNull String miiExBildgebungSerieSchichtdicke() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid}
+       */
+      public static @NonNull String miiExBildgebungSerieUid() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid}
+       */
+      public static @NonNull String miiExBildgebungSopInstanzUid() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid";
+      }
+    }
   }
 }

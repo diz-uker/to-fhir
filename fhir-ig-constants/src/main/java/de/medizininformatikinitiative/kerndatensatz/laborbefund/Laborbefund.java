@@ -79,5 +79,25 @@ public final class Laborbefund {
           "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum",
           value);
     }
+
+    public static final class Urls {
+      private Urls() {}
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft}
+       */
+      public static @NonNull String miiExLaborInterpretationsbeeinflussendeEigenschaft() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft";
+      }
+
+      /**
+       * @return the extension URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum}
+       */
+      public static @NonNull String miiExLaborQuelleKlinischesBezugsdatum() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum";
+      }
+    }
   }
 }

@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,6 +76,7 @@ public final class JavaConstantsGenerator {
         model.extensions(),
         model.extensionValueTypes(),
         boundEnumSimpleNamesByCodeSystemUrl(model));
+    addNamingSystemsClass(rootType, model);
 
     return JavaFile.builder(javaPackageName, rootType.build())
         .addFileComment(
@@ -138,6 +140,22 @@ public final class JavaConstantsGenerator {
         TypeSpec.classBuilder("Extensions")
             .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
             .addMethod(privateConstructor());
+
+    TypeSpec.Builder urlsClass =
+        TypeSpec.classBuilder("Urls")
+            .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+            .addMethod(privateConstructor());
+    for (Map.Entry<String, String> entry : extensions.entrySet()) {
+      urlsClass.addMethod(
+          MethodSpec.methodBuilder(NameUtils.toCamelCase(entry.getKey()))
+              .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+              .returns(ClassName.get(String.class).annotated(NONNULL))
+              .addJavadoc("@return the extension URL {@code $L}\n", entry.getValue())
+              .addStatement("return $S", entry.getValue())
+              .build());
+    }
+    nestedType.addType(urlsClass.build());
+
     for (Map.Entry<String, String> entry : extensions.entrySet()) {
       String url = entry.getValue();
       String accessorName = NameUtils.toCamelCase(entry.getKey());
@@ -385,6 +403,74 @@ public final class JavaConstantsGenerator {
       enumType.addEnumConstant(concept.constantName(), constant.build());
     }
     return enumType.build();
+  }
+
+  private static void addNamingSystemsClass(TypeSpec.Builder rootType, IgPackageModel model) {
+    if (model.namingSystems().isEmpty()) {
+      return;
+    }
+
+    TypeSpec.Builder nestedType =
+        TypeSpec.classBuilder("NamingSystems")
+            .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+            .addMethod(privateConstructor());
+
+    for (Map.Entry<String, NamingSystemUniqueIds> entry : model.namingSystems().entrySet()) {
+      String className = NameUtils.toPascalCase(entry.getKey());
+      NamingSystemUniqueIds ns = entry.getValue();
+
+      TypeSpec.Builder nsClass =
+          TypeSpec.classBuilder(className)
+              .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+              .addMethod(privateConstructor());
+
+      if (ns.description() != null) {
+        nsClass.addJavadoc("$L\n", ns.description());
+      }
+
+      TypeSpec.Builder uniqueIdClass =
+          TypeSpec.classBuilder("UniqueId")
+              .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+              .addMethod(privateConstructor());
+
+      for (Map.Entry<String, List<String>> typeEntry : ns.byType().entrySet()) {
+        String typeName = typeEntry.getKey();
+        List<String> values = typeEntry.getValue();
+        String methodName = typeName.toLowerCase(Locale.ROOT);
+
+        MethodSpec.Builder method =
+            MethodSpec.methodBuilder(methodName).addModifiers(Modifier.PUBLIC, Modifier.STATIC);
+
+        if (values.size() == 1) {
+          method
+              .returns(ClassName.get(String.class).annotated(NONNULL))
+              .addJavadoc("@return {@code $L}\n", values.get(0))
+              .addStatement("return $S", values.get(0));
+        } else {
+          method.returns(
+              ParameterizedTypeName.get(
+                      ClassName.get(List.class), ClassName.get(String.class).annotated(NONNULL))
+                  .annotated(NONNULL));
+          StringBuilder fmt = new StringBuilder("return $T.of(");
+          Object[] args = new Object[1 + values.size()];
+          args[0] = List.class;
+          for (int i = 0; i < values.size(); i++) {
+            if (i > 0) fmt.append(", ");
+            fmt.append("$S");
+            args[1 + i] = values.get(i);
+          }
+          fmt.append(")");
+          method.addStatement(fmt.toString(), args);
+        }
+
+        uniqueIdClass.addMethod(method.build());
+      }
+
+      nsClass.addType(uniqueIdClass.build());
+      nestedType.addType(nsClass.build());
+    }
+
+    rootType.addType(nestedType.build());
   }
 
   private static MethodSpec privateConstructor() {

@@ -90,6 +90,30 @@ public final class IgPackageScanner {
           codeSystemUrlByValueSetUrl);
     }
 
+    TreeMap<String, NamingSystemUniqueIds> namingSystems = new TreeMap<>();
+    for (FhirResourceSummary resource : resources) {
+      if (!"NamingSystem".equals(resource.resourceType())) {
+        continue;
+      }
+      String id = resource.id();
+      List<FhirResourceSummary.UniqueId> uniqueIds = resource.uniqueId();
+      if (id == null || uniqueIds == null || uniqueIds.isEmpty()) {
+        continue;
+      }
+      TreeMap<String, List<String>> byType = new TreeMap<>();
+      for (FhirResourceSummary.UniqueId uid : uniqueIds) {
+        if (uid.type() == null || uid.value() == null) {
+          continue;
+        }
+        byType.computeIfAbsent(uid.type(), k -> new ArrayList<>()).add(uid.value());
+      }
+      if (!byType.isEmpty()) {
+        namingSystems.put(
+            NameUtils.toConstantName(id),
+            new NamingSystemUniqueIds(resource.description(), byType));
+      }
+    }
+
     return new IgPackageModel(
         packageName,
         packageVersion,
@@ -97,7 +121,8 @@ public final class IgPackageScanner {
         profiles,
         extensions,
         codeSystemConcepts,
-        extensionValueTypes);
+        extensionValueTypes,
+        namingSystems);
   }
 
   private List<FhirResourceSummary> readResources(Path packageContentDir) {

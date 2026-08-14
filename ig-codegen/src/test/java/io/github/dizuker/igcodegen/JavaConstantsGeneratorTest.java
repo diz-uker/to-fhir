@@ -349,6 +349,24 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void extensionUrlsClassIsGeneratedInsideExtensionsClass() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_EINZELDOSIS",
+        "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis");
+    IgPackageModel model = model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of());
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("class Urls"));
+    assertTrue(source.contains("public static @NonNull String miiExOnkoEinzeldosis()"));
+    assertTrue(
+        source.contains(
+            "return \"https://example.org/StructureDefinition/mii-ex-onko-einzeldosis\""));
+  }
+
+  @Test
   void doesNotGenerateEnumWhenCodeSystemHasNoConcepts() {
     TreeMap<String, String> codeSystems = new TreeMap<>();
     codeSystems.put(
@@ -369,6 +387,66 @@ class JavaConstantsGeneratorTest {
     return model(codeSystems, profiles, extensions, codeSystemConcepts, Map.of());
   }
 
+  @Test
+  void generatesNamingSystemsClassWithSingleUniqueId() {
+    TreeMap<String, NamingSystemUniqueIds> namingSystems = new TreeMap<>();
+    namingSystems.put(
+        "ELIGIBILITY_OBSERVATION_ID",
+        new NamingSystemUniqueIds(
+            "The identifier system for eligibility Observations",
+            Map.of("uri", List.of("https://example.org/identifiers/eid"))));
+    IgPackageModel model =
+        new IgPackageModel(
+            "de.example",
+            "1.0.0",
+            new TreeMap<>(),
+            new TreeMap<>(),
+            new TreeMap<>(),
+            Map.of(),
+            Map.of(),
+            namingSystems);
+
+    String source = JavaConstantsGenerator.generate(model, "de.example", "Example").toString();
+
+    assertTrue(source.contains("class NamingSystems"));
+    assertTrue(source.contains("class EligibilityObservationId"));
+    assertTrue(source.contains("class UniqueId"));
+    assertTrue(source.contains("public static @NonNull String uri()"));
+    assertTrue(source.contains("return \"https://example.org/identifiers/eid\""));
+  }
+
+  @Test
+  void generatesNamingSystemsListAccessorWhenMultipleUniqueIdsOfSameType() {
+    TreeMap<String, NamingSystemUniqueIds> namingSystems = new TreeMap<>();
+    TreeMap<String, List<String>> byType = new TreeMap<>();
+    byType.put("oid", List.of("1.2.3", "4.5.6"));
+    namingSystems.put("MY_NS", new NamingSystemUniqueIds(null, byType));
+    IgPackageModel model =
+        new IgPackageModel(
+            "de.example",
+            "1.0.0",
+            new TreeMap<>(),
+            new TreeMap<>(),
+            new TreeMap<>(),
+            Map.of(),
+            Map.of(),
+            namingSystems);
+
+    String source = JavaConstantsGenerator.generate(model, "de.example", "Example").toString();
+
+    assertTrue(source.contains("public static @NonNull List<@NonNull String> oid()"));
+    assertTrue(source.contains("return List.of(\"1.2.3\", \"4.5.6\")"));
+  }
+
+  @Test
+  void doesNotGenerateNamingSystemsClassWhenEmpty() {
+    IgPackageModel model = model(new TreeMap<>(), new TreeMap<>(), new TreeMap<>(), Map.of());
+
+    String source = JavaConstantsGenerator.generate(model, "de.example", "Example").toString();
+
+    assertFalse(source.contains("class NamingSystems"));
+  }
+
   private static IgPackageModel model(
       TreeMap<String, String> codeSystems,
       TreeMap<String, String> profiles,
@@ -382,6 +460,7 @@ class JavaConstantsGeneratorTest {
         profiles,
         extensions,
         codeSystemConcepts,
-        extensionValueTypes);
+        extensionValueTypes,
+        new TreeMap<>());
   }
 }
