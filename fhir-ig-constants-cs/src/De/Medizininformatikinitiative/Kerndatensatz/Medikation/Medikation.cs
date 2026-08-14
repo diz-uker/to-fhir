@@ -12,7 +12,6 @@ public static class Medikation
             /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp</c>.</summary>
             public static string MiiCsMedikationWirkstofftyp =>
                 "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp";
-
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp</c>.</summary>
@@ -20,8 +19,10 @@ public static class Medikation
         {
             /// <summary><c>IN</c> - ingredient</summary>
             IN,
+
             /// <summary><c>PIN</c> - precise ingredient</summary>
             PIN,
+
             /// <summary><c>MIN</c> - multiple ingredients</summary>
             MIN,
         }
@@ -30,20 +31,24 @@ public static class Medikation
     public static class Profiles
     {
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2026.0.1</c>.</summary>
-        public static string MiiPrMedikationMedication => "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2026.0.1";
+        public static string MiiPrMedikationMedication =>
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration|2026.0.1</c>.</summary>
-        public static string MiiPrMedikationMedicationAdministration => "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration|2026.0.1";
+        public static string MiiPrMedikationMedicationAdministration =>
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1</c>.</summary>
-        public static string MiiPrMedikationMedicationRequest => "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1";
+        public static string MiiPrMedikationMedicationRequest =>
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1</c>.</summary>
-        public static string MiiPrMedikationMedicationStatement => "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1";
+        public static string MiiPrMedikationMedicationStatement =>
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2026.0.1";
 
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2026.0.1</c>.</summary>
-        public static string MiiPrMedikationMedikationsliste => "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2026.0.1";
-
+        public static string MiiPrMedikationMedikationsliste =>
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2026.0.1";
     }
 
     public static class Extensions
@@ -51,11 +56,12 @@ public static class Medikation
         public static class Urls
         {
             /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation</c>.</summary>
-            public static string MiiExMedikationWirkstoffrelation => "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation";
+            public static string MiiExMedikationWirkstoffrelation =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation";
 
             /// <summary>The extension URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp</c>.</summary>
-            public static string MiiExMedikationWirkstofftyp => "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp";
-
+            public static string MiiExMedikationWirkstofftyp =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp";
         }
 
         /// <summary>
@@ -64,13 +70,22 @@ public static class Medikation
         /// </summary>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation</c> and no value.</returns>
         public static Extension MiiExMedikationWirkstoffrelation() =>
-            new() { Url = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation" };
+            new()
+            {
+                Url =
+                    "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation",
+            };
 
         /// <summary>A new <see cref="Extension"/> for <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp</c>.</summary>
         /// <param name="value">The extension value, as a <c>MiiCsMedikationWirkstofftyp</c> concept.</param>
         /// <returns>A new <see cref="Extension"/> with url <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp</c> and the given value.</returns>
-        public static Extension MiiExMedikationWirkstofftyp(CodeSystems.MiiCsMedikationWirkstofftyp value) =>
-            new("https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp", value.Coding());
+        public static Extension MiiExMedikationWirkstofftyp(
+            CodeSystems.MiiCsMedikationWirkstofftyp value
+        ) =>
+            new(
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp",
+                value.Coding()
+            );
     }
 }
 
@@ -82,22 +97,24 @@ public static class MiiCsMedikationWirkstofftypExtensions
         "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp";
 
     /// <returns>The FHIR code for this concept.</returns>
-    public static string Code(this Medikation.CodeSystems.MiiCsMedikationWirkstofftyp value) => value switch
-    {
-        Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN => "IN",
-        Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN => "PIN",
-        Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN => "MIN",
-        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
-    };
+    public static string Code(this Medikation.CodeSystems.MiiCsMedikationWirkstofftyp value) =>
+        value switch
+        {
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN => "IN",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN => "PIN",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN => "MIN",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
 
     /// <returns>The display label for this concept, or <c>null</c> if none.</returns>
-    public static string? Display(this Medikation.CodeSystems.MiiCsMedikationWirkstofftyp value) => value switch
-    {
-        Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN => "ingredient",
-        Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN => "precise ingredient",
-        Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN => "multiple ingredients",
-        _ => throw new ArgumentOutOfRangeException(nameof(value), value, null)
-    };
+    public static string? Display(this Medikation.CodeSystems.MiiCsMedikationWirkstofftyp value) =>
+        value switch
+        {
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN => "ingredient",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN => "precise ingredient",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN => "multiple ingredients",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
 
     /// <returns>A new <see cref="Coding"/> for this concept.</returns>
     public static Coding Coding(this Medikation.CodeSystems.MiiCsMedikationWirkstofftyp value) =>
@@ -105,19 +122,21 @@ public static class MiiCsMedikationWirkstofftypExtensions
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Medikation.CodeSystems.MiiCsMedikationWirkstofftyp"/>, or <c>null</c> if none matches.</returns>
-    public static Medikation.CodeSystems.MiiCsMedikationWirkstofftyp? FromValue(string code) => code switch
-    {
-        "IN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN,
-        "PIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN,
-        "MIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN,
-        _ => null
-    };
+    public static Medikation.CodeSystems.MiiCsMedikationWirkstofftyp? FromValue(string code) =>
+        code switch
+        {
+            "IN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN,
+            "PIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN,
+            "MIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN,
+            _ => null,
+        };
 
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Medikation.CodeSystems.MiiCsMedikationWirkstofftyp"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
-    public static Medikation.CodeSystems.MiiCsMedikationWirkstofftyp FromValueOrThrow(string code) =>
-        FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
+    public static Medikation.CodeSystems.MiiCsMedikationWirkstofftyp FromValueOrThrow(
+        string code
+    ) => FromValue(code) ?? throw new ArgumentException($"Unknown code: {code}", nameof(code));
 }
 
 /// <summary>Extension methods for reading <see cref="Medikation.Extensions"/> from FHIR resources.</summary>
@@ -125,9 +144,13 @@ public static class MedikationFhirExtensions
 {
     /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
     public static Extension? GetMiiExMedikationWirkstoffrelation(this IExtendable resource) =>
-        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation");
+        resource.GetExtension(
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation"
+        );
 
     /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
     public static Extension? GetMiiExMedikationWirkstofftyp(this IExtendable resource) =>
-        resource.GetExtension("https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp");
+        resource.GetExtension(
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp"
+        );
 }

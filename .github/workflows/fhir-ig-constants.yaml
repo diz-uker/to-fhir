@@ -74,6 +74,9 @@ jobs:
             exit 1
           fi
 
+      - name: Restore .NET tools
+        run: dotnet tool restore
+
       - name: Regenerate C# FHIR IG constants
         run: |
           dotnet run --project ig-codegen-cs/IgCodegen/IgCodegen.csproj --configuration Release -- \
@@ -81,9 +84,12 @@ jobs:
             fhir-ig-constants/node_modules \
             fhir-ig-constants-cs/src/
 
+      - name: Format C# FHIR IG constants
+        run: dotnet csharpier format fhir-ig-constants-cs/src/
+
       - name: Fail if C# generated code is out of date
         run: |
           if ! git diff --exit-code -- fhir-ig-constants-cs/src/; then
-            echo "::error::Generated C# FHIR IG constants are out of date. Run 'cd fhir-ig-constants && npm install && cd .. && dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants' locally, review the diff, and commit the result."
+            echo "::error::Generated C# FHIR IG constants are out of date. Run 'cd fhir-ig-constants && npm install && cd .. && dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants && dotnet csharpier format fhir-ig-constants-cs/src/' locally, review the diff, and commit the result."
             exit 1
           fi

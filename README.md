@@ -60,14 +60,15 @@ and must be re-generated whenever the package manifest or the codegen itself cha
 cd fhir-ig-constants && npm install
 ```
 
-**2. Re-generate**
+**2. Re-generate and format**
 
 ```sh
 dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants
+dotnet tool restore && dotnet csharpier format fhir-ig-constants-cs/src/
 ```
 
 Review the diff, then commit. The `fhir-ig-constants.yaml` CI workflow fails if the
-checked-in files are out of date.
+checked-in files are out of date or not formatted.
 
 Alternatively, invoke the tool directly (useful if you want to point at a different
 packages directory):
