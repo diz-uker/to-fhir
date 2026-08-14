@@ -87,6 +87,8 @@ public static class CSharpConstantsGenerator
             WriteEnumExtensionClass(w, className, enumName, systemUrl, concepts);
         }
 
+        WriteExtensionGettersClass(w, className, model);
+
         return w.ToString();
     }
 
@@ -199,6 +201,18 @@ public static class CSharpConstantsGenerator
         w.Line("public static class Extensions");
         w.Block(() =>
         {
+            w.Line("public static class Urls");
+            w.Block(() =>
+            {
+                foreach (var (constantName, url) in model.Extensions)
+                {
+                    string propertyName = NameUtils.ToPascalCase(constantName);
+                    w.Line($"/// <summary>The extension URL <c>{url}</c>.</summary>");
+                    w.Line($"public static string {propertyName} => \"{url}\";");
+                    w.Line();
+                }
+            });
+
             foreach (var (constantName, url) in model.Extensions)
             {
                 string methodName = NameUtils.ToPascalCase(constantName);
@@ -206,8 +220,8 @@ public static class CSharpConstantsGenerator
                     constantName,
                     ExtensionValueType.None
                 );
-                WriteExtensionFactory(w, className, methodName, url, valueType, boundEnumNames);
                 w.Line();
+                WriteExtensionFactory(w, className, methodName, url, valueType, boundEnumNames);
             }
         });
     }
@@ -458,6 +472,40 @@ public static class CSharpConstantsGenerator
                         }
                     });
                 });
+            }
+        });
+    }
+
+    // ── Extension getter methods (namespace-level) ───────────────────────────
+
+    private static void WriteExtensionGettersClass(
+        CodeWriter w,
+        string className,
+        IgPackageModel model
+    )
+    {
+        if (model.Extensions.Count == 0)
+            return;
+
+        w.Line();
+        w.Line(
+            $"/// <summary>Extension methods for reading <see cref=\"{className}.Extensions\"/> from FHIR resources.</summary>"
+        );
+        w.Line($"public static class {className}FhirExtensions");
+        w.Block(() =>
+        {
+            bool first = true;
+            foreach (var (constantName, url) in model.Extensions)
+            {
+                if (!first)
+                    w.Line();
+                first = false;
+                string methodName = NameUtils.ToPascalCase(constantName);
+                w.Line(
+                    $"/// <summary>Gets the extension <c>{url}</c> from <paramref name=\"resource\"/>, or <c>null</c> if absent.</summary>"
+                );
+                w.Line($"public static Extension? Get{methodName}(this IExtendable resource) =>");
+                w.Indent(() => w.Line($"resource.GetExtension(\"{url}\");"));
             }
         });
     }

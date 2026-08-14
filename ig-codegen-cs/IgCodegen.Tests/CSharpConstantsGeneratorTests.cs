@@ -317,6 +317,77 @@ public class CSharpConstantsGeneratorTests
     }
 
     [Fact]
+    public void GeneratesUrlsClassInsideExtensionsClass()
+    {
+        var extensions = new SortedDictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["MII_EX_ONKO_EINZELDOSIS"] =
+                "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis",
+        };
+        var model = new IgPackageModel(
+            "test.package",
+            "1.0.0",
+            new SortedDictionary<string, string>(),
+            new SortedDictionary<string, string>(),
+            extensions,
+            new Dictionary<string, IReadOnlyList<ConceptConstant>>(),
+            new Dictionary<string, ExtensionValueType>(),
+            new Dictionary<string, NamingSystemEntry>()
+        );
+
+        var source = CSharpConstantsGenerator.Generate(model, "De.Example.Onkologie", "Onkologie");
+
+        Assert.Contains("public static class Extensions", source);
+        Assert.Contains("public static class Urls", source);
+        Assert.Contains("public static string MiiExOnkoEinzeldosis =>", source);
+        Assert.Contains(
+            "\"https://example.org/StructureDefinition/mii-ex-onko-einzeldosis\";",
+            source
+        );
+    }
+
+    [Fact]
+    public void GeneratesExtensionGetterMethods()
+    {
+        var extensions = new SortedDictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["MII_EX_ONKO_EINZELDOSIS"] =
+                "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis",
+        };
+        var model = new IgPackageModel(
+            "test.package",
+            "1.0.0",
+            new SortedDictionary<string, string>(),
+            new SortedDictionary<string, string>(),
+            extensions,
+            new Dictionary<string, IReadOnlyList<ConceptConstant>>(),
+            new Dictionary<string, ExtensionValueType>(),
+            new Dictionary<string, NamingSystemEntry>()
+        );
+
+        var source = CSharpConstantsGenerator.Generate(model, "De.Example.Onkologie", "Onkologie");
+
+        Assert.Contains("public static class OnkologieFhirExtensions", source);
+        Assert.Contains(
+            "public static Extension? GetMiiExOnkoEinzeldosis(this IExtendable resource) =>",
+            source
+        );
+        Assert.Contains(
+            "resource.GetExtension(\"https://example.org/StructureDefinition/mii-ex-onko-einzeldosis\");",
+            source
+        );
+    }
+
+    [Fact]
+    public void DoesNotGenerateExtensionGetterClassWhenNoExtensions()
+    {
+        var model = ModelWithCodeSystem("MII_CS_ONKO_INTENTION", "https://example.org/cs");
+        var source = CSharpConstantsGenerator.Generate(model, "De.Example.Onkologie", "Onkologie");
+
+        Assert.DoesNotContain("FhirExtensions", source);
+    }
+
+    [Fact]
     public void GeneratesNamingSystemsClassWithSingleUniqueId()
     {
         var namingSystems = new Dictionary<string, NamingSystemEntry>

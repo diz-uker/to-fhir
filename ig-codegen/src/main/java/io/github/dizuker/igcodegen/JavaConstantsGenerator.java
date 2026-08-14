@@ -140,6 +140,22 @@ public final class JavaConstantsGenerator {
         TypeSpec.classBuilder("Extensions")
             .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
             .addMethod(privateConstructor());
+
+    TypeSpec.Builder urlsClass =
+        TypeSpec.classBuilder("Urls")
+            .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+            .addMethod(privateConstructor());
+    for (Map.Entry<String, String> entry : extensions.entrySet()) {
+      urlsClass.addMethod(
+          MethodSpec.methodBuilder(NameUtils.toCamelCase(entry.getKey()))
+              .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+              .returns(ClassName.get(String.class).annotated(NONNULL))
+              .addJavadoc("@return the extension URL {@code $L}\n", entry.getValue())
+              .addStatement("return $S", entry.getValue())
+              .build());
+    }
+    nestedType.addType(urlsClass.build());
+
     for (Map.Entry<String, String> entry : extensions.entrySet()) {
       String url = entry.getValue();
       String accessorName = NameUtils.toCamelCase(entry.getKey());

@@ -349,6 +349,24 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void extensionUrlsClassIsGeneratedInsideExtensionsClass() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_EINZELDOSIS",
+        "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis");
+    IgPackageModel model = model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of());
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("class Urls"));
+    assertTrue(source.contains("public static @NonNull String miiExOnkoEinzeldosis()"));
+    assertTrue(
+        source.contains(
+            "return \"https://example.org/StructureDefinition/mii-ex-onko-einzeldosis\""));
+  }
+
+  @Test
   void doesNotGenerateEnumWhenCodeSystemHasNoConcepts() {
     TreeMap<String, String> codeSystems = new TreeMap<>();
     codeSystems.put(
