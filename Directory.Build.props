@@ -1,0 +1,32 @@
+<Project>
+  <PropertyGroup>
+    <!-- version managed by release-please -->
+    <!-- x-release-please-start-version -->
+    <Version>0.2.10</Version>
+    <!-- x-release-please-end -->
+
+    <Authors>diz-uker contributors</Authors>
+    <Company>github.com/diz-uker</Company>
+    <Copyright>© diz-uker contributors. All rights reserved.</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/diz-uker/to-fhir</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/diz-uker/to-fhir</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>FHIR;HL7;codegen</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Only apply packaging extras to packable projects. -->
+  <ItemGroup Condition="'$(IsPackable)' != 'false'">
+    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
