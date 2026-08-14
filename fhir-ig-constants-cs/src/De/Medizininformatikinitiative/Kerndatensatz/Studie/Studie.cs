@@ -22,41 +22,41 @@ public static class Studie
         public enum ResearchStudyCategoryCs
         {
             /// <summary><c>interventional</c> - Interventional study</summary>
-            INTERVENTIONAL,
+            Interventional,
 
             /// <summary><c>observational</c> - Observational study</summary>
-            OBSERVATIONAL,
+            Observational,
 
             /// <summary><c>registry</c> - Registry study</summary>
-            REGISTRY,
+            Registry,
 
             /// <summary><c>other</c> - Other</summary>
-            OTHER,
+            Other,
         }
 
         /// <summary>Concepts for <c>http://example.org/fhir/CodeSystem/associated-party-role</c>.</summary>
         public enum AssociatedPartyRoleCs
         {
             /// <summary><c>sponsor</c> - Sponsor</summary>
-            SPONSOR,
+            Sponsor,
 
             /// <summary><c>funder</c> - Funder</summary>
-            FUNDER,
+            Funder,
 
             /// <summary><c>principal-investigator</c> - Principal Investigator</summary>
-            PRINCIPAL_INVESTIGATOR,
+            PrincipalInvestigator,
 
             /// <summary><c>co-investigator</c> - Co-Investigator</summary>
-            CO_INVESTIGATOR,
+            CoInvestigator,
 
             /// <summary><c>coordinator</c> - Study Coordinator</summary>
-            COORDINATOR,
+            Coordinator,
 
             /// <summary><c>publisher</c> - Publisher</summary>
-            PUBLISHER,
+            Publisher,
 
             /// <summary><c>other</c> - Other</summary>
-            OTHER,
+            Other,
         }
     }
 
@@ -347,10 +347,10 @@ public static class ResearchStudyCategoryCsExtensions
     public static string Code(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
         value switch
         {
-            Studie.CodeSystems.ResearchStudyCategoryCs.INTERVENTIONAL => "interventional",
-            Studie.CodeSystems.ResearchStudyCategoryCs.OBSERVATIONAL => "observational",
-            Studie.CodeSystems.ResearchStudyCategoryCs.REGISTRY => "registry",
-            Studie.CodeSystems.ResearchStudyCategoryCs.OTHER => "other",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Interventional => "interventional",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Observational => "observational",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Registry => "registry",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Other => "other",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -358,10 +358,10 @@ public static class ResearchStudyCategoryCsExtensions
     public static string? Display(this Studie.CodeSystems.ResearchStudyCategoryCs value) =>
         value switch
         {
-            Studie.CodeSystems.ResearchStudyCategoryCs.INTERVENTIONAL => "Interventional study",
-            Studie.CodeSystems.ResearchStudyCategoryCs.OBSERVATIONAL => "Observational study",
-            Studie.CodeSystems.ResearchStudyCategoryCs.REGISTRY => "Registry study",
-            Studie.CodeSystems.ResearchStudyCategoryCs.OTHER => "Other",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Interventional => "Interventional study",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Observational => "Observational study",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Registry => "Registry study",
+            Studie.CodeSystems.ResearchStudyCategoryCs.Other => "Other",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -374,10 +374,10 @@ public static class ResearchStudyCategoryCsExtensions
     public static Studie.CodeSystems.ResearchStudyCategoryCs? FromValue(string code) =>
         code switch
         {
-            "interventional" => Studie.CodeSystems.ResearchStudyCategoryCs.INTERVENTIONAL,
-            "observational" => Studie.CodeSystems.ResearchStudyCategoryCs.OBSERVATIONAL,
-            "registry" => Studie.CodeSystems.ResearchStudyCategoryCs.REGISTRY,
-            "other" => Studie.CodeSystems.ResearchStudyCategoryCs.OTHER,
+            "interventional" => Studie.CodeSystems.ResearchStudyCategoryCs.Interventional,
+            "observational" => Studie.CodeSystems.ResearchStudyCategoryCs.Observational,
+            "registry" => Studie.CodeSystems.ResearchStudyCategoryCs.Registry,
+            "other" => Studie.CodeSystems.ResearchStudyCategoryCs.Other,
             _ => null,
         };
 
@@ -399,14 +399,14 @@ public static class AssociatedPartyRoleCsExtensions
     public static string Code(this Studie.CodeSystems.AssociatedPartyRoleCs value) =>
         value switch
         {
-            Studie.CodeSystems.AssociatedPartyRoleCs.SPONSOR => "sponsor",
-            Studie.CodeSystems.AssociatedPartyRoleCs.FUNDER => "funder",
-            Studie.CodeSystems.AssociatedPartyRoleCs.PRINCIPAL_INVESTIGATOR =>
+            Studie.CodeSystems.AssociatedPartyRoleCs.Sponsor => "sponsor",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Funder => "funder",
+            Studie.CodeSystems.AssociatedPartyRoleCs.PrincipalInvestigator =>
                 "principal-investigator",
-            Studie.CodeSystems.AssociatedPartyRoleCs.CO_INVESTIGATOR => "co-investigator",
-            Studie.CodeSystems.AssociatedPartyRoleCs.COORDINATOR => "coordinator",
-            Studie.CodeSystems.AssociatedPartyRoleCs.PUBLISHER => "publisher",
-            Studie.CodeSystems.AssociatedPartyRoleCs.OTHER => "other",
+            Studie.CodeSystems.AssociatedPartyRoleCs.CoInvestigator => "co-investigator",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Coordinator => "coordinator",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Publisher => "publisher",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Other => "other",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -414,14 +414,14 @@ public static class AssociatedPartyRoleCsExtensions
     public static string? Display(this Studie.CodeSystems.AssociatedPartyRoleCs value) =>
         value switch
         {
-            Studie.CodeSystems.AssociatedPartyRoleCs.SPONSOR => "Sponsor",
-            Studie.CodeSystems.AssociatedPartyRoleCs.FUNDER => "Funder",
-            Studie.CodeSystems.AssociatedPartyRoleCs.PRINCIPAL_INVESTIGATOR =>
+            Studie.CodeSystems.AssociatedPartyRoleCs.Sponsor => "Sponsor",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Funder => "Funder",
+            Studie.CodeSystems.AssociatedPartyRoleCs.PrincipalInvestigator =>
                 "Principal Investigator",
-            Studie.CodeSystems.AssociatedPartyRoleCs.CO_INVESTIGATOR => "Co-Investigator",
-            Studie.CodeSystems.AssociatedPartyRoleCs.COORDINATOR => "Study Coordinator",
-            Studie.CodeSystems.AssociatedPartyRoleCs.PUBLISHER => "Publisher",
-            Studie.CodeSystems.AssociatedPartyRoleCs.OTHER => "Other",
+            Studie.CodeSystems.AssociatedPartyRoleCs.CoInvestigator => "Co-Investigator",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Coordinator => "Study Coordinator",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Publisher => "Publisher",
+            Studie.CodeSystems.AssociatedPartyRoleCs.Other => "Other",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -434,16 +434,16 @@ public static class AssociatedPartyRoleCsExtensions
     public static Studie.CodeSystems.AssociatedPartyRoleCs? FromValue(string code) =>
         code switch
         {
-            "sponsor" => Studie.CodeSystems.AssociatedPartyRoleCs.SPONSOR,
-            "funder" => Studie.CodeSystems.AssociatedPartyRoleCs.FUNDER,
+            "sponsor" => Studie.CodeSystems.AssociatedPartyRoleCs.Sponsor,
+            "funder" => Studie.CodeSystems.AssociatedPartyRoleCs.Funder,
             "principal-investigator" => Studie
                 .CodeSystems
                 .AssociatedPartyRoleCs
-                .PRINCIPAL_INVESTIGATOR,
-            "co-investigator" => Studie.CodeSystems.AssociatedPartyRoleCs.CO_INVESTIGATOR,
-            "coordinator" => Studie.CodeSystems.AssociatedPartyRoleCs.COORDINATOR,
-            "publisher" => Studie.CodeSystems.AssociatedPartyRoleCs.PUBLISHER,
-            "other" => Studie.CodeSystems.AssociatedPartyRoleCs.OTHER,
+                .PrincipalInvestigator,
+            "co-investigator" => Studie.CodeSystems.AssociatedPartyRoleCs.CoInvestigator,
+            "coordinator" => Studie.CodeSystems.AssociatedPartyRoleCs.Coordinator,
+            "publisher" => Studie.CodeSystems.AssociatedPartyRoleCs.Publisher,
+            "other" => Studie.CodeSystems.AssociatedPartyRoleCs.Other,
             _ => null,
         };
 

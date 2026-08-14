@@ -34,320 +34,320 @@ public static class Bildgebung
         public enum MiiCsBildgebungTransducerType
         {
             /// <summary><c>SECTOR_PHASED</c> - Sector Phased</summary>
-            SECTOR_PHASED,
+            SectorPhased,
 
             /// <summary><c>SECTOR_MECH</c> - Sector Mech</summary>
-            SECTOR_MECH,
+            SectorMech,
 
             /// <summary><c>SECTOR_ANNULAR</c> - Sector Annular</summary>
-            SECTOR_ANNULAR,
+            SectorAnnular,
 
             /// <summary><c>LINEAR</c> - Linear</summary>
-            LINEAR,
+            Linear,
 
             /// <summary><c>CURVED_LINEAR</c> - Curved Linear</summary>
-            CURVED_LINEAR,
+            CurvedLinear,
 
             /// <summary><c>SINGLE_CRYSTAL</c> - Single Crystal</summary>
-            SINGLE_CRYSTAL,
+            SingleCrystal,
 
             /// <summary><c>SPLIT_XTAL_CWD</c> - Split Xtal CWD</summary>
-            SPLIT_XTAL_CWD,
+            SplitXtalCwd,
 
             /// <summary><c>IV_PHASED</c> - IV Phased</summary>
-            IV_PHASED,
+            IvPhased,
 
             /// <summary><c>IV_ROT_XTAL</c> - IV Rot XTAL</summary>
-            IV_ROT_XTAL,
+            IvRotXtal,
 
             /// <summary><c>IV_ROT_MIRROR</c> - IV Rot Mirror</summary>
-            IV_ROT_MIRROR,
+            IvRotMirror,
 
             /// <summary><c>ENDOCAV_PA</c> - Endocav PA</summary>
-            ENDOCAV_PA,
+            EndocavPa,
 
             /// <summary><c>ENDOCAV_MECH</c> - Endocav Mech</summary>
-            ENDOCAV_MECH,
+            EndocavMech,
 
             /// <summary><c>ENDOCAV_CLA</c> - EndocavCLA</summary>
-            ENDOCAV_CLA,
+            EndocavCla,
 
             /// <summary><c>ENDOCAV_AA</c> - Endocav AA</summary>
-            ENDOCAV_AA,
+            EndocavAa,
 
             /// <summary><c>ENDOCAV_LINEAR</c> - Endocav Linear</summary>
-            ENDOCAV_LINEAR,
+            EndocavLinear,
 
             /// <summary><c>VECTOR_PHASED</c> - Vector Phased</summary>
-            VECTOR_PHASED,
+            VectorPhased,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-series-type</c>.</summary>
         public enum MiiCsBildgebungSeriesType
         {
             /// <summary><c>STATIC</c> - a group of images at varying spatial locations at the same time</summary>
-            STATIC,
+            Static,
 
             /// <summary><c>DYNAMIC</c> - a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices</summary>
-            DYNAMIC,
+            Dynamic,
 
             /// <summary><c>GATED</c> - a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals</summary>
-            GATED,
+            Gated,
 
             /// <summary><c>WHOLEBODY</c> - same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)</summary>
-            WHOLEBODY,
+            Wholebody,
 
             /// <summary><c>IMAGE</c> - a tomographic image slice</summary>
-            IMAGE,
+            Image,
 
             /// <summary><c>REPROJECTION</c> - a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)</summary>
-            REPROJECTION,
+            Reprojection,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence</c>.</summary>
         public enum MiiCsBildgebungScanningSequence
         {
             /// <summary><c>SE</c> - Spin Echo</summary>
-            SE,
+            Se,
 
             /// <summary><c>IR</c> - Inversion Recovery</summary>
-            IR,
+            Ir,
 
             /// <summary><c>GR</c> - Gradient Recalled</summary>
-            GR,
+            Gr,
 
             /// <summary><c>EP</c> - Echo Planar</summary>
-            EP,
+            Ep,
 
             /// <summary><c>RM</c> - Research Mode</summary>
-            RM,
+            Rm,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-scanning-sequence-variant</c>.</summary>
         public enum MiiCsBildgebungScanningSequenceVariant
         {
             /// <summary><c>SK</c> - segmented k-space</summary>
-            SK,
+            Sk,
 
             /// <summary><c>MTC</c> - magnetization transfer contrast</summary>
-            MTC,
+            Mtc,
 
             /// <summary><c>SS</c> - steady state</summary>
-            SS,
+            Ss,
 
             /// <summary><c>TRSS</c> - time reversed steady state</summary>
-            TRSS,
+            Trss,
 
             /// <summary><c>SP</c> - spoiled</summary>
-            SP,
+            Sp,
 
             /// <summary><c>MP</c> - MAG prepared</summary>
-            MP,
+            Mp,
 
             /// <summary><c>OSP</c> - oversampling phase</summary>
-            OSP,
+            Osp,
 
             /// <summary><c>NONE</c> - no sequence variant</summary>
-            NONE,
+            None,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/CodeSystem/mii-cs-bildgebung-instance-image-type</c>.</summary>
         public enum MiiCsBildgebungInstanceImageType
         {
             /// <summary><c>PDC</c> - Pixel Data Characteristics</summary>
-            PDC,
+            Pdc,
 
             /// <summary><c>ORIGINAL</c> - identifies an original image</summary>
-            ORIGINAL,
+            Original,
 
             /// <summary><c>DERIVED</c> - identifies an derived image</summary>
-            DERIVED,
+            Derived,
 
             /// <summary><c>PEC</c> - Patient Examination Characteristics</summary>
-            PEC,
+            Pec,
 
             /// <summary><c>PRIMARY</c> - identifies a primary image</summary>
-            PRIMARY,
+            Primary,
 
             /// <summary><c>SECONDARY</c> - identifies a secondary image</summary>
-            SECONDARY,
+            Secondary,
 
             /// <summary><c>MSC</c> - Modality Specific Characteristics</summary>
-            MSC,
+            Msc,
 
             /// <summary><c>CT</c> - CT Specific Characteristics</summary>
-            CT,
+            Ct,
 
             /// <summary><c>AXIAL</c> - a CT Cross-sectional Image</summary>
-            AXIAL,
+            Axial,
 
             /// <summary><c>LOCALIZER</c> - a CT Localizer Image</summary>
-            LOCALIZER,
+            Localizer,
 
             /// <summary><c>MR</c> - MR Specific Characteristics</summary>
-            MR,
+            Mr,
 
             /// <summary><c>DENSITYMAP</c> - Density Map</summary>
-            DENSITYMAP,
+            Densitymap,
 
             /// <summary><c>DIFFUSIONMAP</c> - Diffusion Map</summary>
-            DIFFUSIONMAP,
+            Diffusionmap,
 
             /// <summary><c>IMAGEADDITION</c> - Image Addition</summary>
-            IMAGEADDITION,
+            Imageaddition,
 
             /// <summary><c>MODULUSSUBTRACT</c> - Modulus Substract</summary>
-            MODULUSSUBTRACT,
+            Modulussubtract,
 
             /// <summary><c>MPR</c> - MPR</summary>
-            MPR,
+            Mpr,
 
             /// <summary><c>OTHER</c> - Other</summary>
-            OTHER,
+            Other,
 
             /// <summary><c>PHASEMAP</c> - Phase Map</summary>
-            PHASEMAP,
+            Phasemap,
 
             /// <summary><c>PHASESUBTRACT</c> - Phase Substract</summary>
-            PHASESUBTRACT,
+            Phasesubtract,
 
             /// <summary><c>PROJECTIONIMAGE</c> - Projection Image</summary>
-            PROJECTIONIMAGE,
+            Projectionimage,
 
             /// <summary><c>T1MAP</c> - T1 Map</summary>
-            T1_MAP,
+            T1Map,
 
             /// <summary><c>T2MAP</c> - T2 Map</summary>
-            T2_MAP,
+            T2Map,
 
             /// <summary><c>VELOCITYMAP</c> - Velocity Map</summary>
-            VELOCITYMAP,
+            Velocitymap,
 
             /// <summary><c>NM</c> - NM Specific Characteristics</summary>
-            NM,
+            Nm,
 
             /// <summary><c>STATIC</c> - Static</summary>
-            STATIC,
+            Static,
 
             /// <summary><c>DYNAMIC</c> - Dynamic</summary>
-            DYNAMIC,
+            Dynamic,
 
             /// <summary><c>GATED</c> - Gated</summary>
-            GATED,
+            Gated,
 
             /// <summary><c>WHOLEBODY</c> - Whole Body</summary>
-            WHOLEBODY,
+            Wholebody,
 
             /// <summary><c>TOMO</c> - Tomo</summary>
-            TOMO,
+            Tomo,
 
             /// <summary><c>GATEDTOMO</c> - Gated Tomo</summary>
-            GATEDTOMO,
+            Gatedtomo,
 
             /// <summary><c>RECONTOMO</c> - Recon Tomo</summary>
-            RECONTOMO,
+            Recontomo,
 
             /// <summary><c>RECONGATEDTOMO</c> - Recon Gated Tomo</summary>
-            RECONGATEDTOMO,
+            Recongatedtomo,
 
             /// <summary><c>US</c> - US Specific Characteristics</summary>
-            US,
+            Us,
 
             /// <summary><c>ABDOMINAL</c> - ABDOMINAL</summary>
-            ABDOMINAL,
+            Abdominal,
 
             /// <summary><c>BREAST</c> - BREAST</summary>
-            BREAST,
+            Breast,
 
             /// <summary><c>CHEST</c> - CHEST</summary>
-            CHEST,
+            Chest,
 
             /// <summary><c>ENDOCAVITARY</c> - ENDOCAVITARY</summary>
-            ENDOCAVITARY,
+            Endocavitary,
 
             /// <summary><c>ENDORECTAL</c> - ENDORECTAL</summary>
-            ENDORECTAL,
+            Endorectal,
 
             /// <summary><c>ENDOVAGINAL</c> - ENDOVAGINAL</summary>
-            ENDOVAGINAL,
+            Endovaginal,
 
             /// <summary><c>EPICARDIAL</c> - EPICARDIAL</summary>
-            EPICARDIAL,
+            Epicardial,
 
             /// <summary><c>FETAL_HEART</c> - FETAL HEART</summary>
-            FETAL_HEART,
+            FetalHeart,
 
             /// <summary><c>GYNECOLOGY</c> - GYNECOLOGY</summary>
-            GYNECOLOGY,
+            Gynecology,
 
             /// <summary><c>INTRACARDIAC</c> - INTRACARDIAC</summary>
-            INTRACARDIAC,
+            Intracardiac,
 
             /// <summary><c>INTRAOPERATIVE</c> - INTRAOPERATIVE</summary>
-            INTRAOPERATIVE,
+            Intraoperative,
 
             /// <summary><c>INTRAVASCULAR</c> - INTRAVASCULAR</summary>
-            INTRAVASCULAR,
+            Intravascular,
 
             /// <summary><c>MUSCULOSKELETAL</c> - MUSCULOSKELETAL</summary>
-            MUSCULOSKELETAL,
+            Musculoskeletal,
 
             /// <summary><c>NEONATAL_HEAD</c> - NEONATAL HEAD</summary>
-            NEONATAL_HEAD,
+            NeonatalHead,
 
             /// <summary><c>OBSTETRICAL</c> - OBSTETRICAL</summary>
-            OBSTETRICAL,
+            Obstetrical,
 
             /// <summary><c>OPHTHALMIC</c> - OPHTHALMIC</summary>
-            OPHTHALMIC,
+            Ophthalmic,
 
             /// <summary><c>PEDIATRIC</c> - PEDIATRIC</summary>
-            PEDIATRIC,
+            Pediatric,
 
             /// <summary><c>PELVIC</c> - PELVIC</summary>
-            PELVIC,
+            Pelvic,
 
             /// <summary><c>RETROPERITONEAL</c> - RETROPERITONEAL</summary>
-            RETROPERITONEAL,
+            Retroperitoneal,
 
             /// <summary><c>SCROTAL</c> - SCROTAL</summary>
-            SCROTAL,
+            Scrotal,
 
             /// <summary><c>SMALL_PARTS</c> - SMALL PARTS</summary>
-            SMALL_PARTS,
+            SmallParts,
 
             /// <summary><c>TEE</c> - TEE</summary>
-            TEE,
+            Tee,
 
             /// <summary><c>THYROID</c> - THYROID</summary>
-            THYROID,
+            Thyroid,
 
             /// <summary><c>TRANSCRANIAL</c> - TRANSCRANIAL</summary>
-            TRANSCRANIAL,
+            Transcranial,
 
             /// <summary><c>TTE</c> - TTE</summary>
-            TTE,
+            Tte,
 
             /// <summary><c>US_BIOPSY</c> - US BIOPSY</summary>
-            US_BIOPSY,
+            UsBiopsy,
 
             /// <summary><c>VASCULAR</c> - VASCULAR</summary>
-            VASCULAR,
+            Vascular,
 
             /// <summary><c>ISI</c> - Implemetation Specific Identifiers</summary>
-            ISI,
+            Isi,
 
             /// <summary><c>NMI</c> - NM Implematation</summary>
-            NMI,
+            Nmi,
 
             /// <summary><c>EMISSION</c> - Emission</summary>
-            EMISSION,
+            Emission,
 
             /// <summary><c>TRANSMISSION</c> - Transmission</summary>
-            TRANSMISSION,
+            Transmission,
 
             /// <summary><c>USI</c> - US Implemantation</summary>
-            USI,
+            Usi,
 
             /// <summary><c>0001</c> - 2D Imaging</summary>
             _0001,
@@ -626,22 +626,22 @@ public static class MiiCsBildgebungTransducerTypeExtensions
     public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungTransducerType value) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED => "SECTOR_PHASED",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH => "SECTOR_MECH",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR => "SECTOR_ANNULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR => "LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR => "CURVED_LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL => "SINGLE_CRYSTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD => "SPLIT_XTAL_CWD",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED => "IV_PHASED",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL => "IV_ROT_XTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR => "IV_ROT_MIRROR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA => "ENDOCAV_PA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH => "ENDOCAV_MECH",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA => "ENDOCAV_CLA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA => "ENDOCAV_AA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR => "ENDOCAV_LINEAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED => "VECTOR_PHASED",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased => "SECTOR_PHASED",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech => "SECTOR_MECH",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular => "SECTOR_ANNULAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear => "LINEAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear => "CURVED_LINEAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal => "SINGLE_CRYSTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd => "SPLIT_XTAL_CWD",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased => "IV_PHASED",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal => "IV_ROT_XTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror => "IV_ROT_MIRROR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa => "ENDOCAV_PA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech => "ENDOCAV_MECH",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla => "ENDOCAV_CLA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa => "ENDOCAV_AA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear => "ENDOCAV_LINEAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased => "VECTOR_PHASED",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -651,22 +651,22 @@ public static class MiiCsBildgebungTransducerTypeExtensions
     ) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED => "Sector Phased",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH => "Sector Mech",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR => "Sector Annular",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR => "Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR => "Curved Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL => "Single Crystal",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD => "Split Xtal CWD",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED => "IV Phased",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL => "IV Rot XTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR => "IV Rot Mirror",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA => "Endocav PA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH => "Endocav Mech",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA => "EndocavCLA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA => "Endocav AA",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR => "Endocav Linear",
-            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED => "Vector Phased",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased => "Sector Phased",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech => "Sector Mech",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular => "Sector Annular",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear => "Linear",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear => "Curved Linear",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal => "Single Crystal",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd => "Split Xtal CWD",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased => "IV Phased",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal => "IV Rot XTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror => "IV Rot Mirror",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa => "Endocav PA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech => "Endocav Mech",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla => "EndocavCLA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa => "Endocav AA",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear => "Endocav Linear",
+            Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased => "Vector Phased",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -679,22 +679,22 @@ public static class MiiCsBildgebungTransducerTypeExtensions
     public static Bildgebung.CodeSystems.MiiCsBildgebungTransducerType? FromValue(string code) =>
         code switch
         {
-            "SECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_PHASED,
-            "SECTOR_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_MECH,
-            "SECTOR_ANNULAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SECTOR_ANNULAR,
-            "LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.LINEAR,
-            "CURVED_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CURVED_LINEAR,
-            "SINGLE_CRYSTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SINGLE_CRYSTAL,
-            "SPLIT_XTAL_CWD" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SPLIT_XTAL_CWD,
-            "IV_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_PHASED,
-            "IV_ROT_XTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_XTAL,
-            "IV_ROT_MIRROR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IV_ROT_MIRROR,
-            "ENDOCAV_PA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_PA,
-            "ENDOCAV_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_MECH,
-            "ENDOCAV_CLA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_CLA,
-            "ENDOCAV_AA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_AA,
-            "ENDOCAV_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.ENDOCAV_LINEAR,
-            "VECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VECTOR_PHASED,
+            "SECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorPhased,
+            "SECTOR_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorMech,
+            "SECTOR_ANNULAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SectorAnnular,
+            "LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.Linear,
+            "CURVED_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.CurvedLinear,
+            "SINGLE_CRYSTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SingleCrystal,
+            "SPLIT_XTAL_CWD" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.SplitXtalCwd,
+            "IV_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvPhased,
+            "IV_ROT_XTAL" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotXtal,
+            "IV_ROT_MIRROR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.IvRotMirror,
+            "ENDOCAV_PA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavPa,
+            "ENDOCAV_MECH" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavMech,
+            "ENDOCAV_CLA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavCla,
+            "ENDOCAV_AA" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavAa,
+            "ENDOCAV_LINEAR" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.EndocavLinear,
+            "VECTOR_PHASED" => Bildgebung.CodeSystems.MiiCsBildgebungTransducerType.VectorPhased,
             _ => null,
         };
 
@@ -717,12 +717,12 @@ public static class MiiCsBildgebungSeriesTypeExtensions
     public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC => "STATIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC => "DYNAMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED => "GATED",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY => "WHOLEBODY",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE => "IMAGE",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION => "REPROJECTION",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static => "STATIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic => "DYNAMIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated => "GATED",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody => "WHOLEBODY",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image => "IMAGE",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection => "REPROJECTION",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -730,16 +730,16 @@ public static class MiiCsBildgebungSeriesTypeExtensions
     public static string? Display(this Bildgebung.CodeSystems.MiiCsBildgebungSeriesType value) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC =>
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static =>
                 "a group of images at varying spatial locations at the same time",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC =>
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic =>
                 "a group of images at a set of spatial locations (e.g., slices) at varying time slices, with all spatial locations acquired at all time slices",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED =>
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated =>
                 "a group of images at the same spatial location, same starting and ending time, but acquired in different time slots of (possibly) different R-R intervals",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY =>
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody =>
                 "same as STATIC, except covering multiple transverse fields of view (and therefore acquired at a different time)",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE => "a tomographic image slice",
-            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION =>
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image => "a tomographic image slice",
+            Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection =>
                 "a projection image derived from forward projection through slices of tomographic images, using the algorithm defined in Reprojection Method (0054,1004)",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -753,12 +753,12 @@ public static class MiiCsBildgebungSeriesTypeExtensions
     public static Bildgebung.CodeSystems.MiiCsBildgebungSeriesType? FromValue(string code) =>
         code switch
         {
-            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.STATIC,
-            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.DYNAMIC,
-            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.GATED,
-            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.WHOLEBODY,
-            "IMAGE" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.IMAGE,
-            "REPROJECTION" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.REPROJECTION,
+            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Static,
+            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Dynamic,
+            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Gated,
+            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Wholebody,
+            "IMAGE" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Image,
+            "REPROJECTION" => Bildgebung.CodeSystems.MiiCsBildgebungSeriesType.Reprojection,
             _ => null,
         };
 
@@ -780,11 +780,11 @@ public static class MiiCsBildgebungScanningSequenceExtensions
     public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence value) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE => "SE",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR => "IR",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR => "GR",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP => "EP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM => "RM",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se => "SE",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir => "IR",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr => "GR",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep => "EP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm => "RM",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -794,11 +794,11 @@ public static class MiiCsBildgebungScanningSequenceExtensions
     ) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE => "Spin Echo",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR => "Inversion Recovery",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR => "Gradient Recalled",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP => "Echo Planar",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM => "Research Mode",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se => "Spin Echo",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir => "Inversion Recovery",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr => "Gradient Recalled",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep => "Echo Planar",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm => "Research Mode",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -812,11 +812,11 @@ public static class MiiCsBildgebungScanningSequenceExtensions
     public static Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence? FromValue(string code) =>
         code switch
         {
-            "SE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.SE,
-            "IR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.IR,
-            "GR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.GR,
-            "EP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.EP,
-            "RM" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.RM,
+            "SE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Se,
+            "IR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ir,
+            "GR" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Gr,
+            "EP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Ep,
+            "RM" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequence.Rm,
             _ => null,
         };
 
@@ -843,14 +843,14 @@ public static class MiiCsBildgebungScanningSequenceVariantExtensions
     ) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK => "SK",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC => "MTC",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS => "SS",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS => "TRSS",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP => "SP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP => "MP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP => "OSP",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE => "NONE",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk => "SK",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc => "MTC",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss => "SS",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss => "TRSS",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp => "SP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp => "MP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp => "OSP",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None => "NONE",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -860,17 +860,17 @@ public static class MiiCsBildgebungScanningSequenceVariantExtensions
     ) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK => "segmented k-space",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC =>
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk => "segmented k-space",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc =>
                 "magnetization transfer contrast",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS => "steady state",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS =>
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss => "steady state",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss =>
                 "time reversed steady state",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP => "spoiled",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP => "MAG prepared",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP =>
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp => "spoiled",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp => "MAG prepared",
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp =>
                 "oversampling phase",
-            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE =>
+            Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None =>
                 "no sequence variant",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -887,14 +887,14 @@ public static class MiiCsBildgebungScanningSequenceVariantExtensions
     ) =>
         code switch
         {
-            "SK" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SK,
-            "MTC" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MTC,
-            "SS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SS,
-            "TRSS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.TRSS,
-            "SP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.SP,
-            "MP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.MP,
-            "OSP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.OSP,
-            "NONE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.NONE,
+            "SK" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sk,
+            "MTC" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mtc,
+            "SS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Ss,
+            "TRSS" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Trss,
+            "SP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Sp,
+            "MP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Mp,
+            "OSP" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.Osp,
+            "NONE" => Bildgebung.CodeSystems.MiiCsBildgebungScanningSequenceVariant.None,
             _ => null,
         };
 
@@ -917,81 +917,80 @@ public static class MiiCsBildgebungInstanceImageTypeExtensions
     public static string Code(this Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType value) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC => "PDC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL => "ORIGINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED => "DERIVED",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC => "PEC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY => "PRIMARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY => "SECONDARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC => "MSC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT => "CT",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL => "AXIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER => "LOCALIZER",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR => "MR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP => "DENSITYMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP => "DIFFUSIONMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.IMAGEADDITION =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pdc => "PDC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Original => "ORIGINAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Derived => "DERIVED",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pec => "PEC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Primary => "PRIMARY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Secondary => "SECONDARY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Msc => "MSC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Ct => "CT",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Axial => "AXIAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Localizer => "LOCALIZER",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Mr => "MR",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Densitymap => "DENSITYMAP",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Diffusionmap => "DIFFUSIONMAP",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Imageaddition =>
                 "IMAGEADDITION",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MODULUSSUBTRACT =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Modulussubtract =>
                 "MODULUSSUBTRACT",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR => "MPR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER => "OTHER",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP => "PHASEMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASESUBTRACT =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Mpr => "MPR",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Other => "OTHER",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Phasemap => "PHASEMAP",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Phasesubtract =>
                 "PHASESUBTRACT",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PROJECTIONIMAGE =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Projectionimage =>
                 "PROJECTIONIMAGE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP => "T1MAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP => "T2MAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP => "VELOCITYMAP",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM => "NM",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC => "STATIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC => "DYNAMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED => "GATED",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY => "WHOLEBODY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO => "TOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO => "GATEDTOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO => "RECONTOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONGATEDTOMO =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1Map => "T1MAP",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2Map => "T2MAP",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Velocitymap => "VELOCITYMAP",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Nm => "NM",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Static => "STATIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Dynamic => "DYNAMIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gated => "GATED",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Wholebody => "WHOLEBODY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tomo => "TOMO",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gatedtomo => "GATEDTOMO",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Recontomo => "RECONTOMO",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Recongatedtomo =>
                 "RECONGATEDTOMO",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US => "US",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL => "ABDOMINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST => "BREAST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST => "CHEST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY => "ENDOCAVITARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL => "ENDORECTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL => "ENDOVAGINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL => "EPICARDIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART => "FETAL_HEART",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY => "GYNECOLOGY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC => "INTRACARDIAC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAOPERATIVE =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Us => "US",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Abdominal => "ABDOMINAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Breast => "BREAST",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Chest => "CHEST",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endocavitary => "ENDOCAVITARY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endorectal => "ENDORECTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endovaginal => "ENDOVAGINAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Epicardial => "EPICARDIAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FetalHeart => "FETAL_HEART",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gynecology => "GYNECOLOGY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Intracardiac => "INTRACARDIAC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Intraoperative =>
                 "INTRAOPERATIVE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAVASCULAR =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Intravascular =>
                 "INTRAVASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MUSCULOSKELETAL =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Musculoskeletal =>
                 "MUSCULOSKELETAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NEONATAL_HEAD =>
-                "NEONATAL_HEAD",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL => "OBSTETRICAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC => "OPHTHALMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC => "PEDIATRIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC => "PELVIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RETROPERITONEAL =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NeonatalHead => "NEONATAL_HEAD",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Obstetrical => "OBSTETRICAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Ophthalmic => "OPHTHALMIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pediatric => "PEDIATRIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pelvic => "PELVIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Retroperitoneal =>
                 "RETROPERITONEAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL => "SCROTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS => "SMALL_PARTS",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE => "TEE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID => "THYROID",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL => "TRANSCRANIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE => "TTE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY => "US_BIOPSY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR => "VASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI => "ISI",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI => "NMI",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION => "EMISSION",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION => "TRANSMISSION",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI => "USI",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Scrotal => "SCROTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SmallParts => "SMALL_PARTS",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tee => "TEE",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Thyroid => "THYROID",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Transcranial => "TRANSCRANIAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tte => "TTE",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.UsBiopsy => "US_BIOPSY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Vascular => "VASCULAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Isi => "ISI",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Nmi => "NMI",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Emission => "EMISSION",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Transmission => "TRANSMISSION",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Usi => "USI",
             Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001 => "0001",
             Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002 => "0002",
             Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004 => "0004",
@@ -1011,95 +1010,94 @@ public static class MiiCsBildgebungInstanceImageTypeExtensions
     ) =>
         value switch
         {
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pdc =>
                 "Pixel Data Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Original =>
                 "identifies an original image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Derived =>
                 "identifies an derived image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pec =>
                 "Patient Examination Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Primary =>
                 "identifies a primary image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Secondary =>
                 "identifies a secondary image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Msc =>
                 "Modality Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Ct =>
                 "CT Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Axial =>
                 "a CT Cross-sectional Image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Localizer =>
                 "a CT Localizer Image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Mr =>
                 "MR Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP => "Density Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP => "Diffusion Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.IMAGEADDITION =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Densitymap => "Density Map",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Diffusionmap => "Diffusion Map",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Imageaddition =>
                 "Image Addition",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MODULUSSUBTRACT =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Modulussubtract =>
                 "Modulus Substract",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR => "MPR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER => "Other",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP => "Phase Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASESUBTRACT =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Mpr => "MPR",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Other => "Other",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Phasemap => "Phase Map",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Phasesubtract =>
                 "Phase Substract",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PROJECTIONIMAGE =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Projectionimage =>
                 "Projection Image",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP => "T1 Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP => "T2 Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP => "Velocity Map",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1Map => "T1 Map",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2Map => "T2 Map",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Velocitymap => "Velocity Map",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Nm =>
                 "NM Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC => "Static",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC => "Dynamic",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED => "Gated",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY => "Whole Body",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO => "Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO => "Gated Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO => "Recon Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONGATEDTOMO =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Static => "Static",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Dynamic => "Dynamic",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gated => "Gated",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Wholebody => "Whole Body",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tomo => "Tomo",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gatedtomo => "Gated Tomo",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Recontomo => "Recon Tomo",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Recongatedtomo =>
                 "Recon Gated Tomo",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Us =>
                 "US Specific Characteristics",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL => "ABDOMINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST => "BREAST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST => "CHEST",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY => "ENDOCAVITARY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL => "ENDORECTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL => "ENDOVAGINAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL => "EPICARDIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART => "FETAL HEART",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY => "GYNECOLOGY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC => "INTRACARDIAC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAOPERATIVE =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Abdominal => "ABDOMINAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Breast => "BREAST",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Chest => "CHEST",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endocavitary => "ENDOCAVITARY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endorectal => "ENDORECTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endovaginal => "ENDOVAGINAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Epicardial => "EPICARDIAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FetalHeart => "FETAL HEART",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gynecology => "GYNECOLOGY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Intracardiac => "INTRACARDIAC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Intraoperative =>
                 "INTRAOPERATIVE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRAVASCULAR =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Intravascular =>
                 "INTRAVASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MUSCULOSKELETAL =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Musculoskeletal =>
                 "MUSCULOSKELETAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NEONATAL_HEAD =>
-                "NEONATAL HEAD",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL => "OBSTETRICAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC => "OPHTHALMIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC => "PEDIATRIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC => "PELVIC",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RETROPERITONEAL =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NeonatalHead => "NEONATAL HEAD",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Obstetrical => "OBSTETRICAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Ophthalmic => "OPHTHALMIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pediatric => "PEDIATRIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pelvic => "PELVIC",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Retroperitoneal =>
                 "RETROPERITONEAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL => "SCROTAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS => "SMALL PARTS",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE => "TEE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID => "THYROID",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL => "TRANSCRANIAL",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE => "TTE",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY => "US BIOPSY",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR => "VASCULAR",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI =>
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Scrotal => "SCROTAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SmallParts => "SMALL PARTS",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tee => "TEE",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Thyroid => "THYROID",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Transcranial => "TRANSCRANIAL",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tte => "TTE",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.UsBiopsy => "US BIOPSY",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Vascular => "VASCULAR",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Isi =>
                 "Implemetation Specific Identifiers",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI => "NM Implematation",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION => "Emission",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION => "Transmission",
-            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI => "US Implemantation",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Nmi => "NM Implematation",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Emission => "Emission",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Transmission => "Transmission",
+            Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Usi => "US Implemantation",
             Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001 => "2D Imaging",
             Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002 => "M-Mode",
             Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004 => "CW Doppler",
@@ -1125,101 +1123,98 @@ public static class MiiCsBildgebungInstanceImageTypeExtensions
     public static Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType? FromValue(string code) =>
         code switch
         {
-            "PDC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PDC,
-            "ORIGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ORIGINAL,
-            "DERIVED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DERIVED,
-            "PEC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEC,
-            "PRIMARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PRIMARY,
-            "SECONDARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SECONDARY,
-            "MSC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MSC,
-            "CT" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CT,
-            "AXIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.AXIAL,
-            "LOCALIZER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.LOCALIZER,
-            "MR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MR,
-            "DENSITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DENSITYMAP,
-            "DIFFUSIONMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DIFFUSIONMAP,
+            "PDC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pdc,
+            "ORIGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Original,
+            "DERIVED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Derived,
+            "PEC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pec,
+            "PRIMARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Primary,
+            "SECONDARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Secondary,
+            "MSC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Msc,
+            "CT" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Ct,
+            "AXIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Axial,
+            "LOCALIZER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Localizer,
+            "MR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Mr,
+            "DENSITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Densitymap,
+            "DIFFUSIONMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Diffusionmap,
             "IMAGEADDITION" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .IMAGEADDITION,
+                .Imageaddition,
             "MODULUSSUBTRACT" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .MODULUSSUBTRACT,
-            "MPR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.MPR,
-            "OTHER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OTHER,
-            "PHASEMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PHASEMAP,
+                .Modulussubtract,
+            "MPR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Mpr,
+            "OTHER" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Other,
+            "PHASEMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Phasemap,
             "PHASESUBTRACT" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .PHASESUBTRACT,
+                .Phasesubtract,
             "PROJECTIONIMAGE" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .PROJECTIONIMAGE,
-            "T1MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1_MAP,
-            "T2MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2_MAP,
-            "VELOCITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VELOCITYMAP,
-            "NM" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NM,
-            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.STATIC,
-            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.DYNAMIC,
-            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATED,
-            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.WHOLEBODY,
-            "TOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TOMO,
-            "GATEDTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GATEDTOMO,
-            "RECONTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.RECONTOMO,
+                .Projectionimage,
+            "T1MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T1Map,
+            "T2MAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.T2Map,
+            "VELOCITYMAP" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Velocitymap,
+            "NM" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Nm,
+            "STATIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Static,
+            "DYNAMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Dynamic,
+            "GATED" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gated,
+            "WHOLEBODY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Wholebody,
+            "TOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tomo,
+            "GATEDTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gatedtomo,
+            "RECONTOMO" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Recontomo,
             "RECONGATEDTOMO" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .RECONGATEDTOMO,
-            "US" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US,
-            "ABDOMINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ABDOMINAL,
-            "BREAST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.BREAST,
-            "CHEST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.CHEST,
-            "ENDOCAVITARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOCAVITARY,
-            "ENDORECTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDORECTAL,
-            "ENDOVAGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ENDOVAGINAL,
-            "EPICARDIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EPICARDIAL,
-            "FETAL_HEART" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FETAL_HEART,
-            "GYNECOLOGY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.GYNECOLOGY,
-            "INTRACARDIAC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.INTRACARDIAC,
+                .Recongatedtomo,
+            "US" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Us,
+            "ABDOMINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Abdominal,
+            "BREAST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Breast,
+            "CHEST" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Chest,
+            "ENDOCAVITARY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endocavitary,
+            "ENDORECTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endorectal,
+            "ENDOVAGINAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Endovaginal,
+            "EPICARDIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Epicardial,
+            "FETAL_HEART" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.FetalHeart,
+            "GYNECOLOGY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Gynecology,
+            "INTRACARDIAC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Intracardiac,
             "INTRAOPERATIVE" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .INTRAOPERATIVE,
+                .Intraoperative,
             "INTRAVASCULAR" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .INTRAVASCULAR,
+                .Intravascular,
             "MUSCULOSKELETAL" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .MUSCULOSKELETAL,
-            "NEONATAL_HEAD" => Bildgebung
-                .CodeSystems
-                .MiiCsBildgebungInstanceImageType
-                .NEONATAL_HEAD,
-            "OBSTETRICAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OBSTETRICAL,
-            "OPHTHALMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.OPHTHALMIC,
-            "PEDIATRIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PEDIATRIC,
-            "PELVIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.PELVIC,
+                .Musculoskeletal,
+            "NEONATAL_HEAD" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NeonatalHead,
+            "OBSTETRICAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Obstetrical,
+            "OPHTHALMIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Ophthalmic,
+            "PEDIATRIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pediatric,
+            "PELVIC" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Pelvic,
             "RETROPERITONEAL" => Bildgebung
                 .CodeSystems
                 .MiiCsBildgebungInstanceImageType
-                .RETROPERITONEAL,
-            "SCROTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SCROTAL,
-            "SMALL_PARTS" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SMALL_PARTS,
-            "TEE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TEE,
-            "THYROID" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.THYROID,
-            "TRANSCRANIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSCRANIAL,
-            "TTE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TTE,
-            "US_BIOPSY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.US_BIOPSY,
-            "VASCULAR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.VASCULAR,
-            "ISI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.ISI,
-            "NMI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.NMI,
-            "EMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.EMISSION,
-            "TRANSMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.TRANSMISSION,
-            "USI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.USI,
+                .Retroperitoneal,
+            "SCROTAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Scrotal,
+            "SMALL_PARTS" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.SmallParts,
+            "TEE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tee,
+            "THYROID" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Thyroid,
+            "TRANSCRANIAL" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Transcranial,
+            "TTE" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Tte,
+            "US_BIOPSY" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.UsBiopsy,
+            "VASCULAR" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Vascular,
+            "ISI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Isi,
+            "NMI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Nmi,
+            "EMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Emission,
+            "TRANSMISSION" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Transmission,
+            "USI" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType.Usi,
             "0001" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0001,
             "0002" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0002,
             "0004" => Bildgebung.CodeSystems.MiiCsBildgebungInstanceImageType._0004,

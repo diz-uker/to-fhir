@@ -18,13 +18,13 @@ public static class Medikation
         public enum MiiCsMedikationWirkstofftyp
         {
             /// <summary><c>IN</c> - ingredient</summary>
-            IN,
+            In,
 
             /// <summary><c>PIN</c> - precise ingredient</summary>
-            PIN,
+            Pin,
 
             /// <summary><c>MIN</c> - multiple ingredients</summary>
-            MIN,
+            Min,
         }
     }
 
@@ -100,9 +100,9 @@ public static class MiiCsMedikationWirkstofftypExtensions
     public static string Code(this Medikation.CodeSystems.MiiCsMedikationWirkstofftyp value) =>
         value switch
         {
-            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN => "IN",
-            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN => "PIN",
-            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN => "MIN",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.In => "IN",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.Pin => "PIN",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.Min => "MIN",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -110,9 +110,9 @@ public static class MiiCsMedikationWirkstofftypExtensions
     public static string? Display(this Medikation.CodeSystems.MiiCsMedikationWirkstofftyp value) =>
         value switch
         {
-            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN => "ingredient",
-            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN => "precise ingredient",
-            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN => "multiple ingredients",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.In => "ingredient",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.Pin => "precise ingredient",
+            Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.Min => "multiple ingredients",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -125,9 +125,9 @@ public static class MiiCsMedikationWirkstofftypExtensions
     public static Medikation.CodeSystems.MiiCsMedikationWirkstofftyp? FromValue(string code) =>
         code switch
         {
-            "IN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.IN,
-            "PIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.PIN,
-            "MIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.MIN,
+            "IN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.In,
+            "PIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.Pin,
+            "MIN" => Medikation.CodeSystems.MiiCsMedikationWirkstofftyp.Min,
             _ => null,
         };
 

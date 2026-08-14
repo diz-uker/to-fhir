@@ -47,12 +47,12 @@ public static partial class NameUtils
         if (code.EndsWith('+'))
         {
             basePart = code[..^1];
-            suffix = "_POS";
+            suffix = "Pos";
         }
         else if (code.EndsWith('-'))
         {
             basePart = code[..^1];
-            suffix = "_NEG";
+            suffix = "Neg";
         }
         else
         {
@@ -60,7 +60,7 @@ public static partial class NameUtils
             suffix = "";
         }
 
-        var name = ToConstantName(basePart) + suffix;
+        var name = ToPascalCase(basePart) + suffix;
         if (name.Length == 0)
             return "_";
         return char.IsDigit(name[0]) ? "_" + name : name;

@@ -266,298 +266,298 @@ public static class Onkologie
         public enum MiiCsOnkoStrahlentherapieZielgebiet
         {
             /// <summary><c>1.1</c> - Ganzhirn (Neurokranium, inklusive Meningen)</summary>
-            _1_1,
+            _11,
 
             /// <summary><c>1.2</c> - Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)</summary>
-            _1_2,
+            _12,
 
             /// <summary><c>1.3</c> - Neuroachse/Rückenmark</summary>
-            _1_3,
+            _13,
 
             /// <summary><c>1.4</c> - Hypophyse</summary>
-            _1_4,
+            _14,
 
             /// <summary><c>1.5</c> - Hirn sonstiges</summary>
-            _1_5,
+            _15,
 
             /// <summary><c>2.1</c> - Auge (r, l)</summary>
-            _2_1,
+            _21,
 
             /// <summary><c>2.2</c> - Nase/Nasennebenhöhle</summary>
-            _2_2,
+            _22,
 
             /// <summary><c>2.3</c> - Mundhöhle inklusive Mundhöhlenvorhof</summary>
-            _2_3,
+            _23,
 
             /// <summary><c>2.4</c> - Ohr (r, l)</summary>
-            _2_4,
+            _24,
 
             /// <summary><c>2.5</c> - Speicheldrüse (r, l)</summary>
-            _2_5,
+            _25,
 
             /// <summary><c>2.6</c> - Pharynx</summary>
-            _2_6,
+            _26,
 
             /// <summary><c>2.7</c> - Nasopharynx</summary>
-            _2_7,
+            _27,
 
             /// <summary><c>2.8</c> - Oropharynx</summary>
-            _2_8,
+            _28,
 
             /// <summary><c>2.9</c> - Hypopharynx</summary>
-            _2_9,
+            _29,
 
             /// <summary><c>2.10</c> - Larynx</summary>
-            _2_10,
+            _210,
 
             /// <summary><c>2.11</c> - Schilddrüse</summary>
-            _2_11,
+            _211,
 
             /// <summary><c>2.12</c> - Kopf-Hals sonstige</summary>
-            _2_12,
+            _212,
 
             /// <summary><c>3.1</c> - Mamma als Ganzbrust (r, l)</summary>
-            _3_1,
+            _31,
 
             /// <summary><c>3.2</c> - Mamma als Teilbrust (r, l)</summary>
-            _3_2,
+            _32,
 
             /// <summary><c>3.3</c> - Thoraxwand, gegebenenfalls r, l</summary>
-            _3_3,
+            _33,
 
             /// <summary><c>3.4</c> - Lunge (r, l)</summary>
-            _3_4,
+            _34,
 
             /// <summary><c>3.5</c> - Ösophagus</summary>
-            _3_5,
+            _35,
 
             /// <summary><c>3.6</c> - Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)</summary>
-            _3_6,
+            _36,
 
             /// <summary><c>3.7</c> - Thymus</summary>
-            _3_7,
+            _37,
 
             /// <summary><c>3.8</c> - Thorax sonstige</summary>
-            _3_8,
+            _38,
 
             /// <summary><c>4.1</c> - Magen</summary>
-            _4_1,
+            _41,
 
             /// <summary><c>4.2</c> - Pankreas</summary>
-            _4_2,
+            _42,
 
             /// <summary><c>4.3</c> - Leber, auch bei Teilbestrahlung</summary>
-            _4_3,
+            _43,
 
             /// <summary><c>4.4</c> - Milz</summary>
-            _4_4,
+            _44,
 
             /// <summary><c>4.5</c> - Niere (r, l)</summary>
-            _4_5,
+            _45,
 
             /// <summary><c>4.6</c> - Nebenniere (r, l)</summary>
-            _4_6,
+            _46,
 
             /// <summary><c>4.7</c> - Retroperitoneum (z. B. Sarkome)</summary>
-            _4_7,
+            _47,
 
             /// <summary><c>4.8</c> - Ureter (r, l)</summary>
-            _4_8,
+            _48,
 
             /// <summary><c>4.9</c> - Bauchwand (z. B. Sarkome)</summary>
-            _4_9,
+            _49,
 
             /// <summary><c>4.10</c> - Oberbauch</summary>
-            _4_10,
+            _410,
 
             /// <summary><c>4.11</c> - Gallengänge</summary>
-            _4_11,
+            _411,
 
             /// <summary><c>4.12</c> - Gallenblase</summary>
-            _4_12,
+            _412,
 
             /// <summary><c>4.13</c> - Abdomen sonstige</summary>
-            _4_13,
+            _413,
 
             /// <summary><c>5.1</c> - Rektum</summary>
-            _5_1,
+            _51,
 
             /// <summary><c>5.2</c> - Analbereich</summary>
-            _5_2,
+            _52,
 
             /// <summary><c>5.3</c> - Harnblase</summary>
-            _5_3,
+            _53,
 
             /// <summary><c>5.4</c> - Prostata</summary>
-            _5_4,
+            _54,
 
             /// <summary><c>5.5</c> - Hoden (r, l)</summary>
-            _5_5,
+            _55,
 
             /// <summary><c>5.6</c> - Penis</summary>
-            _5_6,
+            _56,
 
             /// <summary><c>5.7</c> - Uterus</summary>
-            _5_7,
+            _57,
 
             /// <summary><c>5.8</c> - Zervix</summary>
-            _5_8,
+            _58,
 
             /// <summary><c>5.9</c> - Vulva</summary>
-            _5_9,
+            _59,
 
             /// <summary><c>5.10</c> - Vagina</summary>
-            _5_10,
+            _510,
 
             /// <summary><c>5.11</c> - Beckenwand</summary>
-            _5_11,
+            _511,
 
             /// <summary><c>5.12</c> - Becken sonstige</summary>
-            _5_12,
+            _512,
 
             /// <summary><c>6.1</c> - Schädel</summary>
-            _6_1,
+            _61,
 
             /// <summary><c>6.2</c> - Schädelbasis</summary>
-            _6_2,
+            _62,
 
             /// <summary><c>6.3</c> - Orbita (r, l)</summary>
-            _6_3,
+            _63,
 
             /// <summary><c>6.4</c> - Halswirbelsäule</summary>
-            _6_4,
+            _64,
 
             /// <summary><c>6.5</c> - Brustwirbelsäule</summary>
-            _6_5,
+            _65,
 
             /// <summary><c>6.6</c> - Lendenwirbelsäule</summary>
-            _6_6,
+            _66,
 
             /// <summary><c>6.7</c> - Sacrum /Coccygeum</summary>
-            _6_7,
+            _67,
 
             /// <summary><c>6.8</c> - Rippen (r, l)</summary>
-            _6_8,
+            _68,
 
             /// <summary><c>6.9</c> - Sternum</summary>
-            _6_9,
+            _69,
 
             /// <summary><c>6.10</c> - Schulter (r, l)</summary>
-            _6_10,
+            _610,
 
             /// <summary><c>6.11</c> - Oberarm (r, l)</summary>
-            _6_11,
+            _611,
 
             /// <summary><c>6.12</c> - Unterarm (r, l)</summary>
-            _6_12,
+            _612,
 
             /// <summary><c>6.13</c> - Hand (r, l)</summary>
-            _6_13,
+            _613,
 
             /// <summary><c>6.14</c> - Becken (r, l)</summary>
-            _6_14,
+            _614,
 
             /// <summary><c>6.15</c> - Hüfte (r, l)</summary>
-            _6_15,
+            _615,
 
             /// <summary><c>6.16</c> - Oberschenkel (r, l)</summary>
-            _6_16,
+            _616,
 
             /// <summary><c>6.17</c> - Unterschenkel (r, l)</summary>
-            _6_17,
+            _617,
 
             /// <summary><c>6.18</c> - Fuß (r, l)</summary>
-            _6_18,
+            _618,
 
             /// <summary><c>6.19</c> - Knochen sonstige</summary>
-            _6_19,
+            _619,
 
             /// <summary><c>7.1</c> - Kopf, Gesicht, Hals</summary>
-            _7_1,
+            _71,
 
             /// <summary><c>7.2</c> - obere Extremität ink* #lusive Schulter (r, l)</summary>
-            _7_2,
+            _72,
 
             /// <summary><c>7.3</c> - untere Extremität und Hüfte (r, l)</summary>
-            _7_3,
+            _73,
 
             /// <summary><c>7.4</c> - Thorax</summary>
-            _7_4,
+            _74,
 
             /// <summary><c>7.5</c> - Abdomen</summary>
-            _7_5,
+            _75,
 
             /// <summary><c>7.6</c> - Becken</summary>
-            _7_6,
+            _76,
 
             /// <summary><c>7.7</c> - Stammes o. n. A.</summary>
-            _7_7,
+            _77,
 
             /// <summary><c>7.8</c> - mehrere Bereiche überlappend</summary>
-            _7_8,
+            _78,
 
             /// <summary><c>7.9</c> - sonstige Weichteile o. n. A.</summary>
-            _7_9,
+            _79,
 
             /// <summary><c>8.1</c> - Ganzhaut</summary>
-            _8_1,
+            _81,
 
             /// <summary><c>8.2</c> - Teilbereiche</summary>
-            _8_2,
+            _82,
 
             /// <summary><c>9.1</c> - Cervikale Lymphknoten (r, l)</summary>
-            _9_1,
+            _91,
 
             /// <summary><c>9.2</c> - Supra-/infraclavikuläre Lymphknoten (r, l)</summary>
-            _9_2,
+            _92,
 
             /// <summary><c>9.3</c> - Axilläre Lymphknoten (r, l)</summary>
-            _9_3,
+            _93,
 
             /// <summary><c>9.4</c> - Retrosternale/sternale/Mammaria interna Lymphknoten</summary>
-            _9_4,
+            _94,
 
             /// <summary><c>9.5</c> - Mediastinale Lymphknoten</summary>
-            _9_5,
+            _95,
 
             /// <summary><c>9.6</c> - Hiläre Lymphknoten</summary>
-            _9_6,
+            _96,
 
             /// <summary><c>9.7</c> - Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)</summary>
-            _9_7,
+            _97,
 
             /// <summary><c>9.8</c> - Paraaortale/paracavale Lymphknoten</summary>
-            _9_8,
+            _98,
 
             /// <summary><c>9.9</c> - Retroperitoneale Lymphknoten</summary>
-            _9_9,
+            _99,
 
             /// <summary><c>9.10</c> - Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)</summary>
-            _9_10,
+            _910,
 
             /// <summary><c>9.11</c> - Inguinale Lymphknoten (r, l)</summary>
-            _9_11,
+            _911,
 
             /// <summary><c>9.12</c> - Involved Node</summary>
-            _9_12,
+            _912,
 
             /// <summary><c>9.13</c> - Involved Site</summary>
-            _9_13,
+            _913,
 
             /// <summary><c>9.14</c> - Involved Field</summary>
-            _9_14,
+            _914,
 
             /// <summary><c>9.15</c> - Sonstige Lymphknoten</summary>
-            _9_15,
+            _915,
 
             /// <summary><c>10.1</c> - Ganzkörperbestrahlung bei allogener Stammzelltransplantation</summary>
-            _10_1,
+            _101,
 
             /// <summary><c>10.2</c> - operative Zugangswege</summary>
-            _10_2,
+            _102,
 
             /// <summary><c>10.3</c> - Sonstige, nicht genannte Zielgebiete</summary>
-            _10_3,
+            _103,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart</c>.</summary>
@@ -567,76 +567,76 @@ public static class Onkologie
             P,
 
             /// <summary><c>P-ST</c> - perkutan stereotaktisch</summary>
-            P_ST,
+            PSt,
 
             /// <summary><c>P-4D</c> - perkutan, atemgetriggert</summary>
-            P_4_D,
+            P4D,
 
             /// <summary><c>P-ST4D</c> - perkutan, stereotaktisch, atemgetriggert</summary>
-            P_ST4_D,
+            PSt4D,
 
             /// <summary><c>PRCN</c> - perkutan ohne Chemotherapie/Sensitizer</summary>
-            PRCN,
+            Prcn,
 
             /// <summary><c>PRCN-ST</c> - perkutan, stereotaktisch ohne Chemotherapie/Sensitizer</summary>
-            PRCN_ST,
+            PrcnSt,
 
             /// <summary><c>PRCN-4D</c> - perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer</summary>
-            PRCN_4_D,
+            Prcn4D,
 
             /// <summary><c>PRCN-ST4D</c> - perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer</summary>
-            PRCN_ST4_D,
+            PrcnSt4D,
 
             /// <summary><c>PRCJ</c> - perkutan mit Chemotherapie/Sensitizer</summary>
-            PRCJ,
+            Prcj,
 
             /// <summary><c>PRCJ-ST</c> - perkutan, stereotaktisch mit Chemotherapie/Sensitizer</summary>
-            PRCJ_ST,
+            PrcjSt,
 
             /// <summary><c>PRCJ-4D</c> - perkutan, atemgetriggert, mit Chemotherapie/Sensitizer</summary>
-            PRCJ_4_D,
+            Prcj4D,
 
             /// <summary><c>PRCJ-ST4D</c> - perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer</summary>
-            PRCJ_ST4_D,
+            PrcjSt4D,
 
             /// <summary><c>K</c> - endokavitäre Kontakttherapie</summary>
             K,
 
             /// <summary><c>KHDR</c> - endokavitäre Kontakttherapie, high dose rate therapy</summary>
-            KHDR,
+            Khdr,
 
             /// <summary><c>KLDR</c> - endokavitäre Kontakttherapie, low dose rate therapy</summary>
-            KLDR,
+            Kldr,
 
             /// <summary><c>KPDR</c> - endokavitäre Kontakttherapie, pulsed dose rate therapy</summary>
-            KPDR,
+            Kpdr,
 
             /// <summary><c>I</c> - intersitielle Kontakttherapie</summary>
             I,
 
             /// <summary><c>IHDR</c> - intersitielle Kontakttherapie, high dose rate therapy</summary>
-            IHDR,
+            Ihdr,
 
             /// <summary><c>ILDR</c> - intersitielle Kontakttherapie, low dose rate therapy</summary>
-            ILDR,
+            Ildr,
 
             /// <summary><c>IPDR</c> - intersitielle Kontakttherapie, pulsed dose rate therapy</summary>
-            IPDR,
+            Ipdr,
 
             /// <summary><c>MSIRT</c> - selektive interne Radio-Therapie</summary>
-            MSIRT,
+            Msirt,
 
             /// <summary><c>MPRRT</c> - Peptid-Radio-Rezeptor-Therapie</summary>
-            MPRRT,
+            Mprrt,
 
             /// <summary><c>MPSMA</c> - PSMA-Therapie</summary>
-            MPSMA,
+            Mpsma,
 
             /// <summary><c>MRJT</c> - Radiojod-Therapie</summary>
-            MRJT,
+            Mrjt,
 
             /// <summary><c>MRIT</c> - Radioimmun-Therapie</summary>
-            MRIT,
+            Mrit,
 
             /// <summary><c>M</c> - sonstige metabolische Radionuklidtherapie</summary>
             M,
@@ -675,16 +675,16 @@ public static class Onkologie
         public enum MiiCsOnkoTherapieplanungTyp
         {
             /// <summary><c>praeth</c> - prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</summary>
-            PRAETH,
+            Praeth,
 
             /// <summary><c>postop</c> - postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)</summary>
-            POSTOP,
+            Postop,
 
             /// <summary><c>postth</c> - posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)</summary>
-            POSTTH,
+            Postth,
 
             /// <summary><c>ther</c> - Therapieplanung ohne Tumorkonferenz</summary>
-            THER,
+            Ther,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention</c>.</summary>
@@ -741,40 +741,40 @@ public static class Onkologie
         public enum MiiCsOnkoFernmetastasen
         {
             /// <summary><c>PUL</c> - Lunge</summary>
-            PUL,
+            Pul,
 
             /// <summary><c>OSS</c> - Knochen</summary>
-            OSS,
+            Oss,
 
             /// <summary><c>HEP</c> - Leber</summary>
-            HEP,
+            Hep,
 
             /// <summary><c>BRA</c> - Hirn</summary>
-            BRA,
+            Bra,
 
             /// <summary><c>LYM</c> - Lymphknoten</summary>
-            LYM,
+            Lym,
 
             /// <summary><c>MAR</c> - Knochenmark</summary>
-            MAR,
+            Mar,
 
             /// <summary><c>PLE</c> - Pleura</summary>
-            PLE,
+            Ple,
 
             /// <summary><c>PER</c> - Peritoneum</summary>
-            PER,
+            Per,
 
             /// <summary><c>ADR</c> - Nebennieren</summary>
-            ADR,
+            Adr,
 
             /// <summary><c>SKI</c> - Haut</summary>
-            SKI,
+            Ski,
 
             /// <summary><c>OTH</c> - andere Organe</summary>
-            OTH,
+            Oth,
 
             /// <summary><c>GEN</c> - generalisierte Metastasierung</summary>
-            GEN,
+            Gen,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet</c>.</summary>
@@ -794,52 +794,52 @@ public static class Onkologie
         public enum MiiCsOnkoTherapieTyp
         {
             /// <summary><c>CH</c> - Chemotherapie</summary>
-            CH,
+            Ch,
 
             /// <summary><c>HO</c> - Hormontherapie</summary>
-            HO,
+            Ho,
 
             /// <summary><c>IM</c> - Immun-/Antikörpertherapie</summary>
-            IM,
+            Im,
 
             /// <summary><c>ZS</c> - zielgerichtete Substanzen</summary>
-            ZS,
+            Zs,
 
             /// <summary><c>SZ</c> - Stammzelltransplantation (inklusive Knochenmarktransplantation)</summary>
-            SZ,
+            Sz,
 
             /// <summary><c>CI</c> - Chemo- + Immun-/Antikörpertherapie</summary>
-            CI,
+            Ci,
 
             /// <summary><c>CZ</c> - Chemotherapie + zielgerichtete Substanzen</summary>
-            CZ,
+            Cz,
 
             /// <summary><c>CIZ</c> - Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen</summary>
-            CIZ,
+            Ciz,
 
             /// <summary><c>IZ</c> - Immun-/Antikörpertherapie + zielgerichtete Substanzen</summary>
-            IZ,
+            Iz,
 
             /// <summary><c>WW</c> - Watchful Waiting</summary>
-            WW,
+            Ww,
 
             /// <summary><c>AS</c> - Active Surveillance</summary>
-            AS,
+            As,
 
             /// <summary><c>WS</c> - Wait and see</summary>
-            WS,
+            Ws,
 
             /// <summary><c>OP</c> - Operation</summary>
-            OP,
+            Op,
 
             /// <summary><c>ST</c> - Strahlentherapie</summary>
-            ST,
+            St,
 
             /// <summary><c>KW</c> - keine weitere tumorspezifische Therapie empfohlen</summary>
-            KW,
+            Kw,
 
             /// <summary><c>SO</c> - Sonstiges</summary>
-            SO,
+            So,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status</c>.</summary>
@@ -865,235 +865,235 @@ public static class Onkologie
             U,
 
             /// <summary><c>ABD</c> - Abszess in einem Drainagekanal</summary>
-            ABD,
+            Abd,
 
             /// <summary><c>ABS</c> - Abszess, intraabdominaler oder intrathorakaler</summary>
-            ABS,
+            Abs,
 
             /// <summary><c>ASF</c> - Abszess, subfaszialer</summary>
-            ASF,
+            Asf,
 
             /// <summary><c>ANI</c> - Akute Niereninsuffizienz</summary>
-            ANI,
+            Ani,
 
             /// <summary><c>AEP</c> - Alkoholentzugspsychose</summary>
-            AEP,
+            Aep,
 
             /// <summary><c>ALR</c> - Allergische Reaktion ohne Schocksymptomatik</summary>
-            ALR,
+            Alr,
 
             /// <summary><c>ANS</c> - Anaphylaktischer Schock</summary>
-            ANS,
+            Ans,
 
             /// <summary><c>AEE</c> - Anastomoseninsuffizienz einer Enterostomie</summary>
-            AEE,
+            Aee,
 
             /// <summary><c>API</c> - Apoplektischer Insult</summary>
-            API,
+            Api,
 
             /// <summary><c>BIF</c> - Biliäre Fistel</summary>
-            BIF,
+            Bif,
 
             /// <summary><c>BOG</c> - Blutung, obere gastrointestinale (z. B „Stressulkus“)</summary>
-            BOG,
+            Bog,
 
             /// <summary><c>BOE</c> - Bolusverlegung eines Endotubus</summary>
-            BOE,
+            Boe,
 
             /// <summary><c>BSI</c> - Bronchusstumpfinsuffizienz</summary>
-            BSI,
+            Bsi,
 
             /// <summary><c>CHI</c> - Cholangitis</summary>
-            CHI,
+            Chi,
 
             /// <summary><c>DAI</c> - Darmanastomoseninsuffizienz</summary>
-            DAI,
+            Dai,
 
             /// <summary><c>DPS</c> - Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)</summary>
-            DPS,
+            Dps,
 
             /// <summary><c>DIC</c> - Disseminierte intravasale Koagulopathie</summary>
-            DIC,
+            Dic,
 
             /// <summary><c>DEP</c> - Drogenentzugspsychose</summary>
-            DEP,
+            Dep,
 
             /// <summary><c>DLU</c> - Druck- und Lagerungsschäden, z. B. Dekubitalulzera</summary>
-            DLU,
+            Dlu,
 
             /// <summary><c>DSI</c> - Duodenalstumpfinsuffizienz</summary>
-            DSI,
+            Dsi,
 
             /// <summary><c>ENF</c> - Enterale Fistel</summary>
-            ENF,
+            Enf,
 
             /// <summary><c>GER</c> - Gerinnungsstörung</summary>
-            GER,
+            Ger,
 
             /// <summary><c>HEM</c> - Hämatemesis</summary>
-            HEM,
+            Hem,
 
             /// <summary><c>HUR</c> - Hämaturie</summary>
-            HUR,
+            Hur,
 
             /// <summary><c>HAE</c> - Hämorrhagischer Schock</summary>
-            HAE,
+            Hae,
 
             /// <summary><c>HFI</c> - Harnfistel</summary>
-            HFI,
+            Hfi,
 
             /// <summary><c>HNK</c> - Hautnekrose im Operationsbereich</summary>
-            HNK,
+            Hnk,
 
             /// <summary><c>HZI</c> - Herzinsuffizienz</summary>
-            HZI,
+            Hzi,
 
             /// <summary><c>HRS</c> - Herzrhythmusstörungen</summary>
-            HRS,
+            Hrs,
 
             /// <summary><c>HNA</c> - Hirnnervenausfälle</summary>
-            HNA,
+            Hna,
 
             /// <summary><c>HOP</c> - Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)</summary>
-            HOP,
+            Hop,
 
             /// <summary><c>HYB</c> - Hyperbilirubinämie</summary>
-            HYB,
+            Hyb,
 
             /// <summary><c>HYF</c> - Hypopharynxfistel</summary>
-            HYF,
+            Hyf,
 
             /// <summary><c>IFV</c> - Ileofemorale Venenthrombose</summary>
-            IFV,
+            Ifv,
 
             /// <summary><c>KAS</c> - Kardiogener Schock</summary>
-            KAS,
+            Kas,
 
             /// <summary><c>KES</c> - Komplikationen einer Stomaanlage</summary>
-            KES,
+            Kes,
 
             /// <summary><c>KIM</c> - Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation</summary>
-            KIM,
+            Kim,
 
             /// <summary><c>KRA</c> - Krampfanfall</summary>
-            KRA,
+            Kra,
 
             /// <summary><c>KDS</c> - Kurzdarmsyndrom</summary>
-            KDS,
+            Kds,
 
             /// <summary><c>LEV</c> - Leberversagen</summary>
-            LEV,
+            Lev,
 
             /// <summary><c>LOE</c> - Lungenödem</summary>
-            LOE,
+            Loe,
 
             /// <summary><c>LYF</c> - Lymphfistel</summary>
-            LYF,
+            Lyf,
 
             /// <summary><c>LYE</c> - Lymphozele</summary>
-            LYE,
+            Lye,
 
             /// <summary><c>MES</c> - Magenentleerungsstörung</summary>
-            MES,
+            Mes,
 
             /// <summary><c>MIL</c> - Mechanischer Ileus</summary>
-            MIL,
+            Mil,
 
             /// <summary><c>MED</c> - Mediastinitis</summary>
-            MED,
+            Med,
 
             /// <summary><c>MAT</c> - Mesenterialarterien- oder -venenthrombose</summary>
-            MAT,
+            Mat,
 
             /// <summary><c>MYI</c> - Myokardinfarkt</summary>
-            MYI,
+            Myi,
 
             /// <summary><c>RNB</c> - Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt</summary>
-            RNB,
+            Rnb,
 
             /// <summary><c>NAB</c> - Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt</summary>
-            NAB,
+            Nab,
 
             /// <summary><c>NIN</c> - Nahtinsuffizienz, anderweitig nicht erwähnt</summary>
-            NIN,
+            Nin,
 
             /// <summary><c>OES</c> - Ösophagitis</summary>
-            OES,
+            Oes,
 
             /// <summary><c>OSM</c> - Osteitis, Osteomyelitis</summary>
-            OSM,
+            Osm,
 
             /// <summary><c>PAF</c> - Pankreasfistel</summary>
-            PAF,
+            Paf,
 
             /// <summary><c>PIT</c> - Pankreatitis</summary>
-            PIT,
+            Pit,
 
             /// <summary><c>PAB</c> - Peranale Blutung</summary>
-            PAB,
+            Pab,
 
             /// <summary><c>PPA</c> - Periphere Parese</summary>
-            PPA,
+            Ppa,
 
             /// <summary><c>PAV</c> - Peripherer arterieller Verschluss (Embolie, Thrombose)</summary>
-            PAV,
+            Pav,
 
             /// <summary><c>PER</c> - Peritonitis</summary>
-            PER,
+            Per,
 
             /// <summary><c>PLB</c> - Platzbauch</summary>
-            PLB,
+            Plb,
 
             /// <summary><c>PEY</c> - Pleuraempyem</summary>
-            PEY,
+            Pey,
 
             /// <summary><c>PLE</c> - Pleuraerguss</summary>
-            PLE,
+            Ple,
 
             /// <summary><c>PMN</c> - Pneumonie</summary>
-            PMN,
+            Pmn,
 
             /// <summary><c>PNT</c> - Pneumothorax</summary>
-            PNT,
+            Pnt,
 
             /// <summary><c>PDA</c> - Protrahierte Darmatonie (paralytischer Ileus)</summary>
-            PDA,
+            Pda,
 
             /// <summary><c>PAE</c> - Pulmonalarterienembolie</summary>
-            PAE,
+            Pae,
 
             /// <summary><c>RPA</c> - Rekurrensparese</summary>
-            RPA,
+            Rpa,
 
             /// <summary><c>RIN</c> - Respiratorische Insuffizienz</summary>
-            RIN,
+            Rin,
 
             /// <summary><c>SKI</c> - Septische Komplikation eines Implantates</summary>
-            SKI,
+            Ski,
 
             /// <summary><c>SES</c> - Septischer Schock</summary>
-            SES,
+            Ses,
 
             /// <summary><c>SFH</c> - Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes</summary>
-            SFH,
+            Sfh,
 
             /// <summary><c>STK</c> - Stomakomplikation (z. B. Blutung, Nekrose, Stenose)</summary>
-            STK,
+            Stk,
 
             /// <summary><c>TZP</c> - Thrombozytopenie</summary>
-            TZP,
+            Tzp,
 
             /// <summary><c>TIA</c> - TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)</summary>
-            TIA,
+            Tia,
 
             /// <summary><c>TRZ</c> - Transfusionszwischenfall</summary>
-            TRZ,
+            Trz,
 
             /// <summary><c>WUH</c> - Wundhämatom (konservativ therapiert)</summary>
-            WUH,
+            Wuh,
 
             /// <summary><c>WSS</c> - Wundheilungsstörung, subkutane</summary>
-            WSS,
+            Wss,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung</c>.</summary>
@@ -1121,13 +1121,13 @@ public static class Onkologie
             _7,
 
             /// <summary><c>7.1</c> - histologische Untersuchung eines Primärtumors</summary>
-            _7_1,
+            _71,
 
             /// <summary><c>7.2</c> - histologische Untersuchung einer Metastase</summary>
-            _7_2,
+            _72,
 
             /// <summary><c>7.3</c> - Histologie der Autopsie</summary>
-            _7_3,
+            _73,
 
             /// <summary><c>8</c> - Zytogenetisch und/oder molekularer Test</summary>
             _8,
@@ -1246,496 +1246,496 @@ public static class Onkologie
         public enum MiiCsOnkoSystemischeTherapieProtokolle
         {
             /// <summary><c>ABVD</c> - ABVD</summary>
-            ABVD,
+            Abvd,
 
             /// <summary><c>AC</c> - AC</summary>
-            AC,
+            Ac,
 
             /// <summary><c>ACO</c> - ACO</summary>
-            ACO,
+            Aco,
 
             /// <summary><c>ADORE</c> - ADORE</summary>
-            ADORE,
+            Adore,
 
             /// <summary><c>ADR-IFO</c> - ADR-IFO</summary>
-            ADR_IFO,
+            AdrIfo,
 
             /// <summary><c>AIO</c> - AIO</summary>
-            AIO,
+            Aio,
 
             /// <summary><c>AIO-04</c> - AIO-04</summary>
-            AIO_04,
+            Aio04,
 
             /// <summary><c>AIO-Irinotecan</c> - AIO-Irinotecan</summary>
-            AIO_IRINOTECAN,
+            AioIrinotecan,
 
             /// <summary><c>ARO</c> - ARO</summary>
-            ARO,
+            Aro,
 
             /// <summary><c>AVD</c> - AVD</summary>
-            AVD,
+            Avd,
 
             /// <summary><c>BCD</c> - BCD</summary>
-            BCD,
+            Bcd,
 
             /// <summary><c>BEACOPP-basis</c> - BEACOPP basis</summary>
-            BEACOPP_BASIS,
+            BeacoppBasis,
 
             /// <summary><c>BEACOPP-eskaliert</c> - BEACOPP eskaliert</summary>
-            BEACOPP_ESKALIERT,
+            BeacoppEskaliert,
 
             /// <summary><c>BEAM</c> - BEAM</summary>
-            BEAM,
+            Beam,
 
             /// <summary><c>BOLD</c> - BOLD</summary>
-            BOLD,
+            Bold,
 
             /// <summary><c>BP</c> - BP</summary>
-            BP,
+            Bp,
 
             /// <summary><c>BR</c> - BR</summary>
-            BR,
+            Br,
 
             /// <summary><c>BrECADD</c> - BrECADD</summary>
-            BR_ECADD,
+            BrEcadd,
 
             /// <summary><c>BuCy</c> - BuCy</summary>
-            BU_CY,
+            BuCy,
 
             /// <summary><c>CAD</c> - CAD</summary>
-            CAD,
+            Cad,
 
             /// <summary><c>CAO</c> - CAO</summary>
-            CAO,
+            Cao,
 
             /// <summary><c>CapeOx</c> - CapeOx</summary>
-            CAPE_OX,
+            CapeOx,
 
             /// <summary><c>Cap-Schema</c> - Cap-Schema</summary>
-            CAP_SCHEMA,
+            CapSchema,
 
             /// <summary><c>CarboTax</c> - CarboTax</summary>
-            CARBO_TAX,
+            CarboTax,
 
             /// <summary><c>CEV</c> - CEV</summary>
-            CEV,
+            Cev,
 
             /// <summary><c>CHOEP</c> - CHOEP</summary>
-            CHOEP,
+            Choep,
 
             /// <summary><c>CHOEP-14</c> - CHOEP-14</summary>
-            CHOEP_14,
+            Choep14,
 
             /// <summary><c>CHOEP-21</c> - CHOEP-21</summary>
-            CHOEP_21,
+            Choep21,
 
             /// <summary><c>CHOP</c> - CHOP</summary>
-            CHOP,
+            Chop,
 
             /// <summary><c>CHOP-14</c> - CHOP-14</summary>
-            CHOP_14,
+            Chop14,
 
             /// <summary><c>CHOP-21</c> - CHOP-21</summary>
-            CHOP_21,
+            Chop21,
 
             /// <summary><c>CMF</c> - CMF</summary>
-            CMF,
+            Cmf,
 
             /// <summary><c>COPP</c> - COPP</summary>
-            COPP,
+            Copp,
 
             /// <summary><c>CV</c> - CV</summary>
-            CV,
+            Cv,
 
             /// <summary><c>DA</c> - DA</summary>
-            DA,
+            Da,
 
             /// <summary><c>DAC</c> - DAC</summary>
-            DAC,
+            Dac,
 
             /// <summary><c>DC-Doce-Carbo</c> - DC (Doce/Carbo)</summary>
-            DC_DOCE_CARBO,
+            DcDoceCarbo,
 
             /// <summary><c>DC-Doce-Cyclo</c> - DC (Doce/Cyclo)</summary>
-            DC_DOCE_CYCLO,
+            DcDoceCyclo,
 
             /// <summary><c>DCbH</c> - DCbH</summary>
-            DCB_H,
+            DcbH,
 
             /// <summary><c>DeVIC</c> - DeVIC</summary>
-            DE_VIC,
+            DeVic,
 
             /// <summary><c>Dexa-BEAM</c> - Dexa-BEAM</summary>
-            DEXA_BEAM,
+            DexaBeam,
 
             /// <summary><c>DHAP</c> - DHAP</summary>
-            DHAP,
+            Dhap,
 
             /// <summary><c>DRC</c> - DRC</summary>
-            DRC,
+            Drc,
 
             /// <summary><c>DVP</c> - DVP</summary>
-            DVP,
+            Dvp,
 
             /// <summary><c>EC</c> - EC</summary>
-            EC,
+            Ec,
 
             /// <summary><c>EC-D</c> - EC-D</summary>
-            EC_D,
+            EcD,
 
             /// <summary><c>ECF</c> - ECF</summary>
-            ECF,
+            Ecf,
 
             /// <summary><c>EC-P</c> - EC-P</summary>
-            EC_P,
+            EcP,
 
             /// <summary><c>ELO-Rd</c> - ELO-Rd</summary>
-            ELO_RD,
+            EloRd,
 
             /// <summary><c>EOX</c> - EOX</summary>
-            EOX,
+            Eox,
 
             /// <summary><c>EXTREME-mit-Carboplatin</c> - EXTREME mit Carboplatin</summary>
-            EXTREME_MIT_CARBOPLATIN,
+            ExtremeMitCarboplatin,
 
             /// <summary><c>EXTREME-mit-Cisplatin</c> - EXTREME mit Cisplatin</summary>
-            EXTREME_MIT_CISPLATIN,
+            ExtremeMitCisplatin,
 
             /// <summary><c>FAC</c> - FAC</summary>
-            FAC,
+            Fac,
 
             /// <summary><c>FC</c> - FC</summary>
-            FC,
+            Fc,
 
             /// <summary><c>FCR</c> - FCR</summary>
-            FCR,
+            Fcr,
 
             /// <summary><c>FEC</c> - FEC</summary>
-            FEC,
+            Fec,
 
             /// <summary><c>FEC-Doc</c> - FEC-Doc</summary>
-            FEC_DOC,
+            FecDoc,
 
             /// <summary><c>FLAG-Ida</c> - FLAG-Ida</summary>
-            FLAG_IDA,
+            FlagIda,
 
             /// <summary><c>FLO</c> - FLO</summary>
-            FLO,
+            Flo,
 
             /// <summary><c>FLOT</c> - FLOT</summary>
-            FLOT,
+            Flot,
 
             /// <summary><c>Flu-Cam</c> - Flu-Cam</summary>
-            FLU_CAM,
+            FluCam,
 
             /// <summary><c>FOLFIRI</c> - FOLFIRI</summary>
-            FOLFIRI,
+            Folfiri,
 
             /// <summary><c>Folfirinox</c> - Folfirinox</summary>
-            FOLFIRINOX,
+            Folfirinox,
 
             /// <summary><c>FOLFOX4</c> - FOLFOX4</summary>
-            FOLFOX4,
+            Folfox4,
 
             /// <summary><c>FOLFOX-6</c> - FOLFOX-6</summary>
-            FOLFOX_6,
+            Folfox6,
 
             /// <summary><c>FOLFOXIRI</c> - FOLFOXIRI</summary>
-            FOLFOXIRI,
+            Folfoxiri,
 
             /// <summary><c>FUFAMI</c> - FUFAMI</summary>
-            FUFAMI,
+            Fufami,
 
             /// <summary><c>FUFIRI</c> - FUFIRI</summary>
-            FUFIRI,
+            Fufiri,
 
             /// <summary><c>FUFOX</c> - FUFOX</summary>
-            FUFOX,
+            Fufox,
 
             /// <summary><c>GC-B</c> - GC-B</summary>
-            GC_B,
+            GcB,
 
             /// <summary><c>GDP-Schema</c> - GDP-Schema</summary>
-            GDP_SCHEMA,
+            GdpSchema,
 
             /// <summary><c>GELOX</c> - GELOX</summary>
-            GELOX,
+            Gelox,
 
             /// <summary><c>Gem-Carbo</c> - Gem-Carbo</summary>
-            GEM_CARBO,
+            GemCarbo,
 
             /// <summary><c>Gem-Cis</c> - Gem-Cis</summary>
-            GEM_CIS,
+            GemCis,
 
             /// <summary><c>GemTreo</c> - GemTreo</summary>
-            GEM_TREO,
+            GemTreo,
 
             /// <summary><c>GOP</c> - GOP</summary>
-            GOP,
+            Gop,
 
             /// <summary><c>HAM-Cytarabin</c> - HAM-Cytarabin</summary>
-            HAM_CYTARABIN,
+            HamCytarabin,
 
             /// <summary><c>HD-Protokoll</c> - HD-Protokoll</summary>
-            HD_PROTOKOLL,
+            HdProtokoll,
 
             /// <summary><c>ICE</c> - ICE</summary>
-            ICE,
+            Ice,
 
             /// <summary><c>IEV</c> - IEV</summary>
-            IEV,
+            Iev,
 
             /// <summary><c>IMVP-16</c> - IMVP-16</summary>
-            IMVP_16,
+            Imvp16,
 
             /// <summary><c>IRd</c> - IRd</summary>
-            IRD,
+            Ird,
 
             /// <summary><c>Knospe</c> - Knospe</summary>
-            KNOSPE,
+            Knospe,
 
             /// <summary><c>Knospe-modifiziert</c> - Knospe modifiziert</summary>
-            KNOSPE_MODIFIZIERT,
+            KnospeModifiziert,
 
             /// <summary><c>KRD</c> - KRD</summary>
-            KRD,
+            Krd,
 
             /// <summary><c>LV5FU2</c> - LV5FU2</summary>
-            LV5_FU2,
+            Lv5Fu2,
 
             /// <summary><c>LV5FU2-modif</c> - LV5FU2 modif.</summary>
-            LV5_FU2_MODIF,
+            Lv5Fu2Modif,
 
             /// <summary><c>MAMAC</c> - MAMAC</summary>
-            MAMAC,
+            Mamac,
 
             /// <summary><c>MATRix</c> - MATRix</summary>
-            MATRIX,
+            Matrix,
 
             /// <summary><c>MAV</c> - MAV</summary>
-            MAV,
+            Mav,
 
             /// <summary><c>Mayo-Protokoll</c> - Mayo-Protokoll</summary>
-            MAYO_PROTOKOLL,
+            MayoProtokoll,
 
             /// <summary><c>M-Cavi</c> - M-Cavi</summary>
-            M_CAVI,
+            MCavi,
 
             /// <summary><c>MPT</c> - MPT</summary>
-            MPT,
+            Mpt,
 
             /// <summary><c>M-VAC</c> - M-VAC</summary>
-            M_VAC,
+            MVac,
 
             /// <summary><c>PAC</c> - PAC</summary>
-            PAC,
+            Pac,
 
             /// <summary><c>PC</c> - PC</summary>
-            PC,
+            Pc,
 
             /// <summary><c>PC-mit-Bevacizumab</c> - PC mit Bevacizumab</summary>
-            PC_MIT_BEVACIZUMAB,
+            PcMitBevacizumab,
 
             /// <summary><c>PC-ohne-Bevacizumab</c> - PC ohne Bevacizumab</summary>
-            PC_OHNE_BEVACIZUMAB,
+            PcOhneBevacizumab,
 
             /// <summary><c>PCV</c> - PCV</summary>
-            PCV,
+            Pcv,
 
             /// <summary><c>PE</c> - PE</summary>
-            PE,
+            Pe,
 
             /// <summary><c>PEB</c> - PEB</summary>
-            PEB,
+            Peb,
 
             /// <summary><c>Peg-DoxC</c> - Peg. DoxC</summary>
-            PEG_DOX_C,
+            PegDoxC,
 
             /// <summary><c>PEI</c> - PEI</summary>
-            PEI,
+            Pei,
 
             /// <summary><c>P-GEMOX</c> - P-GEMOX</summary>
-            P_GEMOX,
+            PGemox,
 
             /// <summary><c>PLF</c> - PLF</summary>
-            PLF,
+            Plf,
 
             /// <summary><c>PVAG-Schema</c> - PVAG-Schema</summary>
-            PVAG_SCHEMA,
+            PvagSchema,
 
             /// <summary><c>PVBI</c> - PVBI</summary>
-            PVBI,
+            Pvbi,
 
             /// <summary><c>R-BAC</c> - R-BAC</summary>
-            R_BAC,
+            RBac,
 
             /// <summary><c>R-Bendamustin</c> - R-Bendamustin</summary>
-            R_BENDAMUSTIN,
+            RBendamustin,
 
             /// <summary><c>R-CHOP</c> - R-CHOP</summary>
-            R_CHOP,
+            RChop,
 
             /// <summary><c>R-DeVIC</c> - R-DeVIC</summary>
-            R_DE_VIC,
+            RDeVic,
 
             /// <summary><c>R-DHAP</c> - R-DHAP</summary>
-            R_DHAP,
+            RDhap,
 
             /// <summary><c>RD-Schema</c> - RD-Schema</summary>
-            RD_SCHEMA,
+            RdSchema,
 
             /// <summary><c>RevDex</c> - Rev/Dex</summary>
-            REV_DEX,
+            RevDex,
 
             /// <summary><c>R-GemOx</c> - R-GemOx</summary>
-            R_GEM_OX,
+            RGemOx,
 
             /// <summary><c>R-HAD</c> - R-HAD</summary>
-            R_HAD,
+            RHad,
 
             /// <summary><c>R-ICE</c> - R-ICE</summary>
-            R_ICE,
+            RIce,
 
             /// <summary><c>R-MCP</c> - R-MCP</summary>
-            R_MCP,
+            RMcp,
 
             /// <summary><c>R-MP</c> - R-MP</summary>
-            R_MP,
+            RMp,
 
             /// <summary><c>S-HAI</c> - S-HAI</summary>
-            S_HAI,
+            SHai,
 
             /// <summary><c>S-HAM</c> - S-HAM</summary>
-            S_HAM,
+            SHam,
 
             /// <summary><c>SMILE</c> - SMILE</summary>
-            SMILE,
+            Smile,
 
             /// <summary><c>TAC</c> - TAC</summary>
-            TAC,
+            Tac,
 
             /// <summary><c>TCED</c> - TCED</summary>
-            TCED,
+            Tced,
 
             /// <summary><c>TCH</c> - TCH</summary>
-            TCH,
+            Tch,
 
             /// <summary><c>TIP</c> - TIP</summary>
-            TIP,
+            Tip,
 
             /// <summary><c>TMZ</c> - TMZ</summary>
-            TMZ,
+            Tmz,
 
             /// <summary><c>TPF</c> - TPF</summary>
-            TPF,
+            Tpf,
 
             /// <summary><c>VCD</c> - VCD</summary>
-            VCD,
+            Vcd,
 
             /// <summary><c>VFD</c> - VFD</summary>
-            VFD,
+            Vfd,
 
             /// <summary><c>VIPD</c> - VIPD</summary>
-            VIPD,
+            Vipd,
 
             /// <summary><c>VMP</c> - VMP</summary>
-            VMP,
+            Vmp,
 
             /// <summary><c>VRD</c> - VRD</summary>
-            VRD,
+            Vrd,
 
             /// <summary><c>VTD</c> - VTD</summary>
-            VTD,
+            Vtd,
 
             /// <summary><c>XELOX</c> - XELOX</summary>
-            XELOX,
+            Xelox,
 
             /// <summary><c>XP</c> - XP</summary>
-            XP,
+            Xp,
 
             /// <summary><c>Konditionierung-aemyeloablativ-MAC</c> - Konditionierung, ämyeloablativ (MAC)</summary>
-            KONDITIONIERUNG_AEMYELOABLATIV_MAC,
+            KonditionierungAemyeloablativMac,
 
             /// <summary><c>Konditionierung-nicht-myeloablativ-NMA</c> - Konditionierung, nicht myeloablativ (NMA)</summary>
-            KONDITIONIERUNG_NICHT_MYELOABLATIV_NMA,
+            KonditionierungNichtMyeloablativNma,
 
             /// <summary><c>Konditionierung-reduzierte-Intensitaet-RIC</c> - Konditionierung, reduzierte Intensität (RIC)</summary>
-            KONDITIONIERUNG_REDUZIERTE_INTENSITAET_RIC,
+            KonditionierungReduzierteIntensitaetRic,
 
             /// <summary><c>Konditionierung-reduzierte-Toxizitaet-RTC</c> - Konditionierung, reduzierte Toxizität (RTC)</summary>
-            KONDITIONIERUNG_REDUZIERTE_TOXIZITAET_RTC,
+            KonditionierungReduzierteToxizitaetRtc,
 
             /// <summary><c>TACE-Doxorubicin-Mitomycin</c> - TACE Doxorubicin-Mitomycin</summary>
-            TACE_DOXORUBICIN_MITOMYCIN,
+            TaceDoxorubicinMitomycin,
 
             /// <summary><c>TACE-Doxorubicin</c> - TACE Doxorubicin</summary>
-            TACE_DOXORUBICIN,
+            TaceDoxorubicin,
 
             /// <summary><c>TACE</c> - TACE</summary>
-            TACE,
+            Tace,
 
             /// <summary><c>HIPEC-Cisplatin-Mitomycin</c> - HIPEC Cisplatin-Mitomycin</summary>
-            HIPEC_CISPLATIN_MITOMYCIN,
+            HipecCisplatinMitomycin,
 
             /// <summary><c>HIPEC-Mitomycin</c> - HIPEC Mitomycin</summary>
-            HIPEC_MITOMYCIN,
+            HipecMitomycin,
 
             /// <summary><c>HIPEC</c> - HIPEC</summary>
-            HIPEC,
+            Hipec,
 
             /// <summary><c>HITOC</c> - HITOC</summary>
-            HITOC,
+            Hitoc,
 
             /// <summary><c>PIPAC-Cisplatin-Doxorubicin</c> - PIPAC Cisplatin-Doxorubicin</summary>
-            PIPAC_CISPLATIN_DOXORUBICIN,
+            PipacCisplatinDoxorubicin,
 
             /// <summary><c>PIPAC-Cisplatin-Paclitaxel</c> - PIPAC Cisplatin-Paclitaxel</summary>
-            PIPAC_CISPLATIN_PACLITAXEL,
+            PipacCisplatinPaclitaxel,
 
             /// <summary><c>PIPAC</c> - PIPAC</summary>
-            PIPAC,
+            Pipac,
 
             /// <summary><c>Instillation-Harnblase-Mitomycin</c> - Instillation Harnblase Mitomycin</summary>
-            INSTILLATION_HARNBLASE_MITOMYCIN,
+            InstillationHarnblaseMitomycin,
 
             /// <summary><c>Instillation-Harnblase-Doxorubicin</c> - Instillation Harnblase Doxorubicin</summary>
-            INSTILLATION_HARNBLASE_DOXORUBICIN,
+            InstillationHarnblaseDoxorubicin,
 
             /// <summary><c>Instillation-Harnblase-Chemotherapeutikum</c> - Instillation Harnblase Chemotherapeutikum</summary>
-            INSTILLATION_HARNBLASE_CHEMOTHERAPEUTIKUM,
+            InstillationHarnblaseChemotherapeutikum,
 
             /// <summary><c>Instillation-Harnblase-BCG</c> - Instillation Harnblase (BCG)</summary>
-            INSTILLATION_HARNBLASE_BCG,
+            InstillationHarnblaseBcg,
 
             /// <summary><c>Instillation-Intrathekal-Tripel</c> - Instillation Intrathekal Tripel</summary>
-            INSTILLATION_INTRATHEKAL_TRIPEL,
+            InstillationIntrathekalTripel,
 
             /// <summary><c>Instillation-Intrathekal-Quadrupel</c> - Instillation Intrathekal Quadrupel</summary>
-            INSTILLATION_INTRATHEKAL_QUADRUPEL,
+            InstillationIntrathekalQuadrupel,
 
             /// <summary><c>Instillation-intrathekal</c> - Instillation intrathekal</summary>
-            INSTILLATION_INTRATHEKAL,
+            InstillationIntrathekal,
 
             /// <summary><c>PUVA-systemisch-oral</c> - PUVA systemisch oral</summary>
-            PUVA_SYSTEMISCH_ORAL,
+            PuvaSystemischOral,
 
             /// <summary><c>Bade-PUVA-topisch</c> - (Bade-) PUVA (topisch)</summary>
-            BADE_PUVA_TOPISCH,
+            BadePuvaTopisch,
 
             /// <summary><c>Aderlass</c> - Aderlass</summary>
-            ADERLASS,
+            Aderlass,
 
             /// <summary><c>Leukapherese</c> - Leukapherese</summary>
-            LEUKAPHERESE,
+            Leukapherese,
 
             /// <summary><c>Plasmapherese</c> - Plasmapherese</summary>
-            PLASMAPHERESE,
+            Plasmapherese,
 
             /// <summary><c>TTFields</c> - TTFields</summary>
-            TTFIELDS,
+            Ttfields,
 
             /// <summary><c>CAR-T-Zelltherapie</c> - CAR-T-Zelltherapie</summary>
-            CAR_T_ZELLTHERAPIE,
+            CarTZelltherapie,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop</c>.</summary>
@@ -1764,13 +1764,13 @@ public static class Onkologie
         public enum MiiCsOnkoMammaRezeptorstatusLeitlinie
         {
             /// <summary><c>positiv</c> - positiv</summary>
-            POSITIV,
+            Positiv,
 
             /// <summary><c>gering-positiv</c> - gering positiv</summary>
-            GERING_POSITIV,
+            GeringPositiv,
 
             /// <summary><c>negativ</c> - negativ</summary>
-            NEGATIV,
+            Negativ,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds</c>.</summary>
@@ -1802,454 +1802,454 @@ public static class Onkologie
         public enum MiiCsOnkoStrahlentherapieZielgebiet2014
         {
             /// <summary><c>1.</c> - ZNS</summary>
-            _1_,
+            _1,
 
             /// <summary><c>1.1.</c> - Ganzhirn</summary>
-            _1_1_,
+            _11,
 
             /// <summary><c>1.2.</c> - Teilhirn</summary>
-            _1_2_,
+            _12,
 
             /// <summary><c>1.3.</c> - Neuroachse</summary>
-            _1_3_,
+            _13,
 
             /// <summary><c>2.</c> - Kopf-Hals</summary>
-            _2_,
+            _2,
 
             /// <summary><c>2.+</c> - Kopf-Hals mit Lk</summary>
-            _2__POS,
+            _2Pos,
 
             /// <summary><c>2.-</c> - Kopf-Hals ohne Lk</summary>
-            _2__NEG,
+            _2Neg,
 
             /// <summary><c>2.1.</c> - Orbita, o.n.A.</summary>
-            _2_1_,
+            _21,
 
             /// <summary><c>2.1.+</c> - Orbita mit Lk</summary>
-            _2_1__POS,
+            _21Pos,
 
             /// <summary><c>2.1.-</c> - Orbita ohne Lk</summary>
-            _2_1__NEG,
+            _21Neg,
 
             /// <summary><c>2.2.</c> - Nase/ Nasennebenhöhle, o.n.A.</summary>
-            _2_2_,
+            _22,
 
             /// <summary><c>2.2.+</c> - Nase/ Nasennebenhöhle mit Lk</summary>
-            _2_2__POS,
+            _22Pos,
 
             /// <summary><c>2.2.-</c> - Nase/ Nasennebenhöhle ohne Lk</summary>
-            _2_2__NEG,
+            _22Neg,
 
             /// <summary><c>2.3.</c> - Mundhöhle, o.n.A.</summary>
-            _2_3_,
+            _23,
 
             /// <summary><c>2.3.+</c> - Mundhöhle mit Lk</summary>
-            _2_3__POS,
+            _23Pos,
 
             /// <summary><c>2.3.-</c> - Mundhöhle ohne Lk</summary>
-            _2_3__NEG,
+            _23Neg,
 
             /// <summary><c>2.4.</c> - Ohr, o.n.A.</summary>
-            _2_4_,
+            _24,
 
             /// <summary><c>2.4.+</c> - Ohr mit Lk</summary>
-            _2_4__POS,
+            _24Pos,
 
             /// <summary><c>2.4.-</c> - Ohr ohne Lk</summary>
-            _2_4__NEG,
+            _24Neg,
 
             /// <summary><c>2.5.</c> - Speicheldrüse, o.n.A.</summary>
-            _2_5_,
+            _25,
 
             /// <summary><c>2.5.+</c> - Speicheldrüse mit Lk</summary>
-            _2_5__POS,
+            _25Pos,
 
             /// <summary><c>2.5.-</c> - Speicheldrüse ohne Lk</summary>
-            _2_5__NEG,
+            _25Neg,
 
             /// <summary><c>2.6.</c> - Pharynx, o.n.A.</summary>
-            _2_6_,
+            _26,
 
             /// <summary><c>2.6.+</c> - Pharynx mit Lk</summary>
-            _2_6__POS,
+            _26Pos,
 
             /// <summary><c>2.6.-</c> - Pharynx ohne Lk</summary>
-            _2_6__NEG,
+            _26Neg,
 
             /// <summary><c>2.7.</c> - Larynx, o.n.A.</summary>
-            _2_7_,
+            _27,
 
             /// <summary><c>2.7.+</c> - Larynx mit Lk</summary>
-            _2_7__POS,
+            _27Pos,
 
             /// <summary><c>2.7.-</c> - Larynx ohne Lk</summary>
-            _2_7__NEG,
+            _27Neg,
 
             /// <summary><c>2.8.</c> - Schilddrüse, o.n.A.</summary>
-            _2_8_,
+            _28,
 
             /// <summary><c>2.8.+</c> - Schilddrüse mit Lk</summary>
-            _2_8__POS,
+            _28Pos,
 
             /// <summary><c>2.8.-</c> - Schilddrüse ohne Lk</summary>
-            _2_8__NEG,
+            _28Neg,
 
             /// <summary><c>2.9.</c> - Halslymphknoten</summary>
-            _2_9_,
+            _29,
 
             /// <summary><c>3.</c> - Thorax</summary>
-            _3_,
+            _3,
 
             /// <summary><c>3.+</c> - Thorax mit Lk</summary>
-            _3__POS,
+            _3Pos,
 
             /// <summary><c>3.-</c> - Thorax ohne Lk</summary>
-            _3__NEG,
+            _3Neg,
 
             /// <summary><c>3.1.</c> - Mamma als Ganzbrust, o.n.A.</summary>
-            _3_1_,
+            _31,
 
             /// <summary><c>3.1.+</c> - Mamma als Ganzbrust mit Lk</summary>
-            _3_1__POS,
+            _31Pos,
 
             /// <summary><c>3.1.-</c> - Mamma als Ganzbrust ohne Lk</summary>
-            _3_1__NEG,
+            _31Neg,
 
             /// <summary><c>3.2.</c> - Mamma als Teilbrust, o.n.A.</summary>
-            _3_2_,
+            _32,
 
             /// <summary><c>3.2.+</c> - Mamma als Teilbrust mit Lk</summary>
-            _3_2__POS,
+            _32Pos,
 
             /// <summary><c>3.2.-</c> - Mamma als Teilbrust ohne Lk</summary>
-            _3_2__NEG,
+            _32Neg,
 
             /// <summary><c>3.3.</c> - Brustwand</summary>
-            _3_3_,
+            _33,
 
             /// <summary><c>3.3.+</c> - Brustwand mit Lk</summary>
-            _3_3__POS,
+            _33Pos,
 
             /// <summary><c>3.3.-</c> - Brustwand ohne Lk</summary>
-            _3_3__NEG,
+            _33Neg,
 
             /// <summary><c>3.4.</c> - Lunge, o.n.A.</summary>
-            _3_4_,
+            _34,
 
             /// <summary><c>3.4.+</c> - Lunge mit Lk</summary>
-            _3_4__POS,
+            _34Pos,
 
             /// <summary><c>3.4.-</c> - Lunge ohne Lk</summary>
-            _3_4__NEG,
+            _34Neg,
 
             /// <summary><c>3.5.</c> - Ösophagus, o.n.A.</summary>
-            _3_5_,
+            _35,
 
             /// <summary><c>3.5.+</c> - Ösophagus mit Lk</summary>
-            _3_5__POS,
+            _35Pos,
 
             /// <summary><c>3.5.-</c> - Ösophagus ohne Lk</summary>
-            _3_5__NEG,
+            _35Neg,
 
             /// <summary><c>3.6.</c> - Thymus, o.n.A.</summary>
-            _3_6_,
+            _36,
 
             /// <summary><c>3.6.+</c> - Thymus mit Lk</summary>
-            _3_6__POS,
+            _36Pos,
 
             /// <summary><c>3.6.-</c> - Thymus ohne Lk</summary>
-            _3_6__NEG,
+            _36Neg,
 
             /// <summary><c>3.7.</c> - Mediastinale Lymphknoten</summary>
-            _3_7_,
+            _37,
 
             /// <summary><c>4.</c> - Abdomen (ohne Becken)</summary>
-            _4_,
+            _4,
 
             /// <summary><c>4.+</c> - Abdomen (ohne Becken) mit Lk</summary>
-            _4__POS,
+            _4Pos,
 
             /// <summary><c>4.-</c> - Abdomen (ohne Becken) ohne Lk</summary>
-            _4__NEG,
+            _4Neg,
 
             /// <summary><c>4.1.</c> - Magen, o.n.A.</summary>
-            _4_1_,
+            _41,
 
             /// <summary><c>4.1.+</c> - Magen mit Lk</summary>
-            _4_1__POS,
+            _41Pos,
 
             /// <summary><c>4.1.-</c> - Magen ohne Lk</summary>
-            _4_1__NEG,
+            _41Neg,
 
             /// <summary><c>4.2.</c> - Pankreas, o.n.A.</summary>
-            _4_2_,
+            _42,
 
             /// <summary><c>4.2.+</c> - Pankreas mit Lk</summary>
-            _4_2__POS,
+            _42Pos,
 
             /// <summary><c>4.2.-</c> - Pankreas ohne Lk</summary>
-            _4_2__NEG,
+            _42Neg,
 
             /// <summary><c>4.3.</c> - Leber, o.n.A.</summary>
-            _4_3_,
+            _43,
 
             /// <summary><c>4.3.+</c> - Leber mit Lk</summary>
-            _4_3__POS,
+            _43Pos,
 
             /// <summary><c>4.3.-</c> - Leber ohne Lk</summary>
-            _4_3__NEG,
+            _43Neg,
 
             /// <summary><c>4.4.</c> - Milz, o.n.A.</summary>
-            _4_4_,
+            _44,
 
             /// <summary><c>4.4.+</c> - Milz mit Lk</summary>
-            _4_4__POS,
+            _44Pos,
 
             /// <summary><c>4.4.-</c> - Milz ohne Lk</summary>
-            _4_4__NEG,
+            _44Neg,
 
             /// <summary><c>4.5.</c> - Niere, o.n.A.</summary>
-            _4_5_,
+            _45,
 
             /// <summary><c>4.5.+</c> - Niere mit Lk</summary>
-            _4_5__POS,
+            _45Pos,
 
             /// <summary><c>4.5.-</c> - Niere ohne Lk</summary>
-            _4_5__NEG,
+            _45Neg,
 
             /// <summary><c>4.6.</c> - Nebenniere, o.n.A.</summary>
-            _4_6_,
+            _46,
 
             /// <summary><c>4.6.+</c> - Nebenniere mit Lk</summary>
-            _4_6__POS,
+            _46Pos,
 
             /// <summary><c>4.6.-</c> - Nebenniere ohne Lk</summary>
-            _4_6__NEG,
+            _46Neg,
 
             /// <summary><c>4.7.</c> - Retroperitoneale Lymphknoten</summary>
-            _4_7_,
+            _47,
 
             /// <summary><c>4.8.</c> - Retroperitoneum, o.n.A.</summary>
-            _4_8_,
+            _48,
 
             /// <summary><c>4.8.+</c> - Retroperitoneum mit Lk</summary>
-            _4_8__POS,
+            _48Pos,
 
             /// <summary><c>4.8.-</c> - Retroperitoneum ohne Lk</summary>
-            _4_8__NEG,
+            _48Neg,
 
             /// <summary><c>4.9.</c> - Bauchwand, o.n.A.</summary>
-            _4_9_,
+            _49,
 
             /// <summary><c>4.9.+</c> - Bauchwand mit Lk</summary>
-            _4_9__POS,
+            _49Pos,
 
             /// <summary><c>4.9.-</c> - Bauchwand ohne Lk</summary>
-            _4_9__NEG,
+            _49Neg,
 
             /// <summary><c>5.</c> - Becken</summary>
-            _5_,
+            _5,
 
             /// <summary><c>5.+</c> - Becken mit Lk</summary>
-            _5__POS,
+            _5Pos,
 
             /// <summary><c>5.-</c> - Becken ohne Lk</summary>
-            _5__NEG,
+            _5Neg,
 
             /// <summary><c>5.1.</c> - Rektum, o.n.A.</summary>
-            _5_1_,
+            _51,
 
             /// <summary><c>5.1.+</c> - Rektum mit Lk</summary>
-            _5_1__POS,
+            _51Pos,
 
             /// <summary><c>5.1.-</c> - Rektum ohne Lk</summary>
-            _5_1__NEG,
+            _51Neg,
 
             /// <summary><c>5.2.</c> - Analbereich, o.n.A.</summary>
-            _5_2_,
+            _52,
 
             /// <summary><c>5.2.-</c> - Analbereich ohne Lk</summary>
-            _5_2__NEG,
+            _52Neg,
 
             /// <summary><c>5.2.+</c> - Analbereich mit Lk</summary>
-            _5_2__POS,
+            _52Pos,
 
             /// <summary><c>5.3.</c> - Harnblase, o.n.A.</summary>
-            _5_3_,
+            _53,
 
             /// <summary><c>5.3.-</c> - Harnblase ohne Lk</summary>
-            _5_3__NEG,
+            _53Neg,
 
             /// <summary><c>5.3.+</c> - Harnblase mit Lk</summary>
-            _5_3__POS,
+            _53Pos,
 
             /// <summary><c>5.4.</c> - Prostata, o.n.A.</summary>
-            _5_4_,
+            _54,
 
             /// <summary><c>5.4.+</c> - Prostata mit Lk</summary>
-            _5_4__POS,
+            _54Pos,
 
             /// <summary><c>5.4.-</c> - Prostata ohne Lk</summary>
-            _5_4__NEG,
+            _54Neg,
 
             /// <summary><c>5.5.</c> - Hoden, o.n.A.</summary>
-            _5_5_,
+            _55,
 
             /// <summary><c>5.5.+</c> - Hoden mit Lk</summary>
-            _5_5__POS,
+            _55Pos,
 
             /// <summary><c>5.5.-</c> - Hoden ohne Lk</summary>
-            _5_5__NEG,
+            _55Neg,
 
             /// <summary><c>5.6.</c> - Penis, o.n.A.</summary>
-            _5_6_,
+            _56,
 
             /// <summary><c>5.6.+</c> - Penis mit Lk</summary>
-            _5_6__POS,
+            _56Pos,
 
             /// <summary><c>5.6.-</c> - Penis ohne Lk</summary>
-            _5_6__NEG,
+            _56Neg,
 
             /// <summary><c>5.7.</c> - Uterus und Zervix, o.n.A.</summary>
-            _5_7_,
+            _57,
 
             /// <summary><c>5.7.+</c> - Uterus und Zervix mit Lk</summary>
-            _5_7__POS,
+            _57Pos,
 
             /// <summary><c>5.7.-</c> - Uterus und Zervix ohne Lk</summary>
-            _5_7__NEG,
+            _57Neg,
 
             /// <summary><c>5.7.1.</c> - Uterus</summary>
-            _5_7_1_,
+            _571,
 
             /// <summary><c>5.7.1.+</c> - Uterus mit Lymphknoten</summary>
-            _5_7_1__POS,
+            _571Pos,
 
             /// <summary><c>5.7.1.-</c> - Uterus ohne Lymphknoten</summary>
-            _5_7_1__NEG,
+            _571Neg,
 
             /// <summary><c>5.7.2.</c> - Zervix</summary>
-            _5_7_2_,
+            _572,
 
             /// <summary><c>5.7.2.+</c> - Zervix mit Lymphknoten</summary>
-            _5_7_2__POS,
+            _572Pos,
 
             /// <summary><c>5.7.2.-</c> - Zervix ohne Lymphknoten</summary>
-            _5_7_2__NEG,
+            _572Neg,
 
             /// <summary><c>5.8.</c> - Ovar, o.n.A.</summary>
-            _5_8_,
+            _58,
 
             /// <summary><c>5.8.-</c> - Ovar ohne Lk</summary>
-            _5_8__NEG,
+            _58Neg,
 
             /// <summary><c>5.8.+</c> - Ovar mit Lk</summary>
-            _5_8__POS,
+            _58Pos,
 
             /// <summary><c>5.9.</c> - Vulva, o.n.A.</summary>
-            _5_9_,
+            _59,
 
             /// <summary><c>5.9.-</c> - Vulva ohne Lk</summary>
-            _5_9__NEG,
+            _59Neg,
 
             /// <summary><c>5.9.+</c> - Vulva mit Lk</summary>
-            _5_9__POS,
+            _59Pos,
 
             /// <summary><c>5.10.</c> - Vagina, o.n.A.</summary>
-            _5_10_,
+            _510,
 
             /// <summary><c>5.10.+</c> - Vagina mit Lk</summary>
-            _5_10__POS,
+            _510Pos,
 
             /// <summary><c>5.10.-</c> - Vagina ohne Lk</summary>
-            _5_10__NEG,
+            _510Neg,
 
             /// <summary><c>5.11.</c> - Beckenwand, o.n.A.</summary>
-            _5_11_,
+            _511,
 
             /// <summary><c>5.11.+</c> - Beckenwand mit Lk</summary>
-            _5_11__POS,
+            _511Pos,
 
             /// <summary><c>5.11.-</c> - Beckenwand ohne Lk</summary>
-            _5_11__NEG,
+            _511Neg,
 
             /// <summary><c>5.12.</c> - Beckenlymphkn. (ohne Primtu.)</summary>
-            _5_12_,
+            _512,
 
             /// <summary><c>6.</c> - Stütz-/Bewegungsapparat</summary>
-            _6_,
+            _6,
 
             /// <summary><c>6.1.</c> - Schädelknochen</summary>
-            _6_1_,
+            _61,
 
             /// <summary><c>6.2.</c> - Rippen</summary>
-            _6_2_,
+            _62,
 
             /// <summary><c>6.3.</c> - Sternum</summary>
-            _6_3_,
+            _63,
 
             /// <summary><c>6.4.</c> - HWS</summary>
-            _6_4_,
+            _64,
 
             /// <summary><c>6.5.</c> - BWS</summary>
-            _6_5_,
+            _65,
 
             /// <summary><c>6.6.</c> - LWS</summary>
-            _6_6_,
+            _66,
 
             /// <summary><c>6.7.</c> - knöchernes Becken</summary>
-            _6_7_,
+            _67,
 
             /// <summary><c>6.8.</c> - Hüfte</summary>
-            _6_8_,
+            _68,
 
             /// <summary><c>6.9.</c> - Schulter</summary>
-            _6_9_,
+            _69,
 
             /// <summary><c>6.10.</c> - Oberarm</summary>
-            _6_10_,
+            _610,
 
             /// <summary><c>6.11.</c> - Unterarm</summary>
-            _6_11_,
+            _611,
 
             /// <summary><c>6.12.</c> - Hand</summary>
-            _6_12_,
+            _612,
 
             /// <summary><c>6.13.</c> - Leiste</summary>
-            _6_13_,
+            _613,
 
             /// <summary><c>6.14.</c> - Oberschenkel</summary>
-            _6_14_,
+            _614,
 
             /// <summary><c>6.15.</c> - Unterschenkel</summary>
-            _6_15_,
+            _615,
 
             /// <summary><c>6.16.</c> - Fuß</summary>
-            _6_16_,
+            _616,
 
             /// <summary><c>7.</c> - Haut</summary>
-            _7_,
+            _7,
 
             /// <summary><c>7.+</c> - Haut mit Lymphknoten</summary>
-            _7__POS,
+            _7Pos,
 
             /// <summary><c>7.-</c> - Haut ohne Lymphknoten</summary>
-            _7__NEG,
+            _7Neg,
 
             /// <summary><c>7.1.</c> - Primärer Hauttumor</summary>
-            _7_1_,
+            _71,
 
             /// <summary><c>7.2.</c> - Hautmetastasen</summary>
-            _7_2_,
+            _72,
 
             /// <summary><c>8.</c> - Sonstiges</summary>
-            _8_,
+            _8,
 
             /// <summary><c>8.1.</c> - Ganzkörperbestrahlung</summary>
-            _8_1_,
+            _81,
 
             /// <summary><c>8.2.</c> - Mantelfeldbestrahlung</summary>
-            _8_2_,
+            _82,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation</c>.</summary>
@@ -2321,547 +2321,547 @@ public static class Onkologie
         public enum MiiCsOnkoWeitereKlassifikationenObds
         {
             /// <summary><c>binet</c> - BINET Staging System</summary>
-            BINET,
+            Binet,
 
             /// <summary><c>binet-a</c> - BINET A</summary>
-            BINET_A,
+            BinetA,
 
             /// <summary><c>binet-b</c> - BINET B</summary>
-            BINET_B,
+            BinetB,
 
             /// <summary><c>binet-c</c> - BINET C</summary>
-            BINET_C,
+            BinetC,
 
             /// <summary><c>ann-arbor-stadium</c> - Ann-Arbor Stadium</summary>
-            ANN_ARBOR_STADIUM,
+            AnnArborStadium,
 
             /// <summary><c>ann-arbor-i</c> - I</summary>
-            ANN_ARBOR_I,
+            AnnArborI,
 
             /// <summary><c>ann-arbor-ia</c> - IA</summary>
-            ANN_ARBOR_IA,
+            AnnArborIa,
 
             /// <summary><c>ann-arbor-iae</c> - IAE</summary>
-            ANN_ARBOR_IAE,
+            AnnArborIae,
 
             /// <summary><c>ann-arbor-ib</c> - IB</summary>
-            ANN_ARBOR_IB,
+            AnnArborIb,
 
             /// <summary><c>ann-arbor-ibe</c> - IBE</summary>
-            ANN_ARBOR_IBE,
+            AnnArborIbe,
 
             /// <summary><c>ann-arbor-ie</c> - IE</summary>
-            ANN_ARBOR_IE,
+            AnnArborIe,
 
             /// <summary><c>ann-arbor-ix</c> - IX</summary>
-            ANN_ARBOR_IX,
+            AnnArborIx,
 
             /// <summary><c>ann-arbor-ixa</c> - IXA</summary>
-            ANN_ARBOR_IXA,
+            AnnArborIxa,
 
             /// <summary><c>ann-arbor-ixae</c> - IXAE</summary>
-            ANN_ARBOR_IXAE,
+            AnnArborIxae,
 
             /// <summary><c>ann-arbor-ixb</c> - IXB</summary>
-            ANN_ARBOR_IXB,
+            AnnArborIxb,
 
             /// <summary><c>ann-arbor-ixbe</c> - IXBE</summary>
-            ANN_ARBOR_IXBE,
+            AnnArborIxbe,
 
             /// <summary><c>ann-arbor-ixe</c> - IXE</summary>
-            ANN_ARBOR_IXE,
+            AnnArborIxe,
 
             /// <summary><c>ann-arbor-ii</c> - II</summary>
-            ANN_ARBOR_II,
+            AnnArborIi,
 
             /// <summary><c>ann-arbor-ii1</c> - II1</summary>
-            ANN_ARBOR_II1,
+            AnnArborIi1,
 
             /// <summary><c>ann-arbor-ii1a</c> - II1A</summary>
-            ANN_ARBOR_II1A,
+            AnnArborIi1a,
 
             /// <summary><c>ann-arbor-ii1ae</c> - II1AE</summary>
-            ANN_ARBOR_II1AE,
+            AnnArborIi1ae,
 
             /// <summary><c>ann-arbor-ii1b</c> - II1B</summary>
-            ANN_ARBOR_II1B,
+            AnnArborIi1b,
 
             /// <summary><c>ann-arbor-ii1be</c> - II1BE</summary>
-            ANN_ARBOR_II1BE,
+            AnnArborIi1be,
 
             /// <summary><c>ann-arbor-ii1e</c> - II1E</summary>
-            ANN_ARBOR_II1E,
+            AnnArborIi1e,
 
             /// <summary><c>ann-arbor-ii1x</c> - II1X</summary>
-            ANN_ARBOR_II1X,
+            AnnArborIi1x,
 
             /// <summary><c>ann-arbor-ii1xa</c> - II1XA</summary>
-            ANN_ARBOR_II1XA,
+            AnnArborIi1xa,
 
             /// <summary><c>ann-arbor-ii1xae</c> - II1XAE</summary>
-            ANN_ARBOR_II1XAE,
+            AnnArborIi1xae,
 
             /// <summary><c>ann-arbor-ii1xb</c> - II1XB</summary>
-            ANN_ARBOR_II1XB,
+            AnnArborIi1xb,
 
             /// <summary><c>ann-arbor-ii1xbe</c> - II1XBE</summary>
-            ANN_ARBOR_II1XBE,
+            AnnArborIi1xbe,
 
             /// <summary><c>ann-arbor-ii1xe</c> - II1XE</summary>
-            ANN_ARBOR_II1XE,
+            AnnArborIi1xe,
 
             /// <summary><c>ann-arbor-ii2</c> - II2</summary>
-            ANN_ARBOR_II2,
+            AnnArborIi2,
 
             /// <summary><c>ann-arbor-ii2a</c> - II2A</summary>
-            ANN_ARBOR_II2A,
+            AnnArborIi2a,
 
             /// <summary><c>ann-arbor-ii2ae</c> - II2AE</summary>
-            ANN_ARBOR_II2AE,
+            AnnArborIi2ae,
 
             /// <summary><c>ann-arbor-ii2b</c> - II2B</summary>
-            ANN_ARBOR_II2B,
+            AnnArborIi2b,
 
             /// <summary><c>ann-arbor-ii2be</c> - II2BE</summary>
-            ANN_ARBOR_II2BE,
+            AnnArborIi2be,
 
             /// <summary><c>ann-arbor-ii2e</c> - II2E</summary>
-            ANN_ARBOR_II2E,
+            AnnArborIi2e,
 
             /// <summary><c>ann-arbor-ii2x</c> - II2X</summary>
-            ANN_ARBOR_II2X,
+            AnnArborIi2x,
 
             /// <summary><c>ann-arbor-ii2xa</c> - II2XA</summary>
-            ANN_ARBOR_II2XA,
+            AnnArborIi2xa,
 
             /// <summary><c>ann-arbor-ii2xae</c> - II2XAE</summary>
-            ANN_ARBOR_II2XAE,
+            AnnArborIi2xae,
 
             /// <summary><c>ann-arbor-ii2xb</c> - II2XB</summary>
-            ANN_ARBOR_II2XB,
+            AnnArborIi2xb,
 
             /// <summary><c>ann-arbor-ii2xbe</c> - II2XBE</summary>
-            ANN_ARBOR_II2XBE,
+            AnnArborIi2xbe,
 
             /// <summary><c>ann-arbor-ii2xe</c> - II2XE</summary>
-            ANN_ARBOR_II2XE,
+            AnnArborIi2xe,
 
             /// <summary><c>ann-arbor-iia</c> - IIA</summary>
-            ANN_ARBOR_IIA,
+            AnnArborIia,
 
             /// <summary><c>ann-arbor-iiae</c> - IIAE</summary>
-            ANN_ARBOR_IIAE,
+            AnnArborIiae,
 
             /// <summary><c>ann-arbor-iib</c> - IIB</summary>
-            ANN_ARBOR_IIB,
+            AnnArborIib,
 
             /// <summary><c>ann-arbor-iibe</c> - IIBE</summary>
-            ANN_ARBOR_IIBE,
+            AnnArborIibe,
 
             /// <summary><c>ann-arbor-iie</c> - IIE</summary>
-            ANN_ARBOR_IIE,
+            AnnArborIie,
 
             /// <summary><c>ann-arbor-iix</c> - IIX</summary>
-            ANN_ARBOR_IIX,
+            AnnArborIix,
 
             /// <summary><c>ann-arbor-iixa</c> - IIXA</summary>
-            ANN_ARBOR_IIXA,
+            AnnArborIixa,
 
             /// <summary><c>ann-arbor-iixae</c> - IIXAE</summary>
-            ANN_ARBOR_IIXAE,
+            AnnArborIixae,
 
             /// <summary><c>ann-arbor-iixb</c> - IIXB</summary>
-            ANN_ARBOR_IIXB,
+            AnnArborIixb,
 
             /// <summary><c>ann-arbor-iixbe</c> - IIXBE</summary>
-            ANN_ARBOR_IIXBE,
+            AnnArborIixbe,
 
             /// <summary><c>ann-arbor-iixe</c> - IIXE</summary>
-            ANN_ARBOR_IIXE,
+            AnnArborIixe,
 
             /// <summary><c>ann-arbor-iii</c> - III</summary>
-            ANN_ARBOR_III,
+            AnnArborIii,
 
             /// <summary><c>ann-arbor-iiia</c> - IIIA</summary>
-            ANN_ARBOR_IIIA,
+            AnnArborIiia,
 
             /// <summary><c>ann-arbor-iiiae</c> - IIIAE</summary>
-            ANN_ARBOR_IIIAE,
+            AnnArborIiiae,
 
             /// <summary><c>ann-arbor-iiiaes</c> - IIIAES</summary>
-            ANN_ARBOR_IIIAES,
+            AnnArborIiiaes,
 
             /// <summary><c>ann-arbor-iiias</c> - IIIAS</summary>
-            ANN_ARBOR_IIIAS,
+            AnnArborIiias,
 
             /// <summary><c>ann-arbor-iiib</c> - IIIB</summary>
-            ANN_ARBOR_IIIB,
+            AnnArborIiib,
 
             /// <summary><c>ann-arbor-iiibe</c> - IIIBE</summary>
-            ANN_ARBOR_IIIBE,
+            AnnArborIiibe,
 
             /// <summary><c>ann-arbor-iiibes</c> - IIIBES</summary>
-            ANN_ARBOR_IIIBES,
+            AnnArborIiibes,
 
             /// <summary><c>ann-arbor-iiibs</c> - IIIBS</summary>
-            ANN_ARBOR_IIIBS,
+            AnnArborIiibs,
 
             /// <summary><c>ann-arbor-iiie</c> - IIIE</summary>
-            ANN_ARBOR_IIIE,
+            AnnArborIiie,
 
             /// <summary><c>ann-arbor-iiies</c> - IIIES</summary>
-            ANN_ARBOR_IIIES,
+            AnnArborIiies,
 
             /// <summary><c>ann-arbor-iiis</c> - IIIS</summary>
-            ANN_ARBOR_IIIS,
+            AnnArborIiis,
 
             /// <summary><c>ann-arbor-iiix</c> - IIIX</summary>
-            ANN_ARBOR_IIIX,
+            AnnArborIiix,
 
             /// <summary><c>ann-arbor-iiixa</c> - IIIXA</summary>
-            ANN_ARBOR_IIIXA,
+            AnnArborIiixa,
 
             /// <summary><c>ann-arbor-iiixae</c> - IIIXAE</summary>
-            ANN_ARBOR_IIIXAE,
+            AnnArborIiixae,
 
             /// <summary><c>ann-arbor-iiixaes</c> - IIIXAES</summary>
-            ANN_ARBOR_IIIXAES,
+            AnnArborIiixaes,
 
             /// <summary><c>ann-arbor-iiixas</c> - IIIXAS</summary>
-            ANN_ARBOR_IIIXAS,
+            AnnArborIiixas,
 
             /// <summary><c>ann-arbor-iiixb</c> - IIIXB</summary>
-            ANN_ARBOR_IIIXB,
+            AnnArborIiixb,
 
             /// <summary><c>ann-arbor-iiixbe</c> - IIIXBE</summary>
-            ANN_ARBOR_IIIXBE,
+            AnnArborIiixbe,
 
             /// <summary><c>ann-arbor-iiixbes</c> - IIIXBES</summary>
-            ANN_ARBOR_IIIXBES,
+            AnnArborIiixbes,
 
             /// <summary><c>ann-arbor-iiixbs</c> - IIIXBS</summary>
-            ANN_ARBOR_IIIXBS,
+            AnnArborIiixbs,
 
             /// <summary><c>ann-arbor-iiixe</c> - IIIXE</summary>
-            ANN_ARBOR_IIIXE,
+            AnnArborIiixe,
 
             /// <summary><c>ann-arbor-iiixes</c> - IIIXES</summary>
-            ANN_ARBOR_IIIXES,
+            AnnArborIiixes,
 
             /// <summary><c>ann-arbor-iiixs</c> - IIIXS</summary>
-            ANN_ARBOR_IIIXS,
+            AnnArborIiixs,
 
             /// <summary><c>ann-arbor-iii1</c> - III1</summary>
-            ANN_ARBOR_III1,
+            AnnArborIii1,
 
             /// <summary><c>ann-arbor-iii1a</c> - III1A</summary>
-            ANN_ARBOR_III1A,
+            AnnArborIii1a,
 
             /// <summary><c>ann-arbor-iii1b</c> - III1B</summary>
-            ANN_ARBOR_III1B,
+            AnnArborIii1b,
 
             /// <summary><c>ann-arbor-iii2</c> - III2</summary>
-            ANN_ARBOR_III2,
+            AnnArborIii2,
 
             /// <summary><c>ann-arbor-iii2a</c> - III2A</summary>
-            ANN_ARBOR_III2A,
+            AnnArborIii2a,
 
             /// <summary><c>ann-arbor-iii2b</c> - III2B</summary>
-            ANN_ARBOR_III2B,
+            AnnArborIii2b,
 
             /// <summary><c>ann-arbor-iv</c> - IV</summary>
-            ANN_ARBOR_IV,
+            AnnArborIv,
 
             /// <summary><c>ann-arbor-iva</c> - IVA</summary>
-            ANN_ARBOR_IVA,
+            AnnArborIva,
 
             /// <summary><c>ann-arbor-ivae</c> - IVAE</summary>
-            ANN_ARBOR_IVAE,
+            AnnArborIvae,
 
             /// <summary><c>ann-arbor-ivb</c> - IVB</summary>
-            ANN_ARBOR_IVB,
+            AnnArborIvb,
 
             /// <summary><c>ann-arbor-ivbe</c> - IVBE</summary>
-            ANN_ARBOR_IVBE,
+            AnnArborIvbe,
 
             /// <summary><c>ann-arbor-ive</c> - IVE</summary>
-            ANN_ARBOR_IVE,
+            AnnArborIve,
 
             /// <summary><c>ann-arbor-ivx</c> - IVX</summary>
-            ANN_ARBOR_IVX,
+            AnnArborIvx,
 
             /// <summary><c>ann-arbor-ivxa</c> - IVXA</summary>
-            ANN_ARBOR_IVXA,
+            AnnArborIvxa,
 
             /// <summary><c>ann-arbor-ivxae</c> - IVXAE</summary>
-            ANN_ARBOR_IVXAE,
+            AnnArborIvxae,
 
             /// <summary><c>ann-arbor-ivxb</c> - IVXB</summary>
-            ANN_ARBOR_IVXB,
+            AnnArborIvxb,
 
             /// <summary><c>ann-arbor-ivxbe</c> - IVXBE</summary>
-            ANN_ARBOR_IVXBE,
+            AnnArborIvxbe,
 
             /// <summary><c>ann-arbor-ivxe</c> - IVXE</summary>
-            ANN_ARBOR_IVXE,
+            AnnArborIvxe,
 
             /// <summary><c>iss</c> - International Staging System</summary>
-            ISS,
+            Iss,
 
             /// <summary><c>iss-i</c> - ISS I</summary>
-            ISS_I,
+            IssI,
 
             /// <summary><c>iss-ii</c> - ISS II</summary>
-            ISS_II,
+            IssIi,
 
             /// <summary><c>iss-iii</c> - ISS III</summary>
-            ISS_III,
+            IssIii,
 
             /// <summary><c>isswm</c> - International Scoring System for Waldenström's Macroglobulinemia</summary>
-            ISSWM,
+            Isswm,
 
             /// <summary><c>isswm-n</c> - ISSWM Niedrig</summary>
-            ISSWM_N,
+            IsswmN,
 
             /// <summary><c>isswm-i</c> - ISSWM Intermediär</summary>
-            ISSWM_I,
+            IsswmI,
 
             /// <summary><c>isswm-h</c> - ISSWM Hoch</summary>
-            ISSWM_H,
+            IsswmH,
 
             /// <summary><c>who-grad</c> - WHO Grade</summary>
-            WHO_GRAD,
+            WhoGrad,
 
             /// <summary><c>who-grad-i</c> - WHO Grad I</summary>
-            WHO_GRAD_I,
+            WhoGradI,
 
             /// <summary><c>who-grad-ii</c> - WHO Grad II</summary>
-            WHO_GRAD_II,
+            WhoGradIi,
 
             /// <summary><c>who-grad-iii</c> - WHO Grad III</summary>
-            WHO_GRAD_III,
+            WhoGradIii,
 
             /// <summary><c>who-grad-iv</c> - WHO Grad IV</summary>
-            WHO_GRAD_IV,
+            WhoGradIv,
 
             /// <summary><c>formen</c> - Formen</summary>
-            FORMEN,
+            Formen,
 
             /// <summary><c>formen-k</c> - Klassisch</summary>
-            FORMEN_K,
+            FormenK,
 
             /// <summary><c>formen-v</c> - Variante</summary>
-            FORMEN_V,
+            FormenV,
 
             /// <summary><c>eln-klassifikation</c> - ELN-Klassifikation</summary>
-            ELN_KLASSIFIKATION,
+            ElnKlassifikation,
 
             /// <summary><c>eln-g</c> - ELN Günstig</summary>
-            ELN_G,
+            ElnG,
 
             /// <summary><c>eln-i1</c> - ELN Intermediär I</summary>
-            ELN_I1,
+            ElnI1,
 
             /// <summary><c>eln-i2</c> - ELN Intermediär II</summary>
-            ELN_I2,
+            ElnI2,
 
             /// <summary><c>eln-u</c> - ELN Ungünstig</summary>
-            ELN_U,
+            ElnU,
 
             /// <summary><c>eln-cp</c> - ELN Chronische Phase</summary>
-            ELN_CP,
+            ElnCp,
 
             /// <summary><c>eln-ap</c> - ELN Akzelierte Phase</summary>
-            ELN_AP,
+            ElnAp,
 
             /// <summary><c>eln-bk</c> - ELN Blastenkrise</summary>
-            ELN_BK,
+            ElnBk,
 
             /// <summary><c>durie-salmon-stadium</c> - Durie-Salmon Stadium</summary>
-            DURIE_SALMON_STADIUM,
+            DurieSalmonStadium,
 
             /// <summary><c>durie-salmon-i</c> - Durie-Salmon I</summary>
-            DURIE_SALMON_I,
+            DurieSalmonI,
 
             /// <summary><c>durie-salmon-ia</c> - Durie-Salmon IA</summary>
-            DURIE_SALMON_IA,
+            DurieSalmonIa,
 
             /// <summary><c>durie-salmon-ib</c> - Durie-Salmon IB</summary>
-            DURIE_SALMON_IB,
+            DurieSalmonIb,
 
             /// <summary><c>durie-salmon-ii</c> - Durie-Salmon II</summary>
-            DURIE_SALMON_II,
+            DurieSalmonIi,
 
             /// <summary><c>durie-salmon-iia</c> - Durie-Salmon IIA</summary>
-            DURIE_SALMON_IIA,
+            DurieSalmonIia,
 
             /// <summary><c>durie-salmon-iib</c> - Durie-Salmon IIB</summary>
-            DURIE_SALMON_IIB,
+            DurieSalmonIib,
 
             /// <summary><c>durie-salmon-iii</c> - Durie-Salmon III</summary>
-            DURIE_SALMON_III,
+            DurieSalmonIii,
 
             /// <summary><c>durie-salmon-iiia</c> - Durie-Salmon IIIA</summary>
-            DURIE_SALMON_IIIA,
+            DurieSalmonIiia,
 
             /// <summary><c>durie-salmon-iiib</c> - Durie-Salmon IIIB</summary>
-            DURIE_SALMON_IIIB,
+            DurieSalmonIiib,
 
             /// <summary><c>bismuth</c> - Bismuth</summary>
-            BISMUTH,
+            Bismuth,
 
             /// <summary><c>bismuth-i</c> - Bismuth I</summary>
-            BISMUTH_I,
+            BismuthI,
 
             /// <summary><c>bismuth-ii</c> - Bismuth II</summary>
-            BISMUTH_II,
+            BismuthIi,
 
             /// <summary><c>bismuth-iii</c> - Bismuth III</summary>
-            BISMUTH_III,
+            BismuthIii,
 
             /// <summary><c>bismuth-iiia</c> - Bismuth IIIA</summary>
-            BISMUTH_IIIA,
+            BismuthIiia,
 
             /// <summary><c>bismuth-iiib</c> - Bismuth IIIB</summary>
-            BISMUTH_IIIB,
+            BismuthIiib,
 
             /// <summary><c>bismuth-iv</c> - Bismuth IV</summary>
-            BISMUTH_IV,
+            BismuthIv,
 
             /// <summary><c>masaoka</c> - Masaoka</summary>
-            MASAOKA,
+            Masaoka,
 
             /// <summary><c>masaoka-i</c> - Masaoka I</summary>
-            MASAOKA_I,
+            MasaokaI,
 
             /// <summary><c>masaoka-ii</c> - Masaoka II</summary>
-            MASAOKA_II,
+            MasaokaIi,
 
             /// <summary><c>masaoka-iii</c> - Masaoka III</summary>
-            MASAOKA_III,
+            MasaokaIii,
 
             /// <summary><c>masaoka-iv</c> - Masaoka IV</summary>
-            MASAOKA_IV,
+            MasaokaIv,
 
             /// <summary><c>masaoka-iva</c> - Masaoka IVA</summary>
-            MASAOKA_IVA,
+            MasaokaIva,
 
             /// <summary><c>masaoka-ivb</c> - Masaoka IVB</summary>
-            MASAOKA_IVB,
+            MasaokaIvb,
 
             /// <summary><c>mitoserate-gist</c> - Mitoserate-GIST</summary>
-            MITOSERATE_GIST,
+            MitoserateGist,
 
             /// <summary><c>mitoserate-gist-n</c> - Mitoserate-GIST Niedrig</summary>
-            MITOSERATE_GIST_N,
+            MitoserateGistN,
 
             /// <summary><c>mitoserate-gist-h</c> - Mitoserate-GIST Hoch</summary>
-            MITOSERATE_GIST_H,
+            MitoserateGistH,
 
             /// <summary><c>p16</c> - p16</summary>
             P16,
 
             /// <summary><c>p16-p</c> - p16 Positiv</summary>
-            P16_P,
+            P16P,
 
             /// <summary><c>p16-n</c> - p16 Negativ</summary>
-            P16_N,
+            P16N,
 
             /// <summary><c>eutos-score</c> - EUTOS-Score</summary>
-            EUTOS_SCORE,
+            EutosScore,
 
             /// <summary><c>eutos-score-n</c> - EUTOS-Score Niedrigrisiko</summary>
-            EUTOS_SCORE_N,
+            EutosScoreN,
 
             /// <summary><c>eutos-score-h</c> - EUTOS-Score Hochrisiko</summary>
-            EUTOS_SCORE_H,
+            EutosScoreH,
 
             /// <summary><c>sanz-score</c> - Sanz-Score</summary>
-            SANZ_SCORE,
+            SanzScore,
 
             /// <summary><c>sanz-score-n</c> - Sanz-Score Niedrig</summary>
-            SANZ_SCORE_N,
+            SanzScoreN,
 
             /// <summary><c>sanz-score-i</c> - Sanz-Score Intermediär</summary>
-            SANZ_SCORE_I,
+            SanzScoreI,
 
             /// <summary><c>sanz-score-h</c> - Sanz-Score Hoch</summary>
-            SANZ_SCORE_H,
+            SanzScoreH,
 
             /// <summary><c>ipi</c> - IPI</summary>
-            IPI,
+            Ipi,
 
             /// <summary><c>ipi-n</c> - IPI Niedrig</summary>
-            IPI_N,
+            IpiN,
 
             /// <summary><c>ipi-ni</c> - IPI Niedrig-Intermediär</summary>
-            IPI_NI,
+            IpiNi,
 
             /// <summary><c>ipi-hi</c> - IPI Hoch-Intermediär</summary>
-            IPI_HI,
+            IpiHi,
 
             /// <summary><c>ipi-h</c> - IPI Hoch</summary>
-            IPI_H,
+            IpiH,
 
             /// <summary><c>flipi</c> - FLIPI</summary>
-            FLIPI,
+            Flipi,
 
             /// <summary><c>flipi-l</c> - FLIPI Low risk</summary>
-            FLIPI_L,
+            FlipiL,
 
             /// <summary><c>flipi-i</c> - FLIPI Intermediate risk</summary>
-            FLIPI_I,
+            FlipiI,
 
             /// <summary><c>flipi-h</c> - FLIPI High risk</summary>
-            FLIPI_H,
+            FlipiH,
 
             /// <summary><c>mipi</c> - MIPI</summary>
-            MIPI,
+            Mipi,
 
             /// <summary><c>mipi-n</c> - MIPI Niedrig</summary>
-            MIPI_N,
+            MipiN,
 
             /// <summary><c>mipi-i</c> - MIPI Intermediär</summary>
-            MIPI_I,
+            MipiI,
 
             /// <summary><c>mipi-h</c> - MIPI Hoch</summary>
-            MIPI_H,
+            MipiH,
 
             /// <summary><c>risikogruppen-ghsg</c> - Risikogruppen GHSG</summary>
-            RISIKOGRUPPEN_GHSG,
+            RisikogruppenGhsg,
 
             /// <summary><c>risikogruppen-ghsg-fr</c> - GHSG Frühe</summary>
-            RISIKOGRUPPEN_GHSG_FR,
+            RisikogruppenGhsgFr,
 
             /// <summary><c>risikogruppen-ghsg-i</c> - GHSG Intermediär</summary>
-            RISIKOGRUPPEN_GHSG_I,
+            RisikogruppenGhsgI,
 
             /// <summary><c>risikogruppen-ghsg-fo</c> - GHSG Fortgeschritten</summary>
-            RISIKOGRUPPEN_GHSG_FO,
+            RisikogruppenGhsgFo,
 
             /// <summary><c>ipss</c> - IPSS</summary>
-            IPSS,
+            Ipss,
 
             /// <summary><c>ipss-l</c> - IPSS Low</summary>
-            IPSS_L,
+            IpssL,
 
             /// <summary><c>ipss-i1</c> - IPSS Intermediate-I</summary>
-            IPSS_I1,
+            IpssI1,
 
             /// <summary><c>ipss-i2</c> - IPSS Intermediate-II</summary>
-            IPSS_I2,
+            IpssI2,
 
             /// <summary><c>ipss-h</c> - IPSS High risk</summary>
-            IPSS_H,
+            IpssH,
 
             /// <summary><c>her2-neu</c> - HER2-neu</summary>
-            HER2_NEU,
+            Her2Neu,
 
             /// <summary><c>her2-neu-p</c> - HER2-neu Positiv</summary>
-            HER2_NEU_P,
+            Her2NeuP,
 
             /// <summary><c>her2-neu-n</c> - HER2-neu Negativ</summary>
-            HER2_NEU_N,
+            Her2NeuN,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency</c>.</summary>
@@ -2921,130 +2921,130 @@ public static class Onkologie
             U,
 
             /// <summary><c>TX</c> - TX</summary>
-            TX,
+            Tx,
 
             /// <summary><c>T0</c> - T0</summary>
             T0,
 
             /// <summary><c>Ta</c> - Ta</summary>
-            TA,
+            Ta,
 
             /// <summary><c>Tis</c> - Tis</summary>
-            TIS,
+            Tis,
 
             /// <summary><c>Tis(LAMN)</c> - Tis(LAMN)</summary>
-            TIS_LAMN_,
+            TisLamn,
 
             /// <summary><c>Tis(DCIS)</c> - Tis(DCIS)</summary>
-            TIS_DCIS_,
+            TisDcis,
 
             /// <summary><c>Tis(LCIS)</c> - Tis(LCIS)</summary>
-            TIS_LCIS_,
+            TisLcis,
 
             /// <summary><c>Tis(Paget)</c> - Tis(Paget)</summary>
-            TIS_PAGET_,
+            TisPaget,
 
             /// <summary><c>Tis(pu)</c> - Tis(pu)</summary>
-            TIS_PU_,
+            TisPu,
 
             /// <summary><c>Tis(pd)</c> - Tis(pd)</summary>
-            TIS_PD_,
+            TisPd,
 
             /// <summary><c>T1</c> - T1</summary>
             T1,
 
             /// <summary><c>T1mi</c> - T1mi</summary>
-            T1MI,
+            T1mi,
 
             /// <summary><c>T1a</c> - T1a</summary>
-            T1A,
+            T1a,
 
             /// <summary><c>T1a1</c> - T1a1</summary>
-            T1A1,
+            T1a1,
 
             /// <summary><c>T1a2</c> - T1a2</summary>
-            T1A2,
+            T1a2,
 
             /// <summary><c>T1b</c> - T1b</summary>
-            T1B,
+            T1b,
 
             /// <summary><c>T1b1</c> - T1b1</summary>
-            T1B1,
+            T1b1,
 
             /// <summary><c>T1b2</c> - T1b2</summary>
-            T1B2,
+            T1b2,
 
             /// <summary><c>T1c</c> - T1c</summary>
-            T1C,
+            T1c,
 
             /// <summary><c>T1c1</c> - T1c1</summary>
-            T1C1,
+            T1c1,
 
             /// <summary><c>T1c2</c> - T1c2</summary>
-            T1C2,
+            T1c2,
 
             /// <summary><c>T1c3</c> - T1c3</summary>
-            T1C3,
+            T1c3,
 
             /// <summary><c>T1d</c> - T1d</summary>
-            T1D,
+            T1d,
 
             /// <summary><c>T2</c> - T2</summary>
             T2,
 
             /// <summary><c>T2a</c> - T2a</summary>
-            T2A,
+            T2a,
 
             /// <summary><c>T2a1</c> - T2a1</summary>
-            T2A1,
+            T2a1,
 
             /// <summary><c>T2a2</c> - T2a2</summary>
-            T2A2,
+            T2a2,
 
             /// <summary><c>T2b</c> - T2b</summary>
-            T2B,
+            T2b,
 
             /// <summary><c>T2c</c> - T2c</summary>
-            T2C,
+            T2c,
 
             /// <summary><c>T2d</c> - T2d</summary>
-            T2D,
+            T2d,
 
             /// <summary><c>T3</c> - T3</summary>
             T3,
 
             /// <summary><c>T3a</c> - T3a</summary>
-            T3A,
+            T3a,
 
             /// <summary><c>T3b</c> - T3b</summary>
-            T3B,
+            T3b,
 
             /// <summary><c>T3c</c> - T3c</summary>
-            T3C,
+            T3c,
 
             /// <summary><c>T3d</c> - T3d</summary>
-            T3D,
+            T3d,
 
             /// <summary><c>T3e</c> - T3e</summary>
-            T3E,
+            T3e,
 
             /// <summary><c>T4</c> - T4</summary>
             T4,
 
             /// <summary><c>T4a</c> - T4a</summary>
-            T4A,
+            T4a,
 
             /// <summary><c>T4b</c> - T4b</summary>
-            T4B,
+            T4b,
 
             /// <summary><c>T4c</c> - T4c</summary>
-            T4C,
+            T4c,
 
             /// <summary><c>T4d</c> - T4d</summary>
-            T4D,
+            T4d,
 
             /// <summary><c>T4e</c> - T4e</summary>
-            T4E,
+            T4e,
 
             /// <summary><c>m</c> - (m)</summary>
             M,
@@ -3077,7 +3077,7 @@ public static class Onkologie
             _10,
 
             /// <summary><c>NX</c> - Nx</summary>
-            NX,
+            Nx,
 
             /// <summary><c>N0</c> - N0</summary>
             N0,
@@ -3086,40 +3086,40 @@ public static class Onkologie
             N1,
 
             /// <summary><c>N1mi</c> - N1(mi)</summary>
-            N1MI,
+            N1mi,
 
             /// <summary><c>N1a</c> - N1a</summary>
-            N1A,
+            N1a,
 
             /// <summary><c>N1b</c> - N1b</summary>
-            N1B,
+            N1b,
 
             /// <summary><c>N1c</c> - N1c</summary>
-            N1C,
+            N1c,
 
             /// <summary><c>N2</c> - N2</summary>
             N2,
 
             /// <summary><c>N2a</c> - N2a</summary>
-            N2A,
+            N2a,
 
             /// <summary><c>N2b</c> - N2b</summary>
-            N2B,
+            N2b,
 
             /// <summary><c>N2c</c> - N2c</summary>
-            N2C,
+            N2c,
 
             /// <summary><c>N3</c> - N3</summary>
             N3,
 
             /// <summary><c>N3a</c> - N3a</summary>
-            N3A,
+            N3a,
 
             /// <summary><c>N3b</c> - N3b</summary>
-            N3B,
+            N3b,
 
             /// <summary><c>N3c</c> - N3c</summary>
-            N3C,
+            N3c,
 
             /// <summary><c>M0</c> - M0</summary>
             M0,
@@ -3128,34 +3128,34 @@ public static class Onkologie
             M1,
 
             /// <summary><c>M1a</c> - M1a</summary>
-            M1A,
+            M1a,
 
             /// <summary><c>M1b</c> - M1b</summary>
-            M1B,
+            M1b,
 
             /// <summary><c>M1c</c> - M1c</summary>
-            M1C,
+            M1c,
 
             /// <summary><c>M1d</c> - M1d</summary>
-            M1D,
+            M1d,
 
             /// <summary><c>MX</c> - MX</summary>
-            MX,
+            Mx,
 
             /// <summary><c>i+</c> - (i+)</summary>
-            I_POS,
+            IPos,
 
             /// <summary><c>i-</c> - (i-)</summary>
-            I_NEG,
+            INeg,
 
             /// <summary><c>mol+</c> - (mol+)</summary>
-            MOL_POS,
+            MolPos,
 
             /// <summary><c>mol-</c> - (mol-)</summary>
-            MOL_NEG,
+            MolNeg,
 
             /// <summary><c>sn</c> - (sn)</summary>
-            SN,
+            Sn,
 
             /// <summary><c>L0</c> - L0</summary>
             L0,
@@ -3164,7 +3164,7 @@ public static class Onkologie
             L1,
 
             /// <summary><c>LX</c> - LX</summary>
-            LX,
+            Lx,
 
             /// <summary><c>V0</c> - V0</summary>
             V0,
@@ -3176,16 +3176,16 @@ public static class Onkologie
             V2,
 
             /// <summary><c>VX</c> - VX</summary>
-            VX,
+            Vx,
 
             /// <summary><c>Pn0</c> - Pn0</summary>
-            PN0,
+            Pn0,
 
             /// <summary><c>Pn1</c> - Pn1</summary>
-            PN1,
+            Pn1,
 
             /// <summary><c>PnX</c> - PnX</summary>
-            PN_X,
+            PnX,
 
             /// <summary><c>S0</c> - S0</summary>
             S0,
@@ -3200,112 +3200,112 @@ public static class Onkologie
             S3,
 
             /// <summary><c>SX</c> - SX</summary>
-            SX,
+            Sx,
 
             /// <summary><c>okk</c> - Stadium X</summary>
-            OKK,
+            Okk,
 
             /// <summary><c>0</c> - Stadium 0</summary>
             _0,
 
             /// <summary><c>0a</c> - Stadium 0a</summary>
-            _0A,
+            _0a,
 
             /// <summary><c>0is</c> - Stadium 0is</summary>
-            _0IS,
+            _0is,
 
             /// <summary><c>I</c> - Stadium I</summary>
             I,
 
             /// <summary><c>IA</c> - Stadium IA</summary>
-            IA,
+            Ia,
 
             /// <summary><c>IA1</c> - Stadium IA1</summary>
-            IA1,
+            Ia1,
 
             /// <summary><c>IA2</c> - Stadium IA2</summary>
-            IA2,
+            Ia2,
 
             /// <summary><c>IA3</c> - Stadium IA3</summary>
-            IA3,
+            Ia3,
 
             /// <summary><c>IB</c> - Stadium IB</summary>
-            IB,
+            Ib,
 
             /// <summary><c>IB1</c> - Stadium IB1</summary>
-            IB1,
+            Ib1,
 
             /// <summary><c>IB2</c> - Stadium IB2</summary>
-            IB2,
+            Ib2,
 
             /// <summary><c>IC</c> - Stadium IC</summary>
-            IC,
+            Ic,
 
             /// <summary><c>IS</c> - Stadium IS</summary>
-            IS,
+            Is,
 
             /// <summary><c>II</c> - Stadium II</summary>
-            II,
+            Ii,
 
             /// <summary><c>IIA</c> - Stadium IIA</summary>
-            IIA,
+            Iia,
 
             /// <summary><c>IIA1</c> - Stadium IIA1</summary>
-            IIA1,
+            Iia1,
 
             /// <summary><c>IIA2</c> - Stadium IIA2</summary>
-            IIA2,
+            Iia2,
 
             /// <summary><c>IIB</c> - Stadium IIB</summary>
-            IIB,
+            Iib,
 
             /// <summary><c>IIC</c> - Stadium IIC</summary>
-            IIC,
+            Iic,
 
             /// <summary><c>III</c> - Stadium III</summary>
-            III,
+            Iii,
 
             /// <summary><c>IIIA</c> - Stadium IIIA</summary>
-            IIIA,
+            Iiia,
 
             /// <summary><c>IIIA1</c> - Stadium IIIA1</summary>
-            IIIA1,
+            Iiia1,
 
             /// <summary><c>IIIA2</c> - Stadium IIIA2</summary>
-            IIIA2,
+            Iiia2,
 
             /// <summary><c>IIIB</c> - Stadium IIIB</summary>
-            IIIB,
+            Iiib,
 
             /// <summary><c>IIIC</c> - Stadium IIIC</summary>
-            IIIC,
+            Iiic,
 
             /// <summary><c>IIIC1</c> - Stadium IIIC1</summary>
-            IIIC1,
+            Iiic1,
 
             /// <summary><c>IIIC2</c> - Stadium IIIC2</summary>
-            IIIC2,
+            Iiic2,
 
             /// <summary><c>IIID</c> - Stadium IIID</summary>
-            IIID,
+            Iiid,
 
             /// <summary><c>IV</c> - Stadium IV</summary>
-            IV,
+            Iv,
 
             /// <summary><c>IVA</c> - Stadium IVA</summary>
-            IVA,
+            Iva,
 
             /// <summary><c>IVA1</c> - Stadium IVA1</summary>
-            IVA1,
+            Iva1,
 
             /// <summary><c>IVA2</c> - Stadium IVA2</summary>
-            IVA2,
+            Iva2,
 
             /// <summary><c>IVB</c> - Stadium IVB</summary>
-            IVB,
+            Ivb,
 
             /// <summary><c>IVC</c> - Stadium IVC</summary>
-            IVC,
+            Ivc,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration</c>.</summary>
@@ -3347,19 +3347,19 @@ public static class Onkologie
         public enum MiiCsOnkoMammaHer2NeuStatusLeitlinie
         {
             /// <summary><c>positiv</c> - HER2-positiv</summary>
-            POSITIV,
+            Positiv,
 
             /// <summary><c>low</c> - HER2-low</summary>
-            LOW,
+            Low,
 
             /// <summary><c>ultralow</c> - HER2-ultralow</summary>
-            ULTRALOW,
+            Ultralow,
 
             /// <summary><c>negativ</c> - HER2-negativ</summary>
-            NEGATIV,
+            Negativ,
 
             /// <summary><c>equivocal</c> - equivocal</summary>
-            EQUIVOCAL,
+            Equivocal,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen</c>.</summary>
@@ -3394,95 +3394,95 @@ public static class Onkologie
         public enum MiiCsOnkoAllgemeinerLeistungszustandKarnofsky
         {
             /// <summary><c>100%</c> - 100%</summary>
-            _100_,
+            _100,
 
             /// <summary><c>90%</c> - 90%</summary>
-            _90_,
+            _90,
 
             /// <summary><c>80%</c> - 80%</summary>
-            _80_,
+            _80,
 
             /// <summary><c>70%</c> - 70%</summary>
-            _70_,
+            _70,
 
             /// <summary><c>60%</c> - 60%</summary>
-            _60_,
+            _60,
 
             /// <summary><c>50%</c> - 50%</summary>
-            _50_,
+            _50,
 
             /// <summary><c>40%</c> - 40%</summary>
-            _40_,
+            _40,
 
             /// <summary><c>30%</c> - 30%</summary>
-            _30_,
+            _30,
 
             /// <summary><c>20%</c> - 20%</summary>
-            _20_,
+            _20,
 
             /// <summary><c>10%</c> - 10%</summary>
-            _10_,
+            _10,
 
             /// <summary><c>0%</c> - 0%</summary>
-            _0_,
+            _0,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart</c>.</summary>
         public enum MiiCsOnkoStrahlentherapieStrahlenart
         {
             /// <summary><c>UH</c> - Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)</summary>
-            UH,
+            Uh,
 
             /// <summary><c>EL</c> - Elektronen</summary>
-            EL,
+            El,
 
             /// <summary><c>NE</c> - Neutronen</summary>
-            NE,
+            Ne,
 
             /// <summary><c>PN</c> - Protonen (leichte Wasserstoffionen/H1/Leichtionen)</summary>
-            PN,
+            Pn,
 
             /// <summary><c>SI</c> - Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)</summary>
-            SI,
+            Si,
 
             /// <summary><c>RO</c> - Weichstrahl (kV)</summary>
-            RO,
+            Ro,
 
             /// <summary><c>SO</c> - Sonstige (inklusive Mixed Beams, exklusive Nuklide)</summary>
-            SO,
+            So,
 
             /// <summary><c>Lu-177</c> - Lu-177</summary>
-            LU_177,
+            Lu177,
 
             /// <summary><c>J-131</c> - J131</summary>
-            J_131,
+            J131,
 
             /// <summary><c>Y-90</c> - Y-90</summary>
-            Y_90,
+            Y90,
 
             /// <summary><c>Ra-223</c> - Ra-223</summary>
-            RA_223,
+            Ra223,
 
             /// <summary><c>Ac-225</c> - Ac-225</summary>
-            AC_225,
+            Ac225,
 
             /// <summary><c>Sm-153</c> - Sm-153</summary>
-            SM_153,
+            Sm153,
 
             /// <summary><c>Tb-161</c> - Tb-161</summary>
-            TB_161,
+            Tb161,
 
             /// <summary><c>Sr-89</c> - Sr-89</summary>
-            SR_89,
+            Sr89,
 
             /// <summary><c>Ir-192</c> - Ir-192</summary>
-            IR_192,
+            Ir192,
 
             /// <summary><c>Co-60</c> - Co-60</summary>
-            CO_60,
+            Co60,
 
             /// <summary><c>SONU</c> - Sonstige Nuklide</summary>
-            SONU,
+            Sonu,
         }
 
         /// <summary>Concepts for <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost</c>.</summary>
@@ -3492,13 +3492,13 @@ public static class Onkologie
             J,
 
             /// <summary><c>SIB</c> - simultan integrierter Boost</summary>
-            SIB,
+            Sib,
 
             /// <summary><c>SEQ</c> - sequentieller Boost</summary>
-            SEQ,
+            Seq,
 
             /// <summary><c>KON</c> - konkomitanter Boost</summary>
-            KON,
+            Kon,
 
             /// <summary><c>N</c> - nein, ohne Boost</summary>
             N,
@@ -3556,16 +3556,16 @@ public static class Onkologie
             R1,
 
             /// <summary><c>R1(is)</c> - In-Situ-Rest</summary>
-            R1_IS_,
+            R1Is,
 
             /// <summary><c>R1(cy+)</c> - Cytologischer Rest</summary>
-            R1_CY_,
+            R1Cy,
 
             /// <summary><c>R2</c> - Makroskopischer Residualtumor</summary>
             R2,
 
             /// <summary><c>RX</c> - Vorhandensein von Residualtumor kann nicht beurteilt werden</summary>
-            RX,
+            Rx,
 
             /// <summary><c>U</c> - Residualtumorstatus ist nicht bekannt</summary>
             U,
@@ -4284,104 +4284,104 @@ public static class MiiCsOnkoStrahlentherapieZielgebietExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_1 => "1.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_2 => "1.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_3 => "1.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_4 => "1.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_5 => "1.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_1 => "2.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_2 => "2.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_3 => "2.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_4 => "2.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_5 => "2.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_6 => "2.6",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_7 => "2.7",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_8 => "2.8",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_9 => "2.9",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_10 => "2.10",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_11 => "2.11",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_12 => "2.12",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_1 => "3.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_2 => "3.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_3 => "3.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_4 => "3.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_5 => "3.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_6 => "3.6",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_7 => "3.7",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_8 => "3.8",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_1 => "4.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_2 => "4.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_3 => "4.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_4 => "4.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_5 => "4.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_6 => "4.6",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_7 => "4.7",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_8 => "4.8",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_9 => "4.9",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_10 => "4.10",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_11 => "4.11",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_12 => "4.12",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_13 => "4.13",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_1 => "5.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_2 => "5.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_3 => "5.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_4 => "5.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_5 => "5.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_6 => "5.6",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_7 => "5.7",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_8 => "5.8",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_9 => "5.9",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_10 => "5.10",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_11 => "5.11",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_12 => "5.12",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_1 => "6.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_2 => "6.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_3 => "6.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_4 => "6.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_5 => "6.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_6 => "6.6",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_7 => "6.7",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_8 => "6.8",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_9 => "6.9",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_10 => "6.10",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_11 => "6.11",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_12 => "6.12",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_13 => "6.13",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_14 => "6.14",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_15 => "6.15",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_16 => "6.16",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_17 => "6.17",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_18 => "6.18",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_19 => "6.19",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_1 => "7.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_2 => "7.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_3 => "7.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_4 => "7.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_5 => "7.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_6 => "7.6",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_7 => "7.7",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_8 => "7.8",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_9 => "7.9",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._8_1 => "8.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._8_2 => "8.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_1 => "9.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_2 => "9.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_3 => "9.3",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_4 => "9.4",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_5 => "9.5",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_6 => "9.6",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_7 => "9.7",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_8 => "9.8",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_9 => "9.9",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_10 => "9.10",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_11 => "9.11",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_12 => "9.12",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_13 => "9.13",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_14 => "9.14",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_15 => "9.15",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_1 => "10.1",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_2 => "10.2",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_3 => "10.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._11 => "1.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._12 => "1.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._13 => "1.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._14 => "1.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._15 => "1.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._21 => "2.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._22 => "2.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._23 => "2.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._24 => "2.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._25 => "2.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._26 => "2.6",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._27 => "2.7",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._28 => "2.8",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._29 => "2.9",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._210 => "2.10",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._211 => "2.11",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._212 => "2.12",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._31 => "3.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._32 => "3.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._33 => "3.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._34 => "3.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._35 => "3.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._36 => "3.6",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._37 => "3.7",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._38 => "3.8",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._41 => "4.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._42 => "4.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._43 => "4.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._44 => "4.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._45 => "4.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._46 => "4.6",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._47 => "4.7",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._48 => "4.8",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._49 => "4.9",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._410 => "4.10",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._411 => "4.11",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._412 => "4.12",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._413 => "4.13",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._51 => "5.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._52 => "5.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._53 => "5.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._54 => "5.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._55 => "5.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._56 => "5.6",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._57 => "5.7",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._58 => "5.8",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._59 => "5.9",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._510 => "5.10",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._511 => "5.11",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._512 => "5.12",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._61 => "6.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._62 => "6.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._63 => "6.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._64 => "6.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._65 => "6.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._66 => "6.6",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._67 => "6.7",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._68 => "6.8",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._69 => "6.9",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._610 => "6.10",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._611 => "6.11",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._612 => "6.12",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._613 => "6.13",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._614 => "6.14",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._615 => "6.15",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._616 => "6.16",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._617 => "6.17",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._618 => "6.18",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._619 => "6.19",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._71 => "7.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._72 => "7.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._73 => "7.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._74 => "7.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._75 => "7.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._76 => "7.6",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._77 => "7.7",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._78 => "7.8",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._79 => "7.9",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._81 => "8.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._82 => "8.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._91 => "9.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._92 => "9.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._93 => "9.3",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._94 => "9.4",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._95 => "9.5",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._96 => "9.6",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._97 => "9.7",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._98 => "9.8",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._99 => "9.9",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._910 => "9.10",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._911 => "9.11",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._912 => "9.12",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._913 => "9.13",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._914 => "9.14",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._915 => "9.15",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._101 => "10.1",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._102 => "10.2",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._103 => "10.3",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -4391,136 +4391,133 @@ public static class MiiCsOnkoStrahlentherapieZielgebietExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_1 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._11 =>
                 "Ganzhirn (Neurokranium, inklusive Meningen)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_2 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._12 =>
                 "Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._13 =>
                 "Neuroachse/Rückenmark",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_4 => "Hypophyse",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_5 => "Hirn sonstiges",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_1 => "Auge (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_2 =>
-                "Nase/Nasennebenhöhle",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._14 => "Hypophyse",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._15 => "Hirn sonstiges",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._21 => "Auge (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._22 => "Nase/Nasennebenhöhle",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._23 =>
                 "Mundhöhle inklusive Mundhöhlenvorhof",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_4 => "Ohr (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_5 =>
-                "Speicheldrüse (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_6 => "Pharynx",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_7 => "Nasopharynx",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_8 => "Oropharynx",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_9 => "Hypopharynx",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_10 => "Larynx",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_11 => "Schilddrüse",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_12 => "Kopf-Hals sonstige",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_1 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._24 => "Ohr (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._25 => "Speicheldrüse (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._26 => "Pharynx",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._27 => "Nasopharynx",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._28 => "Oropharynx",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._29 => "Hypopharynx",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._210 => "Larynx",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._211 => "Schilddrüse",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._212 => "Kopf-Hals sonstige",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._31 =>
                 "Mamma als Ganzbrust (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_2 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._32 =>
                 "Mamma als Teilbrust (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._33 =>
                 "Thoraxwand, gegebenenfalls r, l",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_4 => "Lunge (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_5 => "Ösophagus",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_6 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._34 => "Lunge (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._35 => "Ösophagus",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._36 =>
                 "Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_7 => "Thymus",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_8 => "Thorax sonstige",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_1 => "Magen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_2 => "Pankreas",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._37 => "Thymus",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._38 => "Thorax sonstige",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._41 => "Magen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._42 => "Pankreas",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._43 =>
                 "Leber, auch bei Teilbestrahlung",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_4 => "Milz",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_5 => "Niere (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_6 => "Nebenniere (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_7 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._44 => "Milz",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._45 => "Niere (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._46 => "Nebenniere (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._47 =>
                 "Retroperitoneum (z. B. Sarkome)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_8 => "Ureter (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_9 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._48 => "Ureter (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._49 =>
                 "Bauchwand (z. B. Sarkome)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_10 => "Oberbauch",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_11 => "Gallengänge",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_12 => "Gallenblase",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_13 => "Abdomen sonstige",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_1 => "Rektum",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_2 => "Analbereich",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_3 => "Harnblase",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_4 => "Prostata",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_5 => "Hoden (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_6 => "Penis",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_7 => "Uterus",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_8 => "Zervix",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_9 => "Vulva",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_10 => "Vagina",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_11 => "Beckenwand",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_12 => "Becken sonstige",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_1 => "Schädel",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_2 => "Schädelbasis",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_3 => "Orbita (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_4 => "Halswirbelsäule",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_5 => "Brustwirbelsäule",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_6 => "Lendenwirbelsäule",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_7 => "Sacrum /Coccygeum",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_8 => "Rippen (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_9 => "Sternum",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_10 => "Schulter (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_11 => "Oberarm (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_12 => "Unterarm (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_13 => "Hand (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_14 => "Becken (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_15 => "Hüfte (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_16 =>
-                "Oberschenkel (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_17 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._410 => "Oberbauch",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._411 => "Gallengänge",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._412 => "Gallenblase",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._413 => "Abdomen sonstige",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._51 => "Rektum",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._52 => "Analbereich",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._53 => "Harnblase",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._54 => "Prostata",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._55 => "Hoden (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._56 => "Penis",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._57 => "Uterus",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._58 => "Zervix",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._59 => "Vulva",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._510 => "Vagina",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._511 => "Beckenwand",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._512 => "Becken sonstige",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._61 => "Schädel",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._62 => "Schädelbasis",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._63 => "Orbita (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._64 => "Halswirbelsäule",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._65 => "Brustwirbelsäule",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._66 => "Lendenwirbelsäule",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._67 => "Sacrum /Coccygeum",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._68 => "Rippen (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._69 => "Sternum",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._610 => "Schulter (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._611 => "Oberarm (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._612 => "Unterarm (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._613 => "Hand (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._614 => "Becken (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._615 => "Hüfte (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._616 => "Oberschenkel (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._617 =>
                 "Unterschenkel (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_18 => "Fuß (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_19 => "Knochen sonstige",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_1 => "Kopf, Gesicht, Hals",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_2 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._618 => "Fuß (r, l)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._619 => "Knochen sonstige",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._71 => "Kopf, Gesicht, Hals",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._72 =>
                 "obere Extremität ink* #lusive Schulter (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._73 =>
                 "untere Extremität und Hüfte (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_4 => "Thorax",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_5 => "Abdomen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_6 => "Becken",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_7 => "Stammes o. n. A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_8 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._74 => "Thorax",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._75 => "Abdomen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._76 => "Becken",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._77 => "Stammes o. n. A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._78 =>
                 "mehrere Bereiche überlappend",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_9 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._79 =>
                 "sonstige Weichteile o. n. A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._8_1 => "Ganzhaut",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._8_2 => "Teilbereiche",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_1 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._81 => "Ganzhaut",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._82 => "Teilbereiche",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._91 =>
                 "Cervikale Lymphknoten (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_2 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._92 =>
                 "Supra-/infraclavikuläre Lymphknoten (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._93 =>
                 "Axilläre Lymphknoten (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_4 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._94 =>
                 "Retrosternale/sternale/Mammaria interna Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_5 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._95 =>
                 "Mediastinale Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_6 => "Hiläre Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_7 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._96 => "Hiläre Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._97 =>
                 "Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_8 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._98 =>
                 "Paraaortale/paracavale Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_9 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._99 =>
                 "Retroperitoneale Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_10 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._910 =>
                 "Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_11 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._911 =>
                 "Inguinale Lymphknoten (r, l)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_12 => "Involved Node",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_13 => "Involved Site",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_14 => "Involved Field",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_15 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._912 => "Involved Node",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._913 => "Involved Site",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._914 => "Involved Field",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._915 =>
                 "Sonstige Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_1 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._101 =>
                 "Ganzkörperbestrahlung bei allogener Stammzelltransplantation",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_2 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._102 =>
                 "operative Zugangswege",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._103 =>
                 "Sonstige, nicht genannte Zielgebiete",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -4537,104 +4534,104 @@ public static class MiiCsOnkoStrahlentherapieZielgebietExtensions
     ) =>
         code switch
         {
-            "1.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_1,
-            "1.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_2,
-            "1.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_3,
-            "1.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_4,
-            "1.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._1_5,
-            "2.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_1,
-            "2.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_2,
-            "2.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_3,
-            "2.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_4,
-            "2.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_5,
-            "2.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_6,
-            "2.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_7,
-            "2.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_8,
-            "2.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_9,
-            "2.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_10,
-            "2.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_11,
-            "2.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._2_12,
-            "3.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_1,
-            "3.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_2,
-            "3.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_3,
-            "3.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_4,
-            "3.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_5,
-            "3.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_6,
-            "3.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_7,
-            "3.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._3_8,
-            "4.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_1,
-            "4.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_2,
-            "4.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_3,
-            "4.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_4,
-            "4.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_5,
-            "4.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_6,
-            "4.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_7,
-            "4.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_8,
-            "4.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_9,
-            "4.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_10,
-            "4.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_11,
-            "4.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_12,
-            "4.13" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._4_13,
-            "5.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_1,
-            "5.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_2,
-            "5.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_3,
-            "5.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_4,
-            "5.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_5,
-            "5.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_6,
-            "5.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_7,
-            "5.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_8,
-            "5.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_9,
-            "5.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_10,
-            "5.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_11,
-            "5.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._5_12,
-            "6.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_1,
-            "6.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_2,
-            "6.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_3,
-            "6.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_4,
-            "6.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_5,
-            "6.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_6,
-            "6.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_7,
-            "6.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_8,
-            "6.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_9,
-            "6.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_10,
-            "6.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_11,
-            "6.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_12,
-            "6.13" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_13,
-            "6.14" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_14,
-            "6.15" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_15,
-            "6.16" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_16,
-            "6.17" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_17,
-            "6.18" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_18,
-            "6.19" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._6_19,
-            "7.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_1,
-            "7.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_2,
-            "7.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_3,
-            "7.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_4,
-            "7.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_5,
-            "7.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_6,
-            "7.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_7,
-            "7.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_8,
-            "7.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._7_9,
-            "8.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._8_1,
-            "8.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._8_2,
-            "9.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_1,
-            "9.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_2,
-            "9.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_3,
-            "9.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_4,
-            "9.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_5,
-            "9.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_6,
-            "9.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_7,
-            "9.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_8,
-            "9.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_9,
-            "9.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_10,
-            "9.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_11,
-            "9.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_12,
-            "9.13" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_13,
-            "9.14" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_14,
-            "9.15" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._9_15,
-            "10.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_1,
-            "10.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_2,
-            "10.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._10_3,
+            "1.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._11,
+            "1.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._12,
+            "1.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._13,
+            "1.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._14,
+            "1.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._15,
+            "2.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._21,
+            "2.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._22,
+            "2.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._23,
+            "2.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._24,
+            "2.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._25,
+            "2.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._26,
+            "2.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._27,
+            "2.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._28,
+            "2.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._29,
+            "2.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._210,
+            "2.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._211,
+            "2.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._212,
+            "3.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._31,
+            "3.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._32,
+            "3.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._33,
+            "3.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._34,
+            "3.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._35,
+            "3.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._36,
+            "3.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._37,
+            "3.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._38,
+            "4.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._41,
+            "4.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._42,
+            "4.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._43,
+            "4.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._44,
+            "4.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._45,
+            "4.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._46,
+            "4.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._47,
+            "4.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._48,
+            "4.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._49,
+            "4.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._410,
+            "4.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._411,
+            "4.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._412,
+            "4.13" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._413,
+            "5.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._51,
+            "5.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._52,
+            "5.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._53,
+            "5.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._54,
+            "5.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._55,
+            "5.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._56,
+            "5.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._57,
+            "5.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._58,
+            "5.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._59,
+            "5.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._510,
+            "5.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._511,
+            "5.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._512,
+            "6.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._61,
+            "6.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._62,
+            "6.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._63,
+            "6.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._64,
+            "6.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._65,
+            "6.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._66,
+            "6.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._67,
+            "6.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._68,
+            "6.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._69,
+            "6.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._610,
+            "6.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._611,
+            "6.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._612,
+            "6.13" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._613,
+            "6.14" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._614,
+            "6.15" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._615,
+            "6.16" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._616,
+            "6.17" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._617,
+            "6.18" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._618,
+            "6.19" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._619,
+            "7.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._71,
+            "7.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._72,
+            "7.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._73,
+            "7.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._74,
+            "7.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._75,
+            "7.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._76,
+            "7.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._77,
+            "7.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._78,
+            "7.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._79,
+            "8.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._81,
+            "8.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._82,
+            "9.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._91,
+            "9.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._92,
+            "9.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._93,
+            "9.4" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._94,
+            "9.5" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._95,
+            "9.6" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._96,
+            "9.7" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._97,
+            "9.8" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._98,
+            "9.9" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._99,
+            "9.10" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._910,
+            "9.11" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._911,
+            "9.12" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._912,
+            "9.13" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._913,
+            "9.14" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._914,
+            "9.15" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._915,
+            "10.1" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._101,
+            "10.2" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._102,
+            "10.3" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet._103,
             _ => null,
         };
 
@@ -4662,32 +4659,30 @@ public static class MiiCsOnkoStrahlentherapieApplikationsartExtensions
         value switch
         {
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P => "P",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_ST => "P-ST",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_4_D => "P-4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_ST4_D => "P-ST4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN => "PRCN",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_ST => "PRCN-ST",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_4_D => "PRCN-4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_ST4_D =>
-                "PRCN-ST4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ => "PRCJ",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_ST => "PRCJ-ST",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_4_D => "PRCJ-4D",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_ST4_D =>
-                "PRCJ-ST4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt => "P-ST",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D => "P-4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D => "P-ST4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn => "PRCN",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt => "PRCN-ST",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D => "PRCN-4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D => "PRCN-ST4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj => "PRCJ",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt => "PRCJ-ST",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D => "PRCJ-4D",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D => "PRCJ-ST4D",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K => "K",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KHDR => "KHDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KLDR => "KLDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KPDR => "KPDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr => "KHDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr => "KLDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr => "KPDR",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I => "I",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.IHDR => "IHDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.ILDR => "ILDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.IPDR => "IPDR",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MSIRT => "MSIRT",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MPRRT => "MPRRT",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MPSMA => "MPSMA",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MRJT => "MRJT",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MRIT => "MRIT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr => "IHDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr => "ILDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr => "IPDR",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt => "MSIRT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt => "MPRRT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma => "MPSMA",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt => "MRJT",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit => "MRIT",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M => "M",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S => "S",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
@@ -4701,52 +4696,52 @@ public static class MiiCsOnkoStrahlentherapieApplikationsartExtensions
         {
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P =>
                 "perkutan (Teletherapie)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_ST =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt =>
                 "perkutan stereotaktisch",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_4_D =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D =>
                 "perkutan, atemgetriggert",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_ST4_D =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D =>
                 "perkutan, stereotaktisch, atemgetriggert",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn =>
                 "perkutan ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_ST =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt =>
                 "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_4_D =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D =>
                 "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_ST4_D =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D =>
                 "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj =>
                 "perkutan mit Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_ST =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt =>
                 "perkutan, stereotaktisch mit Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_4_D =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D =>
                 "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_ST4_D =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D =>
                 "perkutan, stereotaktisch, atemgetriggert, mit Chemotherapie/Sensitizer",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K =>
                 "endokavitäre Kontakttherapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KHDR =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr =>
                 "endokavitäre Kontakttherapie, high dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KLDR =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr =>
                 "endokavitäre Kontakttherapie, low dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KPDR =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr =>
                 "endokavitäre Kontakttherapie, pulsed dose rate therapy",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I =>
                 "intersitielle Kontakttherapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.IHDR =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr =>
                 "intersitielle Kontakttherapie, high dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.ILDR =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr =>
                 "intersitielle Kontakttherapie, low dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.IPDR =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr =>
                 "intersitielle Kontakttherapie, pulsed dose rate therapy",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MSIRT =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt =>
                 "selektive interne Radio-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MPRRT =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt =>
                 "Peptid-Radio-Rezeptor-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MPSMA => "PSMA-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MRJT =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma => "PSMA-Therapie",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt =>
                 "Radiojod-Therapie",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MRIT =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit =>
                 "Radioimmun-Therapie",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M =>
                 "sonstige metabolische Radionuklidtherapie",
@@ -4767,36 +4762,30 @@ public static class MiiCsOnkoStrahlentherapieApplikationsartExtensions
         code switch
         {
             "P" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P,
-            "P-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_ST,
-            "P-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_4_D,
-            "P-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P_ST4_D,
-            "PRCN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN,
-            "PRCN-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_ST,
-            "PRCN-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCN_4_D,
-            "PRCN-ST4D" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoStrahlentherapieApplikationsart
-                .PRCN_ST4_D,
-            "PRCJ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ,
-            "PRCJ-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_ST,
-            "PRCJ-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PRCJ_4_D,
-            "PRCJ-ST4D" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoStrahlentherapieApplikationsart
-                .PRCJ_ST4_D,
+            "P-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt,
+            "P-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.P4D,
+            "P-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PSt4D,
+            "PRCN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn,
+            "PRCN-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt,
+            "PRCN-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcn4D,
+            "PRCN-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcnSt4D,
+            "PRCJ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj,
+            "PRCJ-ST" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt,
+            "PRCJ-4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Prcj4D,
+            "PRCJ-ST4D" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.PrcjSt4D,
             "K" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.K,
-            "KHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KHDR,
-            "KLDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KLDR,
-            "KPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.KPDR,
+            "KHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Khdr,
+            "KLDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kldr,
+            "KPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Kpdr,
             "I" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.I,
-            "IHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.IHDR,
-            "ILDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.ILDR,
-            "IPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.IPDR,
-            "MSIRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MSIRT,
-            "MPRRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MPRRT,
-            "MPSMA" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MPSMA,
-            "MRJT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MRJT,
-            "MRIT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.MRIT,
+            "IHDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ihdr,
+            "ILDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ildr,
+            "IPDR" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Ipdr,
+            "MSIRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Msirt,
+            "MPRRT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mprrt,
+            "MPSMA" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mpsma,
+            "MRJT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrjt,
+            "MRIT" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.Mrit,
             "M" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.M,
             "S" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieApplikationsart.S,
             _ => null,
@@ -4924,10 +4913,10 @@ public static class MiiCsOnkoTherapieplanungTypExtensions
     public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.PRAETH => "praeth",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.POSTOP => "postop",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.POSTTH => "postth",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.THER => "ther",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth => "praeth",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop => "postop",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth => "postth",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther => "ther",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -4935,13 +4924,13 @@ public static class MiiCsOnkoTherapieplanungTypExtensions
     public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.PRAETH =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth =>
                 "prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.POSTOP =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop =>
                 "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.POSTTH =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth =>
                 "posttherapeutische Tumorkonferenz (manche Tumore werden nicht operiert)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.THER =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther =>
                 "Therapieplanung ohne Tumorkonferenz",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -4955,10 +4944,10 @@ public static class MiiCsOnkoTherapieplanungTypExtensions
     public static Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp? FromValue(string code) =>
         code switch
         {
-            "praeth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.PRAETH,
-            "postop" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.POSTOP,
-            "postth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.POSTTH,
-            "ther" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.THER,
+            "praeth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Praeth,
+            "postop" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postop,
+            "postth" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Postth,
+            "ther" => Onkologie.CodeSystems.MiiCsOnkoTherapieplanungTyp.Ther,
             _ => null,
         };
 
@@ -5105,18 +5094,18 @@ public static class MiiCsOnkoFernmetastasenExtensions
     public static string Code(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PUL => "PUL",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.OSS => "OSS",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.HEP => "HEP",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.BRA => "BRA",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.LYM => "LYM",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.MAR => "MAR",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PLE => "PLE",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PER => "PER",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.ADR => "ADR",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.SKI => "SKI",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.OTH => "OTH",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.GEN => "GEN",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul => "PUL",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss => "OSS",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep => "HEP",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra => "BRA",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym => "LYM",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar => "MAR",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple => "PLE",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per => "PER",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr => "ADR",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski => "SKI",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth => "OTH",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen => "GEN",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -5124,18 +5113,18 @@ public static class MiiCsOnkoFernmetastasenExtensions
     public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoFernmetastasen value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PUL => "Lunge",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.OSS => "Knochen",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.HEP => "Leber",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.BRA => "Hirn",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.LYM => "Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.MAR => "Knochenmark",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PLE => "Pleura",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PER => "Peritoneum",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.ADR => "Nebennieren",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.SKI => "Haut",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.OTH => "andere Organe",
-            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.GEN => "generalisierte Metastasierung",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul => "Lunge",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss => "Knochen",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep => "Leber",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra => "Hirn",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym => "Lymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar => "Knochenmark",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple => "Pleura",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per => "Peritoneum",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr => "Nebennieren",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski => "Haut",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth => "andere Organe",
+            Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen => "generalisierte Metastasierung",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -5148,18 +5137,18 @@ public static class MiiCsOnkoFernmetastasenExtensions
     public static Onkologie.CodeSystems.MiiCsOnkoFernmetastasen? FromValue(string code) =>
         code switch
         {
-            "PUL" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PUL,
-            "OSS" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.OSS,
-            "HEP" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.HEP,
-            "BRA" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.BRA,
-            "LYM" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.LYM,
-            "MAR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.MAR,
-            "PLE" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PLE,
-            "PER" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.PER,
-            "ADR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.ADR,
-            "SKI" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.SKI,
-            "OTH" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.OTH,
-            "GEN" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.GEN,
+            "PUL" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Pul,
+            "OSS" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oss,
+            "HEP" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Hep,
+            "BRA" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Bra,
+            "LYM" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Lym,
+            "MAR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Mar,
+            "PLE" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ple,
+            "PER" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Per,
+            "ADR" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Adr,
+            "SKI" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Ski,
+            "OTH" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Oth,
+            "GEN" => Onkologie.CodeSystems.MiiCsOnkoFernmetastasen.Gen,
             _ => null,
         };
 
@@ -5230,22 +5219,22 @@ public static class MiiCsOnkoTherapieTypExtensions
     public static string Code(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CH => "CH",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.HO => "HO",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.IM => "IM",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.ZS => "ZS",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.SZ => "SZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CI => "CI",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CZ => "CZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CIZ => "CIZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.IZ => "IZ",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.WW => "WW",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.AS => "AS",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.WS => "WS",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.OP => "OP",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.ST => "ST",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.KW => "KW",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.SO => "SO",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch => "CH",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho => "HO",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im => "IM",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs => "ZS",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz => "SZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci => "CI",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz => "CZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz => "CIZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz => "IZ",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww => "WW",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As => "AS",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws => "WS",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op => "OP",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St => "ST",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw => "KW",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So => "SO",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -5253,27 +5242,27 @@ public static class MiiCsOnkoTherapieTypExtensions
     public static string? Display(this Onkologie.CodeSystems.MiiCsOnkoTherapieTyp value) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CH => "Chemotherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.HO => "Hormontherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.IM => "Immun-/Antikörpertherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.ZS => "zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.SZ =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch => "Chemotherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho => "Hormontherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im => "Immun-/Antikörpertherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs => "zielgerichtete Substanzen",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz =>
                 "Stammzelltransplantation (inklusive Knochenmarktransplantation)",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CI => "Chemo- + Immun-/Antikörpertherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CZ =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci => "Chemo- + Immun-/Antikörpertherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz =>
                 "Chemotherapie + zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CIZ =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz =>
                 "Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.IZ =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz =>
                 "Immun-/Antikörpertherapie + zielgerichtete Substanzen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.WW => "Watchful Waiting",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.AS => "Active Surveillance",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.WS => "Wait and see",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.OP => "Operation",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.ST => "Strahlentherapie",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.KW =>
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww => "Watchful Waiting",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As => "Active Surveillance",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws => "Wait and see",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op => "Operation",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St => "Strahlentherapie",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw =>
                 "keine weitere tumorspezifische Therapie empfohlen",
-            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.SO => "Sonstiges",
+            Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So => "Sonstiges",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -5286,22 +5275,22 @@ public static class MiiCsOnkoTherapieTypExtensions
     public static Onkologie.CodeSystems.MiiCsOnkoTherapieTyp? FromValue(string code) =>
         code switch
         {
-            "CH" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CH,
-            "HO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.HO,
-            "IM" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.IM,
-            "ZS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.ZS,
-            "SZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.SZ,
-            "CI" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CI,
-            "CZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CZ,
-            "CIZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.CIZ,
-            "IZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.IZ,
-            "WW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.WW,
-            "AS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.AS,
-            "WS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.WS,
-            "OP" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.OP,
-            "ST" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.ST,
-            "KW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.KW,
-            "SO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.SO,
+            "CH" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ch,
+            "HO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ho,
+            "IM" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Im,
+            "ZS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Zs,
+            "SZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Sz,
+            "CI" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ci,
+            "CZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Cz,
+            "CIZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ciz,
+            "IZ" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Iz,
+            "WW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ww,
+            "AS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.As,
+            "WS" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Ws,
+            "OP" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Op,
+            "ST" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.St,
+            "KW" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.Kw,
+            "SO" => Onkologie.CodeSystems.MiiCsOnkoTherapieTyp.So,
             _ => null,
         };
 
@@ -5384,83 +5373,83 @@ public static class MiiCsOnkoOperationKomplikationExtensions
         {
             Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N => "N",
             Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U => "U",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ABD => "ABD",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ABS => "ABS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ASF => "ASF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ANI => "ANI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.AEP => "AEP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ALR => "ALR",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ANS => "ANS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.AEE => "AEE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.API => "API",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BIF => "BIF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BOG => "BOG",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BOE => "BOE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BSI => "BSI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.CHI => "CHI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DAI => "DAI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DPS => "DPS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DIC => "DIC",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DEP => "DEP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DLU => "DLU",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DSI => "DSI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ENF => "ENF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.GER => "GER",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HEM => "HEM",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HUR => "HUR",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HAE => "HAE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HFI => "HFI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HNK => "HNK",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HZI => "HZI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HRS => "HRS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HNA => "HNA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HOP => "HOP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HYB => "HYB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HYF => "HYF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.IFV => "IFV",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KAS => "KAS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KES => "KES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KIM => "KIM",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KRA => "KRA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KDS => "KDS",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LEV => "LEV",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LOE => "LOE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LYF => "LYF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LYE => "LYE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MES => "MES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MIL => "MIL",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MED => "MED",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MAT => "MAT",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MYI => "MYI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RNB => "RNB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.NAB => "NAB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.NIN => "NIN",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.OES => "OES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.OSM => "OSM",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAF => "PAF",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PIT => "PIT",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAB => "PAB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PPA => "PPA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAV => "PAV",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PER => "PER",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PLB => "PLB",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PEY => "PEY",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PLE => "PLE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PMN => "PMN",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PNT => "PNT",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PDA => "PDA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAE => "PAE",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RPA => "RPA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RIN => "RIN",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SKI => "SKI",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SES => "SES",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SFH => "SFH",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.STK => "STK",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TZP => "TZP",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TIA => "TIA",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TRZ => "TRZ",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.WUH => "WUH",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.WSS => "WSS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd => "ABD",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs => "ABS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf => "ASF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani => "ANI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep => "AEP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr => "ALR",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans => "ANS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee => "AEE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api => "API",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif => "BIF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog => "BOG",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe => "BOE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi => "BSI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi => "CHI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai => "DAI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps => "DPS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic => "DIC",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep => "DEP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu => "DLU",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi => "DSI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf => "ENF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger => "GER",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem => "HEM",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur => "HUR",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae => "HAE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi => "HFI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk => "HNK",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi => "HZI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs => "HRS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna => "HNA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop => "HOP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb => "HYB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf => "HYF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv => "IFV",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas => "KAS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes => "KES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim => "KIM",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra => "KRA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds => "KDS",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev => "LEV",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe => "LOE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf => "LYF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye => "LYE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes => "MES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil => "MIL",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med => "MED",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat => "MAT",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi => "MYI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb => "RNB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab => "NAB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin => "NIN",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes => "OES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm => "OSM",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf => "PAF",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit => "PIT",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab => "PAB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa => "PPA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav => "PAV",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per => "PER",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb => "PLB",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey => "PEY",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple => "PLE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn => "PMN",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt => "PNT",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda => "PDA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae => "PAE",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa => "RPA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin => "RIN",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski => "SKI",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses => "SES",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh => "SFH",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk => "STK",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp => "TZP",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia => "TIA",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz => "TRZ",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh => "WUH",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss => "WSS",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -5472,112 +5461,112 @@ public static class MiiCsOnkoOperationKomplikationExtensions
         {
             Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N => "nein",
             Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U => "unbekannt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ABD =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd =>
                 "Abszess in einem Drainagekanal",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ABS =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs =>
                 "Abszess, intraabdominaler oder intrathorakaler",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ASF => "Abszess, subfaszialer",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ANI => "Akute Niereninsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.AEP => "Alkoholentzugspsychose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ALR =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf => "Abszess, subfaszialer",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani => "Akute Niereninsuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep => "Alkoholentzugspsychose",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr =>
                 "Allergische Reaktion ohne Schocksymptomatik",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ANS => "Anaphylaktischer Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.AEE =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans => "Anaphylaktischer Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee =>
                 "Anastomoseninsuffizienz einer Enterostomie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.API => "Apoplektischer Insult",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BIF => "Biliäre Fistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BOG =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api => "Apoplektischer Insult",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif => "Biliäre Fistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog =>
                 "Blutung, obere gastrointestinale (z. B „Stressulkus“)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BOE =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe =>
                 "Bolusverlegung eines Endotubus",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BSI =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi =>
                 "Bronchusstumpfinsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.CHI => "Cholangitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DAI =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi => "Cholangitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai =>
                 "Darmanastomoseninsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DPS =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps =>
                 "Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DIC =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic =>
                 "Disseminierte intravasale Koagulopathie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DEP => "Drogenentzugspsychose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DLU =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep => "Drogenentzugspsychose",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu =>
                 "Druck- und Lagerungsschäden, z. B. Dekubitalulzera",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DSI =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi =>
                 "Duodenalstumpfinsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ENF => "Enterale Fistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.GER => "Gerinnungsstörung",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HEM => "Hämatemesis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HUR => "Hämaturie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HAE => "Hämorrhagischer Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HFI => "Harnfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HNK =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf => "Enterale Fistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger => "Gerinnungsstörung",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem => "Hämatemesis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur => "Hämaturie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae => "Hämorrhagischer Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi => "Harnfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk =>
                 "Hautnekrose im Operationsbereich",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HZI => "Herzinsuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HRS => "Herzrhythmusstörungen",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HNA => "Hirnnervenausfälle",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HOP =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi => "Herzinsuffizienz",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs => "Herzrhythmusstörungen",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna => "Hirnnervenausfälle",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop =>
                 "Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HYB => "Hyperbilirubinämie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HYF => "Hypopharynxfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.IFV =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb => "Hyperbilirubinämie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf => "Hypopharynxfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv =>
                 "Ileofemorale Venenthrombose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KAS => "Kardiogener Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KES =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas => "Kardiogener Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes =>
                 "Komplikationen einer Stomaanlage",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KIM =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim =>
                 "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KRA => "Krampfanfall",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KDS => "Kurzdarmsyndrom",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LEV => "Leberversagen",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LOE => "Lungenödem",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LYF => "Lymphfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LYE => "Lymphozele",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MES => "Magenentleerungsstörung",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MIL => "Mechanischer Ileus",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MED => "Mediastinitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MAT =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra => "Krampfanfall",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds => "Kurzdarmsyndrom",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev => "Leberversagen",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe => "Lungenödem",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf => "Lymphfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye => "Lymphozele",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes => "Magenentleerungsstörung",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil => "Mechanischer Ileus",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med => "Mediastinitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat =>
                 "Mesenterialarterien- oder -venenthrombose",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MYI => "Myokardinfarkt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RNB =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi => "Myokardinfarkt",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb =>
                 "Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.NAB =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab =>
                 "Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.NIN =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin =>
                 "Nahtinsuffizienz, anderweitig nicht erwähnt",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.OES => "Ösophagitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.OSM => "Osteitis, Osteomyelitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAF => "Pankreasfistel",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PIT => "Pankreatitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAB => "Peranale Blutung",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PPA => "Periphere Parese",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAV =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes => "Ösophagitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm => "Osteitis, Osteomyelitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf => "Pankreasfistel",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit => "Pankreatitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab => "Peranale Blutung",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa => "Periphere Parese",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav =>
                 "Peripherer arterieller Verschluss (Embolie, Thrombose)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PER => "Peritonitis",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PLB => "Platzbauch",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PEY => "Pleuraempyem",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PLE => "Pleuraerguss",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PMN => "Pneumonie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PNT => "Pneumothorax",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PDA =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per => "Peritonitis",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb => "Platzbauch",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey => "Pleuraempyem",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple => "Pleuraerguss",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn => "Pneumonie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt => "Pneumothorax",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda =>
                 "Protrahierte Darmatonie (paralytischer Ileus)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAE => "Pulmonalarterienembolie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RPA => "Rekurrensparese",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RIN =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae => "Pulmonalarterienembolie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa => "Rekurrensparese",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin =>
                 "Respiratorische Insuffizienz",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SKI =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski =>
                 "Septische Komplikation eines Implantates",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SES => "Septischer Schock",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SFH =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses => "Septischer Schock",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh =>
                 "Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.STK =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk =>
                 "Stomakomplikation (z. B. Blutung, Nekrose, Stenose)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TZP => "Thrombozytopenie",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TIA =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp => "Thrombozytopenie",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia =>
                 "TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TRZ => "Transfusionszwischenfall",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.WUH =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz => "Transfusionszwischenfall",
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh =>
                 "Wundhämatom (konservativ therapiert)",
-            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.WSS =>
+            Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss =>
                 "Wundheilungsstörung, subkutane",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -5593,83 +5582,83 @@ public static class MiiCsOnkoOperationKomplikationExtensions
         {
             "N" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.N,
             "U" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.U,
-            "ABD" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ABD,
-            "ABS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ABS,
-            "ASF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ASF,
-            "ANI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ANI,
-            "AEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.AEP,
-            "ALR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ALR,
-            "ANS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ANS,
-            "AEE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.AEE,
-            "API" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.API,
-            "BIF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BIF,
-            "BOG" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BOG,
-            "BOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BOE,
-            "BSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.BSI,
-            "CHI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.CHI,
-            "DAI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DAI,
-            "DPS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DPS,
-            "DIC" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DIC,
-            "DEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DEP,
-            "DLU" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DLU,
-            "DSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.DSI,
-            "ENF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.ENF,
-            "GER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.GER,
-            "HEM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HEM,
-            "HUR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HUR,
-            "HAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HAE,
-            "HFI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HFI,
-            "HNK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HNK,
-            "HZI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HZI,
-            "HRS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HRS,
-            "HNA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HNA,
-            "HOP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HOP,
-            "HYB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HYB,
-            "HYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.HYF,
-            "IFV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.IFV,
-            "KAS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KAS,
-            "KES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KES,
-            "KIM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KIM,
-            "KRA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KRA,
-            "KDS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.KDS,
-            "LEV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LEV,
-            "LOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LOE,
-            "LYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LYF,
-            "LYE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.LYE,
-            "MES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MES,
-            "MIL" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MIL,
-            "MED" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MED,
-            "MAT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MAT,
-            "MYI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.MYI,
-            "RNB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RNB,
-            "NAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.NAB,
-            "NIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.NIN,
-            "OES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.OES,
-            "OSM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.OSM,
-            "PAF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAF,
-            "PIT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PIT,
-            "PAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAB,
-            "PPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PPA,
-            "PAV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAV,
-            "PER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PER,
-            "PLB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PLB,
-            "PEY" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PEY,
-            "PLE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PLE,
-            "PMN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PMN,
-            "PNT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PNT,
-            "PDA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PDA,
-            "PAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.PAE,
-            "RPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RPA,
-            "RIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.RIN,
-            "SKI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SKI,
-            "SES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SES,
-            "SFH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.SFH,
-            "STK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.STK,
-            "TZP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TZP,
-            "TIA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TIA,
-            "TRZ" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.TRZ,
-            "WUH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.WUH,
-            "WSS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.WSS,
+            "ABD" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abd,
+            "ABS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Abs,
+            "ASF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Asf,
+            "ANI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ani,
+            "AEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aep,
+            "ALR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Alr,
+            "ANS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ans,
+            "AEE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Aee,
+            "API" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Api,
+            "BIF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bif,
+            "BOG" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bog,
+            "BOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Boe,
+            "BSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Bsi,
+            "CHI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Chi,
+            "DAI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dai,
+            "DPS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dps,
+            "DIC" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dic,
+            "DEP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dep,
+            "DLU" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dlu,
+            "DSI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Dsi,
+            "ENF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Enf,
+            "GER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ger,
+            "HEM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hem,
+            "HUR" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hur,
+            "HAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hae,
+            "HFI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hfi,
+            "HNK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hnk,
+            "HZI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hzi,
+            "HRS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hrs,
+            "HNA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hna,
+            "HOP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hop,
+            "HYB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyb,
+            "HYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Hyf,
+            "IFV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ifv,
+            "KAS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kas,
+            "KES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kes,
+            "KIM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kim,
+            "KRA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kra,
+            "KDS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Kds,
+            "LEV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lev,
+            "LOE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Loe,
+            "LYF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lyf,
+            "LYE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Lye,
+            "MES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mes,
+            "MIL" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mil,
+            "MED" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Med,
+            "MAT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Mat,
+            "MYI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Myi,
+            "RNB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rnb,
+            "NAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nab,
+            "NIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Nin,
+            "OES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Oes,
+            "OSM" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Osm,
+            "PAF" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Paf,
+            "PIT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pit,
+            "PAB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pab,
+            "PPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ppa,
+            "PAV" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pav,
+            "PER" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Per,
+            "PLB" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Plb,
+            "PEY" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pey,
+            "PLE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ple,
+            "PMN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pmn,
+            "PNT" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pnt,
+            "PDA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pda,
+            "PAE" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Pae,
+            "RPA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rpa,
+            "RIN" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Rin,
+            "SKI" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ski,
+            "SES" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Ses,
+            "SFH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Sfh,
+            "STK" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Stk,
+            "TZP" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tzp,
+            "TIA" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Tia,
+            "TRZ" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Trz,
+            "WUH" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wuh,
+            "WSS" => Onkologie.CodeSystems.MiiCsOnkoOperationKomplikation.Wss,
             _ => null,
         };
 
@@ -5701,9 +5690,9 @@ public static class MiiCsOnkoPrimaertumorDiagnosesicherungExtensions
             Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5 => "5",
             Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6 => "6",
             Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7 => "7",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_1 => "7.1",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_2 => "7.2",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_3 => "7.3",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71 => "7.1",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72 => "7.2",
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73 => "7.3",
             Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8 => "8",
             Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9 => "9",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
@@ -5726,11 +5715,11 @@ public static class MiiCsOnkoPrimaertumorDiagnosesicherungExtensions
                 "histologische Untersuchung einer Metastase",
             Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7 =>
                 "histologische Untersuchung eines Primärtumors",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_1 =>
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71 =>
                 "histologische Untersuchung eines Primärtumors",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_2 =>
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72 =>
                 "histologische Untersuchung einer Metastase",
-            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_3 =>
+            Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73 =>
                 "Histologie der Autopsie",
             Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8 =>
                 "Zytogenetisch und/oder molekularer Test",
@@ -5757,9 +5746,9 @@ public static class MiiCsOnkoPrimaertumorDiagnosesicherungExtensions
             "5" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._5,
             "6" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._6,
             "7" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7,
-            "7.1" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_1,
-            "7.2" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_2,
-            "7.3" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._7_3,
+            "7.1" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._71,
+            "7.2" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._72,
+            "7.3" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._73,
             "8" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._8,
             "9" => Onkologie.CodeSystems.MiiCsOnkoPrimaertumorDiagnosesicherung._9,
             _ => null,
@@ -6059,238 +6048,230 @@ public static class MiiCsOnkoSystemischeTherapieProtokolleExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ABVD => "ABVD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AC => "AC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ACO => "ACO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADORE => "ADORE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADR_IFO => "ADR-IFO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO => "AIO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO_04 => "AIO-04",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO_IRINOTECAN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Abvd => "ABVD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ac => "AC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aco => "ACO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Adore => "ADORE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AdrIfo => "ADR-IFO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aio => "AIO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aio04 => "AIO-04",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AioIrinotecan =>
                 "AIO-Irinotecan",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ARO => "ARO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AVD => "AVD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BCD => "BCD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BEACOPP_BASIS =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aro => "ARO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Avd => "AVD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bcd => "BCD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BeacoppBasis =>
                 "BEACOPP-basis",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BEACOPP_ESKALIERT =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BeacoppEskaliert =>
                 "BEACOPP-eskaliert",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BEAM => "BEAM",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BOLD => "BOLD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BP => "BP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BR => "BR",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BR_ECADD => "BrECADD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BU_CY => "BuCy",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAD => "CAD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAO => "CAO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAPE_OX => "CapeOx",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAP_SCHEMA => "Cap-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CARBO_TAX => "CarboTax",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CEV => "CEV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP => "CHOEP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP_14 => "CHOEP-14",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP_21 => "CHOEP-21",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP => "CHOP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP_14 => "CHOP-14",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP_21 => "CHOP-21",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CMF => "CMF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.COPP => "COPP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CV => "CV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DA => "DA",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DAC => "DAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DC_DOCE_CARBO =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Beam => "BEAM",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bold => "BOLD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bp => "BP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Br => "BR",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BrEcadd => "BrECADD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BuCy => "BuCy",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cad => "CAD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cao => "CAO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CapeOx => "CapeOx",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CapSchema => "Cap-Schema",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CarboTax => "CarboTax",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cev => "CEV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep => "CHOEP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep14 => "CHOEP-14",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep21 => "CHOEP-21",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop => "CHOP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop14 => "CHOP-14",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop21 => "CHOP-21",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cmf => "CMF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Copp => "COPP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cv => "CV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Da => "DA",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dac => "DAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DcDoceCarbo =>
                 "DC-Doce-Carbo",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DC_DOCE_CYCLO =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DcDoceCyclo =>
                 "DC-Doce-Cyclo",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DCB_H => "DCbH",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DE_VIC => "DeVIC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DEXA_BEAM => "Dexa-BEAM",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DHAP => "DHAP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DRC => "DRC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DVP => "DVP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC => "EC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC_D => "EC-D",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ECF => "ECF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC_P => "EC-P",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ELO_RD => "ELO-Rd",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EOX => "EOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EXTREME_MIT_CARBOPLATIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DcbH => "DCbH",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DeVic => "DeVIC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DexaBeam => "Dexa-BEAM",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dhap => "DHAP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Drc => "DRC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dvp => "DVP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ec => "EC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EcD => "EC-D",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ecf => "ECF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EcP => "EC-P",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EloRd => "ELO-Rd",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Eox => "EOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ExtremeMitCarboplatin =>
                 "EXTREME-mit-Carboplatin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EXTREME_MIT_CISPLATIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ExtremeMitCisplatin =>
                 "EXTREME-mit-Cisplatin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FAC => "FAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FC => "FC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FCR => "FCR",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FEC => "FEC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FEC_DOC => "FEC-Doc",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLAG_IDA => "FLAG-Ida",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLO => "FLO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLOT => "FLOT",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLU_CAM => "Flu-Cam",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFIRI => "FOLFIRI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFIRINOX => "Folfirinox",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOX4 => "FOLFOX4",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOX_6 => "FOLFOX-6",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOXIRI => "FOLFOXIRI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFAMI => "FUFAMI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFIRI => "FUFIRI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFOX => "FUFOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GC_B => "GC-B",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GDP_SCHEMA => "GDP-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GELOX => "GELOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_CARBO => "Gem-Carbo",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_CIS => "Gem-Cis",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_TREO => "GemTreo",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GOP => "GOP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HAM_CYTARABIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fac => "FAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fc => "FC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fcr => "FCR",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fec => "FEC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FecDoc => "FEC-Doc",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FlagIda => "FLAG-Ida",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Flo => "FLO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Flot => "FLOT",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FluCam => "Flu-Cam",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfiri => "FOLFIRI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfirinox => "Folfirinox",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfox4 => "FOLFOX4",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfox6 => "FOLFOX-6",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfoxiri => "FOLFOXIRI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufami => "FUFAMI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufiri => "FUFIRI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufox => "FUFOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GcB => "GC-B",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GdpSchema => "GDP-Schema",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Gelox => "GELOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemCarbo => "Gem-Carbo",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemCis => "Gem-Cis",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemTreo => "GemTreo",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Gop => "GOP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HamCytarabin =>
                 "HAM-Cytarabin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HD_PROTOKOLL =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HdProtokoll =>
                 "HD-Protokoll",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ICE => "ICE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IEV => "IEV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IMVP_16 => "IMVP-16",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IRD => "IRd",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KNOSPE => "Knospe",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KNOSPE_MODIFIZIERT =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ice => "ICE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Iev => "IEV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Imvp16 => "IMVP-16",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ird => "IRd",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Knospe => "Knospe",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KnospeModifiziert =>
                 "Knospe-modifiziert",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KRD => "KRD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.LV5_FU2 => "LV5FU2",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.LV5_FU2_MODIF =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Krd => "KRD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Lv5Fu2 => "LV5FU2",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Lv5Fu2Modif =>
                 "LV5FU2-modif",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAMAC => "MAMAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MATRIX => "MATRix",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAV => "MAV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAYO_PROTOKOLL =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mamac => "MAMAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Matrix => "MATRix",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mav => "MAV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MayoProtokoll =>
                 "Mayo-Protokoll",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.M_CAVI => "M-Cavi",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MPT => "MPT",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.M_VAC => "M-VAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PAC => "PAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PC => "PC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PC_MIT_BEVACIZUMAB =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MCavi => "M-Cavi",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mpt => "MPT",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MVac => "M-VAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pac => "PAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pc => "PC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PcMitBevacizumab =>
                 "PC-mit-Bevacizumab",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PC_OHNE_BEVACIZUMAB =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PcOhneBevacizumab =>
                 "PC-ohne-Bevacizumab",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PCV => "PCV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PE => "PE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEB => "PEB",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEG_DOX_C => "Peg-DoxC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEI => "PEI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.P_GEMOX => "P-GEMOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PLF => "PLF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PVAG_SCHEMA =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pcv => "PCV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pe => "PE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Peb => "PEB",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PegDoxC => "Peg-DoxC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pei => "PEI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PGemox => "P-GEMOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Plf => "PLF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PvagSchema =>
                 "PVAG-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PVBI => "PVBI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_BAC => "R-BAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_BENDAMUSTIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pvbi => "PVBI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RBac => "R-BAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RBendamustin =>
                 "R-Bendamustin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_CHOP => "R-CHOP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_DE_VIC => "R-DeVIC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_DHAP => "R-DHAP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RD_SCHEMA => "RD-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.REV_DEX => "RevDex",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_GEM_OX => "R-GemOx",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_HAD => "R-HAD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_ICE => "R-ICE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_MCP => "R-MCP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_MP => "R-MP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.S_HAI => "S-HAI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.S_HAM => "S-HAM",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SMILE => "SMILE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TAC => "TAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TCED => "TCED",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TCH => "TCH",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TIP => "TIP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TMZ => "TMZ",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TPF => "TPF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VCD => "VCD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VFD => "VFD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VIPD => "VIPD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VMP => "VMP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VRD => "VRD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VTD => "VTD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.XELOX => "XELOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.XP => "XP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RChop => "R-CHOP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RDeVic => "R-DeVIC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RDhap => "R-DHAP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RdSchema => "RD-Schema",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RevDex => "RevDex",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RGemOx => "R-GemOx",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RHad => "R-HAD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RIce => "R-ICE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RMcp => "R-MCP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RMp => "R-MP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SHai => "S-HAI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SHam => "S-HAM",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Smile => "SMILE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tac => "TAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tced => "TCED",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tch => "TCH",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tip => "TIP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tmz => "TMZ",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tpf => "TPF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vcd => "VCD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vfd => "VFD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vipd => "VIPD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vmp => "VMP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vrd => "VRD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vtd => "VTD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Xelox => "XELOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Xp => "XP",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_AEMYELOABLATIV_MAC => "Konditionierung-aemyeloablativ-MAC",
+                .KonditionierungAemyeloablativMac => "Konditionierung-aemyeloablativ-MAC",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_NICHT_MYELOABLATIV_NMA => "Konditionierung-nicht-myeloablativ-NMA",
+                .KonditionierungNichtMyeloablativNma => "Konditionierung-nicht-myeloablativ-NMA",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_REDUZIERTE_INTENSITAET_RIC =>
+                .KonditionierungReduzierteIntensitaetRic =>
                 "Konditionierung-reduzierte-Intensitaet-RIC",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_REDUZIERTE_TOXIZITAET_RTC =>
+                .KonditionierungReduzierteToxizitaetRtc =>
                 "Konditionierung-reduzierte-Toxizitaet-RTC",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .TACE_DOXORUBICIN_MITOMYCIN => "TACE-Doxorubicin-Mitomycin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TACE_DOXORUBICIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TaceDoxorubicinMitomycin =>
+                "TACE-Doxorubicin-Mitomycin",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TaceDoxorubicin =>
                 "TACE-Doxorubicin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TACE => "TACE",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .HIPEC_CISPLATIN_MITOMYCIN => "HIPEC-Cisplatin-Mitomycin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HIPEC_MITOMYCIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tace => "TACE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HipecCisplatinMitomycin =>
+                "HIPEC-Cisplatin-Mitomycin",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HipecMitomycin =>
                 "HIPEC-Mitomycin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HIPEC => "HIPEC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HITOC => "HITOC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Hipec => "HIPEC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Hitoc => "HITOC",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PIPAC_CISPLATIN_DOXORUBICIN => "PIPAC-Cisplatin-Doxorubicin",
+                .PipacCisplatinDoxorubicin => "PIPAC-Cisplatin-Doxorubicin",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PipacCisplatinPaclitaxel =>
+                "PIPAC-Cisplatin-Paclitaxel",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pipac => "PIPAC",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PIPAC_CISPLATIN_PACLITAXEL => "PIPAC-Cisplatin-Paclitaxel",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PIPAC => "PIPAC",
+                .InstillationHarnblaseMitomycin => "Instillation-Harnblase-Mitomycin",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_MITOMYCIN => "Instillation-Harnblase-Mitomycin",
+                .InstillationHarnblaseDoxorubicin => "Instillation-Harnblase-Doxorubicin",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_DOXORUBICIN => "Instillation-Harnblase-Doxorubicin",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_CHEMOTHERAPEUTIKUM =>
+                .InstillationHarnblaseChemotherapeutikum =>
                 "Instillation-Harnblase-Chemotherapeutikum",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.InstillationHarnblaseBcg =>
+                "Instillation-Harnblase-BCG",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_BCG => "Instillation-Harnblase-BCG",
+                .InstillationIntrathekalTripel => "Instillation-Intrathekal-Tripel",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_INTRATHEKAL_TRIPEL => "Instillation-Intrathekal-Tripel",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_INTRATHEKAL_QUADRUPEL => "Instillation-Intrathekal-Quadrupel",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.INSTILLATION_INTRATHEKAL =>
+                .InstillationIntrathekalQuadrupel => "Instillation-Intrathekal-Quadrupel",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.InstillationIntrathekal =>
                 "Instillation-intrathekal",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PUVA_SYSTEMISCH_ORAL =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PuvaSystemischOral =>
                 "PUVA-systemisch-oral",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BADE_PUVA_TOPISCH =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BadePuvaTopisch =>
                 "Bade-PUVA-topisch",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADERLASS => "Aderlass",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.LEUKAPHERESE =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aderlass => "Aderlass",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Leukapherese =>
                 "Leukapherese",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PLASMAPHERESE =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Plasmapherese =>
                 "Plasmapherese",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TTFIELDS => "TTFields",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAR_T_ZELLTHERAPIE =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ttfields => "TTFields",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CarTZelltherapie =>
                 "CAR-T-Zelltherapie",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -6301,239 +6282,230 @@ public static class MiiCsOnkoSystemischeTherapieProtokolleExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ABVD => "ABVD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AC => "AC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ACO => "ACO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADORE => "ADORE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADR_IFO => "ADR-IFO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO => "AIO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO_04 => "AIO-04",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO_IRINOTECAN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Abvd => "ABVD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ac => "AC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aco => "ACO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Adore => "ADORE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AdrIfo => "ADR-IFO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aio => "AIO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aio04 => "AIO-04",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AioIrinotecan =>
                 "AIO-Irinotecan",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ARO => "ARO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AVD => "AVD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BCD => "BCD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BEACOPP_BASIS =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aro => "ARO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Avd => "AVD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bcd => "BCD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BeacoppBasis =>
                 "BEACOPP basis",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BEACOPP_ESKALIERT =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BeacoppEskaliert =>
                 "BEACOPP eskaliert",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BEAM => "BEAM",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BOLD => "BOLD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BP => "BP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BR => "BR",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BR_ECADD => "BrECADD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BU_CY => "BuCy",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAD => "CAD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAO => "CAO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAPE_OX => "CapeOx",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAP_SCHEMA => "Cap-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CARBO_TAX => "CarboTax",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CEV => "CEV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP => "CHOEP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP_14 => "CHOEP-14",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP_21 => "CHOEP-21",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP => "CHOP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP_14 => "CHOP-14",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP_21 => "CHOP-21",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CMF => "CMF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.COPP => "COPP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CV => "CV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DA => "DA",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DAC => "DAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DC_DOCE_CARBO =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Beam => "BEAM",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bold => "BOLD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bp => "BP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Br => "BR",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BrEcadd => "BrECADD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BuCy => "BuCy",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cad => "CAD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cao => "CAO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CapeOx => "CapeOx",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CapSchema => "Cap-Schema",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CarboTax => "CarboTax",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cev => "CEV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep => "CHOEP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep14 => "CHOEP-14",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep21 => "CHOEP-21",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop => "CHOP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop14 => "CHOP-14",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop21 => "CHOP-21",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cmf => "CMF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Copp => "COPP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cv => "CV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Da => "DA",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dac => "DAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DcDoceCarbo =>
                 "DC (Doce/Carbo)",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DC_DOCE_CYCLO =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DcDoceCyclo =>
                 "DC (Doce/Cyclo)",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DCB_H => "DCbH",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DE_VIC => "DeVIC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DEXA_BEAM => "Dexa-BEAM",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DHAP => "DHAP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DRC => "DRC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DVP => "DVP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC => "EC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC_D => "EC-D",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ECF => "ECF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC_P => "EC-P",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ELO_RD => "ELO-Rd",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EOX => "EOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EXTREME_MIT_CARBOPLATIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DcbH => "DCbH",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DeVic => "DeVIC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DexaBeam => "Dexa-BEAM",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dhap => "DHAP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Drc => "DRC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dvp => "DVP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ec => "EC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EcD => "EC-D",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ecf => "ECF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EcP => "EC-P",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EloRd => "ELO-Rd",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Eox => "EOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ExtremeMitCarboplatin =>
                 "EXTREME mit Carboplatin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EXTREME_MIT_CISPLATIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ExtremeMitCisplatin =>
                 "EXTREME mit Cisplatin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FAC => "FAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FC => "FC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FCR => "FCR",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FEC => "FEC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FEC_DOC => "FEC-Doc",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLAG_IDA => "FLAG-Ida",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLO => "FLO",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLOT => "FLOT",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLU_CAM => "Flu-Cam",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFIRI => "FOLFIRI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFIRINOX => "Folfirinox",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOX4 => "FOLFOX4",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOX_6 => "FOLFOX-6",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOXIRI => "FOLFOXIRI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFAMI => "FUFAMI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFIRI => "FUFIRI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFOX => "FUFOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GC_B => "GC-B",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GDP_SCHEMA => "GDP-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GELOX => "GELOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_CARBO => "Gem-Carbo",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_CIS => "Gem-Cis",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_TREO => "GemTreo",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GOP => "GOP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HAM_CYTARABIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fac => "FAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fc => "FC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fcr => "FCR",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fec => "FEC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FecDoc => "FEC-Doc",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FlagIda => "FLAG-Ida",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Flo => "FLO",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Flot => "FLOT",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FluCam => "Flu-Cam",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfiri => "FOLFIRI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfirinox => "Folfirinox",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfox4 => "FOLFOX4",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfox6 => "FOLFOX-6",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfoxiri => "FOLFOXIRI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufami => "FUFAMI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufiri => "FUFIRI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufox => "FUFOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GcB => "GC-B",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GdpSchema => "GDP-Schema",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Gelox => "GELOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemCarbo => "Gem-Carbo",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemCis => "Gem-Cis",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemTreo => "GemTreo",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Gop => "GOP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HamCytarabin =>
                 "HAM-Cytarabin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HD_PROTOKOLL =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HdProtokoll =>
                 "HD-Protokoll",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ICE => "ICE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IEV => "IEV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IMVP_16 => "IMVP-16",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IRD => "IRd",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KNOSPE => "Knospe",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KNOSPE_MODIFIZIERT =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ice => "ICE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Iev => "IEV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Imvp16 => "IMVP-16",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ird => "IRd",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Knospe => "Knospe",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KnospeModifiziert =>
                 "Knospe modifiziert",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KRD => "KRD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.LV5_FU2 => "LV5FU2",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.LV5_FU2_MODIF =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Krd => "KRD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Lv5Fu2 => "LV5FU2",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Lv5Fu2Modif =>
                 "LV5FU2 modif.",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAMAC => "MAMAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MATRIX => "MATRix",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAV => "MAV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAYO_PROTOKOLL =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mamac => "MAMAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Matrix => "MATRix",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mav => "MAV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MayoProtokoll =>
                 "Mayo-Protokoll",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.M_CAVI => "M-Cavi",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MPT => "MPT",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.M_VAC => "M-VAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PAC => "PAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PC => "PC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PC_MIT_BEVACIZUMAB =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MCavi => "M-Cavi",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mpt => "MPT",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MVac => "M-VAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pac => "PAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pc => "PC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PcMitBevacizumab =>
                 "PC mit Bevacizumab",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PC_OHNE_BEVACIZUMAB =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PcOhneBevacizumab =>
                 "PC ohne Bevacizumab",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PCV => "PCV",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PE => "PE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEB => "PEB",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEG_DOX_C => "Peg. DoxC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEI => "PEI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.P_GEMOX => "P-GEMOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PLF => "PLF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PVAG_SCHEMA =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pcv => "PCV",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pe => "PE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Peb => "PEB",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PegDoxC => "Peg. DoxC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pei => "PEI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PGemox => "P-GEMOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Plf => "PLF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PvagSchema =>
                 "PVAG-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PVBI => "PVBI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_BAC => "R-BAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_BENDAMUSTIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pvbi => "PVBI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RBac => "R-BAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RBendamustin =>
                 "R-Bendamustin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_CHOP => "R-CHOP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_DE_VIC => "R-DeVIC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_DHAP => "R-DHAP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RD_SCHEMA => "RD-Schema",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.REV_DEX => "Rev/Dex",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_GEM_OX => "R-GemOx",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_HAD => "R-HAD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_ICE => "R-ICE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_MCP => "R-MCP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_MP => "R-MP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.S_HAI => "S-HAI",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.S_HAM => "S-HAM",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SMILE => "SMILE",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TAC => "TAC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TCED => "TCED",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TCH => "TCH",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TIP => "TIP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TMZ => "TMZ",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TPF => "TPF",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VCD => "VCD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VFD => "VFD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VIPD => "VIPD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VMP => "VMP",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VRD => "VRD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VTD => "VTD",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.XELOX => "XELOX",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.XP => "XP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RChop => "R-CHOP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RDeVic => "R-DeVIC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RDhap => "R-DHAP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RdSchema => "RD-Schema",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RevDex => "Rev/Dex",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RGemOx => "R-GemOx",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RHad => "R-HAD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RIce => "R-ICE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RMcp => "R-MCP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RMp => "R-MP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SHai => "S-HAI",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SHam => "S-HAM",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Smile => "SMILE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tac => "TAC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tced => "TCED",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tch => "TCH",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tip => "TIP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tmz => "TMZ",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tpf => "TPF",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vcd => "VCD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vfd => "VFD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vipd => "VIPD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vmp => "VMP",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vrd => "VRD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vtd => "VTD",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Xelox => "XELOX",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Xp => "XP",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_AEMYELOABLATIV_MAC => "Konditionierung, ämyeloablativ (MAC)",
+                .KonditionierungAemyeloablativMac => "Konditionierung, ämyeloablativ (MAC)",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_NICHT_MYELOABLATIV_NMA =>
-                "Konditionierung, nicht myeloablativ (NMA)",
+                .KonditionierungNichtMyeloablativNma => "Konditionierung, nicht myeloablativ (NMA)",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_REDUZIERTE_INTENSITAET_RIC =>
+                .KonditionierungReduzierteIntensitaetRic =>
                 "Konditionierung, reduzierte Intensität (RIC)",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_REDUZIERTE_TOXIZITAET_RTC =>
+                .KonditionierungReduzierteToxizitaetRtc =>
                 "Konditionierung, reduzierte Toxizität (RTC)",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .TACE_DOXORUBICIN_MITOMYCIN => "TACE Doxorubicin-Mitomycin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TACE_DOXORUBICIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TaceDoxorubicinMitomycin =>
+                "TACE Doxorubicin-Mitomycin",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TaceDoxorubicin =>
                 "TACE Doxorubicin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TACE => "TACE",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .HIPEC_CISPLATIN_MITOMYCIN => "HIPEC Cisplatin-Mitomycin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HIPEC_MITOMYCIN =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tace => "TACE",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HipecCisplatinMitomycin =>
+                "HIPEC Cisplatin-Mitomycin",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HipecMitomycin =>
                 "HIPEC Mitomycin",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HIPEC => "HIPEC",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HITOC => "HITOC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Hipec => "HIPEC",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Hitoc => "HITOC",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PIPAC_CISPLATIN_DOXORUBICIN => "PIPAC Cisplatin-Doxorubicin",
+                .PipacCisplatinDoxorubicin => "PIPAC Cisplatin-Doxorubicin",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PipacCisplatinPaclitaxel =>
+                "PIPAC Cisplatin-Paclitaxel",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pipac => "PIPAC",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PIPAC_CISPLATIN_PACLITAXEL => "PIPAC Cisplatin-Paclitaxel",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PIPAC => "PIPAC",
+                .InstillationHarnblaseMitomycin => "Instillation Harnblase Mitomycin",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_MITOMYCIN => "Instillation Harnblase Mitomycin",
+                .InstillationHarnblaseDoxorubicin => "Instillation Harnblase Doxorubicin",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_DOXORUBICIN => "Instillation Harnblase Doxorubicin",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_CHEMOTHERAPEUTIKUM =>
+                .InstillationHarnblaseChemotherapeutikum =>
                 "Instillation Harnblase Chemotherapeutikum",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.InstillationHarnblaseBcg =>
+                "Instillation Harnblase (BCG)",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_BCG => "Instillation Harnblase (BCG)",
+                .InstillationIntrathekalTripel => "Instillation Intrathekal Tripel",
             Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_INTRATHEKAL_TRIPEL => "Instillation Intrathekal Tripel",
-            Onkologie
-                .CodeSystems
-                .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_INTRATHEKAL_QUADRUPEL => "Instillation Intrathekal Quadrupel",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.INSTILLATION_INTRATHEKAL =>
+                .InstillationIntrathekalQuadrupel => "Instillation Intrathekal Quadrupel",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.InstillationIntrathekal =>
                 "Instillation intrathekal",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PUVA_SYSTEMISCH_ORAL =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PuvaSystemischOral =>
                 "PUVA systemisch oral",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BADE_PUVA_TOPISCH =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BadePuvaTopisch =>
                 "(Bade-) PUVA (topisch)",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADERLASS => "Aderlass",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.LEUKAPHERESE =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aderlass => "Aderlass",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Leukapherese =>
                 "Leukapherese",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PLASMAPHERESE =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Plasmapherese =>
                 "Plasmapherese",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TTFIELDS => "TTFields",
-            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAR_T_ZELLTHERAPIE =>
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ttfields => "TTFields",
+            Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CarTZelltherapie =>
                 "CAR-T-Zelltherapie",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -6550,284 +6522,284 @@ public static class MiiCsOnkoSystemischeTherapieProtokolleExtensions
     ) =>
         code switch
         {
-            "ABVD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ABVD,
-            "AC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AC,
-            "ACO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ACO,
-            "ADORE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADORE,
-            "ADR-IFO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADR_IFO,
-            "AIO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO,
-            "AIO-04" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AIO_04,
+            "ABVD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Abvd,
+            "AC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ac,
+            "ACO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aco,
+            "ADORE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Adore,
+            "ADR-IFO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AdrIfo,
+            "AIO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aio,
+            "AIO-04" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aio04,
             "AIO-Irinotecan" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .AIO_IRINOTECAN,
-            "ARO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ARO,
-            "AVD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.AVD,
-            "BCD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BCD,
+                .AioIrinotecan,
+            "ARO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aro,
+            "AVD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Avd,
+            "BCD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bcd,
             "BEACOPP-basis" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .BEACOPP_BASIS,
+                .BeacoppBasis,
             "BEACOPP-eskaliert" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .BEACOPP_ESKALIERT,
-            "BEAM" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BEAM,
-            "BOLD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BOLD,
-            "BP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BP,
-            "BR" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BR,
-            "BrECADD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BR_ECADD,
-            "BuCy" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BU_CY,
-            "CAD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAD,
-            "CAO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAO,
-            "CapeOx" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAPE_OX,
-            "Cap-Schema" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CAP_SCHEMA,
-            "CarboTax" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CARBO_TAX,
-            "CEV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CEV,
-            "CHOEP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP,
-            "CHOEP-14" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP_14,
-            "CHOEP-21" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOEP_21,
-            "CHOP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP,
-            "CHOP-14" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP_14,
-            "CHOP-21" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CHOP_21,
-            "CMF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CMF,
-            "COPP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.COPP,
-            "CV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CV,
-            "DA" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DA,
-            "DAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DAC,
+                .BeacoppEskaliert,
+            "BEAM" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Beam,
+            "BOLD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bold,
+            "BP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Bp,
+            "BR" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Br,
+            "BrECADD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BrEcadd,
+            "BuCy" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.BuCy,
+            "CAD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cad,
+            "CAO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cao,
+            "CapeOx" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CapeOx,
+            "Cap-Schema" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CapSchema,
+            "CarboTax" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.CarboTax,
+            "CEV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cev,
+            "CHOEP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep,
+            "CHOEP-14" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep14,
+            "CHOEP-21" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Choep21,
+            "CHOP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop,
+            "CHOP-14" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop14,
+            "CHOP-21" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Chop21,
+            "CMF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cmf,
+            "COPP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Copp,
+            "CV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Cv,
+            "DA" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Da,
+            "DAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dac,
             "DC-Doce-Carbo" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .DC_DOCE_CARBO,
+                .DcDoceCarbo,
             "DC-Doce-Cyclo" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .DC_DOCE_CYCLO,
-            "DCbH" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DCB_H,
-            "DeVIC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DE_VIC,
-            "Dexa-BEAM" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DEXA_BEAM,
-            "DHAP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DHAP,
-            "DRC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DRC,
-            "DVP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DVP,
-            "EC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC,
-            "EC-D" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC_D,
-            "ECF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ECF,
-            "EC-P" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EC_P,
-            "ELO-Rd" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ELO_RD,
-            "EOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EOX,
+                .DcDoceCyclo,
+            "DCbH" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DcbH,
+            "DeVIC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DeVic,
+            "Dexa-BEAM" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.DexaBeam,
+            "DHAP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dhap,
+            "DRC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Drc,
+            "DVP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Dvp,
+            "EC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ec,
+            "EC-D" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EcD,
+            "ECF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ecf,
+            "EC-P" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EcP,
+            "ELO-Rd" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.EloRd,
+            "EOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Eox,
             "EXTREME-mit-Carboplatin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .EXTREME_MIT_CARBOPLATIN,
+                .ExtremeMitCarboplatin,
             "EXTREME-mit-Cisplatin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .EXTREME_MIT_CISPLATIN,
-            "FAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FAC,
-            "FC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FC,
-            "FCR" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FCR,
-            "FEC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FEC,
-            "FEC-Doc" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FEC_DOC,
-            "FLAG-Ida" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLAG_IDA,
-            "FLO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLO,
-            "FLOT" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLOT,
-            "Flu-Cam" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FLU_CAM,
-            "FOLFIRI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFIRI,
-            "Folfirinox" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFIRINOX,
-            "FOLFOX4" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOX4,
-            "FOLFOX-6" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOX_6,
-            "FOLFOXIRI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FOLFOXIRI,
-            "FUFAMI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFAMI,
-            "FUFIRI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFIRI,
-            "FUFOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FUFOX,
-            "GC-B" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GC_B,
-            "GDP-Schema" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GDP_SCHEMA,
-            "GELOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GELOX,
-            "Gem-Carbo" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_CARBO,
-            "Gem-Cis" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_CIS,
-            "GemTreo" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GEM_TREO,
-            "GOP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GOP,
+                .ExtremeMitCisplatin,
+            "FAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fac,
+            "FC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fc,
+            "FCR" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fcr,
+            "FEC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fec,
+            "FEC-Doc" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FecDoc,
+            "FLAG-Ida" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FlagIda,
+            "FLO" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Flo,
+            "FLOT" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Flot,
+            "Flu-Cam" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.FluCam,
+            "FOLFIRI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfiri,
+            "Folfirinox" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfirinox,
+            "FOLFOX4" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfox4,
+            "FOLFOX-6" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfox6,
+            "FOLFOXIRI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Folfoxiri,
+            "FUFAMI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufami,
+            "FUFIRI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufiri,
+            "FUFOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Fufox,
+            "GC-B" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GcB,
+            "GDP-Schema" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GdpSchema,
+            "GELOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Gelox,
+            "Gem-Carbo" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemCarbo,
+            "Gem-Cis" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemCis,
+            "GemTreo" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.GemTreo,
+            "GOP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Gop,
             "HAM-Cytarabin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .HAM_CYTARABIN,
+                .HamCytarabin,
             "HD-Protokoll" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .HD_PROTOKOLL,
-            "ICE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ICE,
-            "IEV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IEV,
-            "IMVP-16" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IMVP_16,
-            "IRd" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.IRD,
-            "Knospe" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KNOSPE,
+                .HdProtokoll,
+            "ICE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ice,
+            "IEV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Iev,
+            "IMVP-16" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Imvp16,
+            "IRd" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ird,
+            "Knospe" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Knospe,
             "Knospe-modifiziert" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KNOSPE_MODIFIZIERT,
-            "KRD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.KRD,
-            "LV5FU2" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.LV5_FU2,
+                .KnospeModifiziert,
+            "KRD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Krd,
+            "LV5FU2" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Lv5Fu2,
             "LV5FU2-modif" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .LV5_FU2_MODIF,
-            "MAMAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAMAC,
-            "MATRix" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MATRIX,
-            "MAV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MAV,
+                .Lv5Fu2Modif,
+            "MAMAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mamac,
+            "MATRix" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Matrix,
+            "MAV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mav,
             "Mayo-Protokoll" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .MAYO_PROTOKOLL,
-            "M-Cavi" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.M_CAVI,
-            "MPT" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MPT,
-            "M-VAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.M_VAC,
-            "PAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PAC,
-            "PC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PC,
+                .MayoProtokoll,
+            "M-Cavi" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MCavi,
+            "MPT" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Mpt,
+            "M-VAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.MVac,
+            "PAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pac,
+            "PC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pc,
             "PC-mit-Bevacizumab" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PC_MIT_BEVACIZUMAB,
+                .PcMitBevacizumab,
             "PC-ohne-Bevacizumab" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PC_OHNE_BEVACIZUMAB,
-            "PCV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PCV,
-            "PE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PE,
-            "PEB" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEB,
-            "Peg-DoxC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEG_DOX_C,
-            "PEI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PEI,
-            "P-GEMOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.P_GEMOX,
-            "PLF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PLF,
+                .PcOhneBevacizumab,
+            "PCV" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pcv,
+            "PE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pe,
+            "PEB" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Peb,
+            "Peg-DoxC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PegDoxC,
+            "PEI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pei,
+            "P-GEMOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PGemox,
+            "PLF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Plf,
             "PVAG-Schema" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PVAG_SCHEMA,
-            "PVBI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PVBI,
-            "R-BAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_BAC,
+                .PvagSchema,
+            "PVBI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pvbi,
+            "R-BAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RBac,
             "R-Bendamustin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .R_BENDAMUSTIN,
-            "R-CHOP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_CHOP,
-            "R-DeVIC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_DE_VIC,
-            "R-DHAP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_DHAP,
-            "RD-Schema" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RD_SCHEMA,
-            "RevDex" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.REV_DEX,
-            "R-GemOx" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_GEM_OX,
-            "R-HAD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_HAD,
-            "R-ICE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_ICE,
-            "R-MCP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_MCP,
-            "R-MP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.R_MP,
-            "S-HAI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.S_HAI,
-            "S-HAM" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.S_HAM,
-            "SMILE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SMILE,
-            "TAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TAC,
-            "TCED" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TCED,
-            "TCH" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TCH,
-            "TIP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TIP,
-            "TMZ" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TMZ,
-            "TPF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TPF,
-            "VCD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VCD,
-            "VFD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VFD,
-            "VIPD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VIPD,
-            "VMP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VMP,
-            "VRD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VRD,
-            "VTD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.VTD,
-            "XELOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.XELOX,
-            "XP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.XP,
+                .RBendamustin,
+            "R-CHOP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RChop,
+            "R-DeVIC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RDeVic,
+            "R-DHAP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RDhap,
+            "RD-Schema" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RdSchema,
+            "RevDex" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RevDex,
+            "R-GemOx" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RGemOx,
+            "R-HAD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RHad,
+            "R-ICE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RIce,
+            "R-MCP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RMcp,
+            "R-MP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.RMp,
+            "S-HAI" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SHai,
+            "S-HAM" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.SHam,
+            "SMILE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Smile,
+            "TAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tac,
+            "TCED" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tced,
+            "TCH" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tch,
+            "TIP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tip,
+            "TMZ" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tmz,
+            "TPF" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tpf,
+            "VCD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vcd,
+            "VFD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vfd,
+            "VIPD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vipd,
+            "VMP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vmp,
+            "VRD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vrd,
+            "VTD" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Vtd,
+            "XELOX" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Xelox,
+            "XP" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Xp,
             "Konditionierung-aemyeloablativ-MAC" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_AEMYELOABLATIV_MAC,
+                .KonditionierungAemyeloablativMac,
             "Konditionierung-nicht-myeloablativ-NMA" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_NICHT_MYELOABLATIV_NMA,
+                .KonditionierungNichtMyeloablativNma,
             "Konditionierung-reduzierte-Intensitaet-RIC" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_REDUZIERTE_INTENSITAET_RIC,
+                .KonditionierungReduzierteIntensitaetRic,
             "Konditionierung-reduzierte-Toxizitaet-RTC" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .KONDITIONIERUNG_REDUZIERTE_TOXIZITAET_RTC,
+                .KonditionierungReduzierteToxizitaetRtc,
             "TACE-Doxorubicin-Mitomycin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .TACE_DOXORUBICIN_MITOMYCIN,
+                .TaceDoxorubicinMitomycin,
             "TACE-Doxorubicin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .TACE_DOXORUBICIN,
-            "TACE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TACE,
+                .TaceDoxorubicin,
+            "TACE" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Tace,
             "HIPEC-Cisplatin-Mitomycin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .HIPEC_CISPLATIN_MITOMYCIN,
+                .HipecCisplatinMitomycin,
             "HIPEC-Mitomycin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .HIPEC_MITOMYCIN,
-            "HIPEC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HIPEC,
-            "HITOC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.HITOC,
+                .HipecMitomycin,
+            "HIPEC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Hipec,
+            "HITOC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Hitoc,
             "PIPAC-Cisplatin-Doxorubicin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PIPAC_CISPLATIN_DOXORUBICIN,
+                .PipacCisplatinDoxorubicin,
             "PIPAC-Cisplatin-Paclitaxel" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PIPAC_CISPLATIN_PACLITAXEL,
-            "PIPAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.PIPAC,
+                .PipacCisplatinPaclitaxel,
+            "PIPAC" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Pipac,
             "Instillation-Harnblase-Mitomycin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_MITOMYCIN,
+                .InstillationHarnblaseMitomycin,
             "Instillation-Harnblase-Doxorubicin" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_DOXORUBICIN,
+                .InstillationHarnblaseDoxorubicin,
             "Instillation-Harnblase-Chemotherapeutikum" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_CHEMOTHERAPEUTIKUM,
+                .InstillationHarnblaseChemotherapeutikum,
             "Instillation-Harnblase-BCG" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_HARNBLASE_BCG,
+                .InstillationHarnblaseBcg,
             "Instillation-Intrathekal-Tripel" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_INTRATHEKAL_TRIPEL,
+                .InstillationIntrathekalTripel,
             "Instillation-Intrathekal-Quadrupel" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_INTRATHEKAL_QUADRUPEL,
+                .InstillationIntrathekalQuadrupel,
             "Instillation-intrathekal" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .INSTILLATION_INTRATHEKAL,
+                .InstillationIntrathekal,
             "PUVA-systemisch-oral" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PUVA_SYSTEMISCH_ORAL,
+                .PuvaSystemischOral,
             "Bade-PUVA-topisch" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .BADE_PUVA_TOPISCH,
-            "Aderlass" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.ADERLASS,
+                .BadePuvaTopisch,
+            "Aderlass" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Aderlass,
             "Leukapherese" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .LEUKAPHERESE,
+                .Leukapherese,
             "Plasmapherese" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .PLASMAPHERESE,
-            "TTFields" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.TTFIELDS,
+                .Plasmapherese,
+            "TTFields" => Onkologie.CodeSystems.MiiCsOnkoSystemischeTherapieProtokolle.Ttfields,
             "CAR-T-Zelltherapie" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoSystemischeTherapieProtokolle
-                .CAR_T_ZELLTHERAPIE,
+                .CarTZelltherapie,
             _ => null,
         };
 
@@ -6914,10 +6886,10 @@ public static class MiiCsOnkoMammaRezeptorstatusLeitlinieExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.POSITIV => "positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GERING_POSITIV =>
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv => "positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GeringPositiv =>
                 "gering-positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.NEGATIV => "negativ",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ => "negativ",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -6927,10 +6899,10 @@ public static class MiiCsOnkoMammaRezeptorstatusLeitlinieExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.POSITIV => "positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GERING_POSITIV =>
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv => "positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.GeringPositiv =>
                 "gering positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.NEGATIV => "negativ",
+            Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ => "negativ",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -6946,12 +6918,12 @@ public static class MiiCsOnkoMammaRezeptorstatusLeitlinieExtensions
     ) =>
         code switch
         {
-            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.POSITIV,
+            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Positiv,
             "gering-positiv" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoMammaRezeptorstatusLeitlinie
-                .GERING_POSITIV,
-            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.NEGATIV,
+                .GeringPositiv,
+            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaRezeptorstatusLeitlinie.Negativ,
             _ => null,
         };
 
@@ -7039,156 +7011,156 @@ public static class MiiCsOnkoStrahlentherapieZielgebiet2014Extensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_ => "1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_1_ => "1.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_2_ => "1.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_3_ => "1.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_ => "2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2__POS => "2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2__NEG => "2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1_ => "2.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1__POS => "2.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1__NEG => "2.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2_ => "2.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2__POS => "2.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2__NEG => "2.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3_ => "2.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3__POS => "2.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3__NEG => "2.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4_ => "2.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4__POS => "2.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4__NEG => "2.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5_ => "2.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5__POS => "2.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5__NEG => "2.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6_ => "2.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6__POS => "2.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6__NEG => "2.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7_ => "2.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7__POS => "2.7.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7__NEG => "2.7.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8_ => "2.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8__POS => "2.8.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8__NEG => "2.8.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_9_ => "2.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_ => "3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3__POS => "3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3__NEG => "3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1_ => "3.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1__POS => "3.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1__NEG => "3.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2_ => "3.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2__POS => "3.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2__NEG => "3.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3_ => "3.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3__POS => "3.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3__NEG => "3.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4_ => "3.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4__POS => "3.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4__NEG => "3.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5_ => "3.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5__POS => "3.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5__NEG => "3.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6_ => "3.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6__POS => "3.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6__NEG => "3.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_7_ => "3.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_ => "4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4__POS => "4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4__NEG => "4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1_ => "4.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1__POS => "4.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1__NEG => "4.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2_ => "4.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2__POS => "4.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2__NEG => "4.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3_ => "4.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3__POS => "4.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3__NEG => "4.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4_ => "4.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4__POS => "4.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4__NEG => "4.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5_ => "4.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5__POS => "4.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5__NEG => "4.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6_ => "4.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6__POS => "4.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6__NEG => "4.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_7_ => "4.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8_ => "4.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8__POS => "4.8.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8__NEG => "4.8.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9_ => "4.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9__POS => "4.9.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9__NEG => "4.9.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_ => "5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5__POS => "5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5__NEG => "5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1_ => "5.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1__POS => "5.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1__NEG => "5.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2_ => "5.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2__NEG => "5.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2__POS => "5.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3_ => "5.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3__NEG => "5.3.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3__POS => "5.3.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4_ => "5.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4__POS => "5.4.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4__NEG => "5.4.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5_ => "5.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5__POS => "5.5.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5__NEG => "5.5.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6_ => "5.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6__POS => "5.6.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6__NEG => "5.6.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_ => "5.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7__POS => "5.7.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7__NEG => "5.7.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1_ => "5.7.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1__POS => "5.7.1.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1__NEG => "5.7.1.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2_ => "5.7.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2__POS => "5.7.2.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2__NEG => "5.7.2.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8_ => "5.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8__NEG => "5.8.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8__POS => "5.8.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9_ => "5.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9__NEG => "5.9.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9__POS => "5.9.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10_ => "5.10.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10__POS => "5.10.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10__NEG => "5.10.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11_ => "5.11.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11__POS => "5.11.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11__NEG => "5.11.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_12_ => "5.12.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_ => "6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_1_ => "6.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_2_ => "6.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_3_ => "6.3.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_4_ => "6.4.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_5_ => "6.5.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_6_ => "6.6.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_7_ => "6.7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_8_ => "6.8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_9_ => "6.9.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_10_ => "6.10.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_11_ => "6.11.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_12_ => "6.12.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_13_ => "6.13.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_14_ => "6.14.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_15_ => "6.15.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_16_ => "6.16.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_ => "7.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7__POS => "7.+",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7__NEG => "7.-",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_1_ => "7.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_2_ => "7.2.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_ => "8.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_1_ => "8.1.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_2_ => "8.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1 => "1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11 => "1.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12 => "1.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13 => "1.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2 => "2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos => "2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg => "2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21 => "2.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos => "2.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg => "2.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22 => "2.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos => "2.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg => "2.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23 => "2.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos => "2.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg => "2.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24 => "2.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos => "2.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg => "2.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25 => "2.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos => "2.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg => "2.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26 => "2.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos => "2.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg => "2.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27 => "2.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos => "2.7.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg => "2.7.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28 => "2.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos => "2.8.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg => "2.8.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29 => "2.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3 => "3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos => "3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg => "3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31 => "3.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos => "3.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg => "3.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32 => "3.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos => "3.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg => "3.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33 => "3.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos => "3.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg => "3.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34 => "3.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos => "3.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg => "3.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35 => "3.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos => "3.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg => "3.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36 => "3.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos => "3.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg => "3.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37 => "3.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4 => "4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos => "4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg => "4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41 => "4.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos => "4.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg => "4.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42 => "4.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos => "4.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg => "4.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43 => "4.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos => "4.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg => "4.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44 => "4.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos => "4.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg => "4.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45 => "4.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos => "4.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg => "4.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46 => "4.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos => "4.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg => "4.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47 => "4.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48 => "4.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos => "4.8.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg => "4.8.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49 => "4.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos => "4.9.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg => "4.9.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5 => "5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos => "5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg => "5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51 => "5.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos => "5.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg => "5.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52 => "5.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg => "5.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos => "5.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53 => "5.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg => "5.3.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos => "5.3.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54 => "5.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos => "5.4.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg => "5.4.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55 => "5.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos => "5.5.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg => "5.5.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56 => "5.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos => "5.6.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg => "5.6.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57 => "5.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos => "5.7.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg => "5.7.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571 => "5.7.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos => "5.7.1.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg => "5.7.1.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572 => "5.7.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos => "5.7.2.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg => "5.7.2.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58 => "5.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg => "5.8.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos => "5.8.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59 => "5.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg => "5.9.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos => "5.9.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510 => "5.10.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos => "5.10.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg => "5.10.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511 => "5.11.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos => "5.11.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg => "5.11.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512 => "5.12.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6 => "6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61 => "6.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62 => "6.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63 => "6.3.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64 => "6.4.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65 => "6.5.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66 => "6.6.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67 => "6.7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68 => "6.8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69 => "6.9.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610 => "6.10.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611 => "6.11.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612 => "6.12.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613 => "6.13.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614 => "6.14.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615 => "6.15.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616 => "6.16.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7 => "7.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos => "7.+",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg => "7.-",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71 => "7.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72 => "7.2.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8 => "8.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81 => "8.1.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82 => "8.2.",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -7198,262 +7170,230 @@ public static class MiiCsOnkoStrahlentherapieZielgebiet2014Extensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_ => "ZNS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_1_ => "Ganzhirn",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_2_ => "Teilhirn",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_3_ => "Neuroachse",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_ => "Kopf-Hals",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1 => "ZNS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11 => "Ganzhirn",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12 => "Teilhirn",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13 => "Neuroachse",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2 => "Kopf-Hals",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos =>
                 "Kopf-Hals mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg =>
                 "Kopf-Hals ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1_ => "Orbita, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1__POS =>
-                "Orbita mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21 => "Orbita, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos => "Orbita mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg =>
                 "Orbita ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22 =>
                 "Nase/ Nasennebenhöhle, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos =>
                 "Nase/ Nasennebenhöhle mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg =>
                 "Nase/ Nasennebenhöhle ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23 =>
                 "Mundhöhle, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos =>
                 "Mundhöhle mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg =>
                 "Mundhöhle ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4_ => "Ohr, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4__POS => "Ohr mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4__NEG =>
-                "Ohr ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24 => "Ohr, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos => "Ohr mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg => "Ohr ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25 =>
                 "Speicheldrüse, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos =>
                 "Speicheldrüse mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg =>
                 "Speicheldrüse ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6_ =>
-                "Pharynx, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26 => "Pharynx, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos =>
                 "Pharynx mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg =>
                 "Pharynx ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7_ => "Larynx, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7__POS =>
-                "Larynx mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27 => "Larynx, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos => "Larynx mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg =>
                 "Larynx ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28 =>
                 "Schilddrüse, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos =>
                 "Schilddrüse mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg =>
                 "Schilddrüse ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_9_ =>
-                "Halslymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_ => "Thorax",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3__POS =>
-                "Thorax mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3__NEG =>
-                "Thorax ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29 => "Halslymphknoten",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3 => "Thorax",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos => "Thorax mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg => "Thorax ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31 =>
                 "Mamma als Ganzbrust, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos =>
                 "Mamma als Ganzbrust mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg =>
                 "Mamma als Ganzbrust ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32 =>
                 "Mamma als Teilbrust, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos =>
                 "Mamma als Teilbrust mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg =>
                 "Mamma als Teilbrust ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3_ => "Brustwand",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33 => "Brustwand",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos =>
                 "Brustwand mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg =>
                 "Brustwand ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4_ => "Lunge, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4__POS =>
-                "Lunge mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4__NEG =>
-                "Lunge ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34 => "Lunge, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos => "Lunge mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg => "Lunge ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35 =>
                 "Ösophagus, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos =>
                 "Ösophagus mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg =>
                 "Ösophagus ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6_ => "Thymus, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6__POS =>
-                "Thymus mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36 => "Thymus, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos => "Thymus mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg =>
                 "Thymus ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_7_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37 =>
                 "Mediastinale Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4 =>
                 "Abdomen (ohne Becken)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos =>
                 "Abdomen (ohne Becken) mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg =>
                 "Abdomen (ohne Becken) ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1_ => "Magen, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1__POS =>
-                "Magen mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1__NEG =>
-                "Magen ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2_ =>
-                "Pankreas, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41 => "Magen, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos => "Magen mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg => "Magen ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42 => "Pankreas, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos =>
                 "Pankreas mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg =>
                 "Pankreas ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3_ => "Leber, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3__POS =>
-                "Leber mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3__NEG =>
-                "Leber ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4_ => "Milz, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4__POS =>
-                "Milz mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4__NEG =>
-                "Milz ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5_ => "Niere, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5__POS =>
-                "Niere mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5__NEG =>
-                "Niere ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43 => "Leber, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos => "Leber mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg => "Leber ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44 => "Milz, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos => "Milz mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg => "Milz ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45 => "Niere, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos => "Niere mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg => "Niere ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46 =>
                 "Nebenniere, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos =>
                 "Nebenniere mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg =>
                 "Nebenniere ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_7_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47 =>
                 "Retroperitoneale Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48 =>
                 "Retroperitoneum, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos =>
                 "Retroperitoneum mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg =>
                 "Retroperitoneum ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49 =>
                 "Bauchwand, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos =>
                 "Bauchwand mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg =>
                 "Bauchwand ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_ => "Becken",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5__POS =>
-                "Becken mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5__NEG =>
-                "Becken ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1_ => "Rektum, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1__POS =>
-                "Rektum mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5 => "Becken",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos => "Becken mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg => "Becken ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51 => "Rektum, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos => "Rektum mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg =>
                 "Rektum ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52 =>
                 "Analbereich, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg =>
                 "Analbereich ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos =>
                 "Analbereich mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53 =>
                 "Harnblase, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg =>
                 "Harnblase ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos =>
                 "Harnblase mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4_ =>
-                "Prostata, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54 => "Prostata, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos =>
                 "Prostata mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg =>
                 "Prostata ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5_ => "Hoden, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5__POS =>
-                "Hoden mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5__NEG =>
-                "Hoden ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6_ => "Penis, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6__POS =>
-                "Penis mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6__NEG =>
-                "Penis ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55 => "Hoden, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos => "Hoden mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg => "Hoden ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56 => "Penis, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos => "Penis mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg => "Penis ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57 =>
                 "Uterus und Zervix, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos =>
                 "Uterus und Zervix mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg =>
                 "Uterus und Zervix ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1_ => "Uterus",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571 => "Uterus",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos =>
                 "Uterus mit Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg =>
                 "Uterus ohne Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2_ => "Zervix",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572 => "Zervix",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos =>
                 "Zervix mit Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg =>
                 "Zervix ohne Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8_ => "Ovar, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8__NEG =>
-                "Ovar ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8__POS =>
-                "Ovar mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9_ => "Vulva, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9__NEG =>
-                "Vulva ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9__POS =>
-                "Vulva mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10_ =>
-                "Vagina, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58 => "Ovar, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg => "Ovar ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos => "Ovar mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59 => "Vulva, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg => "Vulva ohne Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos => "Vulva mit Lk",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510 => "Vagina, o.n.A.",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos =>
                 "Vagina mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg =>
                 "Vagina ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511 =>
                 "Beckenwand, o.n.A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos =>
                 "Beckenwand mit Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg =>
                 "Beckenwand ohne Lk",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_12_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512 =>
                 "Beckenlymphkn. (ohne Primtu.)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6 =>
                 "Stütz-/Bewegungsapparat",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_1_ => "Schädelknochen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_2_ => "Rippen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_3_ => "Sternum",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_4_ => "HWS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_5_ => "BWS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_6_ => "LWS",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_7_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61 => "Schädelknochen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62 => "Rippen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63 => "Sternum",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64 => "HWS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65 => "BWS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66 => "LWS",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67 =>
                 "knöchernes Becken",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_8_ => "Hüfte",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_9_ => "Schulter",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_10_ => "Oberarm",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_11_ => "Unterarm",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_12_ => "Hand",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_13_ => "Leiste",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_14_ => "Oberschenkel",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_15_ => "Unterschenkel",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_16_ => "Fuß",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_ => "Haut",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7__POS =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68 => "Hüfte",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69 => "Schulter",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610 => "Oberarm",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611 => "Unterarm",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612 => "Hand",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613 => "Leiste",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614 => "Oberschenkel",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615 => "Unterschenkel",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616 => "Fuß",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7 => "Haut",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos =>
                 "Haut mit Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7__NEG =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg =>
                 "Haut ohne Lymphknoten",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_1_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71 =>
                 "Primärer Hauttumor",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_2_ => "Hautmetastasen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_ => "Sonstiges",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_1_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72 => "Hautmetastasen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8 => "Sonstiges",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81 =>
                 "Ganzkörperbestrahlung",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_2_ =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82 =>
                 "Mantelfeldbestrahlung",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -7470,156 +7410,156 @@ public static class MiiCsOnkoStrahlentherapieZielgebiet2014Extensions
     ) =>
         code switch
         {
-            "1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_,
-            "1.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_1_,
-            "1.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_2_,
-            "1.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1_3_,
-            "2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_,
-            "2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2__POS,
-            "2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2__NEG,
-            "2.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1_,
-            "2.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1__POS,
-            "2.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_1__NEG,
-            "2.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2_,
-            "2.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2__POS,
-            "2.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_2__NEG,
-            "2.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3_,
-            "2.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3__POS,
-            "2.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_3__NEG,
-            "2.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4_,
-            "2.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4__POS,
-            "2.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_4__NEG,
-            "2.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5_,
-            "2.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5__POS,
-            "2.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_5__NEG,
-            "2.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6_,
-            "2.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6__POS,
-            "2.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_6__NEG,
-            "2.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7_,
-            "2.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7__POS,
-            "2.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_7__NEG,
-            "2.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8_,
-            "2.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8__POS,
-            "2.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_8__NEG,
-            "2.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2_9_,
-            "3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_,
-            "3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3__POS,
-            "3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3__NEG,
-            "3.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1_,
-            "3.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1__POS,
-            "3.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_1__NEG,
-            "3.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2_,
-            "3.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2__POS,
-            "3.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_2__NEG,
-            "3.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3_,
-            "3.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3__POS,
-            "3.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_3__NEG,
-            "3.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4_,
-            "3.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4__POS,
-            "3.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_4__NEG,
-            "3.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5_,
-            "3.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5__POS,
-            "3.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_5__NEG,
-            "3.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6_,
-            "3.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6__POS,
-            "3.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_6__NEG,
-            "3.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3_7_,
-            "4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_,
-            "4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4__POS,
-            "4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4__NEG,
-            "4.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1_,
-            "4.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1__POS,
-            "4.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_1__NEG,
-            "4.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2_,
-            "4.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2__POS,
-            "4.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_2__NEG,
-            "4.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3_,
-            "4.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3__POS,
-            "4.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_3__NEG,
-            "4.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4_,
-            "4.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4__POS,
-            "4.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_4__NEG,
-            "4.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5_,
-            "4.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5__POS,
-            "4.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_5__NEG,
-            "4.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6_,
-            "4.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6__POS,
-            "4.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_6__NEG,
-            "4.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_7_,
-            "4.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8_,
-            "4.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8__POS,
-            "4.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_8__NEG,
-            "4.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9_,
-            "4.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9__POS,
-            "4.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4_9__NEG,
-            "5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_,
-            "5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5__POS,
-            "5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5__NEG,
-            "5.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1_,
-            "5.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1__POS,
-            "5.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_1__NEG,
-            "5.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2_,
-            "5.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2__NEG,
-            "5.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_2__POS,
-            "5.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3_,
-            "5.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3__NEG,
-            "5.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_3__POS,
-            "5.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4_,
-            "5.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4__POS,
-            "5.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_4__NEG,
-            "5.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5_,
-            "5.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5__POS,
-            "5.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_5__NEG,
-            "5.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6_,
-            "5.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6__POS,
-            "5.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_6__NEG,
-            "5.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_,
-            "5.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7__POS,
-            "5.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7__NEG,
-            "5.7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1_,
-            "5.7.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1__POS,
-            "5.7.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_1__NEG,
-            "5.7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2_,
-            "5.7.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2__POS,
-            "5.7.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_7_2__NEG,
-            "5.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8_,
-            "5.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8__NEG,
-            "5.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_8__POS,
-            "5.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9_,
-            "5.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9__NEG,
-            "5.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_9__POS,
-            "5.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10_,
-            "5.10.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10__POS,
-            "5.10.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_10__NEG,
-            "5.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11_,
-            "5.11.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11__POS,
-            "5.11.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_11__NEG,
-            "5.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5_12_,
-            "6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_,
-            "6.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_1_,
-            "6.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_2_,
-            "6.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_3_,
-            "6.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_4_,
-            "6.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_5_,
-            "6.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_6_,
-            "6.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_7_,
-            "6.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_8_,
-            "6.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_9_,
-            "6.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_10_,
-            "6.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_11_,
-            "6.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_12_,
-            "6.13." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_13_,
-            "6.14." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_14_,
-            "6.15." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_15_,
-            "6.16." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6_16_,
-            "7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_,
-            "7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7__POS,
-            "7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7__NEG,
-            "7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_1_,
-            "7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7_2_,
-            "8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_,
-            "8.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_1_,
-            "8.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8_2_,
+            "1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._1,
+            "1.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._11,
+            "1.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._12,
+            "1.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._13,
+            "2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2,
+            "2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Pos,
+            "2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._2Neg,
+            "2.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21,
+            "2.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Pos,
+            "2.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._21Neg,
+            "2.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22,
+            "2.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Pos,
+            "2.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._22Neg,
+            "2.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23,
+            "2.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Pos,
+            "2.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._23Neg,
+            "2.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24,
+            "2.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Pos,
+            "2.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._24Neg,
+            "2.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25,
+            "2.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Pos,
+            "2.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._25Neg,
+            "2.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26,
+            "2.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Pos,
+            "2.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._26Neg,
+            "2.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27,
+            "2.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Pos,
+            "2.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._27Neg,
+            "2.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28,
+            "2.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Pos,
+            "2.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._28Neg,
+            "2.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._29,
+            "3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3,
+            "3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Pos,
+            "3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._3Neg,
+            "3.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31,
+            "3.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Pos,
+            "3.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._31Neg,
+            "3.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32,
+            "3.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Pos,
+            "3.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._32Neg,
+            "3.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33,
+            "3.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Pos,
+            "3.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._33Neg,
+            "3.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34,
+            "3.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Pos,
+            "3.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._34Neg,
+            "3.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35,
+            "3.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Pos,
+            "3.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._35Neg,
+            "3.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36,
+            "3.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Pos,
+            "3.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._36Neg,
+            "3.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._37,
+            "4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4,
+            "4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Pos,
+            "4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._4Neg,
+            "4.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41,
+            "4.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Pos,
+            "4.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._41Neg,
+            "4.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42,
+            "4.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Pos,
+            "4.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._42Neg,
+            "4.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43,
+            "4.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Pos,
+            "4.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._43Neg,
+            "4.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44,
+            "4.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Pos,
+            "4.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._44Neg,
+            "4.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45,
+            "4.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Pos,
+            "4.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._45Neg,
+            "4.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46,
+            "4.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Pos,
+            "4.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._46Neg,
+            "4.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._47,
+            "4.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48,
+            "4.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Pos,
+            "4.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._48Neg,
+            "4.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49,
+            "4.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Pos,
+            "4.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._49Neg,
+            "5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5,
+            "5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Pos,
+            "5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._5Neg,
+            "5.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51,
+            "5.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Pos,
+            "5.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._51Neg,
+            "5.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52,
+            "5.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Neg,
+            "5.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._52Pos,
+            "5.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53,
+            "5.3.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Neg,
+            "5.3.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._53Pos,
+            "5.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54,
+            "5.4.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Pos,
+            "5.4.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._54Neg,
+            "5.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55,
+            "5.5.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Pos,
+            "5.5.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._55Neg,
+            "5.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56,
+            "5.6.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Pos,
+            "5.6.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._56Neg,
+            "5.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57,
+            "5.7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Pos,
+            "5.7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._57Neg,
+            "5.7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571,
+            "5.7.1.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Pos,
+            "5.7.1.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._571Neg,
+            "5.7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572,
+            "5.7.2.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Pos,
+            "5.7.2.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._572Neg,
+            "5.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58,
+            "5.8.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Neg,
+            "5.8.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._58Pos,
+            "5.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59,
+            "5.9.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Neg,
+            "5.9.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._59Pos,
+            "5.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510,
+            "5.10.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Pos,
+            "5.10.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._510Neg,
+            "5.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511,
+            "5.11.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Pos,
+            "5.11.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._511Neg,
+            "5.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._512,
+            "6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._6,
+            "6.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._61,
+            "6.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._62,
+            "6.3." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._63,
+            "6.4." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._64,
+            "6.5." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._65,
+            "6.6." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._66,
+            "6.7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._67,
+            "6.8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._68,
+            "6.9." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._69,
+            "6.10." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._610,
+            "6.11." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._611,
+            "6.12." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._612,
+            "6.13." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._613,
+            "6.14." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._614,
+            "6.15." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._615,
+            "6.16." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._616,
+            "7." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7,
+            "7.+" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Pos,
+            "7.-" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._7Neg,
+            "7.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._71,
+            "7.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._72,
+            "8." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._8,
+            "8.1." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._81,
+            "8.2." => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieZielgebiet2014._82,
             _ => null,
         };
 
@@ -7782,303 +7722,293 @@ public static class MiiCsOnkoWeitereKlassifikationenObdsExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET => "binet",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_A => "binet-a",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_B => "binet-b",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_C => "binet-c",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_STADIUM =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Binet => "binet",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetA => "binet-a",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetB => "binet-b",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetC => "binet-c",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborStadium =>
                 "ann-arbor-stadium",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_I => "ann-arbor-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IA =>
-                "ann-arbor-ia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborI => "ann-arbor-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIa => "ann-arbor-ia",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIae =>
                 "ann-arbor-iae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IB =>
-                "ann-arbor-ib",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIb => "ann-arbor-ib",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIbe =>
                 "ann-arbor-ibe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IE =>
-                "ann-arbor-ie",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IX =>
-                "ann-arbor-ix",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIe => "ann-arbor-ie",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIx => "ann-arbor-ix",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxa =>
                 "ann-arbor-ixa",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxae =>
                 "ann-arbor-ixae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxb =>
                 "ann-arbor-ixb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxbe =>
                 "ann-arbor-ixbe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxe =>
                 "ann-arbor-ixe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II =>
-                "ann-arbor-ii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1 =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi => "ann-arbor-ii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1 =>
                 "ann-arbor-ii1",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1A =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1a =>
                 "ann-arbor-ii1a",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1AE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1ae =>
                 "ann-arbor-ii1ae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1B =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1b =>
                 "ann-arbor-ii1b",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1BE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1be =>
                 "ann-arbor-ii1be",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1E =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1e =>
                 "ann-arbor-ii1e",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1X =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1x =>
                 "ann-arbor-ii1x",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xa =>
                 "ann-arbor-ii1xa",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xae =>
                 "ann-arbor-ii1xae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xb =>
                 "ann-arbor-ii1xb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xbe =>
                 "ann-arbor-ii1xbe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xe =>
                 "ann-arbor-ii1xe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2 =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2 =>
                 "ann-arbor-ii2",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2A =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2a =>
                 "ann-arbor-ii2a",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2AE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2ae =>
                 "ann-arbor-ii2ae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2B =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2b =>
                 "ann-arbor-ii2b",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2BE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2be =>
                 "ann-arbor-ii2be",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2E =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2e =>
                 "ann-arbor-ii2e",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2X =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2x =>
                 "ann-arbor-ii2x",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xa =>
                 "ann-arbor-ii2xa",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xae =>
                 "ann-arbor-ii2xae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xb =>
                 "ann-arbor-ii2xb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xbe =>
                 "ann-arbor-ii2xbe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xe =>
                 "ann-arbor-ii2xe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIia =>
                 "ann-arbor-iia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiae =>
                 "ann-arbor-iiae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIib =>
                 "ann-arbor-iib",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIibe =>
                 "ann-arbor-iibe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIie =>
                 "ann-arbor-iie",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIX =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIix =>
                 "ann-arbor-iix",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixa =>
                 "ann-arbor-iixa",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixae =>
                 "ann-arbor-iixae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixb =>
                 "ann-arbor-iixb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixbe =>
                 "ann-arbor-iixbe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixe =>
                 "ann-arbor-iixe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii =>
                 "ann-arbor-iii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiia =>
                 "ann-arbor-iiia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiiae =>
                 "ann-arbor-iiiae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIAES =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiiaes =>
                 "ann-arbor-iiiaes",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIAS =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiias =>
                 "ann-arbor-iiias",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiib =>
                 "ann-arbor-iiib",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiibe =>
                 "ann-arbor-iiibe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIBES =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiibes =>
                 "ann-arbor-iiibes",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIBS =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiibs =>
                 "ann-arbor-iiibs",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiie =>
                 "ann-arbor-iiie",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIES =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiies =>
                 "ann-arbor-iiies",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIS =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiis =>
                 "ann-arbor-iiis",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIX =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiix =>
                 "ann-arbor-iiix",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixa =>
                 "ann-arbor-iiixa",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixae =>
                 "ann-arbor-iiixae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXAES =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixaes =>
                 "ann-arbor-iiixaes",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXAS =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixas =>
                 "ann-arbor-iiixas",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixb =>
                 "ann-arbor-iiixb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixbe =>
                 "ann-arbor-iiixbe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXBES =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixbes =>
                 "ann-arbor-iiixbes",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXBS =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixbs =>
                 "ann-arbor-iiixbs",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixe =>
                 "ann-arbor-iiixe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXES =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixes =>
                 "ann-arbor-iiixes",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXS =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixs =>
                 "ann-arbor-iiixs",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III1 =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii1 =>
                 "ann-arbor-iii1",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III1A =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii1a =>
                 "ann-arbor-iii1a",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III1B =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii1b =>
                 "ann-arbor-iii1b",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III2 =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii2 =>
                 "ann-arbor-iii2",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III2A =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii2a =>
                 "ann-arbor-iii2a",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III2B =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii2b =>
                 "ann-arbor-iii2b",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IV =>
-                "ann-arbor-iv",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIv => "ann-arbor-iv",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIva =>
                 "ann-arbor-iva",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvae =>
                 "ann-arbor-ivae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvb =>
                 "ann-arbor-ivb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvbe =>
                 "ann-arbor-ivbe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIve =>
                 "ann-arbor-ive",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVX =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvx =>
                 "ann-arbor-ivx",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxa =>
                 "ann-arbor-ivxa",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXAE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxae =>
                 "ann-arbor-ivxae",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxb =>
                 "ann-arbor-ivxb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXBE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxbe =>
                 "ann-arbor-ivxbe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXE =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxe =>
                 "ann-arbor-ivxe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS => "iss",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_I => "iss-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_II => "iss-ii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_III => "iss-iii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM => "isswm",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_N => "isswm-n",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_I => "isswm-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_H => "isswm-h",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD => "who-grad",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_I => "who-grad-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_II => "who-grad-ii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_III =>
-                "who-grad-iii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_IV => "who-grad-iv",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN => "formen",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN_K => "formen-k",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN_V => "formen-v",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_KLASSIFIKATION =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Iss => "iss",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssI => "iss-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssIi => "iss-ii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssIii => "iss-iii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Isswm => "isswm",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmN => "isswm-n",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmI => "isswm-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmH => "isswm-h",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGrad => "who-grad",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradI => "who-grad-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIi => "who-grad-ii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIii => "who-grad-iii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIv => "who-grad-iv",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Formen => "formen",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FormenK => "formen-k",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FormenV => "formen-v",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnKlassifikation =>
                 "eln-klassifikation",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_G => "eln-g",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_I1 => "eln-i1",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_I2 => "eln-i2",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_U => "eln-u",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_CP => "eln-cp",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_AP => "eln-ap",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_BK => "eln-bk",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_STADIUM =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnG => "eln-g",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnI1 => "eln-i1",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnI2 => "eln-i2",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnU => "eln-u",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnCp => "eln-cp",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnAp => "eln-ap",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnBk => "eln-bk",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonStadium =>
                 "durie-salmon-stadium",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_I =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonI =>
                 "durie-salmon-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIa =>
                 "durie-salmon-ia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIb =>
                 "durie-salmon-ib",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_II =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIi =>
                 "durie-salmon-ii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIia =>
                 "durie-salmon-iia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIib =>
                 "durie-salmon-iib",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_III =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIii =>
                 "durie-salmon-iii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIiia =>
                 "durie-salmon-iiia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIiib =>
                 "durie-salmon-iiib",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH => "bismuth",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_I => "bismuth-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_II => "bismuth-ii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_III => "bismuth-iii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_IIIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Bismuth => "bismuth",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthI => "bismuth-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIi => "bismuth-ii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIii => "bismuth-iii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIiia =>
                 "bismuth-iiia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_IIIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIiib =>
                 "bismuth-iiib",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_IV => "bismuth-iv",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA => "masaoka",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_I => "masaoka-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_II => "masaoka-ii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_III => "masaoka-iii",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IV => "masaoka-iv",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IVA => "masaoka-iva",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IVB => "masaoka-ivb",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MITOSERATE_GIST =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIv => "bismuth-iv",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Masaoka => "masaoka",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaI => "masaoka-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIi => "masaoka-ii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIii => "masaoka-iii",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIv => "masaoka-iv",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIva => "masaoka-iva",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIvb => "masaoka-ivb",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MitoserateGist =>
                 "mitoserate-gist",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MITOSERATE_GIST_N =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MitoserateGistN =>
                 "mitoserate-gist-n",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MITOSERATE_GIST_H =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MitoserateGistH =>
                 "mitoserate-gist-h",
             Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16 => "p16",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16_P => "p16-p",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16_N => "p16-n",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EUTOS_SCORE => "eutos-score",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EUTOS_SCORE_N =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16P => "p16-p",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16N => "p16-n",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EutosScore => "eutos-score",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EutosScoreN =>
                 "eutos-score-n",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EUTOS_SCORE_H =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EutosScoreH =>
                 "eutos-score-h",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE => "sanz-score",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE_N =>
-                "sanz-score-n",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE_I =>
-                "sanz-score-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE_H =>
-                "sanz-score-h",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI => "ipi",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_N => "ipi-n",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_NI => "ipi-ni",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_HI => "ipi-hi",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_H => "ipi-h",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI => "flipi",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_L => "flipi-l",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_I => "flipi-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_H => "flipi-h",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI => "mipi",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_N => "mipi-n",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_I => "mipi-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_H => "mipi-h",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScore => "sanz-score",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreN => "sanz-score-n",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreI => "sanz-score-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreH => "sanz-score-h",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Ipi => "ipi",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiN => "ipi-n",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiNi => "ipi-ni",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiHi => "ipi-hi",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiH => "ipi-h",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Flipi => "flipi",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiL => "flipi-l",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiI => "flipi-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiH => "flipi-h",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Mipi => "mipi",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiN => "mipi-n",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiI => "mipi-i",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiH => "mipi-h",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsg =>
                 "risikogruppen-ghsg",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG_FR =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsgFr =>
                 "risikogruppen-ghsg-fr",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG_I =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsgI =>
                 "risikogruppen-ghsg-i",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG_FO =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsgFo =>
                 "risikogruppen-ghsg-fo",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS => "ipss",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_L => "ipss-l",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_I1 => "ipss-i1",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_I2 => "ipss-i2",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_H => "ipss-h",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU => "her2-neu",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU_P => "her2-neu-p",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU_N => "her2-neu-n",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Ipss => "ipss",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssL => "ipss-l",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssI1 => "ipss-i1",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssI2 => "ipss-i2",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssH => "ipss-h",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2Neu => "her2-neu",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2NeuP => "her2-neu-p",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2NeuN => "her2-neu-n",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -8088,230 +8018,226 @@ public static class MiiCsOnkoWeitereKlassifikationenObdsExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Binet =>
                 "BINET Staging System",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_A => "BINET A",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_B => "BINET B",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_C => "BINET C",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_STADIUM =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetA => "BINET A",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetB => "BINET B",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetC => "BINET C",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborStadium =>
                 "Ann-Arbor Stadium",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_I => "I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IA => "IA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IAE => "IAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IB => "IB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IBE => "IBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IE => "IE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IX => "IX",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXA => "IXA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXAE => "IXAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXB => "IXB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXBE => "IXBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IXE => "IXE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II => "II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1 => "II1",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1A => "II1A",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1AE => "II1AE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1B => "II1B",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1BE => "II1BE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1E => "II1E",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1X => "II1X",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XA => "II1XA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XAE => "II1XAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XB => "II1XB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XBE => "II1XBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II1XE => "II1XE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2 => "II2",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2A => "II2A",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2AE => "II2AE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2B => "II2B",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2BE => "II2BE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2E => "II2E",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2X => "II2X",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XA => "II2XA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XAE => "II2XAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XB => "II2XB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XBE => "II2XBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_II2XE => "II2XE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIA => "IIA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIAE => "IIAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIB => "IIB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIBE => "IIBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIE => "IIE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIX => "IIX",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXA => "IIXA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXAE => "IIXAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXB => "IIXB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXBE => "IIXBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIXE => "IIXE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III => "III",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIA => "IIIA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIAE => "IIIAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIAES => "IIIAES",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIAS => "IIIAS",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIB => "IIIB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIBE => "IIIBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIBES => "IIIBES",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIBS => "IIIBS",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIE => "IIIE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIES => "IIIES",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIS => "IIIS",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIX => "IIIX",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXA => "IIIXA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXAE => "IIIXAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXAES =>
-                "IIIXAES",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXAS => "IIIXAS",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXB => "IIIXB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXBE => "IIIXBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXBES =>
-                "IIIXBES",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXBS => "IIIXBS",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXE => "IIIXE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXES => "IIIXES",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IIIXS => "IIIXS",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III1 => "III1",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III1A => "III1A",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III1B => "III1B",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III2 => "III2",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III2A => "III2A",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_III2B => "III2B",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IV => "IV",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVA => "IVA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVAE => "IVAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVB => "IVB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVBE => "IVBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVE => "IVE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVX => "IVX",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXA => "IVXA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXAE => "IVXAE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXB => "IVXB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXBE => "IVXBE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_IVXE => "IVXE",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborI => "I",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIa => "IA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIae => "IAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIb => "IB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIbe => "IBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIe => "IE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIx => "IX",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxa => "IXA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxae => "IXAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxb => "IXB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxbe => "IXBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIxe => "IXE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi => "II",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1 => "II1",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1a => "II1A",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1ae => "II1AE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1b => "II1B",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1be => "II1BE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1e => "II1E",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1x => "II1X",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xa => "II1XA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xae => "II1XAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xb => "II1XB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xbe => "II1XBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi1xe => "II1XE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2 => "II2",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2a => "II2A",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2ae => "II2AE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2b => "II2B",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2be => "II2BE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2e => "II2E",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2x => "II2X",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xa => "II2XA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xae => "II2XAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xb => "II2XB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xbe => "II2XBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi2xe => "II2XE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIia => "IIA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiae => "IIAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIib => "IIB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIibe => "IIBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIie => "IIE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIix => "IIX",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixa => "IIXA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixae => "IIXAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixb => "IIXB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixbe => "IIXBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIixe => "IIXE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii => "III",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiia => "IIIA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiiae => "IIIAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiiaes => "IIIAES",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiias => "IIIAS",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiib => "IIIB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiibe => "IIIBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiibes => "IIIBES",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiibs => "IIIBS",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiie => "IIIE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiies => "IIIES",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiis => "IIIS",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiix => "IIIX",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixa => "IIIXA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixae => "IIIXAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixaes => "IIIXAES",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixas => "IIIXAS",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixb => "IIIXB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixbe => "IIIXBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixbes => "IIIXBES",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixbs => "IIIXBS",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixe => "IIIXE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixes => "IIIXES",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIiixs => "IIIXS",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii1 => "III1",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii1a => "III1A",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii1b => "III1B",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii2 => "III2",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii2a => "III2A",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIii2b => "III2B",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIv => "IV",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIva => "IVA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvae => "IVAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvb => "IVB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvbe => "IVBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIve => "IVE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvx => "IVX",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxa => "IVXA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxae => "IVXAE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxb => "IVXB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxbe => "IVXBE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIvxe => "IVXE",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Iss =>
                 "International Staging System",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_I => "ISS I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_II => "ISS II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_III => "ISS III",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssI => "ISS I",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssIi => "ISS II",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssIii => "ISS III",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Isswm =>
                 "International Scoring System for Waldenström's Macroglobulinemia",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_N => "ISSWM Niedrig",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_I =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmN => "ISSWM Niedrig",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmI =>
                 "ISSWM Intermediär",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_H => "ISSWM Hoch",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD => "WHO Grade",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_I => "WHO Grad I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_II => "WHO Grad II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_III =>
-                "WHO Grad III",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_IV => "WHO Grad IV",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN => "Formen",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN_K => "Klassisch",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN_V => "Variante",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_KLASSIFIKATION =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmH => "ISSWM Hoch",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGrad => "WHO Grade",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradI => "WHO Grad I",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIi => "WHO Grad II",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIii => "WHO Grad III",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIv => "WHO Grad IV",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Formen => "Formen",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FormenK => "Klassisch",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FormenV => "Variante",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnKlassifikation =>
                 "ELN-Klassifikation",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_G => "ELN Günstig",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_I1 =>
-                "ELN Intermediär I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_I2 =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnG => "ELN Günstig",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnI1 => "ELN Intermediär I",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnI2 =>
                 "ELN Intermediär II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_U => "ELN Ungünstig",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_CP =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnU => "ELN Ungünstig",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnCp =>
                 "ELN Chronische Phase",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_AP =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnAp =>
                 "ELN Akzelierte Phase",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_BK => "ELN Blastenkrise",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_STADIUM =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnBk => "ELN Blastenkrise",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonStadium =>
                 "Durie-Salmon Stadium",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_I =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonI =>
                 "Durie-Salmon I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIa =>
                 "Durie-Salmon IA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIb =>
                 "Durie-Salmon IB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_II =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIi =>
                 "Durie-Salmon II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIia =>
                 "Durie-Salmon IIA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIib =>
                 "Durie-Salmon IIB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_III =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIii =>
                 "Durie-Salmon III",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIiia =>
                 "Durie-Salmon IIIA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DURIE_SALMON_IIIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.DurieSalmonIiib =>
                 "Durie-Salmon IIIB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH => "Bismuth",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_I => "Bismuth I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_II => "Bismuth II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_III => "Bismuth III",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_IIIA =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Bismuth => "Bismuth",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthI => "Bismuth I",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIi => "Bismuth II",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIii => "Bismuth III",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIiia =>
                 "Bismuth IIIA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_IIIB =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIiib =>
                 "Bismuth IIIB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_IV => "Bismuth IV",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA => "Masaoka",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_I => "Masaoka I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_II => "Masaoka II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_III => "Masaoka III",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IV => "Masaoka IV",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IVA => "Masaoka IVA",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IVB => "Masaoka IVB",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MITOSERATE_GIST =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIv => "Bismuth IV",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Masaoka => "Masaoka",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaI => "Masaoka I",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIi => "Masaoka II",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIii => "Masaoka III",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIv => "Masaoka IV",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIva => "Masaoka IVA",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIvb => "Masaoka IVB",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MitoserateGist =>
                 "Mitoserate-GIST",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MITOSERATE_GIST_N =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MitoserateGistN =>
                 "Mitoserate-GIST Niedrig",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MITOSERATE_GIST_H =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MitoserateGistH =>
                 "Mitoserate-GIST Hoch",
             Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16 => "p16",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16_P => "p16 Positiv",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16_N => "p16 Negativ",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EUTOS_SCORE => "EUTOS-Score",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EUTOS_SCORE_N =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16P => "p16 Positiv",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16N => "p16 Negativ",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EutosScore => "EUTOS-Score",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EutosScoreN =>
                 "EUTOS-Score Niedrigrisiko",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EUTOS_SCORE_H =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EutosScoreH =>
                 "EUTOS-Score Hochrisiko",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE => "Sanz-Score",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE_N =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScore => "Sanz-Score",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreN =>
                 "Sanz-Score Niedrig",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE_I =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreI =>
                 "Sanz-Score Intermediär",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE_H =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreH =>
                 "Sanz-Score Hoch",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI => "IPI",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_N => "IPI Niedrig",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_NI =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Ipi => "IPI",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiN => "IPI Niedrig",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiNi =>
                 "IPI Niedrig-Intermediär",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_HI =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiHi =>
                 "IPI Hoch-Intermediär",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_H => "IPI Hoch",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI => "FLIPI",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_L => "FLIPI Low risk",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_I =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiH => "IPI Hoch",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Flipi => "FLIPI",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiL => "FLIPI Low risk",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiI =>
                 "FLIPI Intermediate risk",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_H => "FLIPI High risk",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI => "MIPI",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_N => "MIPI Niedrig",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_I => "MIPI Intermediär",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_H => "MIPI Hoch",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiH => "FLIPI High risk",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Mipi => "MIPI",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiN => "MIPI Niedrig",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiI => "MIPI Intermediär",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiH => "MIPI Hoch",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsg =>
                 "Risikogruppen GHSG",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG_FR =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsgFr =>
                 "GHSG Frühe",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG_I =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsgI =>
                 "GHSG Intermediär",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RISIKOGRUPPEN_GHSG_FO =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.RisikogruppenGhsgFo =>
                 "GHSG Fortgeschritten",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS => "IPSS",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_L => "IPSS Low",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_I1 =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Ipss => "IPSS",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssL => "IPSS Low",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssI1 =>
                 "IPSS Intermediate-I",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_I2 =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssI2 =>
                 "IPSS Intermediate-II",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_H => "IPSS High risk",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU => "HER2-neu",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU_P =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssH => "IPSS High risk",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2Neu => "HER2-neu",
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2NeuP =>
                 "HER2-neu Positiv",
-            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU_N =>
+            Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2NeuN =>
                 "HER2-neu Negativ",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -8328,535 +8254,505 @@ public static class MiiCsOnkoWeitereKlassifikationenObdsExtensions
     ) =>
         code switch
         {
-            "binet" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET,
-            "binet-a" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_A,
-            "binet-b" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_B,
-            "binet-c" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BINET_C,
+            "binet" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Binet,
+            "binet-a" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetA,
+            "binet-b" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetB,
+            "binet-c" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BinetC,
             "ann-arbor-stadium" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_STADIUM,
-            "ann-arbor-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ANN_ARBOR_I,
-            "ann-arbor-ia" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IA,
+                .AnnArborStadium,
+            "ann-arbor-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborI,
+            "ann-arbor-ia" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIa,
             "ann-arbor-iae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IAE,
-            "ann-arbor-ib" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IB,
+                .AnnArborIae,
+            "ann-arbor-ib" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIb,
             "ann-arbor-ibe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IBE,
-            "ann-arbor-ie" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IE,
-            "ann-arbor-ix" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IX,
+                .AnnArborIbe,
+            "ann-arbor-ie" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIe,
+            "ann-arbor-ix" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIx,
             "ann-arbor-ixa" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IXA,
+                .AnnArborIxa,
             "ann-arbor-ixae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IXAE,
+                .AnnArborIxae,
             "ann-arbor-ixb" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IXB,
+                .AnnArborIxb,
             "ann-arbor-ixbe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IXBE,
+                .AnnArborIxbe,
             "ann-arbor-ixe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IXE,
-            "ann-arbor-ii" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II,
+                .AnnArborIxe,
+            "ann-arbor-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIi,
             "ann-arbor-ii1" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1,
+                .AnnArborIi1,
             "ann-arbor-ii1a" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1A,
+                .AnnArborIi1a,
             "ann-arbor-ii1ae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1AE,
+                .AnnArborIi1ae,
             "ann-arbor-ii1b" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1B,
+                .AnnArborIi1b,
             "ann-arbor-ii1be" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1BE,
+                .AnnArborIi1be,
             "ann-arbor-ii1e" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1E,
+                .AnnArborIi1e,
             "ann-arbor-ii1x" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1X,
+                .AnnArborIi1x,
             "ann-arbor-ii1xa" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1XA,
+                .AnnArborIi1xa,
             "ann-arbor-ii1xae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1XAE,
+                .AnnArborIi1xae,
             "ann-arbor-ii1xb" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1XB,
+                .AnnArborIi1xb,
             "ann-arbor-ii1xbe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1XBE,
+                .AnnArborIi1xbe,
             "ann-arbor-ii1xe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II1XE,
+                .AnnArborIi1xe,
             "ann-arbor-ii2" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2,
+                .AnnArborIi2,
             "ann-arbor-ii2a" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2A,
+                .AnnArborIi2a,
             "ann-arbor-ii2ae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2AE,
+                .AnnArborIi2ae,
             "ann-arbor-ii2b" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2B,
+                .AnnArborIi2b,
             "ann-arbor-ii2be" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2BE,
+                .AnnArborIi2be,
             "ann-arbor-ii2e" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2E,
+                .AnnArborIi2e,
             "ann-arbor-ii2x" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2X,
+                .AnnArborIi2x,
             "ann-arbor-ii2xa" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2XA,
+                .AnnArborIi2xa,
             "ann-arbor-ii2xae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2XAE,
+                .AnnArborIi2xae,
             "ann-arbor-ii2xb" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2XB,
+                .AnnArborIi2xb,
             "ann-arbor-ii2xbe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2XBE,
+                .AnnArborIi2xbe,
             "ann-arbor-ii2xe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_II2XE,
+                .AnnArborIi2xe,
             "ann-arbor-iia" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIA,
+                .AnnArborIia,
             "ann-arbor-iiae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIAE,
+                .AnnArborIiae,
             "ann-arbor-iib" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIB,
+                .AnnArborIib,
             "ann-arbor-iibe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIBE,
+                .AnnArborIibe,
             "ann-arbor-iie" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIE,
+                .AnnArborIie,
             "ann-arbor-iix" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIX,
+                .AnnArborIix,
             "ann-arbor-iixa" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIXA,
+                .AnnArborIixa,
             "ann-arbor-iixae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIXAE,
+                .AnnArborIixae,
             "ann-arbor-iixb" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIXB,
+                .AnnArborIixb,
             "ann-arbor-iixbe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIXBE,
+                .AnnArborIixbe,
             "ann-arbor-iixe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIXE,
+                .AnnArborIixe,
             "ann-arbor-iii" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_III,
+                .AnnArborIii,
             "ann-arbor-iiia" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIA,
+                .AnnArborIiia,
             "ann-arbor-iiiae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIAE,
+                .AnnArborIiiae,
             "ann-arbor-iiiaes" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIAES,
+                .AnnArborIiiaes,
             "ann-arbor-iiias" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIAS,
+                .AnnArborIiias,
             "ann-arbor-iiib" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIB,
+                .AnnArborIiib,
             "ann-arbor-iiibe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIBE,
+                .AnnArborIiibe,
             "ann-arbor-iiibes" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIBES,
+                .AnnArborIiibes,
             "ann-arbor-iiibs" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIBS,
+                .AnnArborIiibs,
             "ann-arbor-iiie" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIE,
+                .AnnArborIiie,
             "ann-arbor-iiies" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIES,
+                .AnnArborIiies,
             "ann-arbor-iiis" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIS,
+                .AnnArborIiis,
             "ann-arbor-iiix" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIX,
+                .AnnArborIiix,
             "ann-arbor-iiixa" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXA,
+                .AnnArborIiixa,
             "ann-arbor-iiixae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXAE,
+                .AnnArborIiixae,
             "ann-arbor-iiixaes" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXAES,
+                .AnnArborIiixaes,
             "ann-arbor-iiixas" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXAS,
+                .AnnArborIiixas,
             "ann-arbor-iiixb" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXB,
+                .AnnArborIiixb,
             "ann-arbor-iiixbe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXBE,
+                .AnnArborIiixbe,
             "ann-arbor-iiixbes" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXBES,
+                .AnnArborIiixbes,
             "ann-arbor-iiixbs" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXBS,
+                .AnnArborIiixbs,
             "ann-arbor-iiixe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXE,
+                .AnnArborIiixe,
             "ann-arbor-iiixes" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXES,
+                .AnnArborIiixes,
             "ann-arbor-iiixs" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IIIXS,
+                .AnnArborIiixs,
             "ann-arbor-iii1" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_III1,
+                .AnnArborIii1,
             "ann-arbor-iii1a" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_III1A,
+                .AnnArborIii1a,
             "ann-arbor-iii1b" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_III1B,
+                .AnnArborIii1b,
             "ann-arbor-iii2" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_III2,
+                .AnnArborIii2,
             "ann-arbor-iii2a" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_III2A,
+                .AnnArborIii2a,
             "ann-arbor-iii2b" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_III2B,
-            "ann-arbor-iv" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IV,
+                .AnnArborIii2b,
+            "ann-arbor-iv" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.AnnArborIv,
             "ann-arbor-iva" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVA,
+                .AnnArborIva,
             "ann-arbor-ivae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVAE,
+                .AnnArborIvae,
             "ann-arbor-ivb" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVB,
+                .AnnArborIvb,
             "ann-arbor-ivbe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVBE,
+                .AnnArborIvbe,
             "ann-arbor-ive" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVE,
+                .AnnArborIve,
             "ann-arbor-ivx" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVX,
+                .AnnArborIvx,
             "ann-arbor-ivxa" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVXA,
+                .AnnArborIvxa,
             "ann-arbor-ivxae" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVXAE,
+                .AnnArborIvxae,
             "ann-arbor-ivxb" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVXB,
+                .AnnArborIvxb,
             "ann-arbor-ivxbe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVXBE,
+                .AnnArborIvxbe,
             "ann-arbor-ivxe" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ANN_ARBOR_IVXE,
-            "iss" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS,
-            "iss-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_I,
-            "iss-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_II,
-            "iss-iii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISS_III,
-            "isswm" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM,
-            "isswm-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_N,
-            "isswm-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_I,
-            "isswm-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ISSWM_H,
-            "who-grad" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD,
-            "who-grad-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_I,
-            "who-grad-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_II,
-            "who-grad-iii" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .WHO_GRAD_III,
-            "who-grad-iv" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WHO_GRAD_IV,
-            "formen" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN,
-            "formen-k" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN_K,
-            "formen-v" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FORMEN_V,
+                .AnnArborIvxe,
+            "iss" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Iss,
+            "iss-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssI,
+            "iss-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssIi,
+            "iss-iii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IssIii,
+            "isswm" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Isswm,
+            "isswm-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmN,
+            "isswm-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmI,
+            "isswm-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IsswmH,
+            "who-grad" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGrad,
+            "who-grad-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradI,
+            "who-grad-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIi,
+            "who-grad-iii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIii,
+            "who-grad-iv" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.WhoGradIv,
+            "formen" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Formen,
+            "formen-k" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FormenK,
+            "formen-v" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FormenV,
             "eln-klassifikation" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .ELN_KLASSIFIKATION,
-            "eln-g" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_G,
-            "eln-i1" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_I1,
-            "eln-i2" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_I2,
-            "eln-u" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_U,
-            "eln-cp" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_CP,
-            "eln-ap" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_AP,
-            "eln-bk" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ELN_BK,
+                .ElnKlassifikation,
+            "eln-g" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnG,
+            "eln-i1" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnI1,
+            "eln-i2" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnI2,
+            "eln-u" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnU,
+            "eln-cp" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnCp,
+            "eln-ap" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnAp,
+            "eln-bk" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.ElnBk,
             "durie-salmon-stadium" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_STADIUM,
+                .DurieSalmonStadium,
             "durie-salmon-i" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_I,
+                .DurieSalmonI,
             "durie-salmon-ia" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_IA,
+                .DurieSalmonIa,
             "durie-salmon-ib" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_IB,
+                .DurieSalmonIb,
             "durie-salmon-ii" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_II,
+                .DurieSalmonIi,
             "durie-salmon-iia" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_IIA,
+                .DurieSalmonIia,
             "durie-salmon-iib" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_IIB,
+                .DurieSalmonIib,
             "durie-salmon-iii" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_III,
+                .DurieSalmonIii,
             "durie-salmon-iiia" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_IIIA,
+                .DurieSalmonIiia,
             "durie-salmon-iiib" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .DURIE_SALMON_IIIB,
-            "bismuth" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH,
-            "bismuth-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_I,
-            "bismuth-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_II,
-            "bismuth-iii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_III,
+                .DurieSalmonIiib,
+            "bismuth" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Bismuth,
+            "bismuth-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthI,
+            "bismuth-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIi,
+            "bismuth-iii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIii,
             "bismuth-iiia" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .BISMUTH_IIIA,
+                .BismuthIiia,
             "bismuth-iiib" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .BISMUTH_IIIB,
-            "bismuth-iv" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BISMUTH_IV,
-            "masaoka" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA,
-            "masaoka-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_I,
-            "masaoka-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_II,
-            "masaoka-iii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_III,
-            "masaoka-iv" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IV,
-            "masaoka-iva" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IVA,
-            "masaoka-ivb" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MASAOKA_IVB,
+                .BismuthIiib,
+            "bismuth-iv" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.BismuthIv,
+            "masaoka" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Masaoka,
+            "masaoka-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaI,
+            "masaoka-ii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIi,
+            "masaoka-iii" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIii,
+            "masaoka-iv" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIv,
+            "masaoka-iva" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIva,
+            "masaoka-ivb" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MasaokaIvb,
             "mitoserate-gist" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .MITOSERATE_GIST,
+                .MitoserateGist,
             "mitoserate-gist-n" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .MITOSERATE_GIST_N,
+                .MitoserateGistN,
             "mitoserate-gist-h" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .MITOSERATE_GIST_H,
+                .MitoserateGistH,
             "p16" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16,
-            "p16-p" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16_P,
-            "p16-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16_N,
-            "eutos-score" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EUTOS_SCORE,
+            "p16-p" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16P,
+            "p16-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.P16N,
+            "eutos-score" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.EutosScore,
             "eutos-score-n" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .EUTOS_SCORE_N,
+                .EutosScoreN,
             "eutos-score-h" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .EUTOS_SCORE_H,
-            "sanz-score" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SANZ_SCORE,
-            "sanz-score-n" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .SANZ_SCORE_N,
-            "sanz-score-i" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .SANZ_SCORE_I,
-            "sanz-score-h" => Onkologie
-                .CodeSystems
-                .MiiCsOnkoWeitereKlassifikationenObds
-                .SANZ_SCORE_H,
-            "ipi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI,
-            "ipi-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_N,
-            "ipi-ni" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_NI,
-            "ipi-hi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_HI,
-            "ipi-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPI_H,
-            "flipi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI,
-            "flipi-l" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_L,
-            "flipi-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_I,
-            "flipi-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FLIPI_H,
-            "mipi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI,
-            "mipi-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_N,
-            "mipi-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_I,
-            "mipi-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MIPI_H,
+                .EutosScoreH,
+            "sanz-score" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScore,
+            "sanz-score-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreN,
+            "sanz-score-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreI,
+            "sanz-score-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.SanzScoreH,
+            "ipi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Ipi,
+            "ipi-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiN,
+            "ipi-ni" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiNi,
+            "ipi-hi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiHi,
+            "ipi-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpiH,
+            "flipi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Flipi,
+            "flipi-l" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiL,
+            "flipi-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiI,
+            "flipi-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.FlipiH,
+            "mipi" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Mipi,
+            "mipi-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiN,
+            "mipi-i" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiI,
+            "mipi-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.MipiH,
             "risikogruppen-ghsg" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .RISIKOGRUPPEN_GHSG,
+                .RisikogruppenGhsg,
             "risikogruppen-ghsg-fr" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .RISIKOGRUPPEN_GHSG_FR,
+                .RisikogruppenGhsgFr,
             "risikogruppen-ghsg-i" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .RISIKOGRUPPEN_GHSG_I,
+                .RisikogruppenGhsgI,
             "risikogruppen-ghsg-fo" => Onkologie
                 .CodeSystems
                 .MiiCsOnkoWeitereKlassifikationenObds
-                .RISIKOGRUPPEN_GHSG_FO,
-            "ipss" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS,
-            "ipss-l" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_L,
-            "ipss-i1" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_I1,
-            "ipss-i2" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_I2,
-            "ipss-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IPSS_H,
-            "her2-neu" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU,
-            "her2-neu-p" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU_P,
-            "her2-neu-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.HER2_NEU_N,
+                .RisikogruppenGhsgFo,
+            "ipss" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Ipss,
+            "ipss-l" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssL,
+            "ipss-i1" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssI1,
+            "ipss-i2" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssI2,
+            "ipss-h" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.IpssH,
+            "her2-neu" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2Neu,
+            "her2-neu-p" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2NeuP,
+            "her2-neu-n" => Onkologie.CodeSystems.MiiCsOnkoWeitereKlassifikationenObds.Her2NeuN,
             _ => null,
         };
 
@@ -9001,48 +8897,48 @@ public static class MiiCsOnkoTnmUiccExtensions
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C => "c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P => "p",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U => "u",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TX => "TX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx => "TX",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0 => "T0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TA => "Ta",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS => "Tis",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_LAMN_ => "Tis(LAMN)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_DCIS_ => "Tis(DCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_LCIS_ => "Tis(LCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PAGET_ => "Tis(Paget)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PU_ => "Tis(pu)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PD_ => "Tis(pd)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta => "Ta",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis => "Tis",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn => "Tis(LAMN)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis => "Tis(DCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis => "Tis(LCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget => "Tis(Paget)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu => "Tis(pu)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd => "Tis(pd)",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1 => "T1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1MI => "T1mi",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A => "T1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A1 => "T1a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A2 => "T1a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B => "T1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B1 => "T1b1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B2 => "T1b2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C => "T1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C1 => "T1c1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C2 => "T1c2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C3 => "T1c3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1D => "T1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi => "T1mi",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a => "T1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1 => "T1a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2 => "T1a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b => "T1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1 => "T1b1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2 => "T1b2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c => "T1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1 => "T1c1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2 => "T1c2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3 => "T1c3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d => "T1d",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2 => "T2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A => "T2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A1 => "T2a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A2 => "T2a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2B => "T2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2C => "T2c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2D => "T2d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a => "T2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1 => "T2a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2 => "T2a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b => "T2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c => "T2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d => "T2d",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3 => "T3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3A => "T3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3B => "T3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3C => "T3c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3D => "T3d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3E => "T3e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a => "T3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b => "T3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c => "T3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d => "T3d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e => "T3e",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4 => "T4",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4A => "T4a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4B => "T4b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4C => "T4c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4D => "T4d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4E => "T4e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a => "T4a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b => "T4b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c => "T4c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d => "T4d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e => "T4e",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M => "m",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2 => "2",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3 => "3",
@@ -9053,83 +8949,83 @@ public static class MiiCsOnkoTnmUiccExtensions
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8 => "8",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9 => "9",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10 => "10",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.NX => "NX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx => "NX",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0 => "N0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1 => "N1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1MI => "N1mi",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1A => "N1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1B => "N1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1C => "N1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi => "N1mi",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a => "N1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b => "N1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c => "N1c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2 => "N2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2A => "N2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2B => "N2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2C => "N2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a => "N2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b => "N2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c => "N2c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3 => "N3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3A => "N3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3B => "N3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3C => "N3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a => "N3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b => "N3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c => "N3c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0 => "M0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1 => "M1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1A => "M1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1B => "M1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1C => "M1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1D => "M1d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MX => "MX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_POS => "i+",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_NEG => "i-",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MOL_POS => "mol+",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MOL_NEG => "mol-",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.SN => "sn",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a => "M1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b => "M1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c => "M1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d => "M1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx => "MX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos => "i+",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg => "i-",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos => "mol+",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg => "mol-",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn => "sn",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0 => "L0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1 => "L1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.LX => "LX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx => "LX",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0 => "V0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1 => "V1",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2 => "V2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.VX => "VX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN0 => "Pn0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN1 => "Pn1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN_X => "PnX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx => "VX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0 => "Pn0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1 => "Pn1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX => "PnX",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0 => "S0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1 => "S1",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2 => "S2",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3 => "S3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.SX => "SX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.OKK => "okk",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx => "SX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk => "okk",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0 => "0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0A => "0a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0IS => "0is",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a => "0a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is => "0is",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I => "I",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA => "IA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA1 => "IA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA2 => "IA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA3 => "IA3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB => "IB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB1 => "IB1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB2 => "IB2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IC => "IC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IS => "IS",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.II => "II",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA => "IIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA1 => "IIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA2 => "IIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIB => "IIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIC => "IIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.III => "III",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA => "IIIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA1 => "IIIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA2 => "IIIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIB => "IIIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC => "IIIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC1 => "IIIC1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC2 => "IIIC2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIID => "IIID",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IV => "IV",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA => "IVA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA1 => "IVA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA2 => "IVA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVB => "IVB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVC => "IVC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia => "IA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1 => "IA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2 => "IA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3 => "IA3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib => "IB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1 => "IB1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2 => "IB2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic => "IC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is => "IS",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii => "II",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia => "IIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1 => "IIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2 => "IIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib => "IIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic => "IIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii => "III",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia => "IIIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1 => "IIIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2 => "IIIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib => "IIIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic => "IIIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1 => "IIIC1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2 => "IIIC2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid => "IIID",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv => "IV",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva => "IVA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1 => "IVA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2 => "IVA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb => "IVB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc => "IVC",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9143,48 +9039,48 @@ public static class MiiCsOnkoTnmUiccExtensions
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C => "c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P => "p",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U => "u",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TX => "TX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx => "TX",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0 => "T0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TA => "Ta",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS => "Tis",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_LAMN_ => "Tis(LAMN)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_DCIS_ => "Tis(DCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_LCIS_ => "Tis(LCIS)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PAGET_ => "Tis(Paget)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PU_ => "Tis(pu)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PD_ => "Tis(pd)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta => "Ta",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis => "Tis",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn => "Tis(LAMN)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis => "Tis(DCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis => "Tis(LCIS)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget => "Tis(Paget)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu => "Tis(pu)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd => "Tis(pd)",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1 => "T1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1MI => "T1mi",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A => "T1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A1 => "T1a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A2 => "T1a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B => "T1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B1 => "T1b1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B2 => "T1b2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C => "T1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C1 => "T1c1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C2 => "T1c2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C3 => "T1c3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1D => "T1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi => "T1mi",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a => "T1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1 => "T1a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2 => "T1a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b => "T1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1 => "T1b1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2 => "T1b2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c => "T1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1 => "T1c1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2 => "T1c2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3 => "T1c3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d => "T1d",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2 => "T2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A => "T2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A1 => "T2a1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A2 => "T2a2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2B => "T2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2C => "T2c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2D => "T2d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a => "T2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1 => "T2a1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2 => "T2a2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b => "T2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c => "T2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d => "T2d",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3 => "T3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3A => "T3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3B => "T3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3C => "T3c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3D => "T3d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3E => "T3e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a => "T3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b => "T3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c => "T3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d => "T3d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e => "T3e",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4 => "T4",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4A => "T4a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4B => "T4b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4C => "T4c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4D => "T4d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4E => "T4e",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a => "T4a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b => "T4b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c => "T4c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d => "T4d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e => "T4e",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M => "(m)",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2 => "(2)",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3 => "(3)",
@@ -9195,83 +9091,83 @@ public static class MiiCsOnkoTnmUiccExtensions
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8 => "(8)",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9 => "(9)",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10 => "(10)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.NX => "Nx",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx => "Nx",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0 => "N0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1 => "N1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1MI => "N1(mi)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1A => "N1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1B => "N1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1C => "N1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi => "N1(mi)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a => "N1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b => "N1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c => "N1c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2 => "N2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2A => "N2a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2B => "N2b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2C => "N2c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a => "N2a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b => "N2b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c => "N2c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3 => "N3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3A => "N3a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3B => "N3b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3C => "N3c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a => "N3a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b => "N3b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c => "N3c",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0 => "M0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1 => "M1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1A => "M1a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1B => "M1b",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1C => "M1c",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1D => "M1d",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MX => "MX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_POS => "(i+)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_NEG => "(i-)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MOL_POS => "(mol+)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MOL_NEG => "(mol-)",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.SN => "(sn)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a => "M1a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b => "M1b",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c => "M1c",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d => "M1d",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx => "MX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos => "(i+)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg => "(i-)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos => "(mol+)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg => "(mol-)",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn => "(sn)",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0 => "L0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1 => "L1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.LX => "LX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx => "LX",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0 => "V0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1 => "V1",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2 => "V2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.VX => "VX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN0 => "Pn0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN1 => "Pn1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN_X => "PnX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx => "VX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0 => "Pn0",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1 => "Pn1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX => "PnX",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0 => "S0",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1 => "S1",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2 => "S2",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3 => "S3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.SX => "SX",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.OKK => "Stadium X",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx => "SX",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk => "Stadium X",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0 => "Stadium 0",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0A => "Stadium 0a",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0IS => "Stadium 0is",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a => "Stadium 0a",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is => "Stadium 0is",
             Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I => "Stadium I",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA => "Stadium IA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA1 => "Stadium IA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA2 => "Stadium IA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA3 => "Stadium IA3",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB => "Stadium IB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB1 => "Stadium IB1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB2 => "Stadium IB2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IC => "Stadium IC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IS => "Stadium IS",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.II => "Stadium II",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA => "Stadium IIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA1 => "Stadium IIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA2 => "Stadium IIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIB => "Stadium IIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIC => "Stadium IIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.III => "Stadium III",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA => "Stadium IIIA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA1 => "Stadium IIIA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA2 => "Stadium IIIA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIB => "Stadium IIIB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC => "Stadium IIIC",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC1 => "Stadium IIIC1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC2 => "Stadium IIIC2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIID => "Stadium IIID",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IV => "Stadium IV",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA => "Stadium IVA",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA1 => "Stadium IVA1",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA2 => "Stadium IVA2",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVB => "Stadium IVB",
-            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVC => "Stadium IVC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia => "Stadium IA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1 => "Stadium IA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2 => "Stadium IA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3 => "Stadium IA3",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib => "Stadium IB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1 => "Stadium IB1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2 => "Stadium IB2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic => "Stadium IC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is => "Stadium IS",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii => "Stadium II",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia => "Stadium IIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1 => "Stadium IIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2 => "Stadium IIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib => "Stadium IIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic => "Stadium IIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii => "Stadium III",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia => "Stadium IIIA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1 => "Stadium IIIA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2 => "Stadium IIIA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib => "Stadium IIIB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic => "Stadium IIIC",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1 => "Stadium IIIC1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2 => "Stadium IIIC2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid => "Stadium IIID",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv => "Stadium IV",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva => "Stadium IVA",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1 => "Stadium IVA1",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2 => "Stadium IVA2",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb => "Stadium IVB",
+            Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc => "Stadium IVC",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9290,48 +9186,48 @@ public static class MiiCsOnkoTnmUiccExtensions
             "c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.C,
             "p" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.P,
             "u" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.U,
-            "TX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TX,
+            "TX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tx,
             "T0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T0,
-            "Ta" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TA,
-            "Tis" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS,
-            "Tis(LAMN)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_LAMN_,
-            "Tis(DCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_DCIS_,
-            "Tis(LCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_LCIS_,
-            "Tis(Paget)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PAGET_,
-            "Tis(pu)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PU_,
-            "Tis(pd)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TIS_PD_,
+            "Ta" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ta,
+            "Tis" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Tis,
+            "Tis(LAMN)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLamn,
+            "Tis(DCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisDcis,
+            "Tis(LCIS)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisLcis,
+            "Tis(Paget)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPaget,
+            "Tis(pu)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPu,
+            "Tis(pd)" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.TisPd,
             "T1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1,
-            "T1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1MI,
-            "T1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A,
-            "T1a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A1,
-            "T1a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1A2,
-            "T1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B,
-            "T1b1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B1,
-            "T1b2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1B2,
-            "T1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C,
-            "T1c1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C1,
-            "T1c2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C2,
-            "T1c3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1C3,
-            "T1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1D,
+            "T1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1mi,
+            "T1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a,
+            "T1a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a1,
+            "T1a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1a2,
+            "T1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b,
+            "T1b1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b1,
+            "T1b2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1b2,
+            "T1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c,
+            "T1c1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c1,
+            "T1c2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c2,
+            "T1c3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1c3,
+            "T1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T1d,
             "T2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2,
-            "T2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A,
-            "T2a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A1,
-            "T2a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2A2,
-            "T2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2B,
-            "T2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2C,
-            "T2d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2D,
+            "T2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a,
+            "T2a1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a1,
+            "T2a2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2a2,
+            "T2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2b,
+            "T2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2c,
+            "T2d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T2d,
             "T3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3,
-            "T3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3A,
-            "T3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3B,
-            "T3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3C,
-            "T3d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3D,
-            "T3e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3E,
+            "T3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3a,
+            "T3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3b,
+            "T3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3c,
+            "T3d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3d,
+            "T3e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T3e,
             "T4" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4,
-            "T4a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4A,
-            "T4b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4B,
-            "T4c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4C,
-            "T4d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4D,
-            "T4e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4E,
+            "T4a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4a,
+            "T4b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4b,
+            "T4c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4c,
+            "T4d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4d,
+            "T4e" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.T4e,
             "m" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M,
             "2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._2,
             "3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._3,
@@ -9342,83 +9238,83 @@ public static class MiiCsOnkoTnmUiccExtensions
             "8" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._8,
             "9" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._9,
             "10" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._10,
-            "NX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.NX,
+            "NX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Nx,
             "N0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N0,
             "N1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1,
-            "N1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1MI,
-            "N1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1A,
-            "N1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1B,
-            "N1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1C,
+            "N1mi" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1mi,
+            "N1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1a,
+            "N1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1b,
+            "N1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N1c,
             "N2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2,
-            "N2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2A,
-            "N2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2B,
-            "N2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2C,
+            "N2a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2a,
+            "N2b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2b,
+            "N2c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N2c,
             "N3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3,
-            "N3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3A,
-            "N3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3B,
-            "N3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3C,
+            "N3a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3a,
+            "N3b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3b,
+            "N3c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.N3c,
             "M0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M0,
             "M1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1,
-            "M1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1A,
-            "M1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1B,
-            "M1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1C,
-            "M1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1D,
-            "MX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MX,
-            "i+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_POS,
-            "i-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I_NEG,
-            "mol+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MOL_POS,
-            "mol-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MOL_NEG,
-            "sn" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.SN,
+            "M1a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1a,
+            "M1b" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1b,
+            "M1c" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1c,
+            "M1d" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.M1d,
+            "MX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Mx,
+            "i+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IPos,
+            "i-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.INeg,
+            "mol+" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolPos,
+            "mol-" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.MolNeg,
+            "sn" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sn,
             "L0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L0,
             "L1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.L1,
-            "LX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.LX,
+            "LX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Lx,
             "V0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V0,
             "V1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V1,
             "V2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.V2,
-            "VX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.VX,
-            "Pn0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN0,
-            "Pn1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN1,
-            "PnX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PN_X,
+            "VX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Vx,
+            "Pn0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn0,
+            "Pn1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Pn1,
+            "PnX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.PnX,
             "S0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S0,
             "S1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S1,
             "S2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S2,
             "S3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.S3,
-            "SX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.SX,
-            "okk" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.OKK,
+            "SX" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Sx,
+            "okk" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Okk,
             "0" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0,
-            "0a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0A,
-            "0is" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0IS,
+            "0a" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0a,
+            "0is" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc._0is,
             "I" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.I,
-            "IA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA,
-            "IA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA1,
-            "IA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA2,
-            "IA3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IA3,
-            "IB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB,
-            "IB1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB1,
-            "IB2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IB2,
-            "IC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IC,
-            "IS" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IS,
-            "II" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.II,
-            "IIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA,
-            "IIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA1,
-            "IIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIA2,
-            "IIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIB,
-            "IIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIC,
-            "III" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.III,
-            "IIIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA,
-            "IIIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA1,
-            "IIIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIA2,
-            "IIIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIB,
-            "IIIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC,
-            "IIIC1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC1,
-            "IIIC2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIIC2,
-            "IIID" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IIID,
-            "IV" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IV,
-            "IVA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA,
-            "IVA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA1,
-            "IVA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVA2,
-            "IVB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVB,
-            "IVC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.IVC,
+            "IA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia,
+            "IA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia1,
+            "IA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia2,
+            "IA3" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ia3,
+            "IB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib,
+            "IB1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib1,
+            "IB2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ib2,
+            "IC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ic,
+            "IS" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Is,
+            "II" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ii,
+            "IIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia,
+            "IIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia1,
+            "IIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iia2,
+            "IIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iib,
+            "IIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iic,
+            "III" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iii,
+            "IIIA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia,
+            "IIIA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia1,
+            "IIIA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiia2,
+            "IIIB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiib,
+            "IIIC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic,
+            "IIIC1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic1,
+            "IIIC2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiic2,
+            "IIID" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iiid,
+            "IV" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iv,
+            "IVA" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva,
+            "IVA1" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva1,
+            "IVA2" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Iva2,
+            "IVB" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivb,
+            "IVC" => Onkologie.CodeSystems.MiiCsOnkoTnmUicc.Ivc,
             _ => null,
         };
 
@@ -9564,11 +9460,11 @@ public static class MiiCsOnkoMammaHer2NeuStatusLeitlinieExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.POSITIV => "positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.LOW => "low",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.ULTRALOW => "ultralow",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.NEGATIV => "negativ",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.EQUIVOCAL => "equivocal",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv => "positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low => "low",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow => "ultralow",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ => "negativ",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal => "equivocal",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9578,11 +9474,11 @@ public static class MiiCsOnkoMammaHer2NeuStatusLeitlinieExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.POSITIV => "HER2-positiv",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.LOW => "HER2-low",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.ULTRALOW => "HER2-ultralow",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.NEGATIV => "HER2-negativ",
-            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.EQUIVOCAL => "equivocal",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv => "HER2-positiv",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low => "HER2-low",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow => "HER2-ultralow",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ => "HER2-negativ",
+            Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal => "equivocal",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9598,11 +9494,11 @@ public static class MiiCsOnkoMammaHer2NeuStatusLeitlinieExtensions
     ) =>
         code switch
         {
-            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.POSITIV,
-            "low" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.LOW,
-            "ultralow" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.ULTRALOW,
-            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.NEGATIV,
-            "equivocal" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.EQUIVOCAL,
+            "positiv" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Positiv,
+            "low" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Low,
+            "ultralow" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Ultralow,
+            "negativ" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Negativ,
+            "equivocal" => Onkologie.CodeSystems.MiiCsOnkoMammaHer2NeuStatusLeitlinie.Equivocal,
             _ => null,
         };
 
@@ -9698,17 +9594,17 @@ public static class MiiCsOnkoAllgemeinerLeistungszustandKarnofskyExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100_ => "100%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90_ => "90%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80_ => "80%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70_ => "70%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60_ => "60%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50_ => "50%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40_ => "40%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30_ => "30%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20_ => "20%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10_ => "10%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0_ => "0%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100 => "100%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90 => "90%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80 => "80%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70 => "70%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60 => "60%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50 => "50%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40 => "40%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30 => "30%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20 => "20%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10 => "10%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0 => "0%",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9718,17 +9614,17 @@ public static class MiiCsOnkoAllgemeinerLeistungszustandKarnofskyExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100_ => "100%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90_ => "90%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80_ => "80%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70_ => "70%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60_ => "60%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50_ => "50%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40_ => "40%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30_ => "30%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20_ => "20%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10_ => "10%",
-            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0_ => "0%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100 => "100%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90 => "90%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80 => "80%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70 => "70%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60 => "60%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50 => "50%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40 => "40%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30 => "30%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20 => "20%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10 => "10%",
+            Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0 => "0%",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9744,17 +9640,17 @@ public static class MiiCsOnkoAllgemeinerLeistungszustandKarnofskyExtensions
     ) =>
         code switch
         {
-            "100%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100_,
-            "90%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90_,
-            "80%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80_,
-            "70%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70_,
-            "60%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60_,
-            "50%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50_,
-            "40%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40_,
-            "30%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30_,
-            "20%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20_,
-            "10%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10_,
-            "0%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0_,
+            "100%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._100,
+            "90%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._90,
+            "80%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._80,
+            "70%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._70,
+            "60%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._60,
+            "50%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._50,
+            "40%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._40,
+            "30%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._30,
+            "20%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._20,
+            "10%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._10,
+            "0%" => Onkologie.CodeSystems.MiiCsOnkoAllgemeinerLeistungszustandKarnofsky._0,
             _ => null,
         };
 
@@ -9779,24 +9675,24 @@ public static class MiiCsOnkoStrahlentherapieStrahlenartExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.UH => "UH",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.EL => "EL",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.NE => "NE",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.PN => "PN",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SI => "SI",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.RO => "RO",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SO => "SO",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.LU_177 => "Lu-177",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J_131 => "J-131",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y_90 => "Y-90",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.RA_223 => "Ra-223",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.AC_225 => "Ac-225",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SM_153 => "Sm-153",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.TB_161 => "Tb-161",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SR_89 => "Sr-89",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.IR_192 => "Ir-192",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.CO_60 => "Co-60",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SONU => "SONU",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh => "UH",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El => "EL",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne => "NE",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn => "PN",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si => "SI",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro => "RO",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So => "SO",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177 => "Lu-177",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131 => "J-131",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90 => "Y-90",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223 => "Ra-223",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225 => "Ac-225",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153 => "Sm-153",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161 => "Tb-161",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89 => "Sr-89",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192 => "Ir-192",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60 => "Co-60",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu => "SONU",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9806,28 +9702,28 @@ public static class MiiCsOnkoStrahlentherapieStrahlenartExtensions
     ) =>
         value switch
         {
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.UH =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh =>
                 "Photonen (ultraharte Röntgenstrahlen, inklusive Gamma-Strahler)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.EL => "Elektronen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.NE => "Neutronen",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.PN =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El => "Elektronen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne => "Neutronen",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn =>
                 "Protonen (leichte Wasserstoffionen/H1/Leichtionen)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SI =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si =>
                 "Schwerionen (schwere Kohlenstoff-Ionen/C12/Sauerstoffionen/Heliumionen)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.RO => "Weichstrahl (kV)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SO =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro => "Weichstrahl (kV)",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So =>
                 "Sonstige (inklusive Mixed Beams, exklusive Nuklide)",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.LU_177 => "Lu-177",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J_131 => "J131",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y_90 => "Y-90",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.RA_223 => "Ra-223",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.AC_225 => "Ac-225",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SM_153 => "Sm-153",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.TB_161 => "Tb-161",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SR_89 => "Sr-89",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.IR_192 => "Ir-192",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.CO_60 => "Co-60",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SONU => "Sonstige Nuklide",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177 => "Lu-177",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131 => "J131",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90 => "Y-90",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223 => "Ra-223",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225 => "Ac-225",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153 => "Sm-153",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161 => "Tb-161",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89 => "Sr-89",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192 => "Ir-192",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60 => "Co-60",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu => "Sonstige Nuklide",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
@@ -9843,24 +9739,24 @@ public static class MiiCsOnkoStrahlentherapieStrahlenartExtensions
     ) =>
         code switch
         {
-            "UH" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.UH,
-            "EL" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.EL,
-            "NE" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.NE,
-            "PN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.PN,
-            "SI" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SI,
-            "RO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.RO,
-            "SO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SO,
-            "Lu-177" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.LU_177,
-            "J-131" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J_131,
-            "Y-90" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y_90,
-            "Ra-223" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.RA_223,
-            "Ac-225" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.AC_225,
-            "Sm-153" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SM_153,
-            "Tb-161" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.TB_161,
-            "Sr-89" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SR_89,
-            "Ir-192" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.IR_192,
-            "Co-60" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.CO_60,
-            "SONU" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.SONU,
+            "UH" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Uh,
+            "EL" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.El,
+            "NE" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ne,
+            "PN" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Pn,
+            "SI" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Si,
+            "RO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ro,
+            "SO" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.So,
+            "Lu-177" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Lu177,
+            "J-131" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.J131,
+            "Y-90" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Y90,
+            "Ra-223" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ra223,
+            "Ac-225" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ac225,
+            "Sm-153" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sm153,
+            "Tb-161" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Tb161,
+            "Sr-89" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sr89,
+            "Ir-192" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Ir192,
+            "Co-60" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Co60,
+            "SONU" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieStrahlenart.Sonu,
             _ => null,
         };
 
@@ -9884,9 +9780,9 @@ public static class MiiCsOnkoStrahlentherapieBoostExtensions
         value switch
         {
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J => "J",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.SIB => "SIB",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.SEQ => "SEQ",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.KON => "KON",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib => "SIB",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq => "SEQ",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon => "KON",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N => "N",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -9898,10 +9794,10 @@ public static class MiiCsOnkoStrahlentherapieBoostExtensions
         value switch
         {
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J => "ja, mit Boost o. n. A.",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.SIB =>
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib =>
                 "simultan integrierter Boost",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.SEQ => "sequentieller Boost",
-            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.KON => "konkomitanter Boost",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq => "sequentieller Boost",
+            Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon => "konkomitanter Boost",
             Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N => "nein, ohne Boost",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -9916,9 +9812,9 @@ public static class MiiCsOnkoStrahlentherapieBoostExtensions
         code switch
         {
             "J" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.J,
-            "SIB" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.SIB,
-            "SEQ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.SEQ,
-            "KON" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.KON,
+            "SIB" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Sib,
+            "SEQ" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Seq,
+            "KON" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.Kon,
             "N" => Onkologie.CodeSystems.MiiCsOnkoStrahlentherapieBoost.N,
             _ => null,
         };
@@ -10105,10 +10001,10 @@ public static class MiiCsOnkoResidualstatusExtensions
         {
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0 => "R0",
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1 => "R1",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1_IS_ => "R1(is)",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1_CY_ => "R1(cy+)",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is => "R1(is)",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy => "R1(cy+)",
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2 => "R2",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.RX => "RX",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx => "RX",
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U => "U",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
@@ -10119,10 +10015,10 @@ public static class MiiCsOnkoResidualstatusExtensions
         {
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0 => "Kein Residualtumor",
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1 => "Mikroskopischer Residualtumor",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1_IS_ => "In-Situ-Rest",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1_CY_ => "Cytologischer Rest",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is => "In-Situ-Rest",
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy => "Cytologischer Rest",
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2 => "Makroskopischer Residualtumor",
-            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.RX =>
+            Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx =>
                 "Vorhandensein von Residualtumor kann nicht beurteilt werden",
             Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U =>
                 "Residualtumorstatus ist nicht bekannt",
@@ -10140,10 +10036,10 @@ public static class MiiCsOnkoResidualstatusExtensions
         {
             "R0" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R0,
             "R1" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1,
-            "R1(is)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1_IS_,
-            "R1(cy+)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1_CY_,
+            "R1(is)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Is,
+            "R1(cy+)" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R1Cy,
             "R2" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.R2,
-            "RX" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.RX,
+            "RX" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.Rx,
             "U" => Onkologie.CodeSystems.MiiCsOnkoResidualstatus.U,
             _ => null,
         };
