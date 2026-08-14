@@ -45,6 +45,14 @@ public final class Medikation {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp}
+       */
+      public @NonNull String system(@NonNull MiiCsMedikationWirkstofftyp this) {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp}
        */

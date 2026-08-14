@@ -90,6 +90,14 @@ public final class Base {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus}
+       */
+      public @NonNull String system(@NonNull MiiCsPersonVitalstatus this) {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/CodeSystem/Vitalstatus}
        */

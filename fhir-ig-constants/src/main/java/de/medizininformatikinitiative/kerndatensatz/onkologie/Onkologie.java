@@ -542,6 +542,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoAllgemeinerLeistungszustandEcog this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog}
        */
@@ -624,6 +632,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoAllgemeinerLeistungszustandKarnofsky this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky}
        */
@@ -690,6 +706,14 @@ public final class Onkologie {
       MiiCsOnkoAsaObds(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoAsaObds this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds";
       }
 
       /**
@@ -775,6 +799,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoFernmetastasen this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen}
        */
@@ -836,6 +868,14 @@ public final class Onkologie {
       MiiCsOnkoGenetischeVarianteAuspraegung(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoGenetischeVarianteAuspraegung this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-genetische-variante-auspraegung";
       }
 
       /**
@@ -926,6 +966,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoGrading this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading}
        */
@@ -993,6 +1041,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoIntention this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention}
        */
@@ -1051,6 +1107,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoKrkAnastomoseninsuffizienz this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz}
        */
@@ -1105,6 +1169,14 @@ public final class Onkologie {
       MiiCsOnkoKrkMrtMesorektaleFaszieStatus(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoKrkMrtMesorektaleFaszieStatus this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status";
       }
 
       /**
@@ -1171,6 +1243,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoKrkStomaAnzeichnung this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung}
        */
@@ -1224,6 +1304,14 @@ public final class Onkologie {
       MiiCsOnkoKrkTmeQualitaet(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoKrkTmeQualitaet this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet";
       }
 
       /**
@@ -1288,6 +1376,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoMammaHer2NeuStatusLeitlinie this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie}
        */
@@ -1342,6 +1438,14 @@ public final class Onkologie {
       MiiCsOnkoMammaHer2NeuStatusObds(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoMammaHer2NeuStatusObds this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds";
       }
 
       /**
@@ -1402,6 +1506,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoMammaRezeptorstatusLeitlinie this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie}
        */
@@ -1456,6 +1568,14 @@ public final class Onkologie {
       MiiCsOnkoMelanomUlzeration(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoMelanomUlzeration this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration";
       }
 
       /**
@@ -1523,6 +1643,14 @@ public final class Onkologie {
       MiiCsOnkoNebenwirkungCtcaeGrad(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoNebenwirkungCtcaeGrad this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad";
       }
 
       /**
@@ -1820,6 +1948,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoOperationKomplikation this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation}
        */
@@ -1873,6 +2009,14 @@ public final class Onkologie {
       MiiCsOnkoOperationUrgency(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoOperationUrgency this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency";
       }
 
       /**
@@ -1958,6 +2102,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoPrimaertumorDiagnosesicherung this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung}
        */
@@ -2012,6 +2164,14 @@ public final class Onkologie {
       MiiCsOnkoProstataPostsurgicalComplications(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoProstataPostsurgicalComplications this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications";
       }
 
       /**
@@ -2084,6 +2244,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoResidualstatus this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus}
        */
@@ -2145,6 +2313,14 @@ public final class Onkologie {
       MiiCsOnkoSeitenlokalisation(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoSeitenlokalisation this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation";
       }
 
       /**
@@ -2281,6 +2457,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoStrahlentherapieApplikationsart this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart}
        */
@@ -2341,6 +2525,14 @@ public final class Onkologie {
       MiiCsOnkoStrahlentherapieBoost(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoStrahlentherapieBoost this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost";
       }
 
       /**
@@ -2442,6 +2634,14 @@ public final class Onkologie {
       MiiCsOnkoStrahlentherapieStrahlenart(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoStrahlentherapieStrahlenart this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-strahlenart";
       }
 
       /**
@@ -2794,6 +2994,14 @@ public final class Onkologie {
       MiiCsOnkoStrahlentherapieZielgebiet(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoStrahlentherapieZielgebiet this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet";
       }
 
       /**
@@ -3295,6 +3503,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoStrahlentherapieZielgebiet2014 this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014}
        */
@@ -3349,6 +3565,14 @@ public final class Onkologie {
       MiiCsOnkoStudienteilnahme(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoStudienteilnahme this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme";
       }
 
       /**
@@ -3912,6 +4136,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoSystemischeTherapieProtokolle this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle}
        */
@@ -3966,6 +4198,14 @@ public final class Onkologie {
       MiiCsOnkoTherapieabweichung(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTherapieabweichung this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung";
       }
 
       /**
@@ -4031,6 +4271,14 @@ public final class Onkologie {
       MiiCsOnkoTherapieplanungTyp(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTherapieplanungTyp this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ";
       }
 
       /**
@@ -4110,6 +4358,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTherapieEndeGrund this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund}
        */
@@ -4171,6 +4427,14 @@ public final class Onkologie {
       MiiCsOnkoTherapieStellungzurop(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTherapieStellungzurop this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop";
       }
 
       /**
@@ -4266,6 +4530,14 @@ public final class Onkologie {
       MiiCsOnkoTherapieTyp(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTherapieTyp this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ";
       }
 
       /**
@@ -4720,6 +4992,13 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code https://www.uicc.org/resources/tnm}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTnmUicc this) {
+        return "https://www.uicc.org/resources/tnm";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.uicc.org/resources/tnm}
        */
@@ -4790,6 +5069,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTnmVersion this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version}
        */
@@ -4852,6 +5139,14 @@ public final class Onkologie {
       MiiCsOnkoTod(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoTod this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod";
       }
 
       /**
@@ -4922,6 +5217,14 @@ public final class Onkologie {
       MiiCsOnkoVerlaufFernmetastasen(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoVerlaufFernmetastasen this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-fernmetastasen";
       }
 
       /**
@@ -5007,6 +5310,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoVerlaufGesamtbeurteilung this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-gesamtbeurteilung}
        */
@@ -5079,6 +5390,14 @@ public final class Onkologie {
       }
 
       /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoVerlaufLymphknoten this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten";
+      }
+
+      /**
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten}
        */
@@ -5146,6 +5465,14 @@ public final class Onkologie {
       MiiCsOnkoVerlaufPrimaertumor(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoVerlaufPrimaertumor this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-primaertumor";
       }
 
       /**
@@ -5736,6 +6063,14 @@ public final class Onkologie {
       MiiCsOnkoWeitereKlassifikationenObds(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
+      }
+
+      /**
+       * @return the CodeSystem URL {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds}
+       */
+      public @NonNull String system(@NonNull MiiCsOnkoWeitereKlassifikationenObds this) {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds";
       }
 
       /**
