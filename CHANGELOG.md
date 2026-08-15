@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.13](https://github.com/diz-uker/to-fhir/compare/v0.2.12...v0.2.13) (2026-08-15)
+
+
+### Features
+
+* return value instead of Extension object where possible ([#77](https://github.com/diz-uker/to-fhir/issues/77)) ([4d1da01](https://github.com/diz-uker/to-fhir/commit/4d1da01473fc9ea3b205f5310ea8228c867458c6))
+
 ## [0.2.12](https://github.com/diz-uker/to-fhir/compare/v0.2.11...v0.2.12) (2026-08-14)
 
 
