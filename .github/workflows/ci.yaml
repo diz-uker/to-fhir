@@ -93,6 +93,7 @@ jobs:
 
       - name: Pack
         run: |
+          dotnet pack ig-codegen-cs/IgCodegen.Core/IgCodegen.Core.csproj --configuration Release --output artifacts/
           dotnet pack ig-codegen-cs/IgCodegen/IgCodegen.csproj --configuration Release --output artifacts/
           dotnet pack fhir-ig-constants-cs/fhir-ig-constants-cs.csproj --configuration Release --output artifacts/
 

@@ -14,4 +14,11 @@
     <!-- Dotnet tool — internal types don't need exhaustive XML doc comments. -->
     <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Scanner/generator library API — packed separately (io.github.diz-uker.ig-codegen-core)
+         since PackAsTool packages ship a tools/ payload only, with no lib/ assets a consumer could
+         add as a PackageReference to call IgPackageScanner/CSharpConstantsGenerator directly. -->
+    <ProjectReference Include="../IgCodegen.Core/IgCodegen.Core.csproj" />
+  </ItemGroup>
 </Project>

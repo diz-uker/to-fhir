@@ -21,6 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../IgCodegen/IgCodegen.csproj" />
+    <ProjectReference Include="../IgCodegen.Core/IgCodegen.Core.csproj" />
   </ItemGroup>
 </Project>
