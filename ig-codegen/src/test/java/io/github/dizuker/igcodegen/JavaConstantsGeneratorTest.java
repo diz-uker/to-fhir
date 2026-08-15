@@ -367,6 +367,48 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void extensionWithFixedValueTypeGetsATypedGetterMethod() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_EINZELDOSIS",
+        "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_EINZELDOSIS", ExtensionValueType.fixed("decimal"));
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(source.contains("import org.hl7.fhir.instance.model.api.IBaseHasExtensions;"));
+    assertTrue(source.contains("public static @Nullable DecimalType getMiiExOnkoEinzeldosis("));
+    assertTrue(source.contains("@NonNull IBaseHasExtensions resource)"));
+    assertTrue(source.contains("return (DecimalType) ((Extension) e).getValue()"));
+  }
+
+  @Test
+  void complexExtensionGetsAGetterMethodReturningExtension() {
+    TreeMap<String, String> extensions = new TreeMap<>();
+    extensions.put(
+        "MII_EX_ONKO_COMPLEX", "https://example.org/StructureDefinition/mii-ex-onko-complex");
+    Map<String, ExtensionValueType> extensionValueTypes =
+        Map.of("MII_EX_ONKO_COMPLEX", ExtensionValueType.NONE);
+    IgPackageModel model =
+        model(new TreeMap<>(), new TreeMap<>(), extensions, Map.of(), extensionValueTypes);
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    assertTrue(
+        source.contains(
+            "public static @Nullable Extension getMiiExOnkoComplex("
+                + "@NonNull IBaseHasExtensions resource)"));
+    assertTrue(
+        source.contains(
+            "\"https://example.org/StructureDefinition/mii-ex-onko-complex\".equals(e.getUrl())"));
+  }
+
+  @Test
   void doesNotGenerateEnumWhenCodeSystemHasNoConcepts() {
     TreeMap<String, String> codeSystems = new TreeMap<>();
     codeSystems.put(

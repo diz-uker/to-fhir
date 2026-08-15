@@ -3,6 +3,7 @@
 package de.medizininformatikinitiative.kerndatensatz.medikation;
 
 import java.util.Optional;
+import org.hl7.fhir.instance.model.api.IBaseHasExtensions;
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.Extension;
 import org.jspecify.annotations.NonNull;
@@ -179,6 +180,44 @@ public final class Medikation {
       return new Extension(
           "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp",
           value.coding());
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExMedikationWirkstoffrelation(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Coding getMiiExMedikationWirkstofftyp(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp"
+            .equals(e.getUrl())) {
+          return (Coding) ((Extension) e).getValue();
+        }
+      }
+      return null;
     }
 
     public static final class Urls {
