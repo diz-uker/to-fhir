@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.14](https://github.com/diz-uker/to-fhir/compare/v0.2.13...v0.2.14) (2026-08-15)
+
+
+### Features
+
+* codegen lib c# ([deda1e1](https://github.com/diz-uker/to-fhir/commit/deda1e11f853985bc96d963596a9b010e3aa253a))
+
 ## [0.2.13](https://github.com/diz-uker/to-fhir/compare/v0.2.12...v0.2.13) (2026-08-15)
 
 
