@@ -452,7 +452,7 @@ class JavaConstantsGeneratorTest {
 
     assertTrue(source.contains("class NamingSystems"));
     assertTrue(source.contains("class EligibilityObservationId"));
-    assertTrue(source.contains("class UniqueId"));
+    assertFalse(source.contains("class UniqueId"));
     assertTrue(source.contains("public static @NonNull String uri()"));
     assertTrue(source.contains("return \"https://example.org/identifiers/eid\""));
   }
