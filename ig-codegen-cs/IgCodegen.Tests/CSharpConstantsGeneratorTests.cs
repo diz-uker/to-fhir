@@ -379,6 +379,41 @@ public class CSharpConstantsGeneratorTests
     }
 
     [Fact]
+    public void GeneratesTypedExtensionGetterForFixedValueType()
+    {
+        var extensions = new SortedDictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["MII_EX_ONKO_EINZELDOSIS"] =
+                "https://example.org/StructureDefinition/mii-ex-onko-einzeldosis",
+        };
+        var extensionValueTypes = new Dictionary<string, ExtensionValueType>
+        {
+            ["MII_EX_ONKO_EINZELDOSIS"] = ExtensionValueType.Fixed("decimal"),
+        };
+        var model = new IgPackageModel(
+            "test.package",
+            "1.0.0",
+            new SortedDictionary<string, string>(),
+            new SortedDictionary<string, string>(),
+            extensions,
+            new Dictionary<string, IReadOnlyList<ConceptConstant>>(),
+            extensionValueTypes,
+            new Dictionary<string, NamingSystemEntry>()
+        );
+
+        var source = CSharpConstantsGenerator.Generate(model, "De.Example.Onkologie", "Onkologie");
+
+        Assert.Contains(
+            "public static FhirDecimal? GetMiiExOnkoEinzeldosis(this IExtendable resource) =>",
+            source
+        );
+        Assert.Contains(
+            "resource.GetExtensionValue<FhirDecimal>(\"https://example.org/StructureDefinition/mii-ex-onko-einzeldosis\");",
+            source
+        );
+    }
+
+    [Fact]
     public void DoesNotGenerateExtensionGetterClassWhenNoExtensions()
     {
         var model = ModelWithCodeSystem("MII_CS_ONKO_INTENTION", "https://example.org/cs");

@@ -10054,99 +10054,105 @@ public static class MiiCsOnkoWeitereKlassifikationenObdsExtensions
 /// <summary>Extension methods for reading <see cref="Onkologie.Extensions"/> from FHIR resources.</summary>
 public static class OnkologieFhirExtensions
 {
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoHistologyMorphologyBehaviorIcdo3(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoHistologyMorphologyBehaviorIcdo3(
         this IExtendable resource
     ) =>
-        resource.GetExtension(
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoOperationIntention(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoOperationIntention(this IExtendable resource) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoOperationUrgency(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoOperationUrgency(this IExtendable resource) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoStrahlentherapieBestrahlungBoost(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoStrahlentherapieBestrahlungBoost(
         this IExtendable resource
     ) =>
-        resource.GetExtension(
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoStrahlentherapieBestrahlungEinzeldosis(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Quantity? GetMiiExOnkoStrahlentherapieBestrahlungEinzeldosis(
         this IExtendable resource
     ) =>
-        resource.GetExtension(
+        resource.GetExtensionValue<Quantity>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoStrahlentherapieBestrahlungGesamtdosis(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Quantity? GetMiiExOnkoStrahlentherapieBestrahlungGesamtdosis(
         this IExtendable resource
     ) =>
-        resource.GetExtension(
+        resource.GetExtensionValue<Quantity>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoStrahlentherapieBestrahlungSeitenlokalisation(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoStrahlentherapieBestrahlungSeitenlokalisation(
         this IExtendable resource
     ) =>
-        resource.GetExtension(
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoStrahlentherapieIntention(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoStrahlentherapieIntention(
+        this IExtendable resource
+    ) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoStrahlentherapieStellungzurop(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoStrahlentherapieStellungzurop(
+        this IExtendable resource
+    ) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoSystemischeTherapieIntention(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoSystemischeTherapieIntention(
+        this IExtendable resource
+    ) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoSystemischeTherapieStellungzurop(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoSystemischeTherapieStellungzurop(
         this IExtendable resource
     ) =>
-        resource.GetExtension(
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoTnmCpPraefix(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoTnmCpPraefix(this IExtendable resource) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoTnmItcSuffix(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoTnmItcSuffix(this IExtendable resource) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExOnkoTnmSnSuffix(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static CodeableConcept? GetMiiExOnkoTnmSnSuffix(this IExtendable resource) =>
+        resource.GetExtensionValue<CodeableConcept>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix"
         );
 }

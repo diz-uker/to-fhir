@@ -511,11 +511,32 @@ public static class CSharpConstantsGenerator
                     w.Line();
                 first = false;
                 string methodName = NameUtils.ToPascalCase(constantName);
-                w.Line(
-                    $"/// <summary>Gets the extension <c>{url}</c> from <paramref name=\"resource\"/>, or <c>null</c> if absent.</summary>"
+                var valueType = model.ExtensionValueTypes.GetValueOrDefault(
+                    constantName,
+                    ExtensionValueType.None
                 );
-                w.Line($"public static Extension? Get{methodName}(this IExtendable resource) =>");
-                w.Indent(() => w.Line($"resource.GetExtension(\"{url}\");"));
+                if (valueType.FhirTypeCode is not null && !valueType.Choice)
+                {
+                    string firely = FirelyTypeFor(valueType.FhirTypeCode);
+                    w.Line(
+                        $"/// <summary>Gets the value of extension <c>{url}</c> from <paramref name=\"resource\"/>, or <c>null</c> if absent.</summary>"
+                    );
+                    w.Line(
+                        $"public static {firely}? Get{methodName}(this IExtendable resource) =>"
+                    );
+                    w.Indent(() => w.Line($"resource.GetExtensionValue<{firely}>(\"{url}\");"));
+                }
+                else
+                {
+                    // Choice or complex extension — return the Extension object itself.
+                    w.Line(
+                        $"/// <summary>Gets the extension <c>{url}</c> from <paramref name=\"resource\"/>, or <c>null</c> if absent.</summary>"
+                    );
+                    w.Line(
+                        $"public static Extension? Get{methodName}(this IExtendable resource) =>"
+                    );
+                    w.Indent(() => w.Line($"resource.GetExtension(\"{url}\");"));
+                }
             }
         });
     }

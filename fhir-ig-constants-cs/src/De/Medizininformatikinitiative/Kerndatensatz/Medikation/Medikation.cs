@@ -148,9 +148,9 @@ public static class MedikationFhirExtensions
             "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExMedikationWirkstofftyp(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Coding? GetMiiExMedikationWirkstofftyp(this IExtendable resource) =>
+        resource.GetExtensionValue<Coding>(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp"
         );
 }

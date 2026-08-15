@@ -56,17 +56,17 @@ public static class Laborbefund
 /// <summary>Extension methods for reading <see cref="Laborbefund.Extensions"/> from FHIR resources.</summary>
 public static class LaborbefundFhirExtensions
 {
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExLaborInterpretationsbeeinflussendeEigenschaft(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Coding? GetMiiExLaborInterpretationsbeeinflussendeEigenschaft(
         this IExtendable resource
     ) =>
-        resource.GetExtension(
+        resource.GetExtensionValue<Coding>(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExLaborQuelleKlinischesBezugsdatum(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Coding? GetMiiExLaborQuelleKlinischesBezugsdatum(this IExtendable resource) =>
+        resource.GetExtensionValue<Coding>(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum"
         );
 }
