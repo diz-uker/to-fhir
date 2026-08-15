@@ -56,6 +56,8 @@ public final class JavaConstantsGenerator {
       ClassName.get("org.hl7.fhir.r4.model", "Extension");
   private static final ClassName GENERIC_VALUE_TYPE =
       ClassName.get("org.hl7.fhir.r4.model", "Type");
+  private static final ClassName IBASE_HAS_EXTENSIONS_TYPE =
+      ClassName.get("org.hl7.fhir.instance.model.api", "IBaseHasExtensions");
   private static final AnnotationSpec NONNULL =
       AnnotationSpec.builder(ClassName.get("org.jspecify.annotations", "NonNull")).build();
   private static final AnnotationSpec NULLABLE =
@@ -165,6 +167,13 @@ public final class JavaConstantsGenerator {
           buildExtensionFactoryMethod(
               accessorName, url, valueType, boundEnumSimpleNamesByCodeSystemUrl));
     }
+    for (Map.Entry<String, String> entry : extensions.entrySet()) {
+      String url = entry.getValue();
+      String accessorName = NameUtils.toCamelCase(entry.getKey());
+      ExtensionValueType valueType =
+          extensionValueTypes.getOrDefault(entry.getKey(), ExtensionValueType.NONE);
+      nestedType.addMethod(buildExtensionGetterMethod(accessorName, url, valueType));
+    }
     rootType.addType(nestedType.build());
   }
 
@@ -246,6 +255,62 @@ public final class JavaConstantsGenerator {
             url,
             url)
         .addStatement("return new $T($S, value)", EXTENSION_TYPE, url)
+        .build();
+  }
+
+  /**
+   * Builds a static getter method that reads an extension value from a HAPI {@link
+   * IBaseHasExtensions}: for extensions with a known fixed {@code value[x]} type, returns that
+   * typed HAPI class (or {@code null} if absent); for complex or choice extensions, returns the raw
+   * {@link Extension} (or {@code null}).
+   */
+  private static MethodSpec buildExtensionGetterMethod(
+      String accessorName, String url, ExtensionValueType valueType) {
+    String getterName =
+        "get" + Character.toUpperCase(accessorName.charAt(0)) + accessorName.substring(1);
+    MethodSpec.Builder method =
+        MethodSpec.methodBuilder(getterName)
+            .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+            .addParameter(
+                ParameterSpec.builder(IBASE_HAS_EXTENSIONS_TYPE.annotated(NONNULL), "resource")
+                    .build());
+
+    if (valueType.fhirTypeCode() != null && !valueType.choice()) {
+      ClassName valueClass = hapiTypeFor(valueType.fhirTypeCode());
+      return method
+          .returns(valueClass.annotated(NULLABLE))
+          .addJavadoc(
+              """
+              Gets the value of extension {@code $L} from {@code resource}, or {@code null} if absent.
+
+              @param resource the resource or element to read from
+              @return the extension value, or {@code null}
+              """,
+              url)
+          .beginControlFlow("for (var e : resource.getExtension())")
+          .beginControlFlow("if ($S.equals(e.getUrl()))", url)
+          .addStatement("return ($T) (($T) e).getValue()", valueClass, EXTENSION_TYPE)
+          .endControlFlow()
+          .endControlFlow()
+          .addStatement("return null")
+          .build();
+    }
+    return method
+        .returns(EXTENSION_TYPE.annotated(NULLABLE))
+        .addJavadoc(
+            """
+            Gets the extension {@code $L} from {@code resource}, or {@code null} if absent.
+
+            @param resource the resource or element to read from
+            @return the extension, or {@code null}
+            """,
+            url)
+        .beginControlFlow("for (var e : resource.getExtension())")
+        .beginControlFlow("if ($S.equals(e.getUrl()))", url)
+        .addStatement("return ($T) e", EXTENSION_TYPE)
+        .endControlFlow()
+        .endControlFlow()
+        .addStatement("return null")
         .build();
   }
 

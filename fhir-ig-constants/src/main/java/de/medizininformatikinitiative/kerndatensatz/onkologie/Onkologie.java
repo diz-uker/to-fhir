@@ -3,6 +3,7 @@
 package de.medizininformatikinitiative.kerndatensatz.onkologie;
 
 import java.util.Optional;
+import org.hl7.fhir.instance.model.api.IBaseHasExtensions;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.Extension;
@@ -7144,6 +7145,273 @@ public final class Onkologie {
       return new Extension(
           "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix",
           new CodeableConcept(value.coding()));
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoHistologyMorphologyBehaviorIcdo3(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoOperationIntention(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoOperationUrgency(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoStrahlentherapieBestrahlungBoost(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Quantity getMiiExOnkoStrahlentherapieBestrahlungEinzeldosis(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis"
+            .equals(e.getUrl())) {
+          return (Quantity) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Quantity getMiiExOnkoStrahlentherapieBestrahlungGesamtdosis(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis"
+            .equals(e.getUrl())) {
+          return (Quantity) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept
+        getMiiExOnkoStrahlentherapieBestrahlungSeitenlokalisation(
+            @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoStrahlentherapieIntention(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoStrahlentherapieStellungzurop(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoSystemischeTherapieIntention(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoSystemischeTherapieStellungzurop(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoTnmCpPraefix(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoTnmItcSuffix(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-itc-suffix"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CodeableConcept getMiiExOnkoTnmSnSuffix(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix"
+            .equals(e.getUrl())) {
+          return (CodeableConcept) ((Extension) e).getValue();
+        }
+      }
+      return null;
     }
 
     public static final class Urls {

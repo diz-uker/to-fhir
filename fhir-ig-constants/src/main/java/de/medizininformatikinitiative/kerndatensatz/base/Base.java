@@ -3,6 +3,7 @@
 package de.medizininformatikinitiative.kerndatensatz.base;
 
 import java.util.Optional;
+import org.hl7.fhir.instance.model.api.IBaseHasExtensions;
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.Extension;
 import org.jspecify.annotations.NonNull;
@@ -231,6 +232,25 @@ public final class Base {
       return new Extension(
           "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht",
           value);
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Coding getMiiExProzedurDurchfuehrungsabsicht(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht"
+            .equals(e.getUrl())) {
+          return (Coding) ((Extension) e).getValue();
+        }
+      }
+      return null;
     }
 
     public static final class Urls {

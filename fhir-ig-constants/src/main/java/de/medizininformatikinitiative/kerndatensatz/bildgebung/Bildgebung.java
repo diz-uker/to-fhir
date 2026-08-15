@@ -3,6 +3,7 @@
 package de.medizininformatikinitiative.kerndatensatz.bildgebung;
 
 import java.util.Optional;
+import org.hl7.fhir.instance.model.api.IBaseHasExtensions;
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.Extension;
 import org.hl7.fhir.r4.model.IdType;
@@ -998,6 +999,234 @@ public final class Bildgebung {
       return new Extension(
           "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid",
           value);
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable StringType getMiiExBildgebungBildgebungsgrund(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund"
+            .equals(e.getUrl())) {
+          return (StringType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungInstanzDetails(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-instanz-details"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungKontrastmittel(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-kontrastmittel"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungModalitaetCt(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-ct"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungModalitaetMgCrDx(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mg-cr-dx"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungModalitaetMr(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-mr"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungModalitaetNm(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-nm"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungModalitaetPt(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-pt"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExBildgebungModalitaetUs(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Quantity getMiiExBildgebungSerieSchichtdicke(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke"
+            .equals(e.getUrl())) {
+          return (Quantity) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable IdType getMiiExBildgebungSerieUid(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid"
+            .equals(e.getUrl())) {
+          return (IdType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable IdType getMiiExBildgebungSopInstanzUid(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid"
+            .equals(e.getUrl())) {
+          return (IdType) ((Extension) e).getValue();
+        }
+      }
+      return null;
     }
 
     public static final class Urls {

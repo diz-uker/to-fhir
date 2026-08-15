@@ -2,9 +2,11 @@
 // Do not edit directly.
 package de.medizininformatikinitiative.kerndatensatz.laborbefund;
 
+import org.hl7.fhir.instance.model.api.IBaseHasExtensions;
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.Extension;
 import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public final class Laborbefund {
   private Laborbefund() {}
@@ -78,6 +80,44 @@ public final class Laborbefund {
       return new Extension(
           "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum",
           value);
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Coding getMiiExLaborInterpretationsbeeinflussendeEigenschaft(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft"
+            .equals(e.getUrl())) {
+          return (Coding) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Coding getMiiExLaborQuelleKlinischesBezugsdatum(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum"
+            .equals(e.getUrl())) {
+          return (Coding) ((Extension) e).getValue();
+        }
+      }
+      return null;
     }
 
     public static final class Urls {

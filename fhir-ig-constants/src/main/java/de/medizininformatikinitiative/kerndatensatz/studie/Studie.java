@@ -3,6 +3,7 @@
 package de.medizininformatikinitiative.kerndatensatz.studie;
 
 import java.util.Optional;
+import org.hl7.fhir.instance.model.api.IBaseHasExtensions;
 import org.hl7.fhir.r4.model.BooleanType;
 import org.hl7.fhir.r4.model.CanonicalType;
 import org.hl7.fhir.r4.model.Coding;
@@ -506,6 +507,328 @@ public final class Studie {
       return new Extension(
           "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister",
           value);
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable StringType getMiiExStudieAkronym(@NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym"
+            .equals(e.getUrl())) {
+          return (StringType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.associatedParty} from
+     * {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExStudieBackportAssociatedParty(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.associatedParty"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByCombination}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExStudieBackportDefinitionByCombination(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByCombination"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByTypeAndValue}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExStudieBackportDefinitionByTypeAndValue(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByTypeAndValue"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionCanonical}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable CanonicalType getMiiExStudieBackportDefinitionCanonical(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionCanonical"
+            .equals(e.getUrl())) {
+          return (CanonicalType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionReference}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Reference getMiiExStudieBackportDefinitionReference(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionReference"
+            .equals(e.getUrl())) {
+          return (Reference) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.label} from {@code
+     * resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExStudieBackportLabel(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.label"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.linkId}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable IdType getMiiExStudieBackportLinkId(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.linkId"
+            .equals(e.getUrl())) {
+          return (IdType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-eligibility}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Reference getMiiExStudieEligibility(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-eligibility"
+            .equals(e.getUrl())) {
+          return (Reference) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-ethikvotum}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExStudieEthikvotum(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-ethikvotum"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-finanzierung}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable StringType getMiiExStudieFinanzierung(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-finanzierung"
+            .equals(e.getUrl())) {
+          return (StringType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-quell-register}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable BooleanType getMiiExStudieQuellRegister(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-quell-register"
+            .equals(e.getUrl())) {
+          return (BooleanType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-randomisierungsmethode}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable StringType getMiiExStudieRandomisierungsmethode(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-randomisierungsmethode"
+            .equals(e.getUrl())) {
+          return (StringType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-rekrutierung}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension, or {@code null}
+     */
+    public static @Nullable Extension getMiiExStudieRekrutierung(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-rekrutierung"
+            .equals(e.getUrl())) {
+          return (Extension) e;
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-schlagwort}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable StringType getMiiExStudieSchlagwort(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-schlagwort"
+            .equals(e.getUrl())) {
+          return (StringType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienfokus}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable StringType getMiiExStudieStudienfokus(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienfokus"
+            .equals(e.getUrl())) {
+          return (StringType) ((Extension) e).getValue();
+        }
+      }
+      return null;
+    }
+
+    /**
+     * Gets the value of extension {@code
+     * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister}
+     * from {@code resource}, or {@code null} if absent.
+     *
+     * @param resource the resource or element to read from
+     * @return the extension value, or {@code null}
+     */
+    public static @Nullable Reference getMiiExStudieStudienregister(
+        @NonNull IBaseHasExtensions resource) {
+      for (var e : resource.getExtension()) {
+        if ("https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister"
+            .equals(e.getUrl())) {
+          return (Reference) ((Extension) e).getValue();
+        }
+      }
+      return null;
     }
 
     public static final class Urls {

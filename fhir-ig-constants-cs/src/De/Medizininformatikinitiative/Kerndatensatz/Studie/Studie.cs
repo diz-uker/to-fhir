@@ -457,9 +457,9 @@ public static class ResearchStudyCategoryCsExtensions
 /// <summary>Extension methods for reading <see cref="Studie.Extensions"/> from FHIR resources.</summary>
 public static class StudieFhirExtensions
 {
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieAkronym(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static FhirString? GetMiiExStudieAkronym(this IExtendable resource) =>
+        resource.GetExtensionValue<FhirString>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym"
         );
 
@@ -485,15 +485,17 @@ public static class StudieFhirExtensions
             "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionByTypeAndValue"
         );
 
-    /// <summary>Gets the extension <c>http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionCanonical</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieBackportDefinitionCanonical(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionCanonical</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Canonical? GetMiiExStudieBackportDefinitionCanonical(this IExtendable resource) =>
+        resource.GetExtensionValue<Canonical>(
             "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionCanonical"
         );
 
-    /// <summary>Gets the extension <c>http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionReference</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieBackportDefinitionReference(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionReference</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static ResourceReference? GetMiiExStudieBackportDefinitionReference(
+        this IExtendable resource
+    ) =>
+        resource.GetExtensionValue<ResourceReference>(
             "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.definitionReference"
         );
 
@@ -503,15 +505,15 @@ public static class StudieFhirExtensions
             "http://hl7.org/fhir/5.0/StructureDefinition/extension-ResearchStudy.label"
         );
 
-    /// <summary>Gets the extension <c>http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.linkId</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieBackportLinkId(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.linkId</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Id? GetMiiExStudieBackportLinkId(this IExtendable resource) =>
+        resource.GetExtensionValue<Id>(
             "http://hl7.org/fhir/5.0/StructureDefinition/extension-EvidenceVariable.characteristic.linkId"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-eligibility</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieEligibility(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-eligibility</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static ResourceReference? GetMiiExStudieEligibility(this IExtendable resource) =>
+        resource.GetExtensionValue<ResourceReference>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-eligibility"
         );
 
@@ -521,21 +523,21 @@ public static class StudieFhirExtensions
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-ethikvotum"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-finanzierung</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieFinanzierung(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-finanzierung</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static FhirString? GetMiiExStudieFinanzierung(this IExtendable resource) =>
+        resource.GetExtensionValue<FhirString>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-finanzierung"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-quell-register</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieQuellRegister(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-quell-register</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static FhirBoolean? GetMiiExStudieQuellRegister(this IExtendable resource) =>
+        resource.GetExtensionValue<FhirBoolean>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-quell-register"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-randomisierungsmethode</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieRandomisierungsmethode(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-randomisierungsmethode</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static FhirString? GetMiiExStudieRandomisierungsmethode(this IExtendable resource) =>
+        resource.GetExtensionValue<FhirString>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-randomisierungsmethode"
         );
 
@@ -545,21 +547,21 @@ public static class StudieFhirExtensions
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-rekrutierung"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-schlagwort</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieSchlagwort(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-schlagwort</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static FhirString? GetMiiExStudieSchlagwort(this IExtendable resource) =>
+        resource.GetExtensionValue<FhirString>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-schlagwort"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienfokus</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieStudienfokus(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienfokus</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static FhirString? GetMiiExStudieStudienfokus(this IExtendable resource) =>
+        resource.GetExtensionValue<FhirString>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienfokus"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExStudieStudienregister(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static ResourceReference? GetMiiExStudieStudienregister(this IExtendable resource) =>
+        resource.GetExtensionValue<ResourceReference>(
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-studienregister"
         );
 }

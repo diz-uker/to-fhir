@@ -171,9 +171,9 @@ public static class MiiCsPersonVitalstatusExtensions
 /// <summary>Extension methods for reading <see cref="Base.Extensions"/> from FHIR resources.</summary>
 public static class BaseFhirExtensions
 {
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExProzedurDurchfuehrungsabsicht(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Coding? GetMiiExProzedurDurchfuehrungsabsicht(this IExtendable resource) =>
+        resource.GetExtensionValue<Coding>(
             "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht"
         );
 }

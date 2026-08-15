@@ -1239,9 +1239,9 @@ public static class MiiCsBildgebungTransducerTypeExtensions
 /// <summary>Extension methods for reading <see cref="Bildgebung.Extensions"/> from FHIR resources.</summary>
 public static class BildgebungFhirExtensions
 {
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExBildgebungBildgebungsgrund(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static FhirString? GetMiiExBildgebungBildgebungsgrund(this IExtendable resource) =>
+        resource.GetExtensionValue<FhirString>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund"
         );
 
@@ -1293,21 +1293,21 @@ public static class BildgebungFhirExtensions
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-modalitaet-us"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExBildgebungSerieSchichtdicke(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Quantity? GetMiiExBildgebungSerieSchichtdicke(this IExtendable resource) =>
+        resource.GetExtensionValue<Quantity>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-serie-schichtdicke"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExBildgebungSerieUid(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Id? GetMiiExBildgebungSerieUid(this IExtendable resource) =>
+        resource.GetExtensionValue<Id>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-series-uid"
         );
 
-    /// <summary>Gets the extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
-    public static Extension? GetMiiExBildgebungSopInstanzUid(this IExtendable resource) =>
-        resource.GetExtension(
+    /// <summary>Gets the value of extension <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid</c> from <paramref name="resource"/>, or <c>null</c> if absent.</summary>
+    public static Id? GetMiiExBildgebungSopInstanzUid(this IExtendable resource) =>
+        resource.GetExtensionValue<Id>(
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-sop-instanz-uid"
         );
 }
