@@ -493,11 +493,6 @@ public final class JavaConstantsGenerator {
         nsClass.addJavadoc("$L\n", ns.description());
       }
 
-      TypeSpec.Builder uniqueIdClass =
-          TypeSpec.classBuilder("UniqueId")
-              .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-              .addMethod(privateConstructor());
-
       for (Map.Entry<String, List<String>> typeEntry : ns.byType().entrySet()) {
         String typeName = typeEntry.getKey();
         List<String> values = typeEntry.getValue();
@@ -528,10 +523,9 @@ public final class JavaConstantsGenerator {
           method.addStatement(fmt.toString(), args);
         }
 
-        uniqueIdClass.addMethod(method.build());
+        nsClass.addMethod(method.build());
       }
 
-      nsClass.addType(uniqueIdClass.build());
       nestedType.addType(nsClass.build());
     }
 
