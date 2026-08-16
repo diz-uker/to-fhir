@@ -48,11 +48,11 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.14"
 
 ## Development
 
-### Generating C# FHIR IG constants
+### Generating FHIR IG constants
 
-The generated C# constant classes live in `fhir-ig-constants-cs/src/`.
-They are produced from `fhir-ig-constants/package.json` by the `ig-codegen-cs` tool
-and must be re-generated whenever the package manifest or the codegen itself changes.
+The generated constant classes in `fhir-ig-constants/src/main/java/` (Java) and
+`fhir-ig-constants-cs/src/` (C#) are produced from `fhir-ig-constants/package.json`
+and must be re-generated whenever the package manifest or the codegen tools change.
 
 **1. Install FHIR packages**
 
@@ -60,7 +60,15 @@ and must be re-generated whenever the package manifest or the codegen itself cha
 cd fhir-ig-constants && npm install
 ```
 
-**2. Re-generate and format**
+**2a. Re-generate Java**
+
+```sh
+./gradlew :fhir-ig-constants:generateIgConstants
+```
+
+Spotless formatting is applied automatically. Review the diff, then commit.
+
+**2b. Re-generate C#**
 
 ```sh
 dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants
@@ -70,7 +78,7 @@ dotnet tool restore && dotnet csharpier format fhir-ig-constants-cs/src/
 Review the diff, then commit. The `fhir-ig-constants.yaml` CI workflow fails if the
 checked-in files are out of date or not formatted.
 
-Alternatively, invoke the tool directly (useful if you want to point at a different
+Alternatively, invoke the C# tool directly (useful if you want to point at a different
 packages directory):
 
 ```sh

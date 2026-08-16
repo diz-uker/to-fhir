@@ -450,7 +450,7 @@ public class CSharpConstantsGeneratorTests
 
         Assert.Contains("public static class NamingSystems", source);
         Assert.Contains("public static class EligibilityObservationId", source);
-        Assert.Contains("public static class UniqueId", source);
+        Assert.DoesNotContain("public static class UniqueId", source);
         Assert.Contains("public static string Uri =>", source);
         Assert.Contains("\"https://example.org/identifiers/eid\";", source);
     }
