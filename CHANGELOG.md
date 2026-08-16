@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.15](https://github.com/diz-uker/to-fhir/compare/v0.2.14...v0.2.15) (2026-08-16)
+
+
+### Bug Fixes
+
+* drop uniqueid wrapper in c# code and generate without utf8 BOM ([#81](https://github.com/diz-uker/to-fhir/issues/81)) ([0427f7b](https://github.com/diz-uker/to-fhir/commit/0427f7bf17dcb0a64906d86475c63018f0eb1fd6))
+
 ## [0.2.14](https://github.com/diz-uker/to-fhir/compare/v0.2.13...v0.2.14) (2026-08-15)
 
 
