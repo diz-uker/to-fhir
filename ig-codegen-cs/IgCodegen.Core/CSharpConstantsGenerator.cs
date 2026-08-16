@@ -109,7 +109,7 @@ public static class CSharpConstantsGenerator
         string dir = Path.Combine(outputDir, namespacePath);
         Directory.CreateDirectory(dir);
         string path = Path.Combine(dir, $"{className}.cs");
-        File.WriteAllText(path, source, Encoding.UTF8);
+        File.WriteAllText(path, source, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false));
         return path;
     }
 
@@ -450,37 +450,33 @@ public static class CSharpConstantsGenerator
                 w.Line($"public static class {className}");
                 w.Block(() =>
                 {
-                    w.Line("public static class UniqueId");
-                    w.Block(() =>
+                    bool firstType = true;
+                    foreach (var (type, values) in entry.ByType)
                     {
-                        bool firstType = true;
-                        foreach (var (type, values) in entry.ByType)
-                        {
-                            if (!firstType)
-                                w.Line();
-                            firstType = false;
+                        if (!firstType)
+                            w.Line();
+                        firstType = false;
 
-                            string propertyName = char.ToUpperInvariant(type[0]) + type[1..];
-                            if (values.Count == 1)
-                            {
-                                w.Line($"/// <summary><c>{XmlEscape(values[0])}</c></summary>");
-                                w.Line($"public static string {propertyName} =>");
-                                w.Indent(() => w.Line($"\"{EscapeString(values[0])}\";"));
-                            }
-                            else
-                            {
-                                w.Line(
-                                    $"/// <summary>All {XmlEscape(type)} unique identifiers.</summary>"
-                                );
-                                var literals = string.Join(
-                                    ", ",
-                                    values.Select(v => $"\"{EscapeString(v)}\"")
-                                );
-                                w.Line($"public static IReadOnlyList<string> {propertyName} =>");
-                                w.Indent(() => w.Line($"[{literals}];"));
-                            }
+                        string propertyName = char.ToUpperInvariant(type[0]) + type[1..];
+                        if (values.Count == 1)
+                        {
+                            w.Line($"/// <summary><c>{XmlEscape(values[0])}</c></summary>");
+                            w.Line($"public static string {propertyName} =>");
+                            w.Indent(() => w.Line($"\"{EscapeString(values[0])}\";"));
                         }
-                    });
+                        else
+                        {
+                            w.Line(
+                                $"/// <summary>All {XmlEscape(type)} unique identifiers.</summary>"
+                            );
+                            var literals = string.Join(
+                                ", ",
+                                values.Select(v => $"\"{EscapeString(v)}\"")
+                            );
+                            w.Line($"public static IReadOnlyList<string> {propertyName} =>");
+                            w.Indent(() => w.Line($"[{literals}];"));
+                        }
+                    }
                 });
             }
         });
