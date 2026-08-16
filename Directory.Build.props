@@ -2,7 +2,7 @@
   <PropertyGroup>
     <!-- version managed by release-please -->
     <!-- x-release-please-start-version -->
-    <Version>0.2.14</Version>
+    <Version>0.2.15</Version>
     <!-- x-release-please-end -->
 
     <Authors>diz-uker contributors</Authors>
