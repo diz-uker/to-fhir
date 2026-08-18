@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.16](https://github.com/diz-uker/to-fhir/compare/v0.2.15...v0.2.16) (2026-08-18)
+
+
+### Features
+
+* adds createReferenceTo(Identifier) in ReferenceUtils ([#84](https://github.com/diz-uker/to-fhir/issues/84)) ([456aa95](https://github.com/diz-uker/to-fhir/commit/456aa9515458aed02d648113ca8dad5a1daf5f50))
+
 ## [0.2.15](https://github.com/diz-uker/to-fhir/compare/v0.2.14...v0.2.15) (2026-08-16)
 
 
