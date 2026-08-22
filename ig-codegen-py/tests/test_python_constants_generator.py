@@ -1,4 +1,5 @@
 """Tests for python_constants_generator — verifies generated source structure."""
+
 from __future__ import annotations
 
 from ig_codegen.ig_package_model import (

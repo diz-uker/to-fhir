@@ -7,12 +7,16 @@ on:
       - "fhir-ig-constants/package.json"
       - "ig-codegen/src/main/java/**"
       - "ig-codegen-cs/**"
+      - "ig-codegen-py/src/**"
+      - "fhir-ig-constants-py/**"
   push:
     branches: [master]
     paths:
       - "fhir-ig-constants/package.json"
       - "ig-codegen/src/main/java/**"
       - "ig-codegen-cs/**"
+      - "ig-codegen-py/src/**"
+      - "fhir-ig-constants-py/**"
   workflow_dispatch: {}
 
 permissions:
@@ -91,5 +95,28 @@ jobs:
         run: |
           if ! git diff --exit-code -- fhir-ig-constants-cs/src/; then
             echo "::error::Generated C# FHIR IG constants are out of date. Run 'cd fhir-ig-constants && npm install && cd .. && dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants && dotnet csharpier format fhir-ig-constants-cs/src/' locally, review the diff, and commit the result."
+            exit 1
+          fi
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+
+      - name: Regenerate Python FHIR IG constants
+        run: |
+          cd ig-codegen-py
+          uv run ig-codegen \
+            ../fhir-ig-constants/package.json \
+            ../fhir-ig-constants/node_modules \
+            ../fhir-ig-constants-py/src/
+          uv run ruff format \
+            --config ../fhir-ig-constants-py/pyproject.toml \
+            ../fhir-ig-constants-py/src/
+
+      - name: Fail if Python generated code is out of date
+        run: |
+          if ! git diff --exit-code -- fhir-ig-constants-py/src/; then
+            echo "::error::Generated Python FHIR IG constants are out of date. Run 'cd ig-codegen-py && uv run ig-codegen ../fhir-ig-constants/package.json ../fhir-ig-constants/node_modules ../fhir-ig-constants-py/src/ && uv run ruff format --config ../fhir-ig-constants-py/pyproject.toml ../fhir-ig-constants-py/src/' locally, review the diff, and commit the result."
             exit 1
           fi

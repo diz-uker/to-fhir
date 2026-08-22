@@ -1,4 +1,5 @@
 """Converts FHIR resource ids (kebab-case or PascalCase) into Python identifier names."""
+
 from __future__ import annotations
 
 import re

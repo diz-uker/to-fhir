@@ -114,6 +114,42 @@ jobs:
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
 
+  # python:
+  #   name: python
+  #   runs-on: ubuntu-24.04
+  #   permissions:
+  #     contents: read
+  #     id-token: write # for PyPI Trusted Publishing on release
+  #   steps:
+  #     - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+  #       with:
+  #         persist-credentials: false
+
+  #     - name: Set up uv
+  #       uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+  #       with:
+  #         enable-cache: true
+
+  #     - name: Test ig-codegen-py
+  #       working-directory: ig-codegen-py
+  #       run: uv run pytest
+
+  #     - name: Lint ig-codegen-py
+  #       working-directory: ig-codegen-py
+  #       run: |
+  #         uv run ruff check src/ tests/
+  #         uv run ruff format --check src/ tests/
+
+  #     - name: Build fhir-ig-constants-py
+  #       working-directory: fhir-ig-constants-py
+  #       run: uv build
+
+  #     - name: Publish fhir-ig-constants-py to PyPI
+  #       if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
+  #       uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+  #       with:
+  #         packages-dir: fhir-ig-constants-py/dist/
+
   lint:
     uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
     permissions:

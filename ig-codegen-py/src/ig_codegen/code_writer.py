@@ -1,4 +1,5 @@
 """Lightweight indentation-tracking string builder for Python code generation."""
+
 from __future__ import annotations
 
 from collections.abc import Callable

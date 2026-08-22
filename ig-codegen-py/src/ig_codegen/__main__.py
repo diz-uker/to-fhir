@@ -1,4 +1,5 @@
 """CLI entry point: generates Python FHIR IG constants from a package.json manifest."""
+
 from __future__ import annotations
 
 import argparse

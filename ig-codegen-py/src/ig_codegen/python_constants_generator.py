@@ -12,6 +12,7 @@ taking a _HasExtensions Protocol instance.
 
 NamingSystems get a nested class per NamingSystem with type-keyed string attributes.
 """
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -311,6 +312,7 @@ def _write_extension_factory(
     if bound_enum is not None:
         param_type = f"{class_name}.CodeSystems.{bound_enum}"
         if value_type.fhir_type_code == "CodeableConcept":
+
             def bound_cc_body() -> None:
                 w.line(f'"""A new Extension for {url}."""')
                 w.line(
@@ -321,6 +323,7 @@ def _write_extension_factory(
             w.line("@staticmethod")
             w.block(f"def {method_name}(value: {param_type}) -> Extension", bound_cc_body)
         else:
+
             def bound_coding_body() -> None:
                 w.line(f'"""A new Extension for {url}."""')
                 w.line(f'return Extension(url="{_esc(url)}", valueCoding=value.coding())')
@@ -367,6 +370,7 @@ def _write_extension_getter(
             typed_getter_body,
         )
     else:
+
         def ext_getter_body() -> None:
             w.line(f'"""Gets the extension {url} from resource, or None if absent."""')
 

@@ -22,6 +22,10 @@
         {
           "type": "generic",
           "path": "Directory.Build.props"
+        },
+        {
+          "type": "generic",
+          "path": "fhir-ig-constants-py/pyproject.toml"
         }
       ]
     }

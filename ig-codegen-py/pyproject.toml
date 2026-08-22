@@ -25,6 +25,9 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
+[tool.bandit]
+exclude_dirs = ["tests"]
+
 [tool.ruff]
 target-version = "py312"
 line-length = 100

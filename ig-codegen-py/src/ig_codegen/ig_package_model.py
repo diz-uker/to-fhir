@@ -1,4 +1,5 @@
 """Data model for a scanned FHIR IG package."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

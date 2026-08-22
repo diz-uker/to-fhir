@@ -1,4 +1,5 @@
 """Scans a FHIR package directory and classifies its resources into an IgPackageModel."""
+
 from __future__ import annotations
 
 import json

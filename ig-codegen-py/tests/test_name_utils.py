@@ -1,4 +1,5 @@
 """Tests for name_utils — the FHIR-id-to-Python-name conversion utilities."""
+
 from __future__ import annotations
 
 from ig_codegen.name_utils import (

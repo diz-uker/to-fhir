@@ -25,7 +25,7 @@ wheels = [
 
 [[package]]
 name = "fhir-ig-constants"
-version = "0.1.0"
+version = "0.2.16"
 source = { editable = "." }
 dependencies = [
     { name = "fhir-resources" },
