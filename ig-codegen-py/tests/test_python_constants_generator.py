@@ -12,18 +12,16 @@ from ig_codegen.python_constants_generator import generate
 
 
 def _make_model(**overrides) -> IgPackageModel:
-    defaults = dict(
-        package_name="de.example.test",
-        package_version="1.0.0",
-        code_systems={},
-        profiles={},
-        extensions={},
-        code_system_concepts={},
-        extension_value_types={},
-        naming_systems={},
+    return IgPackageModel(
+        package_name=overrides.get("package_name", "de.example.test"),
+        package_version=overrides.get("package_version", "1.0.0"),
+        code_systems=overrides.get("code_systems", {}),
+        profiles=overrides.get("profiles", {}),
+        extensions=overrides.get("extensions", {}),
+        code_system_concepts=overrides.get("code_system_concepts", {}),
+        extension_value_types=overrides.get("extension_value_types", {}),
+        naming_systems=overrides.get("naming_systems", {}),
     )
-    defaults.update(overrides)
-    return IgPackageModel(**defaults)
 
 
 class TestGenerateHeader:
