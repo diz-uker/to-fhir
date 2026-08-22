@@ -50,9 +50,10 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.16"
 
 ### Generating FHIR IG constants
 
-The generated constant classes in `fhir-ig-constants/src/main/java/` (Java) and
-`fhir-ig-constants-cs/src/` (C#) are produced from `fhir-ig-constants/package.json`
-and must be re-generated whenever the package manifest or the codegen tools change.
+The generated constant classes in `fhir-ig-constants/src/main/java/` (Java),
+`fhir-ig-constants-cs/src/` (C#), and `fhir-ig-constants-py/src/` (Python) are all
+produced from `fhir-ig-constants/package.json` and must be re-generated whenever the
+package manifest or the codegen tools change.
 
 **1. Install FHIR packages**
 
@@ -75,18 +76,20 @@ dotnet msbuild fhir-ig-constants-cs -t:GenerateIgConstants
 dotnet tool restore && dotnet csharpier format fhir-ig-constants-cs/src/
 ```
 
-Review the diff, then commit. The `fhir-ig-constants.yaml` CI workflow fails if the
-checked-in files are out of date or not formatted.
-
-Alternatively, invoke the C# tool directly (useful if you want to point at a different
-packages directory):
+**2c. Re-generate Python**
 
 ```sh
-dotnet run --project ig-codegen-cs/IgCodegen/IgCodegen.csproj -- \
-  fhir-ig-constants/package.json \
-  fhir-ig-constants/node_modules \
-  fhir-ig-constants-cs/src/
+cd ig-codegen-py
+uv run ig-codegen \
+  ../fhir-ig-constants/package.json \
+  ../fhir-ig-constants/node_modules \
+  ../fhir-ig-constants-py/src/
+uv run ruff format \
+  --config ../fhir-ig-constants-py/pyproject.toml \
+  ../fhir-ig-constants-py/src/
 ```
+
+Review the diff, then commit.
 
 ### Snapshot testing
 

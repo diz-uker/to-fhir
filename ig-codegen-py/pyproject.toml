@@ -1,0 +1,37 @@
+[project]
+name = "ig-codegen"
+version = "0.1.0"
+description = "Python FHIR IG constants code generator"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+ig-codegen = "ig_codegen.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ig_codegen"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
+    "ty>=0.0.1a8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "N", "RUF"]
+ignore = [
+    "N801",  # class names in generated code may not follow PEP 8
+    "N802",  # function names in generated code may not follow PEP 8
+]
