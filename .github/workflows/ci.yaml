@@ -114,41 +114,63 @@ jobs:
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
 
-  # python:
-  #   name: python
-  #   runs-on: ubuntu-24.04
-  #   permissions:
-  #     contents: read
-  #     id-token: write # for PyPI Trusted Publishing on release
-  #   steps:
-  #     - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
-  #       with:
-  #         persist-credentials: false
+  python:
+    name: python
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
 
-  #     - name: Set up uv
-  #       uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
-  #       with:
-  #         enable-cache: true
+      - name: Set up uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
 
-  #     - name: Test ig-codegen-py
-  #       working-directory: ig-codegen-py
-  #       run: uv run pytest
+      - name: Test ig-codegen-py
+        working-directory: ig-codegen-py
+        run: uv run pytest
 
-  #     - name: Lint ig-codegen-py
-  #       working-directory: ig-codegen-py
-  #       run: |
-  #         uv run ruff check src/ tests/
-  #         uv run ruff format --check src/ tests/
+      - name: Lint ig-codegen-py
+        working-directory: ig-codegen-py
+        run: |
+          uv run ruff check src/ tests/
+          uv run ruff format --check src/ tests/
 
-  #     - name: Build fhir-ig-constants-py
-  #       working-directory: fhir-ig-constants-py
-  #       run: uv build
+      - name: Build fhir-ig-constants-py
+        working-directory: fhir-ig-constants-py
+        run: uv build
 
-  #     - name: Publish fhir-ig-constants-py to PyPI
-  #       if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
-  #       uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
-  #       with:
-  #         packages-dir: fhir-ig-constants-py/dist/
+      - name: Upload fhir-ig-constants-py dist
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: fhir-ig-constants-py-dist
+          path: fhir-ig-constants-py/dist/
+
+  python-publish:
+    name: python-publish
+    needs: python
+    if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: pypi
+      url: https://pypi.org/project/fhir-ig-constants/
+    permissions:
+      contents: read
+      id-token: write # for PyPI Trusted Publishing on release
+    steps:
+      - name: Download fhir-ig-constants-py dist
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: fhir-ig-constants-py-dist
+          path: fhir-ig-constants-py/dist/
+
+      - name: Publish fhir-ig-constants-py to PyPI
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+        with:
+          packages-dir: fhir-ig-constants-py/dist/
 
   lint:
     uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
