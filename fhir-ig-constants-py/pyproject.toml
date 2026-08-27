@@ -1,6 +1,6 @@
 [project]
 name = "fhir-ig-constants"
-version = "0.2.17"  # x-release-please-version
+version = "0.2.18"  # x-release-please-version
 description = "Generated Python constant classes for the canonical URLs of a set of FHIR Implementation Guides, via ig-codegen."
 requires-python = ">=3.12"
 dependencies = [
