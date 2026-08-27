@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.18](https://github.com/diz-uker/to-fhir/compare/v0.2.17...v0.2.18) (2026-08-27)
+
+
+### Bug Fixes
+
+* migrate to MS Test Platform ([#91](https://github.com/diz-uker/to-fhir/issues/91)) ([3e2db45](https://github.com/diz-uker/to-fhir/commit/3e2db454f0fba7339ba98761508e6eb006877e57))
+
 ## [0.2.17](https://github.com/diz-uker/to-fhir/compare/v0.2.16...v0.2.17) (2026-08-22)
 
 

@@ -10,7 +10,7 @@ plugins {
 
 allprojects {
     group = 'io.github.diz-uker'
-    version = '0.2.17' // x-release-please-version
+    version = '0.2.18' // x-release-please-version
 
     repositories {
         mavenCentral()
