@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/ig-codegen-cs/">
+    <Project Path="ig-codegen-cs/IgCodegen.Core/IgCodegen.Core.csproj" />
+    <Project Path="ig-codegen-cs/IgCodegen.Tests/IgCodegen.Tests.csproj" />
+    <Project Path="ig-codegen-cs/IgCodegen/IgCodegen.csproj" />
+  </Folder>
+  <Project Path="fhir-ig-constants-cs/fhir-ig-constants-cs.csproj" />
+</Solution>

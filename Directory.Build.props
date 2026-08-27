@@ -18,10 +18,13 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <!-- Fail restore if packages.lock.json is missing or out of date with the resolved graph. -->
+    <RestoreLockedMode>true</RestoreLockedMode>
   </PropertyGroup>
 
   <!-- Only apply packaging extras to packable projects. -->
