@@ -2,7 +2,7 @@
   "resourceType": "Bundle",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "Patient/test-patient",
+    "fullUrl": "urn:uuid:7398ec92-de77-3652-95a4-3b9956adf85a",
     "resource": {
       "resourceType": "Patient",
       "id": "test-patient",

@@ -2,7 +2,7 @@
   "resourceType": "Bundle",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
+    "fullUrl": "urn:uuid:46637e51-2dcd-304c-9e5d-14490f279f6c",
     "resource": {
       "resourceType": "Provenance",
       "id": "72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",

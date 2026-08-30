@@ -3,7 +3,7 @@
   "id": "739458d8024f393b28fe690194a1c4610cb6d3f92a449cfcd6b8ae5f08bbbe34",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "Device/the-etl-job",
+    "fullUrl": "urn:uuid:a786c160-e29a-36ef-8fb2-a39303568bdc",
     "resource": {
       "resourceType": "Device",
       "id": "the-etl-job"
@@ -13,7 +13,7 @@
       "url": "Device/the-etl-job"
     }
   }, {
-    "fullUrl": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
+    "fullUrl": "urn:uuid:46637e51-2dcd-304c-9e5d-14490f279f6c",
     "resource": {
       "resourceType": "Provenance",
       "id": "72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
@@ -64,7 +64,7 @@
       "url": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027"
     }
   }, {
-    "fullUrl": "Provenance/859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",
+    "fullUrl": "urn:uuid:68cedb7e-f49c-320a-878b-0de6d1a00ce1",
     "resource": {
       "resourceType": "Provenance",
       "id": "859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",

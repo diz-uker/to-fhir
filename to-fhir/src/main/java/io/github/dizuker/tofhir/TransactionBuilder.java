@@ -1,5 +1,6 @@
 package io.github.dizuker.tofhir;
 
+import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,6 +8,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
@@ -53,6 +55,11 @@ public class TransactionBuilder {
 
   private boolean isProvenanceEnabled() {
     return provenanceWho != null && provenanceWhat != null;
+  }
+
+  private static String buildFullUrl(String reference) {
+    var uuid = UUID.nameUUIDFromBytes(reference.getBytes(StandardCharsets.UTF_8));
+    return "urn:uuid:" + uuid;
   }
 
   /**
@@ -228,7 +235,7 @@ public class TransactionBuilder {
       bundle
           .addEntry()
           .setResource(resource)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -245,7 +252,7 @@ public class TransactionBuilder {
         bundle
             .addEntry()
             .setResource(provenanceDevice)
-            .setFullUrl(url)
+            .setFullUrl(buildFullUrl(url))
             .getRequest()
             .setMethod(HTTPVerb.PUT)
             .setUrl(url);
@@ -257,7 +264,7 @@ public class TransactionBuilder {
         bundle
             .addEntry()
             .setResource(provenance)
-            .setFullUrl(url)
+            .setFullUrl(buildFullUrl(url))
             .getRequest()
             .setMethod(HTTPVerb.PUT)
             .setUrl(url);
@@ -269,7 +276,7 @@ public class TransactionBuilder {
         bundle
             .addEntry()
             .setResource(provenance)
-            .setFullUrl(url)
+            .setFullUrl(buildFullUrl(url))
             .getRequest()
             .setMethod(HTTPVerb.PUT)
             .setUrl(url);
@@ -321,7 +328,7 @@ public class TransactionBuilder {
       dataBundle
           .addEntry()
           .setResource(resource)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -351,7 +358,7 @@ public class TransactionBuilder {
       provenanceBundle
           .addEntry()
           .setResource(provenanceDevice)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -363,7 +370,7 @@ public class TransactionBuilder {
       provenanceBundle
           .addEntry()
           .setResource(provenance)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -375,7 +382,7 @@ public class TransactionBuilder {
       provenanceBundle
           .addEntry()
           .setResource(provenance)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);

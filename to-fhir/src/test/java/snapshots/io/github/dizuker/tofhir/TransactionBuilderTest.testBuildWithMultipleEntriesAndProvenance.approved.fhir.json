@@ -3,7 +3,7 @@
   "id": "test-patient",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "Patient/test-patient",
+    "fullUrl": "urn:uuid:7398ec92-de77-3652-95a4-3b9956adf85a",
     "resource": {
       "resourceType": "Patient",
       "id": "test-patient",
@@ -17,7 +17,7 @@
       "url": "Patient/test-patient"
     }
   }, {
-    "fullUrl": "Observation/test-observation",
+    "fullUrl": "urn:uuid:0dc524ce-e3da-3e4d-960d-04e42be04219",
     "resource": {
       "resourceType": "Observation",
       "id": "test-observation",
@@ -38,7 +38,7 @@
       "url": "Observation/test-observation-to-delte-as-well"
     }
   }, {
-    "fullUrl": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
+    "fullUrl": "urn:uuid:46637e51-2dcd-304c-9e5d-14490f279f6c",
     "resource": {
       "resourceType": "Provenance",
       "id": "72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027",
@@ -88,7 +88,7 @@
       "url": "Provenance/72a49dcfe44238d38a37054baed82a21c9ce371505114c41eb4d0e21aec76027"
     }
   }, {
-    "fullUrl": "Provenance/859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",
+    "fullUrl": "urn:uuid:68cedb7e-f49c-320a-878b-0de6d1a00ce1",
     "resource": {
       "resourceType": "Provenance",
       "id": "859f41aa8223b2322e7f7e9f4b13c8ba1e1cf40d591f4ff1682f50553b099e92",
