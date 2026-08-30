@@ -143,6 +143,47 @@ class TransactionBuilderTest {
   }
 
   @Test
+  void testFullUrlIsRelativeReferenceByDefault() {
+    var patient = new Patient();
+    patient.setId("test-patient");
+
+    var bundle = new TransactionBuilder().addEntry(patient).build();
+
+    assertEquals("Patient/test-patient", bundle.getEntry().get(0).getFullUrl());
+  }
+
+  @Test
+  void testWithFullUrlBaseBuildsAbsoluteFullUrl() {
+    var patient = new Patient();
+    patient.setId("test-patient");
+
+    var bundle =
+        new TransactionBuilder()
+            .withFullUrlBase("https://example.org/fhir")
+            .addEntry(patient)
+            .build();
+
+    var entry = bundle.getEntry().get(0);
+    assertEquals("https://example.org/fhir/Patient/test-patient", entry.getFullUrl());
+    assertEquals("Patient/test-patient", entry.getRequest().getUrl());
+  }
+
+  @Test
+  void testWithFullUrlBaseHandlesTrailingSlash() {
+    var patient = new Patient();
+    patient.setId("test-patient");
+
+    var bundle =
+        new TransactionBuilder()
+            .withFullUrlBase("https://example.org/fhir/")
+            .addEntry(patient)
+            .build();
+
+    assertEquals(
+        "https://example.org/fhir/Patient/test-patient", bundle.getEntry().get(0).getFullUrl());
+  }
+
+  @Test
   void testChainedConfiguration() {
     var patient = new Patient();
     patient.setId("test-patient");

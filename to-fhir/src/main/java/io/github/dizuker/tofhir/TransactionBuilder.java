@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.apache.commons.lang3.Validate;
 import org.hl7.fhir.instance.model.api.IIdType;
 import org.hl7.fhir.r4.model.Bundle;
@@ -33,6 +34,7 @@ public class TransactionBuilder {
   private List<Resource> resources = new ArrayList<>();
   private List<Reference> resourcesToDelete = new ArrayList<>();
   private Optional<String> bundleId = Optional.empty();
+  private Optional<String> fullUrlBase = Optional.empty();
   private boolean failOnDuplicateEntries = false;
   private @Nullable Reference provenanceWho = null;
   private @Nullable Reference provenanceWhat = null;
@@ -53,6 +55,25 @@ public class TransactionBuilder {
 
   private boolean isProvenanceEnabled() {
     return provenanceWho != null && provenanceWhat != null;
+  }
+
+  /**
+   * Builds the {@code fullUrl} for a bundle entry from the resource's relative reference (e.g.
+   * {@code Patient/123}).
+   *
+   * <p>If a base URL has been configured via {@link #withFullUrlBase(String)}, the fullUrl is
+   * {@code <baseUrl>/<reference>} - an absolute, hierarchical URL, as required by the FHIR spec.
+   * Other resources in the bundle can still reference this entry using the plain relative
+   * reference, since Bundle reference resolution rules match a relative reference against the tail
+   * of such a fullUrl.
+   *
+   * <p>Otherwise, the relative reference itself is used, unchanged, as before.
+   *
+   * @param reference the resource's relative reference (e.g. {@code Patient/123})
+   * @return the fullUrl to use for the bundle entry
+   */
+  private String buildFullUrl(String reference) {
+    return this.fullUrlBase.map(base -> base + "/" + reference).orElse(reference);
   }
 
   /**
@@ -158,6 +179,22 @@ public class TransactionBuilder {
   }
 
   /**
+   * Sets an absolute base URL used to build each entry's fullUrl as {@code
+   * <baseUrl>/<ResourceType>/<id>}, making the fullUrl absolute as FHIR requires. Plain {@code
+   * ResourceType/id} references used elsewhere in the bundle (e.g. in a Provenance.target) still
+   * resolve correctly against it, since those match by the tail of a hierarchical fullUrl. The base
+   * URL does not need to be a real, dereferenceable server endpoint.
+   *
+   * @param baseUrl an absolute base URL, e.g. {@code https://example.org/fhir} (a trailing slash is
+   *     optional)
+   * @return this builder instance for chaining
+   */
+  public TransactionBuilder withFullUrlBase(String baseUrl) {
+    this.fullUrlBase = Optional.of(Strings.CS.removeEnd(baseUrl, "/"));
+    return this;
+  }
+
+  /**
    * Enables the inclusion of a Provenance resource in the transaction bundle, with the specified
    * `Provenance.entity.what` and `Provenance.agent.who` references. If the bundle contains both
    * delete and update/create entries, two Provenance resources wil be included.
@@ -228,7 +265,7 @@ public class TransactionBuilder {
       bundle
           .addEntry()
           .setResource(resource)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -245,7 +282,7 @@ public class TransactionBuilder {
         bundle
             .addEntry()
             .setResource(provenanceDevice)
-            .setFullUrl(url)
+            .setFullUrl(buildFullUrl(url))
             .getRequest()
             .setMethod(HTTPVerb.PUT)
             .setUrl(url);
@@ -257,7 +294,7 @@ public class TransactionBuilder {
         bundle
             .addEntry()
             .setResource(provenance)
-            .setFullUrl(url)
+            .setFullUrl(buildFullUrl(url))
             .getRequest()
             .setMethod(HTTPVerb.PUT)
             .setUrl(url);
@@ -269,7 +306,7 @@ public class TransactionBuilder {
         bundle
             .addEntry()
             .setResource(provenance)
-            .setFullUrl(url)
+            .setFullUrl(buildFullUrl(url))
             .getRequest()
             .setMethod(HTTPVerb.PUT)
             .setUrl(url);
@@ -321,7 +358,7 @@ public class TransactionBuilder {
       dataBundle
           .addEntry()
           .setResource(resource)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -351,7 +388,7 @@ public class TransactionBuilder {
       provenanceBundle
           .addEntry()
           .setResource(provenanceDevice)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -363,7 +400,7 @@ public class TransactionBuilder {
       provenanceBundle
           .addEntry()
           .setResource(provenance)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
@@ -375,7 +412,7 @@ public class TransactionBuilder {
       provenanceBundle
           .addEntry()
           .setResource(provenance)
-          .setFullUrl(url)
+          .setFullUrl(buildFullUrl(url))
           .getRequest()
           .setMethod(HTTPVerb.PUT)
           .setUrl(url);
