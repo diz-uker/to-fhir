@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.19](https://github.com/diz-uker/to-fhir/compare/v0.2.18...v0.2.19) (2026-08-31)
+
+
+### Features
+
+* option to set a fullUrl base url ([#94](https://github.com/diz-uker/to-fhir/issues/94)) ([63c7adc](https://github.com/diz-uker/to-fhir/commit/63c7adc73377acf5cbc6d57d645efa293fd9eebb))
+
 ## [0.2.18](https://github.com/diz-uker/to-fhir/compare/v0.2.17...v0.2.18) (2026-08-27)
 
 
