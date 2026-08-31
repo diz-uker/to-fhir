@@ -129,7 +129,7 @@
           "xunit.v3.runner.common": "[4.0.0]"
         }
       },
-      "io.github.diz-uker.ig-codegen-core": {
+      "DizUker.IgCodegen.Core": {
         "type": "Project"
       }
     }

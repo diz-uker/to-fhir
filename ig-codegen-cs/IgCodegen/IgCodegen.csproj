@@ -7,7 +7,7 @@
     <LangVersion>latest</LangVersion>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ig-codegen</ToolCommandName>
-    <PackageId>io.github.diz-uker.ig-codegen</PackageId>
+    <PackageId>DizUker.IgCodegen</PackageId>
     <Description>A code generator that turns FHIR IG package.json manifests into strongly-typed C# (and Java) constants for CodeSystem URLs, concept enums, profiles, extensions, and NamingSystems.</Description>
     <PackageTags>FHIR;HL7;codegen;dotnet-tool</PackageTags>
     <Optimize>true</Optimize>
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Scanner/generator library API — packed separately (io.github.diz-uker.ig-codegen-core)
+    <!-- Scanner/generator library API — packed separately (DizUker.IgCodegen.Core)
          since PackAsTool packages ship a tools/ payload only, with no lib/ assets a consumer could
          add as a PackageReference to call IgPackageScanner/CSharpConstantsGenerator directly. -->
     <ProjectReference Include="../IgCodegen.Core/IgCodegen.Core.csproj" />

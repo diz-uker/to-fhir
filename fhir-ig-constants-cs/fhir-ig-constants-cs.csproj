@@ -4,7 +4,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
-    <PackageId>io.github.diz-uker.fhir-ig-constants</PackageId>
+    <PackageId>DizUker.FhirIgConstants</PackageId>
     <Description>Pre-generated FHIR IG constants for the MII Kerndatensatz — canonical CodeSystem/Profile/Extension URLs, coded concept enums with Firely SDK Coding/CodeableConcept helpers, and NamingSystem uniqueId accessors.</Description>
     <PackageTags>FHIR;HL7;MII;Kerndatensatz;constants;Firely</PackageTags>
     <!-- Generated code has no hand-written XML doc comments. -->
