@@ -14,7 +14,10 @@ public static partial class ModuleInitializer
     public static void Initialize()
     {
         // Keep the snapshots next to the tests, mirroring the Java side's snapshots/ directory.
-        Verifier.UseSourceFileRelativeDirectory("Snapshots");
+        UseSourceFileRelativeDirectory("Snapshots");
+
+        // Verify defaults to UTF-8 *with* a BOM; write plain UTF-8, like the Java snapshots.
+        VerifierSettings.UseUtf8NoBom();
 
         // Provenance.occurred and Provenance.recorded are wall-clock timestamps, so they would
         // differ on every run.
