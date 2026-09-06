@@ -150,6 +150,9 @@ out/
 
 *.received.fhir.json
 
+# Verify (C# snapshot tests)
+*.received.*
+
 fhirpkg.lock.json
 
 node_modules/

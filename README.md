@@ -4,11 +4,14 @@
 
 Collection of utilities for mapping FHIR resources.
 
-This repository contains two artifacts:
+This repository contains the following artifacts:
 
 - `to-fhir` — the core library. Plain Java, no Spring Boot dependency.
 - `to-fhir-starter` — a Spring Boot starter that auto-configures `FhirProperties`
   (overridable via `fhir.*` properties) on top of `to-fhir`.
+- `DizUker.ToFhir` — the C# port of the core library, built on the
+  [Firely SDK](https://github.com/FirelyTeam/firely-net-sdk) instead of HAPI FHIR.
+  Same behaviour, idiomatic .NET API; see [`to-fhir-cs/`](to-fhir-cs/).
 
 ## Installation
 
@@ -45,6 +48,51 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.18"
 ```
 
 <!-- x-release-please-end -->
+
+### .NET
+
+<!-- x-release-please-start-version -->
+
+```sh
+dotnet add package DizUker.ToFhir --version 0.2.18
+```
+
+<!-- x-release-please-end -->
+
+## Usage (C#)
+
+```csharp
+using Hl7.Fhir.Model;
+using ToFhir;
+
+var patient = new Patient
+{
+    Id = IdUtils.FromIdentifier(new Identifier("https://example.org/pid", "12345")),
+};
+
+var bundle = new TransactionBuilder()
+    .WithId("my-bundle")
+    .WithFullUrlBase("https://example.org/fhir")
+    .WithProvenance(
+        new Device { Id = "my-etl-job" },
+        new ResourceReference { Display = "The source system" })
+    .AddEntry(patient)
+    .Build();
+```
+
+`BuildWithSeparateProvenance()` returns the data and Provenance resources as two
+bundles instead of one:
+
+```csharp
+var (dataBundle, provenanceBundle) = new TransactionBuilder()
+    .WithProvenance(who, what)
+    .AddEntries(patient, observation)
+    .BuildWithSeparateProvenance();
+```
+
+The remaining helpers mirror the Java library: `FhirSystems` (canonical system
+URIs), `FhirCodings` (system + version `Coding` templates), `FhirExtensions`
+together with the `DataAbsentReasonCode` enum, and `ReferenceUtils`.
 
 ## Development
 
@@ -91,7 +139,18 @@ uv run ruff format \
 
 Review the diff, then commit.
 
-### Snapshot testing
+### C# tests
+
+```sh
+dotnet test to-fhir-cs/ToFhir.Tests/
+dotnet csharpier format .
+```
+
+The C# snapshot tests use [Verify](https://github.com/VerifyTests/Verify); its
+snapshots live in `to-fhir-cs/ToFhir.Tests/Snapshots/`. A changed snapshot is
+approved by renaming the generated `*.received.json` to `*.verified.json`.
+
+### Snapshot testing (Java)
 
 #### Auto-approve snapshot changes
 

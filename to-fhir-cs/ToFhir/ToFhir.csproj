@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <PackageId>DizUker.ToFhir</PackageId>
+    <Description>Collection of utils for writing FHIR mappings on top of the Firely SDK: canonical system/coding/extension templates, deterministic resource ids derived from business identifiers, references, and a fluent transaction Bundle builder with optional Provenance.</Description>
+    <PackageTags>FHIR;HL7;Firely;mapping;bundle;provenance</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Bundle, Resource, ResourceReference etc. are part of the public API, so this is a
+         transitive dependency consumers compile against. -->
+    <PackageReference Include="Hl7.Fhir.R4" Version="6.4.0" />
+  </ItemGroup>
+</Project>

@@ -4,5 +4,9 @@
     <Project Path="ig-codegen-cs/IgCodegen.Tests/IgCodegen.Tests.csproj" />
     <Project Path="ig-codegen-cs/IgCodegen/IgCodegen.csproj" />
   </Folder>
+  <Folder Name="/to-fhir-cs/">
+    <Project Path="to-fhir-cs/ToFhir/ToFhir.csproj" />
+    <Project Path="to-fhir-cs/ToFhir.Tests/ToFhir.Tests.csproj" />
+  </Folder>
   <Project Path="fhir-ig-constants-cs/fhir-ig-constants-cs.csproj" />
 </Solution>

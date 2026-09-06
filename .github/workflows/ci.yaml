@@ -84,7 +84,9 @@ jobs:
         run: dotnet tool restore
 
       - name: Test
-        run: dotnet test ig-codegen-cs/IgCodegen.Tests/ --configuration Release
+        run: |
+          dotnet test ig-codegen-cs/IgCodegen.Tests/ --configuration Release
+          dotnet test to-fhir-cs/ToFhir.Tests/ --configuration Release
 
       - name: Format
         run: |
@@ -96,6 +98,7 @@ jobs:
           dotnet pack ig-codegen-cs/IgCodegen.Core/IgCodegen.Core.csproj --configuration Release --output artifacts/
           dotnet pack ig-codegen-cs/IgCodegen/IgCodegen.csproj --configuration Release --output artifacts/
           dotnet pack fhir-ig-constants-cs/fhir-ig-constants-cs.csproj --configuration Release --output artifacts/
+          dotnet pack to-fhir-cs/ToFhir/ToFhir.csproj --configuration Release --output artifacts/
 
       - name: NuGet login (OIDC -> temporary API key)
         if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
