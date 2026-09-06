@@ -5,8 +5,8 @@ from __future__ import annotations
 import enum
 from typing import Protocol, Self
 
-from fhir.resources.coding import Coding
-from fhir.resources.extension import Extension
+from fhir.resources.R4B.coding import Coding
+from fhir.resources.R4B.extension import Extension
 
 
 class _HasExtensions(Protocol):

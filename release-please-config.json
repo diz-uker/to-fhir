@@ -26,6 +26,10 @@
         {
           "type": "generic",
           "path": "fhir-ig-constants-py/pyproject.toml"
+        },
+        {
+          "type": "generic",
+          "path": "to-fhir-py/pyproject.toml"
         }
       ]
     }

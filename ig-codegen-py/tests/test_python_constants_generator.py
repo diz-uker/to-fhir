@@ -93,7 +93,7 @@ class TestCodeSystemsClass:
             },
         )
         source = generate(model, "Test")
-        assert "from fhir.resources.coding import Coding" in source
+        assert "from fhir.resources.R4B.coding import Coding" in source
 
     def test_enum_methods_present(self) -> None:
         model = _make_model(
@@ -125,7 +125,7 @@ class TestExtensionsClass:
         source = generate(model, "Test")
         assert "class Extensions" in source
         assert 'MII_EX_TEST = "https://example.com/ext"' in source
-        assert "from fhir.resources.extension import Extension" in source
+        assert "from fhir.resources.R4B.extension import Extension" in source
 
     def test_primitive_factory_typed(self) -> None:
         model = _make_model(
@@ -176,7 +176,7 @@ class TestExtensionsClass:
             },
         )
         source = generate(model, "Test")
-        assert "from fhir.resources.coding import Coding" in source
+        assert "from fhir.resources.R4B.coding import Coding" in source
         assert "def mii_ex_coding(value: Coding) -> Extension" in source
         assert "def get_mii_ex_coding(resource: _HasExtensions) -> Coding | None" in source
 
