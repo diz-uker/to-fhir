@@ -177,3 +177,9 @@ obj/
 /wwwroot/node_modules
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore
+
+# Generated documentation output (built by .github/workflows/docs.yaml)
+to-fhir-py/docs/_build/
+to-fhir-cs/docs/_site/
+to-fhir-cs/docs/api/
+/site/

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>to-fhir</title>
+    <meta
+      name="description"
+      content="Collection of utilities for mapping FHIR resources, available for Java, C#, and Python."
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <h1>to-fhir</h1>
+        <p class="tagline">
+          Collection of utilities for mapping FHIR resources: deterministic resource ids derived
+          from business identifiers, references, canonical system/coding/extension templates, and
+          a fluent transaction Bundle builder with optional Provenance. Available for Java, C#,
+          and Python with the same behaviour and an idiomatic API in each.
+        </p>
+        <div class="badges">
+          <a href="https://scorecard.dev/viewer/?uri=github.com/diz-uker/to-fhir">
+            <img
+              src="https://img.shields.io/ossf-scorecard/github.com/diz-uker/to-fhir?label=openssf%20scorecard&style=flat"
+              alt="OpenSSF Scorecard"
+            />
+          </a>
+        </div>
+        <div class="cta">
+          <a class="primary" href="https://github.com/diz-uker/to-fhir">GitHub</a>
+          <a href="#install">Install</a>
+          <a href="#usage">Usage</a>
+          <a href="#reference">API reference</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="install">
+        <h2>Install</h2>
+        <p class="lead">Published to Maven Central, NuGet, and PyPI.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Java &mdash; Gradle</h3>
+            <!-- x-release-please-start-version -->
+            <pre><code>implementation "io.github.diz-uker:to-fhir:0.2.19"
+
+// optional, for Spring Boot auto-configuration
+implementation "io.github.diz-uker:to-fhir-starter:0.2.19"</code></pre>
+            <!-- x-release-please-end -->
+          </div>
+          <div class="card">
+            <h3>Java &mdash; Maven</h3>
+            <!-- x-release-please-start-version -->
+            <pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;io.github.diz-uker&lt;/groupId&gt;
+    &lt;artifactId&gt;to-fhir&lt;/artifactId&gt;
+    &lt;version&gt;0.2.19&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+            <!-- x-release-please-end -->
+          </div>
+          <div class="card">
+            <h3>C# &mdash; .NET</h3>
+            <!-- x-release-please-start-version -->
+            <pre><code>dotnet add package DizUker.ToFhir --version 0.2.19</code></pre>
+            <!-- x-release-please-end -->
+          </div>
+          <div class="card">
+            <h3>Python</h3>
+            <!-- x-release-please-start-version -->
+            <pre><code>uv add to-fhir==0.2.19
+# or
+pip install to-fhir==0.2.19</code></pre>
+            <!-- x-release-please-end -->
+          </div>
+        </div>
+      </section>
+
+      <section id="usage">
+        <h2>Usage</h2>
+        <p class="lead">
+          Build a transaction Bundle with a deterministic resource id and an attached Provenance,
+          in whichever language you're working in.
+        </p>
+
+        <div class="lang-block">
+          <h3><span class="lang-badge">Java</span></h3>
+          <pre><code>import io.github.dizuker.tofhir.IdUtils;
+import io.github.dizuker.tofhir.TransactionBuilder;
+import org.hl7.fhir.r4.model.Device;
+import org.hl7.fhir.r4.model.Identifier;
+import org.hl7.fhir.r4.model.Patient;
+import org.hl7.fhir.r4.model.Reference;
+
+var patient = new Patient()
+    .setId(IdUtils.fromIdentifier(
+        new Identifier().setSystem("https://example.org/pid").setValue("12345")));
+
+var bundle = new TransactionBuilder()
+    .withId("my-bundle")
+    .withFullUrlBase("https://example.org/fhir")
+    .withProvenance(
+        new Device().setId("my-etl-job"),
+        new Reference().setDisplay("The source system"))
+    .addEntry(patient)
+    .build();</code></pre>
+        </div>
+
+        <div class="lang-block">
+          <h3><span class="lang-badge">C#</span></h3>
+          <pre><code>using Hl7.Fhir.Model;
+using ToFhir;
+
+var patient = new Patient
+{
+    Id = IdUtils.FromIdentifier(new Identifier("https://example.org/pid", "12345")),
+};
+
+var bundle = new TransactionBuilder()
+    .WithId("my-bundle")
+    .WithFullUrlBase("https://example.org/fhir")
+    .WithProvenance(
+        new Device { Id = "my-etl-job" },
+        new ResourceReference { Display = "The source system" })
+    .AddEntry(patient)
+    .Build();</code></pre>
+        </div>
+
+        <div class="lang-block">
+          <h3><span class="lang-badge">Python</span></h3>
+          <pre><code>from fhir.resources.R4B.device import Device
+from fhir.resources.R4B.identifier import Identifier
+from fhir.resources.R4B.patient import Patient
+from fhir.resources.R4B.reference import Reference
+
+from to_fhir import TransactionBuilder, id_utils
+
+patient = Patient(
+    id=id_utils.from_identifier(Identifier(system="https://example.org/pid", value="12345"))
+)
+
+bundle = (
+    TransactionBuilder()
+    .with_id("my-bundle")
+    .with_full_url_base("https://example.org/fhir")
+    .with_provenance(Device(id="my-etl-job"), Reference(display="The source system"))
+    .add_entry(patient)
+    .build()
+)</code></pre>
+        </div>
+
+        <p>
+          Each language's <code>TransactionBuilder</code> also has a
+          <code>build_with_separate_provenance</code> variant (<code>buildWithSeparateProvenance</code>
+          in Java/C#) that returns the data and Provenance resources as two bundles instead of
+          one. See the language-specific
+          <a href="https://github.com/diz-uker/to-fhir/blob/master/README.md#usage-c">C#</a> and
+          <a href="https://github.com/diz-uker/to-fhir/blob/master/README.md#usage-python">Python</a>
+          README sections, and the API references below, for the full helper set:
+          <code>FhirSystems</code>/<code>fhir_systems</code> (canonical system URIs),
+          <code>FhirCodings</code>/<code>fhir_codings</code> (system + version <code>Coding</code>
+          templates), <code>FhirExtensions</code>/<code>fhir_extensions</code>, and
+          <code>ReferenceUtils</code>/<code>reference_utils</code>.
+        </p>
+      </section>
+
+      <section id="reference">
+        <h2>API reference</h2>
+        <p class="lead">
+          Generated from the same doc comments shipped in each package (Javadoc, XML doc comments,
+          and Sphinx-flavoured docstrings).
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Java</h3>
+            <p>Javadoc for <code>io.github.dizuker.tofhir</code>, built with Gradle.</p>
+            <a class="ref-link" href="java/">Browse the Java reference</a>
+          </div>
+          <div class="card">
+            <h3>C#</h3>
+            <p>DocFX reference for the <code>ToFhir</code> namespace.</p>
+            <a class="ref-link" href="csharp/">Browse the C# reference</a>
+          </div>
+          <div class="card">
+            <h3>Python</h3>
+            <p>Sphinx reference for the <code>to_fhir</code> package.</p>
+            <a class="ref-link" href="python/">Browse the Python reference</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          <a href="https://github.com/diz-uker/to-fhir">diz-uker/to-fhir</a> &middot; Apache-2.0
+          &middot; built and published by
+          <a href="https://github.com/diz-uker/to-fhir/actions/workflows/docs.yaml"
+            >.github/workflows/docs.yaml</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
