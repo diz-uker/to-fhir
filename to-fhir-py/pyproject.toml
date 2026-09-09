@@ -1,0 +1,36 @@
+[project]
+name = "to-fhir"
+version = "0.2.18"  # x-release-please-version
+description = "Collection of utils for writing FHIR mappings: deterministic resource ids derived from business identifiers, references, canonical system/coding/extension templates, and a fluent transaction Bundle builder with optional Provenance."
+requires-python = ">=3.12"
+dependencies = [
+    "fhir.resources>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/to_fhir"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
+    "syrupy>=4.8",
+    "ty>=0.0.1a8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "N", "RUF"]

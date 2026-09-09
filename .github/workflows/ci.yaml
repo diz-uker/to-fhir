@@ -84,7 +84,9 @@ jobs:
         run: dotnet tool restore
 
       - name: Test
-        run: dotnet test ig-codegen-cs/IgCodegen.Tests/ --configuration Release
+        run: |
+          dotnet test ig-codegen-cs/IgCodegen.Tests/ --configuration Release
+          dotnet test to-fhir-cs/ToFhir.Tests/ --configuration Release
 
       - name: Format
         run: |
@@ -96,6 +98,7 @@ jobs:
           dotnet pack ig-codegen-cs/IgCodegen.Core/IgCodegen.Core.csproj --configuration Release --output artifacts/
           dotnet pack ig-codegen-cs/IgCodegen/IgCodegen.csproj --configuration Release --output artifacts/
           dotnet pack fhir-ig-constants-cs/fhir-ig-constants-cs.csproj --configuration Release --output artifacts/
+          dotnet pack to-fhir-cs/ToFhir/ToFhir.csproj --configuration Release --output artifacts/
 
       - name: NuGet login (OIDC -> temporary API key)
         if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
@@ -139,6 +142,16 @@ jobs:
           uv run ruff check src/ tests/
           uv run ruff format --check src/ tests/
 
+      - name: Test to-fhir-py
+        working-directory: to-fhir-py
+        run: uv run pytest
+
+      - name: Lint to-fhir-py
+        working-directory: to-fhir-py
+        run: |
+          uv run ruff check src/ tests/
+          uv run ruff format --check src/ tests/
+
       - name: Build fhir-ig-constants-py
         working-directory: fhir-ig-constants-py
         run: uv build
@@ -148,6 +161,16 @@ jobs:
         with:
           name: fhir-ig-constants-py-dist
           path: fhir-ig-constants-py/dist/
+
+      - name: Build to-fhir-py
+        working-directory: to-fhir-py
+        run: uv build
+
+      - name: Upload to-fhir-py dist
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: to-fhir-py-dist
+          path: to-fhir-py/dist/
 
   python-publish:
     name: python-publish
@@ -171,6 +194,29 @@ jobs:
         uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
         with:
           packages-dir: fhir-ig-constants-py/dist/
+
+  to-fhir-py-publish:
+    name: to-fhir-py-publish
+    needs: python
+    if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: pypi
+      url: https://pypi.org/project/to-fhir/
+    permissions:
+      contents: read
+      id-token: write # for PyPI Trusted Publishing on release
+    steps:
+      - name: Download to-fhir-py dist
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: to-fhir-py-dist
+          path: to-fhir-py/dist/
+
+      - name: Publish to-fhir-py to PyPI
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+        with:
+          packages-dir: to-fhir-py/dist/
 
   lint:
     uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4

@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing import Protocol
 
-from fhir.resources.codeableconcept import CodeableConcept
-from fhir.resources.coding import Coding
-from fhir.resources.extension import Extension
-from fhir.resources.reference import Reference
+from fhir.resources.R4B.codeableconcept import CodeableConcept
+from fhir.resources.R4B.coding import Coding
+from fhir.resources.R4B.extension import Extension
+from fhir.resources.R4B.reference import Reference
 
 
 class _HasExtensions(Protocol):

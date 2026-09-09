@@ -21,6 +21,10 @@ from .code_writer import CodeWriter
 from .ig_package_model import ExtensionValueType, IgPackageModel
 from .name_utils import to_pascal_case, to_snake_case
 
+# The IGs this generator targets are R4. fhir.resources exposes R5 at the top level and ships
+# R4B — its closest release to R4 — as a subpackage, which is also what to-fhir builds on.
+_FHIR_PACKAGE = "fhir.resources.R4B"
+
 # FHIR primitive/complex type codes → (Python type name, Extension.value[x] field)
 _PYTHON_TYPE_MAP: dict[str, tuple[str, str]] = {
     "string": ("str", "valueString"),
@@ -95,7 +99,7 @@ def generate(model: IgPackageModel, class_name: str) -> str:
         w.line()
 
     for type_name in sorted(fhir_imports):
-        w.line(f"from fhir.resources.{type_name.lower()} import {type_name}")
+        w.line(f"from {_FHIR_PACKAGE}.{type_name.lower()} import {type_name}")
     if fhir_imports:
         w.line()
 
