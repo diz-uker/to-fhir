@@ -1,0 +1,30 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../ToFhir",
+          "files": ["ToFhir.csproj"]
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["api/**.yml", "api/index.md"]
+      },
+      {
+        "files": ["*.md", "toc.yml"]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appName": "DizUker.ToFhir",
+      "_appTitle": "DizUker.ToFhir API Reference",
+      "_enableSearch": true
+    }
+  }
+}
