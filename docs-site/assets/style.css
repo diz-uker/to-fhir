@@ -1,12 +1,13 @@
 :root {
   color-scheme: light dark;
-  --bg: #ffffff;
+
+  --bg: #fff;
   --bg-alt: #f5f6f8;
   --fg: #1c1e21;
   --fg-muted: #55595e;
   --border: #e2e4e8;
   --accent: #b3282d;
-  --accent-fg: #ffffff;
+  --accent-fg: #fff;
   --code-bg: #f5f6f8;
   --code-border: #dcdfe4;
   --link: #0b5fa4;
@@ -48,6 +49,10 @@ body {
 
 a {
   color: var(--link);
+}
+
+footer a {
+  color: var(--fg-muted);
 }
 
 .wrap {
@@ -206,8 +211,4 @@ footer {
   padding: 2rem 0 3rem;
   color: var(--fg-muted);
   font-size: 0.9rem;
-}
-
-footer a {
-  color: var(--fg-muted);
 }
