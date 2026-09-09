@@ -23,10 +23,10 @@ This repository contains the following artifacts:
 <!-- x-release-please-start-version -->
 
 ```groovy
-implementation "io.github.diz-uker:to-fhir:0.2.18"
+implementation "io.github.diz-uker:to-fhir:0.2.19"
 
 // optional, for Spring Boot auto-configuration
-implementation "io.github.diz-uker:to-fhir-starter:0.2.18"
+implementation "io.github.diz-uker:to-fhir-starter:0.2.19"
 ```
 
 <!-- x-release-please-end -->
@@ -39,14 +39,14 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.18"
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir</artifactId>
-    <version>0.2.18</version>
+    <version>0.2.19</version>
 </dependency>
 
 <!-- optional, for Spring Boot auto-configuration -->
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir-starter</artifactId>
-    <version>0.2.18</version>
+    <version>0.2.19</version>
 </dependency>
 ```
 
@@ -57,7 +57,7 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.18"
 <!-- x-release-please-start-version -->
 
 ```sh
-dotnet add package DizUker.ToFhir --version 0.2.18
+dotnet add package DizUker.ToFhir --version 0.2.19
 ```
 
 <!-- x-release-please-end -->
@@ -67,9 +67,9 @@ dotnet add package DizUker.ToFhir --version 0.2.18
 <!-- x-release-please-start-version -->
 
 ```sh
-uv add to-fhir==0.2.18
+uv add to-fhir==0.2.19
 # or
-pip install to-fhir==0.2.18
+pip install to-fhir==0.2.19
 ```
 
 <!-- x-release-please-end -->

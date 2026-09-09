@@ -1,6 +1,6 @@
 [project]
 name = "to-fhir"
-version = "0.2.18"  # x-release-please-version
+version = "0.2.19"  # x-release-please-version
 description = "Collection of utils for writing FHIR mappings: deterministic resource ids derived from business identifiers, references, canonical system/coding/extension templates, and a fluent transaction Bundle builder with optional Provenance."
 requires-python = ">=3.12"
 dependencies = [
