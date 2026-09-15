@@ -3,6 +3,7 @@ package io.github.dizuker.igcodegen;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 import org.jspecify.annotations.Nullable;
+import tools.jackson.databind.annotation.JsonDeserialize;
 
 /** The subset of a FHIR resource JSON file's fields needed to classify it. */
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -13,7 +14,9 @@ public record FhirResourceSummary(
     @Nullable String version,
     @Nullable String kind,
     @Nullable String derivation,
-    @Nullable String type,
+    // StructureDefinition.type; other resource types reuse the name for a CodeableConcept
+    // (NamingSystem) or a boolean (OperationDefinition), hence the lenient deserializer.
+    @JsonDeserialize(using = CodeOrNullDeserializer.class) @Nullable String type,
     @Nullable String content,
     @Nullable String description,
     @Nullable List<Concept> concept,
