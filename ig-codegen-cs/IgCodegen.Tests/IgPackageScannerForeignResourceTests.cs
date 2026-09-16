@@ -133,7 +133,7 @@ public class IgPackageScannerForeignResourceTests : IDisposable
         );
 
     private static void Write(string packageContentDir, string fileName, string json) =>
-        File.WriteAllText(Path.Combine(packageContentDir, fileName), json);
+        File.WriteAllText(Path.Join(packageContentDir, fileName), json);
 
     private IgPackageModel Scan()
     {
