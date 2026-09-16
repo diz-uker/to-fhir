@@ -114,7 +114,7 @@ public class IgPackageScannerForeignResourceTests : IDisposable
     }
 
     private string CreatePackageContentDir() =>
-        Directory.CreateDirectory(Path.Combine(fhirPackagesDir, PackageName)).FullName;
+        Directory.CreateDirectory(Path.Join(fhirPackagesDir, PackageName)).FullName;
 
     private static void WriteCodeSystem(string packageContentDir) =>
         Write(
