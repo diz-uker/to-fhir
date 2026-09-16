@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - alpha
 
 permissions:
   contents: read
@@ -32,6 +31,3 @@ jobs:
       - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
         with:
           token: ${{ steps.app-token.outputs.token }}
-          # The short ref name of the branch that triggered the workflow run
-          # (e.g. `master` or `alpha`), so each branch releases against itself.
-          target-branch: ${{ github.ref_name }}
