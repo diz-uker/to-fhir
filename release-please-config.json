@@ -5,6 +5,9 @@
   "include-v-in-tag": true,
   "extra-label": "release-please",
   "release-type": "simple",
+  "versioning": "prerelease",
+  "prerelease": true,
+  "prerelease-type": "alpha",
   "packages": {
     ".": {
       "release-type": "simple",
