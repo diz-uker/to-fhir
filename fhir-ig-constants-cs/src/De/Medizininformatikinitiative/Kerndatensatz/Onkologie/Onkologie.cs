@@ -8484,6 +8484,7 @@ public static class MiiCsOnkoTnmFormelExtensions
             _ => null,
         };
 
+    /// <summary>Looks up the enum value for a FHIR code and throws if no match is found.</summary>
     /// <param name="code">The FHIR code to look up.</param>
     /// <returns>The matching <see cref="Onkologie.CodeSystems.MiiCsOnkoTnmFormel"/>.</returns>
     /// <exception cref="ArgumentException">If no constant has that code.</exception>
