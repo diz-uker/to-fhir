@@ -103,15 +103,22 @@ def scan(package_content_dir: Path, package_name: str, package_version: str) -> 
 
 
 def _read_resources(package_content_dir: Path) -> list[dict]:
+    """Reads and parses every JSON file in the package directory.
+
+    A file that cannot be read or parsed raises rather than being skipped: a resource that
+    silently drops out of the scan becomes a constant quietly missing from the generated
+    module, which is much harder to notice than a failed run. OSError already names the file
+    it was raised for, json.JSONDecodeError does not - hence the re-raise.
+    """
     results = []
     for f in package_content_dir.glob("*.json"):
-        try:
-            with f.open(encoding="utf-8") as fp:
+        with f.open(encoding="utf-8") as fp:
+            try:
                 data = json.load(fp)
-            if isinstance(data, dict):
-                results.append(data)
-        except (json.JSONDecodeError, OSError):
-            pass
+            except json.JSONDecodeError as e:
+                raise ValueError(f"Failed to parse FHIR resource file: {f}") from e
+        if isinstance(data, dict):
+            results.append(data)
     return results
 
 
