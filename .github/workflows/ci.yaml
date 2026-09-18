@@ -384,7 +384,7 @@ jobs:
       actions: read # to read workflow run information
     with:
       enable-validate-gradle-wrapper: true
-      codeql-languages: '["java", "csharp"]'
+      codeql-languages: '["java", "csharp", "python"]'
       enable-codeql: true
       enable-verify-base-image-signature: false
     secrets:
