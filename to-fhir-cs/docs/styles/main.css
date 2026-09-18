@@ -1,0 +1,8 @@
+/* The generated API nav tree (namespace -> types) can be longer than the viewport. The
+ * default template's fixed-position header has no height cap, so expanding it otherwise
+ * grows the header to fit the whole tree and covers the page underneath. */
+.navbar-nav .level2,
+.navbar-nav .level3 {
+  max-height: 50vh;
+  overflow-y: auto;
+}

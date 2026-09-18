@@ -20,6 +20,11 @@
         "files": ["*.md", "toc.yml"]
       }
     ],
+    "resource": [
+      {
+        "files": ["styles/**"]
+      }
+    ],
     "dest": "_site",
     "globalMetadata": {
       "_appName": "DizUker.ToFhir",
