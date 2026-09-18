@@ -30,6 +30,10 @@
         {
           "type": "generic",
           "path": "to-fhir-py/pyproject.toml"
+        },
+        {
+          "type": "generic",
+          "path": "docs-site/index.html"
         }
       ]
     }

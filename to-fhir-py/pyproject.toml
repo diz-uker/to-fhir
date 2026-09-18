@@ -21,6 +21,10 @@ dev = [
     "syrupy>=4.8",
     "ty>=0.0.1a8",
 ]
+docs = [
+    "furo>=2024.8",
+    "sphinx>=8.0",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

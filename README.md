@@ -16,6 +16,9 @@ This repository contains the following artifacts:
   [fhir.resources](https://github.com/nazrulworld/fhir.resources). Same behaviour,
   idiomatic Python API; see [`to-fhir-py/`](to-fhir-py/).
 
+Full usage examples and generated API references (Javadoc, DocFX, Sphinx) are published at
+<https://diz-uker.github.io/to-fhir/>.
+
 ## Installation
 
 ### Gradle
