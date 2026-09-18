@@ -3,6 +3,7 @@
  * grows the header to fit the whole tree and covers the page underneath. */
 .navbar-nav .level2,
 .navbar-nav .level3 {
-  max-height: 50vh;
+  max-height: 45vh;
+  max-height: min(45vh, 320px);
   overflow-y: auto;
 }
