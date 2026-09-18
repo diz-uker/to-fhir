@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.21](https://github.com/diz-uker/to-fhir/compare/v0.2.20...v0.2.21) (2026-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#104](https://github.com/diz-uker/to-fhir/issues/104)) ([bcee783](https://github.com/diz-uker/to-fhir/commit/bcee783d3a08722d096ca03859b337791f11c6fc))
+
 ## [0.2.20](https://github.com/diz-uker/to-fhir/compare/v0.2.19...v0.2.20) (2026-09-18)
 
 
