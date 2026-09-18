@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.20](https://github.com/diz-uker/to-fhir/compare/v0.2.19...v0.2.20) (2026-09-18)
+
+
+### Features
+
+* add MOD 11/10 checksum utility ([#101](https://github.com/diz-uker/to-fhir/issues/101)) ([9b46d38](https://github.com/diz-uker/to-fhir/commit/9b46d3813963e37c035e7aff05e84bdba686e572))
+
 ## [0.2.19](https://github.com/diz-uker/to-fhir/compare/v0.2.18...v0.2.19) (2026-09-09)
 
 
