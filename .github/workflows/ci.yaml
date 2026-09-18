@@ -11,12 +11,16 @@ on:
     types:
       - checks_requested
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
 jobs:
-  build:
-    name: build
+  java-build:
+    name: Java build
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
@@ -24,16 +28,24 @@ jobs:
           persist-credentials: false
 
       - name: Set up JDK
+        # zizmor: ignore[cache-poisoning] cache below is conditional on release events; zizmor
+        # can't statically evaluate that expression, hence the low-confidence finding
         uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
         with:
           java-version: "25"
           distribution: "temurin"
-          cache: "gradle"
+          # disabled on release events: this job also runs then, and a cache poisoned by an
+          # earlier, untrusted PR run must not get restored during a trusted release build
+          cache: ${{ github.event_name != 'release' && 'gradle' || '' }}
 
       - uses: gradle/actions/wrapper-validation@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
 
       - name: Setup Gradle
+        # zizmor: ignore[cache-poisoning] cache-disabled below is conditional on release events;
+        # zizmor can't statically evaluate that expression, hence the low-confidence finding
         uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+        with:
+          cache-disabled: ${{ github.event_name == 'release' }}
 
       - name: Build with Gradle
         run: |
@@ -52,8 +64,40 @@ jobs:
             to-fhir/build/libs/
             to-fhir-starter/build/libs/
 
+  maven-central-publish:
+    name: maven-central-publish
+    needs: java-build
+    if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: maven-central
+      url: https://central.sonatype.com/artifact/io.github.diz-uker/to-fhir/versions
+    permissions:
+      contents: write # to upload build artifacts to the GitHub release
+      id-token: write # to request the OIDC token used for attestation signing
+      attestations: write # to publish build provenance attestations
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
+
+      - name: Set up JDK
+        uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
+        with:
+          java-version: "25"
+          distribution: "temurin"
+          # this job only runs on trusted release events and publishes signed artifacts, so it
+          # must not share a dependency cache that an earlier, less-trusted run could have poisoned
+          cache: ""
+
+      - uses: gradle/actions/wrapper-validation@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+        with:
+          cache-disabled: true
+
       - name: Publish to central
-        if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
         run: |
           ./gradlew publish --no-configuration-cache
           ./gradlew publishToMavenCentralPortal --no-configuration-cache
@@ -63,13 +107,35 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_KEY_PASSPHRASE: ${{ secrets.SIGNING_KEY_PASSPHRASE }}
 
+      - name: Attest Java artifacts
+        id: attest
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: |
+            to-fhir/build/libs/*.jar
+            to-fhir-starter/build/libs/*.jar
+            fhir-ig-constants/build/libs/*.jar
+            ig-codegen/build/libs/*.jar
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.event.release.tag_name }}
+          BUNDLE_PATH: ${{ steps.attest.outputs.bundle-path }}
+        run: |
+          cp "$BUNDLE_PATH" libs.intoto.jsonl
+          gh release upload "$TAG" \
+            --clobber \
+            to-fhir/build/libs/*.jar \
+            to-fhir-starter/build/libs/*.jar \
+            fhir-ig-constants/build/libs/*.jar \
+            ig-codegen/build/libs/*.jar \
+            libs.intoto.jsonl
+
   dotnet:
     name: dotnet
     runs-on: ubuntu-24.04
-    permissions:
-      contents: read
-      # to request the OIDC token used for NuGet Trusted Publishing
-      id-token: write
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
@@ -100,15 +166,42 @@ jobs:
           dotnet pack fhir-ig-constants-cs/fhir-ig-constants-cs.csproj --configuration Release --output artifacts/
           dotnet pack to-fhir-cs/ToFhir/ToFhir.csproj --configuration Release --output artifacts/
 
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: nuget-packages
+          path: artifacts/
+
+  nuget-publish:
+    name: nuget-publish
+    needs: dotnet
+    if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: nuget
+      url: https://www.nuget.org/packages/DizUker.ToFhir
+    permissions:
+      contents: write # to upload build artifacts to the GitHub release
+      attestations: write # to publish build provenance attestations
+      id-token: write # for NuGet Trusted Publishing and for attestation signing
+    steps:
+      - name: Download NuGet packages
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: nuget-packages
+          path: artifacts/
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: "10.0.400"
+
       - name: NuGet login (OIDC -> temporary API key)
-        if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
         uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.2.0
         id: nuget-login
         with:
           user: ${{ secrets.NUGET_USER }}
 
       - name: Publish to NuGet
-        if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
         env:
           NUGET_API_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
         run: |
@@ -116,6 +209,25 @@ jobs:
             --api-key "${NUGET_API_KEY}" \
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
+
+      - name: Attest NuGet packages
+        id: attest
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: artifacts/*.nupkg
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.event.release.tag_name }}
+          BUNDLE_PATH: ${{ steps.attest.outputs.bundle-path }}
+        run: |
+          cp "$BUNDLE_PATH" nuget-packages.intoto.jsonl
+          gh release upload "$TAG" \
+            --clobber \
+            artifacts/*.nupkg \
+            nuget-packages.intoto.jsonl
 
   python:
     name: python
@@ -128,9 +240,13 @@ jobs:
           persist-credentials: false
 
       - name: Set up uv
+        # zizmor: ignore[cache-poisoning] enable-cache below is conditional on release events;
+        # zizmor can't statically evaluate that expression, hence the low-confidence finding
         uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
-          enable-cache: true
+          # disabled on release events: this job also runs then, and a cache poisoned by an
+          # earlier, untrusted PR run must not get restored during a trusted release build
+          enable-cache: ${{ github.event_name != 'release' }}
 
       - name: Test ig-codegen-py
         working-directory: ig-codegen-py
@@ -181,7 +297,8 @@ jobs:
       name: pypi
       url: https://pypi.org/project/fhir-ig-constants/
     permissions:
-      contents: read
+      contents: write # to upload build artifacts to the GitHub release
+      attestations: write # to publish build provenance attestations
       id-token: write # for PyPI Trusted Publishing on release
     steps:
       - name: Download fhir-ig-constants-py dist
@@ -195,6 +312,25 @@ jobs:
         with:
           packages-dir: fhir-ig-constants-py/dist/
 
+      - name: Attest fhir-ig-constants-py artifacts
+        id: attest
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: fhir-ig-constants-py/dist/*
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.event.release.tag_name }}
+          BUNDLE_PATH: ${{ steps.attest.outputs.bundle-path }}
+        run: |
+          cp "$BUNDLE_PATH" fhir-ig-constants-py-dist.intoto.jsonl
+          gh release upload "$TAG" \
+            --clobber \
+            fhir-ig-constants-py/dist/* \
+            fhir-ig-constants-py-dist.intoto.jsonl
+
   to-fhir-py-publish:
     name: to-fhir-py-publish
     needs: python
@@ -204,7 +340,8 @@ jobs:
       name: pypi
       url: https://pypi.org/project/to-fhir/
     permissions:
-      contents: read
+      contents: write # to upload build artifacts to the GitHub release
+      attestations: write # to publish build provenance attestations
       id-token: write # for PyPI Trusted Publishing on release
     steps:
       - name: Download to-fhir-py dist
@@ -218,14 +355,33 @@ jobs:
         with:
           packages-dir: to-fhir-py/dist/
 
+      - name: Attest to-fhir-py artifacts
+        id: attest
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: to-fhir-py/dist/*
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.event.release.tag_name }}
+          BUNDLE_PATH: ${{ steps.attest.outputs.bundle-path }}
+        run: |
+          cp "$BUNDLE_PATH" to-fhir-py-dist.intoto.jsonl
+          gh release upload "$TAG" \
+            --clobber \
+            to-fhir-py/dist/* \
+            to-fhir-py-dist.intoto.jsonl
+
   lint:
     uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
     permissions:
       contents: read
-      pull-requests: write
-      issues: write
-      security-events: write
-      actions: read
+      pull-requests: write # to post lint findings as PR comments
+      issues: write # to post lint findings as issue comments
+      security-events: write # to upload CodeQL SARIF results
+      actions: read # to read workflow run information
     with:
       enable-validate-gradle-wrapper: true
       codeql-languages: '["java", "csharp"]'
