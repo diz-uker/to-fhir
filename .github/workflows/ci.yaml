@@ -11,6 +11,10 @@ on:
     types:
       - checks_requested
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -24,16 +28,24 @@ jobs:
           persist-credentials: false
 
       - name: Set up JDK
+        # zizmor: ignore[cache-poisoning] cache below is conditional on release events; zizmor
+        # can't statically evaluate that expression, hence the low-confidence finding
         uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
         with:
           java-version: "25"
           distribution: "temurin"
-          cache: "gradle"
+          # disabled on release events: this job also runs then, and a cache poisoned by an
+          # earlier, untrusted PR run must not get restored during a trusted release build
+          cache: ${{ github.event_name != 'release' && 'gradle' || '' }}
 
       - uses: gradle/actions/wrapper-validation@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
 
       - name: Setup Gradle
+        # zizmor: ignore[cache-poisoning] cache-disabled below is conditional on release events;
+        # zizmor can't statically evaluate that expression, hence the low-confidence finding
         uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+        with:
+          cache-disabled: ${{ github.event_name == 'release' }}
 
       - name: Build with Gradle
         run: |
@@ -228,9 +240,13 @@ jobs:
           persist-credentials: false
 
       - name: Set up uv
+        # zizmor: ignore[cache-poisoning] enable-cache below is conditional on release events;
+        # zizmor can't statically evaluate that expression, hence the low-confidence finding
         uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
-          enable-cache: true
+          # disabled on release events: this job also runs then, and a cache poisoned by an
+          # earlier, untrusted PR run must not get restored during a trusted release build
+          enable-cache: ${{ github.event_name != 'release' }}
 
       - name: Test ig-codegen-py
         working-directory: ig-codegen-py
@@ -362,10 +378,10 @@ jobs:
     uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
     permissions:
       contents: read
-      pull-requests: write
-      issues: write
-      security-events: write
-      actions: read
+      pull-requests: write # to post lint findings as PR comments
+      issues: write # to post lint findings as issue comments
+      security-events: write # to upload CodeQL SARIF results
+      actions: read # to read workflow run information
     with:
       enable-validate-gradle-wrapper: true
       codeql-languages: '["java", "csharp"]'
