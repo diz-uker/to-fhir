@@ -12,6 +12,6 @@
   <ItemGroup>
     <!-- Bundle, Resource, ResourceReference etc. are part of the public API, so this is a
          transitive dependency consumers compile against. -->
-    <PackageReference Include="Hl7.Fhir.R4" Version="6.4.0" />
+    <PackageReference Include="Hl7.Fhir.R4" Version="6.5.0" />
   </ItemGroup>
 </Project>
