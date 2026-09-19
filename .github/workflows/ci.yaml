@@ -2,7 +2,7 @@ name: ci
 
 on:
   pull_request:
-    branches: [master]
+    branches: [master, alpha]
   push:
     branches: [master]
   release:
@@ -26,6 +26,13 @@ jobs:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           persist-credentials: false
+
+      - name: Stamp prerelease version
+        if: ${{ github.event_name == 'release' && github.event.release.prerelease }}
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          VERSION="${VERSION#v}"
+          sed -i "s/version = '.*' \/\/ x-release-please-version/version = '${VERSION}' \/\/ x-release-please-version/" build.gradle
 
       - name: Set up JDK
         # zizmor: ignore[cache-poisoning] cache below is conditional on release events; zizmor
@@ -141,6 +148,13 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Stamp prerelease version
+        if: ${{ github.event_name == 'release' && github.event.release.prerelease }}
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          VERSION="${VERSION#v}"
+          sed -i "s|<Version>.*</Version>|<Version>${VERSION}</Version>|" Directory.Build.props
+
       - name: Setup .NET
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
@@ -238,6 +252,16 @@ jobs:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           persist-credentials: false
+
+      - name: Stamp prerelease version
+        if: ${{ github.event_name == 'release' && github.event.release.prerelease }}
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          VERSION="${VERSION#v}"
+          # PyPI/PEP 440 doesn't use SemVer prerelease syntax: 0.3.0-alpha.1 -> 0.3.0a1
+          PEP440=$(echo "$VERSION" | sed -E 's/-alpha\.([0-9]+)$/a\1/; s/-beta\.([0-9]+)$/b\1/; s/-rc\.([0-9]+)$/rc\1/')
+          sed -i "s/version = \".*\"  # x-release-please-version/version = \"${PEP440}\"  # x-release-please-version/" \
+            fhir-ig-constants-py/pyproject.toml to-fhir-py/pyproject.toml
 
       - name: Set up uv
         # zizmor: ignore[cache-poisoning] enable-cache below is conditional on release events;

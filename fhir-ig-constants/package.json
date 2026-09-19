@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
-    "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.1",
-    "de.medizininformatikinitiative.kerndatensatz.bildgebung": "2026.0.0",
-    "de.medizininformatikinitiative.kerndatensatz.onkologie": "2026.0.3",
-    "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.1",
-    "de.medizininformatikinitiative.kerndatensatz.laborbefund": "2026.0.3",
-    "de.medizininformatikinitiative.kerndatensatz.icu": "2026.0.2",
-    "de.medizininformatikinitiative.kerndatensatz.studie": "2026.0.2",
-    "de.medizininformatikinitiative.kerndatensatz.molgen": "2026.0.4"
+    "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.bildgebung": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.laborbefund": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.icu": "2027.0.0-ballot.rc2",
+    "de.medizininformatikinitiative.kerndatensatz.studie": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.molgen": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.onkologie": "2027.0.0-ballot"
   },
   "fhirVersions": [
     "4.0.1"
