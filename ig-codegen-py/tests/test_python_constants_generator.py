@@ -126,8 +126,9 @@ class TestProfilesClass:
             }
         )
         source = generate(model, "Test")
-        versionless = source[source.index("class Versionless") :]
-        assert source.index("class Profiles") < source.index("class Versionless")
+        versionless_index = source.index("class Versionless")
+        assert source.index("class Profiles") < versionless_index
+        versionless = source[versionless_index:]
         assert 'MII_PR_TEST = "https://example.com/profile"' in versionless
         assert 'MII_PR_UNVERSIONED = "https://example.com/unversioned"' in versionless
         assert "|1.0" not in versionless
