@@ -180,3 +180,178 @@ class Icu:
         MII_PR_VENT_ICU_PARAMETER_VON_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-beatmung|2026.0.2"
 
         MII_PR_VENT_PROVIDED_ICU_DRUCKDIFFERENZ_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-druckdifferenz-beatmung|2026.0.2"
+
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_ICU_VENT_INSPIRATORISCHE_SAUERSTOFFFRAKTION_EINGESTELLT = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-inspiratorische-sauerstofffraktion-eingestellt"
+            )
+
+            MII_PR_ICU_BILANZ = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_BLUTVERLUST = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-blutverlust"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_DRAINAGE_GENERISCH = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-drainage-generisch"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_FLUESSIGKEIT_GESAMT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-fluessigkeit-gesamt"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_GALLENFLUESSIGKEIT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-gallenfluessigkeit"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_HAEMOFILTRATION_EINZELMESSWERTE = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-haemofiltration-einzelmesswerte"
+            )
+
+            MII_PR_ICU_BILANZ_AUSFUHR_MAGENSONDE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-magensonde"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_OP_DRAINAGE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-op-drainage"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_PANKREASDRAINAGE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-pankreasdrainage"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_STUHLGANG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-stuhlgang"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_URIN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-urin"
+
+            MII_PR_ICU_BILANZ_AUSFUHR_WUNDDRAINAGE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-wunddrainage"
+
+            MII_PR_ICU_BILANZ_EINFUHR_ENTERALE_FLUESSIGKEIT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-enterale-fluessigkeit"
+
+            MII_PR_ICU_BILANZ_EINFUHR_FLUESSIGKEIT_GESAMT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-fluessigkeit-gesamt"
+
+            MII_PR_ICU_BILANZ_TAGESBILANZ_FLUESSIGKEIT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-tagesbilanz-fluessigkeit"
+
+            MII_PR_ICU_DEVICE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-icu-device"
+
+            MII_PR_ICU_ECT_ARTERIELLER_DRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-arterieller-druck"
+
+            MII_PR_ICU_ECT_BLUTFLUSSINDEX_EXTRAKORPORALER_GASAUSTAUSCH = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-blutflussindex-extrakorporaler-gasaustausch"
+            )
+
+            MII_PR_ICU_ECT_BLUTFLUSS_CARDIOVASCULAERES_GERAET = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-blutfluss-cardiovasculaeres-geraet"
+
+            MII_PR_ICU_ECT_BLUTFLUSS_EXTRAKORPORALER_GASAUSTAUSCH = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-blutfluss-extrakorporaler-gasaustausch"
+            )
+
+            MII_PR_ICU_ECT_DAUER_EXTRAKORPORALER_GASAUSTAUSCH = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dauer-extrakorporaler-gasaustausch"
+
+            MII_PR_ICU_ECT_DAUER_HAEMODIALYSESITZUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dauer-haemodialysesitzung"
+
+            MII_PR_ICU_ECT_DM_EINGEST_GEM_PARAMETER_EXTRAKORPORALE_VERFAHREN = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-devicemetric-eingestellte-gemessene-parameter-extrakorporale-verfahren"
+            )
+
+            MII_PR_ICU_ECT_EXTRAKORPORALES_VERFAHREN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-extrakorporales-verfahren"
+
+            MII_PR_ICU_ECT_GASFLUSS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-gasfluss"
+
+            MII_PR_ICU_ECT_HAEMODIALYSE_BLUTFLUSS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-haemodialyse-blutfluss"
+
+            MII_PR_ICU_ECT_ONISIERTES_KALZIUM_NIERENERSATZVERFAHREN = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ionisiertes-kalzium-nierenersatzverfahren"
+            )
+
+            MII_PR_ICU_ECT_PARAMETER_VON_EXTRAKORPORALEN_VERFAHREN = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-extrakorporalen-verfahren"
+            )
+
+            MII_PR_ICU_ECT_SUBSTITUATFLUSS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-substituatfluss"
+
+            MII_PR_ICU_ECT_SUBSTITUATVOLUMEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-substituatvolumen"
+
+            MII_PR_ICU_ECT_VENOESER_DRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-venoeser-druck"
+
+            MII_PR_ICU_EVENT_XSPIRATORISCHER_SAUERSTOFFPARTIALDRUCK = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-exspiratorischer-sauerstoffpartialdruck"
+            )
+
+            MII_PR_ICU_MUV_ARTERIELLER_BLUTDRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-arterieller-blutdruck"
+
+            MII_PR_ICU_MUV_ATEMFREQUENZ = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-atemfrequenz"
+
+            MII_PR_ICU_MUV_HERZFREQUENZ = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-herzfrequenz"
+
+            MII_PR_ICU_MUV_KOERPERGEWICHT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergewicht"
+
+            MII_PR_ICU_MUV_KOERPERGROESSE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergroesse"
+
+            MII_PR_ICU_MUV_KOPFUMFANG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang"
+
+            MII_PR_ICU_VENT_ATEMWEGSDRUCK_BEI_NULL_EXPIRATORISCHEM_GASFLUSS = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-atemwegsdruck-bei-null-expiratorischem-gasfluss"
+            )
+
+            MII_PR_ICU_VENT_ATEMWEGSDRUCK_MITTLEREM_EXPIRATORISCHEM_GASFLUSS = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-atemwegsdruck-bei-mittlerem-expiratorischem-gasfluss"
+            )
+
+            MII_PR_ICU_VENT_ATEMZUGVOLUMEN_EINSTELLUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-atemzugvolumen-einstellung"
+
+            MII_PR_ICU_VENT_ATEMZUGVOLUMEN_WAEHREND_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-atemzugvolumen-waehrend-beatmung"
+
+            MII_PR_ICU_VENT_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-beatmung"
+
+            MII_PR_ICU_VENT_BEATMUNGSVOLUMEN_MIN_MASCHINELLER_BEATMUNG = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-beatmungsvolumen-pro-minute-maschineller-beatmung"
+            )
+
+            MII_PR_ICU_VENT_BEATMUNGSZEIT_HOHEM_DRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-beatmungszeit-hohem-druck"
+
+            MII_PR_ICU_VENT_BEATMUNGSZEIT_NIEDRIGEM_DRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-beatmungszeit-niedrigem-druck"
+
+            MII_PR_ICU_VENT_DM_EINGESTELLTE_GEMESSENE_PARAMETER_BEATMUNG = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-devicemetric-eingestellte-gemessene-parameter-beatmung"
+            )
+
+            MII_PR_ICU_VENT_EINGESTELLTER_INSPIRATORISCHER_GASFLUSS = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-eingestellter-inspiratorischer-gasfluss"
+            )
+
+            MII_PR_ICU_VENT_EINSTELLUNG_AUSATMUNGSZEIT_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-einstellung-ausatmungszeit-beatmung"
+
+            MII_PR_ICU_VENT_EINSTELLUNG_EINATMUNGSZEIT_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-einstellung-einatmungszeit-beatmung"
+
+            MII_PR_ICU_VENT_ENDEXPIRATORISCHER_KOHLENDIOXIDPARTIALDRUCK = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-endexpiratorischer-kohlendioxidpartialdruck"
+            )
+
+            MII_PR_ICU_VENT_EXSPIRATORISCHER_GASFLUSS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-exspiratorischer-gasfluss"
+
+            MII_PR_ICU_VENT_HOROWITZ_IN_ARTERIELLEM_BLUT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-horowitz-in-arteriellem-blut"
+
+            MII_PR_ICU_VENT_INSPIRATORISCHER_GASFLUSS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-inspiratorischer-gasfluss"
+
+            MII_PR_ICU_VENT_INSPIRATORISCHE_SAUERSTOFFFRAKTION_GEMESSEN = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-inspiratorische-sauerstofffraktion-gemessen"
+            )
+
+            MII_PR_ICU_VENT_MAXIMALER_BEATMUNGSDRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-maximaler-beatmungsdruck"
+
+            MII_PR_ICU_VENT_MECHANISCHE_ATEMFREQUENZ_BEATMET = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-mechanische-atemfrequenz-beatmet"
+
+            MII_PR_ICU_VENT_MITTLERER_BEATMUNGSDRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-mittlerer-beatmungsdruck"
+
+            MII_PR_ICU_VENT_POSITIV_ENDEXPIRATORISCHER_DRUCK = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-positiv-endexpiratorischer-druck"
+
+            MII_PR_ICU_VENT_SPONTANES_ATEMZUGVOLUMEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-spontanes-atemzugvolumen"
+
+            MII_PR_ICU_VENT_SPONTANES_PLUS_MECHANISCHES_ATEMZUGVOLUMEN = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-spontanes-mechanisches-atemzugvolumen-waehrend-beatmung"
+            )
+
+            MII_PR_ICU_VENT_SPONTANE_ATEMFREQUENZ_BEATMET = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-spontane-atemfrequenz-beatmet"
+
+            MII_PR_ICU_VENT_SPONTANE_MECHANISCHE_ATEMFREQUENZ_BEATMET = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-spontane-mechanische-atemfrequenz-beatmet"
+            )
+
+            MII_PR_ICU_VENT_UNTERSTUEZUNGSDRUCK_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-unterstuetzungsdruck-beatmung"
+
+            MII_PR_ICU_VENT_ZEITVERHAELTNIS_EIN_AUSATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-zeitverhaeltnis-ein-ausatmung"
+
+            MII_PR_VENT_ICU_DYNAMISCHE_KOMPLIANCE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dynamische-kompliance"
+
+            MII_PR_VENT_ICU_PARAMETER_VON_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-beatmung"
+
+            MII_PR_VENT_PROVIDED_ICU_DRUCKDIFFERENZ_BEATMUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-druckdifferenz-beatmung"

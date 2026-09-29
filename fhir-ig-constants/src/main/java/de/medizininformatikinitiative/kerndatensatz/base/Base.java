@@ -214,6 +214,88 @@ public final class Base {
     public static String miiPrProzedurProcedure() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.1";
     }
+
+    /** The profiles' canonical URLs without their {@code |version} suffix. */
+    public static final class Versionless {
+      private Versionless() {}
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose}
+       */
+      public static String miiPrDiagnoseCondition() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung}
+       */
+      public static String miiPrFallKontaktGesundheitseinrichtung() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient}
+       */
+      public static String miiPrPersonPatient() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert}
+       */
+      public static String miiPrPersonPatientPseudonymisiert() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache}
+       */
+      public static String miiPrPersonTodesursache() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus}
+       */
+      public static String miiPrPersonVitalstatus() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure}
+       */
+      public static String miiPrProzedurProcedure() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure";
+      }
+    }
   }
 
   public static final class Extensions {

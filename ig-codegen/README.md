@@ -40,6 +40,14 @@ resource.
    // -> "https://www.medizininformatik-initiative.de/.../StructureDefinition/mii-pr-diagnose-condition|2026.0.0"
    ```
 
+   Profile URLs carry their `|version` suffix. `Profiles` has a nested `Versionless` class with
+   the same accessors, which return the URL without the suffix:
+
+   ```java
+   Onkologie.Profiles.Versionless.miiPrDiagnoseCondition()
+   // -> "https://www.medizininformatik-initiative.de/.../StructureDefinition/mii-pr-diagnose-condition"
+   ```
+
    `Extensions` instead get a static **factory method** that returns a HAPI
    `org.hl7.fhir.r4.model.Extension` missing only the value, so the URL never has to be
    hand-transcribed at the call site either. The generator reads each extension's

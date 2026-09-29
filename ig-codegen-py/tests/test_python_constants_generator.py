@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Any
+
 from ig_codegen.ig_package_model import (
     ConceptConstant,
     ExtensionValueType,
@@ -115,6 +117,28 @@ class TestProfilesClass:
         source = generate(model, "Test")
         assert "class Profiles" in source
         assert 'MII_PR_TEST = "https://example.com/profile|1.0"' in source
+
+    def test_versionless_nested_class(self) -> None:
+        model = _make_model(
+            profiles={
+                "MII_PR_TEST": "https://example.com/profile|1.0",
+                "MII_PR_UNVERSIONED": "https://example.com/unversioned",
+            }
+        )
+        source = generate(model, "Test")
+        versionless = source[source.index("class Versionless") :]
+        assert source.index("class Profiles") < source.index("class Versionless")
+        assert 'MII_PR_TEST = "https://example.com/profile"' in versionless
+        assert 'MII_PR_UNVERSIONED = "https://example.com/unversioned"' in versionless
+        assert "|1.0" not in versionless
+
+    def test_versionless_class_is_usable(self) -> None:
+        model = _make_model(profiles={"MII_PR_TEST": "https://example.com/profile|1.0"})
+        namespace: dict[str, Any] = {}
+        exec(generate(model, "Test"), namespace)
+        profiles = namespace["Test"].Profiles
+        assert profiles.MII_PR_TEST == "https://example.com/profile|1.0"
+        assert profiles.Versionless.MII_PR_TEST == "https://example.com/profile"
 
 
 class TestExtensionsClass:

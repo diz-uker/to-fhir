@@ -254,6 +254,88 @@ public final class Studie {
     public static String miiPrStudieStudieneinschlussAnfrage() {
       return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage|2026.0.1";
     }
+
+    /** The profiles' canonical URLs without their {@code |version} suffix. */
+    public static final class Versionless {
+      private Versionless() {}
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-beteiligte-person}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-beteiligte-person}
+       */
+      public static String miiPrStudieBeteiligtePerson() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-beteiligte-person";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-dokument}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-dokument}
+       */
+      public static String miiPrStudieDokument() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-dokument";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-ein-auschluss-kriterium}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-ein-auschluss-kriterium}
+       */
+      public static String miiPrStudieEinAuschlussKriterium() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-ein-auschluss-kriterium";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband}
+       */
+      public static String miiPrStudieProband() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register}
+       */
+      public static String miiPrStudieRegister() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie}
+       */
+      public static String miiPrStudieStudie() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage}
+       */
+      public static String miiPrStudieStudieneinschlussAnfrage() {
+        return "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage";
+      }
+    }
   }
 
   public static final class Extensions {

@@ -48,6 +48,41 @@ class Molgen:
 
         MII_PR_MOLGEN_VARIANTE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4"
 
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_PR_MOLGEN_ANFORDERUNG_GENETISCHER_TEST = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test"
+
+            MII_PR_MOLGEN_DIAGNOSTISCHE_IMPLIKATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation"
+
+            MII_PR_MOLGEN_EMPFOHLENE_FOLGEMASSNAHME = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme"
+
+            MII_PR_MOLGEN_FAMILIENANAMNESE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese"
+
+            MII_PR_MOLGEN_GENOMIC_STUDY = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study"
+
+            MII_PR_MOLGEN_GENOMIC_STUDY_ANALYSIS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis"
+
+            MII_PR_MOLGEN_GENOTYP = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp"
+
+            MII_PR_MOLGEN_MEDIKATIONSEMPFEHLUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung"
+
+            MII_PR_MOLGEN_MIKROSATELLITENINSTABILITAET = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet"
+
+            MII_PR_MOLGEN_MOLEKULARER_BIOMARKER = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker"
+
+            MII_PR_MOLGEN_MOLEKULARE_KONSEQUENZ = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz"
+
+            MII_PR_MOLGEN_MOLEKULARGENETISCHER_BEFUNDBERICHT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+
+            MII_PR_MOLGEN_MUTATIONSLAST = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast"
+
+            MII_PR_MOLGEN_POLYGENER_RISIKO_SCORE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score"
+
+            MII_PR_MOLGEN_THERAPEUTISCHE_IMPLIKATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation"
+
+            MII_PR_MOLGEN_VARIANTE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+
     class Extensions:
         MII_EX_MOLGEN_EMPFOHLENE_MASSNAHME = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-massnahme"
 

@@ -2643,6 +2643,167 @@ class Onkologie:
 
         MII_PR_ONKO_WEITERE_KLASSIFIKATIONEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3"
 
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_PR_ONKO_ALLGEMEINER_LEISTUNGSZUSTAND_ECOG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
+
+            MII_PR_ONKO_ALLGEMEINER_LEISTUNGSZUSTAND_KARNOFSKY = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
+            )
+
+            MII_PR_ONKO_ANZAHL_BEFALLENE_LYMPHKNOTEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten"
+
+            MII_PR_ONKO_ANZAHL_BEFALLENE_SENTINEL_LYMPHKNOTEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten"
+
+            MII_PR_ONKO_ANZAHL_UNTERSUCHTE_LYMPHKNOTEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-lymphknoten"
+
+            MII_PR_ONKO_ANZAHL_UNTERSUCHTE_SENTINEL_LYMPHKNOTEN = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten"
+            )
+
+            MII_PR_ONKO_ASA_KLASSIFIKATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation"
+
+            MII_PR_ONKO_BEFUND = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund"
+
+            MII_PR_ONKO_DIAGNOSE_PRIMAERTUMOR = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+
+            MII_PR_ONKO_FERNMETASTASEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+
+            MII_PR_ONKO_FRUEHERE_TUMORERKRANKUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
+
+            MII_PR_ONKO_GENETISCHE_VARIANTE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante"
+
+            MII_PR_ONKO_GRADING = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading"
+
+            MII_PR_ONKO_HISTOLOGIE_ICDO3 = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
+
+            MII_PR_ONKO_KRK_ABSTAND_ABORAL = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral"
+
+            MII_PR_ONKO_KRK_ABSTAND_ANOKUTAN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan"
+
+            MII_PR_ONKO_KRK_ABSTAND_CIRCUMFERELLE_RESEKTIONSEBENE = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"
+            )
+
+            MII_PR_ONKO_KRK_ANASTOMOSENINSUFFIZIENZ = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"
+
+            MII_PR_ONKO_KRK_MRT_MESOREKTALE_FASZIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"
+
+            MII_PR_ONKO_KRK_OPERATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"
+
+            MII_PR_ONKO_KRK_SPECIMEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen"
+
+            MII_PR_ONKO_KRK_STOMA_MARKIERUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"
+
+            MII_PR_ONKO_LISTE_EVIDENZ_ERSTDIAGNOSE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
+
+            MII_PR_ONKO_MAMMA_HER2NEU_STATUS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status"
+
+            MII_PR_ONKO_MAMMA_MENOPAUSE_STATUS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status"
+
+            MII_PR_ONKO_MAMMA_OPERATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-operation"
+
+            MII_PR_ONKO_MAMMA_PRAEOPERATIVE_MARKIERUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung"
+
+            MII_PR_ONKO_MAMMA_REZEPTORSTATUS_ESTROGEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen"
+
+            MII_PR_ONKO_MAMMA_REZEPTORSTATUS_PROGESTERON = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron"
+
+            MII_PR_ONKO_MAMMA_SOZIALDIENST = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-sozialdienst"
+
+            MII_PR_ONKO_MELANOM_BRESLOW_TIEFE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe"
+
+            MII_PR_ONKO_MELANOM_EXZISION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision"
+
+            MII_PR_ONKO_MELANOM_LDH = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ldh"
+
+            MII_PR_ONKO_MELANOM_SICHERHEITSABSTAND = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand"
+
+            MII_PR_ONKO_MELANOM_ULZERATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-ulzeration"
+
+            MII_PR_ONKO_NEBENWIRKUNG_ADVERSE_EVENT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+
+            MII_PR_ONKO_OPERATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation"
+
+            MII_PR_ONKO_PROSTATA_OPERATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation"
+
+            MII_PR_ONKO_PROSTATE_ANZAHL_POSITIVE_STANZEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen"
+
+            MII_PR_ONKO_PROSTATE_ANZAHL_STANZEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen"
+
+            MII_PR_ONKO_PROSTATE_CA_BEFALL_STANZE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze"
+
+            MII_PR_ONKO_PROSTATE_CLAVIEN_DINDO = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo"
+
+            MII_PR_ONKO_PROSTATE_GLEASON_GRADE_GROUP = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group"
+
+            MII_PR_ONKO_PROSTATE_GLEASON_PATTERNS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
+
+            MII_PR_ONKO_PROSTATE_PSA = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa"
+
+            MII_PR_ONKO_RESIDUALSTATUS = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus"
+
+            MII_PR_ONKO_SPECIMEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"
+
+            MII_PR_ONKO_STRAHLENTHERAPIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
+
+            MII_PR_ONKO_STRAHLENTHERAPIE_BESTRAHLUNG_NUKLEARMEDIZIN = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin"
+            )
+
+            MII_PR_ONKO_STRAHLENTHERAPIE_BESTRAHLUNG_STRAHLENTHERAPIE = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+            )
+
+            MII_PR_ONKO_STUDIENTEILNAHME = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme"
+
+            MII_PR_ONKO_SYSTEMISCHE_THERAPIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
+
+            MII_PR_ONKO_SYSTEMISCHE_THERAPIE_MEDIKATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+
+            MII_PR_ONKO_THERAPIEEMPFEHLUNG_KOMBINATIONSTHERAPIE = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie"
+            )
+
+            MII_PR_ONKO_THERAPIEEMPFEHLUNG_MEDIKATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation"
+
+            MII_PR_ONKO_THERAPIEEMPFEHLUNG_OPERATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-operation"
+
+            MII_PR_ONKO_TNM_A_SYMBOL = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol"
+
+            MII_PR_ONKO_TNM_KLASSIFIKATION = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+
+            MII_PR_ONKO_TNM_L_KATEGORIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
+
+            MII_PR_ONKO_TNM_M_KATEGORIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+
+            MII_PR_ONKO_TNM_M_SYMBOL = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-symbol"
+
+            MII_PR_ONKO_TNM_N_KATEGORIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+
+            MII_PR_ONKO_TNM_PN_KATEGORIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie"
+
+            MII_PR_ONKO_TNM_R_SYMBOL = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol"
+
+            MII_PR_ONKO_TNM_S_KATEGORIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie"
+
+            MII_PR_ONKO_TNM_T_KATEGORIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+
+            MII_PR_ONKO_TNM_V_KATEGORIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie"
+
+            MII_PR_ONKO_TNM_Y_SYMBOL = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"
+
+            MII_PR_ONKO_TOD = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod"
+
+            MII_PR_ONKO_TUMORGROESSE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse"
+
+            MII_PR_ONKO_TUMORKONFERENZ = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+
+            MII_PR_ONKO_VERLAUF = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+
+            MII_PR_ONKO_WEITERE_KLASSIFIKATIONEN = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen"
+
     class Extensions:
         MII_EX_ONKO_HISTOLOGY_MORPHOLOGY_BEHAVIOR_ICDO3 = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
 

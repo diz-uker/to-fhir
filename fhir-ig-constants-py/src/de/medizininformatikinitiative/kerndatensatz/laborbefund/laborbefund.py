@@ -20,6 +20,15 @@ class Laborbefund:
 
         MII_PR_LABOR_LABORUNTERSUCHUNG = "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2026.0.3"
 
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_PR_LABOR_LABORANFORDERUNG = "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab"
+
+            MII_PR_LABOR_LABORBEFUND = "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab"
+
+            MII_PR_LABOR_LABORUNTERSUCHUNG = "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab"
+
     class Extensions:
         MII_EX_LABOR_INTERPRETATIONSBEEINFLUSSENDE_EIGENSCHAFT = "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft"
 

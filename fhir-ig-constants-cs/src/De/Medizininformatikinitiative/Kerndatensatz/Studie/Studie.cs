@@ -89,6 +89,38 @@ public static class Studie
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage|2026.0.1</c>.</summary>
         public static string MiiPrStudieStudieneinschlussAnfrage =>
             "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage|2026.0.1";
+
+        /// <summary>The profiles' canonical URLs without their <c>|version</c> suffix.</summary>
+        public static class Versionless
+        {
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-beteiligte-person</c>.</summary>
+            public static string MiiPrStudieBeteiligtePerson =>
+                "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-beteiligte-person";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-dokument</c>.</summary>
+            public static string MiiPrStudieDokument =>
+                "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-dokument";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-ein-auschluss-kriterium</c>.</summary>
+            public static string MiiPrStudieEinAuschlussKriterium =>
+                "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-ein-auschluss-kriterium";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband</c>.</summary>
+            public static string MiiPrStudieProband =>
+                "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register</c>.</summary>
+            public static string MiiPrStudieRegister =>
+                "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie</c>.</summary>
+            public static string MiiPrStudieStudie =>
+                "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage</c>.</summary>
+            public static string MiiPrStudieStudieneinschlussAnfrage =>
+                "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage";
+        }
     }
 
     public static class Extensions

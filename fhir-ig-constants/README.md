@@ -38,7 +38,9 @@ whose `coding()` accessor returns a `org.hl7.fhir.r4.model.Coding`.
 ```java
 import de.medizininformatikinitiative.kerndatensatz.onkologie.Onkologie;
 
-String profileUrl = Onkologie.Profiles.miiPrOnkoOperation();
+String profileUrl = Onkologie.Profiles.miiPrOnkoOperation(); // ".../mii-pr-onko-operation|<version>"
+// The same canonical URL without its |version suffix, e.g. to match unversioned meta.profile values:
+String versionlessProfileUrl = Onkologie.Profiles.Versionless.miiPrOnkoOperation();
 
 // CodeSystems with inline concepts (content == "complete") also get an enum with a coding() accessor:
 Coding intention = Onkologie.CodeSystems.MiiCsOnkoIntention.K.coding();
