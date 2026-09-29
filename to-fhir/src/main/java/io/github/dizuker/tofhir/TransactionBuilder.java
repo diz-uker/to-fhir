@@ -463,7 +463,9 @@ public class TransactionBuilder {
         .addRole(
             new CodeableConcept(
                 new Coding(
-                    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType", "AUT", "author")))
+                    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "AUT",
+                    "author (originator)")))
         .setWho(this.provenanceWho);
 
     provenance.addEntity().setRole(ProvenanceEntityRole.SOURCE).setWhat(provenanceWhat);
