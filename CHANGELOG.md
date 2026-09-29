@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.22](https://github.com/diz-uker/to-fhir/compare/v0.2.21...v0.2.22) (2026-09-29)
+
+
+### Features
+
+* profile URLs without version suffix ([#108](https://github.com/diz-uker/to-fhir/issues/108)) ([438c4a3](https://github.com/diz-uker/to-fhir/commit/438c4a3307a46f81291cd8098d97bd1fb282c0da))
+
 ## [0.2.21](https://github.com/diz-uker/to-fhir/compare/v0.2.20...v0.2.21) (2026-09-18)
 
 
