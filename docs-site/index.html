@@ -8,7 +8,10 @@
       name="description"
       content="Collection of utilities for mapping FHIR resources, available for Java, C#, and Python."
     />
-    <meta name="keywords" content="FHIR, HL7, Java, C#, Python, healthcare interoperability" />
+    <meta
+      name="keywords"
+      content="FHIR, HL7, Java, C#, Python, healthcare interoperability"
+    />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
@@ -16,13 +19,16 @@
       <div class="wrap">
         <h1>to-fhir</h1>
         <p class="tagline">
-          Collection of utilities for mapping FHIR resources: deterministic resource ids derived
-          from business identifiers, references, canonical system/coding/extension templates, and
-          a fluent transaction Bundle builder with optional Provenance. Available for Java, C#,
-          and Python with the same behaviour and an idiomatic API in each.
+          Collection of utilities for mapping FHIR resources: deterministic
+          resource ids derived from business identifiers, references, canonical
+          system/coding/extension templates, and a fluent transaction Bundle
+          builder with optional Provenance. Available for Java, C#, and Python
+          with the same behaviour and an idiomatic API in each.
         </p>
         <div class="badges">
-          <a href="https://scorecard.dev/viewer/?uri=github.com/diz-uker/to-fhir">
+          <a
+            href="https://scorecard.dev/viewer/?uri=github.com/diz-uker/to-fhir"
+          >
             <img
               src="https://img.shields.io/ossf-scorecard/github.com/diz-uker/to-fhir?label=openssf%20scorecard&style=flat"
               alt="OpenSSF Scorecard"
@@ -32,7 +38,9 @@
           </a>
         </div>
         <div class="cta">
-          <a class="primary" href="https://github.com/diz-uker/to-fhir">GitHub</a>
+          <a class="primary" href="https://github.com/diz-uker/to-fhir"
+            >GitHub</a
+          >
           <a href="#install">Install</a>
           <a href="#usage">Usage</a>
           <a href="#reference">API reference</a>
@@ -84,8 +92,8 @@ pip install to-fhir==0.2.21</code></pre>
       <section id="usage">
         <h2>Usage</h2>
         <p class="lead">
-          Build a transaction Bundle with a deterministic resource id and an attached Provenance,
-          in whichever language you're working in.
+          Build a transaction Bundle with a deterministic resource id and an
+          attached Provenance, in whichever language you're working in.
         </p>
 
         <div class="lang-block">
@@ -156,15 +164,26 @@ bundle = (
 
         <p>
           Each language's <code>TransactionBuilder</code> also has a
-          <code>build_with_separate_provenance</code> variant (<code>buildWithSeparateProvenance</code>
-          in Java/C#) that returns the data and Provenance resources as two bundles instead of
-          one. See the language-specific
-          <a href="https://github.com/diz-uker/to-fhir/blob/master/README.md#usage-c">C#</a> and
-          <a href="https://github.com/diz-uker/to-fhir/blob/master/README.md#usage-python">Python</a>
-          README sections, and the API references below, for the full helper set:
-          <code>FhirSystems</code>/<code>fhir_systems</code> (canonical system URIs),
-          <code>FhirCodings</code>/<code>fhir_codings</code> (system + version <code>Coding</code>
-          templates), <code>FhirExtensions</code>/<code>fhir_extensions</code>, and
+          <code>build_with_separate_provenance</code> variant (<code
+            >buildWithSeparateProvenance</code
+          >
+          in Java/C#) that returns the data and Provenance resources as two
+          bundles instead of one. See the language-specific
+          <a
+            href="https://github.com/diz-uker/to-fhir/blob/master/README.md#usage-c"
+            >C#</a
+          >
+          and
+          <a
+            href="https://github.com/diz-uker/to-fhir/blob/master/README.md#usage-python"
+            >Python</a
+          >
+          README sections, and the API references below, for the full helper
+          set:
+          <code>FhirSystems</code>/<code>fhir_systems</code> (canonical system
+          URIs), <code>FhirCodings</code>/<code>fhir_codings</code> (system +
+          version <code>Coding</code> templates),
+          <code>FhirExtensions</code>/<code>fhir_extensions</code>, and
           <code>ReferenceUtils</code>/<code>reference_utils</code>.
         </p>
       </section>
@@ -172,13 +191,16 @@ bundle = (
       <section id="reference">
         <h2>API reference</h2>
         <p class="lead">
-          Generated from the same doc comments shipped in each package (Javadoc, XML doc comments,
-          and Sphinx-flavoured docstrings).
+          Generated from the same doc comments shipped in each package (Javadoc,
+          XML doc comments, and Sphinx-flavoured docstrings).
         </p>
         <div class="grid">
           <div class="card">
             <h3>Java</h3>
-            <p>Javadoc for <code>io.github.dizuker.tofhir</code>, built with Gradle.</p>
+            <p>
+              Javadoc for <code>io.github.dizuker.tofhir</code>, built with
+              Gradle.
+            </p>
             <a class="ref-link" href="java/">Browse the Java reference</a>
           </div>
           <div class="card">
@@ -198,9 +220,10 @@ bundle = (
     <footer>
       <div class="wrap">
         <p>
-          <a href="https://github.com/diz-uker/to-fhir">diz-uker/to-fhir</a> · Apache-2.0
-          · built and published by
-          <a href="https://github.com/diz-uker/to-fhir/actions/workflows/docs.yaml"
+          <a href="https://github.com/diz-uker/to-fhir">diz-uker/to-fhir</a> ·
+          Apache-2.0 · built and published by
+          <a
+            href="https://github.com/diz-uker/to-fhir/actions/workflows/docs.yaml"
             >.github/workflows/docs.yaml</a
           >
         </p>
