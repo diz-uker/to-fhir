@@ -25,7 +25,9 @@ import javax.lang.model.element.Modifier;
  * <p>CodeSystems and Profiles each get one static no-arg accessor method per canonical URL, named
  * in record-accessor style (lowerCamelCase, no {@code get} prefix). E.g. the FHIR id {@code
  * mii-pr-diagnose-condition} becomes the accessor {@code miiPrDiagnoseCondition()}, called as
- * {@code Onkologie.Profiles.miiPrDiagnoseCondition()}.
+ * {@code Onkologie.Profiles.miiPrDiagnoseCondition()}. Profile URLs carry their {@code |version}
+ * suffix; a nested {@code Versionless} class repeats every profile accessor without it, e.g. {@code
+ * Onkologie.Profiles.Versionless.miiPrDiagnoseCondition()}.
  *
  * <p>A CodeSystem that ships its own concepts inline ({@code content == "complete"}) additionally
  * gets a nested enum, named after the CodeSystem itself, with one constant per concept, a {@code
@@ -72,7 +74,7 @@ public final class JavaConstantsGenerator {
             .addMethod(privateConstructor());
 
     addAccessorClass(rootType, "CodeSystems", model.codeSystems(), model.codeSystemConcepts());
-    addAccessorClass(rootType, "Profiles", model.profiles(), Map.of());
+    addProfilesClass(rootType, model.profiles());
     addExtensionsClass(
         rootType,
         model.extensions(),
@@ -112,14 +114,7 @@ public final class JavaConstantsGenerator {
             .addMethod(privateConstructor());
     for (Map.Entry<String, String> entry : constants.entrySet()) {
       String url = entry.getValue();
-      String accessorName = NameUtils.toCamelCase(entry.getKey());
-      nestedType.addMethod(
-          MethodSpec.methodBuilder(accessorName)
-              .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-              .addJavadoc("The canonical URL {@code $L}.\n\n@return {@code $L}\n", url, url)
-              .returns(String.class)
-              .addStatement("return $S", url)
-              .build());
+      nestedType.addMethod(canonicalUrlAccessor(NameUtils.toCamelCase(entry.getKey()), url));
 
       List<ConceptConstant> concepts = conceptsByName.get(entry.getKey());
       if (concepts != null && !concepts.isEmpty()) {
@@ -127,6 +122,50 @@ public final class JavaConstantsGenerator {
       }
     }
     rootType.addType(nestedType.build());
+  }
+
+  /**
+   * Adds the {@code Profiles} class: one accessor per profile returning its canonical URL with the
+   * {@code |version} suffix, plus a nested {@code Versionless} class with the same accessors
+   * returning the bare URL, for places that must match {@code meta.profile} values written without
+   * a version.
+   */
+  private static void addProfilesClass(TypeSpec.Builder rootType, Map<String, String> profiles) {
+    if (profiles.isEmpty()) {
+      return;
+    }
+
+    TypeSpec.Builder profilesType =
+        TypeSpec.classBuilder("Profiles")
+            .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+            .addMethod(privateConstructor());
+    TypeSpec.Builder versionlessType =
+        TypeSpec.classBuilder("Versionless")
+            .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+            .addJavadoc("The profiles' canonical URLs without their {@code |version} suffix.\n")
+            .addMethod(privateConstructor());
+    for (Map.Entry<String, String> entry : profiles.entrySet()) {
+      String accessorName = NameUtils.toCamelCase(entry.getKey());
+      profilesType.addMethod(canonicalUrlAccessor(accessorName, entry.getValue()));
+      versionlessType.addMethod(
+          canonicalUrlAccessor(accessorName, withoutVersion(entry.getValue())));
+    }
+    rootType.addType(profilesType.addType(versionlessType.build()).build());
+  }
+
+  private static MethodSpec canonicalUrlAccessor(String accessorName, String url) {
+    return MethodSpec.methodBuilder(accessorName)
+        .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+        .addJavadoc("The canonical URL {@code $L}.\n\n@return {@code $L}\n", url, url)
+        .returns(String.class)
+        .addStatement("return $S", url)
+        .build();
+  }
+
+  /** Strips a canonical URL's {@code |version} suffix, if it has one. */
+  private static String withoutVersion(String canonicalUrl) {
+    int versionSeparator = canonicalUrl.indexOf('|');
+    return versionSeparator < 0 ? canonicalUrl : canonicalUrl.substring(0, versionSeparator);
   }
 
   private static void addExtensionsClass(

@@ -28,7 +28,7 @@ whose `coding()` accessor returns a `org.hl7.fhir.r4.model.Coding`.
    ```
 
 2. Restore those packages locally, either with `fhir restore` (Firely Terminal CLI) or `npm
-   install`, reading the same `package.json` — both work, `generateIgConstants` tries
+install`, reading the same `package.json` — both work, `generateIgConstants` tries
    `~/.fhir/packages`, then `./.fhir/packages`, then `./node_modules`, in that order.
 3. Run `./gradlew :fhir-ig-constants:generateIgConstants`.
 4. Review the diff in `src/main/java`, commit it.
@@ -38,7 +38,9 @@ whose `coding()` accessor returns a `org.hl7.fhir.r4.model.Coding`.
 ```java
 import de.medizininformatikinitiative.kerndatensatz.onkologie.Onkologie;
 
-String profileUrl = Onkologie.Profiles.miiPrOnkoOperation();
+String profileUrl = Onkologie.Profiles.miiPrOnkoOperation(); // ".../mii-pr-onko-operation|<version>"
+// The same canonical URL without its |version suffix, e.g. to match unversioned meta.profile values:
+String versionlessProfileUrl = Onkologie.Profiles.Versionless.miiPrOnkoOperation();
 
 // CodeSystems with inline concepts (content == "complete") also get an enum with a coding() accessor:
 Coding intention = Onkologie.CodeSystems.MiiCsOnkoIntention.K.coding();

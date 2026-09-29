@@ -203,6 +203,48 @@ public class CSharpConstantsGeneratorTests
     }
 
     [Fact]
+    public void GeneratesVersionlessProfilesNestedClass()
+    {
+        var profiles = new SortedDictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["MII_PR_ONKO_OPERATION"] =
+                "https://example.org/StructureDefinition/mii-pr-onko-operation|1.0.0",
+            ["MII_PR_UNVERSIONED"] = "https://example.org/StructureDefinition/mii-pr-unversioned",
+        };
+        var model = new IgPackageModel(
+            "test.package",
+            "1.0.0",
+            new SortedDictionary<string, string>(),
+            profiles,
+            new SortedDictionary<string, string>(),
+            new Dictionary<string, IReadOnlyList<ConceptConstant>>(),
+            new Dictionary<string, ExtensionValueType>(),
+            new Dictionary<string, NamingSystemEntry>()
+        );
+
+        var source = CSharpConstantsGenerator.Generate(model, "De.Example.Onkologie", "Onkologie");
+
+        int versionlessIndex = source.IndexOf(
+            "public static class Versionless",
+            StringComparison.Ordinal
+        );
+        Assert.True(
+            versionlessIndex
+                > source.IndexOf("public static class Profiles", StringComparison.Ordinal)
+        );
+        var versionless = source[versionlessIndex..];
+        Assert.Contains(
+            "public static string MiiPrOnkoOperation => \"https://example.org/StructureDefinition/mii-pr-onko-operation\";",
+            versionless
+        );
+        Assert.Contains(
+            "public static string MiiPrUnversioned => \"https://example.org/StructureDefinition/mii-pr-unversioned\";",
+            versionless
+        );
+        Assert.DoesNotContain("|1.0.0", versionless);
+    }
+
+    [Fact]
     public void GeneratesComplexExtensionWithNoValueParam()
     {
         var extensions = new SortedDictionary<string, string>(StringComparer.Ordinal)

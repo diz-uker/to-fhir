@@ -191,6 +191,187 @@ public final class Molgen {
     public static String miiPrMolgenVariante() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2026.0.4";
     }
+
+    /** The profiles' canonical URLs without their {@code |version} suffix. */
+    public static final class Versionless {
+      private Versionless() {}
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test}
+       */
+      public static String miiPrMolgenAnforderungGenetischerTest() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/anforderung-genetischer-test";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation}
+       */
+      public static String miiPrMolgenDiagnostischeImplikation() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/diagnostische-implikation";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme}
+       */
+      public static String miiPrMolgenEmpfohleneFolgemassnahme() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/empfohlene-folgemassnahme";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese}
+       */
+      public static String miiPrMolgenFamilienanamnese() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/familienanamnese";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study}
+       */
+      public static String miiPrMolgenGenomicStudy() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis}
+       */
+      public static String miiPrMolgenGenomicStudyAnalysis() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-genomic-study-analysis";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp}
+       */
+      public static String miiPrMolgenGenotyp() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/genotyp";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung}
+       */
+      public static String miiPrMolgenMedikationsempfehlung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/medikationsempfehlung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet}
+       */
+      public static String miiPrMolgenMikrosatelliteninstabilitaet() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mikrosatelliteninstabilitaet";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker}
+       */
+      public static String miiPrMolgenMolekularerBiomarker() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekularer-biomarker";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz}
+       */
+      public static String miiPrMolgenMolekulareKonsequenz() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mii-pr-molgen-molekulare-konsequenz";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht}
+       */
+      public static String miiPrMolgenMolekulargenetischerBefundbericht() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast}
+       */
+      public static String miiPrMolgenMutationslast() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/mutationslast";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score}
+       */
+      public static String miiPrMolgenPolygenerRisikoScore() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/polygener-risiko-score";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation}
+       */
+      public static String miiPrMolgenTherapeutischeImplikation() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/therapeutische-implikation";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante}
+       */
+      public static String miiPrMolgenVariante() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante";
+      }
+    }
   }
 
   public static final class Extensions {

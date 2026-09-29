@@ -15,6 +15,11 @@ build-backend = "hatchling.build"
 # Generated modules live under src/de/...; ship the top-level namespace package.
 packages = ["src/de"]
 
+[dependency-groups]
+dev = [
+    "ruff>=0.9",
+]
+
 # FHIR URLs and concept display strings can exceed 100 characters; E741 applies to single-letter
 # FHIR codes used as enum member names. Both are intentional in generated code.
 [tool.ruff]

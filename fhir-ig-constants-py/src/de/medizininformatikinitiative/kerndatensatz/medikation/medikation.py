@@ -62,6 +62,19 @@ class Medikation:
 
         MII_PR_MEDIKATION_MEDIKATIONSLISTE = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2026.0.1"
 
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_PR_MEDIKATION_MEDICATION = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication"
+
+            MII_PR_MEDIKATION_MEDICATION_ADMINISTRATION = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration"
+
+            MII_PR_MEDIKATION_MEDICATION_REQUEST = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest"
+
+            MII_PR_MEDIKATION_MEDICATION_STATEMENT = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement"
+
+            MII_PR_MEDIKATION_MEDIKATIONSLISTE = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste"
+
     class Extensions:
         MII_EX_MEDIKATION_WIRKSTOFFRELATION = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstoffrelation"
 

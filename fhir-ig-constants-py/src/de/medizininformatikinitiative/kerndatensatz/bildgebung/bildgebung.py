@@ -316,6 +316,33 @@ class Bildgebung:
 
         MII_PR_BILDGEBUNG_SEMISTRUKT_BEFUNDBERICHT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht|2026.0.0"
 
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_PR_BILDGEBUNG_ANFORDERUNG_BILDGEBUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-anforderung-bildgebung"
+
+            MII_PR_BILDGEBUNG_BEHANDLUNGSEMPFEHLUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-behandlungsempfehlung"
+
+            MII_PR_BILDGEBUNG_BILDGEBUNGSPROZEDUR = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsprozedur"
+
+            MII_PR_BILDGEBUNG_BILDGEBUNGSSTUDIE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsstudie"
+
+            MII_PR_BILDGEBUNG_GERAET = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-geraet"
+
+            MII_PR_BILDGEBUNG_KOERPERSTRUKTUR = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-koerperstruktur"
+
+            MII_PR_BILDGEBUNG_KONTRASTMITTELGABE = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-kontrastmittelgabe"
+
+            MII_PR_BILDGEBUNG_RADIOLOGISCHER_BEFUND = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologischer-befund"
+
+            MII_PR_BILDGEBUNG_RADIOLOGISCHE_BEFUNDUNGSPROZEDUR = (
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-befundungsprozedur"
+            )
+
+            MII_PR_BILDGEBUNG_RADIOLOGISCHE_BEOBACHTUNG = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-beobachtung"
+
+            MII_PR_BILDGEBUNG_SEMISTRUKT_BEFUNDBERICHT = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht"
+
     class Extensions:
         MII_EX_BILDGEBUNG_BILDGEBUNGSGRUND = "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-ex-bildgebung-bildgebungsgrund"
 

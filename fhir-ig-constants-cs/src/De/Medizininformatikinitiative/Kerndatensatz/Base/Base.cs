@@ -81,6 +81,38 @@ public static class Base
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.1</c>.</summary>
         public static string MiiPrProzedurProcedure =>
             "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2026.0.1";
+
+        /// <summary>The profiles' canonical URLs without their <c>|version</c> suffix.</summary>
+        public static class Versionless
+        {
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose</c>.</summary>
+            public static string MiiPrDiagnoseCondition =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung</c>.</summary>
+            public static string MiiPrFallKontaktGesundheitseinrichtung =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient</c>.</summary>
+            public static string MiiPrPersonPatient =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert</c>.</summary>
+            public static string MiiPrPersonPatientPseudonymisiert =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache</c>.</summary>
+            public static string MiiPrPersonTodesursache =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus</c>.</summary>
+            public static string MiiPrPersonVitalstatus =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure</c>.</summary>
+            public static string MiiPrProzedurProcedure =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure";
+        }
     }
 
     public static class Extensions
