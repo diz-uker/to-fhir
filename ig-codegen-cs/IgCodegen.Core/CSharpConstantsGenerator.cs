@@ -8,7 +8,8 @@ namespace IgCodegen;
 ///
 /// <para>CodeSystems and Profiles each get one static no-arg URL accessor per canonical URL, placed
 /// inside a nested <c>Urls</c> class to avoid naming collisions with the enum types that share the
-/// same PascalCase name.</para>
+/// same PascalCase name. Profile URLs carry their <c>|version</c> suffix; a nested
+/// <c>Profiles.Versionless</c> class repeats every profile accessor without it.</para>
 ///
 /// <para>A CodeSystem that ships its own concepts inline (<c>content == "complete"</c>) additionally
 /// gets a nested <c>enum</c> and a top-level extension method class (C# extension methods cannot live
@@ -188,14 +189,37 @@ public static class CSharpConstantsGenerator
         w.Line("public static class Profiles");
         w.Block(() =>
         {
-            foreach (var (constantName, url) in model.Profiles)
-            {
-                string propertyName = NameUtils.ToPascalCase(constantName);
-                w.Line($"/// <summary>The canonical URL <c>{url}</c>.</summary>");
-                w.Line($"public static string {propertyName} => \"{url}\";");
-                w.Line();
-            }
+            WriteProfileProperties(w, model, stripVersion: false);
+
+            w.Line(
+                "/// <summary>The profiles' canonical URLs without their <c>|version</c> suffix.</summary>"
+            );
+            w.Line("public static class Versionless");
+            w.Block(() => WriteProfileProperties(w, model, stripVersion: true));
         });
+    }
+
+    private static void WriteProfileProperties(
+        CodeWriter w,
+        IgPackageModel model,
+        bool stripVersion
+    )
+    {
+        foreach (var (constantName, versionedUrl) in model.Profiles)
+        {
+            string url = stripVersion ? WithoutVersion(versionedUrl) : versionedUrl;
+            string propertyName = NameUtils.ToPascalCase(constantName);
+            w.Line($"/// <summary>The canonical URL <c>{url}</c>.</summary>");
+            w.Line($"public static string {propertyName} => \"{url}\";");
+            w.Line();
+        }
+    }
+
+    /// <summary>Strips a canonical URL's <c>|version</c> suffix, if it has one.</summary>
+    private static string WithoutVersion(string canonicalUrl)
+    {
+        int versionSeparator = canonicalUrl.IndexOf('|');
+        return versionSeparator < 0 ? canonicalUrl : canonicalUrl[..versionSeparator];
     }
 
     // ── Extensions ───────────────────────────────────────────────────────────

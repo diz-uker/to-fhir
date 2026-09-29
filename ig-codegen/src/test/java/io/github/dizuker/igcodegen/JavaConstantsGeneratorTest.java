@@ -68,6 +68,32 @@ class JavaConstantsGeneratorTest {
   }
 
   @Test
+  void profilesHaveVersionlessNestedClassWithoutVersionSuffix() {
+    TreeMap<String, String> profiles = new TreeMap<>();
+    profiles.put(
+        "MII_PR_ONKO_OPERATION",
+        "https://example.org/StructureDefinition/mii-pr-onko-operation|1.0.0");
+    profiles.put(
+        "MII_PR_UNVERSIONED", "https://example.org/StructureDefinition/mii-pr-unversioned");
+    IgPackageModel model = model(new TreeMap<>(), profiles, new TreeMap<>(), Map.of());
+
+    String source =
+        JavaConstantsGenerator.generate(model, "de.example.onkologie", "Onkologie").toString();
+
+    int versionlessIndex = source.indexOf("public static final class Versionless");
+    assertTrue(versionlessIndex > source.indexOf("public static final class Profiles"));
+    String versionless = source.substring(versionlessIndex);
+    assertTrue(versionless.contains("String miiPrOnkoOperation()"));
+    assertTrue(
+        versionless.contains(
+            "return \"https://example.org/StructureDefinition/mii-pr-onko-operation\";"));
+    assertTrue(
+        versionless.contains(
+            "return \"https://example.org/StructureDefinition/mii-pr-unversioned\";"));
+    assertFalse(versionless.contains("|1.0.0"));
+  }
+
+  @Test
   void writeToProducesFileAtExpectedJavaPackagePath(@TempDir Path tempDir) throws Exception {
     TreeMap<String, String> codeSystems = new TreeMap<>();
     codeSystems.put("FOO", "https://example.org/CodeSystem/foo");

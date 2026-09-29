@@ -16,11 +16,11 @@ resource.
 2. `ig-codegen` reads that same manifest, scans each restored package's resource files, and
    classifies them:
 
-   | Condition                                                                                            | Constant      | Value    |
+   | Condition | Constant | Value |
    | ---------------------------------------------------------------------------------------------------- | ------------- | -------- | ------------ |
-   | `resourceType == "CodeSystem"`                                                                       | `CodeSystems` | `url`    |
-   | `StructureDefinition`, `kind == "complex-type"`, `derivation == "constraint"`, `type == "Extension"` | `Extensions`  | `url`    |
-   | `StructureDefinition`, `kind == "resource"`, `derivation == "constraint"`                            | `Profiles`    | `url + " | " + version` |
+   | `resourceType == "CodeSystem"` | `CodeSystems` | `url` |
+   | `StructureDefinition`, `kind == "complex-type"`, `derivation == "constraint"`, `type == "Extension"` | `Extensions` | `url` |
+   | `StructureDefinition`, `kind == "resource"`, `derivation == "constraint"` | `Profiles` | `url + " | " + version` |
 
    `kind == "logical"` (logical models) and `derivation == "specialization"` (base type
    definitions) are skipped — they show up in real packages but aren't IG profiles.
@@ -45,6 +45,14 @@ resource.
    ```java
    Onkologie.Profiles.miiPrDiagnoseCondition()
    // -> "https://www.medizininformatik-initiative.de/.../StructureDefinition/mii-pr-diagnose-condition|2026.0.0"
+   ```
+
+   Profile URLs carry their `|version` suffix. `Profiles` has a nested `Versionless` class with
+   the same accessors, which return the URL without the suffix:
+
+   ```java
+   Onkologie.Profiles.Versionless.miiPrDiagnoseCondition()
+   // -> "https://www.medizininformatik-initiative.de/.../StructureDefinition/mii-pr-diagnose-condition"
    ```
 
    `Extensions` instead get a static **factory method** that returns a HAPI
@@ -76,13 +84,14 @@ resource.
      CodeSystem (no `exclude`, no nested `valueSet` imports; a `concept`/`filter` restriction to a
      subset of that CodeSystem's codes is ignored - the generated enum is a permissive superset,
      the same looseness the `fixedUri` case already has). An `extensible`/`preferred` binding is
-     *not* followed, since those explicitly allow codes outside the bound ValueSet.
+     _not_ followed, since those explicitly allow codes outside the bound ValueSet.
 
      Either way, this only applies when the bound CodeSystem is defined in the same FHIR package
      as the extension (so its enum lives in the same generated Java class) and has inline concepts;
      otherwise (external terminology, a CodeSystem from a different package, or a ValueSet spanning
      more than one CodeSystem) the factory method falls back to the generic `CodeableConcept`/
      `Coding` parameter.
+
    - A choice-typed `value[x]` (more than one allowed type) falls back to the generic HAPI
      `Type` parameter.
    - A complex extension (nested sub-extensions, no `value[x]` of its own) gets a no-arg

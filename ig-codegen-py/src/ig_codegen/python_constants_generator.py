@@ -7,6 +7,9 @@ CodeSystems get URL constants (UPPER_SNAKE_CASE class attributes) and, when the
 content is complete, an enum.Enum subclass with url(), coding(), from_value(), and
 from_value_or_raise() helpers.
 
+Profiles get URL constants carrying their |version suffix, plus a nested Versionless
+class repeating every constant without it.
+
 Extensions get a URL constant, a factory @staticmethod, and a getter @staticmethod
 taking a _HasExtensions Protocol instance.
 
@@ -250,13 +253,24 @@ def _write_concept_enum(w: CodeWriter, enum_name: str, system_url: str, concepts
 
 
 def _write_profiles_class(w: CodeWriter, model: IgPackageModel) -> None:
-    def body() -> None:
+    def constants(strip_version: bool) -> None:
         first = True
         for constant_name, url in model.profiles.items():
             if not first:
                 w.line()
             first = False
-            w.line(f'{constant_name} = "{_esc(url)}"')
+            value = _without_version(url) if strip_version else url
+            w.line(f'{constant_name} = "{_esc(value)}"')
+
+    def versionless_body() -> None:
+        w.line('"""The profiles\' canonical URLs without their |version suffix."""')
+        w.line()
+        constants(strip_version=True)
+
+    def body() -> None:
+        constants(strip_version=False)
+        w.line()
+        w.block("class Versionless", versionless_body)
 
     w.block("class Profiles", body)
 
@@ -459,6 +473,11 @@ def _python_type_for(fhir_type_code: str) -> tuple[str, str]:
         return entry
     # Unknown type: use fhir_type_code as-is (PascalCase complex type)
     return (fhir_type_code, f"value{fhir_type_code[0].upper()}{fhir_type_code[1:]}")
+
+
+def _without_version(canonical_url: str) -> str:
+    """Strips a canonical URL's |version suffix, if it has one."""
+    return canonical_url.split("|", 1)[0]
 
 
 def _esc(s: str) -> str:

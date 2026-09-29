@@ -78,6 +78,25 @@ class Base:
 
         MII_PR_PROZEDUR_PROCEDURE = "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure|2027.0.0-ballot"
 
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_PR_DIAGNOSE_CONDITION = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
+
+            MII_PR_FALL_KONTAKT_GESUNDHEITSEINRICHTUNG = "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"
+
+            MII_PR_PERSON_ALLERGIEUNVERTRAEGLICHKEIT = "https://www.medizininformatik-initiative.de/fhir/modul-person/StructureDefinition/AllergieUnvertraeglichkeit"
+
+            MII_PR_PERSON_PATIENT = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient"
+
+            MII_PR_PERSON_PATIENT_PSEUDONYMISIERT = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert"
+
+            MII_PR_PERSON_TODESURSACHE = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Todesursache"
+
+            MII_PR_PERSON_VITALSTATUS = "https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Vitalstatus"
+
+            MII_PR_PROZEDUR_PROCEDURE = "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"
+
     class Extensions:
         MII_EX_PROZEDUR_DURCHFUEHRUNGSABSICHT = "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht"
 

@@ -108,6 +108,23 @@ class Studie:
 
         MII_PR_STUDIE_STUDIENEINSCHLUSS_ANFRAGE = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage|2027.0.0-ballot"
 
+        class Versionless:
+            """The profiles' canonical URLs without their |version suffix."""
+
+            MII_PR_STUDIE_BETEILIGTE_PERSON = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-beteiligte-person"
+
+            MII_PR_STUDIE_DOKUMENT = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-dokument"
+
+            MII_PR_STUDIE_EIN_AUSCHLUSS_KRITERIUM = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-ein-auschluss-kriterium"
+
+            MII_PR_STUDIE_PROBAND = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-proband"
+
+            MII_PR_STUDIE_REGISTER = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-register"
+
+            MII_PR_STUDIE_STUDIE = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie"
+
+            MII_PR_STUDIE_STUDIENEINSCHLUSS_ANFRAGE = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studieneinschluss-anfrage"
+
     class Extensions:
         MII_EX_STUDIE_AKRONYM = "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-ex-studie-akronym"
 

@@ -430,6 +430,58 @@ public static class Bildgebung
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht|2027.0.0-ballot</c>.</summary>
         public static string MiiPrBildgebungSemistruktBefundbericht =>
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht|2027.0.0-ballot";
+
+        /// <summary>The profiles' canonical URLs without their <c>|version</c> suffix.</summary>
+        public static class Versionless
+        {
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-anforderung-bildgebung</c>.</summary>
+            public static string MiiPrBildgebungAnforderungBildgebung =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-anforderung-bildgebung";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-behandlungsempfehlung</c>.</summary>
+            public static string MiiPrBildgebungBehandlungsempfehlung =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-behandlungsempfehlung";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsprozedur</c>.</summary>
+            public static string MiiPrBildgebungBildgebungsprozedur =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsprozedur";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsstudie</c>.</summary>
+            public static string MiiPrBildgebungBildgebungsstudie =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-bildgebungsstudie";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-geraet</c>.</summary>
+            public static string MiiPrBildgebungGeraet =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-geraet";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-koerperstruktur</c>.</summary>
+            public static string MiiPrBildgebungKoerperstruktur =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-koerperstruktur";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-kontrastmittelgabe</c>.</summary>
+            public static string MiiPrBildgebungKontrastmittelgabe =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-kontrastmittelgabe";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologischer-befund</c>.</summary>
+            public static string MiiPrBildgebungRadiologischerBefund =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologischer-befund";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-befundungsprozedur</c>.</summary>
+            public static string MiiPrBildgebungRadiologischeBefundungsprozedur =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-befundungsprozedur";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-beobachtung</c>.</summary>
+            public static string MiiPrBildgebungRadiologischeBeobachtung =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-beobachtung";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-messung</c>.</summary>
+            public static string MiiPrBildgebungRadiologischeMessung =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-radiologische-messung";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht</c>.</summary>
+            public static string MiiPrBildgebungSemistruktBefundbericht =>
+                "https://www.medizininformatik-initiative.de/fhir/ext/modul-bildgebung/StructureDefinition/mii-pr-bildgebung-semistrukt-befundbericht";
+        }
     }
 
     public static class Extensions

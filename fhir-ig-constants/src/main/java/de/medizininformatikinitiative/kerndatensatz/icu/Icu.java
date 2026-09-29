@@ -832,5 +832,835 @@ public final class Icu {
     public static String miiPrIcuVentZeitverhaeltnisEinAusatmung() {
       return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-zeitverhaeltnis-ein-ausatmung|2027.0.0-ballot.rc1";
     }
+
+    /** The profiles' canonical URLs without their {@code |version} suffix. */
+    public static final class Versionless {
+      private Versionless() {}
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-beatmung}
+       */
+      public static String miiPrIcuBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz}
+       */
+      public static String miiPrIcuBilanz() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-blutverlust}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-blutverlust}
+       */
+      public static String miiPrIcuBilanzAusfuhrBlutverlust() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-blutverlust";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-drainage-generisch}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-drainage-generisch}
+       */
+      public static String miiPrIcuBilanzAusfuhrDrainageGenerisch() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-drainage-generisch";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-fluessigkeit-gesamt}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-fluessigkeit-gesamt}
+       */
+      public static String miiPrIcuBilanzAusfuhrFluessigkeitGesamt() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-fluessigkeit-gesamt";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-gallenfluessigkeit}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-gallenfluessigkeit}
+       */
+      public static String miiPrIcuBilanzAusfuhrGallenfluessigkeit() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-gallenfluessigkeit";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-haemofiltration-einzelmesswerte}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-haemofiltration-einzelmesswerte}
+       */
+      public static String miiPrIcuBilanzAusfuhrHaemofiltrationEinzelmesswerte() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-haemofiltration-einzelmesswerte";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-magensonde}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-magensonde}
+       */
+      public static String miiPrIcuBilanzAusfuhrMagensonde() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-magensonde";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-op-drainage}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-op-drainage}
+       */
+      public static String miiPrIcuBilanzAusfuhrOpDrainage() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-op-drainage";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-pankreasdrainage}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-pankreasdrainage}
+       */
+      public static String miiPrIcuBilanzAusfuhrPankreasdrainage() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-pankreasdrainage";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-stuhlgang}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-stuhlgang}
+       */
+      public static String miiPrIcuBilanzAusfuhrStuhlgang() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-stuhlgang";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-urin}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-urin}
+       */
+      public static String miiPrIcuBilanzAusfuhrUrin() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-urin";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-wunddrainage}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-wunddrainage}
+       */
+      public static String miiPrIcuBilanzAusfuhrWunddrainage() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-ausfuhr-wunddrainage";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-enterale-fluessigkeit}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-enterale-fluessigkeit}
+       */
+      public static String miiPrIcuBilanzEinfuhrEnteraleFluessigkeit() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-enterale-fluessigkeit";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-fluessigkeit-gesamt}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-fluessigkeit-gesamt}
+       */
+      public static String miiPrIcuBilanzEinfuhrFluessigkeitGesamt() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-einfuhr-fluessigkeit-gesamt";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-tagesbilanz-fluessigkeit}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-tagesbilanz-fluessigkeit}
+       */
+      public static String miiPrIcuBilanzTagesbilanzFluessigkeit() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-bilanz-tagesbilanz-fluessigkeit";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-device}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-device}
+       */
+      public static String miiPrIcuDevice() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-device";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dm-eingestellte-gemessene-parameter-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dm-eingestellte-gemessene-parameter-beatmung}
+       */
+      public static String miiPrIcuDmEingestellteGemesseneParameterBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dm-eingestellte-gemessene-parameter-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dm-eingest-gem-parameter-extrakorporale-verfahren}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dm-eingest-gem-parameter-extrakorporale-verfahren}
+       */
+      public static String miiPrIcuDmEingestGemParameterExtrakorporaleVerfahren() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-dm-eingest-gem-parameter-extrakorporale-verfahren";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-arterieller-druck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-arterieller-druck}
+       */
+      public static String miiPrIcuEctArteriellerDruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-arterieller-druck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutflussindex-extrakorporaler-gasaustausch}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutflussindex-extrakorporaler-gasaustausch}
+       */
+      public static String miiPrIcuEctBlutflussindexExtrakorporalerGasaustausch() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutflussindex-extrakorporaler-gasaustausch";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutfluss-cardiovasculaeres-geraet}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutfluss-cardiovasculaeres-geraet}
+       */
+      public static String miiPrIcuEctBlutflussCardiovasculaeresGeraet() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutfluss-cardiovasculaeres-geraet";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutfluss-extrakorporaler-gasaustausch}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutfluss-extrakorporaler-gasaustausch}
+       */
+      public static String miiPrIcuEctBlutflussExtrakorporalerGasaustausch() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-blutfluss-extrakorporaler-gasaustausch";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-dauer-extrakorporaler-gasaustausch}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-dauer-extrakorporaler-gasaustausch}
+       */
+      public static String miiPrIcuEctDauerExtrakorporalerGasaustausch() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-dauer-extrakorporaler-gasaustausch";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-dauer-haemodialysesitzung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-dauer-haemodialysesitzung}
+       */
+      public static String miiPrIcuEctDauerHaemodialysesitzung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-dauer-haemodialysesitzung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-gasfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-gasfluss}
+       */
+      public static String miiPrIcuEctGasfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-gasfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-haemodialyse-blutfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-haemodialyse-blutfluss}
+       */
+      public static String miiPrIcuEctHaemodialyseBlutfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-haemodialyse-blutfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-ionisiertes-kalzium-nierenersatzverfahren}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-ionisiertes-kalzium-nierenersatzverfahren}
+       */
+      public static String miiPrIcuEctIonisiertesKalziumNierenersatzverfahren() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-ionisiertes-kalzium-nierenersatzverfahren";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-substituatfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-substituatfluss}
+       */
+      public static String miiPrIcuEctSubstituatfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-substituatfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-substituatvolumen}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-substituatvolumen}
+       */
+      public static String miiPrIcuEctSubstituatvolumen() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-substituatvolumen";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-venoeser-druck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-venoeser-druck}
+       */
+      public static String miiPrIcuEctVenoeserDruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-ect-venoeser-druck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-extrakorporales-verfahren}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-extrakorporales-verfahren}
+       */
+      public static String miiPrIcuExtrakorporalesVerfahren() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-extrakorporales-verfahren";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-arterieller-blutdruck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-arterieller-blutdruck}
+       */
+      public static String miiPrIcuMuvArteriellerBlutdruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-arterieller-blutdruck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-atemfrequenz}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-atemfrequenz}
+       */
+      public static String miiPrIcuMuvAtemfrequenz() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-atemfrequenz";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-herzfrequenz}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-herzfrequenz}
+       */
+      public static String miiPrIcuMuvHerzfrequenz() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-herzfrequenz";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergewicht}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergewicht}
+       */
+      public static String miiPrIcuMuvKoerpergewicht() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergewicht";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergroesse}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergroesse}
+       */
+      public static String miiPrIcuMuvKoerpergroesse() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerpergroesse";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerperlaenge}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerperlaenge}
+       */
+      public static String miiPrIcuMuvKoerperlaenge() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-koerperlaenge";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang}
+       */
+      public static String miiPrIcuMuvKopfumfang() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-muv-kopfumfang";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-beatmung}
+       */
+      public static String miiPrIcuParameterVonBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-extrakorporalen-verfahren}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-extrakorporalen-verfahren}
+       */
+      public static String miiPrIcuParameterVonExtrakorporalenVerfahren() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-parameter-von-extrakorporalen-verfahren";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-faces-pain-scale-revised}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-faces-pain-scale-revised}
+       */
+      public static String miiPrIcuScoreFacesPainScaleRevised() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-faces-pain-scale-revised";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-gcs}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-gcs}
+       */
+      public static String miiPrIcuScoreGcs() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-gcs";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-numerische-ratingskala}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-numerische-ratingskala}
+       */
+      public static String miiPrIcuScoreNumerischeRatingskala() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-numerische-ratingskala";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-rass}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-rass}
+       */
+      public static String miiPrIcuScoreRass() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-rass";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-visuelle-analogskala}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-visuelle-analogskala}
+       */
+      public static String miiPrIcuScoreVisuelleAnalogskala() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-score-visuelle-analogskala";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemwegsdruck-bei-null-expiratorischem-gasfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemwegsdruck-bei-null-expiratorischem-gasfluss}
+       */
+      public static String miiPrIcuVentAtemwegsdruckBeiNullExpiratorischemGasfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemwegsdruck-bei-null-expiratorischem-gasfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemwegsdruck-bei-mittlerem-expiratorischem-gasfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemwegsdruck-bei-mittlerem-expiratorischem-gasfluss}
+       */
+      public static String miiPrIcuVentAtemwegsdruckMittleremExpiratorischemGasfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemwegsdruck-bei-mittlerem-expiratorischem-gasfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemzugvolumen-einstellung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemzugvolumen-einstellung}
+       */
+      public static String miiPrIcuVentAtemzugvolumenEinstellung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemzugvolumen-einstellung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemzugvolumen-waehrend-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemzugvolumen-waehrend-beatmung}
+       */
+      public static String miiPrIcuVentAtemzugvolumenWaehrendBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-atemzugvolumen-waehrend-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungsvolumen-pro-minute-maschineller-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungsvolumen-pro-minute-maschineller-beatmung}
+       */
+      public static String miiPrIcuVentBeatmungsvolumenMinMaschinellerBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungsvolumen-pro-minute-maschineller-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungszeit-hohem-druck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungszeit-hohem-druck}
+       */
+      public static String miiPrIcuVentBeatmungszeitHohemDruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungszeit-hohem-druck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungszeit-niedrigem-druck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungszeit-niedrigem-druck}
+       */
+      public static String miiPrIcuVentBeatmungszeitNiedrigemDruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-beatmungszeit-niedrigem-druck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-druckdifferenz-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-druckdifferenz-beatmung}
+       */
+      public static String miiPrIcuVentDruckdifferenzBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-druckdifferenz-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-dynamische-kompliance}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-dynamische-kompliance}
+       */
+      public static String miiPrIcuVentDynamischeKompliance() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-dynamische-kompliance";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-eingestellter-inspiratorischer-gasfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-eingestellter-inspiratorischer-gasfluss}
+       */
+      public static String miiPrIcuVentEingestellterInspiratorischerGasfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-eingestellter-inspiratorischer-gasfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-einstellung-ausatmungszeit-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-einstellung-ausatmungszeit-beatmung}
+       */
+      public static String miiPrIcuVentEinstellungAusatmungszeitBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-einstellung-ausatmungszeit-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-einstellung-einatmungszeit-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-einstellung-einatmungszeit-beatmung}
+       */
+      public static String miiPrIcuVentEinstellungEinatmungszeitBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-einstellung-einatmungszeit-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-endexpiratorischer-kohlendioxidpartialdruck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-endexpiratorischer-kohlendioxidpartialdruck}
+       */
+      public static String miiPrIcuVentEndexpiratorischerKohlendioxidpartialdruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-endexpiratorischer-kohlendioxidpartialdruck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-exspiratorischer-gasfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-exspiratorischer-gasfluss}
+       */
+      public static String miiPrIcuVentExspiratorischerGasfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-exspiratorischer-gasfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-exspiratorischer-sauerstoffpartialdruck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-exspiratorischer-sauerstoffpartialdruck}
+       */
+      public static String miiPrIcuVentExspiratorischerSauerstoffpartialdruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-exspiratorischer-sauerstoffpartialdruck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-horowitz-in-arteriellem-blut}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-horowitz-in-arteriellem-blut}
+       */
+      public static String miiPrIcuVentHorowitzInArteriellemBlut() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-horowitz-in-arteriellem-blut";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-inspiratorischer-gasfluss}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-inspiratorischer-gasfluss}
+       */
+      public static String miiPrIcuVentInspiratorischerGasfluss() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-inspiratorischer-gasfluss";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-inspiratorische-sauerstofffraktion}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-inspiratorische-sauerstofffraktion}
+       */
+      public static String miiPrIcuVentInspiratorischeSauerstofffraktion() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-inspiratorische-sauerstofffraktion";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-maximaler-beatmungsdruck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-maximaler-beatmungsdruck}
+       */
+      public static String miiPrIcuVentMaximalerBeatmungsdruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-maximaler-beatmungsdruck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-mechanische-atemfrequenz-beatmet}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-mechanische-atemfrequenz-beatmet}
+       */
+      public static String miiPrIcuVentMechanischeAtemfrequenzBeatmet() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-mechanische-atemfrequenz-beatmet";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-mittlerer-inspiratorischer-beatmungsdruck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-mittlerer-inspiratorischer-beatmungsdruck}
+       */
+      public static String miiPrIcuVentMittlererInspiratorischerBeatmungsdruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-mittlerer-inspiratorischer-beatmungsdruck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-plateau-beatmungsdruck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-plateau-beatmungsdruck}
+       */
+      public static String miiPrIcuVentPlateauBeatmungsdruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-plateau-beatmungsdruck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-positiv-endexpiratorischer-druck}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-positiv-endexpiratorischer-druck}
+       */
+      public static String miiPrIcuVentPositivEndexpiratorischerDruck() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-positiv-endexpiratorischer-druck";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontanes-atemzugvolumen}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontanes-atemzugvolumen}
+       */
+      public static String miiPrIcuVentSpontanesAtemzugvolumen() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontanes-atemzugvolumen";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontanes-mechanisches-atemzugvolumen-waehrend-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontanes-mechanisches-atemzugvolumen-waehrend-beatmung}
+       */
+      public static String miiPrIcuVentSpontanesPlusMechanischesAtemzugvolumen() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontanes-mechanisches-atemzugvolumen-waehrend-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontane-atemfrequenz-beatmet}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontane-atemfrequenz-beatmet}
+       */
+      public static String miiPrIcuVentSpontaneAtemfrequenzBeatmet() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontane-atemfrequenz-beatmet";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontane-mechanische-atemfrequenz-beatmet}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontane-mechanische-atemfrequenz-beatmet}
+       */
+      public static String miiPrIcuVentSpontaneMechanischeAtemfrequenzBeatmet() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-spontane-mechanische-atemfrequenz-beatmet";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-unterstuetzungsdruck-beatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-unterstuetzungsdruck-beatmung}
+       */
+      public static String miiPrIcuVentUnterstuetzungsdruckBeatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-unterstuetzungsdruck-beatmung";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-zeitverhaeltnis-ein-ausatmung}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-zeitverhaeltnis-ein-ausatmung}
+       */
+      public static String miiPrIcuVentZeitverhaeltnisEinAusatmung() {
+        return "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/mii-pr-icu-vent-zeitverhaeltnis-ein-ausatmung";
+      }
+    }
   }
 }

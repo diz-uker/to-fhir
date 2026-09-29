@@ -53,3 +53,10 @@ PYTHON_MYPY_FILTER_REGEX_EXCLUDE: "(ig-codegen-py/tests/|to-fhir-py/tests/)"
 # though the JSON itself is valid (JSON_JSONLINT already validates it). Renaming away from
 # syrupy's own convention isn't the right fix, so exclude the snapshot fixtures instead.
 JSON_V8R_FILTER_REGEX_EXCLUDE: "to-fhir-py/tests/__snapshots__/"
+
+# rst-lint and rstcheck both only understand plain docutils reST, not Sphinx's own directives/roles
+# ("automodule", "toctree", ":ref:") that these Sphinx doc sources correctly use; there's no
+# plain-RST fix for that, and Sphinx's own build (wired up in .github/workflows/docs.yaml) is what
+# actually validates these files.
+RST_RST_LINT_FILTER_REGEX_EXCLUDE: "to-fhir-py/docs/"
+RST_RSTCHECK_FILTER_REGEX_EXCLUDE: "to-fhir-py/docs/"

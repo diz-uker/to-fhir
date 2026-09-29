@@ -229,6 +229,66 @@ public final class Medikation {
     public static String miiPrMedikationMedikationsliste() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2027.0.0-ballot";
     }
+
+    /** The profiles' canonical URLs without their {@code |version} suffix. */
+    public static final class Versionless {
+      private Versionless() {}
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication}
+       */
+      public static String miiPrMedikationMedication() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration}
+       */
+      public static String miiPrMedikationMedicationAdministration() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest}
+       */
+      public static String miiPrMedikationMedicationRequest() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement}
+       */
+      public static String miiPrMedikationMedicationStatement() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste}
+       */
+      public static String miiPrMedikationMedikationsliste() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste";
+      }
+    }
   }
 
   public static final class Extensions {

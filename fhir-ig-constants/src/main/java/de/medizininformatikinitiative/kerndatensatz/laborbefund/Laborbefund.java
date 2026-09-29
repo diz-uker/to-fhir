@@ -46,6 +46,44 @@ public final class Laborbefund {
     public static String miiPrLaborLaboruntersuchung() {
       return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2027.0.0-ballot";
     }
+
+    /** The profiles' canonical URLs without their {@code |version} suffix. */
+    public static final class Versionless {
+      private Versionless() {}
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab}
+       */
+      public static String miiPrLaborLaboranforderung() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab}
+       */
+      public static String miiPrLaborLaborbefund() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab";
+      }
+
+      /**
+       * The canonical URL {@code
+       * https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab}.
+       *
+       * @return {@code
+       *     https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab}
+       */
+      public static String miiPrLaborLaboruntersuchung() {
+        return "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab";
+      }
+    }
   }
 
   public static final class Extensions {

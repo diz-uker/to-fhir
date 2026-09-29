@@ -18,6 +18,22 @@ public static class Laborbefund
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2027.0.0-ballot</c>.</summary>
         public static string MiiPrLaborLaboruntersuchung =>
             "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2027.0.0-ballot";
+
+        /// <summary>The profiles' canonical URLs without their <c>|version</c> suffix.</summary>
+        public static class Versionless
+        {
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab</c>.</summary>
+            public static string MiiPrLaborLaboranforderung =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ServiceRequestLab";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab</c>.</summary>
+            public static string MiiPrLaborLaborbefund =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab</c>.</summary>
+            public static string MiiPrLaborLaboruntersuchung =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab";
+        }
     }
 
     public static class Extensions

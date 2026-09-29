@@ -24,7 +24,7 @@ dependencyManagement {
 dependencies {
     api project(':to-fhir')
 
-    api 'org.springframework.boot:spring-boot-starter:4.1.0'
+    api 'org.springframework.boot:spring-boot-starter:4.1.1'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

@@ -72,6 +72,30 @@ public static class Medikation
         /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2027.0.0-ballot</c>.</summary>
         public static string MiiPrMedikationMedikationsliste =>
             "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste|2027.0.0-ballot";
+
+        /// <summary>The profiles' canonical URLs without their <c>|version</c> suffix.</summary>
+        public static class Versionless
+        {
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication</c>.</summary>
+            public static string MiiPrMedikationMedication =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration</c>.</summary>
+            public static string MiiPrMedikationMedicationAdministration =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationAdministration";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest</c>.</summary>
+            public static string MiiPrMedikationMedicationRequest =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement</c>.</summary>
+            public static string MiiPrMedikationMedicationStatement =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement";
+
+            /// <summary>The canonical URL <c>https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste</c>.</summary>
+            public static string MiiPrMedikationMedikationsliste =>
+                "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/medikationsliste";
+        }
     }
 
     public static class Extensions

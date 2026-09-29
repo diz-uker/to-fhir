@@ -1,6 +1,6 @@
 [project]
 name = "fhir-ig-constants"
-version = "0.2.19"  # x-release-please-version
+version = "0.2.21"  # x-release-please-version
 description = "Generated Python constant classes for the canonical URLs of a set of FHIR Implementation Guides, via ig-codegen."
 requires-python = ">=3.12"
 dependencies = [
@@ -14,6 +14,11 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 # Generated modules live under src/de/...; ship the top-level namespace package.
 packages = ["src/de"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9",
+]
 
 # FHIR URLs and concept display strings can exceed 100 characters; E741 applies to single-letter
 # FHIR codes used as enum member names. Both are intentional in generated code.
