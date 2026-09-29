@@ -232,8 +232,11 @@ If you are facing a lot of changed snapshots and are certain that your changes
 are valid, you can automatically approve them:
 
 ```sh
-APPROVAL_TESTS_USE_REPORTER=AutoApproveReporter ./gradlew test
+APPROVAL_TESTS_USE_REPORTER=org.approvaltests.reporters.AutoApproveReporter ./gradlew test
 ```
+
+The reporter class must be fully qualified; the bare class name from the issue below no longer
+resolves (`Class.forName` needs the full name).
 
 Source: <https://github.com/approvals/ApprovalTests.Java/issues/590>.
 
@@ -241,6 +244,6 @@ You can also run this in a loop to approve indexed snapshots:
 
 ```sh
 for i in {1..10};
-    do APPROVAL_TESTS_USE_REPORTER=AutoApproveReporter ./gradlew test;
+    do APPROVAL_TESTS_USE_REPORTER=org.approvaltests.reporters.AutoApproveReporter ./gradlew test;
 done
 ```

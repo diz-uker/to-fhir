@@ -254,7 +254,7 @@ class TransactionBuilder:
             agent=[
                 ProvenanceAgent(
                     type=_concept(_PARTICIPANT_TYPE_SYSTEM, "assembler", "Assembler"),
-                    role=[_concept(_PARTICIPATION_TYPE_SYSTEM, "AUT", "author")],
+                    role=[_concept(_PARTICIPATION_TYPE_SYSTEM, "AUT", "author (originator)")],
                     who=who,
                 )
             ],

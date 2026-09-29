@@ -158,8 +158,9 @@ fhirpkg.lock.json
 node_modules/
 package-lock.json
 
-# fhir-ig-constants-py is a library; libraries don't commit uv.lock
+# fhir-ig-constants-py and to-fhir-py are libraries; libraries don't commit uv.lock
 fhir-ig-constants-py/uv.lock
+to-fhir-py/uv.lock
 
 __pycache__/
 *.py[cod]
