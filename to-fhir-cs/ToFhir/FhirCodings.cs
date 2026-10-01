@@ -17,7 +17,7 @@ public static class FhirCodings
         new()
         {
             System = FhirSystems.Snomed,
-            Version = "http://snomed.info/sct/900000000000207008/version/20250701",
+            Version = "http://snomed.info/sct/900000000000207008/version/20260701",
         };
 
     /// <summary>Returns a fresh OPS coding template.</summary>
