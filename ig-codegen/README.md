@@ -27,6 +27,13 @@ resource.
 
    `hl7.fhir.r4.core` is skipped: it has no IG-specific canonical prefix of its own.
 
+   Only `CodeSystem`, `StructureDefinition`, `ValueSet` and `NamingSystem` resources are read at
+   all. A package directory also holds resource types nothing is generated from (`Library`,
+   `OperationDefinition`, examples, ...) plus the package's own `package.json`/`.index.json`, and
+   those are skipped before parsing: FHIR reuses field names across resource types with
+   incompatible shapes (`StructureDefinition.type` is a `code`, `Library.type` a `CodeableConcept`,
+   `OperationDefinition.type` a `boolean`), so one stray resource must not fail the whole scan.
+
 3. One Java class is generated per FHIR package, in a Java package with the **same name** as the
    FHIR package (e.g. FHIR package `de.medizininformatikinitiative.kerndatensatz.onkologie` →
    Java package `de.medizininformatikinitiative.kerndatensatz.onkologie`, class `Onkologie`),

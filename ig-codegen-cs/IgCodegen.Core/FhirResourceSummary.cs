@@ -10,7 +10,11 @@ public sealed record FhirResourceSummary(
     [property: JsonPropertyName("version")] string? Version,
     [property: JsonPropertyName("kind")] string? Kind,
     [property: JsonPropertyName("derivation")] string? Derivation,
-    [property: JsonPropertyName("type")] string? Type,
+    // StructureDefinition.type; other resource types reuse the name for a CodeableConcept
+    // (NamingSystem) or a boolean (OperationDefinition), hence the lenient converter.
+    [property: JsonPropertyName("type")]
+    [property: JsonConverter(typeof(CodeOrNullConverter))]
+        string? Type,
     [property: JsonPropertyName("content")] string? Content,
     [property: JsonPropertyName("description")] string? Description,
     [property: JsonPropertyName("concept")] List<FhirConcept>? ConceptList,

@@ -17,6 +17,22 @@ public sealed class IgPackageScanner
     };
 
     /// <summary>
+    /// The resource types <see cref="Scan"/> classifies. A package directory also holds resources
+    /// this scanner has no constants to generate from (Library, OperationDefinition, examples, ...),
+    /// plus the package's own <c>package.json</c>/<c>.index.json</c> metadata, and those are skipped
+    /// before deserializing rather than after: FHIR reuses field names across resource types with
+    /// incompatible shapes, so binding them all to one <see cref="FhirResourceSummary"/> fails on
+    /// shapes that are perfectly valid for the resource type they came from.
+    /// </summary>
+    private static readonly HashSet<string> ClassifiedResourceTypes = new(StringComparer.Ordinal)
+    {
+        "CodeSystem",
+        "StructureDefinition",
+        "ValueSet",
+        "NamingSystem",
+    };
+
+    /// <summary>
     /// Tries the Firely Terminal cache layout (<c>&lt;dir&gt;/&lt;name&gt;#&lt;version&gt;/package</c>)
     /// first, then falls back to the flat npm layout (<c>&lt;dir&gt;/&lt;name&gt;</c>).
     /// </summary>
@@ -124,8 +140,16 @@ public sealed class IgPackageScanner
         var results = new List<FhirResourceSummary>();
         foreach (var file in Directory.EnumerateFiles(packageContentDir, "*.json"))
         {
-            using var stream = File.OpenRead(file);
-            var resource = JsonSerializer.Deserialize<FhirResourceSummary>(stream, JsonOptions);
+            using var document = JsonDocument.Parse(File.ReadAllBytes(file));
+            if (document.RootElement.ValueKind != JsonValueKind.Object)
+                continue;
+            if (
+                !document.RootElement.TryGetProperty("resourceType", out var resourceType)
+                || resourceType.ValueKind != JsonValueKind.String
+                || !ClassifiedResourceTypes.Contains(resourceType.GetString()!)
+            )
+                continue;
+            var resource = document.Deserialize<FhirResourceSummary>(JsonOptions);
             if (resource is not null)
                 results.Add(resource);
         }

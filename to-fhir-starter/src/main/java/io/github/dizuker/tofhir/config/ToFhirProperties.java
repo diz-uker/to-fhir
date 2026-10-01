@@ -21,7 +21,7 @@ import org.hl7.fhir.r4.model.Coding;
  * own entries, e.g.
  *
  * <pre>{@code
- * public class MySystems extends FhirProperties.Systems {
+ * public class MySystems extends ToFhirProperties.Systems {
  *   private String myHospitalSystem;
  *
  *   public String myHospitalSystem() { return myHospitalSystem; }
@@ -30,7 +30,7 @@ import org.hl7.fhir.r4.model.Coding;
  *   }
  * }
  *
- * public class MyFhirProperties extends FhirProperties {
+ * public class MyFhirProperties extends ToFhirProperties {
  *   private MySystems systems = new MySystems();
  *
  *   @Override
@@ -47,7 +47,7 @@ import org.hl7.fhir.r4.model.Coding;
  * myFhirProperties.systems().myHospitalSystem()}, alongside the inherited {@code
  * fhir.systems.loinc} etc.
  */
-public class FhirProperties {
+public class ToFhirProperties {
 
   private Systems systems = new Systems();
 
@@ -155,7 +155,14 @@ public class FhirProperties {
     }
   }
 
-  /** FHIR codings. */
+  /**
+   * FHIR codings.
+   *
+   * <p>The package-private {@code getX()} getters return the stored coding instead of a copy, so
+   * Spring Boot's binder binds into the default coding rather than creating an empty one. This
+   * allows overriding a single property, e.g. only {@code fhir.codings.snomed.version}, while
+   * keeping the default system.
+   */
   public static class Codings {
     private Coding loinc = FhirCodings.loinc();
     private Coding snomed = FhirCodings.snomed();
@@ -175,6 +182,11 @@ public class FhirProperties {
       this.loinc = loinc;
     }
 
+    /** Used by Spring Boot for property binding. */
+    Coding getLoinc() {
+      return loinc;
+    }
+
     /** Returns a fresh copy of the SNOMED CT coding. */
     public Coding snomed() {
       return snomed.copy();
@@ -183,6 +195,11 @@ public class FhirProperties {
     /** Used by Spring Boot for property binding. */
     public void setSnomed(Coding snomed) {
       this.snomed = snomed;
+    }
+
+    /** Used by Spring Boot for property binding. */
+    Coding getSnomed() {
+      return snomed;
     }
 
     /** Returns a fresh copy of the OPS coding. */
@@ -195,6 +212,11 @@ public class FhirProperties {
       this.ops = ops;
     }
 
+    /** Used by Spring Boot for property binding. */
+    Coding getOps() {
+      return ops;
+    }
+
     /** Returns a fresh copy of the ATC coding. */
     public Coding atc() {
       return atc.copy();
@@ -203,6 +225,11 @@ public class FhirProperties {
     /** Used by Spring Boot for property binding. */
     public void setAtc(Coding atc) {
       this.atc = atc;
+    }
+
+    /** Used by Spring Boot for property binding. */
+    Coding getAtc() {
+      return atc;
     }
 
     /** Returns a fresh copy of the ICD-10-GM coding. */
@@ -215,6 +242,11 @@ public class FhirProperties {
       this.icd10gm = icd10gm;
     }
 
+    /** Used by Spring Boot for property binding. */
+    Coding getIcd10gm() {
+      return icd10gm;
+    }
+
     /** Returns a fresh copy of the PZN coding. */
     public Coding pzn() {
       return pzn.copy();
@@ -223,6 +255,11 @@ public class FhirProperties {
     /** Used by Spring Boot for property binding. */
     public void setPzn(Coding pzn) {
       this.pzn = pzn;
+    }
+
+    /** Used by Spring Boot for property binding. */
+    Coding getPzn() {
+      return pzn;
     }
   }
 

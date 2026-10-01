@@ -9,7 +9,7 @@ from fhir.resources.R4B.coding import Coding
 
 from to_fhir import fhir_systems
 
-_SNOMED_VERSION = "http://snomed.info/sct/900000000000207008/version/20250701"
+_SNOMED_VERSION = "http://snomed.info/sct/900000000000207008/version/20260701"
 
 
 def loinc() -> Coding:

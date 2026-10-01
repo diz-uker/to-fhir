@@ -19,18 +19,18 @@ public class ToFhirAutoConfiguration {
   }
 
   /**
-   * Registers the default {@link FhirProperties} bean bound to the {@code fhir} prefix.
+   * Registers the default {@link ToFhirProperties} bean bound to the {@code fhir} prefix.
    *
    * <p>Applications that need application-specific systems or codings can define their own subclass
-   * of {@link FhirProperties}, register it as a {@code @ConfigurationProperties(prefix = "fhir")}
+   * of {@link ToFhirProperties}, register it as a {@code @ConfigurationProperties(prefix = "fhir")}
    * bean, and this default will back off in its favor.
    *
-   * @return the default {@link FhirProperties}
+   * @return the default {@link ToFhirProperties}
    */
   @Bean
   @ConditionalOnMissingBean
   @ConfigurationProperties(prefix = "fhir")
-  public FhirProperties fhirProperties() {
-    return new FhirProperties();
+  public ToFhirProperties toFhirProperties() {
+    return new ToFhirProperties();
   }
 }

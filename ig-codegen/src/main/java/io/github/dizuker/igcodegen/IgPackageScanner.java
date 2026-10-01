@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import org.jspecify.annotations.Nullable;
+import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
 
 /**
@@ -21,6 +22,17 @@ import tools.jackson.databind.ObjectMapper;
  * CodeSystem/Profile/Extension canonical URL constants.
  */
 public final class IgPackageScanner {
+
+  /**
+   * The resource types {@link #scan} classifies. A package directory also holds resources this
+   * scanner has no constants to generate from (Library, OperationDefinition, examples, ...), plus
+   * the package's own {@code package.json}/{@code .index.json} metadata, and those are skipped
+   * before binding rather than after: FHIR reuses field names across resource types with
+   * incompatible shapes, so binding them all to one {@link FhirResourceSummary} fails on shapes
+   * that are perfectly valid for the resource type they came from.
+   */
+  private static final Set<String> CLASSIFIED_RESOURCE_TYPES =
+      Set.of("CodeSystem", "StructureDefinition", "ValueSet", "NamingSystem");
 
   private final ObjectMapper objectMapper;
 
@@ -129,7 +141,13 @@ public final class IgPackageScanner {
     List<FhirResourceSummary> resources = new ArrayList<>();
     try (DirectoryStream<Path> files = Files.newDirectoryStream(packageContentDir, "*.json")) {
       for (Path file : files) {
-        resources.add(objectMapper.readValue(file.toFile(), FhirResourceSummary.class));
+        JsonNode root = objectMapper.readTree(file.toFile());
+        JsonNode resourceType = root.path("resourceType");
+        if (!resourceType.isString()
+            || !CLASSIFIED_RESOURCE_TYPES.contains(resourceType.stringValue())) {
+          continue;
+        }
+        resources.add(objectMapper.treeToValue(root, FhirResourceSummary.class));
       }
     } catch (IOException e) {
       throw new UncheckedIOException(

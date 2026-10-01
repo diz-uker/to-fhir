@@ -648,6 +648,10 @@ gradle-app.setting
 
 # End of https://www.toptal.com/developers/gitignore/api/gradle,java,dotnetcore,csharp,maven,python
 
+# libraries don't commit uv.lock (fhir-ig-constants-py, to-fhir-py); apps/tools do (ig-codegen-py)
 uv.lock
 package-lock.json
 fhirpkg.lock.json
+
+__pycache__/
+*.py[cod]

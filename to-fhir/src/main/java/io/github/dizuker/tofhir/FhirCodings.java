@@ -17,7 +17,7 @@ public final class FhirCodings {
   public static Coding snomed() {
     return new Coding()
         .setSystem(FhirSystems.SNOMED)
-        .setVersion("http://snomed.info/sct/900000000000207008/version/20250701");
+        .setVersion("http://snomed.info/sct/900000000000207008/version/20260701");
   }
 
   /** Returns a fresh OPS coding template. */

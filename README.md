@@ -7,7 +7,7 @@ Collection of utilities for mapping FHIR resources.
 This repository contains the following artifacts:
 
 - `to-fhir` — the core library. Plain Java, no Spring Boot dependency.
-- `to-fhir-starter` — a Spring Boot starter that auto-configures `FhirProperties`
+- `to-fhir-starter` — a Spring Boot starter that auto-configures `ToFhirProperties`
   (overridable via `fhir.*` properties) on top of `to-fhir`.
 - `DizUker.ToFhir` — the C# port of the core library, built on the
   [Firely SDK](https://github.com/FirelyTeam/firely-net-sdk) instead of HAPI FHIR.
@@ -235,8 +235,11 @@ If you are facing a lot of changed snapshots and are certain that your changes
 are valid, you can automatically approve them:
 
 ```sh
-APPROVAL_TESTS_USE_REPORTER=AutoApproveReporter ./gradlew test
+APPROVAL_TESTS_USE_REPORTER=org.approvaltests.reporters.AutoApproveReporter ./gradlew test
 ```
+
+The reporter class must be fully qualified; the bare class name from the issue below no longer
+resolves (`Class.forName` needs the full name).
 
 Source: <https://github.com/approvals/ApprovalTests.Java/issues/590>.
 
@@ -244,6 +247,6 @@ You can also run this in a loop to approve indexed snapshots:
 
 ```sh
 for i in {1..10};
-    do APPROVAL_TESTS_USE_REPORTER=AutoApproveReporter ./gradlew test;
+    do APPROVAL_TESTS_USE_REPORTER=org.approvaltests.reporters.AutoApproveReporter ./gradlew test;
 done
 ```
