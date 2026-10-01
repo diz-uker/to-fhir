@@ -89,6 +89,16 @@ jobs:
         with:
           persist-credentials: false
 
+      # this job rebuilds from a fresh checkout rather than reusing java-build's output, so the
+      # prerelease version has to be stamped here too or the committed version gets published
+      - name: Stamp prerelease version
+        if: ${{ github.event.release.prerelease }}
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          VERSION="${TAG#v}"
+          sed -i "s/version = '.*' \/\/ x-release-please-version/version = '${VERSION}' \/\/ x-release-please-version/" build.gradle
+
       - name: Set up JDK
         uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
         with:
