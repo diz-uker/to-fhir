@@ -13,15 +13,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Proves that an application can subclass {@link FhirProperties} (and its nested {@link
- * FhirProperties.Systems}) to add its own application-specific properties while still binding from
- * the shared {@code fhir} prefix, and that the starter's default bean backs off in favor of the
- * application's subclass.
+ * Proves that an application can subclass {@link ToFhirProperties} (and its nested {@link
+ * ToFhirProperties.Systems}) to add its own application-specific properties while still binding
+ * from the shared {@code fhir} prefix, and that the starter's default bean backs off in favor of
+ * the application's subclass.
  */
-class FhirPropertiesExtensionTest {
+class ToFhirPropertiesExtensionTest {
 
-  /** An application-specific extension of {@link FhirProperties.Systems}. */
-  public static class AcmeSystems extends FhirProperties.Systems {
+  /** An application-specific extension of {@link ToFhirProperties.Systems}. */
+  public static class AcmeSystems extends ToFhirProperties.Systems {
     private String acmeSystem;
 
     /** Returns the ACME-specific system. */
@@ -35,8 +35,8 @@ class FhirPropertiesExtensionTest {
     }
   }
 
-  /** An application-specific extension of {@link FhirProperties}. */
-  public static class AcmeFhirProperties extends FhirProperties {
+  /** An application-specific extension of {@link ToFhirProperties}. */
+  public static class AcmeFhirProperties extends ToFhirProperties {
     private AcmeSystems systems = new AcmeSystems();
 
     @Override
@@ -77,7 +77,7 @@ class FhirPropertiesExtensionTest {
             "fhir.systems.acme-system=https://acme.example.com/codes")
         .run(
             context -> {
-              var props = context.getBean(FhirProperties.class);
+              var props = context.getBean(ToFhirProperties.class);
               assertInstanceOf(AcmeFhirProperties.class, props);
 
               var systems = props.systems();

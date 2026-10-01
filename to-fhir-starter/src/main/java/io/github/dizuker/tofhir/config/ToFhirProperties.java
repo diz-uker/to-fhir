@@ -21,7 +21,7 @@ import org.hl7.fhir.r4.model.Coding;
  * own entries, e.g.
  *
  * <pre>{@code
- * public class MySystems extends FhirProperties.Systems {
+ * public class MySystems extends ToFhirProperties.Systems {
  *   private String myHospitalSystem;
  *
  *   public String myHospitalSystem() { return myHospitalSystem; }
@@ -30,7 +30,7 @@ import org.hl7.fhir.r4.model.Coding;
  *   }
  * }
  *
- * public class MyFhirProperties extends FhirProperties {
+ * public class MyFhirProperties extends ToFhirProperties {
  *   private MySystems systems = new MySystems();
  *
  *   @Override
@@ -47,7 +47,7 @@ import org.hl7.fhir.r4.model.Coding;
  * myFhirProperties.systems().myHospitalSystem()}, alongside the inherited {@code
  * fhir.systems.loinc} etc.
  */
-public class FhirProperties {
+public class ToFhirProperties {
 
   private Systems systems = new Systems();
 
