@@ -23,14 +23,14 @@ jobs:
     name: Java build
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
 
       - name: Set up JDK
         # zizmor: ignore[cache-poisoning] cache below is conditional on release events; zizmor
         # can't statically evaluate that expression, hence the low-confidence finding
-        uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
         with:
           java-version: "25"
           distribution: "temurin"
@@ -38,12 +38,12 @@ jobs:
           # earlier, untrusted PR run must not get restored during a trusted release build
           cache: ${{ github.event_name != 'release' && 'gradle' || '' }}
 
-      - uses: gradle/actions/wrapper-validation@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+      - uses: gradle/actions/wrapper-validation@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
 
       - name: Setup Gradle
         # zizmor: ignore[cache-poisoning] cache-disabled below is conditional on release events;
         # zizmor can't statically evaluate that expression, hence the low-confidence finding
-        uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
         with:
           cache-disabled: ${{ github.event_name == 'release' }}
 
@@ -57,7 +57,7 @@ jobs:
       - name: Run Test Coverage
         run: ./gradlew jacocoTestReport
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: libs
           path: |
@@ -77,12 +77,12 @@ jobs:
       id-token: write # to request the OIDC token used for attestation signing
       attestations: write # to publish build provenance attestations
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
 
       - name: Set up JDK
-        uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
         with:
           java-version: "25"
           distribution: "temurin"
@@ -90,10 +90,10 @@ jobs:
           # must not share a dependency cache that an earlier, less-trusted run could have poisoned
           cache: ""
 
-      - uses: gradle/actions/wrapper-validation@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+      - uses: gradle/actions/wrapper-validation@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
         with:
           cache-disabled: true
 
@@ -137,14 +137,14 @@ jobs:
     name: dotnet
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
 
       - name: Setup .NET
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
-          dotnet-version: "10.0.400"
+          dotnet-version: "10.0.402"
 
       - name: Restore .NET tools
         run: dotnet tool restore
@@ -166,7 +166,7 @@ jobs:
           dotnet pack fhir-ig-constants-cs/fhir-ig-constants-cs.csproj --configuration Release --output artifacts/
           dotnet pack to-fhir-cs/ToFhir/ToFhir.csproj --configuration Release --output artifacts/
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: nuget-packages
           path: artifacts/
@@ -185,7 +185,7 @@ jobs:
       id-token: write # for NuGet Trusted Publishing and for attestation signing
     steps:
       - name: Download NuGet packages
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: nuget-packages
           path: artifacts/
@@ -193,7 +193,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
-          dotnet-version: "10.0.400"
+          dotnet-version: "10.0.402"
 
       - name: NuGet login (OIDC -> temporary API key)
         uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.2.0
@@ -235,14 +235,14 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           persist-credentials: false
 
       - name: Set up uv
         # zizmor: ignore[cache-poisoning] enable-cache below is conditional on release events;
         # zizmor can't statically evaluate that expression, hence the low-confidence finding
-        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
         with:
           # disabled on release events: this job also runs then, and a cache poisoned by an
           # earlier, untrusted PR run must not get restored during a trusted release build
@@ -273,7 +273,7 @@ jobs:
         run: uv build
 
       - name: Upload fhir-ig-constants-py dist
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: fhir-ig-constants-py-dist
           path: fhir-ig-constants-py/dist/
@@ -283,7 +283,7 @@ jobs:
         run: uv build
 
       - name: Upload to-fhir-py dist
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: to-fhir-py-dist
           path: to-fhir-py/dist/
@@ -302,7 +302,7 @@ jobs:
       id-token: write # for PyPI Trusted Publishing on release
     steps:
       - name: Download fhir-ig-constants-py dist
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: fhir-ig-constants-py-dist
           path: fhir-ig-constants-py/dist/
@@ -345,7 +345,7 @@ jobs:
       id-token: write # for PyPI Trusted Publishing on release
     steps:
       - name: Download to-fhir-py dist
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: to-fhir-py-dist
           path: to-fhir-py/dist/
@@ -375,7 +375,7 @@ jobs:
             to-fhir-py-dist.intoto.jsonl
 
   lint:
-    uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
+    uses: miracum/.github/.github/workflows/standard-lint.yaml@704047074ac99fc4c0990f8b8377086069323116 # v1.30.0
     permissions:
       contents: read
       pull-requests: write # to post lint findings as PR comments
