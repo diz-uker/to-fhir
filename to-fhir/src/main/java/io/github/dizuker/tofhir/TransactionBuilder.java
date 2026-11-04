@@ -23,6 +23,9 @@ import org.hl7.fhir.r4.model.Provenance;
 import org.hl7.fhir.r4.model.Provenance.ProvenanceEntityRole;
 import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.Resource;
+import org.hl7.fhir.r4.model.codesystems.ProvenanceAgentType;
+import org.hl7.fhir.r4.model.codesystems.V3DataOperation;
+import org.hl7.fhir.r4.model.codesystems.V3ParticipationType;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
@@ -447,23 +450,12 @@ public class TransactionBuilder {
 
     provenance.setTarget(targets);
 
-    provenance.setActivity(
-        new CodeableConcept(
-            new Coding(
-                "http://terminology.hl7.org/CodeSystem/v3-DataOperation", "CREATE", "create")));
+    provenance.setActivity(concept(V3DataOperation.CREATE));
 
     provenance
         .addAgent()
-        .setType(
-            new CodeableConcept(
-                new Coding(
-                    "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
-                    "assembler",
-                    "Assembler")))
-        .addRole(
-            new CodeableConcept(
-                new Coding(
-                    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType", "AUT", "author")))
+        .setType(concept(ProvenanceAgentType.ASSEMBLER))
+        .addRole(concept(V3ParticipationType.AUT))
         .setWho(this.provenanceWho);
 
     provenance.addEntity().setRole(ProvenanceEntityRole.SOURCE).setWhat(provenanceWhat);
@@ -483,19 +475,11 @@ public class TransactionBuilder {
 
     provenance.setTarget(this.resourcesToDelete);
 
-    provenance.setActivity(
-        new CodeableConcept(
-            new Coding(
-                "http://terminology.hl7.org/CodeSystem/v3-DataOperation", "DELETE", "delete")));
+    provenance.setActivity(concept(V3DataOperation.DELETE));
 
     provenance
         .addAgent()
-        .setType(
-            new CodeableConcept(
-                new Coding(
-                    "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
-                    "performer",
-                    "Performer")))
+        .setType(concept(ProvenanceAgentType.PERFORMER))
         .setWho(this.provenanceWho);
 
     for (var toDelete : resourcesToDelete) {
@@ -503,6 +487,19 @@ public class TransactionBuilder {
     }
 
     return provenance;
+  }
+
+  // the generated code system enums share no common interface, hence one overload per enum
+  private static CodeableConcept concept(V3DataOperation code) {
+    return new CodeableConcept(new Coding(code.getSystem(), code.toCode(), code.getDisplay()));
+  }
+
+  private static CodeableConcept concept(ProvenanceAgentType code) {
+    return new CodeableConcept(new Coding(code.getSystem(), code.toCode(), code.getDisplay()));
+  }
+
+  private static CodeableConcept concept(V3ParticipationType code) {
+    return new CodeableConcept(new Coding(code.getSystem(), code.toCode(), code.getDisplay()));
   }
 
   private String getProvenanceIdString() {

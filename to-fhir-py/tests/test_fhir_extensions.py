@@ -64,3 +64,8 @@ class TestDataAbsentReason:
 
         assert coding.system == fhir_extensions.DATA_ABSENT_REASON_CODE_SYSTEM
         assert coding.code == "error"
+        assert coding.display == "Error"
+
+    @pytest.mark.parametrize("reason", list(DataAbsentReason))
+    def test_every_concept_has_display(self, reason: DataAbsentReason) -> None:
+        assert reason.display

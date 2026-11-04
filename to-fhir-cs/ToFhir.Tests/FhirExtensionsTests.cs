@@ -69,5 +69,15 @@ public class FhirExtensionsTests
 
         Assert.Equal(DataAbsentReasonCodeExtensions.CodeSystemUrl, coding.System);
         Assert.Equal("error", coding.Code);
+        Assert.Equal("Error", coding.Display);
+    }
+
+    [Fact]
+    public void EveryConceptHasDisplay()
+    {
+        foreach (var reason in Enum.GetValues<DataAbsentReasonCode>())
+        {
+            Assert.False(string.IsNullOrEmpty(reason.Display()));
+        }
     }
 }

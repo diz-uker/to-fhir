@@ -22,17 +22,17 @@ public final class FhirCodings {
 
   /** Returns a fresh OPS coding template. */
   public static Coding ops() {
-    return new Coding().setSystem(FhirSystems.OPS).setVersion("2026");
+    return new Coding().setSystem(FhirSystems.OPS);
   }
 
   /** Returns a fresh ATC coding template. */
   public static Coding atc() {
-    return new Coding().setSystem(FhirSystems.ATC).setVersion("2026");
+    return new Coding().setSystem(FhirSystems.ATC);
   }
 
   /** Returns a fresh ICD-10-GM coding template. */
   public static Coding icd10gm() {
-    return new Coding().setSystem(FhirSystems.ICD10GM).setVersion("2026");
+    return new Coding().setSystem(FhirSystems.ICD10GM);
   }
 
   /** Returns a fresh PZN coding template. */

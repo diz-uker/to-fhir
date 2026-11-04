@@ -72,13 +72,37 @@ class DataAbsentReason(enum.StrEnum):
         """The FHIR code for this concept, e.g. ``not-asked``."""
         return self.value
 
+    @property
+    def display(self) -> str:
+        """The display for this concept, e.g. ``Not Asked``."""
+        return _DISPLAYS[self]
+
     def coding(self) -> Coding:
         """Return a fresh :class:`Coding` for this concept."""
-        return Coding(system=DATA_ABSENT_REASON_CODE_SYSTEM, code=self.value)
+        return Coding(system=DATA_ABSENT_REASON_CODE_SYSTEM, code=self.value, display=self.display)
 
     def extension(self) -> Extension:
         """Return a fresh data-absent-reason extension carrying this concept."""
         return data_absent_reason(self)
+
+
+_DISPLAYS: dict[DataAbsentReason, str] = {
+    DataAbsentReason.UNKNOWN: "Unknown",
+    DataAbsentReason.ASKED_UNKNOWN: "Asked But Unknown",
+    DataAbsentReason.TEMP_UNKNOWN: "Temporarily Unknown",
+    DataAbsentReason.NOT_ASKED: "Not Asked",
+    DataAbsentReason.ASKED_DECLINED: "Asked But Declined",
+    DataAbsentReason.MASKED: "Masked",
+    DataAbsentReason.NOT_APPLICABLE: "Not Applicable",
+    DataAbsentReason.UNSUPPORTED: "Unsupported",
+    DataAbsentReason.AS_TEXT: "As Text",
+    DataAbsentReason.ERROR: "Error",
+    DataAbsentReason.NOT_A_NUMBER: "Not a Number (NaN)",
+    DataAbsentReason.NEGATIVE_INFINITY: "Negative Infinity (NINF)",
+    DataAbsentReason.POSITIVE_INFINITY: "Positive Infinity (PINF)",
+    DataAbsentReason.NOT_PERFORMED: "Not Performed",
+    DataAbsentReason.NOT_PERMITTED: "Not Permitted",
+}
 
 
 def data_absent_reason(reason: DataAbsentReason | None = None) -> Extension:
