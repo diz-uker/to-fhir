@@ -95,9 +95,31 @@ public static class DataAbsentReasonCodeExtensions
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
         };
 
+    /// <returns>The display for this concept, e.g. <c>Not Asked</c>.</returns>
+    public static string Display(this DataAbsentReasonCode value) =>
+        value switch
+        {
+            DataAbsentReasonCode.Unknown => "Unknown",
+            DataAbsentReasonCode.AskedUnknown => "Asked But Unknown",
+            DataAbsentReasonCode.TempUnknown => "Temporarily Unknown",
+            DataAbsentReasonCode.NotAsked => "Not Asked",
+            DataAbsentReasonCode.AskedDeclined => "Asked But Declined",
+            DataAbsentReasonCode.Masked => "Masked",
+            DataAbsentReasonCode.NotApplicable => "Not Applicable",
+            DataAbsentReasonCode.Unsupported => "Unsupported",
+            DataAbsentReasonCode.AsText => "As Text",
+            DataAbsentReasonCode.Error => "Error",
+            DataAbsentReasonCode.NotANumber => "Not a Number (NaN)",
+            DataAbsentReasonCode.NegativeInfinity => "Negative Infinity (NINF)",
+            DataAbsentReasonCode.PositiveInfinity => "Positive Infinity (PINF)",
+            DataAbsentReasonCode.NotPerformed => "Not Performed",
+            DataAbsentReasonCode.NotPermitted => "Not Permitted",
+            _ => throw new ArgumentOutOfRangeException(nameof(value), value, null),
+        };
+
     /// <returns>A fresh <see cref="Coding"/> for this concept.</returns>
     public static Coding Coding(this DataAbsentReasonCode value) =>
-        new(CodeSystemUrl, value.Code());
+        new(CodeSystemUrl, value.Code(), value.Display());
 
     /// <returns>
     /// A fresh data-absent-reason <see cref="Extension"/> carrying this concept, equivalent to

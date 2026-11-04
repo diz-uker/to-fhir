@@ -347,7 +347,7 @@ public sealed class TransactionBuilder
                 new Provenance.AgentComponent
                 {
                     Type = Concept(ParticipantTypeSystem, "assembler", "Assembler"),
-                    Role = { Concept(ParticipationTypeSystem, "AUT", "author") },
+                    Role = { Concept(ParticipationTypeSystem, "AUT", "author (originator)") },
                     Who = who,
                 },
             },
