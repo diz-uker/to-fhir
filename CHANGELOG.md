@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.22](https://github.com/diz-uker/to-fhir/compare/v0.2.21...v0.2.22) (2026-11-05)
+
+
+### Features
+
+* profile URLs without version suffix ([#108](https://github.com/diz-uker/to-fhir/issues/108)) ([438c4a3](https://github.com/diz-uker/to-fhir/commit/438c4a3307a46f81291cd8098d97bd1fb282c0da))
+* re-use hapi library code where available for codings and enums ([#115](https://github.com/diz-uker/to-fhir/issues/115)) ([21a92b6](https://github.com/diz-uker/to-fhir/commit/21a92b6399393545320ce45eb4e6d566a61bef38))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#111](https://github.com/diz-uker/to-fhir/issues/111)) ([fd8cec4](https://github.com/diz-uker/to-fhir/commit/fd8cec4a04ec8ba106ceb006371137f1da6420df))
+
 ## [0.2.21](https://github.com/diz-uker/to-fhir/compare/v0.2.20...v0.2.21) (2026-09-18)
 
 
