@@ -21,16 +21,16 @@ permissions:
 jobs:
   java-build:
     name: Java build
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Set up JDK
         # zizmor: ignore[cache-poisoning] cache below is conditional on release events; zizmor
         # can't statically evaluate that expression, hence the low-confidence finding
-        uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
         with:
           java-version: "25"
           distribution: "temurin"
@@ -68,7 +68,7 @@ jobs:
     name: maven-central-publish
     needs: java-build
     if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     environment:
       name: maven-central
       url: https://central.sonatype.com/artifact/io.github.diz-uker/to-fhir/versions
@@ -77,12 +77,12 @@ jobs:
       id-token: write # to request the OIDC token used for attestation signing
       attestations: write # to publish build provenance attestations
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Set up JDK
-        uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 # v5.3.0
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
         with:
           java-version: "25"
           distribution: "temurin"
@@ -135,9 +135,9 @@ jobs:
 
   dotnet:
     name: dotnet
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -175,7 +175,7 @@ jobs:
     name: nuget-publish
     needs: dotnet
     if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     environment:
       name: nuget
       url: https://www.nuget.org/packages/DizUker.ToFhir
@@ -231,11 +231,11 @@ jobs:
 
   python:
     name: python
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -292,7 +292,7 @@ jobs:
     name: python-publish
     needs: python
     if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     environment:
       name: pypi
       url: https://pypi.org/project/fhir-ig-constants/
@@ -335,7 +335,7 @@ jobs:
     name: to-fhir-py-publish
     needs: python
     if: ${{ github.event_name == 'release' && github.event.action == 'created' }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     environment:
       name: pypi
       url: https://pypi.org/project/to-fhir/
