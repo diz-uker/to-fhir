@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Verify.XunitV3" Version="32.0.1" />
+    <PackageReference Include="Verify.XunitV3" Version="33.3.4" />
     <PackageReference Include="xunit.v3" Version="4.0.2" />
   </ItemGroup>
 
