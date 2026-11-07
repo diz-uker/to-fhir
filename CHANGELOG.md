@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.23](https://github.com/diz-uker/to-fhir/compare/v0.2.22...v0.2.23) (2026-11-07)
+
+
+### Bug Fixes
+
+* partial override of just the version without the code ([#117](https://github.com/diz-uker/to-fhir/issues/117)) ([66b397f](https://github.com/diz-uker/to-fhir/commit/66b397f690a6bdbb2faa606fda9e2adaf5de1f73))
+
 ## [0.2.22](https://github.com/diz-uker/to-fhir/compare/v0.2.21...v0.2.22) (2026-11-05)
 
 
