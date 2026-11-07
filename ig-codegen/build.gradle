@@ -16,7 +16,7 @@ java {
 
 dependencies {
     api 'com.palantir.javapoet:javapoet:0.22.0'
-    api 'tools.jackson.core:jackson-databind:3.2.2'
+    api 'tools.jackson.core:jackson-databind:3.2.3'
 
     api 'org.jspecify:jspecify:1.0.1'
 
