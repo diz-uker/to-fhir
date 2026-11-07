@@ -170,6 +170,11 @@ public class FhirProperties {
       return loinc.copy();
     }
 
+    /** Used by Spring Boot for property binding, keeps defaults on partial overrides. */
+    public Coding getLoinc() {
+      return loinc();
+    }
+
     /** Used by Spring Boot for property binding. */
     public void setLoinc(Coding loinc) {
       this.loinc = loinc;
@@ -178,6 +183,11 @@ public class FhirProperties {
     /** Returns a fresh copy of the SNOMED CT coding. */
     public Coding snomed() {
       return snomed.copy();
+    }
+
+    /** Used by Spring Boot for property binding, keeps defaults on partial overrides. */
+    public Coding getSnomed() {
+      return snomed();
     }
 
     /** Used by Spring Boot for property binding. */
@@ -190,6 +200,11 @@ public class FhirProperties {
       return ops.copy();
     }
 
+    /** Used by Spring Boot for property binding, keeps defaults on partial overrides. */
+    public Coding getOps() {
+      return ops();
+    }
+
     /** Used by Spring Boot for property binding. */
     public void setOps(Coding ops) {
       this.ops = ops;
@@ -198,6 +213,11 @@ public class FhirProperties {
     /** Returns a fresh copy of the ATC coding. */
     public Coding atc() {
       return atc.copy();
+    }
+
+    /** Used by Spring Boot for property binding, keeps defaults on partial overrides. */
+    public Coding getAtc() {
+      return atc();
     }
 
     /** Used by Spring Boot for property binding. */
@@ -210,6 +230,11 @@ public class FhirProperties {
       return icd10gm.copy();
     }
 
+    /** Used by Spring Boot for property binding, keeps defaults on partial overrides. */
+    public Coding getIcd10gm() {
+      return icd10gm();
+    }
+
     /** Used by Spring Boot for property binding. */
     public void setIcd10gm(Coding icd10gm) {
       this.icd10gm = icd10gm;
@@ -218,6 +243,11 @@ public class FhirProperties {
     /** Returns a fresh copy of the PZN coding. */
     public Coding pzn() {
       return pzn.copy();
+    }
+
+    /** Used by Spring Boot for property binding, keeps defaults on partial overrides. */
+    public Coding getPzn() {
+      return pzn();
     }
 
     /** Used by Spring Boot for property binding. */
