@@ -26,10 +26,10 @@ Full usage examples and generated API references (Javadoc, DocFX, Sphinx) are pu
 <!-- x-release-please-start-version -->
 
 ```groovy
-implementation "io.github.diz-uker:to-fhir:0.2.22"
+implementation "io.github.diz-uker:to-fhir:0.2.23"
 
 // optional, for Spring Boot auto-configuration
-implementation "io.github.diz-uker:to-fhir-starter:0.2.22"
+implementation "io.github.diz-uker:to-fhir-starter:0.2.23"
 ```
 
 <!-- x-release-please-end -->
@@ -42,14 +42,14 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.22"
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir</artifactId>
-    <version>0.2.22</version>
+    <version>0.2.23</version>
 </dependency>
 
 <!-- optional, for Spring Boot auto-configuration -->
 <dependency>
     <groupId>io.github.diz-uker</groupId>
     <artifactId>to-fhir-starter</artifactId>
-    <version>0.2.22</version>
+    <version>0.2.23</version>
 </dependency>
 ```
 
@@ -60,7 +60,7 @@ implementation "io.github.diz-uker:to-fhir-starter:0.2.22"
 <!-- x-release-please-start-version -->
 
 ```sh
-dotnet add package DizUker.ToFhir --version 0.2.22
+dotnet add package DizUker.ToFhir --version 0.2.23
 ```
 
 <!-- x-release-please-end -->
@@ -70,9 +70,9 @@ dotnet add package DizUker.ToFhir --version 0.2.22
 <!-- x-release-please-start-version -->
 
 ```sh
-uv add to-fhir==0.2.22
+uv add to-fhir==0.2.23
 # or
-pip install to-fhir==0.2.22
+pip install to-fhir==0.2.23
 ```
 
 <!-- x-release-please-end -->
